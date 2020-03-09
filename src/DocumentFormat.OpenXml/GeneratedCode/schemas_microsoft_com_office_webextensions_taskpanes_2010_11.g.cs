@@ -90,11 +90,11 @@ public partial class Taskpanes : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Taskpanes>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionTaskpane), 0, 0, version: FileFormatVersions.Office2013)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Defines the WebExtensionPartReference Class.</para>
@@ -181,7 +181,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 1, 1)
     {
@@ -190,8 +190,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0, 0)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -288,12 +288,12 @@ public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionPartReference), 1, 1, version: FileFormatVersions.Office2013),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtentionPane.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -303,11 +303,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wetp = http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11
     /// </remark>
-	[Index(0)]
     public WebExtensionPartReference WebExtensionPartReference
 	{
-        get => GetElement<WebExtensionPartReference>(0);
-        set => SetElement(0, value);
+        get => GetElement<WebExtensionPartReference>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -316,11 +315,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wetp = http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11
     /// </remark>
-	[Index(1)]
     public OfficeArtExtensionList OfficeArtExtensionList
 	{
-        get => GetElement<OfficeArtExtensionList>(1);
-        set => SetElement(1, value);
+        get => GetElement<OfficeArtExtensionList>();
+        set => SetElement(value);
 	}
 
 

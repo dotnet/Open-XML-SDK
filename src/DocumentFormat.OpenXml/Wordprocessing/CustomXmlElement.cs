@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Validation.Schema;
 
 namespace DocumentFormat.OpenXml.Wordprocessing
 {
@@ -10,6 +11,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// </summary>
     public abstract class CustomXmlElement : OpenXmlCompositeElement
     {
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 0, 1)
+        {
+            new ElementParticle(typeof(CustomXmlProperties), 0, 1),
+        }.Compile();
+
         /// <summary>
         /// Initializes a new instance of the CustomXmlElement class with the specified child elements.
         /// </summary>
@@ -70,8 +76,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         [Index(0)]
         public CustomXmlProperties CustomXmlProperties
         {
-            get => GetElement<CustomXmlProperties>(0);
-            set => SetElement(0, value);
+            get => _constraint.Get<CustomXmlProperties>(this);
+            set => _constraint.Set(this, value);
         }
     }
 }

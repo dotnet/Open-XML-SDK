@@ -125,12 +125,12 @@ public partial class RoamingProperty : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Key), 1, 1, version: FileFormatVersions.Office2013),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Value), 1, 1, version: FileFormatVersions.Office2013)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -140,11 +140,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:pRoam = http://schemas.microsoft.com/office/powerpoint/2012/roamingSettings
     /// </remark>
-	[Index(0)]
     public Key Key
 	{
-        get => GetElement<Key>(0);
-        set => SetElement(0, value);
+        get => GetElement<Key>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Value.</para>
@@ -153,11 +152,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:pRoam = http://schemas.microsoft.com/office/powerpoint/2012/roamingSettings
     /// </remark>
-	[Index(1)]
     public Value Value
 	{
-        get => GetElement<Value>(1);
-        set => SetElement(1, value);
+        get => GetElement<Value>();
+        set => SetElement(value);
 	}
 
 

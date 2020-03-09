@@ -127,11 +127,11 @@ public partial class ContentTypeSchema : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new AnyParticle(XsdAny.Any, 1, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>

@@ -83,11 +83,11 @@ public partial class Sources : OpenXmlPartRootElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Source), 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -147,13 +147,13 @@ public partial class Person : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Last), 0, 0),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.First), 0, 0),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Middle), 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -1991,11 +1991,11 @@ public partial class NameList : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Person), 1, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -2050,11 +2050,11 @@ public partial class Artist : NameType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Artist>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Book Author.</para>
@@ -2104,11 +2104,11 @@ public partial class BookAuthor : NameType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BookAuthor>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Compiler.</para>
@@ -2158,11 +2158,11 @@ public partial class Compiler : NameType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Compiler>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Composer.</para>
@@ -2212,11 +2212,11 @@ public partial class Composer : NameType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Composer>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Conductor.</para>
@@ -2266,11 +2266,11 @@ public partial class Conductor : NameType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Conductor>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Counsel.</para>
@@ -2320,11 +2320,11 @@ public partial class Counsel : NameType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Counsel>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Director.</para>
@@ -2374,11 +2374,11 @@ public partial class Director : NameType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Director>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Editor.</para>
@@ -2428,11 +2428,11 @@ public partial class Editor : NameType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Editor>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Interviewee.</para>
@@ -2482,11 +2482,11 @@ public partial class Interviewee : NameType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Interviewee>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Interviewer.</para>
@@ -2536,11 +2536,11 @@ public partial class Interviewer : NameType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Interviewer>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Inventor.</para>
@@ -2590,11 +2590,11 @@ public partial class Inventor : NameType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Inventor>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Producer Name.</para>
@@ -2644,11 +2644,11 @@ public partial class ProducerName : NameType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ProducerName>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Translator.</para>
@@ -2698,11 +2698,11 @@ public partial class Translator : NameType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Translator>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Writer.</para>
@@ -2752,11 +2752,11 @@ public partial class Writer : NameType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Writer>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// Defines the NameType class.
@@ -2783,11 +2783,10 @@ public abstract partial class NameType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(0)]
     public NameList NameList
 	{
-        get => GetElement<NameList>(0);
-        set => SetElement(0, value);
+        get => GetElement<NameList>();
+        set => SetElement(value);
 	}
 
 
@@ -2870,15 +2869,15 @@ public partial class Author : NameOrCorporateType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Author>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Choice, 0, 1)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Corporate), 1, 1)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Performer.</para>
@@ -2929,15 +2928,15 @@ public partial class Performer : NameOrCorporateType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Performer>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Choice, 0, 1)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Corporate), 1, 1)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// Defines the NameOrCorporateType class.
@@ -2966,11 +2965,10 @@ public abstract partial class NameOrCorporateType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(0)]
     public NameList NameList
 	{
-        get => GetElement<NameList>(0);
-        set => SetElement(0, value);
+        get => GetElement<NameList>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Corporate Author.</para>
@@ -2979,11 +2977,10 @@ public abstract partial class NameOrCorporateType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(1)]
     public Corporate Corporate
 	{
-        get => GetElement<Corporate>(1);
-        set => SetElement(1, value);
+        get => GetElement<Corporate>();
+        set => SetElement(value);
 	}
 
 
@@ -3096,7 +3093,7 @@ public partial class AuthorList : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Choice, 0, 0)
     {
@@ -3117,8 +3114,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Translator), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Writer), 1, 1)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
         /// <summary>
@@ -3128,11 +3125,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(0)]
     public Artist Artist
 	{
-        get => GetElement<Artist>(0);
-        set => SetElement(0, value);
+        get => GetElement<Artist>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Author.</para>
@@ -3141,11 +3137,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(1)]
     public Author Author
 	{
-        get => GetElement<Author>(1);
-        set => SetElement(1, value);
+        get => GetElement<Author>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Book Author.</para>
@@ -3154,11 +3149,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(2)]
     public BookAuthor BookAuthor
 	{
-        get => GetElement<BookAuthor>(2);
-        set => SetElement(2, value);
+        get => GetElement<BookAuthor>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Compiler.</para>
@@ -3167,11 +3161,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(3)]
     public Compiler Compiler
 	{
-        get => GetElement<Compiler>(3);
-        set => SetElement(3, value);
+        get => GetElement<Compiler>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Composer.</para>
@@ -3180,11 +3173,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(4)]
     public Composer Composer
 	{
-        get => GetElement<Composer>(4);
-        set => SetElement(4, value);
+        get => GetElement<Composer>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Conductor.</para>
@@ -3193,11 +3185,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(5)]
     public Conductor Conductor
 	{
-        get => GetElement<Conductor>(5);
-        set => SetElement(5, value);
+        get => GetElement<Conductor>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Counsel.</para>
@@ -3206,11 +3197,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(6)]
     public Counsel Counsel
 	{
-        get => GetElement<Counsel>(6);
-        set => SetElement(6, value);
+        get => GetElement<Counsel>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Director.</para>
@@ -3219,11 +3209,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(7)]
     public Director Director
 	{
-        get => GetElement<Director>(7);
-        set => SetElement(7, value);
+        get => GetElement<Director>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Editor.</para>
@@ -3232,11 +3221,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(8)]
     public Editor Editor
 	{
-        get => GetElement<Editor>(8);
-        set => SetElement(8, value);
+        get => GetElement<Editor>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Interviewee.</para>
@@ -3245,11 +3233,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(9)]
     public Interviewee Interviewee
 	{
-        get => GetElement<Interviewee>(9);
-        set => SetElement(9, value);
+        get => GetElement<Interviewee>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Interviewer.</para>
@@ -3258,11 +3245,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(10)]
     public Interviewer Interviewer
 	{
-        get => GetElement<Interviewer>(10);
-        set => SetElement(10, value);
+        get => GetElement<Interviewer>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Inventor.</para>
@@ -3271,11 +3257,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(11)]
     public Inventor Inventor
 	{
-        get => GetElement<Inventor>(11);
-        set => SetElement(11, value);
+        get => GetElement<Inventor>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Performer.</para>
@@ -3284,11 +3269,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(12)]
     public Performer Performer
 	{
-        get => GetElement<Performer>(12);
-        set => SetElement(12, value);
+        get => GetElement<Performer>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Producer Name.</para>
@@ -3297,11 +3281,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(13)]
     public ProducerName ProducerName
 	{
-        get => GetElement<ProducerName>(13);
-        set => SetElement(13, value);
+        get => GetElement<ProducerName>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Translator.</para>
@@ -3310,11 +3293,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(14)]
     public Translator Translator
 	{
-        get => GetElement<Translator>(14);
-        set => SetElement(14, value);
+        get => GetElement<Translator>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Writer.</para>
@@ -3323,11 +3305,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(15)]
     public Writer Writer
 	{
-        get => GetElement<Writer>(15);
-        set => SetElement(15, value);
+        get => GetElement<Writer>();
+        set => SetElement(value);
 	}
 
 
@@ -3524,7 +3505,7 @@ public partial class Source : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Choice, 0, 0)
     {
@@ -3581,8 +3562,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Year), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.YearAccessed), 1, 1)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
         /// <summary>
@@ -3592,11 +3573,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(0)]
     public AbbreviatedCaseNumber AbbreviatedCaseNumber
 	{
-        get => GetElement<AbbreviatedCaseNumber>(0);
-        set => SetElement(0, value);
+        get => GetElement<AbbreviatedCaseNumber>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Album Title.</para>
@@ -3605,11 +3585,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(1)]
     public AlbumTitle AlbumTitle
 	{
-        get => GetElement<AlbumTitle>(1);
-        set => SetElement(1, value);
+        get => GetElement<AlbumTitle>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Contributors List.</para>
@@ -3618,11 +3597,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(2)]
     public AuthorList AuthorList
 	{
-        get => GetElement<AuthorList>(2);
-        set => SetElement(2, value);
+        get => GetElement<AuthorList>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Book Title.</para>
@@ -3631,11 +3609,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(3)]
     public BookTitle BookTitle
 	{
-        get => GetElement<BookTitle>(3);
-        set => SetElement(3, value);
+        get => GetElement<BookTitle>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Broadcaster.</para>
@@ -3644,11 +3621,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(4)]
     public Broadcaster Broadcaster
 	{
-        get => GetElement<Broadcaster>(4);
-        set => SetElement(4, value);
+        get => GetElement<Broadcaster>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Broadcast Title.</para>
@@ -3657,11 +3633,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(5)]
     public BroadcastTitle BroadcastTitle
 	{
-        get => GetElement<BroadcastTitle>(5);
-        set => SetElement(5, value);
+        get => GetElement<BroadcastTitle>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Case Number.</para>
@@ -3670,11 +3645,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(6)]
     public CaseNumber CaseNumber
 	{
-        get => GetElement<CaseNumber>(6);
-        set => SetElement(6, value);
+        get => GetElement<CaseNumber>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Chapter Number.</para>
@@ -3683,11 +3657,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(7)]
     public ChapterNumber ChapterNumber
 	{
-        get => GetElement<ChapterNumber>(7);
-        set => SetElement(7, value);
+        get => GetElement<ChapterNumber>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> City.</para>
@@ -3696,11 +3669,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(8)]
     public City City
 	{
-        get => GetElement<City>(8);
-        set => SetElement(8, value);
+        get => GetElement<City>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Comments.</para>
@@ -3709,11 +3681,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(9)]
     public Comments Comments
 	{
-        get => GetElement<Comments>(9);
-        set => SetElement(9, value);
+        get => GetElement<Comments>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Conference or Proceedings Name.</para>
@@ -3722,11 +3693,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(10)]
     public ConferenceName ConferenceName
 	{
-        get => GetElement<ConferenceName>(10);
-        set => SetElement(10, value);
+        get => GetElement<ConferenceName>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Country or Region.</para>
@@ -3735,11 +3705,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(11)]
     public CountryRegion CountryRegion
 	{
-        get => GetElement<CountryRegion>(11);
-        set => SetElement(11, value);
+        get => GetElement<CountryRegion>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Court.</para>
@@ -3748,11 +3717,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(12)]
     public Court Court
 	{
-        get => GetElement<Court>(12);
-        set => SetElement(12, value);
+        get => GetElement<Court>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Day.</para>
@@ -3761,11 +3729,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(13)]
     public Day Day
 	{
-        get => GetElement<Day>(13);
-        set => SetElement(13, value);
+        get => GetElement<Day>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Day Accessed.</para>
@@ -3774,11 +3741,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(14)]
     public DayAccessed DayAccessed
 	{
-        get => GetElement<DayAccessed>(14);
-        set => SetElement(14, value);
+        get => GetElement<DayAccessed>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Department.</para>
@@ -3787,11 +3753,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(15)]
     public Department Department
 	{
-        get => GetElement<Department>(15);
-        set => SetElement(15, value);
+        get => GetElement<Department>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Distributor.</para>
@@ -3800,11 +3765,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(16)]
     public Distributor Distributor
 	{
-        get => GetElement<Distributor>(16);
-        set => SetElement(16, value);
+        get => GetElement<Distributor>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Editor.</para>
@@ -3813,11 +3777,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(17)]
     public Edition Edition
 	{
-        get => GetElement<Edition>(17);
-        set => SetElement(17, value);
+        get => GetElement<Edition>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> GUID.</para>
@@ -3826,11 +3789,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(18)]
     public GuidString GuidString
 	{
-        get => GetElement<GuidString>(18);
-        set => SetElement(18, value);
+        get => GetElement<GuidString>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Institution.</para>
@@ -3839,11 +3801,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(19)]
     public Institution Institution
 	{
-        get => GetElement<Institution>(19);
-        set => SetElement(19, value);
+        get => GetElement<Institution>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Internet Site Title.</para>
@@ -3852,11 +3813,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(20)]
     public InternetSiteTitle InternetSiteTitle
 	{
-        get => GetElement<InternetSiteTitle>(20);
-        set => SetElement(20, value);
+        get => GetElement<InternetSiteTitle>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Issue.</para>
@@ -3865,11 +3825,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(21)]
     public Issue Issue
 	{
-        get => GetElement<Issue>(21);
-        set => SetElement(21, value);
+        get => GetElement<Issue>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Journal Name.</para>
@@ -3878,11 +3837,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(22)]
     public JournalName JournalName
 	{
-        get => GetElement<JournalName>(22);
-        set => SetElement(22, value);
+        get => GetElement<JournalName>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Locale ID.</para>
@@ -3891,11 +3849,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(23)]
     public LcId LcId
 	{
-        get => GetElement<LcId>(23);
-        set => SetElement(23, value);
+        get => GetElement<LcId>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Medium.</para>
@@ -3904,11 +3861,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(24)]
     public Medium Medium
 	{
-        get => GetElement<Medium>(24);
-        set => SetElement(24, value);
+        get => GetElement<Medium>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Month.</para>
@@ -3917,11 +3873,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(25)]
     public Month Month
 	{
-        get => GetElement<Month>(25);
-        set => SetElement(25, value);
+        get => GetElement<Month>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Month Accessed.</para>
@@ -3930,11 +3885,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(26)]
     public MonthAccessed MonthAccessed
 	{
-        get => GetElement<MonthAccessed>(26);
-        set => SetElement(26, value);
+        get => GetElement<MonthAccessed>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Number of Volumes.</para>
@@ -3943,11 +3897,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(27)]
     public NumberVolumes NumberVolumes
 	{
-        get => GetElement<NumberVolumes>(27);
-        set => SetElement(27, value);
+        get => GetElement<NumberVolumes>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Pages.</para>
@@ -3956,11 +3909,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(28)]
     public Pages Pages
 	{
-        get => GetElement<Pages>(28);
-        set => SetElement(28, value);
+        get => GetElement<Pages>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Patent Number.</para>
@@ -3969,11 +3921,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(29)]
     public PatentNumber PatentNumber
 	{
-        get => GetElement<PatentNumber>(29);
-        set => SetElement(29, value);
+        get => GetElement<PatentNumber>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Periodical Title.</para>
@@ -3982,11 +3933,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(30)]
     public PeriodicalTitle PeriodicalTitle
 	{
-        get => GetElement<PeriodicalTitle>(30);
-        set => SetElement(30, value);
+        get => GetElement<PeriodicalTitle>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Production Company.</para>
@@ -3995,11 +3945,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(31)]
     public ProductionCompany ProductionCompany
 	{
-        get => GetElement<ProductionCompany>(31);
-        set => SetElement(31, value);
+        get => GetElement<ProductionCompany>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Publication Title.</para>
@@ -4008,11 +3957,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(32)]
     public PublicationTitle PublicationTitle
 	{
-        get => GetElement<PublicationTitle>(32);
-        set => SetElement(32, value);
+        get => GetElement<PublicationTitle>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Publisher.</para>
@@ -4021,11 +3969,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(33)]
     public Publisher Publisher
 	{
-        get => GetElement<Publisher>(33);
-        set => SetElement(33, value);
+        get => GetElement<Publisher>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Recording Number.</para>
@@ -4034,11 +3981,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(34)]
     public RecordingNumber RecordingNumber
 	{
-        get => GetElement<RecordingNumber>(34);
-        set => SetElement(34, value);
+        get => GetElement<RecordingNumber>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Reference Order.</para>
@@ -4047,11 +3993,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(35)]
     public ReferenceOrder ReferenceOrder
 	{
-        get => GetElement<ReferenceOrder>(35);
-        set => SetElement(35, value);
+        get => GetElement<ReferenceOrder>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Reporter.</para>
@@ -4060,11 +4005,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(36)]
     public Reporter Reporter
 	{
-        get => GetElement<Reporter>(36);
-        set => SetElement(36, value);
+        get => GetElement<Reporter>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Source Type.</para>
@@ -4073,11 +4017,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(37)]
     public SourceType SourceType
 	{
-        get => GetElement<SourceType>(37);
-        set => SetElement(37, value);
+        get => GetElement<SourceType>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Short Title.</para>
@@ -4086,11 +4029,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(38)]
     public ShortTitle ShortTitle
 	{
-        get => GetElement<ShortTitle>(38);
-        set => SetElement(38, value);
+        get => GetElement<ShortTitle>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Standard Number.</para>
@@ -4099,11 +4041,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(39)]
     public StandardNumber StandardNumber
 	{
-        get => GetElement<StandardNumber>(39);
-        set => SetElement(39, value);
+        get => GetElement<StandardNumber>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> State or Province.</para>
@@ -4112,11 +4053,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(40)]
     public StateProvince StateProvince
 	{
-        get => GetElement<StateProvince>(40);
-        set => SetElement(40, value);
+        get => GetElement<StateProvince>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Station.</para>
@@ -4125,11 +4065,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(41)]
     public Station Station
 	{
-        get => GetElement<Station>(41);
-        set => SetElement(41, value);
+        get => GetElement<Station>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Tag.</para>
@@ -4138,11 +4077,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(42)]
     public Tag Tag
 	{
-        get => GetElement<Tag>(42);
-        set => SetElement(42, value);
+        get => GetElement<Tag>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Theater.</para>
@@ -4151,11 +4089,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(43)]
     public Theater Theater
 	{
-        get => GetElement<Theater>(43);
-        set => SetElement(43, value);
+        get => GetElement<Theater>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Thesis Type.</para>
@@ -4164,11 +4101,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(44)]
     public ThesisType ThesisType
 	{
-        get => GetElement<ThesisType>(44);
-        set => SetElement(44, value);
+        get => GetElement<ThesisType>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Title.</para>
@@ -4177,11 +4113,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(45)]
     public Title Title
 	{
-        get => GetElement<Title>(45);
-        set => SetElement(45, value);
+        get => GetElement<Title>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Type.</para>
@@ -4190,11 +4125,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(46)]
     public PatentType PatentType
 	{
-        get => GetElement<PatentType>(46);
-        set => SetElement(46, value);
+        get => GetElement<PatentType>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> URL.</para>
@@ -4203,11 +4137,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(47)]
     public UrlString UrlString
 	{
-        get => GetElement<UrlString>(47);
-        set => SetElement(47, value);
+        get => GetElement<UrlString>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Version.</para>
@@ -4216,11 +4149,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(48)]
     public Version Version
 	{
-        get => GetElement<Version>(48);
-        set => SetElement(48, value);
+        get => GetElement<Version>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Volume.</para>
@@ -4229,11 +4161,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(49)]
     public Volume Volume
 	{
-        get => GetElement<Volume>(49);
-        set => SetElement(49, value);
+        get => GetElement<Volume>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Year.</para>
@@ -4242,11 +4173,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(50)]
     public Year Year
 	{
-        get => GetElement<Year>(50);
-        set => SetElement(50, value);
+        get => GetElement<Year>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Year Accessed.</para>
@@ -4255,11 +4185,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[Index(51)]
     public YearAccessed YearAccessed
 	{
-        get => GetElement<YearAccessed>(51);
-        set => SetElement(51, value);
+        get => GetElement<YearAccessed>();
+        set => SetElement(value);
 	}
 
 

@@ -54,6 +54,18 @@ namespace DocumentFormat.OpenXml.Framework
             return hashcode.ToHashCode();
         }
 
+        public static int Combine<T1, T2, T3, T4>(T1 t1, T2 t2, T3 t3, T4 t4)
+        {
+            var hashcode = new HashCode();
+
+            hashcode.Add(t1);
+            hashcode.Add(t2);
+            hashcode.Add(t3);
+            hashcode.Add(t4);
+
+            return hashcode.ToHashCode();
+        }
+
         private void Add(int value)
         {
             unchecked

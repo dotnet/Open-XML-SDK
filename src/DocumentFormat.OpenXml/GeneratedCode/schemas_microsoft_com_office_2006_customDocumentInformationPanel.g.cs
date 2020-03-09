@@ -63,13 +63,13 @@ public partial class CustomPropertyEditors : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.CustomPropertyEditor), 1, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -79,11 +79,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:cdip = http://schemas.microsoft.com/office/2006/customDocumentInformationPanel
     /// </remark>
-	[Index(0)]
     public ShowOnOpen ShowOnOpen
 	{
-        get => GetElement<ShowOnOpen>(0);
-        set => SetElement(0, value);
+        get => GetElement<ShowOnOpen>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> DefaultPropertyEditorNamespace.</para>
@@ -92,11 +91,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:cdip = http://schemas.microsoft.com/office/2006/customDocumentInformationPanel
     /// </remark>
-	[Index(1)]
     public DefaultPropertyEditorNamespace DefaultPropertyEditorNamespace
 	{
-        get => GetElement<DefaultPropertyEditorNamespace>(1);
-        set => SetElement(1, value);
+        get => GetElement<DefaultPropertyEditorNamespace>();
+        set => SetElement(value);
 	}
 
 
@@ -296,12 +294,12 @@ public partial class CustomPropertyEditor : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.PropertyEditorNamespace), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.XsnFileLocation), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -311,11 +309,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:cdip = http://schemas.microsoft.com/office/2006/customDocumentInformationPanel
     /// </remark>
-	[Index(0)]
     public PropertyEditorNamespace PropertyEditorNamespace
 	{
-        get => GetElement<PropertyEditorNamespace>(0);
-        set => SetElement(0, value);
+        get => GetElement<PropertyEditorNamespace>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> XsnFileLocation.</para>
@@ -324,11 +321,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:cdip = http://schemas.microsoft.com/office/2006/customDocumentInformationPanel
     /// </remark>
-	[Index(1)]
     public XsnFileLocation XsnFileLocation
 	{
-        get => GetElement<XsnFileLocation>(1);
-        set => SetElement(1, value);
+        get => GetElement<XsnFileLocation>();
+        set => SetElement(value);
 	}
 
 

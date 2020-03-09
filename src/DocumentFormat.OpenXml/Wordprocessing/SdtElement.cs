@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Validation.Schema;
 
 namespace DocumentFormat.OpenXml.Wordprocessing
 {
@@ -10,6 +11,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// </summary>
     public abstract class SdtElement : OpenXmlCompositeElement
     {
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 0, 1)
+        {
+            new ElementParticle(typeof(SdtProperties), 0, 1),
+            new ElementParticle(typeof(SdtEndCharProperties), 0, 1),
+        }.Compile();
+
         /// <summary>
         /// Initializes a new instance of the SdtElement class.
         /// </summary>
@@ -42,8 +49,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         [Index(0)]
         public SdtProperties SdtProperties
         {
-            get => GetElement<SdtProperties>(0);
-            set => SetElement(0, value);
+            get => _constraint.Get<SdtProperties>(this);
+            set => _constraint.Set(this, value);
         }
 
         /// <summary>
@@ -52,8 +59,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         [Index(1)]
         public SdtEndCharProperties SdtEndCharProperties
         {
-            get => GetElement<SdtEndCharProperties>(1);
-            set => SetElement(1, value);
+            get => _constraint.Get<SdtEndCharProperties>(this);
+            set => _constraint.Set(this, value);
         }
     }
 }

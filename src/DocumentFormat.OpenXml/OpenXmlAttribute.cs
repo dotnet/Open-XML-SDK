@@ -151,15 +151,6 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <returns>The hash code for this instance of an OpenXmlAttribute structure.</returns>
         public override int GetHashCode()
-        {
-            int hash = 23;
-
-            hash = hash * 31 + (LocalName?.GetHashCode() ?? 0);
-            hash = hash * 31 + (NamespaceUri?.GetHashCode() ?? 0);
-            hash = hash * 31 + (Prefix?.GetHashCode() ?? 0);
-            hash = hash * 31 + (Value?.GetHashCode() ?? 0);
-
-            return hash;
-        }
+            => HashCode.Combine(LocalName, NamespaceUri, Prefix, Value);
     }
 }

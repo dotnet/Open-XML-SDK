@@ -230,11 +230,11 @@ namespace DocumentFormat.OpenXml.Tests
                                     "</ap:Properties>";
 
             var properties = new DocumentFormat.OpenXml.ExtendedProperties.Properties();
-            var property = properties.AppendChild( new DocumentFormat.OpenXml.ExtendedProperties.TitlesOfParts() );
+            var property = properties.AppendChild(new DocumentFormat.OpenXml.ExtendedProperties.TitlesOfParts());
             property.VTVector = new DocumentFormat.OpenXml.VariantTypes.VTVector();
             property.VTVector.BaseType = DocumentFormat.OpenXml.VariantTypes.VectorBaseValues.Lpstr;
             property.VTVector.Size = 1;
-            property.VTVector.AppendChild(new DocumentFormat.OpenXml.VariantTypes.VTLPSTR() );
+            property.VTVector.AppendChild(new DocumentFormat.OpenXml.VariantTypes.VTLPSTR());
 
             Assert.Equal(propertiesXml, properties.OuterXml);
 
@@ -262,6 +262,20 @@ namespace DocumentFormat.OpenXml.Tests
 
             Assert.Equal(0, clone.GetAttributes().Count);
             Assert.Equal(propertiesXml, clone.OuterXml);
+        }
+
+        [Fact]
+        public void WorksheetElementsAddInRightOrder()
+        {
+            var ws = new Spreadsheet.Worksheet();
+
+            ws.AppendChild(new Spreadsheet.SheetData());
+            ws.SheetViews = new Spreadsheet.SheetViews();
+
+            Assert.Collection(
+                ws.ChildElements,
+                e => Assert.IsType<Spreadsheet.SheetViews>(e),
+                e => Assert.IsType<Spreadsheet.SheetData>(e));
         }
     }
 }

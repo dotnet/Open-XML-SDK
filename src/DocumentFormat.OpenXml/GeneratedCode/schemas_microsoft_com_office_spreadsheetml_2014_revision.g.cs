@@ -96,11 +96,11 @@ public partial class RevExHeaders : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExHeader), 0, 0, version: FileFormatVersions.Office2016)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -182,7 +182,7 @@ public partial class RevExStream : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExFuture), 0, 0, version: FileFormatVersions.Office2016),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExUnsupported), 0, 0, version: FileFormatVersions.Office2016),
@@ -198,8 +198,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevisionList), 0, 0, version: FileFormatVersions.Office2016),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevListAutoExpandRw), 0, 0, version: FileFormatVersions.Office2016),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevGroup), 0, 0, version: FileFormatVersions.Office2016)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -267,7 +267,7 @@ public partial class DifferentialFormatType : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Font), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberingFormat), 0, 1),
@@ -276,8 +276,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Border), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -287,11 +287,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(0)]
     public DocumentFormat.OpenXml.Spreadsheet.Font Font
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Font>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Font>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Number Format.</para>
@@ -300,11 +299,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(1)]
     public DocumentFormat.OpenXml.Spreadsheet.NumberingFormat NumberingFormat
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Fill.</para>
@@ -313,11 +311,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(2)]
     public DocumentFormat.OpenXml.Spreadsheet.Fill Fill
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Fill>(2);
-        set => SetElement(2, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Fill>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Alignment.</para>
@@ -326,11 +323,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(3)]
     public DocumentFormat.OpenXml.Spreadsheet.Alignment Alignment
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Alignment>(3);
-        set => SetElement(3, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Border Properties.</para>
@@ -339,11 +335,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(4)]
     public DocumentFormat.OpenXml.Spreadsheet.Border Border
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Border>(4);
-        set => SetElement(4, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Border>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Protection Properties.</para>
@@ -352,11 +347,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(5)]
     public DocumentFormat.OpenXml.Spreadsheet.Protection Protection
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Protection>(5);
-        set => SetElement(5, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Protection>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
@@ -365,11 +359,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(6)]
     public DocumentFormat.OpenXml.Spreadsheet.ExtensionList ExtensionList
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(6);
-        set => SetElement(6, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+        set => SetElement(value);
 	}
 
 
@@ -478,7 +471,7 @@ public partial class StateBasedObject : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.DataValidation), 1, 1, version: FileFormatVersions.Office2016),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.Hyperlink), 1, 1, version: FileFormatVersions.Office2016),
@@ -486,8 +479,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.Comments), 1, 1, version: FileFormatVersions.Office2016),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.AutoFilter), 1, 1, version: FileFormatVersions.Office2016),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.pivotTableDefinition), 1, 1, version: FileFormatVersions.Office2016)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
@@ -497,11 +490,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
     /// </remark>
-	[Index(0)]
     public DataValidation DataValidation
 	{
-        get => GetElement<DataValidation>(0);
-        set => SetElement(0, value);
+        get => GetElement<DataValidation>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Represents a hyperlink within a cell..</para>
@@ -510,11 +502,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
     /// </remark>
-	[Index(1)]
     public Hyperlink Hyperlink
 	{
-        get => GetElement<Hyperlink>(1);
-        set => SetElement(1, value);
+        get => GetElement<Hyperlink>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Represents a sparkline group of 1 or more sparklines..</para>
@@ -523,11 +514,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
     /// </remark>
-	[Index(2)]
     public SparklineGroup SparklineGroup
 	{
-        get => GetElement<SparklineGroup>(2);
-        set => SetElement(2, value);
+        get => GetElement<SparklineGroup>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Represents one comment within a cell..</para>
@@ -536,11 +526,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
     /// </remark>
-	[Index(3)]
     public Comments Comments
 	{
-        get => GetElement<Comments>(3);
-        set => SetElement(3, value);
+        get => GetElement<Comments>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Represents an autofilter..</para>
@@ -549,11 +538,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
     /// </remark>
-	[Index(4)]
     public AutoFilter AutoFilter
 	{
-        get => GetElement<AutoFilter>(4);
-        set => SetElement(4, value);
+        get => GetElement<AutoFilter>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Represents a PivotTable View..</para>
@@ -562,11 +550,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
     /// </remark>
-	[Index(5)]
     public pivotTableDefinition pivotTableDefinition
 	{
-        get => GetElement<pivotTableDefinition>(5);
-        set => SetElement(5, value);
+        get => GetElement<pivotTableDefinition>();
+        set => SetElement(value);
 	}
 
 
@@ -729,11 +716,11 @@ public partial class RevExFuture : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExTest), 0, 0, version: FileFormatVersions.Office2016)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -1184,12 +1171,12 @@ public partial class RevExChangeCell : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevCell), 1, 0, version: FileFormatVersions.Office2016),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.ChangeCellSubEdit), 0, 0, version: FileFormatVersions.Office2016)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -1388,12 +1375,12 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.DifferentialFormatType), 0, 1, version: FileFormatVersions.Office2016),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2016)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1403,11 +1390,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
     /// </remark>
-	[Index(0)]
     public DifferentialFormatType DifferentialFormatType
 	{
-        get => GetElement<DifferentialFormatType>(0);
-        set => SetElement(0, value);
+        get => GetElement<DifferentialFormatType>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -1416,11 +1402,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
     /// </remark>
-	[Index(1)]
     public ExtensionList ExtensionList
 	{
-        get => GetElement<ExtensionList>(1);
-        set => SetElement(1, value);
+        get => GetElement<ExtensionList>();
+        set => SetElement(value);
 	}
 
 
@@ -1598,12 +1583,12 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.FormulaFormula), 0, 1, version: FileFormatVersions.Office2016),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2016)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1613,11 +1598,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
     /// </remark>
-	[Index(0)]
     public FormulaFormula FormulaFormula
 	{
-        get => GetElement<FormulaFormula>(0);
-        set => SetElement(0, value);
+        get => GetElement<FormulaFormula>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -1626,11 +1610,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
     /// </remark>
-	[Index(1)]
     public ExtensionList ExtensionList
 	{
-        get => GetElement<ExtensionList>(1);
-        set => SetElement(1, value);
+        get => GetElement<ExtensionList>();
+        set => SetElement(value);
 	}
 
 
@@ -1728,11 +1711,11 @@ public partial class RevExDelObj : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader), 1, 1, version: FileFormatVersions.Office2016)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1742,11 +1725,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
     /// </remark>
-	[Index(0)]
     public StateBasedHeader StateBasedHeader
 	{
-        get => GetElement<StateBasedHeader>(0);
-        set => SetElement(0, value);
+        get => GetElement<StateBasedHeader>();
+        set => SetElement(value);
 	}
 
 
@@ -1848,7 +1830,7 @@ public partial class RevExChgObj : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader), 1, 1, version: FileFormatVersions.Office2016),
     new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -1856,8 +1838,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevisionStateLink), 0, 1, version: FileFormatVersions.Office2016),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevisionState), 0, 1, version: FileFormatVersions.Office2016)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1867,11 +1849,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
     /// </remark>
-	[Index(0)]
     public StateBasedHeader StateBasedHeader
 	{
-        get => GetElement<StateBasedHeader>(0);
-        set => SetElement(0, value);
+        get => GetElement<StateBasedHeader>();
+        set => SetElement(value);
 	}
 
 
@@ -2298,7 +2279,7 @@ public partial class RevGroup : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExFuture), 0, 0, version: FileFormatVersions.Office2016),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExUnsupported), 0, 0, version: FileFormatVersions.Office2016),
@@ -2313,8 +2294,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExSheetOp), 0, 0, version: FileFormatVersions.Office2016),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevisionList), 0, 0, version: FileFormatVersions.Office2016),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevListAutoExpandRw), 0, 0, version: FileFormatVersions.Office2016)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -2428,13 +2409,13 @@ public partial class RevCell : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.FFormula), 0, 1, version: FileFormatVersions.Office2016),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.Xstring), 0, 1, version: FileFormatVersions.Office2016),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RstType), 0, 1, version: FileFormatVersions.Office2016)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -2444,11 +2425,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
     /// </remark>
-	[Index(0)]
     public FFormula FFormula
 	{
-        get => GetElement<FFormula>(0);
-        set => SetElement(0, value);
+        get => GetElement<FFormula>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Xstring.</para>
@@ -2457,11 +2437,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
     /// </remark>
-	[Index(1)]
     public Xstring Xstring
 	{
-        get => GetElement<Xstring>(1);
-        set => SetElement(1, value);
+        get => GetElement<Xstring>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> RstType.</para>
@@ -2470,11 +2449,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
     /// </remark>
-	[Index(2)]
     public RstType RstType
 	{
-        get => GetElement<RstType>(2);
-        set => SetElement(2, value);
+        get => GetElement<RstType>();
+        set => SetElement(value);
 	}
 
 
@@ -2560,11 +2538,11 @@ public partial class ChangeCellSubEdit : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevCell), 1, 0, version: FileFormatVersions.Office2016)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -2620,7 +2598,7 @@ public partial class ExtensionList : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 0, 1)
     {
@@ -2629,8 +2607,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Extension), 0, 0)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -2788,11 +2766,11 @@ public partial class StateBasedHeader : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RefMap), 0, 1, version: FileFormatVersions.Office2016)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -2802,11 +2780,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
     /// </remark>
-	[Index(0)]
     public RefMap RefMap
 	{
-        get => GetElement<RefMap>(0);
-        set => SetElement(0, value);
+        get => GetElement<RefMap>();
+        set => SetElement(value);
 	}
 
 
@@ -2907,15 +2884,15 @@ public partial class RevisionState : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOps), 0, 1, version: FileFormatVersions.Office2016),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.HideUnhideSheet), 0, 1, version: FileFormatVersions.Office2016),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.ShowGridlinesHeadings), 0, 1, version: FileFormatVersions.Office2016),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.FreezePanes), 0, 1, version: FileFormatVersions.Office2016),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.Outlines), 0, 1, version: FileFormatVersions.Office2016)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
@@ -2925,11 +2902,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
     /// </remark>
-	[Index(0)]
     public RowColVisualOps RowColVisualOps
 	{
-        get => GetElement<RowColVisualOps>(0);
-        set => SetElement(0, value);
+        get => GetElement<RowColVisualOps>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> HideUnhideSheet.</para>
@@ -2938,11 +2914,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
     /// </remark>
-	[Index(1)]
     public HideUnhideSheet HideUnhideSheet
 	{
-        get => GetElement<HideUnhideSheet>(1);
-        set => SetElement(1, value);
+        get => GetElement<HideUnhideSheet>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ShowGridlinesHeadings.</para>
@@ -2951,11 +2926,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
     /// </remark>
-	[Index(2)]
     public ShowGridlinesHeadings ShowGridlinesHeadings
 	{
-        get => GetElement<ShowGridlinesHeadings>(2);
-        set => SetElement(2, value);
+        get => GetElement<ShowGridlinesHeadings>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> FreezePanes.</para>
@@ -2964,11 +2938,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
     /// </remark>
-	[Index(3)]
     public FreezePanes FreezePanes
 	{
-        get => GetElement<FreezePanes>(3);
-        set => SetElement(3, value);
+        get => GetElement<FreezePanes>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Outlines.</para>
@@ -2977,11 +2950,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
     /// </remark>
-	[Index(4)]
     public Outlines Outlines
 	{
-        get => GetElement<Outlines>(4);
-        set => SetElement(4, value);
+        get => GetElement<Outlines>();
+        set => SetElement(value);
 	}
 
 
@@ -3046,15 +3018,15 @@ public partial class RefMap : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RefCell), 1, 1, version: FileFormatVersions.Office2016),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.SheetXluid), 1, 1, version: FileFormatVersions.Office2016),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RefOartAnchor), 1, 1, version: FileFormatVersions.Office2016),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RefFuture), 1, 1, version: FileFormatVersions.Office2016),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RefTest), 1, 1, version: FileFormatVersions.Office2016)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -3284,11 +3256,11 @@ public partial class Outlines : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.Outline), 0, 0, version: FileFormatVersions.Office2016)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -3429,14 +3401,14 @@ public partial class RstType : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Text), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Run), 0, 32767),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PhoneticRun), 0, 32767),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -3446,11 +3418,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(0)]
     public DocumentFormat.OpenXml.Spreadsheet.Text Text
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Text>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Text>();
+        set => SetElement(value);
 	}
 
 
@@ -3965,13 +3936,13 @@ public partial class DataValidation : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.ExcelAc.List), 0, 1, version: FileFormatVersions.Office2013),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Formula1), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Formula2), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -3981,11 +3952,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x12ac = http://schemas.microsoft.com/office/spreadsheetml/2011/1/ac
     /// </remark>
-	[Index(0)]
     public DocumentFormat.OpenXml.Office2010.ExcelAc.List List
 	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.ExcelAc.List>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentFormat.OpenXml.Office2010.ExcelAc.List>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Formula1.</para>
@@ -3994,11 +3964,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(1)]
     public DocumentFormat.OpenXml.Spreadsheet.Formula1 Formula1
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formula1>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formula1>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Formula2.</para>
@@ -4007,11 +3976,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(2)]
     public DocumentFormat.OpenXml.Spreadsheet.Formula2 Formula2
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formula2>(2);
-        set => SetElement(2, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formula2>();
+        set => SetElement(value);
 	}
 
 
@@ -4269,7 +4237,7 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SeriesColor), 0, 1, version: FileFormatVersions.Office2010),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.NegativeColor), 0, 1, version: FileFormatVersions.Office2010),
@@ -4281,8 +4249,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor), 0, 1, version: FileFormatVersions.Office2010),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Formula), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Sparklines), 1, 1, version: FileFormatVersions.Office2010)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -4292,11 +4260,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
     /// </remark>
-	[Index(0)]
     public DocumentFormat.OpenXml.Office2010.Excel.SeriesColor SeriesColor
 	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.SeriesColor>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.SeriesColor>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> NegativeColor.</para>
@@ -4305,11 +4272,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
     /// </remark>
-	[Index(1)]
     public DocumentFormat.OpenXml.Office2010.Excel.NegativeColor NegativeColor
 	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.NegativeColor>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.NegativeColor>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> AxisColor.</para>
@@ -4318,11 +4284,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
     /// </remark>
-	[Index(2)]
     public DocumentFormat.OpenXml.Office2010.Excel.AxisColor AxisColor
 	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.AxisColor>(2);
-        set => SetElement(2, value);
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.AxisColor>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> MarkersColor.</para>
@@ -4331,11 +4296,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
     /// </remark>
-	[Index(3)]
     public DocumentFormat.OpenXml.Office2010.Excel.MarkersColor MarkersColor
 	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.MarkersColor>(3);
-        set => SetElement(3, value);
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.MarkersColor>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> FirstMarkerColor.</para>
@@ -4344,11 +4308,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
     /// </remark>
-	[Index(4)]
     public DocumentFormat.OpenXml.Office2010.Excel.FirstMarkerColor FirstMarkerColor
 	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.FirstMarkerColor>(4);
-        set => SetElement(4, value);
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.FirstMarkerColor>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> LastMarkerColor.</para>
@@ -4357,11 +4320,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
     /// </remark>
-	[Index(5)]
     public DocumentFormat.OpenXml.Office2010.Excel.LastMarkerColor LastMarkerColor
 	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.LastMarkerColor>(5);
-        set => SetElement(5, value);
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.LastMarkerColor>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> HighMarkerColor.</para>
@@ -4370,11 +4332,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
     /// </remark>
-	[Index(6)]
     public DocumentFormat.OpenXml.Office2010.Excel.HighMarkerColor HighMarkerColor
 	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.HighMarkerColor>(6);
-        set => SetElement(6, value);
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.HighMarkerColor>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> LowMarkerColor.</para>
@@ -4383,11 +4344,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
     /// </remark>
-	[Index(7)]
     public DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor LowMarkerColor
 	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor>(7);
-        set => SetElement(7, value);
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Formula.</para>
@@ -4396,11 +4356,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
     /// </remark>
-	[Index(8)]
     public DocumentFormat.OpenXml.Office.Excel.Formula Formula
 	{
-        get => GetElement<DocumentFormat.OpenXml.Office.Excel.Formula>(8);
-        set => SetElement(8, value);
+        get => GetElement<DocumentFormat.OpenXml.Office.Excel.Formula>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Sparklines.</para>
@@ -4409,11 +4368,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
     /// </remark>
-	[Index(9)]
     public DocumentFormat.OpenXml.Office2010.Excel.Sparklines Sparklines
 	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Sparklines>(9);
-        set => SetElement(9, value);
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Sparklines>();
+        set => SetElement(value);
 	}
 
 
@@ -4474,13 +4432,13 @@ public partial class Comments : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Authors), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CommentList), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -4490,11 +4448,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(0)]
     public DocumentFormat.OpenXml.Spreadsheet.Authors Authors
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Authors>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Authors>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> List of Comments.</para>
@@ -4503,11 +4460,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(1)]
     public DocumentFormat.OpenXml.Spreadsheet.CommentList CommentList
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CommentList>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CommentList>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -4516,11 +4472,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(2)]
     public DocumentFormat.OpenXml.Spreadsheet.ExtensionList ExtensionList
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(2);
-        set => SetElement(2, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+        set => SetElement(value);
 	}
 
 
@@ -4588,13 +4543,13 @@ public partial class AutoFilter : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FilterColumn), 0, 0),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SortState), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -5161,7 +5116,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Location), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotFields), 0, 1),
@@ -5180,8 +5135,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -5191,11 +5146,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(0)]
     public DocumentFormat.OpenXml.Spreadsheet.Location Location
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Location>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Location>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> PivotFields.</para>
@@ -5204,11 +5158,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(1)]
     public DocumentFormat.OpenXml.Spreadsheet.PivotFields PivotFields
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotFields>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotFields>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> RowFields.</para>
@@ -5217,11 +5170,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(2)]
     public DocumentFormat.OpenXml.Spreadsheet.RowFields RowFields
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowFields>(2);
-        set => SetElement(2, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowFields>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> RowItems.</para>
@@ -5230,11 +5182,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(3)]
     public DocumentFormat.OpenXml.Spreadsheet.RowItems RowItems
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowItems>(3);
-        set => SetElement(3, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowItems>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ColumnFields.</para>
@@ -5243,11 +5194,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(4)]
     public DocumentFormat.OpenXml.Spreadsheet.ColumnFields ColumnFields
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnFields>(4);
-        set => SetElement(4, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnFields>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ColumnItems.</para>
@@ -5256,11 +5206,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(5)]
     public DocumentFormat.OpenXml.Spreadsheet.ColumnItems ColumnItems
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnItems>(5);
-        set => SetElement(5, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnItems>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> PageFields.</para>
@@ -5269,11 +5218,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(6)]
     public DocumentFormat.OpenXml.Spreadsheet.PageFields PageFields
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageFields>(6);
-        set => SetElement(6, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageFields>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> DataFields.</para>
@@ -5282,11 +5230,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(7)]
     public DocumentFormat.OpenXml.Spreadsheet.DataFields DataFields
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DataFields>(7);
-        set => SetElement(7, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DataFields>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Formats.</para>
@@ -5295,11 +5242,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(8)]
     public DocumentFormat.OpenXml.Spreadsheet.Formats Formats
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formats>(8);
-        set => SetElement(8, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formats>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ConditionalFormats.</para>
@@ -5308,11 +5254,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(9)]
     public DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats ConditionalFormats
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats>(9);
-        set => SetElement(9, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ChartFormats.</para>
@@ -5321,11 +5266,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(10)]
     public DocumentFormat.OpenXml.Spreadsheet.ChartFormats ChartFormats
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ChartFormats>(10);
-        set => SetElement(10, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ChartFormats>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> PivotHierarchies.</para>
@@ -5334,11 +5278,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(11)]
     public DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies PivotHierarchies
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies>(11);
-        set => SetElement(11, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> PivotTableStyle.</para>
@@ -5347,11 +5290,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(12)]
     public DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle PivotTableStyle
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle>(12);
-        set => SetElement(12, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> PivotFilters.</para>
@@ -5360,11 +5302,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(13)]
     public DocumentFormat.OpenXml.Spreadsheet.PivotFilters PivotFilters
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotFilters>(13);
-        set => SetElement(13, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotFilters>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> RowHierarchiesUsage.</para>
@@ -5373,11 +5314,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(14)]
     public DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage RowHierarchiesUsage
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage>(14);
-        set => SetElement(14, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ColumnHierarchiesUsage.</para>
@@ -5386,11 +5326,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(15)]
     public DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage ColumnHierarchiesUsage
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage>(15);
-        set => SetElement(15, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> PivotTableDefinitionExtensionList.</para>
@@ -5399,11 +5338,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(16)]
     public DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList PivotTableDefinitionExtensionList
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList>(16);
-        set => SetElement(16, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList>();
+        set => SetElement(value);
 	}
 
 
