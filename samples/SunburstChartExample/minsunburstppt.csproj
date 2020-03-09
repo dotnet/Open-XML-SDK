@@ -11,7 +11,8 @@
 
   <ItemGroup>
     <Reference Include="DocumentFormat.OpenXml">
-      <HintPath>\\jeebshpzb\d$\source\forks\Open-XML-SDK\bin\Debug\DocumentFormat.OpenXml\netstandard2.0\DocumentFormat.OpenXml.dll</HintPath>
+	    <!-- TODO: replace <<path>> with the path to the build of the SDK dll or use the nuget package -->
+	    <HintPath><<path>>\Open-XML-SDK\bin\Debug\DocumentFormat.OpenXml\netstandard2.0\DocumentFormat.OpenXml.dll</HintPath>
     </Reference>
   </ItemGroup>
 
