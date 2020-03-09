@@ -127,7 +127,7 @@ public partial class Variant : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.Variant), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector), 1, 1),
@@ -164,8 +164,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVStreamData), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTClassId), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTClipboardData), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
@@ -175,11 +175,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(0)]
     public Variant InnerVariant
 	{
-        get => GetElement<Variant>(0);
-        set => SetElement(0, value);
+        get => GetElement<Variant>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Vector.</para>
@@ -188,11 +187,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(1)]
     public VTVector VTVector
 	{
-        get => GetElement<VTVector>(1);
-        set => SetElement(1, value);
+        get => GetElement<VTVector>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Array.</para>
@@ -201,11 +199,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(2)]
     public VTArray VTArray
 	{
-        get => GetElement<VTArray>(2);
-        set => SetElement(2, value);
+        get => GetElement<VTArray>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Binary Blob.</para>
@@ -214,11 +211,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(3)]
     public VTBlob VTBlob
 	{
-        get => GetElement<VTBlob>(3);
-        set => SetElement(3, value);
+        get => GetElement<VTBlob>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Binary Blob Object.</para>
@@ -227,11 +223,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(4)]
     public VTOBlob VTOBlob
 	{
-        get => GetElement<VTOBlob>(4);
-        set => SetElement(4, value);
+        get => GetElement<VTOBlob>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Empty.</para>
@@ -240,11 +235,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(5)]
     public VTEmpty VTEmpty
 	{
-        get => GetElement<VTEmpty>(5);
-        set => SetElement(5, value);
+        get => GetElement<VTEmpty>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Null.</para>
@@ -253,11 +247,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(6)]
     public VTNull VTNull
 	{
-        get => GetElement<VTNull>(6);
-        set => SetElement(6, value);
+        get => GetElement<VTNull>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> 1-Byte Signed Integer.</para>
@@ -266,11 +259,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(7)]
     public VTByte VTByte
 	{
-        get => GetElement<VTByte>(7);
-        set => SetElement(7, value);
+        get => GetElement<VTByte>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> 2-Byte Signed Integer.</para>
@@ -279,11 +271,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(8)]
     public VTShort VTShort
 	{
-        get => GetElement<VTShort>(8);
-        set => SetElement(8, value);
+        get => GetElement<VTShort>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> 4-Byte Signed Integer.</para>
@@ -292,11 +283,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(9)]
     public VTInt32 VTInt32
 	{
-        get => GetElement<VTInt32>(9);
-        set => SetElement(9, value);
+        get => GetElement<VTInt32>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> 8-Byte Signed Integer.</para>
@@ -305,11 +295,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(10)]
     public VTInt64 VTInt64
 	{
-        get => GetElement<VTInt64>(10);
-        set => SetElement(10, value);
+        get => GetElement<VTInt64>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Integer.</para>
@@ -318,11 +307,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(11)]
     public VTInteger VTInteger
 	{
-        get => GetElement<VTInteger>(11);
-        set => SetElement(11, value);
+        get => GetElement<VTInteger>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> 1-Byte Unsigned Integer.</para>
@@ -331,11 +319,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(12)]
     public VTUnsignedByte VTUnsignedByte
 	{
-        get => GetElement<VTUnsignedByte>(12);
-        set => SetElement(12, value);
+        get => GetElement<VTUnsignedByte>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> 2-Byte Unsigned Integer.</para>
@@ -344,11 +331,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(13)]
     public VTUnsignedShort VTUnsignedShort
 	{
-        get => GetElement<VTUnsignedShort>(13);
-        set => SetElement(13, value);
+        get => GetElement<VTUnsignedShort>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> 4-Byte Unsigned Integer.</para>
@@ -357,11 +343,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(14)]
     public VTUnsignedInt32 VTUnsignedInt32
 	{
-        get => GetElement<VTUnsignedInt32>(14);
-        set => SetElement(14, value);
+        get => GetElement<VTUnsignedInt32>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> 8-Byte Unsigned Integer.</para>
@@ -370,11 +355,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(15)]
     public VTUnsignedInt64 VTUnsignedInt64
 	{
-        get => GetElement<VTUnsignedInt64>(15);
-        set => SetElement(15, value);
+        get => GetElement<VTUnsignedInt64>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Unsigned Integer.</para>
@@ -383,11 +367,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(16)]
     public VTUnsignedInteger VTUnsignedInteger
 	{
-        get => GetElement<VTUnsignedInteger>(16);
-        set => SetElement(16, value);
+        get => GetElement<VTUnsignedInteger>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> 4-Byte Real Number.</para>
@@ -396,11 +379,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(17)]
     public VTFloat VTFloat
 	{
-        get => GetElement<VTFloat>(17);
-        set => SetElement(17, value);
+        get => GetElement<VTFloat>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> 8-Byte Real Number.</para>
@@ -409,11 +391,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(18)]
     public VTDouble VTDouble
 	{
-        get => GetElement<VTDouble>(18);
-        set => SetElement(18, value);
+        get => GetElement<VTDouble>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Decimal.</para>
@@ -422,11 +403,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(19)]
     public VTDecimal VTDecimal
 	{
-        get => GetElement<VTDecimal>(19);
-        set => SetElement(19, value);
+        get => GetElement<VTDecimal>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> LPSTR.</para>
@@ -435,11 +415,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(20)]
     public VTLPSTR VTLPSTR
 	{
-        get => GetElement<VTLPSTR>(20);
-        set => SetElement(20, value);
+        get => GetElement<VTLPSTR>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> LPWSTR.</para>
@@ -448,11 +427,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(21)]
     public VTLPWSTR VTLPWSTR
 	{
-        get => GetElement<VTLPWSTR>(21);
-        set => SetElement(21, value);
+        get => GetElement<VTLPWSTR>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Basic String.</para>
@@ -461,11 +439,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(22)]
     public VTBString VTBString
 	{
-        get => GetElement<VTBString>(22);
-        set => SetElement(22, value);
+        get => GetElement<VTBString>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Date and Time.</para>
@@ -474,11 +451,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(23)]
     public VTDate VTDate
 	{
-        get => GetElement<VTDate>(23);
-        set => SetElement(23, value);
+        get => GetElement<VTDate>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> File Time.</para>
@@ -487,11 +463,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(24)]
     public VTFileTime VTFileTime
 	{
-        get => GetElement<VTFileTime>(24);
-        set => SetElement(24, value);
+        get => GetElement<VTFileTime>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Boolean.</para>
@@ -500,11 +475,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(25)]
     public VTBool VTBool
 	{
-        get => GetElement<VTBool>(25);
-        set => SetElement(25, value);
+        get => GetElement<VTBool>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Currency.</para>
@@ -513,11 +487,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(26)]
     public VTCurrency VTCurrency
 	{
-        get => GetElement<VTCurrency>(26);
-        set => SetElement(26, value);
+        get => GetElement<VTCurrency>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Error Status Code.</para>
@@ -526,11 +499,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(27)]
     public VTError VTError
 	{
-        get => GetElement<VTError>(27);
-        set => SetElement(27, value);
+        get => GetElement<VTError>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Binary Stream.</para>
@@ -539,11 +511,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(28)]
     public VTStreamData VTStreamData
 	{
-        get => GetElement<VTStreamData>(28);
-        set => SetElement(28, value);
+        get => GetElement<VTStreamData>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Binary Stream Object.</para>
@@ -552,11 +523,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(29)]
     public VTOStreamData VTOStreamData
 	{
-        get => GetElement<VTOStreamData>(29);
-        set => SetElement(29, value);
+        get => GetElement<VTOStreamData>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Binary Storage.</para>
@@ -565,11 +535,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(30)]
     public VTStorage VTStorage
 	{
-        get => GetElement<VTStorage>(30);
-        set => SetElement(30, value);
+        get => GetElement<VTStorage>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Binary Storage Object.</para>
@@ -578,11 +547,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(31)]
     public VTOStorage VTOStorage
 	{
-        get => GetElement<VTOStorage>(31);
-        set => SetElement(31, value);
+        get => GetElement<VTOStorage>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Binary Versioned Stream.</para>
@@ -591,11 +559,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(32)]
     public VTVStreamData VTVStreamData
 	{
-        get => GetElement<VTVStreamData>(32);
-        set => SetElement(32, value);
+        get => GetElement<VTVStreamData>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Class ID.</para>
@@ -604,11 +571,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(33)]
     public VTClassId VTClassId
 	{
-        get => GetElement<VTClassId>(33);
-        set => SetElement(33, value);
+        get => GetElement<VTClassId>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Clipboard Data.</para>
@@ -617,11 +583,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(34)]
     public VTClipboardData VTClipboardData
 	{
-        get => GetElement<VTClipboardData>(34);
-        set => SetElement(34, value);
+        get => GetElement<VTClipboardData>();
+        set => SetElement(value);
 	}
 
 
@@ -734,7 +699,7 @@ public partial class VTVector : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.Variant), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTByte), 1, 1),
@@ -757,8 +722,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTError), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTClassId), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTClipboardData), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -870,7 +835,7 @@ public partial class VTArray : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.Variant), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTByte), 1, 1),
@@ -889,8 +854,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTBool), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTError), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTCurrency), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>

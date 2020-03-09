@@ -292,7 +292,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(run1Text + run2Text, p.InnerText);
 
             var unknownElement = OpenXmlUnknownElement.CreateOpenXmlUnknownElement(paragraphOuterXml);
-            Assert.Equal(paragraphOuterXml, unknownElement.OuterXml);
+            Assert.Equal(paragraphOuterXml2, unknownElement.OuterXml);
             Assert.Equal(paragraphInnerXml, unknownElement.InnerXml);
         }
 
@@ -422,32 +422,33 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("wrap", target.LocalName);
         }
 
-        /// <summary>
-        /// A test for OpenXmlAttribute
-        /// </summary>
-        [Fact(Skip = "Currently failing")]
-        public void OpenXmlAttributeTest()
+        [Fact]
+        public void DefaultOpenXmlAttributeTest()
         {
             var target = new OpenXmlAttribute();
             var other = new OpenXmlAttribute();
 
-            Assert.NotEqual(target, other);
+            Assert.Equal(target, other);
             Assert.True(target == other);
             Assert.False(target != other);
             Assert.True(target.Equals(other));
             Assert.True(target.Equals((object)other));
-            Assert.True(OpenXmlAttribute.Equals(target, other));
+            Assert.True(Equals(target, other));
             Assert.Equal(target.GetHashCode(), other.GetHashCode());
+        }
 
-            target = new OpenXmlAttribute("test", "http://test", "test", "value");
-            other = new OpenXmlAttribute("test", "http://test", "test", "value");
+        [Fact]
+        public void OpenXmlAttributeTest()
+        {
+            var target = new OpenXmlAttribute("test", "http://test", "test", "value");
+            var other = new OpenXmlAttribute("test", "http://test", "test", "value");
 
-            Assert.NotEqual(target, other);
+            Assert.Equal(target, other);
             Assert.True(target == other);
             Assert.False(target != other);
             Assert.True(target.Equals(other));
             Assert.True(target.Equals((object)other));
-            Assert.True(OpenXmlAttribute.Equals(target, other));
+            Assert.True(Equals(target, other));
             Assert.Equal(target.GetHashCode(), other.GetHashCode());
 
             other.Value = "other";
@@ -457,17 +458,17 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.True(target != other);
             Assert.False(target.Equals(other));
             Assert.False(target.Equals((object)other));
-            Assert.False(OpenXmlAttribute.Equals(target, other));
+            Assert.False(Equals(target, other));
             Assert.NotEqual(target.GetHashCode(), other.GetHashCode());
 
             other.Value = "value";
 
-            Assert.NotEqual(target, other);
+            Assert.Equal(target, other);
             Assert.True(target == other);
             Assert.False(target != other);
             Assert.True(target.Equals(other));
             Assert.True(target.Equals((object)other));
-            Assert.True(OpenXmlAttribute.Equals(target, other));
+            Assert.True(Equals(target, other));
             Assert.Equal(target.GetHashCode(), other.GetHashCode());
 
             other.Prefix = "t";
@@ -477,7 +478,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.True(target != other);
             Assert.False(target.Equals(other));
             Assert.False(target.Equals((object)other));
-            Assert.False(OpenXmlAttribute.Equals(target, other));
+            Assert.False(Equals(target, other));
             Assert.NotEqual(target.GetHashCode(), other.GetHashCode());
         }
 
@@ -664,13 +665,15 @@ namespace DocumentFormat.OpenXml.Tests
         {
             // Valid outer xml
             var validOuterXml = "<myElement  xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\"></myElement>";
+            var actualOuterXml = "<myElement xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\" />";
             var unknown1 = OpenXmlUnknownElement.CreateOpenXmlUnknownElement(validOuterXml);
-            Assert.Equal(validOuterXml, unknown1.OuterXml);
+            Assert.Equal(actualOuterXml, unknown1.OuterXml);
 
             // Valid outer xml but starting with whitespace.
             var validOuterXmlWithWhitespaces = "   <myElement  xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\"></myElement>";
+            var actualValidOuterXmlWithWhitespaces = "<myElement xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\" />";
             var unknown2 = OpenXmlUnknownElement.CreateOpenXmlUnknownElement(validOuterXmlWithWhitespaces);
-            Assert.Equal(validOuterXmlWithWhitespaces, unknown2.OuterXml);
+            Assert.Equal(actualValidOuterXmlWithWhitespaces, unknown2.OuterXml);
 
             // Check bug #484153.
             var outerXmlWithXmlDecl = "<?xml version=\"1.0\" encoding=\"utf-8\"?><customUI  xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\"></customUI>";
@@ -985,7 +988,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 foreach (var property in type.GetTypeInfo().GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly))
                 {
-                    if (typeof(OpenXmlElement).IsAssignableFrom(property.PropertyType) || typeof(OpenXmlSimpleType).IsAssignableFrom(property.PropertyType))
+                    if (typeof(OpenXmlSimpleType).IsAssignableFrom(property.PropertyType))
                     {
                         // Skip any obsolete properties as those redirect to other properties
                         if (property.GetCustomAttribute<ObsoleteAttribute>() == null)
@@ -998,10 +1001,19 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         [Fact]
-        public void AttributesAvaialbleWhenInitializedWithOuterXml()
+        public void AttributesAvailableWhenInitializedWithOuterXml()
         {
             var style1 = new Style { StyleId = new StringValue("1") };
             var style2 = new Style(style1.OuterXml);
+
+            Assert.Equal(style1.StyleId, style2.StyleId);
+        }
+
+        [Fact]
+        public void AttributesAvailableWhenOuterXmlUpdated()
+        {
+            var style1 = new Style { StyleId = new StringValue("1") };
+            var style2 = new Style { OuterXml = style1.OuterXml };
 
             Assert.Equal(style1.StyleId, style2.StyleId);
         }

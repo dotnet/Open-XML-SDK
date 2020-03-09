@@ -203,11 +203,11 @@ public partial class Formulas : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formula), 0, 128)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -263,11 +263,11 @@ public partial class ShapeHandles : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandle), 0, 4)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -517,11 +517,11 @@ public partial class Fill : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -531,11 +531,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
-	[Index(0)]
     public DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties FillExtendedProperties
 	{
-        get => GetElement<DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -806,15 +805,15 @@ public partial class Stroke : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.LeftStroke), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.TopStroke), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.RightStroke), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.BottomStroke), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ColumnStroke), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -824,11 +823,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
-	[Index(0)]
     public DocumentFormat.OpenXml.Vml.Office.LeftStroke LeftStroke
 	{
-        get => GetElement<DocumentFormat.OpenXml.Vml.Office.LeftStroke>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentFormat.OpenXml.Vml.Office.LeftStroke>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TopStroke.</para>
@@ -837,11 +835,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
-	[Index(1)]
     public DocumentFormat.OpenXml.Vml.Office.TopStroke TopStroke
 	{
-        get => GetElement<DocumentFormat.OpenXml.Vml.Office.TopStroke>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocumentFormat.OpenXml.Vml.Office.TopStroke>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> RightStroke.</para>
@@ -850,11 +847,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
-	[Index(2)]
     public DocumentFormat.OpenXml.Vml.Office.RightStroke RightStroke
 	{
-        get => GetElement<DocumentFormat.OpenXml.Vml.Office.RightStroke>(2);
-        set => SetElement(2, value);
+        get => GetElement<DocumentFormat.OpenXml.Vml.Office.RightStroke>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> BottomStroke.</para>
@@ -863,11 +859,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
-	[Index(3)]
     public DocumentFormat.OpenXml.Vml.Office.BottomStroke BottomStroke
 	{
-        get => GetElement<DocumentFormat.OpenXml.Vml.Office.BottomStroke>(3);
-        set => SetElement(3, value);
+        get => GetElement<DocumentFormat.OpenXml.Vml.Office.BottomStroke>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ColumnStroke.</para>
@@ -876,11 +871,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
-	[Index(4)]
     public DocumentFormat.OpenXml.Vml.Office.ColumnStroke ColumnStroke
 	{
-        get => GetElement<DocumentFormat.OpenXml.Vml.Office.ColumnStroke>(4);
-        set => SetElement(4, value);
+        get => GetElement<DocumentFormat.OpenXml.Vml.Office.ColumnStroke>();
+        set => SetElement(value);
 	}
 
 
@@ -1070,12 +1064,12 @@ public partial class TextBox : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TextBoxContent), 0, 1),
     new AnyParticle(XsdAny.Local, 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -1895,7 +1889,7 @@ public partial class Shape : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
 {
     new CompositeParticle(ParticleType.Group, 1, 1)
     {
@@ -1928,8 +1922,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     },
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Ink), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.InkAnnotationFlag), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -2480,7 +2474,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 0, 0)
     {
@@ -2512,8 +2506,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         }
     },
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Complex), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -2874,7 +2868,7 @@ public partial class Group : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Group), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shape), 1, 1),
@@ -2893,8 +2887,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -3008,11 +3002,11 @@ public partial class Background : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -3022,11 +3016,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:v = urn:schemas-microsoft-com:vml
     /// </remark>
-	[Index(0)]
     public Fill Fill
 	{
-        get => GetElement<Fill>(0);
-        set => SetElement(0, value);
+        get => GetElement<Fill>();
+        set => SetElement(value);
 	}
 
 
@@ -3561,7 +3554,7 @@ public partial class Arc : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 0, 0)
     {
@@ -3592,8 +3585,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -4147,7 +4140,7 @@ public partial class Curve : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 0, 0)
     {
@@ -4178,8 +4171,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -4768,7 +4761,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 0, 0)
     {
@@ -4799,8 +4792,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -5340,7 +5333,7 @@ public partial class Line : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 0, 0)
     {
@@ -5371,8 +5364,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -5898,7 +5891,7 @@ public partial class Oval : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
 {
     new CompositeParticle(ParticleType.Group, 0, 0)
     {
@@ -5929,8 +5922,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -6465,7 +6458,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
 {
     new CompositeParticle(ParticleType.Group, 1, 1)
     {
@@ -6497,8 +6490,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         }
     },
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Ink), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -7024,7 +7017,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
 {
     new CompositeParticle(ParticleType.Group, 0, 0)
     {
@@ -7055,8 +7048,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -7582,7 +7575,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
 {
     new CompositeParticle(ParticleType.Group, 0, 0)
     {
@@ -7613,8 +7606,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>

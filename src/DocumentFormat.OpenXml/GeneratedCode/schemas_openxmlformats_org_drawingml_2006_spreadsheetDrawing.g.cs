@@ -85,7 +85,7 @@ public partial class TwoCellAnchor : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ToMarker), 1, 1),
@@ -105,8 +105,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         }
     },
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -116,11 +116,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(0)]
     public FromMarker FromMarker
 	{
-        get => GetElement<FromMarker>(0);
-        set => SetElement(0, value);
+        get => GetElement<FromMarker>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Ending Anchor Point.</para>
@@ -129,11 +128,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(1)]
     public ToMarker ToMarker
 	{
-        get => GetElement<ToMarker>(1);
-        set => SetElement(1, value);
+        get => GetElement<ToMarker>();
+        set => SetElement(value);
 	}
 
 
@@ -206,7 +204,7 @@ public partial class OneCellAnchor : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent), 1, 1),
@@ -226,8 +224,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         }
     },
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -237,11 +235,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(0)]
     public FromMarker FromMarker
 	{
-        get => GetElement<FromMarker>(0);
-        set => SetElement(0, value);
+        get => GetElement<FromMarker>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Extent.</para>
@@ -250,11 +247,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(1)]
     public Extent Extent
 	{
-        get => GetElement<Extent>(1);
-        set => SetElement(1, value);
+        get => GetElement<Extent>();
+        set => SetElement(value);
 	}
 
 
@@ -327,7 +323,7 @@ public partial class AbsoluteAnchor : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Position), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent), 1, 1),
@@ -347,8 +343,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         }
     },
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -358,11 +354,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(0)]
     public Position Position
 	{
-        get => GetElement<Position>(0);
-        set => SetElement(0, value);
+        get => GetElement<Position>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Shape Extent.</para>
@@ -371,11 +366,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(1)]
     public Extent Extent
 	{
-        get => GetElement<Extent>(1);
-        set => SetElement(1, value);
+        get => GetElement<Extent>();
+        set => SetElement(value);
 	}
 
 
@@ -466,14 +460,14 @@ public partial class Shape : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeProperties), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.TextBody), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -483,11 +477,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(0)]
     public NonVisualShapeProperties NonVisualShapeProperties
 	{
-        get => GetElement<NonVisualShapeProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<NonVisualShapeProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Shape Properties.</para>
@@ -496,11 +489,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(1)]
     public ShapeProperties ShapeProperties
 	{
-        get => GetElement<ShapeProperties>(1);
-        set => SetElement(1, value);
+        get => GetElement<ShapeProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ShapeStyle.</para>
@@ -509,11 +501,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(2)]
     public ShapeStyle ShapeStyle
 	{
-        get => GetElement<ShapeStyle>(2);
-        set => SetElement(2, value);
+        get => GetElement<ShapeStyle>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Shape Text Body.</para>
@@ -522,11 +513,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(3)]
     public TextBody TextBody
 	{
-        get => GetElement<TextBody>(3);
-        set => SetElement(3, value);
+        get => GetElement<TextBody>();
+        set => SetElement(value);
 	}
 
 
@@ -597,7 +587,7 @@ public partial class GroupShape : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeProperties), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShapeProperties), 1, 1),
@@ -610,8 +600,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart), 1, 1, version: FileFormatVersions.Office2010)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -621,11 +611,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(0)]
     public NonVisualGroupShapeProperties NonVisualGroupShapeProperties
 	{
-        get => GetElement<NonVisualGroupShapeProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<NonVisualGroupShapeProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Group Shape Properties.</para>
@@ -634,11 +623,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(1)]
     public GroupShapeProperties GroupShapeProperties
 	{
-        get => GetElement<GroupShapeProperties>(1);
-        set => SetElement(1, value);
+        get => GetElement<GroupShapeProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -713,13 +701,13 @@ public partial class GraphicFrame : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameProperties), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Transform), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Graphic), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -729,11 +717,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(0)]
     public NonVisualGraphicFrameProperties NonVisualGraphicFrameProperties
 	{
-        get => GetElement<NonVisualGraphicFrameProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<NonVisualGraphicFrameProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> 2D Transform for Graphic Frames.</para>
@@ -742,11 +729,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(1)]
     public Transform Transform
 	{
-        get => GetElement<Transform>(1);
-        set => SetElement(1, value);
+        get => GetElement<Transform>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Graphic.</para>
@@ -755,11 +741,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(2)]
     public DocumentFormat.OpenXml.Drawing.Graphic Graphic
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Graphic>(2);
-        set => SetElement(2, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Graphic>();
+        set => SetElement(value);
 	}
 
 
@@ -834,13 +819,13 @@ public partial class ConnectionShape : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectionShapeProperties), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -850,11 +835,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(0)]
     public NonVisualConnectionShapeProperties NonVisualConnectionShapeProperties
 	{
-        get => GetElement<NonVisualConnectionShapeProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<NonVisualConnectionShapeProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Connector Shape Properties.</para>
@@ -863,11 +847,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(1)]
     public ShapeProperties ShapeProperties
 	{
-        get => GetElement<ShapeProperties>(1);
-        set => SetElement(1, value);
+        get => GetElement<ShapeProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ShapeStyle.</para>
@@ -876,11 +859,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(2)]
     public ShapeStyle ShapeStyle
 	{
-        get => GetElement<ShapeStyle>(2);
-        set => SetElement(2, value);
+        get => GetElement<ShapeStyle>();
+        set => SetElement(value);
 	}
 
 
@@ -957,14 +939,14 @@ public partial class Picture : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureProperties), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.BlipFill), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -974,11 +956,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(0)]
     public NonVisualPictureProperties NonVisualPictureProperties
 	{
-        get => GetElement<NonVisualPictureProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<NonVisualPictureProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Picture Fill.</para>
@@ -987,11 +968,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(1)]
     public BlipFill BlipFill
 	{
-        get => GetElement<BlipFill>(1);
-        set => SetElement(1, value);
+        get => GetElement<BlipFill>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ShapeProperties.</para>
@@ -1000,11 +980,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(2)]
     public ShapeProperties ShapeProperties
 	{
-        get => GetElement<ShapeProperties>(2);
-        set => SetElement(2, value);
+        get => GetElement<ShapeProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Shape Style.</para>
@@ -1013,11 +992,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(3)]
     public ShapeStyle ShapeStyle
 	{
-        get => GetElement<ShapeStyle>(3);
-        set => SetElement(3, value);
+        get => GetElement<ShapeStyle>();
+        set => SetElement(value);
 	}
 
 
@@ -1098,14 +1076,14 @@ public partial class ContentPart : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties), 0, 1, version: FileFormatVersions.Office2010),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties), 0, 1, version: FileFormatVersions.Office2010),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D), 0, 1, version: FileFormatVersions.Office2010),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1115,11 +1093,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr14 = http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing
     /// </remark>
-	[Index(0)]
     public DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties ExcelNonVisualContentPartShapeProperties
 	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ApplicationNonVisualDrawingProperties.</para>
@@ -1128,11 +1105,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr14 = http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing
     /// </remark>
-	[Index(1)]
     public DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties ApplicationNonVisualDrawingProperties
 	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Transform2D.</para>
@@ -1141,11 +1117,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr14 = http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing
     /// </remark>
-	[Index(2)]
     public DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D Transform2D
 	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D>(2);
-        set => SetElement(2, value);
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -1154,11 +1129,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr14 = http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing
     /// </remark>
-	[Index(3)]
     public DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList OfficeArtExtensionList
 	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList>(3);
-        set => SetElement(3, value);
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList>();
+        set => SetElement(value);
 	}
 
 
@@ -1248,7 +1222,7 @@ public partial class WorksheetDrawing : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WorksheetDrawing>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 0, 0)
     {
@@ -1259,8 +1233,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.AbsoluteAnchor), 1, 1)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Non-Visual Properties for a Shape.</para>
@@ -1313,12 +1287,12 @@ public partial class NonVisualShapeProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeDrawingProperties), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1328,11 +1302,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(0)]
     public NonVisualDrawingProperties NonVisualDrawingProperties
 	{
-        get => GetElement<NonVisualDrawingProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<NonVisualDrawingProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Connection Non-Visual Shape Properties.</para>
@@ -1341,11 +1314,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(1)]
     public NonVisualShapeDrawingProperties NonVisualShapeDrawingProperties
 	{
-        get => GetElement<NonVisualShapeDrawingProperties>(1);
-        set => SetElement(1, value);
+        get => GetElement<NonVisualShapeDrawingProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -1438,7 +1410,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
     new CompositeParticle(ParticleType.Group, 0, 1)
@@ -1473,8 +1445,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1484,11 +1456,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.Transform2D Transform2D
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
+        set => SetElement(value);
 	}
 
 
@@ -1551,14 +1522,14 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineReference), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FillReference), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectReference), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FontReference), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1568,11 +1539,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.LineReference LineReference
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.LineReference>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.LineReference>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> FillReference.</para>
@@ -1581,11 +1551,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(1)]
     public DocumentFormat.OpenXml.Drawing.FillReference FillReference
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.FillReference>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.FillReference>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> EffectReference.</para>
@@ -1594,11 +1563,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(2)]
     public DocumentFormat.OpenXml.Drawing.EffectReference EffectReference
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.EffectReference>(2);
-        set => SetElement(2, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.EffectReference>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Font Reference.</para>
@@ -1607,11 +1575,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(3)]
     public DocumentFormat.OpenXml.Drawing.FontReference FontReference
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.FontReference>(3);
-        set => SetElement(3, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.FontReference>();
+        set => SetElement(value);
 	}
 
 
@@ -1672,13 +1639,13 @@ public partial class TextBody : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ListStyle), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Paragraph), 1, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1688,11 +1655,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.BodyProperties BodyProperties
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.BodyProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.BodyProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Text List Styles.</para>
@@ -1701,11 +1667,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(1)]
     public DocumentFormat.OpenXml.Drawing.ListStyle ListStyle
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>();
+        set => SetElement(value);
 	}
 
 
@@ -1764,12 +1729,12 @@ public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElemen
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectorShapeDrawingProperties), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1779,11 +1744,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(0)]
     public NonVisualDrawingProperties NonVisualDrawingProperties
 	{
-        get => GetElement<NonVisualDrawingProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<NonVisualDrawingProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Non-Visual Connector Shape Drawing Properties.</para>
@@ -1792,11 +1756,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(1)]
     public NonVisualConnectorShapeDrawingProperties NonVisualConnectorShapeDrawingProperties
 	{
-        get => GetElement<NonVisualConnectorShapeDrawingProperties>(1);
-        set => SetElement(1, value);
+        get => GetElement<NonVisualConnectorShapeDrawingProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -1855,12 +1818,12 @@ public partial class NonVisualPictureProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureDrawingProperties), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1870,11 +1833,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(0)]
     public NonVisualDrawingProperties NonVisualDrawingProperties
 	{
-        get => GetElement<NonVisualDrawingProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<NonVisualDrawingProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Non-Visual Picture Drawing Properties.</para>
@@ -1883,11 +1845,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(1)]
     public NonVisualPictureDrawingProperties NonVisualPictureDrawingProperties
 	{
-        get => GetElement<NonVisualPictureDrawingProperties>(1);
-        set => SetElement(1, value);
+        get => GetElement<NonVisualPictureDrawingProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -1957,7 +1918,7 @@ public partial class BlipFill : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Blip), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SourceRectangle), 0, 1),
@@ -1969,8 +1930,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Stretch), 1, 1)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1980,11 +1941,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.Blip Blip
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Blip>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Blip>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Source Rectangle.</para>
@@ -1993,11 +1953,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(1)]
     public DocumentFormat.OpenXml.Drawing.SourceRectangle SourceRectangle
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.SourceRectangle>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.SourceRectangle>();
+        set => SetElement(value);
 	}
 
 
@@ -2056,12 +2015,12 @@ public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameDrawingProperties), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -2071,11 +2030,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(0)]
     public NonVisualDrawingProperties NonVisualDrawingProperties
 	{
-        get => GetElement<NonVisualDrawingProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<NonVisualDrawingProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Non-Visual Graphic Frame Drawing Properties.</para>
@@ -2084,11 +2042,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(1)]
     public NonVisualGraphicFrameDrawingProperties NonVisualGraphicFrameDrawingProperties
 	{
-        get => GetElement<NonVisualGraphicFrameDrawingProperties>(1);
-        set => SetElement(1, value);
+        get => GetElement<NonVisualGraphicFrameDrawingProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -2168,12 +2125,12 @@ public partial class Transform : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Offset), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extents), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -2183,11 +2140,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.Offset Offset
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Extents.</para>
@@ -2196,11 +2152,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(1)]
     public DocumentFormat.OpenXml.Drawing.Extents Extents
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>();
+        set => SetElement(value);
 	}
 
 
@@ -2401,14 +2356,14 @@ public partial class FromMarker : MarkerType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FromMarker>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Ending Anchor Point.</para>
@@ -2461,14 +2416,14 @@ public partial class ToMarker : MarkerType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ToMarker>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// Defines the MarkerType class.
@@ -2501,11 +2456,10 @@ public abstract partial class MarkerType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(0)]
     public ColumnId ColumnId
 	{
-        get => GetElement<ColumnId>(0);
-        set => SetElement(0, value);
+        get => GetElement<ColumnId>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Column Offset.</para>
@@ -2514,11 +2468,10 @@ public abstract partial class MarkerType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(1)]
     public ColumnOffset ColumnOffset
 	{
-        get => GetElement<ColumnOffset>(1);
-        set => SetElement(1, value);
+        get => GetElement<ColumnOffset>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Row.</para>
@@ -2527,11 +2480,10 @@ public abstract partial class MarkerType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(2)]
     public RowId RowId
 	{
-        get => GetElement<RowId>(2);
-        set => SetElement(2, value);
+        get => GetElement<RowId>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Row Offset.</para>
@@ -2540,11 +2492,10 @@ public abstract partial class MarkerType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(3)]
     public RowOffset RowOffset
 	{
-        get => GetElement<RowOffset>(3);
-        set => SetElement(3, value);
+        get => GetElement<RowOffset>();
+        set => SetElement(value);
 	}
 
 
@@ -2796,13 +2747,13 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -2812,11 +2763,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick HyperlinkOnClick
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> HyperlinkOnHover.</para>
@@ -2825,11 +2775,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(1)]
     public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover HyperlinkOnHover
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> NonVisualDrawingPropertiesExtensionList.</para>
@@ -2838,11 +2787,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(2)]
     public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>(2);
-        set => SetElement(2, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
+        set => SetElement(value);
 	}
 
 
@@ -2908,12 +2856,12 @@ public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapeLocks), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -2923,11 +2871,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.ShapeLocks ShapeLocks
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.ShapeLocks>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.ShapeLocks>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -2936,11 +2883,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(1)]
     public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+        set => SetElement(value);
 	}
 
 
@@ -3003,14 +2949,14 @@ public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlComposite
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.StartConnection), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EndConnection), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -3020,11 +2966,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks ConnectionShapeLocks
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Connection Start.</para>
@@ -3033,11 +2978,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(1)]
     public DocumentFormat.OpenXml.Drawing.StartConnection StartConnection
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.StartConnection>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.StartConnection>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Connection End.</para>
@@ -3046,11 +2990,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(2)]
     public DocumentFormat.OpenXml.Drawing.EndConnection EndConnection
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.EndConnection>(2);
-        set => SetElement(2, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.EndConnection>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -3059,11 +3002,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(3)]
     public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(3);
-        set => SetElement(3, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+        set => SetElement(value);
 	}
 
 
@@ -3129,12 +3071,12 @@ public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PictureLocks), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -3144,11 +3086,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.PictureLocks PictureLocks
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.PictureLocks>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.PictureLocks>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> NonVisualPicturePropertiesExtensionList.</para>
@@ -3157,11 +3098,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(1)]
     public DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList NonVisualPicturePropertiesExtensionList
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList>();
+        set => SetElement(value);
 	}
 
 
@@ -3220,12 +3160,12 @@ public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeEl
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -3235,11 +3175,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.GraphicFrameLocks GraphicFrameLocks
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -3248,11 +3187,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(1)]
     public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+        set => SetElement(value);
 	}
 
 
@@ -3311,12 +3249,12 @@ public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElem
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupShapeLocks), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -3326,11 +3264,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.GroupShapeLocks GroupShapeLocks
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> NonVisualGroupDrawingShapePropsExtensionList.</para>
@@ -3339,11 +3276,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(1)]
     public DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList NonVisualGroupDrawingShapePropsExtensionList
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>();
+        set => SetElement(value);
 	}
 
 
@@ -3402,12 +3338,12 @@ public partial class NonVisualGroupShapeProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeDrawingProperties), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -3417,11 +3353,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(0)]
     public NonVisualDrawingProperties NonVisualDrawingProperties
 	{
-        get => GetElement<NonVisualDrawingProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<NonVisualDrawingProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Non-Visual Group Shape Drawing Properties.</para>
@@ -3430,11 +3365,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-	[Index(1)]
     public NonVisualGroupShapeDrawingProperties NonVisualGroupShapeDrawingProperties
 	{
-        get => GetElement<NonVisualGroupShapeDrawingProperties>(1);
-        set => SetElement(1, value);
+        get => GetElement<NonVisualGroupShapeDrawingProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -3519,7 +3453,7 @@ public partial class GroupShapeProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TransformGroup), 0, 1),
     new CompositeParticle(ParticleType.Group, 0, 1)
@@ -3544,8 +3478,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     },
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -3555,11 +3489,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.TransformGroup TransformGroup
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.TransformGroup>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.TransformGroup>();
+        set => SetElement(value);
 	}
 
 

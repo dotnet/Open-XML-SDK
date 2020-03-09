@@ -5578,14 +5578,14 @@ public partial class NumberingProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.NumberingLevelReference), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.NumberingId), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.NumberingChange), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Inserted), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -5595,11 +5595,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public NumberingLevelReference NumberingLevelReference
 	{
-        get => GetElement<NumberingLevelReference>(0);
-        set => SetElement(0, value);
+        get => GetElement<NumberingLevelReference>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Numbering Definition Instance Reference.</para>
@@ -5608,11 +5607,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public NumberingId NumberingId
 	{
-        get => GetElement<NumberingId>(1);
-        set => SetElement(1, value);
+        get => GetElement<NumberingId>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Previous Paragraph Numbering Properties.</para>
@@ -5621,11 +5619,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public NumberingChange NumberingChange
 	{
-        get => GetElement<NumberingChange>(2);
-        set => SetElement(2, value);
+        get => GetElement<NumberingChange>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Inserted Numbering Properties.</para>
@@ -5634,11 +5631,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public Inserted Inserted
 	{
-        get => GetElement<Inserted>(3);
-        set => SetElement(3, value);
+        get => GetElement<Inserted>();
+        set => SetElement(value);
 	}
 
 
@@ -5705,7 +5701,7 @@ public partial class ParagraphBorders : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TopBorder), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.LeftBorder), 0, 1),
@@ -5713,8 +5709,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.RightBorder), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BetweenBorder), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BarBorder), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -5724,11 +5720,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public TopBorder TopBorder
 	{
-        get => GetElement<TopBorder>(0);
-        set => SetElement(0, value);
+        get => GetElement<TopBorder>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Left Paragraph Border.</para>
@@ -5737,11 +5732,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public LeftBorder LeftBorder
 	{
-        get => GetElement<LeftBorder>(1);
-        set => SetElement(1, value);
+        get => GetElement<LeftBorder>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Paragraph Border Between Identical Paragraphs.</para>
@@ -5750,11 +5744,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public BottomBorder BottomBorder
 	{
-        get => GetElement<BottomBorder>(2);
-        set => SetElement(2, value);
+        get => GetElement<BottomBorder>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Right Paragraph Border.</para>
@@ -5763,11 +5756,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public RightBorder RightBorder
 	{
-        get => GetElement<RightBorder>(3);
-        set => SetElement(3, value);
+        get => GetElement<RightBorder>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Paragraph Border Between Identical Paragraphs.</para>
@@ -5776,11 +5768,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public BetweenBorder BetweenBorder
 	{
-        get => GetElement<BetweenBorder>(4);
-        set => SetElement(4, value);
+        get => GetElement<BetweenBorder>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Paragraph Border Between Facing Pages.</para>
@@ -5789,11 +5780,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public BarBorder BarBorder
 	{
-        get => GetElement<BarBorder>(5);
-        set => SetElement(5, value);
+        get => GetElement<BarBorder>();
+        set => SetElement(value);
 	}
 
 
@@ -5966,11 +5956,11 @@ public partial class Tabs : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TabStop), 1, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -6766,14 +6756,14 @@ public partial class ParagraphPropertiesChange : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Sequence, 1, 1)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesExtended), 1, 1)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -6783,11 +6773,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public ParagraphPropertiesExtended ParagraphPropertiesExtended
 	{
-        get => GetElement<ParagraphPropertiesExtended>(0);
-        set => SetElement(0, value);
+        get => GetElement<ParagraphPropertiesExtended>();
+        set => SetElement(value);
 	}
 
 
@@ -7761,7 +7750,7 @@ public partial class EmbeddedObject : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Choice, 0, 0)
     {
@@ -7794,8 +7783,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ObjectLink), 1, 1)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -7888,7 +7877,7 @@ public partial class Picture : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Choice, 0, 0)
     {
@@ -7916,8 +7905,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MovieReference), 0, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Control), 0, 1)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -8005,13 +7994,13 @@ public partial class FieldChar : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.FieldData), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.FormFieldData), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.NumberingChange), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
@@ -8021,11 +8010,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public FieldData FieldData
 	{
-        get => GetElement<FieldData>(0);
-        set => SetElement(0, value);
+        get => GetElement<FieldData>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Form Field Properties.</para>
@@ -8034,11 +8022,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public FormFieldData FormFieldData
 	{
-        get => GetElement<FormFieldData>(1);
-        set => SetElement(1, value);
+        get => GetElement<FormFieldData>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Previous Numbering Field Properties.</para>
@@ -8047,11 +8034,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public NumberingChange NumberingChange
 	{
-        get => GetElement<NumberingChange>(2);
-        set => SetElement(2, value);
+        get => GetElement<NumberingChange>();
+        set => SetElement(value);
 	}
 
 
@@ -8112,13 +8098,13 @@ public partial class Ruby : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.RubyProperties), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.RubyContent), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.RubyBase), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -8128,11 +8114,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public RubyProperties RubyProperties
 	{
-        get => GetElement<RubyProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<RubyProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Phonetic Guide Text.</para>
@@ -8141,11 +8126,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public RubyContent RubyContent
 	{
-        get => GetElement<RubyContent>(1);
-        set => SetElement(1, value);
+        get => GetElement<RubyContent>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Phonetic Guide Base Text.</para>
@@ -8154,11 +8138,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public RubyBase RubyBase
 	{
-        get => GetElement<RubyBase>(2);
-        set => SetElement(2, value);
+        get => GetElement<RubyBase>();
+        set => SetElement(value);
 	}
 
 
@@ -8297,12 +8280,12 @@ public partial class Drawing : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.Anchor), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.Inline), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
@@ -8312,11 +8295,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.Wordprocessing.Anchor Anchor
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.Anchor>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.Anchor>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Inline Drawing Object.</para>
@@ -8325,11 +8307,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-	[Index(1)]
     public DocumentFormat.OpenXml.Drawing.Wordprocessing.Inline Inline
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.Inline>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.Inline>();
+        set => SetElement(value);
 	}
 
 
@@ -10022,14 +10003,14 @@ public partial class RunPropertiesChange : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Sequence, 1, 1)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PreviousRunProperties), 1, 1)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -10039,11 +10020,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public PreviousRunProperties PreviousRunProperties
 	{
-        get => GetElement<PreviousRunProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<PreviousRunProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -10200,7 +10180,7 @@ public partial class RunProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 0, 1)
     {
@@ -10319,8 +10299,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -10330,11 +10310,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public RunStyle RunStyle
 	{
-        get => GetElement<RunStyle>(0);
-        set => SetElement(0, value);
+        get => GetElement<RunStyle>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> RunFonts.</para>
@@ -10343,11 +10322,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public RunFonts RunFonts
 	{
-        get => GetElement<RunFonts>(1);
-        set => SetElement(1, value);
+        get => GetElement<RunFonts>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Bold.</para>
@@ -10356,11 +10334,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public Bold Bold
 	{
-        get => GetElement<Bold>(2);
-        set => SetElement(2, value);
+        get => GetElement<Bold>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> BoldComplexScript.</para>
@@ -10369,11 +10346,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public BoldComplexScript BoldComplexScript
 	{
-        get => GetElement<BoldComplexScript>(3);
-        set => SetElement(3, value);
+        get => GetElement<BoldComplexScript>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Italic.</para>
@@ -10382,11 +10358,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public Italic Italic
 	{
-        get => GetElement<Italic>(4);
-        set => SetElement(4, value);
+        get => GetElement<Italic>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ItalicComplexScript.</para>
@@ -10395,11 +10370,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public ItalicComplexScript ItalicComplexScript
 	{
-        get => GetElement<ItalicComplexScript>(5);
-        set => SetElement(5, value);
+        get => GetElement<ItalicComplexScript>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Caps.</para>
@@ -10408,11 +10382,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(6)]
     public Caps Caps
 	{
-        get => GetElement<Caps>(6);
-        set => SetElement(6, value);
+        get => GetElement<Caps>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SmallCaps.</para>
@@ -10421,11 +10394,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(7)]
     public SmallCaps SmallCaps
 	{
-        get => GetElement<SmallCaps>(7);
-        set => SetElement(7, value);
+        get => GetElement<SmallCaps>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Strike.</para>
@@ -10434,11 +10406,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(8)]
     public Strike Strike
 	{
-        get => GetElement<Strike>(8);
-        set => SetElement(8, value);
+        get => GetElement<Strike>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> DoubleStrike.</para>
@@ -10447,11 +10418,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(9)]
     public DoubleStrike DoubleStrike
 	{
-        get => GetElement<DoubleStrike>(9);
-        set => SetElement(9, value);
+        get => GetElement<DoubleStrike>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Outline.</para>
@@ -10460,11 +10430,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(10)]
     public Outline Outline
 	{
-        get => GetElement<Outline>(10);
-        set => SetElement(10, value);
+        get => GetElement<Outline>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Shadow.</para>
@@ -10473,11 +10442,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(11)]
     public Shadow Shadow
 	{
-        get => GetElement<Shadow>(11);
-        set => SetElement(11, value);
+        get => GetElement<Shadow>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Emboss.</para>
@@ -10486,11 +10454,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(12)]
     public Emboss Emboss
 	{
-        get => GetElement<Emboss>(12);
-        set => SetElement(12, value);
+        get => GetElement<Emboss>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Imprint.</para>
@@ -10499,11 +10466,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(13)]
     public Imprint Imprint
 	{
-        get => GetElement<Imprint>(13);
-        set => SetElement(13, value);
+        get => GetElement<Imprint>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> NoProof.</para>
@@ -10512,11 +10478,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(14)]
     public NoProof NoProof
 	{
-        get => GetElement<NoProof>(14);
-        set => SetElement(14, value);
+        get => GetElement<NoProof>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SnapToGrid.</para>
@@ -10525,11 +10490,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(15)]
     public SnapToGrid SnapToGrid
 	{
-        get => GetElement<SnapToGrid>(15);
-        set => SetElement(15, value);
+        get => GetElement<SnapToGrid>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Vanish.</para>
@@ -10538,11 +10502,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(16)]
     public Vanish Vanish
 	{
-        get => GetElement<Vanish>(16);
-        set => SetElement(16, value);
+        get => GetElement<Vanish>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> WebHidden.</para>
@@ -10551,11 +10514,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(17)]
     public WebHidden WebHidden
 	{
-        get => GetElement<WebHidden>(17);
-        set => SetElement(17, value);
+        get => GetElement<WebHidden>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Color.</para>
@@ -10564,11 +10526,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(18)]
     public Color Color
 	{
-        get => GetElement<Color>(18);
-        set => SetElement(18, value);
+        get => GetElement<Color>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Spacing.</para>
@@ -10577,11 +10538,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(19)]
     public Spacing Spacing
 	{
-        get => GetElement<Spacing>(19);
-        set => SetElement(19, value);
+        get => GetElement<Spacing>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> CharacterScale.</para>
@@ -10590,11 +10550,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(20)]
     public CharacterScale CharacterScale
 	{
-        get => GetElement<CharacterScale>(20);
-        set => SetElement(20, value);
+        get => GetElement<CharacterScale>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Kern.</para>
@@ -10603,11 +10562,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(21)]
     public Kern Kern
 	{
-        get => GetElement<Kern>(21);
-        set => SetElement(21, value);
+        get => GetElement<Kern>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Position.</para>
@@ -10616,11 +10574,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(22)]
     public Position Position
 	{
-        get => GetElement<Position>(22);
-        set => SetElement(22, value);
+        get => GetElement<Position>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> FontSize.</para>
@@ -10629,11 +10586,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(23)]
     public FontSize FontSize
 	{
-        get => GetElement<FontSize>(23);
-        set => SetElement(23, value);
+        get => GetElement<FontSize>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> FontSizeComplexScript.</para>
@@ -10642,11 +10598,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(24)]
     public FontSizeComplexScript FontSizeComplexScript
 	{
-        get => GetElement<FontSizeComplexScript>(24);
-        set => SetElement(24, value);
+        get => GetElement<FontSizeComplexScript>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Highlight.</para>
@@ -10655,11 +10610,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(25)]
     public Highlight Highlight
 	{
-        get => GetElement<Highlight>(25);
-        set => SetElement(25, value);
+        get => GetElement<Highlight>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Underline.</para>
@@ -10668,11 +10622,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(26)]
     public Underline Underline
 	{
-        get => GetElement<Underline>(26);
-        set => SetElement(26, value);
+        get => GetElement<Underline>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TextEffect.</para>
@@ -10681,11 +10634,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(27)]
     public TextEffect TextEffect
 	{
-        get => GetElement<TextEffect>(27);
-        set => SetElement(27, value);
+        get => GetElement<TextEffect>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Border.</para>
@@ -10694,11 +10646,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(28)]
     public Border Border
 	{
-        get => GetElement<Border>(28);
-        set => SetElement(28, value);
+        get => GetElement<Border>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Shading.</para>
@@ -10707,11 +10658,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(29)]
     public Shading Shading
 	{
-        get => GetElement<Shading>(29);
-        set => SetElement(29, value);
+        get => GetElement<Shading>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> FitText.</para>
@@ -10720,11 +10670,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(30)]
     public FitText FitText
 	{
-        get => GetElement<FitText>(30);
-        set => SetElement(30, value);
+        get => GetElement<FitText>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> VerticalTextAlignment.</para>
@@ -10733,11 +10682,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(31)]
     public VerticalTextAlignment VerticalTextAlignment
 	{
-        get => GetElement<VerticalTextAlignment>(31);
-        set => SetElement(31, value);
+        get => GetElement<VerticalTextAlignment>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> RightToLeftText.</para>
@@ -10746,11 +10694,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(32)]
     public RightToLeftText RightToLeftText
 	{
-        get => GetElement<RightToLeftText>(32);
-        set => SetElement(32, value);
+        get => GetElement<RightToLeftText>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ComplexScript.</para>
@@ -10759,11 +10706,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(33)]
     public ComplexScript ComplexScript
 	{
-        get => GetElement<ComplexScript>(33);
-        set => SetElement(33, value);
+        get => GetElement<ComplexScript>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Emphasis.</para>
@@ -10772,11 +10718,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(34)]
     public Emphasis Emphasis
 	{
-        get => GetElement<Emphasis>(34);
-        set => SetElement(34, value);
+        get => GetElement<Emphasis>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Languages.</para>
@@ -10785,11 +10730,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(35)]
     public Languages Languages
 	{
-        get => GetElement<Languages>(35);
-        set => SetElement(35, value);
+        get => GetElement<Languages>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> EastAsianLayout.</para>
@@ -10798,11 +10742,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(36)]
     public EastAsianLayout EastAsianLayout
 	{
-        get => GetElement<EastAsianLayout>(36);
-        set => SetElement(36, value);
+        get => GetElement<EastAsianLayout>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SpecVanish.</para>
@@ -10811,11 +10754,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(37)]
     public SpecVanish SpecVanish
 	{
-        get => GetElement<SpecVanish>(37);
-        set => SetElement(37, value);
+        get => GetElement<SpecVanish>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Glow.</para>
@@ -10824,11 +10766,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
     /// </remark>
-	[Index(38)]
     public DocumentFormat.OpenXml.Office2010.Word.Glow Glow
 	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Glow>(38);
-        set => SetElement(38, value);
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Glow>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Shadow14.</para>
@@ -10837,11 +10778,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
     /// </remark>
-	[Index(39)]
     public DocumentFormat.OpenXml.Office2010.Word.Shadow Shadow14
 	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Shadow>(39);
-        set => SetElement(39, value);
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Shadow>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Reflection.</para>
@@ -10850,11 +10790,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
     /// </remark>
-	[Index(40)]
     public DocumentFormat.OpenXml.Office2010.Word.Reflection Reflection
 	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Reflection>(40);
-        set => SetElement(40, value);
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Reflection>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TextOutlineEffect.</para>
@@ -10863,11 +10802,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
     /// </remark>
-	[Index(41)]
     public DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect TextOutlineEffect
 	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect>(41);
-        set => SetElement(41, value);
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> FillTextEffect.</para>
@@ -10876,11 +10814,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
     /// </remark>
-	[Index(42)]
     public DocumentFormat.OpenXml.Office2010.Word.FillTextEffect FillTextEffect
 	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.FillTextEffect>(42);
-        set => SetElement(42, value);
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.FillTextEffect>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Scene3D.</para>
@@ -10889,11 +10826,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
     /// </remark>
-	[Index(43)]
     public DocumentFormat.OpenXml.Office2010.Word.Scene3D Scene3D
 	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Scene3D>(43);
-        set => SetElement(43, value);
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Scene3D>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Properties3D.</para>
@@ -10902,11 +10838,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
     /// </remark>
-	[Index(44)]
     public DocumentFormat.OpenXml.Office2010.Word.Properties3D Properties3D
 	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Properties3D>(44);
-        set => SetElement(44, value);
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Properties3D>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Ligatures.</para>
@@ -10915,11 +10850,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
     /// </remark>
-	[Index(45)]
     public DocumentFormat.OpenXml.Office2010.Word.Ligatures Ligatures
 	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Ligatures>(45);
-        set => SetElement(45, value);
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Ligatures>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> NumberingFormat.</para>
@@ -10928,11 +10862,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
     /// </remark>
-	[Index(46)]
     public DocumentFormat.OpenXml.Office2010.Word.NumberingFormat NumberingFormat
 	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.NumberingFormat>(46);
-        set => SetElement(46, value);
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.NumberingFormat>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> NumberSpacing.</para>
@@ -10941,11 +10874,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
     /// </remark>
-	[Index(47)]
     public DocumentFormat.OpenXml.Office2010.Word.NumberSpacing NumberSpacing
 	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.NumberSpacing>(47);
-        set => SetElement(47, value);
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.NumberSpacing>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> StylisticSets.</para>
@@ -10954,11 +10886,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
     /// </remark>
-	[Index(48)]
     public DocumentFormat.OpenXml.Office2010.Word.StylisticSets StylisticSets
 	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.StylisticSets>(48);
-        set => SetElement(48, value);
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.StylisticSets>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ContextualAlternatives.</para>
@@ -10967,11 +10898,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
     /// </remark>
-	[Index(49)]
     public DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives ContextualAlternatives
 	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives>(49);
-        set => SetElement(49, value);
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> RunPropertiesChange.</para>
@@ -10980,11 +10910,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(50)]
     public RunPropertiesChange RunPropertiesChange
 	{
-        get => GetElement<RunPropertiesChange>(50);
-        set => SetElement(50, value);
+        get => GetElement<RunPropertiesChange>();
+        set => SetElement(value);
 	}
 
 
@@ -11075,7 +11004,7 @@ public partial class InsertedMathControl : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Choice, 0, 1)
     {
@@ -11094,8 +11023,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -11183,7 +11112,7 @@ public partial class DeletedMathControl : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Choice, 0, 1)
     {
@@ -11195,8 +11124,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -11253,7 +11182,7 @@ public partial class MoveFromMathControl : MathControlMoveType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MoveFromMathControl>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Choice, 0, 1)
     {
@@ -11279,8 +11208,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Defines the MoveToMathControl Class.</para>
@@ -11332,7 +11261,7 @@ public partial class MoveToMathControl : MathControlMoveType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MoveToMathControl>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Choice, 0, 1)
     {
@@ -11358,8 +11287,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// Defines the MathControlMoveType class.
@@ -11608,7 +11537,7 @@ public partial class CustomXmlRuby : CustomXmlElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties), 0, 1),
     new CompositeParticle(ParticleType.Group, 0, 0)
@@ -11734,8 +11663,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
@@ -11935,7 +11864,7 @@ public partial class SimpleFieldRuby : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.FieldData), 0, 1),
     new CompositeParticle(ParticleType.Group, 0, 0)
@@ -12061,8 +11990,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -12072,11 +12001,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public FieldData FieldData
 	{
-        get => GetElement<FieldData>(0);
-        set => SetElement(0, value);
+        get => GetElement<FieldData>();
+        set => SetElement(value);
 	}
 
 
@@ -12303,7 +12231,7 @@ public partial class HyperlinkRuby : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
 {
     new CompositeParticle(ParticleType.Choice, 1, 1)
     {
@@ -12425,8 +12353,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -12576,7 +12504,7 @@ public partial class Run : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 0, 1)
     {
@@ -12623,8 +12551,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.LastRenderedPageBreak), 0, 1)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -12634,11 +12562,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public RunProperties RunProperties
 	{
-        get => GetElement<RunProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<RunProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -12739,7 +12666,7 @@ public partial class SdtRunRuby : SdtElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtEndCharProperties), 0, 1),
@@ -12782,8 +12709,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -12793,11 +12720,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public SdtContentRunRuby SdtContentRunRuby
 	{
-        get => GetElement<SdtContentRunRuby>(2);
-        set => SetElement(2, value);
+        get => GetElement<SdtContentRunRuby>();
+        set => SetElement(value);
 	}
 
 
@@ -13072,7 +12998,7 @@ public partial class InsertedRun : RunTrackChangeType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<InsertedRun>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Choice, 0, 0)
     {
@@ -13211,8 +13137,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Deleted Run Content.</para>
@@ -13317,7 +13243,7 @@ public partial class DeletedRun : RunTrackChangeType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DeletedRun>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Choice, 0, 0)
     {
@@ -13456,8 +13382,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Move Source Run Content.</para>
@@ -13562,7 +13488,7 @@ public partial class MoveFromRun : RunTrackChangeType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MoveFromRun>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Choice, 0, 0)
     {
@@ -13701,8 +13627,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Move Destination Run Content.</para>
@@ -13807,7 +13733,7 @@ public partial class MoveToRun : RunTrackChangeType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MoveToRun>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Choice, 0, 0)
     {
@@ -13946,8 +13872,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// Defines the RunTrackChangeType class.
@@ -14268,7 +14194,7 @@ public partial class SdtRun : SdtElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtEndCharProperties), 0, 1),
@@ -14311,8 +14237,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -14322,11 +14248,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public SdtContentRun SdtContentRun
 	{
-        get => GetElement<SdtContentRun>(2);
-        set => SetElement(2, value);
+        get => GetElement<SdtContentRun>();
+        set => SetElement(value);
 	}
 
 
@@ -14451,7 +14376,7 @@ public partial class CustomXmlBlock : CustomXmlElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties), 0, 1),
     new CompositeParticle(ParticleType.Group, 0, 0)
@@ -14536,8 +14461,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
@@ -14639,7 +14564,7 @@ public partial class SdtBlock : SdtElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtEndCharProperties), 0, 1),
@@ -14682,8 +14607,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -14693,11 +14618,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public SdtContentBlock SdtContentBlock
 	{
-        get => GetElement<SdtContentBlock>(2);
-        set => SetElement(2, value);
+        get => GetElement<SdtContentBlock>();
+        set => SetElement(value);
 	}
 
 
@@ -14956,7 +14880,7 @@ public partial class Paragraph : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ParagraphProperties), 0, 1),
     new CompositeParticle(ParticleType.Group, 0, 0)
@@ -15109,8 +15033,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SubDocumentReference), 1, 1)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -15120,11 +15044,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public ParagraphProperties ParagraphProperties
 	{
-        get => GetElement<ParagraphProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<ParagraphProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -15249,7 +15172,7 @@ public partial class Table : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 0, 0)
     {
@@ -15366,8 +15289,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -15553,7 +15476,7 @@ public partial class TableRow : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TablePropertyExceptions), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableRowProperties), 0, 1),
@@ -15632,8 +15555,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -15643,11 +15566,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public TablePropertyExceptions TablePropertyExceptions
 	{
-        get => GetElement<TablePropertyExceptions>(0);
-        set => SetElement(0, value);
+        get => GetElement<TablePropertyExceptions>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Row Properties.</para>
@@ -15656,11 +15578,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public TableRowProperties TableRowProperties
 	{
-        get => GetElement<TableRowProperties>(1);
-        set => SetElement(1, value);
+        get => GetElement<TableRowProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -15783,7 +15704,7 @@ public partial class CustomXmlRow : CustomXmlElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties), 0, 1),
     new CompositeParticle(ParticleType.Group, 0, 0)
@@ -15861,8 +15782,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
@@ -15964,7 +15885,7 @@ public partial class SdtRow : SdtElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtEndCharProperties), 0, 1),
@@ -16007,8 +15928,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -16018,11 +15939,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public SdtContentRow SdtContentRow
 	{
-        get => GetElement<SdtContentRow>(2);
-        set => SetElement(2, value);
+        get => GetElement<SdtContentRow>();
+        set => SetElement(value);
 	}
 
 
@@ -16149,7 +16069,7 @@ public partial class TableCell : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableCellProperties), 0, 1),
     new CompositeParticle(ParticleType.Group, 1, 0)
@@ -16253,8 +16173,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -16264,11 +16184,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public TableCellProperties TableCellProperties
 	{
-        get => GetElement<TableCellProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<TableCellProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -16391,7 +16310,7 @@ public partial class CustomXmlCell : CustomXmlElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties), 0, 1),
     new CompositeParticle(ParticleType.Group, 0, 0)
@@ -16469,8 +16388,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
@@ -16572,7 +16491,7 @@ public partial class SdtCell : SdtElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtEndCharProperties), 0, 1),
@@ -16615,8 +16534,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -16626,11 +16545,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public SdtContentCell SdtContentCell
 	{
-        get => GetElement<SdtContentCell>(2);
-        set => SetElement(2, value);
+        get => GetElement<SdtContentCell>();
+        set => SetElement(value);
 	}
 
 
@@ -16807,7 +16725,7 @@ public partial class CustomXmlRun : CustomXmlElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties), 0, 1),
     new CompositeParticle(ParticleType.Group, 0, 0)
@@ -16960,8 +16878,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SubDocumentReference), 1, 1)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
@@ -17167,7 +17085,7 @@ public partial class SimpleField : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.FieldData), 0, 1),
     new CompositeParticle(ParticleType.Group, 0, 0)
@@ -17320,8 +17238,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SubDocumentReference), 1, 1)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -17331,11 +17249,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public FieldData FieldData
 	{
-        get => GetElement<FieldData>(0);
-        set => SetElement(0, value);
+        get => GetElement<FieldData>();
+        set => SetElement(value);
 	}
 
 
@@ -17568,7 +17485,7 @@ public partial class Hyperlink : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
 {
     new CompositeParticle(ParticleType.Choice, 1, 1)
     {
@@ -17717,8 +17634,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         },
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SubDocumentReference), 1, 1)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -17901,7 +17818,7 @@ public partial class BidirectionalOverride : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
 {
     new CompositeParticle(ParticleType.Choice, 1, 1)
     {
@@ -18050,8 +17967,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         },
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SubDocumentReference), 1, 1)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -18234,7 +18151,7 @@ public partial class BidirectionalEmbedding : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
 {
     new CompositeParticle(ParticleType.Choice, 1, 1)
     {
@@ -18383,8 +18300,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         },
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SubDocumentReference), 1, 1)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -19176,7 +19093,7 @@ public partial class TableCellBorders : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TopBorder), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.LeftBorder), 0, 1),
@@ -19188,8 +19105,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsideVerticalBorder), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TopLeftToBottomRightCellBorder), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TopRightToBottomLeftCellBorder), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -19199,11 +19116,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public TopBorder TopBorder
 	{
-        get => GetElement<TopBorder>(0);
-        set => SetElement(0, value);
+        get => GetElement<TopBorder>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Cell Left Border.</para>
@@ -19212,11 +19128,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public LeftBorder LeftBorder
 	{
-        get => GetElement<LeftBorder>(1);
-        set => SetElement(1, value);
+        get => GetElement<LeftBorder>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> StartBorder.</para>
@@ -19225,11 +19140,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public StartBorder StartBorder
 	{
-        get => GetElement<StartBorder>(2);
-        set => SetElement(2, value);
+        get => GetElement<StartBorder>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Cell Bottom Border.</para>
@@ -19238,11 +19152,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public BottomBorder BottomBorder
 	{
-        get => GetElement<BottomBorder>(3);
-        set => SetElement(3, value);
+        get => GetElement<BottomBorder>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Cell Right Border.</para>
@@ -19251,11 +19164,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public RightBorder RightBorder
 	{
-        get => GetElement<RightBorder>(4);
-        set => SetElement(4, value);
+        get => GetElement<RightBorder>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> EndBorder.</para>
@@ -19264,11 +19176,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public EndBorder EndBorder
 	{
-        get => GetElement<EndBorder>(5);
-        set => SetElement(5, value);
+        get => GetElement<EndBorder>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Cell Inside Horizontal Edges Border.</para>
@@ -19277,11 +19188,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(6)]
     public InsideHorizontalBorder InsideHorizontalBorder
 	{
-        get => GetElement<InsideHorizontalBorder>(6);
-        set => SetElement(6, value);
+        get => GetElement<InsideHorizontalBorder>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Cell Inside Vertical Edges Border.</para>
@@ -19290,11 +19200,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(7)]
     public InsideVerticalBorder InsideVerticalBorder
 	{
-        get => GetElement<InsideVerticalBorder>(7);
-        set => SetElement(7, value);
+        get => GetElement<InsideVerticalBorder>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Cell Top Left to Bottom Right Diagonal Border.</para>
@@ -19303,11 +19212,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(8)]
     public TopLeftToBottomRightCellBorder TopLeftToBottomRightCellBorder
 	{
-        get => GetElement<TopLeftToBottomRightCellBorder>(8);
-        set => SetElement(8, value);
+        get => GetElement<TopLeftToBottomRightCellBorder>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Cell Top Right to Bottom Left Diagonal Border.</para>
@@ -19316,11 +19224,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(9)]
     public TopRightToBottomLeftCellBorder TopRightToBottomLeftCellBorder
 	{
-        get => GetElement<TopRightToBottomLeftCellBorder>(9);
-        set => SetElement(9, value);
+        get => GetElement<TopRightToBottomLeftCellBorder>();
+        set => SetElement(value);
 	}
 
 
@@ -19813,7 +19720,7 @@ public partial class TableCellMargin : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TopMargin), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.LeftMargin), 0, 1),
@@ -19821,8 +19728,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BottomMargin), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.RightMargin), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.EndMargin), 0, 1, version: FileFormatVersions.Office2010)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -19832,11 +19739,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public TopMargin TopMargin
 	{
-        get => GetElement<TopMargin>(0);
-        set => SetElement(0, value);
+        get => GetElement<TopMargin>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Cell Left Margin Exception.</para>
@@ -19845,11 +19751,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public LeftMargin LeftMargin
 	{
-        get => GetElement<LeftMargin>(1);
-        set => SetElement(1, value);
+        get => GetElement<LeftMargin>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> StartMargin.</para>
@@ -19858,11 +19763,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public StartMargin StartMargin
 	{
-        get => GetElement<StartMargin>(2);
-        set => SetElement(2, value);
+        get => GetElement<StartMargin>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Cell Bottom Margin Exception.</para>
@@ -19871,11 +19775,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public BottomMargin BottomMargin
 	{
-        get => GetElement<BottomMargin>(3);
-        set => SetElement(3, value);
+        get => GetElement<BottomMargin>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Cell Right Margin Exception.</para>
@@ -19884,11 +19787,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public RightMargin RightMargin
 	{
-        get => GetElement<RightMargin>(4);
-        set => SetElement(4, value);
+        get => GetElement<RightMargin>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> EndMargin.</para>
@@ -19897,11 +19799,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public EndMargin EndMargin
 	{
-        get => GetElement<EndMargin>(5);
-        set => SetElement(5, value);
+        get => GetElement<EndMargin>();
+        set => SetElement(value);
 	}
 
 
@@ -20400,7 +20301,7 @@ public partial class TableBorders : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TopBorder), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.LeftBorder), 0, 1),
@@ -20410,8 +20311,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.EndBorder), 0, 1, version: FileFormatVersions.Office2010),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsideHorizontalBorder), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsideVerticalBorder), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -20421,11 +20322,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public TopBorder TopBorder
 	{
-        get => GetElement<TopBorder>(0);
-        set => SetElement(0, value);
+        get => GetElement<TopBorder>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Left Border.</para>
@@ -20434,11 +20334,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public LeftBorder LeftBorder
 	{
-        get => GetElement<LeftBorder>(1);
-        set => SetElement(1, value);
+        get => GetElement<LeftBorder>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> StartBorder.</para>
@@ -20447,11 +20346,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public StartBorder StartBorder
 	{
-        get => GetElement<StartBorder>(2);
-        set => SetElement(2, value);
+        get => GetElement<StartBorder>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Bottom Border.</para>
@@ -20460,11 +20358,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public BottomBorder BottomBorder
 	{
-        get => GetElement<BottomBorder>(3);
-        set => SetElement(3, value);
+        get => GetElement<BottomBorder>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Right Border.</para>
@@ -20473,11 +20370,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public RightBorder RightBorder
 	{
-        get => GetElement<RightBorder>(4);
-        set => SetElement(4, value);
+        get => GetElement<RightBorder>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> EndBorder.</para>
@@ -20486,11 +20382,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public EndBorder EndBorder
 	{
-        get => GetElement<EndBorder>(5);
-        set => SetElement(5, value);
+        get => GetElement<EndBorder>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Inside Horizontal Edges Border.</para>
@@ -20499,11 +20394,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(6)]
     public InsideHorizontalBorder InsideHorizontalBorder
 	{
-        get => GetElement<InsideHorizontalBorder>(6);
-        set => SetElement(6, value);
+        get => GetElement<InsideHorizontalBorder>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Inside Vertical Edges Border.</para>
@@ -20512,11 +20406,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(7)]
     public InsideVerticalBorder InsideVerticalBorder
 	{
-        get => GetElement<InsideVerticalBorder>(7);
-        set => SetElement(7, value);
+        get => GetElement<InsideVerticalBorder>();
+        set => SetElement(value);
 	}
 
 
@@ -20618,7 +20511,7 @@ public partial class TableCellMarginDefault : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TopMargin), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableCellLeftMargin), 0, 1),
@@ -20626,8 +20519,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BottomMargin), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableCellRightMargin), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.EndMargin), 0, 1, version: FileFormatVersions.Office2010)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -20637,11 +20530,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public TopMargin TopMargin
 	{
-        get => GetElement<TopMargin>(0);
-        set => SetElement(0, value);
+        get => GetElement<TopMargin>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Cell Left Margin Default.</para>
@@ -20650,11 +20542,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public TableCellLeftMargin TableCellLeftMargin
 	{
-        get => GetElement<TableCellLeftMargin>(1);
-        set => SetElement(1, value);
+        get => GetElement<TableCellLeftMargin>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> StartMargin.</para>
@@ -20663,11 +20554,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public StartMargin StartMargin
 	{
-        get => GetElement<StartMargin>(2);
-        set => SetElement(2, value);
+        get => GetElement<StartMargin>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Cell Bottom Margin Default.</para>
@@ -20676,11 +20566,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public BottomMargin BottomMargin
 	{
-        get => GetElement<BottomMargin>(3);
-        set => SetElement(3, value);
+        get => GetElement<BottomMargin>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Cell Right Margin Default.</para>
@@ -20689,11 +20578,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public TableCellRightMargin TableCellRightMargin
 	{
-        get => GetElement<TableCellRightMargin>(4);
-        set => SetElement(4, value);
+        get => GetElement<TableCellRightMargin>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> EndMargin.</para>
@@ -20702,11 +20590,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public EndMargin EndMargin
 	{
-        get => GetElement<EndMargin>(5);
-        set => SetElement(5, value);
+        get => GetElement<EndMargin>();
+        set => SetElement(value);
 	}
 
 
@@ -20844,11 +20731,11 @@ public partial class AltChunk : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.AltChunkProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -20858,11 +20745,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public AltChunkProperties AltChunkProperties
 	{
-        get => GetElement<AltChunkProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<AltChunkProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -21021,7 +20907,7 @@ public partial class FootnoteProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.FootnotePosition), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.NumberingFormat), 0, 1),
@@ -21033,8 +20919,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.NumberingRestart), 0, 1)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -21044,11 +20930,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public FootnotePosition FootnotePosition
 	{
-        get => GetElement<FootnotePosition>(0);
-        set => SetElement(0, value);
+        get => GetElement<FootnotePosition>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Footnote Numbering Format.</para>
@@ -21057,11 +20942,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public NumberingFormat NumberingFormat
 	{
-        get => GetElement<NumberingFormat>(1);
-        set => SetElement(1, value);
+        get => GetElement<NumberingFormat>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Footnote and Endnote Numbering Starting Value.</para>
@@ -21070,11 +20954,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public NumberingStart NumberingStart
 	{
-        get => GetElement<NumberingStart>(2);
-        set => SetElement(2, value);
+        get => GetElement<NumberingStart>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Footnote and Endnote Numbering Restart Location.</para>
@@ -21083,11 +20966,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public NumberingRestart NumberingRestart
 	{
-        get => GetElement<NumberingRestart>(3);
-        set => SetElement(3, value);
+        get => GetElement<NumberingRestart>();
+        set => SetElement(value);
 	}
 
 
@@ -21150,7 +21032,7 @@ public partial class EndnoteProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.EndnotePosition), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.NumberingFormat), 0, 1),
@@ -21162,8 +21044,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.NumberingRestart), 0, 1)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -21173,11 +21055,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public EndnotePosition EndnotePosition
 	{
-        get => GetElement<EndnotePosition>(0);
-        set => SetElement(0, value);
+        get => GetElement<EndnotePosition>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Endnote Numbering Format.</para>
@@ -21186,11 +21067,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public NumberingFormat NumberingFormat
 	{
-        get => GetElement<NumberingFormat>(1);
-        set => SetElement(1, value);
+        get => GetElement<NumberingFormat>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Footnote and Endnote Numbering Starting Value.</para>
@@ -21199,11 +21079,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public NumberingStart NumberingStart
 	{
-        get => GetElement<NumberingStart>(2);
-        set => SetElement(2, value);
+        get => GetElement<NumberingStart>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Footnote and Endnote Numbering Restart Location.</para>
@@ -21212,11 +21091,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public NumberingRestart NumberingRestart
 	{
-        get => GetElement<NumberingRestart>(3);
-        set => SetElement(3, value);
+        get => GetElement<NumberingRestart>();
+        set => SetElement(value);
 	}
 
 
@@ -21546,14 +21424,14 @@ public partial class PageBorders : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TopBorder), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.LeftBorder), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BottomBorder), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.RightBorder), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -21563,11 +21441,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public TopBorder TopBorder
 	{
-        get => GetElement<TopBorder>(0);
-        set => SetElement(0, value);
+        get => GetElement<TopBorder>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Left Border.</para>
@@ -21576,11 +21453,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public LeftBorder LeftBorder
 	{
-        get => GetElement<LeftBorder>(1);
-        set => SetElement(1, value);
+        get => GetElement<LeftBorder>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Bottom Border.</para>
@@ -21589,11 +21465,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public BottomBorder BottomBorder
 	{
-        get => GetElement<BottomBorder>(2);
-        set => SetElement(2, value);
+        get => GetElement<BottomBorder>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Right Border.</para>
@@ -21602,11 +21477,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public RightBorder RightBorder
 	{
-        get => GetElement<RightBorder>(3);
-        set => SetElement(3, value);
+        get => GetElement<RightBorder>();
+        set => SetElement(value);
 	}
 
 
@@ -21833,11 +21707,11 @@ public partial class Columns : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 0, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 0, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Column), 1, 45)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -21982,11 +21856,11 @@ public partial class Recipients : OpenXmlPartRootElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.RecipientData), 1, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -22110,7 +21984,7 @@ public partial class TextBoxContent : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Group, 1, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 1, 0)
 {
     new CompositeParticle(ParticleType.Choice, 1, 1)
     {
@@ -22210,8 +22084,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -22296,11 +22170,11 @@ public partial class Comments : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Comments>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Comment), 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Document Footnotes. The root element of FootnotesPart.</para>
@@ -22380,11 +22254,11 @@ public partial class Footnotes : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Footnotes>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Footnote), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Document Endnotes. The root element of EndnotesPart.</para>
@@ -22464,11 +22338,11 @@ public partial class Endnotes : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Endnotes>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Endnote), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Header. The root element of HeaderPart.</para>
@@ -22616,7 +22490,7 @@ public partial class Header : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Header>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Group, 1, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 1, 0)
 {
     new CompositeParticle(ParticleType.Choice, 1, 1)
     {
@@ -22716,8 +22590,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Footer. The root element of FooterPart.</para>
@@ -22865,7 +22739,7 @@ public partial class Footer : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Footer>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Group, 1, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 1, 0)
 {
     new CompositeParticle(ParticleType.Choice, 1, 1)
     {
@@ -22965,8 +22839,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// Defines the HeaderFooterType class.
@@ -23370,11 +23244,10 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public WriteProtection WriteProtection
 	{
-        get => GetElement<WriteProtection>(0);
-        set => SetElement(0, value);
+        get => GetElement<WriteProtection>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Document View Setting.</para>
@@ -23383,11 +23256,10 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public View View
 	{
-        get => GetElement<View>(1);
-        set => SetElement(1, value);
+        get => GetElement<View>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Magnification Setting.</para>
@@ -23396,11 +23268,10 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public Zoom Zoom
 	{
-        get => GetElement<Zoom>(2);
-        set => SetElement(2, value);
+        get => GetElement<Zoom>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Remove Personal Information from Document Properties.</para>
@@ -23409,11 +23280,10 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public RemovePersonalInformation RemovePersonalInformation
 	{
-        get => GetElement<RemovePersonalInformation>(3);
-        set => SetElement(3, value);
+        get => GetElement<RemovePersonalInformation>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Remove Date and Time from Annotations.</para>
@@ -23422,11 +23292,10 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public RemoveDateAndTime RemoveDateAndTime
 	{
-        get => GetElement<RemoveDateAndTime>(4);
-        set => SetElement(4, value);
+        get => GetElement<RemoveDateAndTime>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Do Not Display Visual Boundary For Header/Footer or Between Pages.</para>
@@ -23435,11 +23304,10 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public DoNotDisplayPageBoundaries DoNotDisplayPageBoundaries
 	{
-        get => GetElement<DoNotDisplayPageBoundaries>(5);
-        set => SetElement(5, value);
+        get => GetElement<DoNotDisplayPageBoundaries>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Display Background Objects When Displaying Document.</para>
@@ -23448,11 +23316,10 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(6)]
     public DisplayBackgroundShape DisplayBackgroundShape
 	{
-        get => GetElement<DisplayBackgroundShape>(6);
-        set => SetElement(6, value);
+        get => GetElement<DisplayBackgroundShape>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Print PostScript Codes With Document Text.</para>
@@ -23461,11 +23328,10 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(7)]
     public PrintPostScriptOverText PrintPostScriptOverText
 	{
-        get => GetElement<PrintPostScriptOverText>(7);
-        set => SetElement(7, value);
+        get => GetElement<PrintPostScriptOverText>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Print Fractional Character Widths.</para>
@@ -23474,11 +23340,10 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(8)]
     public PrintFractionalCharacterWidth PrintFractionalCharacterWidth
 	{
-        get => GetElement<PrintFractionalCharacterWidth>(8);
-        set => SetElement(8, value);
+        get => GetElement<PrintFractionalCharacterWidth>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Only Print Form Field Content.</para>
@@ -23487,11 +23352,10 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(9)]
     public PrintFormsData PrintFormsData
 	{
-        get => GetElement<PrintFormsData>(9);
-        set => SetElement(9, value);
+        get => GetElement<PrintFormsData>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Embed TrueType Fonts.</para>
@@ -23500,11 +23364,10 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(10)]
     public EmbedTrueTypeFonts EmbedTrueTypeFonts
 	{
-        get => GetElement<EmbedTrueTypeFonts>(10);
-        set => SetElement(10, value);
+        get => GetElement<EmbedTrueTypeFonts>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Embed Common System Fonts.</para>
@@ -23513,11 +23376,10 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(11)]
     public EmbedSystemFonts EmbedSystemFonts
 	{
-        get => GetElement<EmbedSystemFonts>(11);
-        set => SetElement(11, value);
+        get => GetElement<EmbedSystemFonts>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Subset Fonts When Embedding.</para>
@@ -23526,11 +23388,10 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(12)]
     public SaveSubsetFonts SaveSubsetFonts
 	{
-        get => GetElement<SaveSubsetFonts>(12);
-        set => SetElement(12, value);
+        get => GetElement<SaveSubsetFonts>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Only Save Form Field Content.</para>
@@ -23539,11 +23400,10 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(13)]
     public SaveFormsData SaveFormsData
 	{
-        get => GetElement<SaveFormsData>(13);
-        set => SetElement(13, value);
+        get => GetElement<SaveFormsData>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Mirror Page Margins.</para>
@@ -23552,11 +23412,10 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(14)]
     public MirrorMargins MirrorMargins
 	{
-        get => GetElement<MirrorMargins>(14);
-        set => SetElement(14, value);
+        get => GetElement<MirrorMargins>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Align Paragraph and Table Borders with Page Border.</para>
@@ -23565,11 +23424,10 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(15)]
     public AlignBorderAndEdges AlignBorderAndEdges
 	{
-        get => GetElement<AlignBorderAndEdges>(15);
-        set => SetElement(15, value);
+        get => GetElement<AlignBorderAndEdges>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Page Border Excludes Header.</para>
@@ -23578,11 +23436,10 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(16)]
     public BordersDoNotSurroundHeader BordersDoNotSurroundHeader
 	{
-        get => GetElement<BordersDoNotSurroundHeader>(16);
-        set => SetElement(16, value);
+        get => GetElement<BordersDoNotSurroundHeader>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Page Border Excludes Footer.</para>
@@ -23591,11 +23448,10 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(17)]
     public BordersDoNotSurroundFooter BordersDoNotSurroundFooter
 	{
-        get => GetElement<BordersDoNotSurroundFooter>(17);
-        set => SetElement(17, value);
+        get => GetElement<BordersDoNotSurroundFooter>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Position Gutter At Top of Page.</para>
@@ -23604,11 +23460,10 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(18)]
     public GutterAtTop GutterAtTop
 	{
-        get => GetElement<GutterAtTop>(18);
-        set => SetElement(18, value);
+        get => GetElement<GutterAtTop>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Do Not Display Visual Indication of Spelling Errors.</para>
@@ -23617,11 +23472,10 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(19)]
     public HideSpellingErrors HideSpellingErrors
 	{
-        get => GetElement<HideSpellingErrors>(19);
-        set => SetElement(19, value);
+        get => GetElement<HideSpellingErrors>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Do Not Display Visual Indication of Grammatical Errors.</para>
@@ -23630,18 +23484,17 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(20)]
     public HideGrammaticalErrors HideGrammaticalErrors
 	{
-        get => GetElement<HideGrammaticalErrors>(20);
-        set => SetElement(20, value);
+        get => GetElement<HideGrammaticalErrors>();
+        set => SetElement(value);
 	}
 
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Settings>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.WriteProtection), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.View), 0, 1),
@@ -23746,8 +23599,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.ConflictMode), 0, 1, version: FileFormatVersions.Office2010),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.ChartTrackingRefBased), 0, 1, version: FileFormatVersions.Office2013),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.PersistentDocumentId), 0, 1, version: FileFormatVersions.Office2013)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Web Page Settings. The root element of WebSettingsPart.</para>
@@ -23853,11 +23706,10 @@ public partial class WebSettings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public Frameset Frameset
 	{
-        get => GetElement<Frameset>(0);
-        set => SetElement(0, value);
+        get => GetElement<Frameset>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Divs.</para>
@@ -23866,11 +23718,10 @@ public partial class WebSettings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public Divs Divs
 	{
-        get => GetElement<Divs>(1);
-        set => SetElement(1, value);
+        get => GetElement<Divs>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> WebPageEncoding.</para>
@@ -23879,11 +23730,10 @@ public partial class WebSettings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public WebPageEncoding WebPageEncoding
 	{
-        get => GetElement<WebPageEncoding>(2);
-        set => SetElement(2, value);
+        get => GetElement<WebPageEncoding>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> OptimizeForBrowser.</para>
@@ -23892,11 +23742,10 @@ public partial class WebSettings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public OptimizeForBrowser OptimizeForBrowser
 	{
-        get => GetElement<OptimizeForBrowser>(3);
-        set => SetElement(3, value);
+        get => GetElement<OptimizeForBrowser>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> RelyOnVML.</para>
@@ -23905,11 +23754,10 @@ public partial class WebSettings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public RelyOnVML RelyOnVML
 	{
-        get => GetElement<RelyOnVML>(4);
-        set => SetElement(4, value);
+        get => GetElement<RelyOnVML>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> AllowPNG.</para>
@@ -23918,11 +23766,10 @@ public partial class WebSettings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public AllowPNG AllowPNG
 	{
-        get => GetElement<AllowPNG>(5);
-        set => SetElement(5, value);
+        get => GetElement<AllowPNG>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> DoNotRelyOnCSS.</para>
@@ -23931,11 +23778,10 @@ public partial class WebSettings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(6)]
     public DoNotRelyOnCSS DoNotRelyOnCSS
 	{
-        get => GetElement<DoNotRelyOnCSS>(6);
-        set => SetElement(6, value);
+        get => GetElement<DoNotRelyOnCSS>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> DoNotSaveAsSingleFile.</para>
@@ -23944,11 +23790,10 @@ public partial class WebSettings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(7)]
     public DoNotSaveAsSingleFile DoNotSaveAsSingleFile
 	{
-        get => GetElement<DoNotSaveAsSingleFile>(7);
-        set => SetElement(7, value);
+        get => GetElement<DoNotSaveAsSingleFile>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> DoNotOrganizeInFolder.</para>
@@ -23957,11 +23802,10 @@ public partial class WebSettings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(8)]
     public DoNotOrganizeInFolder DoNotOrganizeInFolder
 	{
-        get => GetElement<DoNotOrganizeInFolder>(8);
-        set => SetElement(8, value);
+        get => GetElement<DoNotOrganizeInFolder>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> DoNotUseLongFileNames.</para>
@@ -23970,11 +23814,10 @@ public partial class WebSettings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(9)]
     public DoNotUseLongFileNames DoNotUseLongFileNames
 	{
-        get => GetElement<DoNotUseLongFileNames>(9);
-        set => SetElement(9, value);
+        get => GetElement<DoNotUseLongFileNames>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> PixelsPerInch.</para>
@@ -23983,11 +23826,10 @@ public partial class WebSettings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(10)]
     public PixelsPerInch PixelsPerInch
 	{
-        get => GetElement<PixelsPerInch>(10);
-        set => SetElement(10, value);
+        get => GetElement<PixelsPerInch>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TargetScreenSize.</para>
@@ -23996,18 +23838,17 @@ public partial class WebSettings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(11)]
     public TargetScreenSize TargetScreenSize
 	{
-        get => GetElement<TargetScreenSize>(11);
-        set => SetElement(11, value);
+        get => GetElement<TargetScreenSize>();
+        set => SetElement(value);
 	}
 
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebSettings>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Frameset), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Divs), 0, 1),
@@ -24021,8 +23862,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DoNotUseLongFileNames), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PixelsPerInch), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TargetScreenSize), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Font Table Root Element. The root element of FontTablePart.</para>
@@ -24102,11 +23943,11 @@ public partial class Fonts : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Fonts>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Font), 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Numbering Definitions. The root element of NumberingDefinitionsPart.</para>
@@ -24192,14 +24033,14 @@ public partial class Numbering : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Numbering>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.NumberingPictureBullet), 0, 0),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.AbstractNum), 0, 0),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.NumberingInstance), 0, 0),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.NumberingIdMacAtCleanup), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Style Definitions.</para>
@@ -24254,13 +24095,13 @@ public partial class Styles : OpenXmlPartRootElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocDefaults), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.LatentStyles), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Style), 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -24270,11 +24111,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public DocDefaults DocDefaults
 	{
-        get => GetElement<DocDefaults>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocDefaults>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Latent Style Information.</para>
@@ -24283,11 +24123,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public LatentStyles LatentStyles
 	{
-        get => GetElement<LatentStyles>(1);
-        set => SetElement(1, value);
+        get => GetElement<LatentStyles>();
+        set => SetElement(value);
 	}
 
 
@@ -24388,11 +24227,10 @@ public partial class Document : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public DocumentBackground DocumentBackground
 	{
-        get => GetElement<DocumentBackground>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentBackground>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Body.</para>
@@ -24401,18 +24239,17 @@ public partial class Document : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public Body Body
 	{
-        get => GetElement<Body>(1);
-        set => SetElement(1, value);
+        get => GetElement<Body>();
+        set => SetElement(value);
 	}
 
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Document>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Sequence, 1, 1)
     {
@@ -24422,8 +24259,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Body), 0, 1)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Glossary Document Root Element. The root element of GlossaryDocumentPart.</para>
@@ -24509,11 +24346,10 @@ public partial class GlossaryDocument : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public DocumentBackground DocumentBackground
 	{
-        get => GetElement<DocumentBackground>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentBackground>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> List of Glossary Document Entries.</para>
@@ -24522,18 +24358,17 @@ public partial class GlossaryDocument : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public DocParts DocParts
 	{
-        get => GetElement<DocParts>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocParts>();
+        set => SetElement(value);
 	}
 
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GlossaryDocument>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Sequence, 1, 1)
     {
@@ -24543,8 +24378,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocParts), 0, 1)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Previous Table-Level Property Exceptions.</para>
@@ -24611,7 +24446,7 @@ public partial class PreviousTablePropertyExceptions : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableWidth), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableJustification), 0, 1),
@@ -24622,8 +24457,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableLayout), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableLook), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -24633,11 +24468,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public TableWidth TableWidth
 	{
-        get => GetElement<TableWidth>(0);
-        set => SetElement(0, value);
+        get => GetElement<TableWidth>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Alignment Exception.</para>
@@ -24646,11 +24480,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public TableJustification TableJustification
 	{
-        get => GetElement<TableJustification>(1);
-        set => SetElement(1, value);
+        get => GetElement<TableJustification>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Cell Spacing Exception.</para>
@@ -24659,11 +24492,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public TableCellSpacing TableCellSpacing
 	{
-        get => GetElement<TableCellSpacing>(2);
-        set => SetElement(2, value);
+        get => GetElement<TableCellSpacing>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Indent from Leading Margin Exception.</para>
@@ -24672,11 +24504,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public TableIndentation TableIndentation
 	{
-        get => GetElement<TableIndentation>(3);
-        set => SetElement(3, value);
+        get => GetElement<TableIndentation>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Borders Exceptions.</para>
@@ -24685,11 +24516,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public TableBorders TableBorders
 	{
-        get => GetElement<TableBorders>(4);
-        set => SetElement(4, value);
+        get => GetElement<TableBorders>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Shading Exception.</para>
@@ -24698,11 +24528,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public Shading Shading
 	{
-        get => GetElement<Shading>(5);
-        set => SetElement(5, value);
+        get => GetElement<Shading>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Layout Exception.</para>
@@ -24711,11 +24540,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(6)]
     public TableLayout TableLayout
 	{
-        get => GetElement<TableLayout>(6);
-        set => SetElement(6, value);
+        get => GetElement<TableLayout>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Cell Margin Exceptions.</para>
@@ -24724,11 +24552,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(7)]
     public TableCellMarginDefault TableCellMarginDefault
 	{
-        get => GetElement<TableCellMarginDefault>(7);
-        set => SetElement(7, value);
+        get => GetElement<TableCellMarginDefault>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Style Conditional Formatting Settings Exception.</para>
@@ -24737,11 +24564,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(8)]
     public TableLook TableLook
 	{
-        get => GetElement<TableLook>(8);
-        set => SetElement(8, value);
+        get => GetElement<TableLook>();
+        set => SetElement(value);
 	}
 
 
@@ -24828,7 +24654,7 @@ public partial class PreviousTableCellProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Sequence, 1, 1)
     {
@@ -24894,8 +24720,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -24905,11 +24731,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public ConditionalFormatStyle ConditionalFormatStyle
 	{
-        get => GetElement<ConditionalFormatStyle>(0);
-        set => SetElement(0, value);
+        get => GetElement<ConditionalFormatStyle>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableCellWidth.</para>
@@ -24918,11 +24743,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public TableCellWidth TableCellWidth
 	{
-        get => GetElement<TableCellWidth>(1);
-        set => SetElement(1, value);
+        get => GetElement<TableCellWidth>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> GridSpan.</para>
@@ -24931,11 +24755,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public GridSpan GridSpan
 	{
-        get => GetElement<GridSpan>(2);
-        set => SetElement(2, value);
+        get => GetElement<GridSpan>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> HorizontalMerge.</para>
@@ -24944,11 +24767,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public HorizontalMerge HorizontalMerge
 	{
-        get => GetElement<HorizontalMerge>(3);
-        set => SetElement(3, value);
+        get => GetElement<HorizontalMerge>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> VerticalMerge.</para>
@@ -24957,11 +24779,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public VerticalMerge VerticalMerge
 	{
-        get => GetElement<VerticalMerge>(4);
-        set => SetElement(4, value);
+        get => GetElement<VerticalMerge>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableCellBorders.</para>
@@ -24970,11 +24791,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public TableCellBorders TableCellBorders
 	{
-        get => GetElement<TableCellBorders>(5);
-        set => SetElement(5, value);
+        get => GetElement<TableCellBorders>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Shading.</para>
@@ -24983,11 +24803,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(6)]
     public Shading Shading
 	{
-        get => GetElement<Shading>(6);
-        set => SetElement(6, value);
+        get => GetElement<Shading>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> NoWrap.</para>
@@ -24996,11 +24815,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(7)]
     public NoWrap NoWrap
 	{
-        get => GetElement<NoWrap>(7);
-        set => SetElement(7, value);
+        get => GetElement<NoWrap>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableCellMargin.</para>
@@ -25009,11 +24827,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(8)]
     public TableCellMargin TableCellMargin
 	{
-        get => GetElement<TableCellMargin>(8);
-        set => SetElement(8, value);
+        get => GetElement<TableCellMargin>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TextDirection.</para>
@@ -25022,11 +24839,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(9)]
     public TextDirection TextDirection
 	{
-        get => GetElement<TextDirection>(9);
-        set => SetElement(9, value);
+        get => GetElement<TextDirection>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableCellFitText.</para>
@@ -25035,11 +24851,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(10)]
     public TableCellFitText TableCellFitText
 	{
-        get => GetElement<TableCellFitText>(10);
-        set => SetElement(10, value);
+        get => GetElement<TableCellFitText>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableCellVerticalAlignment.</para>
@@ -25048,11 +24863,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(11)]
     public TableCellVerticalAlignment TableCellVerticalAlignment
 	{
-        get => GetElement<TableCellVerticalAlignment>(11);
-        set => SetElement(11, value);
+        get => GetElement<TableCellVerticalAlignment>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> HideMark.</para>
@@ -25061,11 +24875,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(12)]
     public HideMark HideMark
 	{
-        get => GetElement<HideMark>(12);
-        set => SetElement(12, value);
+        get => GetElement<HideMark>();
+        set => SetElement(value);
 	}
 
 
@@ -25144,7 +24957,7 @@ public partial class PreviousTableRowProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
 {
     new CompositeParticle(ParticleType.Group, 0, 0)
     {
@@ -25170,8 +24983,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableJustification), 0, 1)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -25255,7 +25068,7 @@ public partial class PreviousTableProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 0, 1)
     {
@@ -25308,8 +25121,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     },
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableCaption), 0, 1, version: FileFormatVersions.Office2010),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableDescription), 0, 1, version: FileFormatVersions.Office2010)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -25319,11 +25132,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public TableStyle TableStyle
 	{
-        get => GetElement<TableStyle>(0);
-        set => SetElement(0, value);
+        get => GetElement<TableStyle>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TablePositionProperties.</para>
@@ -25332,11 +25144,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public TablePositionProperties TablePositionProperties
 	{
-        get => GetElement<TablePositionProperties>(1);
-        set => SetElement(1, value);
+        get => GetElement<TablePositionProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableOverlap.</para>
@@ -25345,11 +25156,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public TableOverlap TableOverlap
 	{
-        get => GetElement<TableOverlap>(2);
-        set => SetElement(2, value);
+        get => GetElement<TableOverlap>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> BiDiVisual.</para>
@@ -25358,11 +25168,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public BiDiVisual BiDiVisual
 	{
-        get => GetElement<BiDiVisual>(3);
-        set => SetElement(3, value);
+        get => GetElement<BiDiVisual>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableWidth.</para>
@@ -25371,11 +25180,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public TableWidth TableWidth
 	{
-        get => GetElement<TableWidth>(4);
-        set => SetElement(4, value);
+        get => GetElement<TableWidth>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableJustification.</para>
@@ -25384,11 +25192,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public TableJustification TableJustification
 	{
-        get => GetElement<TableJustification>(5);
-        set => SetElement(5, value);
+        get => GetElement<TableJustification>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableCellSpacing.</para>
@@ -25397,11 +25204,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(6)]
     public TableCellSpacing TableCellSpacing
 	{
-        get => GetElement<TableCellSpacing>(6);
-        set => SetElement(6, value);
+        get => GetElement<TableCellSpacing>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableIndentation.</para>
@@ -25410,11 +25216,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(7)]
     public TableIndentation TableIndentation
 	{
-        get => GetElement<TableIndentation>(7);
-        set => SetElement(7, value);
+        get => GetElement<TableIndentation>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableBorders.</para>
@@ -25423,11 +25228,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(8)]
     public TableBorders TableBorders
 	{
-        get => GetElement<TableBorders>(8);
-        set => SetElement(8, value);
+        get => GetElement<TableBorders>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Shading.</para>
@@ -25436,11 +25240,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(9)]
     public Shading Shading
 	{
-        get => GetElement<Shading>(9);
-        set => SetElement(9, value);
+        get => GetElement<Shading>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableLayout.</para>
@@ -25449,11 +25252,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(10)]
     public TableLayout TableLayout
 	{
-        get => GetElement<TableLayout>(10);
-        set => SetElement(10, value);
+        get => GetElement<TableLayout>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableCellMarginDefault.</para>
@@ -25462,11 +25264,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(11)]
     public TableCellMarginDefault TableCellMarginDefault
 	{
-        get => GetElement<TableCellMarginDefault>(11);
-        set => SetElement(11, value);
+        get => GetElement<TableCellMarginDefault>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableLook.</para>
@@ -25475,11 +25276,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(12)]
     public TableLook TableLook
 	{
-        get => GetElement<TableLook>(12);
-        set => SetElement(12, value);
+        get => GetElement<TableLook>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableCaption.</para>
@@ -25488,11 +25288,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(13)]
     public TableCaption TableCaption
 	{
-        get => GetElement<TableCaption>(13);
-        set => SetElement(13, value);
+        get => GetElement<TableCaption>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableDescription.</para>
@@ -25501,11 +25300,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(14)]
     public TableDescription TableDescription
 	{
-        get => GetElement<TableDescription>(14);
-        set => SetElement(14, value);
+        get => GetElement<TableDescription>();
+        set => SetElement(value);
 	}
 
 
@@ -25640,7 +25438,7 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 0, 1)
     {
@@ -25668,8 +25466,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns), 0, 1, version: FileFormatVersions.Office2013)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -25679,11 +25477,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public FootnoteProperties FootnoteProperties
 	{
-        get => GetElement<FootnoteProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<FootnoteProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> EndnoteProperties.</para>
@@ -25692,11 +25489,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public EndnoteProperties EndnoteProperties
 	{
-        get => GetElement<EndnoteProperties>(1);
-        set => SetElement(1, value);
+        get => GetElement<EndnoteProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SectionType.</para>
@@ -25705,11 +25501,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public SectionType SectionType
 	{
-        get => GetElement<SectionType>(2);
-        set => SetElement(2, value);
+        get => GetElement<SectionType>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> PageSize.</para>
@@ -25718,11 +25513,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public PageSize PageSize
 	{
-        get => GetElement<PageSize>(3);
-        set => SetElement(3, value);
+        get => GetElement<PageSize>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> PageMargin.</para>
@@ -25731,11 +25525,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public PageMargin PageMargin
 	{
-        get => GetElement<PageMargin>(4);
-        set => SetElement(4, value);
+        get => GetElement<PageMargin>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> PaperSource.</para>
@@ -25744,11 +25537,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public PaperSource PaperSource
 	{
-        get => GetElement<PaperSource>(5);
-        set => SetElement(5, value);
+        get => GetElement<PaperSource>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> PageBorders.</para>
@@ -25757,11 +25549,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(6)]
     public PageBorders PageBorders
 	{
-        get => GetElement<PageBorders>(6);
-        set => SetElement(6, value);
+        get => GetElement<PageBorders>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> LineNumberType.</para>
@@ -25770,11 +25561,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(7)]
     public LineNumberType LineNumberType
 	{
-        get => GetElement<LineNumberType>(7);
-        set => SetElement(7, value);
+        get => GetElement<LineNumberType>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> PageNumberType.</para>
@@ -25783,11 +25573,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(8)]
     public PageNumberType PageNumberType
 	{
-        get => GetElement<PageNumberType>(8);
-        set => SetElement(8, value);
+        get => GetElement<PageNumberType>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Columns.</para>
@@ -25796,11 +25585,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(9)]
     public Columns Columns
 	{
-        get => GetElement<Columns>(9);
-        set => SetElement(9, value);
+        get => GetElement<Columns>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> FormProtection.</para>
@@ -25809,11 +25597,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(10)]
     public FormProtection FormProtection
 	{
-        get => GetElement<FormProtection>(10);
-        set => SetElement(10, value);
+        get => GetElement<FormProtection>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> VerticalTextAlignmentOnPage.</para>
@@ -25822,11 +25609,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(11)]
     public VerticalTextAlignmentOnPage VerticalTextAlignmentOnPage
 	{
-        get => GetElement<VerticalTextAlignmentOnPage>(11);
-        set => SetElement(11, value);
+        get => GetElement<VerticalTextAlignmentOnPage>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> NoEndnote.</para>
@@ -25835,11 +25621,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(12)]
     public NoEndnote NoEndnote
 	{
-        get => GetElement<NoEndnote>(12);
-        set => SetElement(12, value);
+        get => GetElement<NoEndnote>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TitlePage.</para>
@@ -25848,11 +25633,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(13)]
     public TitlePage TitlePage
 	{
-        get => GetElement<TitlePage>(13);
-        set => SetElement(13, value);
+        get => GetElement<TitlePage>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TextDirection.</para>
@@ -25861,11 +25645,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(14)]
     public TextDirection TextDirection
 	{
-        get => GetElement<TextDirection>(14);
-        set => SetElement(14, value);
+        get => GetElement<TextDirection>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> BiDi.</para>
@@ -25874,11 +25657,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(15)]
     public BiDi BiDi
 	{
-        get => GetElement<BiDi>(15);
-        set => SetElement(15, value);
+        get => GetElement<BiDi>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> GutterOnRight.</para>
@@ -25887,11 +25669,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(16)]
     public GutterOnRight GutterOnRight
 	{
-        get => GetElement<GutterOnRight>(16);
-        set => SetElement(16, value);
+        get => GetElement<GutterOnRight>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> DocGrid.</para>
@@ -25900,11 +25681,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(17)]
     public DocGrid DocGrid
 	{
-        get => GetElement<DocGrid>(17);
-        set => SetElement(17, value);
+        get => GetElement<DocGrid>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> PrinterSettingsReference.</para>
@@ -25913,11 +25693,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(18)]
     public PrinterSettingsReference PrinterSettingsReference
 	{
-        get => GetElement<PrinterSettingsReference>(18);
-        set => SetElement(18, value);
+        get => GetElement<PrinterSettingsReference>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> FootnoteColumns.</para>
@@ -25926,11 +25705,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w15 = http://schemas.microsoft.com/office/word/2012/wordml
     /// </remark>
-	[Index(19)]
     public DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns FootnoteColumns
 	{
-        get => GetElement<DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns>(19);
-        set => SetElement(19, value);
+        get => GetElement<DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns>();
+        set => SetElement(value);
 	}
 
 
@@ -26051,7 +25829,7 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Sequence, 1, 1)
     {
@@ -26104,8 +25882,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DivId), 0, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle), 0, 1)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -26115,11 +25893,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public ParagraphStyleId ParagraphStyleId
 	{
-        get => GetElement<ParagraphStyleId>(0);
-        set => SetElement(0, value);
+        get => GetElement<ParagraphStyleId>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> KeepNext.</para>
@@ -26128,11 +25905,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public KeepNext KeepNext
 	{
-        get => GetElement<KeepNext>(1);
-        set => SetElement(1, value);
+        get => GetElement<KeepNext>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> KeepLines.</para>
@@ -26141,11 +25917,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public KeepLines KeepLines
 	{
-        get => GetElement<KeepLines>(2);
-        set => SetElement(2, value);
+        get => GetElement<KeepLines>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> PageBreakBefore.</para>
@@ -26154,11 +25929,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public PageBreakBefore PageBreakBefore
 	{
-        get => GetElement<PageBreakBefore>(3);
-        set => SetElement(3, value);
+        get => GetElement<PageBreakBefore>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> FrameProperties.</para>
@@ -26167,11 +25941,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public FrameProperties FrameProperties
 	{
-        get => GetElement<FrameProperties>(4);
-        set => SetElement(4, value);
+        get => GetElement<FrameProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> WidowControl.</para>
@@ -26180,11 +25953,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public WidowControl WidowControl
 	{
-        get => GetElement<WidowControl>(5);
-        set => SetElement(5, value);
+        get => GetElement<WidowControl>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> NumberingProperties.</para>
@@ -26193,11 +25965,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(6)]
     public NumberingProperties NumberingProperties
 	{
-        get => GetElement<NumberingProperties>(6);
-        set => SetElement(6, value);
+        get => GetElement<NumberingProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SuppressLineNumbers.</para>
@@ -26206,11 +25977,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(7)]
     public SuppressLineNumbers SuppressLineNumbers
 	{
-        get => GetElement<SuppressLineNumbers>(7);
-        set => SetElement(7, value);
+        get => GetElement<SuppressLineNumbers>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ParagraphBorders.</para>
@@ -26219,11 +25989,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(8)]
     public ParagraphBorders ParagraphBorders
 	{
-        get => GetElement<ParagraphBorders>(8);
-        set => SetElement(8, value);
+        get => GetElement<ParagraphBorders>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Shading.</para>
@@ -26232,11 +26001,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(9)]
     public Shading Shading
 	{
-        get => GetElement<Shading>(9);
-        set => SetElement(9, value);
+        get => GetElement<Shading>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Tabs.</para>
@@ -26245,11 +26013,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(10)]
     public Tabs Tabs
 	{
-        get => GetElement<Tabs>(10);
-        set => SetElement(10, value);
+        get => GetElement<Tabs>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SuppressAutoHyphens.</para>
@@ -26258,11 +26025,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(11)]
     public SuppressAutoHyphens SuppressAutoHyphens
 	{
-        get => GetElement<SuppressAutoHyphens>(11);
-        set => SetElement(11, value);
+        get => GetElement<SuppressAutoHyphens>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Kinsoku.</para>
@@ -26271,11 +26037,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(12)]
     public Kinsoku Kinsoku
 	{
-        get => GetElement<Kinsoku>(12);
-        set => SetElement(12, value);
+        get => GetElement<Kinsoku>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> WordWrap.</para>
@@ -26284,11 +26049,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(13)]
     public WordWrap WordWrap
 	{
-        get => GetElement<WordWrap>(13);
-        set => SetElement(13, value);
+        get => GetElement<WordWrap>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> OverflowPunctuation.</para>
@@ -26297,11 +26061,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(14)]
     public OverflowPunctuation OverflowPunctuation
 	{
-        get => GetElement<OverflowPunctuation>(14);
-        set => SetElement(14, value);
+        get => GetElement<OverflowPunctuation>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TopLinePunctuation.</para>
@@ -26310,11 +26073,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(15)]
     public TopLinePunctuation TopLinePunctuation
 	{
-        get => GetElement<TopLinePunctuation>(15);
-        set => SetElement(15, value);
+        get => GetElement<TopLinePunctuation>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> AutoSpaceDE.</para>
@@ -26323,11 +26085,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(16)]
     public AutoSpaceDE AutoSpaceDE
 	{
-        get => GetElement<AutoSpaceDE>(16);
-        set => SetElement(16, value);
+        get => GetElement<AutoSpaceDE>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> AutoSpaceDN.</para>
@@ -26336,11 +26097,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(17)]
     public AutoSpaceDN AutoSpaceDN
 	{
-        get => GetElement<AutoSpaceDN>(17);
-        set => SetElement(17, value);
+        get => GetElement<AutoSpaceDN>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> BiDi.</para>
@@ -26349,11 +26109,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(18)]
     public BiDi BiDi
 	{
-        get => GetElement<BiDi>(18);
-        set => SetElement(18, value);
+        get => GetElement<BiDi>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> AdjustRightIndent.</para>
@@ -26362,11 +26121,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(19)]
     public AdjustRightIndent AdjustRightIndent
 	{
-        get => GetElement<AdjustRightIndent>(19);
-        set => SetElement(19, value);
+        get => GetElement<AdjustRightIndent>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SnapToGrid.</para>
@@ -26375,11 +26133,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(20)]
     public SnapToGrid SnapToGrid
 	{
-        get => GetElement<SnapToGrid>(20);
-        set => SetElement(20, value);
+        get => GetElement<SnapToGrid>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SpacingBetweenLines.</para>
@@ -26388,11 +26145,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(21)]
     public SpacingBetweenLines SpacingBetweenLines
 	{
-        get => GetElement<SpacingBetweenLines>(21);
-        set => SetElement(21, value);
+        get => GetElement<SpacingBetweenLines>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Indentation.</para>
@@ -26401,11 +26157,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(22)]
     public Indentation Indentation
 	{
-        get => GetElement<Indentation>(22);
-        set => SetElement(22, value);
+        get => GetElement<Indentation>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ContextualSpacing.</para>
@@ -26414,11 +26169,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(23)]
     public ContextualSpacing ContextualSpacing
 	{
-        get => GetElement<ContextualSpacing>(23);
-        set => SetElement(23, value);
+        get => GetElement<ContextualSpacing>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> MirrorIndents.</para>
@@ -26427,11 +26181,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(24)]
     public MirrorIndents MirrorIndents
 	{
-        get => GetElement<MirrorIndents>(24);
-        set => SetElement(24, value);
+        get => GetElement<MirrorIndents>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SuppressOverlap.</para>
@@ -26440,11 +26193,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(25)]
     public SuppressOverlap SuppressOverlap
 	{
-        get => GetElement<SuppressOverlap>(25);
-        set => SetElement(25, value);
+        get => GetElement<SuppressOverlap>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Justification.</para>
@@ -26453,11 +26205,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(26)]
     public Justification Justification
 	{
-        get => GetElement<Justification>(26);
-        set => SetElement(26, value);
+        get => GetElement<Justification>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TextDirection.</para>
@@ -26466,11 +26217,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(27)]
     public TextDirection TextDirection
 	{
-        get => GetElement<TextDirection>(27);
-        set => SetElement(27, value);
+        get => GetElement<TextDirection>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TextAlignment.</para>
@@ -26479,11 +26229,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(28)]
     public TextAlignment TextAlignment
 	{
-        get => GetElement<TextAlignment>(28);
-        set => SetElement(28, value);
+        get => GetElement<TextAlignment>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TextBoxTightWrap.</para>
@@ -26492,11 +26241,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(29)]
     public TextBoxTightWrap TextBoxTightWrap
 	{
-        get => GetElement<TextBoxTightWrap>(29);
-        set => SetElement(29, value);
+        get => GetElement<TextBoxTightWrap>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> OutlineLevel.</para>
@@ -26505,11 +26253,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(30)]
     public OutlineLevel OutlineLevel
 	{
-        get => GetElement<OutlineLevel>(30);
-        set => SetElement(30, value);
+        get => GetElement<OutlineLevel>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> DivId.</para>
@@ -26518,11 +26265,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(31)]
     public DivId DivId
 	{
-        get => GetElement<DivId>(31);
-        set => SetElement(31, value);
+        get => GetElement<DivId>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ConditionalFormatStyle.</para>
@@ -26531,11 +26277,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(32)]
     public ConditionalFormatStyle ConditionalFormatStyle
 	{
-        get => GetElement<ConditionalFormatStyle>(32);
-        set => SetElement(32, value);
+        get => GetElement<ConditionalFormatStyle>();
+        set => SetElement(value);
 	}
 
 
@@ -26690,7 +26435,7 @@ public partial class PreviousRunProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 0, 0)
     {
@@ -26796,8 +26541,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -26965,7 +26710,7 @@ public partial class PreviousParagraphMarkRunProperties : OpenXmlCompositeElemen
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 0, 1)
     {
@@ -27096,8 +26841,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.OfficeMath), 0, 1)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -27107,11 +26852,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public Inserted Inserted
 	{
-        get => GetElement<Inserted>(0);
-        set => SetElement(0, value);
+        get => GetElement<Inserted>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Deleted Paragraph.</para>
@@ -27120,11 +26864,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public Deleted Deleted
 	{
-        get => GetElement<Deleted>(1);
-        set => SetElement(1, value);
+        get => GetElement<Deleted>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Move Source Paragraph.</para>
@@ -27133,11 +26876,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public MoveFrom MoveFrom
 	{
-        get => GetElement<MoveFrom>(2);
-        set => SetElement(2, value);
+        get => GetElement<MoveFrom>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Move Destination Paragraph.</para>
@@ -27146,11 +26888,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public MoveTo MoveTo
 	{
-        get => GetElement<MoveTo>(3);
-        set => SetElement(3, value);
+        get => GetElement<MoveTo>();
+        set => SetElement(value);
 	}
 
 
@@ -27573,7 +27314,7 @@ public partial class ParagraphMarkRunProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 0, 1)
     {
@@ -27705,8 +27446,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         }
     },
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ParagraphMarkRunPropertiesChange), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -27716,11 +27457,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public Inserted Inserted
 	{
-        get => GetElement<Inserted>(0);
-        set => SetElement(0, value);
+        get => GetElement<Inserted>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Deleted Paragraph.</para>
@@ -27729,11 +27469,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public Deleted Deleted
 	{
-        get => GetElement<Deleted>(1);
-        set => SetElement(1, value);
+        get => GetElement<Deleted>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Move Source Paragraph.</para>
@@ -27742,11 +27481,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public MoveFrom MoveFrom
 	{
-        get => GetElement<MoveFrom>(2);
-        set => SetElement(2, value);
+        get => GetElement<MoveFrom>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Move Destination Paragraph.</para>
@@ -27755,11 +27493,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public MoveTo MoveTo
 	{
-        get => GetElement<MoveTo>(3);
-        set => SetElement(3, value);
+        get => GetElement<MoveTo>();
+        set => SetElement(value);
 	}
 
 
@@ -27900,7 +27637,7 @@ public partial class SectionProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 0, 6)
     {
@@ -27937,8 +27674,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         }
     },
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SectionPropertiesChange), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -28049,7 +27786,7 @@ public partial class FormFieldData : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.FormFieldName), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Enabled), 1, 1),
@@ -28064,8 +27801,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DropDownListFormField), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TextInput), 1, 1)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -28325,7 +28062,7 @@ public partial class CheckBox : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Choice, 1, 1)
     {
@@ -28334,8 +28071,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     },
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DefaultCheckBoxFormFieldState), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Checked), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -28395,13 +28132,13 @@ public partial class DropDownListFormField : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DropDownListSelection), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DefaultDropDownListItemIndex), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ListEntryFormField), 0, 25)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -28411,11 +28148,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public DropDownListSelection DropDownListSelection
 	{
-        get => GetElement<DropDownListSelection>(0);
-        set => SetElement(0, value);
+        get => GetElement<DropDownListSelection>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Default Drop-Down List Item Index.</para>
@@ -28424,11 +28160,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public DefaultDropDownListItemIndex DefaultDropDownListItemIndex
 	{
-        get => GetElement<DefaultDropDownListItemIndex>(1);
-        set => SetElement(1, value);
+        get => GetElement<DefaultDropDownListItemIndex>();
+        set => SetElement(value);
 	}
 
 
@@ -28491,14 +28226,14 @@ public partial class TextInput : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TextBoxFormFieldType), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DefaultTextBoxFormFieldString), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MaxLength), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Format), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -28508,11 +28243,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public TextBoxFormFieldType TextBoxFormFieldType
 	{
-        get => GetElement<TextBoxFormFieldType>(0);
-        set => SetElement(0, value);
+        get => GetElement<TextBoxFormFieldType>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Default Text Box Form Field String.</para>
@@ -28521,11 +28255,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public DefaultTextBoxFormFieldString DefaultTextBoxFormFieldString
 	{
-        get => GetElement<DefaultTextBoxFormFieldString>(1);
-        set => SetElement(1, value);
+        get => GetElement<DefaultTextBoxFormFieldString>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Text Box Form Field Maximum Length.</para>
@@ -28534,11 +28267,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public MaxLength MaxLength
 	{
-        get => GetElement<MaxLength>(2);
-        set => SetElement(2, value);
+        get => GetElement<MaxLength>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Text Box Form Field Formatting.</para>
@@ -28547,11 +28279,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public Format Format
 	{
-        get => GetElement<Format>(3);
-        set => SetElement(3, value);
+        get => GetElement<Format>();
+        set => SetElement(value);
 	}
 
 
@@ -28929,14 +28660,14 @@ public partial class SectionPropertiesChange : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Sequence, 1, 1)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PreviousSectionProperties), 0, 1)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -28946,11 +28677,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public PreviousSectionProperties PreviousSectionProperties
 	{
-        get => GetElement<PreviousSectionProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<PreviousSectionProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -29039,14 +28769,14 @@ public partial class ParagraphMarkRunPropertiesChange : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Sequence, 1, 1)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PreviousParagraphMarkRunProperties), 1, 1)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -29056,11 +28786,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public PreviousParagraphMarkRunProperties PreviousParagraphMarkRunProperties
 	{
-        get => GetElement<PreviousParagraphMarkRunProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<PreviousParagraphMarkRunProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -29117,11 +28846,11 @@ public partial class AltChunkProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MatchSource), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -29131,11 +28860,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public MatchSource MatchSource
 	{
-        get => GetElement<MatchSource>(0);
-        set => SetElement(0, value);
+        get => GetElement<MatchSource>();
+        set => SetElement(value);
 	}
 
 
@@ -29311,7 +29039,7 @@ public partial class RubyProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.RubyAlign), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PhoneticGuideTextFontSize), 1, 1),
@@ -29319,8 +29047,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PhoneticGuideBaseTextSize), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.LanguageId), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Dirty), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -29330,11 +29058,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public RubyAlign RubyAlign
 	{
-        get => GetElement<RubyAlign>(0);
-        set => SetElement(0, value);
+        get => GetElement<RubyAlign>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Phonetic Guide Text Font Size.</para>
@@ -29343,11 +29070,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public PhoneticGuideTextFontSize PhoneticGuideTextFontSize
 	{
-        get => GetElement<PhoneticGuideTextFontSize>(1);
-        set => SetElement(1, value);
+        get => GetElement<PhoneticGuideTextFontSize>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Distance Between Phonetic Guide Text and Phonetic Guide Base Text.</para>
@@ -29356,11 +29082,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public PhoneticGuideRaise PhoneticGuideRaise
 	{
-        get => GetElement<PhoneticGuideRaise>(2);
-        set => SetElement(2, value);
+        get => GetElement<PhoneticGuideRaise>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Phonetic Guide Base Text Font Size.</para>
@@ -29369,11 +29094,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public PhoneticGuideBaseTextSize PhoneticGuideBaseTextSize
 	{
-        get => GetElement<PhoneticGuideBaseTextSize>(3);
-        set => SetElement(3, value);
+        get => GetElement<PhoneticGuideBaseTextSize>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Language ID for Phonetic Guide.</para>
@@ -29382,11 +29106,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public LanguageId LanguageId
 	{
-        get => GetElement<LanguageId>(4);
-        set => SetElement(4, value);
+        get => GetElement<LanguageId>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Invalidated Field Cache.</para>
@@ -29395,11 +29118,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public Dirty Dirty
 	{
-        get => GetElement<Dirty>(5);
-        set => SetElement(5, value);
+        get => GetElement<Dirty>();
+        set => SetElement(value);
 	}
 
 
@@ -29511,7 +29233,7 @@ public partial class RubyContent : RubyContentType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RubyContent>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
 {
     new CompositeParticle(ParticleType.Choice, 1, 1)
     {
@@ -29633,8 +29355,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Phonetic Guide Base Text.</para>
@@ -29740,7 +29462,7 @@ public partial class RubyBase : RubyContentType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RubyBase>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
 {
     new CompositeParticle(ParticleType.Choice, 1, 1)
     {
@@ -29862,8 +29584,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// Defines the RubyContentType class.
@@ -30246,7 +29968,7 @@ public partial class SdtProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.RunProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtAlias), 0, 1),
@@ -30284,8 +30006,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSection), 1, 1, version: FileFormatVersions.Office2013),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSectionItem), 1, 1, version: FileFormatVersions.Office2013)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -30341,11 +30063,11 @@ public partial class SdtEndCharProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.RunProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -30467,7 +30189,7 @@ public partial class SdtContentBlock : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
 {
     new CompositeParticle(ParticleType.Choice, 1, 1)
     {
@@ -30548,8 +30270,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -30723,7 +30445,7 @@ public partial class SdtContentRun : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
 {
     new CompositeParticle(ParticleType.Group, 1, 1)
     {
@@ -30882,8 +30604,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SubDocumentReference), 1, 1)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -31051,7 +30773,7 @@ public partial class SdtContentRunRuby : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
 {
     new CompositeParticle(ParticleType.Choice, 1, 1)
     {
@@ -31173,8 +30895,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -31294,7 +31016,7 @@ public partial class SdtContentCell : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
 {
     new CompositeParticle(ParticleType.Choice, 1, 1)
     {
@@ -31368,8 +31090,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -31489,7 +31211,7 @@ public partial class SdtContentRow : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
 {
     new CompositeParticle(ParticleType.Choice, 1, 1)
     {
@@ -31563,8 +31285,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -31622,12 +31344,12 @@ public partial class CustomXmlProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlPlaceholder), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlAttribute), 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -31637,11 +31359,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public CustomXmlPlaceholder CustomXmlPlaceholder
 	{
-        get => GetElement<CustomXmlPlaceholder>(0);
-        set => SetElement(0, value);
+        get => GetElement<CustomXmlPlaceholder>();
+        set => SetElement(value);
 	}
 
 
@@ -31804,15 +31525,15 @@ public partial class TableGridChange : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Sequence, 1, 1)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PreviousTableGrid), 1, 1, version: FileFormatVersions.Office2007),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PreviousTableGrid), 0, 1, version: FileFormatVersions.Office2010)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -31822,11 +31543,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public PreviousTableGrid PreviousTableGrid
 	{
-        get => GetElement<PreviousTableGrid>(0);
-        set => SetElement(0, value);
+        get => GetElement<PreviousTableGrid>();
+        set => SetElement(value);
 	}
 
 
@@ -31915,14 +31635,14 @@ public partial class TableCellPropertiesChange : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Sequence, 1, 1)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PreviousTableCellProperties), 1, 1)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -31932,11 +31652,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public PreviousTableCellProperties PreviousTableCellProperties
 	{
-        get => GetElement<PreviousTableCellProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<PreviousTableCellProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -32025,7 +31744,7 @@ public partial class TableCellProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Sequence, 1, 1)
     {
@@ -32098,8 +31817,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableCellPropertiesChange), 0, 1)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -32109,11 +31828,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public ConditionalFormatStyle ConditionalFormatStyle
 	{
-        get => GetElement<ConditionalFormatStyle>(0);
-        set => SetElement(0, value);
+        get => GetElement<ConditionalFormatStyle>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableCellWidth.</para>
@@ -32122,11 +31840,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public TableCellWidth TableCellWidth
 	{
-        get => GetElement<TableCellWidth>(1);
-        set => SetElement(1, value);
+        get => GetElement<TableCellWidth>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> GridSpan.</para>
@@ -32135,11 +31852,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public GridSpan GridSpan
 	{
-        get => GetElement<GridSpan>(2);
-        set => SetElement(2, value);
+        get => GetElement<GridSpan>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> HorizontalMerge.</para>
@@ -32148,11 +31864,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public HorizontalMerge HorizontalMerge
 	{
-        get => GetElement<HorizontalMerge>(3);
-        set => SetElement(3, value);
+        get => GetElement<HorizontalMerge>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> VerticalMerge.</para>
@@ -32161,11 +31876,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public VerticalMerge VerticalMerge
 	{
-        get => GetElement<VerticalMerge>(4);
-        set => SetElement(4, value);
+        get => GetElement<VerticalMerge>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableCellBorders.</para>
@@ -32174,11 +31888,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public TableCellBorders TableCellBorders
 	{
-        get => GetElement<TableCellBorders>(5);
-        set => SetElement(5, value);
+        get => GetElement<TableCellBorders>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Shading.</para>
@@ -32187,11 +31900,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(6)]
     public Shading Shading
 	{
-        get => GetElement<Shading>(6);
-        set => SetElement(6, value);
+        get => GetElement<Shading>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> NoWrap.</para>
@@ -32200,11 +31912,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(7)]
     public NoWrap NoWrap
 	{
-        get => GetElement<NoWrap>(7);
-        set => SetElement(7, value);
+        get => GetElement<NoWrap>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableCellMargin.</para>
@@ -32213,11 +31924,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(8)]
     public TableCellMargin TableCellMargin
 	{
-        get => GetElement<TableCellMargin>(8);
-        set => SetElement(8, value);
+        get => GetElement<TableCellMargin>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TextDirection.</para>
@@ -32226,11 +31936,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(9)]
     public TextDirection TextDirection
 	{
-        get => GetElement<TextDirection>(9);
-        set => SetElement(9, value);
+        get => GetElement<TextDirection>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableCellFitText.</para>
@@ -32239,11 +31948,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(10)]
     public TableCellFitText TableCellFitText
 	{
-        get => GetElement<TableCellFitText>(10);
-        set => SetElement(10, value);
+        get => GetElement<TableCellFitText>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableCellVerticalAlignment.</para>
@@ -32252,11 +31960,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(11)]
     public TableCellVerticalAlignment TableCellVerticalAlignment
 	{
-        get => GetElement<TableCellVerticalAlignment>(11);
-        set => SetElement(11, value);
+        get => GetElement<TableCellVerticalAlignment>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> HideMark.</para>
@@ -32265,11 +31972,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(12)]
     public HideMark HideMark
 	{
-        get => GetElement<HideMark>(12);
-        set => SetElement(12, value);
+        get => GetElement<HideMark>();
+        set => SetElement(value);
 	}
 
 
@@ -32358,14 +32064,14 @@ public partial class TablePropertiesChange : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Sequence, 1, 1)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PreviousTableProperties), 1, 1)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -32375,11 +32081,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public PreviousTableProperties PreviousTableProperties
 	{
-        get => GetElement<PreviousTableProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<PreviousTableProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -32468,14 +32173,14 @@ public partial class TablePropertyExceptionsChange : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Sequence, 1, 1)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PreviousTablePropertyExceptions), 1, 1)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -32485,11 +32190,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public PreviousTablePropertyExceptions PreviousTablePropertyExceptions
 	{
-        get => GetElement<PreviousTablePropertyExceptions>(0);
-        set => SetElement(0, value);
+        get => GetElement<PreviousTablePropertyExceptions>();
+        set => SetElement(value);
 	}
 
 
@@ -32576,7 +32280,7 @@ public partial class TableProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Sequence, 1, 1)
     {
@@ -32636,8 +32340,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TablePropertiesChange), 0, 1)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -32647,11 +32351,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public TableStyle TableStyle
 	{
-        get => GetElement<TableStyle>(0);
-        set => SetElement(0, value);
+        get => GetElement<TableStyle>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TablePositionProperties.</para>
@@ -32660,11 +32363,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public TablePositionProperties TablePositionProperties
 	{
-        get => GetElement<TablePositionProperties>(1);
-        set => SetElement(1, value);
+        get => GetElement<TablePositionProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableOverlap.</para>
@@ -32673,11 +32375,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public TableOverlap TableOverlap
 	{
-        get => GetElement<TableOverlap>(2);
-        set => SetElement(2, value);
+        get => GetElement<TableOverlap>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> BiDiVisual.</para>
@@ -32686,11 +32387,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public BiDiVisual BiDiVisual
 	{
-        get => GetElement<BiDiVisual>(3);
-        set => SetElement(3, value);
+        get => GetElement<BiDiVisual>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableWidth.</para>
@@ -32699,11 +32399,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public TableWidth TableWidth
 	{
-        get => GetElement<TableWidth>(4);
-        set => SetElement(4, value);
+        get => GetElement<TableWidth>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableJustification.</para>
@@ -32712,11 +32411,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public TableJustification TableJustification
 	{
-        get => GetElement<TableJustification>(5);
-        set => SetElement(5, value);
+        get => GetElement<TableJustification>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableCellSpacing.</para>
@@ -32725,11 +32423,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(6)]
     public TableCellSpacing TableCellSpacing
 	{
-        get => GetElement<TableCellSpacing>(6);
-        set => SetElement(6, value);
+        get => GetElement<TableCellSpacing>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableIndentation.</para>
@@ -32738,11 +32435,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(7)]
     public TableIndentation TableIndentation
 	{
-        get => GetElement<TableIndentation>(7);
-        set => SetElement(7, value);
+        get => GetElement<TableIndentation>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableBorders.</para>
@@ -32751,11 +32447,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(8)]
     public TableBorders TableBorders
 	{
-        get => GetElement<TableBorders>(8);
-        set => SetElement(8, value);
+        get => GetElement<TableBorders>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Shading.</para>
@@ -32764,11 +32459,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(9)]
     public Shading Shading
 	{
-        get => GetElement<Shading>(9);
-        set => SetElement(9, value);
+        get => GetElement<Shading>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableLayout.</para>
@@ -32777,11 +32471,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(10)]
     public TableLayout TableLayout
 	{
-        get => GetElement<TableLayout>(10);
-        set => SetElement(10, value);
+        get => GetElement<TableLayout>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableCellMarginDefault.</para>
@@ -32790,11 +32483,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(11)]
     public TableCellMarginDefault TableCellMarginDefault
 	{
-        get => GetElement<TableCellMarginDefault>(11);
-        set => SetElement(11, value);
+        get => GetElement<TableCellMarginDefault>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableLook.</para>
@@ -32803,11 +32495,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(12)]
     public TableLook TableLook
 	{
-        get => GetElement<TableLook>(12);
-        set => SetElement(12, value);
+        get => GetElement<TableLook>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableCaption.</para>
@@ -32816,11 +32507,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(13)]
     public TableCaption TableCaption
 	{
-        get => GetElement<TableCaption>(13);
-        set => SetElement(13, value);
+        get => GetElement<TableCaption>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableDescription.</para>
@@ -32829,11 +32519,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(14)]
     public TableDescription TableDescription
 	{
-        get => GetElement<TableDescription>(14);
-        set => SetElement(14, value);
+        get => GetElement<TableDescription>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Revision Information for Table Properties.</para>
@@ -32842,11 +32531,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(15)]
     public TablePropertiesChange TablePropertiesChange
 	{
-        get => GetElement<TablePropertiesChange>(15);
-        set => SetElement(15, value);
+        get => GetElement<TablePropertiesChange>();
+        set => SetElement(value);
 	}
 
 
@@ -32905,7 +32593,7 @@ public partial class TableGrid : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Sequence, 1, 1)
     {
@@ -32915,8 +32603,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableGridChange), 0, 1)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -33271,13 +32959,13 @@ public partial class RecipientData : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Active), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ColumnIndex), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.UniqueTag), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -33287,11 +32975,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public Active Active
 	{
-        get => GetElement<Active>(0);
-        set => SetElement(0, value);
+        get => GetElement<Active>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Index of Column Containing Unique Values for Record.</para>
@@ -33300,11 +32987,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public ColumnIndex ColumnIndex
 	{
-        get => GetElement<ColumnIndex>(1);
-        set => SetElement(1, value);
+        get => GetElement<ColumnIndex>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Unique Value for Record.</para>
@@ -33313,11 +32999,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public UniqueTag UniqueTag
 	{
-        get => GetElement<UniqueTag>(2);
-        set => SetElement(2, value);
+        get => GetElement<UniqueTag>();
+        set => SetElement(value);
 	}
 
 
@@ -33456,7 +33141,7 @@ public partial class FieldMapData : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.All, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.All, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MailMergeFieldType), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Name), 0, 1),
@@ -33464,8 +33149,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ColumnIndex), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.LanguageId), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DynamicAddress), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
         /// <summary>
@@ -33475,11 +33160,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public MailMergeFieldType MailMergeFieldType
 	{
-        get => GetElement<MailMergeFieldType>(0);
-        set => SetElement(0, value);
+        get => GetElement<MailMergeFieldType>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Data Source Name for Column.</para>
@@ -33488,11 +33172,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public Name Name
 	{
-        get => GetElement<Name>(1);
-        set => SetElement(1, value);
+        get => GetElement<Name>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Predefined Merge Field Name.</para>
@@ -33501,11 +33184,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public MappedName MappedName
 	{
-        get => GetElement<MappedName>(2);
-        set => SetElement(2, value);
+        get => GetElement<MappedName>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Index of Column Being Mapped.</para>
@@ -33514,11 +33196,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public ColumnIndex ColumnIndex
 	{
-        get => GetElement<ColumnIndex>(3);
-        set => SetElement(3, value);
+        get => GetElement<ColumnIndex>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Merge Field Name Language ID.</para>
@@ -33527,11 +33208,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public LanguageId LanguageId
 	{
-        get => GetElement<LanguageId>(4);
-        set => SetElement(4, value);
+        get => GetElement<LanguageId>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Use Country/Region-Based Address Field Ordering.</para>
@@ -33540,11 +33220,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public DynamicAddress DynamicAddress
 	{
-        get => GetElement<DynamicAddress>(5);
-        set => SetElement(5, value);
+        get => GetElement<DynamicAddress>();
+        set => SetElement(value);
 	}
 
 
@@ -33723,7 +33402,7 @@ public partial class DataSourceObject : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.UdlConnectionString), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DataSourceTableName), 0, 1),
@@ -33733,8 +33412,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.FirstRowHeader), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.FieldMapData), 0, 0),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.RecipientDataReference), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -33744,11 +33423,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public UdlConnectionString UdlConnectionString
 	{
-        get => GetElement<UdlConnectionString>(0);
-        set => SetElement(0, value);
+        get => GetElement<UdlConnectionString>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Data Source Table Name.</para>
@@ -33757,11 +33435,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public DataSourceTableName DataSourceTableName
 	{
-        get => GetElement<DataSourceTableName>(1);
-        set => SetElement(1, value);
+        get => GetElement<DataSourceTableName>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ODSO Data Source File Path.</para>
@@ -33770,11 +33447,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public SourceReference SourceReference
 	{
-        get => GetElement<SourceReference>(2);
-        set => SetElement(2, value);
+        get => GetElement<SourceReference>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Column Delimiter for Data Source.</para>
@@ -33783,11 +33459,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public ColumnDelimiter ColumnDelimiter
 	{
-        get => GetElement<ColumnDelimiter>(3);
-        set => SetElement(3, value);
+        get => GetElement<ColumnDelimiter>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ODSO Data Source Type.</para>
@@ -33796,11 +33471,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public MailMergeSource MailMergeSource
 	{
-        get => GetElement<MailMergeSource>(4);
-        set => SetElement(4, value);
+        get => GetElement<MailMergeSource>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> First Row of Data Source Contains Column Names.</para>
@@ -33809,11 +33483,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public FirstRowHeader FirstRowHeader
 	{
-        get => GetElement<FirstRowHeader>(5);
-        set => SetElement(5, value);
+        get => GetElement<FirstRowHeader>();
+        set => SetElement(value);
 	}
 
 
@@ -34097,7 +33770,7 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 0, 1)
     {
@@ -34157,8 +33830,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -34168,11 +33841,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public RunFonts RunFonts
 	{
-        get => GetElement<RunFonts>(0);
-        set => SetElement(0, value);
+        get => GetElement<RunFonts>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Bold.</para>
@@ -34181,11 +33853,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public Bold Bold
 	{
-        get => GetElement<Bold>(1);
-        set => SetElement(1, value);
+        get => GetElement<Bold>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> BoldComplexScript.</para>
@@ -34194,11 +33865,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public BoldComplexScript BoldComplexScript
 	{
-        get => GetElement<BoldComplexScript>(2);
-        set => SetElement(2, value);
+        get => GetElement<BoldComplexScript>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Italic.</para>
@@ -34207,11 +33877,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public Italic Italic
 	{
-        get => GetElement<Italic>(3);
-        set => SetElement(3, value);
+        get => GetElement<Italic>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ItalicComplexScript.</para>
@@ -34220,11 +33889,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public ItalicComplexScript ItalicComplexScript
 	{
-        get => GetElement<ItalicComplexScript>(4);
-        set => SetElement(4, value);
+        get => GetElement<ItalicComplexScript>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Caps.</para>
@@ -34233,11 +33901,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public Caps Caps
 	{
-        get => GetElement<Caps>(5);
-        set => SetElement(5, value);
+        get => GetElement<Caps>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SmallCaps.</para>
@@ -34246,11 +33913,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(6)]
     public SmallCaps SmallCaps
 	{
-        get => GetElement<SmallCaps>(6);
-        set => SetElement(6, value);
+        get => GetElement<SmallCaps>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Strike.</para>
@@ -34259,11 +33925,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(7)]
     public Strike Strike
 	{
-        get => GetElement<Strike>(7);
-        set => SetElement(7, value);
+        get => GetElement<Strike>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> DoubleStrike.</para>
@@ -34272,11 +33937,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(8)]
     public DoubleStrike DoubleStrike
 	{
-        get => GetElement<DoubleStrike>(8);
-        set => SetElement(8, value);
+        get => GetElement<DoubleStrike>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Outline.</para>
@@ -34285,11 +33949,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(9)]
     public Outline Outline
 	{
-        get => GetElement<Outline>(9);
-        set => SetElement(9, value);
+        get => GetElement<Outline>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Shadow.</para>
@@ -34298,11 +33961,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(10)]
     public Shadow Shadow
 	{
-        get => GetElement<Shadow>(10);
-        set => SetElement(10, value);
+        get => GetElement<Shadow>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Emboss.</para>
@@ -34311,11 +33973,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(11)]
     public Emboss Emboss
 	{
-        get => GetElement<Emboss>(11);
-        set => SetElement(11, value);
+        get => GetElement<Emboss>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Imprint.</para>
@@ -34324,11 +33985,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(12)]
     public Imprint Imprint
 	{
-        get => GetElement<Imprint>(12);
-        set => SetElement(12, value);
+        get => GetElement<Imprint>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> NoProof.</para>
@@ -34337,11 +33997,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(13)]
     public NoProof NoProof
 	{
-        get => GetElement<NoProof>(13);
-        set => SetElement(13, value);
+        get => GetElement<NoProof>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SnapToGrid.</para>
@@ -34350,11 +34009,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(14)]
     public SnapToGrid SnapToGrid
 	{
-        get => GetElement<SnapToGrid>(14);
-        set => SetElement(14, value);
+        get => GetElement<SnapToGrid>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Vanish.</para>
@@ -34363,11 +34021,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(15)]
     public Vanish Vanish
 	{
-        get => GetElement<Vanish>(15);
-        set => SetElement(15, value);
+        get => GetElement<Vanish>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> WebHidden.</para>
@@ -34376,11 +34033,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(16)]
     public WebHidden WebHidden
 	{
-        get => GetElement<WebHidden>(16);
-        set => SetElement(16, value);
+        get => GetElement<WebHidden>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Color.</para>
@@ -34389,11 +34045,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(17)]
     public Color Color
 	{
-        get => GetElement<Color>(17);
-        set => SetElement(17, value);
+        get => GetElement<Color>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Spacing.</para>
@@ -34402,11 +34057,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(18)]
     public Spacing Spacing
 	{
-        get => GetElement<Spacing>(18);
-        set => SetElement(18, value);
+        get => GetElement<Spacing>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> CharacterScale.</para>
@@ -34415,11 +34069,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(19)]
     public CharacterScale CharacterScale
 	{
-        get => GetElement<CharacterScale>(19);
-        set => SetElement(19, value);
+        get => GetElement<CharacterScale>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Kern.</para>
@@ -34428,11 +34081,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(20)]
     public Kern Kern
 	{
-        get => GetElement<Kern>(20);
-        set => SetElement(20, value);
+        get => GetElement<Kern>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Position.</para>
@@ -34441,11 +34093,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(21)]
     public Position Position
 	{
-        get => GetElement<Position>(21);
-        set => SetElement(21, value);
+        get => GetElement<Position>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> FontSize.</para>
@@ -34454,11 +34105,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(22)]
     public FontSize FontSize
 	{
-        get => GetElement<FontSize>(22);
-        set => SetElement(22, value);
+        get => GetElement<FontSize>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> FontSizeComplexScript.</para>
@@ -34467,11 +34117,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(23)]
     public FontSizeComplexScript FontSizeComplexScript
 	{
-        get => GetElement<FontSizeComplexScript>(23);
-        set => SetElement(23, value);
+        get => GetElement<FontSizeComplexScript>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Underline.</para>
@@ -34480,11 +34129,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(24)]
     public Underline Underline
 	{
-        get => GetElement<Underline>(24);
-        set => SetElement(24, value);
+        get => GetElement<Underline>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TextEffect.</para>
@@ -34493,11 +34141,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(25)]
     public TextEffect TextEffect
 	{
-        get => GetElement<TextEffect>(25);
-        set => SetElement(25, value);
+        get => GetElement<TextEffect>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Border.</para>
@@ -34506,11 +34153,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(26)]
     public Border Border
 	{
-        get => GetElement<Border>(26);
-        set => SetElement(26, value);
+        get => GetElement<Border>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Shading.</para>
@@ -34519,11 +34165,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(27)]
     public Shading Shading
 	{
-        get => GetElement<Shading>(27);
-        set => SetElement(27, value);
+        get => GetElement<Shading>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> FitText.</para>
@@ -34532,11 +34177,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(28)]
     public FitText FitText
 	{
-        get => GetElement<FitText>(28);
-        set => SetElement(28, value);
+        get => GetElement<FitText>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> VerticalTextAlignment.</para>
@@ -34545,11 +34189,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(29)]
     public VerticalTextAlignment VerticalTextAlignment
 	{
-        get => GetElement<VerticalTextAlignment>(29);
-        set => SetElement(29, value);
+        get => GetElement<VerticalTextAlignment>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Emphasis.</para>
@@ -34558,11 +34201,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(30)]
     public Emphasis Emphasis
 	{
-        get => GetElement<Emphasis>(30);
-        set => SetElement(30, value);
+        get => GetElement<Emphasis>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Languages.</para>
@@ -34571,11 +34213,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(31)]
     public Languages Languages
 	{
-        get => GetElement<Languages>(31);
-        set => SetElement(31, value);
+        get => GetElement<Languages>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> EastAsianLayout.</para>
@@ -34584,11 +34225,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(32)]
     public EastAsianLayout EastAsianLayout
 	{
-        get => GetElement<EastAsianLayout>(32);
-        set => SetElement(32, value);
+        get => GetElement<EastAsianLayout>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SpecVanish.</para>
@@ -34597,11 +34237,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(33)]
     public SpecVanish SpecVanish
 	{
-        get => GetElement<SpecVanish>(33);
-        set => SetElement(33, value);
+        get => GetElement<SpecVanish>();
+        set => SetElement(value);
 	}
 
 
@@ -34716,7 +34355,7 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 0, 1)
     {
@@ -34754,8 +34393,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.OutlineLevel), 0, 1)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -34765,11 +34404,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public KeepNext KeepNext
 	{
-        get => GetElement<KeepNext>(0);
-        set => SetElement(0, value);
+        get => GetElement<KeepNext>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> KeepLines.</para>
@@ -34778,11 +34416,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public KeepLines KeepLines
 	{
-        get => GetElement<KeepLines>(1);
-        set => SetElement(1, value);
+        get => GetElement<KeepLines>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> PageBreakBefore.</para>
@@ -34791,11 +34428,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public PageBreakBefore PageBreakBefore
 	{
-        get => GetElement<PageBreakBefore>(2);
-        set => SetElement(2, value);
+        get => GetElement<PageBreakBefore>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> FrameProperties.</para>
@@ -34804,11 +34440,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public FrameProperties FrameProperties
 	{
-        get => GetElement<FrameProperties>(3);
-        set => SetElement(3, value);
+        get => GetElement<FrameProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> WidowControl.</para>
@@ -34817,11 +34452,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public WidowControl WidowControl
 	{
-        get => GetElement<WidowControl>(4);
-        set => SetElement(4, value);
+        get => GetElement<WidowControl>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> NumberingProperties.</para>
@@ -34830,11 +34464,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public NumberingProperties NumberingProperties
 	{
-        get => GetElement<NumberingProperties>(5);
-        set => SetElement(5, value);
+        get => GetElement<NumberingProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SuppressLineNumbers.</para>
@@ -34843,11 +34476,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(6)]
     public SuppressLineNumbers SuppressLineNumbers
 	{
-        get => GetElement<SuppressLineNumbers>(6);
-        set => SetElement(6, value);
+        get => GetElement<SuppressLineNumbers>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ParagraphBorders.</para>
@@ -34856,11 +34488,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(7)]
     public ParagraphBorders ParagraphBorders
 	{
-        get => GetElement<ParagraphBorders>(7);
-        set => SetElement(7, value);
+        get => GetElement<ParagraphBorders>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Shading.</para>
@@ -34869,11 +34500,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(8)]
     public Shading Shading
 	{
-        get => GetElement<Shading>(8);
-        set => SetElement(8, value);
+        get => GetElement<Shading>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Tabs.</para>
@@ -34882,11 +34512,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(9)]
     public Tabs Tabs
 	{
-        get => GetElement<Tabs>(9);
-        set => SetElement(9, value);
+        get => GetElement<Tabs>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SuppressAutoHyphens.</para>
@@ -34895,11 +34524,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(10)]
     public SuppressAutoHyphens SuppressAutoHyphens
 	{
-        get => GetElement<SuppressAutoHyphens>(10);
-        set => SetElement(10, value);
+        get => GetElement<SuppressAutoHyphens>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Kinsoku.</para>
@@ -34908,11 +34536,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(11)]
     public Kinsoku Kinsoku
 	{
-        get => GetElement<Kinsoku>(11);
-        set => SetElement(11, value);
+        get => GetElement<Kinsoku>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> WordWrap.</para>
@@ -34921,11 +34548,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(12)]
     public WordWrap WordWrap
 	{
-        get => GetElement<WordWrap>(12);
-        set => SetElement(12, value);
+        get => GetElement<WordWrap>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> OverflowPunctuation.</para>
@@ -34934,11 +34560,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(13)]
     public OverflowPunctuation OverflowPunctuation
 	{
-        get => GetElement<OverflowPunctuation>(13);
-        set => SetElement(13, value);
+        get => GetElement<OverflowPunctuation>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TopLinePunctuation.</para>
@@ -34947,11 +34572,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(14)]
     public TopLinePunctuation TopLinePunctuation
 	{
-        get => GetElement<TopLinePunctuation>(14);
-        set => SetElement(14, value);
+        get => GetElement<TopLinePunctuation>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> AutoSpaceDE.</para>
@@ -34960,11 +34584,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(15)]
     public AutoSpaceDE AutoSpaceDE
 	{
-        get => GetElement<AutoSpaceDE>(15);
-        set => SetElement(15, value);
+        get => GetElement<AutoSpaceDE>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> AutoSpaceDN.</para>
@@ -34973,11 +34596,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(16)]
     public AutoSpaceDN AutoSpaceDN
 	{
-        get => GetElement<AutoSpaceDN>(16);
-        set => SetElement(16, value);
+        get => GetElement<AutoSpaceDN>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> BiDi.</para>
@@ -34986,11 +34608,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(17)]
     public BiDi BiDi
 	{
-        get => GetElement<BiDi>(17);
-        set => SetElement(17, value);
+        get => GetElement<BiDi>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> AdjustRightIndent.</para>
@@ -34999,11 +34620,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(18)]
     public AdjustRightIndent AdjustRightIndent
 	{
-        get => GetElement<AdjustRightIndent>(18);
-        set => SetElement(18, value);
+        get => GetElement<AdjustRightIndent>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SnapToGrid.</para>
@@ -35012,11 +34632,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(19)]
     public SnapToGrid SnapToGrid
 	{
-        get => GetElement<SnapToGrid>(19);
-        set => SetElement(19, value);
+        get => GetElement<SnapToGrid>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SpacingBetweenLines.</para>
@@ -35025,11 +34644,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(20)]
     public SpacingBetweenLines SpacingBetweenLines
 	{
-        get => GetElement<SpacingBetweenLines>(20);
-        set => SetElement(20, value);
+        get => GetElement<SpacingBetweenLines>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Indentation.</para>
@@ -35038,11 +34656,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(21)]
     public Indentation Indentation
 	{
-        get => GetElement<Indentation>(21);
-        set => SetElement(21, value);
+        get => GetElement<Indentation>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ContextualSpacing.</para>
@@ -35051,11 +34668,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(22)]
     public ContextualSpacing ContextualSpacing
 	{
-        get => GetElement<ContextualSpacing>(22);
-        set => SetElement(22, value);
+        get => GetElement<ContextualSpacing>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> MirrorIndents.</para>
@@ -35064,11 +34680,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(23)]
     public MirrorIndents MirrorIndents
 	{
-        get => GetElement<MirrorIndents>(23);
-        set => SetElement(23, value);
+        get => GetElement<MirrorIndents>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SuppressOverlap.</para>
@@ -35077,11 +34692,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(24)]
     public SuppressOverlap SuppressOverlap
 	{
-        get => GetElement<SuppressOverlap>(24);
-        set => SetElement(24, value);
+        get => GetElement<SuppressOverlap>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Justification.</para>
@@ -35090,11 +34704,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(25)]
     public Justification Justification
 	{
-        get => GetElement<Justification>(25);
-        set => SetElement(25, value);
+        get => GetElement<Justification>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TextDirection.</para>
@@ -35103,11 +34716,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(26)]
     public TextDirection TextDirection
 	{
-        get => GetElement<TextDirection>(26);
-        set => SetElement(26, value);
+        get => GetElement<TextDirection>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TextAlignment.</para>
@@ -35116,11 +34728,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(27)]
     public TextAlignment TextAlignment
 	{
-        get => GetElement<TextAlignment>(27);
-        set => SetElement(27, value);
+        get => GetElement<TextAlignment>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TextBoxTightWrap.</para>
@@ -35129,11 +34740,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(28)]
     public TextBoxTightWrap TextBoxTightWrap
 	{
-        get => GetElement<TextBoxTightWrap>(28);
-        set => SetElement(28, value);
+        get => GetElement<TextBoxTightWrap>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> OutlineLevel.</para>
@@ -35142,11 +34752,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(29)]
     public OutlineLevel OutlineLevel
 	{
-        get => GetElement<OutlineLevel>(29);
-        set => SetElement(29, value);
+        get => GetElement<OutlineLevel>();
+        set => SetElement(value);
 	}
 
 
@@ -35203,11 +34812,11 @@ public partial class RunPropertiesDefault : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.RunPropertiesBaseStyle), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -35217,11 +34826,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public RunPropertiesBaseStyle RunPropertiesBaseStyle
 	{
-        get => GetElement<RunPropertiesBaseStyle>(0);
-        set => SetElement(0, value);
+        get => GetElement<RunPropertiesBaseStyle>();
+        set => SetElement(value);
 	}
 
 
@@ -35278,11 +34886,11 @@ public partial class ParagraphPropertiesDefault : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesBaseStyle), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -35292,11 +34900,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public ParagraphPropertiesBaseStyle ParagraphPropertiesBaseStyle
 	{
-        get => GetElement<ParagraphPropertiesBaseStyle>(0);
-        set => SetElement(0, value);
+        get => GetElement<ParagraphPropertiesBaseStyle>();
+        set => SetElement(value);
 	}
 
 
@@ -35622,14 +35229,14 @@ public partial class FramesetSplitbar : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Width), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Color), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.NoBorder), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.FlatBorders), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -35639,11 +35246,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public Width Width
 	{
-        get => GetElement<Width>(0);
-        set => SetElement(0, value);
+        get => GetElement<Width>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Frameset Splitter Color.</para>
@@ -35652,11 +35258,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public Color Color
 	{
-        get => GetElement<Color>(1);
-        set => SetElement(1, value);
+        get => GetElement<Color>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Do Not Display Frameset Splitters.</para>
@@ -35665,11 +35270,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public NoBorder NoBorder
 	{
-        get => GetElement<NoBorder>(2);
-        set => SetElement(2, value);
+        get => GetElement<NoBorder>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Frameset Splitter Border Style.</para>
@@ -35678,11 +35282,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public FlatBorders FlatBorders
 	{
-        get => GetElement<FlatBorders>(3);
-        set => SetElement(3, value);
+        get => GetElement<FlatBorders>();
+        set => SetElement(value);
 	}
 
 
@@ -35783,7 +35386,7 @@ public partial class Frameset : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.FrameSize), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.FramesetSplitbar), 0, 1),
@@ -35796,8 +35399,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Frame), 1, 1)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -35807,11 +35410,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public FrameSize FrameSize
 	{
-        get => GetElement<FrameSize>(0);
-        set => SetElement(0, value);
+        get => GetElement<FrameSize>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Frameset Splitter Properties.</para>
@@ -35820,11 +35422,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public FramesetSplitbar FramesetSplitbar
 	{
-        get => GetElement<FramesetSplitbar>(1);
-        set => SetElement(1, value);
+        get => GetElement<FramesetSplitbar>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Frameset Layout.</para>
@@ -35833,11 +35434,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public FrameLayout FrameLayout
 	{
-        get => GetElement<FrameLayout>(2);
-        set => SetElement(2, value);
+        get => GetElement<FrameLayout>();
+        set => SetElement(value);
 	}
 
 
@@ -35908,7 +35508,7 @@ public partial class Frame : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.FrameSize), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.FrameName), 0, 1),
@@ -35918,8 +35518,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ScrollbarVisibility), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.NoResizeAllowed), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.LinkedToFile), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -35929,11 +35529,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public FrameSize FrameSize
 	{
-        get => GetElement<FrameSize>(0);
-        set => SetElement(0, value);
+        get => GetElement<FrameSize>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Frame Name.</para>
@@ -35942,11 +35541,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public FrameName FrameName
 	{
-        get => GetElement<FrameName>(1);
-        set => SetElement(1, value);
+        get => GetElement<FrameName>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Source File for Frame.</para>
@@ -35955,11 +35553,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public SourceFileReference SourceFileReference
 	{
-        get => GetElement<SourceFileReference>(2);
-        set => SetElement(2, value);
+        get => GetElement<SourceFileReference>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Left and Right Margin for Frame.</para>
@@ -35968,11 +35565,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public MarginWidth MarginWidth
 	{
-        get => GetElement<MarginWidth>(3);
-        set => SetElement(3, value);
+        get => GetElement<MarginWidth>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Top and Bottom Margin for Frame.</para>
@@ -35981,11 +35577,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public MarginHeight MarginHeight
 	{
-        get => GetElement<MarginHeight>(4);
-        set => SetElement(4, value);
+        get => GetElement<MarginHeight>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Scrollbar Display Option.</para>
@@ -35994,11 +35589,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public ScrollbarVisibility ScrollbarVisibility
 	{
-        get => GetElement<ScrollbarVisibility>(5);
-        set => SetElement(5, value);
+        get => GetElement<ScrollbarVisibility>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Frame Cannot Be Resized.</para>
@@ -36007,11 +35601,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(6)]
     public NoResizeAllowed NoResizeAllowed
 	{
-        get => GetElement<NoResizeAllowed>(6);
-        set => SetElement(6, value);
+        get => GetElement<NoResizeAllowed>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Maintain Link to Existing File.</para>
@@ -36020,11 +35613,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(7)]
     public LinkedToFile LinkedToFile
 	{
-        get => GetElement<LinkedToFile>(7);
-        set => SetElement(7, value);
+        get => GetElement<LinkedToFile>();
+        set => SetElement(value);
 	}
 
 
@@ -36316,7 +35908,7 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 0, 1)
     {
@@ -36361,8 +35953,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.OutlineLevel), 0, 1)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -36372,11 +35964,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public ParagraphStyleId ParagraphStyleId
 	{
-        get => GetElement<ParagraphStyleId>(0);
-        set => SetElement(0, value);
+        get => GetElement<ParagraphStyleId>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> KeepNext.</para>
@@ -36385,11 +35976,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public KeepNext KeepNext
 	{
-        get => GetElement<KeepNext>(1);
-        set => SetElement(1, value);
+        get => GetElement<KeepNext>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> KeepLines.</para>
@@ -36398,11 +35988,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public KeepLines KeepLines
 	{
-        get => GetElement<KeepLines>(2);
-        set => SetElement(2, value);
+        get => GetElement<KeepLines>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> PageBreakBefore.</para>
@@ -36411,11 +36000,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public PageBreakBefore PageBreakBefore
 	{
-        get => GetElement<PageBreakBefore>(3);
-        set => SetElement(3, value);
+        get => GetElement<PageBreakBefore>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> FrameProperties.</para>
@@ -36424,11 +36012,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public FrameProperties FrameProperties
 	{
-        get => GetElement<FrameProperties>(4);
-        set => SetElement(4, value);
+        get => GetElement<FrameProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> WidowControl.</para>
@@ -36437,11 +36024,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public WidowControl WidowControl
 	{
-        get => GetElement<WidowControl>(5);
-        set => SetElement(5, value);
+        get => GetElement<WidowControl>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> NumberingProperties.</para>
@@ -36450,11 +36036,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(6)]
     public NumberingProperties NumberingProperties
 	{
-        get => GetElement<NumberingProperties>(6);
-        set => SetElement(6, value);
+        get => GetElement<NumberingProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SuppressLineNumbers.</para>
@@ -36463,11 +36048,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(7)]
     public SuppressLineNumbers SuppressLineNumbers
 	{
-        get => GetElement<SuppressLineNumbers>(7);
-        set => SetElement(7, value);
+        get => GetElement<SuppressLineNumbers>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ParagraphBorders.</para>
@@ -36476,11 +36060,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(8)]
     public ParagraphBorders ParagraphBorders
 	{
-        get => GetElement<ParagraphBorders>(8);
-        set => SetElement(8, value);
+        get => GetElement<ParagraphBorders>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Shading.</para>
@@ -36489,11 +36072,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(9)]
     public Shading Shading
 	{
-        get => GetElement<Shading>(9);
-        set => SetElement(9, value);
+        get => GetElement<Shading>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Tabs.</para>
@@ -36502,11 +36084,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(10)]
     public Tabs Tabs
 	{
-        get => GetElement<Tabs>(10);
-        set => SetElement(10, value);
+        get => GetElement<Tabs>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SuppressAutoHyphens.</para>
@@ -36515,11 +36096,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(11)]
     public SuppressAutoHyphens SuppressAutoHyphens
 	{
-        get => GetElement<SuppressAutoHyphens>(11);
-        set => SetElement(11, value);
+        get => GetElement<SuppressAutoHyphens>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Kinsoku.</para>
@@ -36528,11 +36108,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(12)]
     public Kinsoku Kinsoku
 	{
-        get => GetElement<Kinsoku>(12);
-        set => SetElement(12, value);
+        get => GetElement<Kinsoku>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> WordWrap.</para>
@@ -36541,11 +36120,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(13)]
     public WordWrap WordWrap
 	{
-        get => GetElement<WordWrap>(13);
-        set => SetElement(13, value);
+        get => GetElement<WordWrap>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> OverflowPunctuation.</para>
@@ -36554,11 +36132,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(14)]
     public OverflowPunctuation OverflowPunctuation
 	{
-        get => GetElement<OverflowPunctuation>(14);
-        set => SetElement(14, value);
+        get => GetElement<OverflowPunctuation>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TopLinePunctuation.</para>
@@ -36567,11 +36144,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(15)]
     public TopLinePunctuation TopLinePunctuation
 	{
-        get => GetElement<TopLinePunctuation>(15);
-        set => SetElement(15, value);
+        get => GetElement<TopLinePunctuation>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> AutoSpaceDE.</para>
@@ -36580,11 +36156,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(16)]
     public AutoSpaceDE AutoSpaceDE
 	{
-        get => GetElement<AutoSpaceDE>(16);
-        set => SetElement(16, value);
+        get => GetElement<AutoSpaceDE>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> AutoSpaceDN.</para>
@@ -36593,11 +36168,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(17)]
     public AutoSpaceDN AutoSpaceDN
 	{
-        get => GetElement<AutoSpaceDN>(17);
-        set => SetElement(17, value);
+        get => GetElement<AutoSpaceDN>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> BiDi.</para>
@@ -36606,11 +36180,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(18)]
     public BiDi BiDi
 	{
-        get => GetElement<BiDi>(18);
-        set => SetElement(18, value);
+        get => GetElement<BiDi>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> AdjustRightIndent.</para>
@@ -36619,11 +36192,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(19)]
     public AdjustRightIndent AdjustRightIndent
 	{
-        get => GetElement<AdjustRightIndent>(19);
-        set => SetElement(19, value);
+        get => GetElement<AdjustRightIndent>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SnapToGrid.</para>
@@ -36632,11 +36204,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(20)]
     public SnapToGrid SnapToGrid
 	{
-        get => GetElement<SnapToGrid>(20);
-        set => SetElement(20, value);
+        get => GetElement<SnapToGrid>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SpacingBetweenLines.</para>
@@ -36645,11 +36216,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(21)]
     public SpacingBetweenLines SpacingBetweenLines
 	{
-        get => GetElement<SpacingBetweenLines>(21);
-        set => SetElement(21, value);
+        get => GetElement<SpacingBetweenLines>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Indentation.</para>
@@ -36658,11 +36228,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(22)]
     public Indentation Indentation
 	{
-        get => GetElement<Indentation>(22);
-        set => SetElement(22, value);
+        get => GetElement<Indentation>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ContextualSpacing.</para>
@@ -36671,11 +36240,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(23)]
     public ContextualSpacing ContextualSpacing
 	{
-        get => GetElement<ContextualSpacing>(23);
-        set => SetElement(23, value);
+        get => GetElement<ContextualSpacing>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> MirrorIndents.</para>
@@ -36684,11 +36252,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(24)]
     public MirrorIndents MirrorIndents
 	{
-        get => GetElement<MirrorIndents>(24);
-        set => SetElement(24, value);
+        get => GetElement<MirrorIndents>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SuppressOverlap.</para>
@@ -36697,11 +36264,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(25)]
     public SuppressOverlap SuppressOverlap
 	{
-        get => GetElement<SuppressOverlap>(25);
-        set => SetElement(25, value);
+        get => GetElement<SuppressOverlap>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Justification.</para>
@@ -36710,11 +36276,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(26)]
     public Justification Justification
 	{
-        get => GetElement<Justification>(26);
-        set => SetElement(26, value);
+        get => GetElement<Justification>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TextDirection.</para>
@@ -36723,11 +36288,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(27)]
     public TextDirection TextDirection
 	{
-        get => GetElement<TextDirection>(27);
-        set => SetElement(27, value);
+        get => GetElement<TextDirection>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TextAlignment.</para>
@@ -36736,11 +36300,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(28)]
     public TextAlignment TextAlignment
 	{
-        get => GetElement<TextAlignment>(28);
-        set => SetElement(28, value);
+        get => GetElement<TextAlignment>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TextBoxTightWrap.</para>
@@ -36749,11 +36312,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(29)]
     public TextBoxTightWrap TextBoxTightWrap
 	{
-        get => GetElement<TextBoxTightWrap>(29);
-        set => SetElement(29, value);
+        get => GetElement<TextBoxTightWrap>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> OutlineLevel.</para>
@@ -36762,11 +36324,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(30)]
     public OutlineLevel OutlineLevel
 	{
-        get => GetElement<OutlineLevel>(30);
-        set => SetElement(30, value);
+        get => GetElement<OutlineLevel>();
+        set => SetElement(value);
 	}
 
 
@@ -36893,7 +36454,7 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 0, 1)
     {
@@ -36955,8 +36516,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SpecVanish), 0, 1)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -36966,11 +36527,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public RunFonts RunFonts
 	{
-        get => GetElement<RunFonts>(0);
-        set => SetElement(0, value);
+        get => GetElement<RunFonts>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Bold.</para>
@@ -36979,11 +36539,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public Bold Bold
 	{
-        get => GetElement<Bold>(1);
-        set => SetElement(1, value);
+        get => GetElement<Bold>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> BoldComplexScript.</para>
@@ -36992,11 +36551,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public BoldComplexScript BoldComplexScript
 	{
-        get => GetElement<BoldComplexScript>(2);
-        set => SetElement(2, value);
+        get => GetElement<BoldComplexScript>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Italic.</para>
@@ -37005,11 +36563,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public Italic Italic
 	{
-        get => GetElement<Italic>(3);
-        set => SetElement(3, value);
+        get => GetElement<Italic>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ItalicComplexScript.</para>
@@ -37018,11 +36575,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public ItalicComplexScript ItalicComplexScript
 	{
-        get => GetElement<ItalicComplexScript>(4);
-        set => SetElement(4, value);
+        get => GetElement<ItalicComplexScript>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Caps.</para>
@@ -37031,11 +36587,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public Caps Caps
 	{
-        get => GetElement<Caps>(5);
-        set => SetElement(5, value);
+        get => GetElement<Caps>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SmallCaps.</para>
@@ -37044,11 +36599,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(6)]
     public SmallCaps SmallCaps
 	{
-        get => GetElement<SmallCaps>(6);
-        set => SetElement(6, value);
+        get => GetElement<SmallCaps>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Strike.</para>
@@ -37057,11 +36611,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(7)]
     public Strike Strike
 	{
-        get => GetElement<Strike>(7);
-        set => SetElement(7, value);
+        get => GetElement<Strike>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> DoubleStrike.</para>
@@ -37070,11 +36623,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(8)]
     public DoubleStrike DoubleStrike
 	{
-        get => GetElement<DoubleStrike>(8);
-        set => SetElement(8, value);
+        get => GetElement<DoubleStrike>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Outline.</para>
@@ -37083,11 +36635,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(9)]
     public Outline Outline
 	{
-        get => GetElement<Outline>(9);
-        set => SetElement(9, value);
+        get => GetElement<Outline>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Shadow.</para>
@@ -37096,11 +36647,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(10)]
     public Shadow Shadow
 	{
-        get => GetElement<Shadow>(10);
-        set => SetElement(10, value);
+        get => GetElement<Shadow>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Emboss.</para>
@@ -37109,11 +36659,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(11)]
     public Emboss Emboss
 	{
-        get => GetElement<Emboss>(11);
-        set => SetElement(11, value);
+        get => GetElement<Emboss>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Imprint.</para>
@@ -37122,11 +36671,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(12)]
     public Imprint Imprint
 	{
-        get => GetElement<Imprint>(12);
-        set => SetElement(12, value);
+        get => GetElement<Imprint>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> NoProof.</para>
@@ -37135,11 +36683,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(13)]
     public NoProof NoProof
 	{
-        get => GetElement<NoProof>(13);
-        set => SetElement(13, value);
+        get => GetElement<NoProof>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SnapToGrid.</para>
@@ -37148,11 +36695,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(14)]
     public SnapToGrid SnapToGrid
 	{
-        get => GetElement<SnapToGrid>(14);
-        set => SetElement(14, value);
+        get => GetElement<SnapToGrid>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Vanish.</para>
@@ -37161,11 +36707,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(15)]
     public Vanish Vanish
 	{
-        get => GetElement<Vanish>(15);
-        set => SetElement(15, value);
+        get => GetElement<Vanish>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> WebHidden.</para>
@@ -37174,11 +36719,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(16)]
     public WebHidden WebHidden
 	{
-        get => GetElement<WebHidden>(16);
-        set => SetElement(16, value);
+        get => GetElement<WebHidden>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Color.</para>
@@ -37187,11 +36731,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(17)]
     public Color Color
 	{
-        get => GetElement<Color>(17);
-        set => SetElement(17, value);
+        get => GetElement<Color>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Spacing.</para>
@@ -37200,11 +36743,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(18)]
     public Spacing Spacing
 	{
-        get => GetElement<Spacing>(18);
-        set => SetElement(18, value);
+        get => GetElement<Spacing>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> CharacterScale.</para>
@@ -37213,11 +36755,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(19)]
     public CharacterScale CharacterScale
 	{
-        get => GetElement<CharacterScale>(19);
-        set => SetElement(19, value);
+        get => GetElement<CharacterScale>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Kern.</para>
@@ -37226,11 +36767,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(20)]
     public Kern Kern
 	{
-        get => GetElement<Kern>(20);
-        set => SetElement(20, value);
+        get => GetElement<Kern>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Position.</para>
@@ -37239,11 +36779,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(21)]
     public Position Position
 	{
-        get => GetElement<Position>(21);
-        set => SetElement(21, value);
+        get => GetElement<Position>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> FontSize.</para>
@@ -37252,11 +36791,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(22)]
     public FontSize FontSize
 	{
-        get => GetElement<FontSize>(22);
-        set => SetElement(22, value);
+        get => GetElement<FontSize>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> FontSizeComplexScript.</para>
@@ -37265,11 +36803,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(23)]
     public FontSizeComplexScript FontSizeComplexScript
 	{
-        get => GetElement<FontSizeComplexScript>(23);
-        set => SetElement(23, value);
+        get => GetElement<FontSizeComplexScript>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Underline.</para>
@@ -37278,11 +36815,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(24)]
     public Underline Underline
 	{
-        get => GetElement<Underline>(24);
-        set => SetElement(24, value);
+        get => GetElement<Underline>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TextEffect.</para>
@@ -37291,11 +36827,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(25)]
     public TextEffect TextEffect
 	{
-        get => GetElement<TextEffect>(25);
-        set => SetElement(25, value);
+        get => GetElement<TextEffect>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Border.</para>
@@ -37304,11 +36839,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(26)]
     public Border Border
 	{
-        get => GetElement<Border>(26);
-        set => SetElement(26, value);
+        get => GetElement<Border>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Shading.</para>
@@ -37317,11 +36851,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(27)]
     public Shading Shading
 	{
-        get => GetElement<Shading>(27);
-        set => SetElement(27, value);
+        get => GetElement<Shading>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> FitText.</para>
@@ -37330,11 +36863,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(28)]
     public FitText FitText
 	{
-        get => GetElement<FitText>(28);
-        set => SetElement(28, value);
+        get => GetElement<FitText>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> VerticalTextAlignment.</para>
@@ -37343,11 +36875,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(29)]
     public VerticalTextAlignment VerticalTextAlignment
 	{
-        get => GetElement<VerticalTextAlignment>(29);
-        set => SetElement(29, value);
+        get => GetElement<VerticalTextAlignment>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> RightToLeftText.</para>
@@ -37356,11 +36887,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(30)]
     public RightToLeftText RightToLeftText
 	{
-        get => GetElement<RightToLeftText>(30);
-        set => SetElement(30, value);
+        get => GetElement<RightToLeftText>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ComplexScript.</para>
@@ -37369,11 +36899,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(31)]
     public ComplexScript ComplexScript
 	{
-        get => GetElement<ComplexScript>(31);
-        set => SetElement(31, value);
+        get => GetElement<ComplexScript>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Emphasis.</para>
@@ -37382,11 +36911,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(32)]
     public Emphasis Emphasis
 	{
-        get => GetElement<Emphasis>(32);
-        set => SetElement(32, value);
+        get => GetElement<Emphasis>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Languages.</para>
@@ -37395,11 +36923,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(33)]
     public Languages Languages
 	{
-        get => GetElement<Languages>(33);
-        set => SetElement(33, value);
+        get => GetElement<Languages>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> EastAsianLayout.</para>
@@ -37408,11 +36935,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(34)]
     public EastAsianLayout EastAsianLayout
 	{
-        get => GetElement<EastAsianLayout>(34);
-        set => SetElement(34, value);
+        get => GetElement<EastAsianLayout>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SpecVanish.</para>
@@ -37421,11 +36947,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(35)]
     public SpecVanish SpecVanish
 	{
-        get => GetElement<SpecVanish>(35);
-        set => SetElement(35, value);
+        get => GetElement<SpecVanish>();
+        set => SetElement(value);
 	}
 
 
@@ -37569,7 +37094,7 @@ public partial class Level : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.StartNumberingValue), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.NumberingFormat), 0, 1),
@@ -37583,8 +37108,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.LevelJustification), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PreviousParagraphProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.NumberingSymbolRunProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -37594,11 +37119,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public StartNumberingValue StartNumberingValue
 	{
-        get => GetElement<StartNumberingValue>(0);
-        set => SetElement(0, value);
+        get => GetElement<StartNumberingValue>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Numbering Format.</para>
@@ -37607,11 +37131,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public NumberingFormat NumberingFormat
 	{
-        get => GetElement<NumberingFormat>(1);
-        set => SetElement(1, value);
+        get => GetElement<NumberingFormat>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Restart Numbering Level Symbol.</para>
@@ -37620,11 +37143,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public LevelRestart LevelRestart
 	{
-        get => GetElement<LevelRestart>(2);
-        set => SetElement(2, value);
+        get => GetElement<LevelRestart>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Paragraph Style's Associated Numbering Level.</para>
@@ -37633,11 +37155,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public ParagraphStyleIdInLevel ParagraphStyleIdInLevel
 	{
-        get => GetElement<ParagraphStyleIdInLevel>(3);
-        set => SetElement(3, value);
+        get => GetElement<ParagraphStyleIdInLevel>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Display All Levels Using Arabic Numerals.</para>
@@ -37646,11 +37167,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public IsLegalNumberingStyle IsLegalNumberingStyle
 	{
-        get => GetElement<IsLegalNumberingStyle>(4);
-        set => SetElement(4, value);
+        get => GetElement<IsLegalNumberingStyle>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Content Between Numbering Symbol and Paragraph Text.</para>
@@ -37659,11 +37179,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public LevelSuffix LevelSuffix
 	{
-        get => GetElement<LevelSuffix>(5);
-        set => SetElement(5, value);
+        get => GetElement<LevelSuffix>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Numbering Level Text.</para>
@@ -37672,11 +37191,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(6)]
     public LevelText LevelText
 	{
-        get => GetElement<LevelText>(6);
-        set => SetElement(6, value);
+        get => GetElement<LevelText>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Picture Numbering Symbol Definition Reference.</para>
@@ -37685,11 +37203,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(7)]
     public LevelPictureBulletId LevelPictureBulletId
 	{
-        get => GetElement<LevelPictureBulletId>(7);
-        set => SetElement(7, value);
+        get => GetElement<LevelPictureBulletId>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Legacy Numbering Level Properties.</para>
@@ -37698,11 +37215,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(8)]
     public LegacyNumbering LegacyNumbering
 	{
-        get => GetElement<LegacyNumbering>(8);
-        set => SetElement(8, value);
+        get => GetElement<LegacyNumbering>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Justification.</para>
@@ -37711,11 +37227,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(9)]
     public LevelJustification LevelJustification
 	{
-        get => GetElement<LevelJustification>(9);
-        set => SetElement(9, value);
+        get => GetElement<LevelJustification>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Numbering Level Associated Paragraph Properties.</para>
@@ -37724,11 +37239,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(10)]
     public PreviousParagraphProperties PreviousParagraphProperties
 	{
-        get => GetElement<PreviousParagraphProperties>(10);
-        set => SetElement(10, value);
+        get => GetElement<PreviousParagraphProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Numbering Symbol Run Properties.</para>
@@ -37737,11 +37251,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(11)]
     public NumberingSymbolRunProperties NumberingSymbolRunProperties
 	{
-        get => GetElement<NumberingSymbolRunProperties>(11);
-        set => SetElement(11, value);
+        get => GetElement<NumberingSymbolRunProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -37810,12 +37323,12 @@ public partial class LevelOverride : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.StartOverrideNumberingValue), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Level), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -37825,11 +37338,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public StartOverrideNumberingValue StartOverrideNumberingValue
 	{
-        get => GetElement<StartOverrideNumberingValue>(0);
-        set => SetElement(0, value);
+        get => GetElement<StartOverrideNumberingValue>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Numbering Level Override Definition.</para>
@@ -37838,11 +37350,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public Level Level
 	{
-        get => GetElement<Level>(1);
-        set => SetElement(1, value);
+        get => GetElement<Level>();
+        set => SetElement(value);
 	}
 
 
@@ -37911,15 +37422,15 @@ public partial class NumberingPictureBullet : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Choice, 1, 1)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PictureBulletBase), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Drawing), 1, 1)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
@@ -37929,11 +37440,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public PictureBulletBase PictureBulletBase
 	{
-        get => GetElement<PictureBulletBase>(0);
-        set => SetElement(0, value);
+        get => GetElement<PictureBulletBase>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Drawing.</para>
@@ -37942,11 +37452,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public Drawing Drawing
 	{
-        get => GetElement<Drawing>(1);
-        set => SetElement(1, value);
+        get => GetElement<Drawing>();
+        set => SetElement(value);
 	}
 
 
@@ -38026,7 +37535,7 @@ public partial class AbstractNum : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Nsid), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MultiLevelType), 0, 1),
@@ -38035,8 +37544,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.StyleLink), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.NumberingStyleLink), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Level), 0, 9)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -38046,11 +37555,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public Nsid Nsid
 	{
-        get => GetElement<Nsid>(0);
-        set => SetElement(0, value);
+        get => GetElement<Nsid>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Abstract Numbering Definition Type.</para>
@@ -38059,11 +37567,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public MultiLevelType MultiLevelType
 	{
-        get => GetElement<MultiLevelType>(1);
-        set => SetElement(1, value);
+        get => GetElement<MultiLevelType>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Numbering Template Code.</para>
@@ -38072,11 +37579,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public TemplateCode TemplateCode
 	{
-        get => GetElement<TemplateCode>(2);
-        set => SetElement(2, value);
+        get => GetElement<TemplateCode>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Abstract Numbering Definition Name.</para>
@@ -38085,11 +37591,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public AbstractNumDefinitionName AbstractNumDefinitionName
 	{
-        get => GetElement<AbstractNumDefinitionName>(3);
-        set => SetElement(3, value);
+        get => GetElement<AbstractNumDefinitionName>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Numbering Style Definition.</para>
@@ -38098,11 +37603,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public StyleLink StyleLink
 	{
-        get => GetElement<StyleLink>(4);
-        set => SetElement(4, value);
+        get => GetElement<StyleLink>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Numbering Style Reference.</para>
@@ -38111,11 +37615,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public NumberingStyleLink NumberingStyleLink
 	{
-        get => GetElement<NumberingStyleLink>(5);
-        set => SetElement(5, value);
+        get => GetElement<NumberingStyleLink>();
+        set => SetElement(value);
 	}
 
 
@@ -38184,12 +37687,12 @@ public partial class NumberingInstance : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.AbstractNumId), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.LevelOverride), 0, 9)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -38199,11 +37702,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public AbstractNumId AbstractNumId
 	{
-        get => GetElement<AbstractNumId>(0);
-        set => SetElement(0, value);
+        get => GetElement<AbstractNumId>();
+        set => SetElement(value);
 	}
 
 
@@ -38320,7 +37822,7 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Sequence, 1, 1)
     {
@@ -38371,8 +37873,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -38382,11 +37884,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public KeepNext KeepNext
 	{
-        get => GetElement<KeepNext>(0);
-        set => SetElement(0, value);
+        get => GetElement<KeepNext>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> KeepLines.</para>
@@ -38395,11 +37896,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public KeepLines KeepLines
 	{
-        get => GetElement<KeepLines>(1);
-        set => SetElement(1, value);
+        get => GetElement<KeepLines>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> PageBreakBefore.</para>
@@ -38408,11 +37908,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public PageBreakBefore PageBreakBefore
 	{
-        get => GetElement<PageBreakBefore>(2);
-        set => SetElement(2, value);
+        get => GetElement<PageBreakBefore>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> FrameProperties.</para>
@@ -38421,11 +37920,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public FrameProperties FrameProperties
 	{
-        get => GetElement<FrameProperties>(3);
-        set => SetElement(3, value);
+        get => GetElement<FrameProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> WidowControl.</para>
@@ -38434,11 +37932,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public WidowControl WidowControl
 	{
-        get => GetElement<WidowControl>(4);
-        set => SetElement(4, value);
+        get => GetElement<WidowControl>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> NumberingProperties.</para>
@@ -38447,11 +37944,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public NumberingProperties NumberingProperties
 	{
-        get => GetElement<NumberingProperties>(5);
-        set => SetElement(5, value);
+        get => GetElement<NumberingProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SuppressLineNumbers.</para>
@@ -38460,11 +37956,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(6)]
     public SuppressLineNumbers SuppressLineNumbers
 	{
-        get => GetElement<SuppressLineNumbers>(6);
-        set => SetElement(6, value);
+        get => GetElement<SuppressLineNumbers>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ParagraphBorders.</para>
@@ -38473,11 +37968,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(7)]
     public ParagraphBorders ParagraphBorders
 	{
-        get => GetElement<ParagraphBorders>(7);
-        set => SetElement(7, value);
+        get => GetElement<ParagraphBorders>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Shading.</para>
@@ -38486,11 +37980,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(8)]
     public Shading Shading
 	{
-        get => GetElement<Shading>(8);
-        set => SetElement(8, value);
+        get => GetElement<Shading>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Tabs.</para>
@@ -38499,11 +37992,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(9)]
     public Tabs Tabs
 	{
-        get => GetElement<Tabs>(9);
-        set => SetElement(9, value);
+        get => GetElement<Tabs>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SuppressAutoHyphens.</para>
@@ -38512,11 +38004,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(10)]
     public SuppressAutoHyphens SuppressAutoHyphens
 	{
-        get => GetElement<SuppressAutoHyphens>(10);
-        set => SetElement(10, value);
+        get => GetElement<SuppressAutoHyphens>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Kinsoku.</para>
@@ -38525,11 +38016,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(11)]
     public Kinsoku Kinsoku
 	{
-        get => GetElement<Kinsoku>(11);
-        set => SetElement(11, value);
+        get => GetElement<Kinsoku>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> WordWrap.</para>
@@ -38538,11 +38028,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(12)]
     public WordWrap WordWrap
 	{
-        get => GetElement<WordWrap>(12);
-        set => SetElement(12, value);
+        get => GetElement<WordWrap>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> OverflowPunctuation.</para>
@@ -38551,11 +38040,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(13)]
     public OverflowPunctuation OverflowPunctuation
 	{
-        get => GetElement<OverflowPunctuation>(13);
-        set => SetElement(13, value);
+        get => GetElement<OverflowPunctuation>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TopLinePunctuation.</para>
@@ -38564,11 +38052,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(14)]
     public TopLinePunctuation TopLinePunctuation
 	{
-        get => GetElement<TopLinePunctuation>(14);
-        set => SetElement(14, value);
+        get => GetElement<TopLinePunctuation>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> AutoSpaceDE.</para>
@@ -38577,11 +38064,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(15)]
     public AutoSpaceDE AutoSpaceDE
 	{
-        get => GetElement<AutoSpaceDE>(15);
-        set => SetElement(15, value);
+        get => GetElement<AutoSpaceDE>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> AutoSpaceDN.</para>
@@ -38590,11 +38076,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(16)]
     public AutoSpaceDN AutoSpaceDN
 	{
-        get => GetElement<AutoSpaceDN>(16);
-        set => SetElement(16, value);
+        get => GetElement<AutoSpaceDN>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> BiDi.</para>
@@ -38603,11 +38088,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(17)]
     public BiDi BiDi
 	{
-        get => GetElement<BiDi>(17);
-        set => SetElement(17, value);
+        get => GetElement<BiDi>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> AdjustRightIndent.</para>
@@ -38616,11 +38100,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(18)]
     public AdjustRightIndent AdjustRightIndent
 	{
-        get => GetElement<AdjustRightIndent>(18);
-        set => SetElement(18, value);
+        get => GetElement<AdjustRightIndent>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SnapToGrid.</para>
@@ -38629,11 +38112,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(19)]
     public SnapToGrid SnapToGrid
 	{
-        get => GetElement<SnapToGrid>(19);
-        set => SetElement(19, value);
+        get => GetElement<SnapToGrid>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SpacingBetweenLines.</para>
@@ -38642,11 +38124,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(20)]
     public SpacingBetweenLines SpacingBetweenLines
 	{
-        get => GetElement<SpacingBetweenLines>(20);
-        set => SetElement(20, value);
+        get => GetElement<SpacingBetweenLines>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Indentation.</para>
@@ -38655,11 +38136,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(21)]
     public Indentation Indentation
 	{
-        get => GetElement<Indentation>(21);
-        set => SetElement(21, value);
+        get => GetElement<Indentation>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ContextualSpacing.</para>
@@ -38668,11 +38148,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(22)]
     public ContextualSpacing ContextualSpacing
 	{
-        get => GetElement<ContextualSpacing>(22);
-        set => SetElement(22, value);
+        get => GetElement<ContextualSpacing>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> MirrorIndents.</para>
@@ -38681,11 +38160,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(23)]
     public MirrorIndents MirrorIndents
 	{
-        get => GetElement<MirrorIndents>(23);
-        set => SetElement(23, value);
+        get => GetElement<MirrorIndents>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SuppressOverlap.</para>
@@ -38694,11 +38172,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(24)]
     public SuppressOverlap SuppressOverlap
 	{
-        get => GetElement<SuppressOverlap>(24);
-        set => SetElement(24, value);
+        get => GetElement<SuppressOverlap>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Justification.</para>
@@ -38707,11 +38184,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(25)]
     public Justification Justification
 	{
-        get => GetElement<Justification>(25);
-        set => SetElement(25, value);
+        get => GetElement<Justification>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TextDirection.</para>
@@ -38720,11 +38196,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(26)]
     public TextDirection TextDirection
 	{
-        get => GetElement<TextDirection>(26);
-        set => SetElement(26, value);
+        get => GetElement<TextDirection>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TextAlignment.</para>
@@ -38733,11 +38208,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(27)]
     public TextAlignment TextAlignment
 	{
-        get => GetElement<TextAlignment>(27);
-        set => SetElement(27, value);
+        get => GetElement<TextAlignment>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TextBoxTightWrap.</para>
@@ -38746,11 +38220,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(28)]
     public TextBoxTightWrap TextBoxTightWrap
 	{
-        get => GetElement<TextBoxTightWrap>(28);
-        set => SetElement(28, value);
+        get => GetElement<TextBoxTightWrap>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> OutlineLevel.</para>
@@ -38759,11 +38232,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(29)]
     public OutlineLevel OutlineLevel
 	{
-        get => GetElement<OutlineLevel>(29);
-        set => SetElement(29, value);
+        get => GetElement<OutlineLevel>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ParagraphPropertiesChange.</para>
@@ -38772,11 +38244,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(30)]
     public ParagraphPropertiesChange ParagraphPropertiesChange
 	{
-        get => GetElement<ParagraphPropertiesChange>(30);
-        set => SetElement(30, value);
+        get => GetElement<ParagraphPropertiesChange>();
+        set => SetElement(value);
 	}
 
 
@@ -38843,7 +38314,7 @@ public partial class TableStyleConditionalFormattingTableProperties : OpenXmlCom
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 0, 1)
     {
@@ -38863,8 +38334,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault), 0, 1)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -38874,11 +38345,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public TableJustification TableJustification
 	{
-        get => GetElement<TableJustification>(0);
-        set => SetElement(0, value);
+        get => GetElement<TableJustification>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableCellSpacing.</para>
@@ -38887,11 +38357,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public TableCellSpacing TableCellSpacing
 	{
-        get => GetElement<TableCellSpacing>(1);
-        set => SetElement(1, value);
+        get => GetElement<TableCellSpacing>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableIndentation.</para>
@@ -38900,11 +38369,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public TableIndentation TableIndentation
 	{
-        get => GetElement<TableIndentation>(2);
-        set => SetElement(2, value);
+        get => GetElement<TableIndentation>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableBorders.</para>
@@ -38913,11 +38381,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public TableBorders TableBorders
 	{
-        get => GetElement<TableBorders>(3);
-        set => SetElement(3, value);
+        get => GetElement<TableBorders>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Shading.</para>
@@ -38926,11 +38393,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public Shading Shading
 	{
-        get => GetElement<Shading>(4);
-        set => SetElement(4, value);
+        get => GetElement<Shading>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableCellMarginDefault.</para>
@@ -38939,11 +38405,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public TableCellMarginDefault TableCellMarginDefault
 	{
-        get => GetElement<TableCellMarginDefault>(5);
-        set => SetElement(5, value);
+        get => GetElement<TableCellMarginDefault>();
+        set => SetElement(value);
 	}
 
 
@@ -39008,7 +38473,7 @@ public partial class TableStyleConditionalFormattingTableRowProperties : OpenXml
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
 {
     new CompositeParticle(ParticleType.Group, 0, 0)
     {
@@ -39021,8 +38486,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableJustification), 0, 1)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -39086,7 +38551,7 @@ public partial class TableStyleConditionalFormattingTableCellProperties : OpenXm
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 0, 1)
     {
@@ -39111,8 +38576,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment), 0, 1)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -39122,11 +38587,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public TableCellBorders TableCellBorders
 	{
-        get => GetElement<TableCellBorders>(0);
-        set => SetElement(0, value);
+        get => GetElement<TableCellBorders>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Shading.</para>
@@ -39135,11 +38599,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public Shading Shading
 	{
-        get => GetElement<Shading>(1);
-        set => SetElement(1, value);
+        get => GetElement<Shading>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> NoWrap.</para>
@@ -39148,11 +38611,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public NoWrap NoWrap
 	{
-        get => GetElement<NoWrap>(2);
-        set => SetElement(2, value);
+        get => GetElement<NoWrap>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableCellMargin.</para>
@@ -39161,11 +38623,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public TableCellMargin TableCellMargin
 	{
-        get => GetElement<TableCellMargin>(3);
-        set => SetElement(3, value);
+        get => GetElement<TableCellMargin>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableCellVerticalAlignment.</para>
@@ -39174,11 +38635,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public TableCellVerticalAlignment TableCellVerticalAlignment
 	{
-        get => GetElement<TableCellVerticalAlignment>(4);
-        set => SetElement(4, value);
+        get => GetElement<TableCellVerticalAlignment>();
+        set => SetElement(value);
 	}
 
 
@@ -39377,7 +38837,7 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 0, 1)
     {
@@ -39450,8 +38910,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -39461,11 +38921,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public RunFonts RunFonts
 	{
-        get => GetElement<RunFonts>(0);
-        set => SetElement(0, value);
+        get => GetElement<RunFonts>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Bold.</para>
@@ -39474,11 +38933,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public Bold Bold
 	{
-        get => GetElement<Bold>(1);
-        set => SetElement(1, value);
+        get => GetElement<Bold>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> BoldComplexScript.</para>
@@ -39487,11 +38945,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public BoldComplexScript BoldComplexScript
 	{
-        get => GetElement<BoldComplexScript>(2);
-        set => SetElement(2, value);
+        get => GetElement<BoldComplexScript>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Italic.</para>
@@ -39500,11 +38957,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public Italic Italic
 	{
-        get => GetElement<Italic>(3);
-        set => SetElement(3, value);
+        get => GetElement<Italic>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ItalicComplexScript.</para>
@@ -39513,11 +38969,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public ItalicComplexScript ItalicComplexScript
 	{
-        get => GetElement<ItalicComplexScript>(4);
-        set => SetElement(4, value);
+        get => GetElement<ItalicComplexScript>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Caps.</para>
@@ -39526,11 +38981,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public Caps Caps
 	{
-        get => GetElement<Caps>(5);
-        set => SetElement(5, value);
+        get => GetElement<Caps>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SmallCaps.</para>
@@ -39539,11 +38993,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(6)]
     public SmallCaps SmallCaps
 	{
-        get => GetElement<SmallCaps>(6);
-        set => SetElement(6, value);
+        get => GetElement<SmallCaps>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Strike.</para>
@@ -39552,11 +39005,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(7)]
     public Strike Strike
 	{
-        get => GetElement<Strike>(7);
-        set => SetElement(7, value);
+        get => GetElement<Strike>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> DoubleStrike.</para>
@@ -39565,11 +39017,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(8)]
     public DoubleStrike DoubleStrike
 	{
-        get => GetElement<DoubleStrike>(8);
-        set => SetElement(8, value);
+        get => GetElement<DoubleStrike>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Outline.</para>
@@ -39578,11 +39029,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(9)]
     public Outline Outline
 	{
-        get => GetElement<Outline>(9);
-        set => SetElement(9, value);
+        get => GetElement<Outline>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Shadow.</para>
@@ -39591,11 +39041,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(10)]
     public Shadow Shadow
 	{
-        get => GetElement<Shadow>(10);
-        set => SetElement(10, value);
+        get => GetElement<Shadow>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Emboss.</para>
@@ -39604,11 +39053,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(11)]
     public Emboss Emboss
 	{
-        get => GetElement<Emboss>(11);
-        set => SetElement(11, value);
+        get => GetElement<Emboss>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Imprint.</para>
@@ -39617,11 +39065,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(12)]
     public Imprint Imprint
 	{
-        get => GetElement<Imprint>(12);
-        set => SetElement(12, value);
+        get => GetElement<Imprint>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> NoProof.</para>
@@ -39630,11 +39077,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(13)]
     public NoProof NoProof
 	{
-        get => GetElement<NoProof>(13);
-        set => SetElement(13, value);
+        get => GetElement<NoProof>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SnapToGrid.</para>
@@ -39643,11 +39089,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(14)]
     public SnapToGrid SnapToGrid
 	{
-        get => GetElement<SnapToGrid>(14);
-        set => SetElement(14, value);
+        get => GetElement<SnapToGrid>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Vanish.</para>
@@ -39656,11 +39101,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(15)]
     public Vanish Vanish
 	{
-        get => GetElement<Vanish>(15);
-        set => SetElement(15, value);
+        get => GetElement<Vanish>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> WebHidden.</para>
@@ -39669,11 +39113,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(16)]
     public WebHidden WebHidden
 	{
-        get => GetElement<WebHidden>(16);
-        set => SetElement(16, value);
+        get => GetElement<WebHidden>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Color.</para>
@@ -39682,11 +39125,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(17)]
     public Color Color
 	{
-        get => GetElement<Color>(17);
-        set => SetElement(17, value);
+        get => GetElement<Color>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Spacing.</para>
@@ -39695,11 +39137,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(18)]
     public Spacing Spacing
 	{
-        get => GetElement<Spacing>(18);
-        set => SetElement(18, value);
+        get => GetElement<Spacing>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> CharacterScale.</para>
@@ -39708,11 +39149,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(19)]
     public CharacterScale CharacterScale
 	{
-        get => GetElement<CharacterScale>(19);
-        set => SetElement(19, value);
+        get => GetElement<CharacterScale>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Kern.</para>
@@ -39721,11 +39161,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(20)]
     public Kern Kern
 	{
-        get => GetElement<Kern>(20);
-        set => SetElement(20, value);
+        get => GetElement<Kern>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Position.</para>
@@ -39734,11 +39173,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(21)]
     public Position Position
 	{
-        get => GetElement<Position>(21);
-        set => SetElement(21, value);
+        get => GetElement<Position>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> FontSize.</para>
@@ -39747,11 +39185,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(22)]
     public FontSize FontSize
 	{
-        get => GetElement<FontSize>(22);
-        set => SetElement(22, value);
+        get => GetElement<FontSize>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> FontSizeComplexScript.</para>
@@ -39760,11 +39197,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(23)]
     public FontSizeComplexScript FontSizeComplexScript
 	{
-        get => GetElement<FontSizeComplexScript>(23);
-        set => SetElement(23, value);
+        get => GetElement<FontSizeComplexScript>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Underline.</para>
@@ -39773,11 +39209,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(24)]
     public Underline Underline
 	{
-        get => GetElement<Underline>(24);
-        set => SetElement(24, value);
+        get => GetElement<Underline>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TextEffect.</para>
@@ -39786,11 +39221,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(25)]
     public TextEffect TextEffect
 	{
-        get => GetElement<TextEffect>(25);
-        set => SetElement(25, value);
+        get => GetElement<TextEffect>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Border.</para>
@@ -39799,11 +39233,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(26)]
     public Border Border
 	{
-        get => GetElement<Border>(26);
-        set => SetElement(26, value);
+        get => GetElement<Border>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Shading.</para>
@@ -39812,11 +39245,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(27)]
     public Shading Shading
 	{
-        get => GetElement<Shading>(27);
-        set => SetElement(27, value);
+        get => GetElement<Shading>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> FitText.</para>
@@ -39825,11 +39257,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(28)]
     public FitText FitText
 	{
-        get => GetElement<FitText>(28);
-        set => SetElement(28, value);
+        get => GetElement<FitText>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> VerticalTextAlignment.</para>
@@ -39838,11 +39269,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(29)]
     public VerticalTextAlignment VerticalTextAlignment
 	{
-        get => GetElement<VerticalTextAlignment>(29);
-        set => SetElement(29, value);
+        get => GetElement<VerticalTextAlignment>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Emphasis.</para>
@@ -39851,11 +39281,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(30)]
     public Emphasis Emphasis
 	{
-        get => GetElement<Emphasis>(30);
-        set => SetElement(30, value);
+        get => GetElement<Emphasis>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Languages.</para>
@@ -39864,11 +39293,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(31)]
     public Languages Languages
 	{
-        get => GetElement<Languages>(31);
-        set => SetElement(31, value);
+        get => GetElement<Languages>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> EastAsianLayout.</para>
@@ -39877,11 +39305,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(32)]
     public EastAsianLayout EastAsianLayout
 	{
-        get => GetElement<EastAsianLayout>(32);
-        set => SetElement(32, value);
+        get => GetElement<EastAsianLayout>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SpecVanish.</para>
@@ -39890,11 +39317,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(33)]
     public SpecVanish SpecVanish
 	{
-        get => GetElement<SpecVanish>(33);
-        set => SetElement(33, value);
+        get => GetElement<SpecVanish>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> RunPropertiesChange.</para>
@@ -39903,11 +39329,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(34)]
     public RunPropertiesChange RunPropertiesChange
 	{
-        get => GetElement<RunPropertiesChange>(34);
-        set => SetElement(34, value);
+        get => GetElement<RunPropertiesChange>();
+        set => SetElement(value);
 	}
 
 
@@ -39978,7 +39403,7 @@ public partial class StyleTableProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 0, 1)
     {
@@ -40006,8 +39431,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault), 0, 1)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -40017,11 +39442,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public TableStyleRowBandSize TableStyleRowBandSize
 	{
-        get => GetElement<TableStyleRowBandSize>(0);
-        set => SetElement(0, value);
+        get => GetElement<TableStyleRowBandSize>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableStyleColumnBandSize.</para>
@@ -40030,11 +39454,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public TableStyleColumnBandSize TableStyleColumnBandSize
 	{
-        get => GetElement<TableStyleColumnBandSize>(1);
-        set => SetElement(1, value);
+        get => GetElement<TableStyleColumnBandSize>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableJustification.</para>
@@ -40043,11 +39466,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public TableJustification TableJustification
 	{
-        get => GetElement<TableJustification>(2);
-        set => SetElement(2, value);
+        get => GetElement<TableJustification>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableCellSpacing.</para>
@@ -40056,11 +39478,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public TableCellSpacing TableCellSpacing
 	{
-        get => GetElement<TableCellSpacing>(3);
-        set => SetElement(3, value);
+        get => GetElement<TableCellSpacing>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableIndentation.</para>
@@ -40069,11 +39490,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public TableIndentation TableIndentation
 	{
-        get => GetElement<TableIndentation>(4);
-        set => SetElement(4, value);
+        get => GetElement<TableIndentation>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableBorders.</para>
@@ -40082,11 +39502,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public TableBorders TableBorders
 	{
-        get => GetElement<TableBorders>(5);
-        set => SetElement(5, value);
+        get => GetElement<TableBorders>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Shading.</para>
@@ -40095,11 +39514,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(6)]
     public Shading Shading
 	{
-        get => GetElement<Shading>(6);
-        set => SetElement(6, value);
+        get => GetElement<Shading>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableCellMarginDefault.</para>
@@ -40108,11 +39526,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(7)]
     public TableCellMarginDefault TableCellMarginDefault
 	{
-        get => GetElement<TableCellMarginDefault>(7);
-        set => SetElement(7, value);
+        get => GetElement<TableCellMarginDefault>();
+        set => SetElement(value);
 	}
 
 
@@ -40175,7 +39592,7 @@ public partial class StyleTableCellProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 0, 1)
     {
@@ -40193,8 +39610,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment), 0, 1)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -40204,11 +39621,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public Shading Shading
 	{
-        get => GetElement<Shading>(0);
-        set => SetElement(0, value);
+        get => GetElement<Shading>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> NoWrap.</para>
@@ -40217,11 +39633,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public NoWrap NoWrap
 	{
-        get => GetElement<NoWrap>(1);
-        set => SetElement(1, value);
+        get => GetElement<NoWrap>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableCellMargin.</para>
@@ -40230,11 +39645,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public TableCellMargin TableCellMargin
 	{
-        get => GetElement<TableCellMargin>(2);
-        set => SetElement(2, value);
+        get => GetElement<TableCellMargin>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TableCellVerticalAlignment.</para>
@@ -40243,11 +39657,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public TableCellVerticalAlignment TableCellVerticalAlignment
 	{
-        get => GetElement<TableCellVerticalAlignment>(3);
-        set => SetElement(3, value);
+        get => GetElement<TableCellVerticalAlignment>();
+        set => SetElement(value);
 	}
 
 
@@ -40322,15 +39735,15 @@ public partial class TableStyleProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.StyleParagraphProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.RunPropertiesBaseStyle), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableRowProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableCellProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -40340,11 +39753,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public StyleParagraphProperties StyleParagraphProperties
 	{
-        get => GetElement<StyleParagraphProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<StyleParagraphProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Style Conditional Formatting Run Properties.</para>
@@ -40353,11 +39765,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public RunPropertiesBaseStyle RunPropertiesBaseStyle
 	{
-        get => GetElement<RunPropertiesBaseStyle>(1);
-        set => SetElement(1, value);
+        get => GetElement<RunPropertiesBaseStyle>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Style Conditional Formatting Table Properties.</para>
@@ -40366,11 +39777,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public TableStyleConditionalFormattingTableProperties TableStyleConditionalFormattingTableProperties
 	{
-        get => GetElement<TableStyleConditionalFormattingTableProperties>(2);
-        set => SetElement(2, value);
+        get => GetElement<TableStyleConditionalFormattingTableProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Style Conditional Formatting Table Row Properties.</para>
@@ -40379,11 +39789,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public TableStyleConditionalFormattingTableRowProperties TableStyleConditionalFormattingTableRowProperties
 	{
-        get => GetElement<TableStyleConditionalFormattingTableRowProperties>(3);
-        set => SetElement(3, value);
+        get => GetElement<TableStyleConditionalFormattingTableRowProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Style Conditional Formatting Table Cell Properties.</para>
@@ -40392,11 +39801,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public TableStyleConditionalFormattingTableCellProperties TableStyleConditionalFormattingTableCellProperties
 	{
-        get => GetElement<TableStyleConditionalFormattingTableCellProperties>(4);
-        set => SetElement(4, value);
+        get => GetElement<TableStyleConditionalFormattingTableCellProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -40537,12 +39945,12 @@ public partial class DocDefaults : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.RunPropertiesDefault), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesDefault), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -40552,11 +39960,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public RunPropertiesDefault RunPropertiesDefault
 	{
-        get => GetElement<RunPropertiesDefault>(0);
-        set => SetElement(0, value);
+        get => GetElement<RunPropertiesDefault>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Default Paragraph Properties.</para>
@@ -40565,11 +39972,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public ParagraphPropertiesDefault ParagraphPropertiesDefault
 	{
-        get => GetElement<ParagraphPropertiesDefault>(1);
-        set => SetElement(1, value);
+        get => GetElement<ParagraphPropertiesDefault>();
+        set => SetElement(value);
 	}
 
 
@@ -40681,11 +40087,11 @@ public partial class LatentStyles : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.LatentStyleExceptionInfo), 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -40820,7 +40226,7 @@ public partial class Style : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.StyleName), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Aliases), 0, 1),
@@ -40844,8 +40250,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableRowProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.StyleTableCellProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableStyleProperties), 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -40855,11 +40261,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public StyleName StyleName
 	{
-        get => GetElement<StyleName>(0);
-        set => SetElement(0, value);
+        get => GetElement<StyleName>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Alternate Style Names.</para>
@@ -40868,11 +40273,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public Aliases Aliases
 	{
-        get => GetElement<Aliases>(1);
-        set => SetElement(1, value);
+        get => GetElement<Aliases>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Parent Style ID.</para>
@@ -40881,11 +40285,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public BasedOn BasedOn
 	{
-        get => GetElement<BasedOn>(2);
-        set => SetElement(2, value);
+        get => GetElement<BasedOn>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Style For Next Paragraph.</para>
@@ -40894,11 +40297,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public NextParagraphStyle NextParagraphStyle
 	{
-        get => GetElement<NextParagraphStyle>(3);
-        set => SetElement(3, value);
+        get => GetElement<NextParagraphStyle>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Linked Style Reference.</para>
@@ -40907,11 +40309,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public LinkedStyle LinkedStyle
 	{
-        get => GetElement<LinkedStyle>(4);
-        set => SetElement(4, value);
+        get => GetElement<LinkedStyle>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Automatically Merge User Formatting Into Style Definition.</para>
@@ -40920,11 +40321,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public AutoRedefine AutoRedefine
 	{
-        get => GetElement<AutoRedefine>(5);
-        set => SetElement(5, value);
+        get => GetElement<AutoRedefine>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Hide Style From User Interface.</para>
@@ -40933,11 +40333,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(6)]
     public StyleHidden StyleHidden
 	{
-        get => GetElement<StyleHidden>(6);
-        set => SetElement(6, value);
+        get => GetElement<StyleHidden>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Optional User Interface Sorting Order.</para>
@@ -40946,11 +40345,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(7)]
     public UIPriority UIPriority
 	{
-        get => GetElement<UIPriority>(7);
-        set => SetElement(7, value);
+        get => GetElement<UIPriority>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Hide Style From Main User Interface.</para>
@@ -40959,11 +40357,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(8)]
     public SemiHidden SemiHidden
 	{
-        get => GetElement<SemiHidden>(8);
-        set => SetElement(8, value);
+        get => GetElement<SemiHidden>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Remove Semi-Hidden Property When Style Is Used.</para>
@@ -40972,11 +40369,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(9)]
     public UnhideWhenUsed UnhideWhenUsed
 	{
-        get => GetElement<UnhideWhenUsed>(9);
-        set => SetElement(9, value);
+        get => GetElement<UnhideWhenUsed>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Primary Style.</para>
@@ -40985,11 +40381,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(10)]
     public PrimaryStyle PrimaryStyle
 	{
-        get => GetElement<PrimaryStyle>(10);
-        set => SetElement(10, value);
+        get => GetElement<PrimaryStyle>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Style Cannot Be Applied.</para>
@@ -40998,11 +40393,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(11)]
     public Locked Locked
 	{
-        get => GetElement<Locked>(11);
-        set => SetElement(11, value);
+        get => GetElement<Locked>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> E-Mail Message Text Style.</para>
@@ -41011,11 +40405,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(12)]
     public Personal Personal
 	{
-        get => GetElement<Personal>(12);
-        set => SetElement(12, value);
+        get => GetElement<Personal>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> E-Mail Message Composition Style.</para>
@@ -41024,11 +40417,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(13)]
     public PersonalCompose PersonalCompose
 	{
-        get => GetElement<PersonalCompose>(13);
-        set => SetElement(13, value);
+        get => GetElement<PersonalCompose>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> E-Mail Message Reply Style.</para>
@@ -41037,11 +40429,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(14)]
     public PersonalReply PersonalReply
 	{
-        get => GetElement<PersonalReply>(14);
-        set => SetElement(14, value);
+        get => GetElement<PersonalReply>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Revision Identifier for Style Definition.</para>
@@ -41050,11 +40441,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(15)]
     public Rsid Rsid
 	{
-        get => GetElement<Rsid>(15);
-        set => SetElement(15, value);
+        get => GetElement<Rsid>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Style Paragraph Properties.</para>
@@ -41063,11 +40453,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(16)]
     public StyleParagraphProperties StyleParagraphProperties
 	{
-        get => GetElement<StyleParagraphProperties>(16);
-        set => SetElement(16, value);
+        get => GetElement<StyleParagraphProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Run Properties.</para>
@@ -41076,11 +40465,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(17)]
     public StyleRunProperties StyleRunProperties
 	{
-        get => GetElement<StyleRunProperties>(17);
-        set => SetElement(17, value);
+        get => GetElement<StyleRunProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Style Table Properties.</para>
@@ -41089,11 +40477,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(18)]
     public StyleTableProperties StyleTableProperties
 	{
-        get => GetElement<StyleTableProperties>(18);
-        set => SetElement(18, value);
+        get => GetElement<StyleTableProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Style Table Row Properties.</para>
@@ -41102,11 +40489,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(19)]
     public TableStyleConditionalFormattingTableRowProperties TableStyleConditionalFormattingTableRowProperties
 	{
-        get => GetElement<TableStyleConditionalFormattingTableRowProperties>(19);
-        set => SetElement(19, value);
+        get => GetElement<TableStyleConditionalFormattingTableRowProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Style Table Cell Properties.</para>
@@ -41115,11 +40501,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(20)]
     public StyleTableCellProperties StyleTableCellProperties
 	{
-        get => GetElement<StyleTableCellProperties>(20);
-        set => SetElement(20, value);
+        get => GetElement<StyleTableCellProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -41206,7 +40591,7 @@ public partial class Font : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.AltName), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Panose1Number), 0, 1),
@@ -41219,8 +40604,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.EmbedBoldFont), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.EmbedItalicFont), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.EmbedBoldItalicFont), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -41230,11 +40615,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public AltName AltName
 	{
-        get => GetElement<AltName>(0);
-        set => SetElement(0, value);
+        get => GetElement<AltName>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Panose1Number.</para>
@@ -41243,11 +40627,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public Panose1Number Panose1Number
 	{
-        get => GetElement<Panose1Number>(1);
-        set => SetElement(1, value);
+        get => GetElement<Panose1Number>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> FontCharSet.</para>
@@ -41256,11 +40639,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public FontCharSet FontCharSet
 	{
-        get => GetElement<FontCharSet>(2);
-        set => SetElement(2, value);
+        get => GetElement<FontCharSet>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> FontFamily.</para>
@@ -41269,11 +40651,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public FontFamily FontFamily
 	{
-        get => GetElement<FontFamily>(3);
-        set => SetElement(3, value);
+        get => GetElement<FontFamily>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> NotTrueType.</para>
@@ -41282,11 +40663,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public NotTrueType NotTrueType
 	{
-        get => GetElement<NotTrueType>(4);
-        set => SetElement(4, value);
+        get => GetElement<NotTrueType>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Pitch.</para>
@@ -41295,11 +40675,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public Pitch Pitch
 	{
-        get => GetElement<Pitch>(5);
-        set => SetElement(5, value);
+        get => GetElement<Pitch>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> FontSignature.</para>
@@ -41308,11 +40687,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(6)]
     public FontSignature FontSignature
 	{
-        get => GetElement<FontSignature>(6);
-        set => SetElement(6, value);
+        get => GetElement<FontSignature>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> EmbedRegularFont.</para>
@@ -41321,11 +40699,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(7)]
     public EmbedRegularFont EmbedRegularFont
 	{
-        get => GetElement<EmbedRegularFont>(7);
-        set => SetElement(7, value);
+        get => GetElement<EmbedRegularFont>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> EmbedBoldFont.</para>
@@ -41334,11 +40711,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(8)]
     public EmbedBoldFont EmbedBoldFont
 	{
-        get => GetElement<EmbedBoldFont>(8);
-        set => SetElement(8, value);
+        get => GetElement<EmbedBoldFont>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> EmbedItalicFont.</para>
@@ -41347,11 +40723,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(9)]
     public EmbedItalicFont EmbedItalicFont
 	{
-        get => GetElement<EmbedItalicFont>(9);
-        set => SetElement(9, value);
+        get => GetElement<EmbedItalicFont>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> EmbedBoldItalicFont.</para>
@@ -41360,11 +40735,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(10)]
     public EmbedBoldItalicFont EmbedBoldItalicFont
 	{
-        get => GetElement<EmbedBoldItalicFont>(10);
-        set => SetElement(10, value);
+        get => GetElement<EmbedBoldItalicFont>();
+        set => SetElement(value);
 	}
 
 
@@ -41542,14 +40916,14 @@ public partial class DivBorder : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TopBorder), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.LeftBorder), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BottomBorder), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.RightBorder), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -41559,11 +40933,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public TopBorder TopBorder
 	{
-        get => GetElement<TopBorder>(0);
-        set => SetElement(0, value);
+        get => GetElement<TopBorder>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Left Border for HTML div.</para>
@@ -41572,11 +40945,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public LeftBorder LeftBorder
 	{
-        get => GetElement<LeftBorder>(1);
-        set => SetElement(1, value);
+        get => GetElement<LeftBorder>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Bottom Border for HTML div.</para>
@@ -41585,11 +40957,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public BottomBorder BottomBorder
 	{
-        get => GetElement<BottomBorder>(2);
-        set => SetElement(2, value);
+        get => GetElement<BottomBorder>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Right Border for HTML div.</para>
@@ -41598,11 +40969,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public RightBorder RightBorder
 	{
-        get => GetElement<RightBorder>(3);
-        set => SetElement(3, value);
+        get => GetElement<RightBorder>();
+        set => SetElement(value);
 	}
 
 
@@ -41658,11 +41028,11 @@ public partial class DivsChild : DivsType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DivsChild>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Div), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Defines the Divs Class.</para>
@@ -41712,11 +41082,11 @@ public partial class Divs : DivsType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Divs>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Div), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// Defines the DivsType class.
@@ -41841,7 +41211,7 @@ public partial class Div : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BlockQuote), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BodyDiv), 0, 1),
@@ -41851,8 +41221,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BottomMarginDiv), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DivBorder), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DivsChild), 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -41862,11 +41232,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public BlockQuote BlockQuote
 	{
-        get => GetElement<BlockQuote>(0);
-        set => SetElement(0, value);
+        get => GetElement<BlockQuote>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Data for HTML body Element.</para>
@@ -41875,11 +41244,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public BodyDiv BodyDiv
 	{
-        get => GetElement<BodyDiv>(1);
-        set => SetElement(1, value);
+        get => GetElement<BodyDiv>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Left Margin for HTML div.</para>
@@ -41888,11 +41256,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public LeftMarginDiv LeftMarginDiv
 	{
-        get => GetElement<LeftMarginDiv>(2);
-        set => SetElement(2, value);
+        get => GetElement<LeftMarginDiv>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Right Margin for HTML div.</para>
@@ -41901,11 +41268,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public RightMarginDiv RightMarginDiv
 	{
-        get => GetElement<RightMarginDiv>(3);
-        set => SetElement(3, value);
+        get => GetElement<RightMarginDiv>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Top Margin for HTML div.</para>
@@ -41914,11 +41280,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public TopMarginDiv TopMarginDiv
 	{
-        get => GetElement<TopMarginDiv>(4);
-        set => SetElement(4, value);
+        get => GetElement<TopMarginDiv>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Bottom Margin for HTML div.</para>
@@ -41927,11 +41292,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public BottomMarginDiv BottomMarginDiv
 	{
-        get => GetElement<BottomMarginDiv>(5);
-        set => SetElement(5, value);
+        get => GetElement<BottomMarginDiv>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Set of Borders for HTML div.</para>
@@ -41940,11 +41304,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(6)]
     public DivBorder DivBorder
 	{
-        get => GetElement<DivBorder>(6);
-        set => SetElement(6, value);
+        get => GetElement<DivBorder>();
+        set => SetElement(value);
 	}
 
 
@@ -42065,7 +41428,7 @@ public partial class Comment : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Sequence, 1, 1)
     {
@@ -42130,8 +41493,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -42220,7 +41583,7 @@ public partial class Footnote : FootnoteEndnoteType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Footnote>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 1, 0)
     {
@@ -42323,8 +41686,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Endnote Content.</para>
@@ -42408,7 +41771,7 @@ public partial class Endnote : FootnoteEndnoteType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Endnote>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 1, 0)
     {
@@ -42511,8 +41874,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// Defines the FootnoteEndnoteType class.
@@ -42946,11 +42309,11 @@ public partial class AutoCaptions : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.AutoCaption), 1, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -43046,11 +42409,11 @@ public partial class DocumentBackground : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Background), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
@@ -43060,11 +42423,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:v = urn:schemas-microsoft-com:vml
     /// </remark>
-	[Index(0)]
     public DocumentFormat.OpenXml.Vml.Background Background
 	{
-        get => GetElement<DocumentFormat.OpenXml.Vml.Background>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentFormat.OpenXml.Vml.Background>();
+        set => SetElement(value);
 	}
 
 
@@ -43121,12 +42483,12 @@ public partial class DocParts : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPart), 0, 0, version: FileFormatVersions.Office2007),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPart), 1, 0, version: FileFormatVersions.Office2010)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -43229,12 +42591,12 @@ public partial class Category : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Name), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Gallery), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -43244,11 +42606,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public Name Name
 	{
-        get => GetElement<Name>(0);
-        set => SetElement(0, value);
+        get => GetElement<Name>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Gallery Associated With Entry.</para>
@@ -43257,11 +42618,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public Gallery Gallery
 	{
-        get => GetElement<Gallery>(1);
-        set => SetElement(1, value);
+        get => GetElement<Gallery>();
+        set => SetElement(value);
 	}
 
 
@@ -43327,11 +42687,11 @@ public partial class DocPartTypes : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPartType), 1, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -43387,11 +42747,11 @@ public partial class Behaviors : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Behavior), 1, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -43495,7 +42855,7 @@ public partial class DocPartProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPartName), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.StyleId), 0, 1),
@@ -43504,8 +42864,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Behaviors), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Description), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPartId), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -43515,11 +42875,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public DocPartName DocPartName
 	{
-        get => GetElement<DocPartName>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocPartName>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Associated Paragraph Style Name.</para>
@@ -43528,11 +42887,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public StyleId StyleId
 	{
-        get => GetElement<StyleId>(1);
-        set => SetElement(1, value);
+        get => GetElement<StyleId>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Entry Categorization.</para>
@@ -43541,11 +42899,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public Category Category
 	{
-        get => GetElement<Category>(2);
-        set => SetElement(2, value);
+        get => GetElement<Category>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Entry Types.</para>
@@ -43554,11 +42911,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public DocPartTypes DocPartTypes
 	{
-        get => GetElement<DocPartTypes>(3);
-        set => SetElement(3, value);
+        get => GetElement<DocPartTypes>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Entry Insertion Behaviors.</para>
@@ -43567,11 +42923,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public Behaviors Behaviors
 	{
-        get => GetElement<Behaviors>(4);
-        set => SetElement(4, value);
+        get => GetElement<Behaviors>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Description for Entry.</para>
@@ -43580,11 +42935,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public Description Description
 	{
-        get => GetElement<Description>(5);
-        set => SetElement(5, value);
+        get => GetElement<Description>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Entry ID.</para>
@@ -43593,11 +42947,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(6)]
     public DocPartId DocPartId
 	{
-        get => GetElement<DocPartId>(6);
-        set => SetElement(6, value);
+        get => GetElement<DocPartId>();
+        set => SetElement(value);
 	}
 
 
@@ -43688,7 +43041,7 @@ public partial class DocPartBody : BodyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocPartBody>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 0, 0)
     {
@@ -43792,8 +43145,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         }
     },
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SectionProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Defines the Body Class.</para>
@@ -43878,7 +43231,7 @@ public partial class Body : BodyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Body>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 0, 0)
     {
@@ -43982,8 +43335,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         }
     },
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SectionProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// Defines the BodyType class.
@@ -44154,12 +43507,12 @@ public partial class DocPart : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPartProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPartBody), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -44169,11 +43522,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public DocPartProperties DocPartProperties
 	{
-        get => GetElement<DocPartProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocPartProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Contents of Glossary Document Entry.</para>
@@ -44182,11 +43534,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public DocPartBody DocPartBody
 	{
-        get => GetElement<DocPartBody>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocPartBody>();
+        set => SetElement(value);
 	}
 
 
@@ -44398,7 +43749,7 @@ public partial class TablePropertyExceptions : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Sequence, 1, 1)
     {
@@ -44416,8 +43767,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TablePropertyExceptionsChange), 0, 1)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -44427,11 +43778,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public TableWidth TableWidth
 	{
-        get => GetElement<TableWidth>(0);
-        set => SetElement(0, value);
+        get => GetElement<TableWidth>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Alignment Exception.</para>
@@ -44440,11 +43790,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public TableJustification TableJustification
 	{
-        get => GetElement<TableJustification>(1);
-        set => SetElement(1, value);
+        get => GetElement<TableJustification>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Cell Spacing Exception.</para>
@@ -44453,11 +43802,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public TableCellSpacing TableCellSpacing
 	{
-        get => GetElement<TableCellSpacing>(2);
-        set => SetElement(2, value);
+        get => GetElement<TableCellSpacing>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Indent from Leading Margin Exception.</para>
@@ -44466,11 +43814,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public TableIndentation TableIndentation
 	{
-        get => GetElement<TableIndentation>(3);
-        set => SetElement(3, value);
+        get => GetElement<TableIndentation>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Borders Exceptions.</para>
@@ -44479,11 +43826,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public TableBorders TableBorders
 	{
-        get => GetElement<TableBorders>(4);
-        set => SetElement(4, value);
+        get => GetElement<TableBorders>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Shading Exception.</para>
@@ -44492,11 +43838,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public Shading Shading
 	{
-        get => GetElement<Shading>(5);
-        set => SetElement(5, value);
+        get => GetElement<Shading>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Layout Exception.</para>
@@ -44505,11 +43850,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(6)]
     public TableLayout TableLayout
 	{
-        get => GetElement<TableLayout>(6);
-        set => SetElement(6, value);
+        get => GetElement<TableLayout>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Cell Margin Exceptions.</para>
@@ -44518,11 +43862,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(7)]
     public TableCellMarginDefault TableCellMarginDefault
 	{
-        get => GetElement<TableCellMarginDefault>(7);
-        set => SetElement(7, value);
+        get => GetElement<TableCellMarginDefault>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Table Style Conditional Formatting Settings Exception.</para>
@@ -44531,11 +43874,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(8)]
     public TableLook TableLook
 	{
-        get => GetElement<TableLook>(8);
-        set => SetElement(8, value);
+        get => GetElement<TableLook>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Revision Information for Table-Level Property Exceptions.</para>
@@ -44544,11 +43886,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(9)]
     public TablePropertyExceptionsChange TablePropertyExceptionsChange
 	{
-        get => GetElement<TablePropertyExceptionsChange>(9);
-        set => SetElement(9, value);
+        get => GetElement<TablePropertyExceptionsChange>();
+        set => SetElement(value);
 	}
 
 
@@ -44637,7 +43978,7 @@ public partial class TableRowProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Choice, 1, 0)
     {
@@ -44680,8 +44021,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -44769,14 +44110,14 @@ public partial class TableRowPropertiesChange : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Sequence, 1, 1)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PreviousTableRowProperties), 1, 1)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -44786,11 +44127,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public PreviousTableRowProperties PreviousTableRowProperties
 	{
-        get => GetElement<PreviousTableRowProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<PreviousTableRowProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -44917,7 +44257,7 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Sequence, 1, 1)
     {
@@ -44985,8 +44325,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -44996,11 +44336,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public ParagraphStyleId ParagraphStyleId
 	{
-        get => GetElement<ParagraphStyleId>(0);
-        set => SetElement(0, value);
+        get => GetElement<ParagraphStyleId>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> KeepNext.</para>
@@ -45009,11 +44348,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public KeepNext KeepNext
 	{
-        get => GetElement<KeepNext>(1);
-        set => SetElement(1, value);
+        get => GetElement<KeepNext>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> KeepLines.</para>
@@ -45022,11 +44360,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public KeepLines KeepLines
 	{
-        get => GetElement<KeepLines>(2);
-        set => SetElement(2, value);
+        get => GetElement<KeepLines>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> PageBreakBefore.</para>
@@ -45035,11 +44372,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public PageBreakBefore PageBreakBefore
 	{
-        get => GetElement<PageBreakBefore>(3);
-        set => SetElement(3, value);
+        get => GetElement<PageBreakBefore>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> FrameProperties.</para>
@@ -45048,11 +44384,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public FrameProperties FrameProperties
 	{
-        get => GetElement<FrameProperties>(4);
-        set => SetElement(4, value);
+        get => GetElement<FrameProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> WidowControl.</para>
@@ -45061,11 +44396,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public WidowControl WidowControl
 	{
-        get => GetElement<WidowControl>(5);
-        set => SetElement(5, value);
+        get => GetElement<WidowControl>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> NumberingProperties.</para>
@@ -45074,11 +44408,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(6)]
     public NumberingProperties NumberingProperties
 	{
-        get => GetElement<NumberingProperties>(6);
-        set => SetElement(6, value);
+        get => GetElement<NumberingProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SuppressLineNumbers.</para>
@@ -45087,11 +44420,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(7)]
     public SuppressLineNumbers SuppressLineNumbers
 	{
-        get => GetElement<SuppressLineNumbers>(7);
-        set => SetElement(7, value);
+        get => GetElement<SuppressLineNumbers>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ParagraphBorders.</para>
@@ -45100,11 +44432,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(8)]
     public ParagraphBorders ParagraphBorders
 	{
-        get => GetElement<ParagraphBorders>(8);
-        set => SetElement(8, value);
+        get => GetElement<ParagraphBorders>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Shading.</para>
@@ -45113,11 +44444,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(9)]
     public Shading Shading
 	{
-        get => GetElement<Shading>(9);
-        set => SetElement(9, value);
+        get => GetElement<Shading>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Tabs.</para>
@@ -45126,11 +44456,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(10)]
     public Tabs Tabs
 	{
-        get => GetElement<Tabs>(10);
-        set => SetElement(10, value);
+        get => GetElement<Tabs>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SuppressAutoHyphens.</para>
@@ -45139,11 +44468,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(11)]
     public SuppressAutoHyphens SuppressAutoHyphens
 	{
-        get => GetElement<SuppressAutoHyphens>(11);
-        set => SetElement(11, value);
+        get => GetElement<SuppressAutoHyphens>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Kinsoku.</para>
@@ -45152,11 +44480,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(12)]
     public Kinsoku Kinsoku
 	{
-        get => GetElement<Kinsoku>(12);
-        set => SetElement(12, value);
+        get => GetElement<Kinsoku>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> WordWrap.</para>
@@ -45165,11 +44492,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(13)]
     public WordWrap WordWrap
 	{
-        get => GetElement<WordWrap>(13);
-        set => SetElement(13, value);
+        get => GetElement<WordWrap>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> OverflowPunctuation.</para>
@@ -45178,11 +44504,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(14)]
     public OverflowPunctuation OverflowPunctuation
 	{
-        get => GetElement<OverflowPunctuation>(14);
-        set => SetElement(14, value);
+        get => GetElement<OverflowPunctuation>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TopLinePunctuation.</para>
@@ -45191,11 +44516,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(15)]
     public TopLinePunctuation TopLinePunctuation
 	{
-        get => GetElement<TopLinePunctuation>(15);
-        set => SetElement(15, value);
+        get => GetElement<TopLinePunctuation>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> AutoSpaceDE.</para>
@@ -45204,11 +44528,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(16)]
     public AutoSpaceDE AutoSpaceDE
 	{
-        get => GetElement<AutoSpaceDE>(16);
-        set => SetElement(16, value);
+        get => GetElement<AutoSpaceDE>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> AutoSpaceDN.</para>
@@ -45217,11 +44540,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(17)]
     public AutoSpaceDN AutoSpaceDN
 	{
-        get => GetElement<AutoSpaceDN>(17);
-        set => SetElement(17, value);
+        get => GetElement<AutoSpaceDN>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> BiDi.</para>
@@ -45230,11 +44552,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(18)]
     public BiDi BiDi
 	{
-        get => GetElement<BiDi>(18);
-        set => SetElement(18, value);
+        get => GetElement<BiDi>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> AdjustRightIndent.</para>
@@ -45243,11 +44564,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(19)]
     public AdjustRightIndent AdjustRightIndent
 	{
-        get => GetElement<AdjustRightIndent>(19);
-        set => SetElement(19, value);
+        get => GetElement<AdjustRightIndent>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SnapToGrid.</para>
@@ -45256,11 +44576,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(20)]
     public SnapToGrid SnapToGrid
 	{
-        get => GetElement<SnapToGrid>(20);
-        set => SetElement(20, value);
+        get => GetElement<SnapToGrid>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SpacingBetweenLines.</para>
@@ -45269,11 +44588,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(21)]
     public SpacingBetweenLines SpacingBetweenLines
 	{
-        get => GetElement<SpacingBetweenLines>(21);
-        set => SetElement(21, value);
+        get => GetElement<SpacingBetweenLines>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Indentation.</para>
@@ -45282,11 +44600,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(22)]
     public Indentation Indentation
 	{
-        get => GetElement<Indentation>(22);
-        set => SetElement(22, value);
+        get => GetElement<Indentation>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ContextualSpacing.</para>
@@ -45295,11 +44612,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(23)]
     public ContextualSpacing ContextualSpacing
 	{
-        get => GetElement<ContextualSpacing>(23);
-        set => SetElement(23, value);
+        get => GetElement<ContextualSpacing>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> MirrorIndents.</para>
@@ -45308,11 +44624,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(24)]
     public MirrorIndents MirrorIndents
 	{
-        get => GetElement<MirrorIndents>(24);
-        set => SetElement(24, value);
+        get => GetElement<MirrorIndents>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SuppressOverlap.</para>
@@ -45321,11 +44636,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(25)]
     public SuppressOverlap SuppressOverlap
 	{
-        get => GetElement<SuppressOverlap>(25);
-        set => SetElement(25, value);
+        get => GetElement<SuppressOverlap>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Justification.</para>
@@ -45334,11 +44648,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(26)]
     public Justification Justification
 	{
-        get => GetElement<Justification>(26);
-        set => SetElement(26, value);
+        get => GetElement<Justification>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TextDirection.</para>
@@ -45347,11 +44660,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(27)]
     public TextDirection TextDirection
 	{
-        get => GetElement<TextDirection>(27);
-        set => SetElement(27, value);
+        get => GetElement<TextDirection>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TextAlignment.</para>
@@ -45360,11 +44672,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(28)]
     public TextAlignment TextAlignment
 	{
-        get => GetElement<TextAlignment>(28);
-        set => SetElement(28, value);
+        get => GetElement<TextAlignment>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TextBoxTightWrap.</para>
@@ -45373,11 +44684,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(29)]
     public TextBoxTightWrap TextBoxTightWrap
 	{
-        get => GetElement<TextBoxTightWrap>(29);
-        set => SetElement(29, value);
+        get => GetElement<TextBoxTightWrap>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> OutlineLevel.</para>
@@ -45386,11 +44696,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(30)]
     public OutlineLevel OutlineLevel
 	{
-        get => GetElement<OutlineLevel>(30);
-        set => SetElement(30, value);
+        get => GetElement<OutlineLevel>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> DivId.</para>
@@ -45399,11 +44708,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(31)]
     public DivId DivId
 	{
-        get => GetElement<DivId>(31);
-        set => SetElement(31, value);
+        get => GetElement<DivId>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ConditionalFormatStyle.</para>
@@ -45412,11 +44720,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(32)]
     public ConditionalFormatStyle ConditionalFormatStyle
 	{
-        get => GetElement<ConditionalFormatStyle>(32);
-        set => SetElement(32, value);
+        get => GetElement<ConditionalFormatStyle>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Run Properties for the Paragraph Mark.</para>
@@ -45425,11 +44732,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(33)]
     public ParagraphMarkRunProperties ParagraphMarkRunProperties
 	{
-        get => GetElement<ParagraphMarkRunProperties>(33);
-        set => SetElement(33, value);
+        get => GetElement<ParagraphMarkRunProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Section Properties.</para>
@@ -45438,11 +44744,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(34)]
     public SectionProperties SectionProperties
 	{
-        get => GetElement<SectionProperties>(34);
-        set => SetElement(34, value);
+        get => GetElement<SectionProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ParagraphPropertiesChange.</para>
@@ -45451,11 +44756,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(35)]
     public ParagraphPropertiesChange ParagraphPropertiesChange
 	{
-        get => GetElement<ParagraphPropertiesChange>(35);
-        set => SetElement(35, value);
+        get => GetElement<ParagraphPropertiesChange>();
+        set => SetElement(value);
 	}
 
 
@@ -45566,11 +44870,11 @@ public partial class PreviousTableGrid : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.GridColumn), 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -45824,11 +45128,11 @@ public partial class SdtPlaceholder : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPartReference), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -45838,11 +45142,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public DocPartReference DocPartReference
 	{
-        get => GetElement<DocPartReference>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocPartReference>();
+        set => SetElement(value);
 	}
 
 
@@ -45963,11 +45266,11 @@ public partial class SdtContentComboBox : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ListItem), 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -46038,14 +45341,14 @@ public partial class SdtContentDate : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DateFormat), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.LanguageId), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtDateMappingType), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Calendar), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -46055,11 +45358,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public DateFormat DateFormat
 	{
-        get => GetElement<DateFormat>(0);
-        set => SetElement(0, value);
+        get => GetElement<DateFormat>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Date Picker Language ID.</para>
@@ -46068,11 +45370,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public LanguageId LanguageId
 	{
-        get => GetElement<LanguageId>(1);
-        set => SetElement(1, value);
+        get => GetElement<LanguageId>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Custom XML Data Date Storage Format.</para>
@@ -46081,11 +45382,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public SdtDateMappingType SdtDateMappingType
 	{
-        get => GetElement<SdtDateMappingType>(2);
-        set => SetElement(2, value);
+        get => GetElement<SdtDateMappingType>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Date Picker Calendar Type.</para>
@@ -46094,11 +45394,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public Calendar Calendar
 	{
-        get => GetElement<Calendar>(3);
-        set => SetElement(3, value);
+        get => GetElement<Calendar>();
+        set => SetElement(value);
 	}
 
 
@@ -46156,13 +45455,13 @@ public partial class SdtContentDocPartObject : SdtDocPartType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtContentDocPartObject>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPartGallery), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPartCategory), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPartUnique), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Defines the SdtContentDocPartList Class.</para>
@@ -46214,13 +45513,13 @@ public partial class SdtContentDocPartList : SdtDocPartType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtContentDocPartList>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPartGallery), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPartCategory), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPartUnique), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// Defines the SdtDocPartType class.
@@ -46251,11 +45550,10 @@ public abstract partial class SdtDocPartType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public DocPartGallery DocPartGallery
 	{
-        get => GetElement<DocPartGallery>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocPartGallery>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Document Part Category Filter.</para>
@@ -46264,11 +45562,10 @@ public abstract partial class SdtDocPartType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public DocPartCategory DocPartCategory
 	{
-        get => GetElement<DocPartCategory>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocPartCategory>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Built-In Document Part.</para>
@@ -46277,11 +45574,10 @@ public abstract partial class SdtDocPartType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public DocPartUnique DocPartUnique
 	{
-        get => GetElement<DocPartUnique>(2);
-        set => SetElement(2, value);
+        get => GetElement<DocPartUnique>();
+        set => SetElement(value);
 	}
 
 
@@ -46373,11 +45669,11 @@ public partial class SdtContentDropDownList : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ListItem), 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -47160,7 +46456,7 @@ public partial class MailMerge : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MainDocumentType), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.LinkToQuery), 0, 1),
@@ -47178,8 +46474,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ActiveRecord), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CheckErrors), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DataSourceObject), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -47189,11 +46485,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public MainDocumentType MainDocumentType
 	{
-        get => GetElement<MainDocumentType>(0);
-        set => SetElement(0, value);
+        get => GetElement<MainDocumentType>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Query Contains Link to External Query File.</para>
@@ -47202,11 +46497,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public LinkToQuery LinkToQuery
 	{
-        get => GetElement<LinkToQuery>(1);
-        set => SetElement(1, value);
+        get => GetElement<LinkToQuery>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Data Source Type.</para>
@@ -47215,11 +46509,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public DataType DataType
 	{
-        get => GetElement<DataType>(2);
-        set => SetElement(2, value);
+        get => GetElement<DataType>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Data Source Connection String.</para>
@@ -47228,11 +46521,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public ConnectString ConnectString
 	{
-        get => GetElement<ConnectString>(3);
-        set => SetElement(3, value);
+        get => GetElement<ConnectString>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Query For Data Source Records To Merge.</para>
@@ -47241,11 +46533,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public Query Query
 	{
-        get => GetElement<Query>(4);
-        set => SetElement(4, value);
+        get => GetElement<Query>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Data Source File Path.</para>
@@ -47254,11 +46545,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public DataSourceReference DataSourceReference
 	{
-        get => GetElement<DataSourceReference>(5);
-        set => SetElement(5, value);
+        get => GetElement<DataSourceReference>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Header Definition File Path.</para>
@@ -47267,11 +46557,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(6)]
     public HeaderSource HeaderSource
 	{
-        get => GetElement<HeaderSource>(6);
-        set => SetElement(6, value);
+        get => GetElement<HeaderSource>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Remove Blank Lines from Merged Documents.</para>
@@ -47280,11 +46569,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(7)]
     public DoNotSuppressBlankLines DoNotSuppressBlankLines
 	{
-        get => GetElement<DoNotSuppressBlankLines>(7);
-        set => SetElement(7, value);
+        get => GetElement<DoNotSuppressBlankLines>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Merged Document Destination.</para>
@@ -47293,11 +46581,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(8)]
     public Destination Destination
 	{
-        get => GetElement<Destination>(8);
-        set => SetElement(8, value);
+        get => GetElement<Destination>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Column Containing E-mail Address.</para>
@@ -47306,11 +46593,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(9)]
     public AddressFieldName AddressFieldName
 	{
-        get => GetElement<AddressFieldName>(9);
-        set => SetElement(9, value);
+        get => GetElement<AddressFieldName>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Merged E-mail or Fax Subject Line.</para>
@@ -47319,11 +46605,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(10)]
     public MailSubject MailSubject
 	{
-        get => GetElement<MailSubject>(10);
-        set => SetElement(10, value);
+        get => GetElement<MailSubject>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Merged Document To E-Mail Attachment.</para>
@@ -47332,11 +46617,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(11)]
     public MailAsAttachment MailAsAttachment
 	{
-        get => GetElement<MailAsAttachment>(11);
-        set => SetElement(11, value);
+        get => GetElement<MailAsAttachment>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> View Merged Data Within Document.</para>
@@ -47345,11 +46629,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(12)]
     public ViewMergedData ViewMergedData
 	{
-        get => GetElement<ViewMergedData>(12);
-        set => SetElement(12, value);
+        get => GetElement<ViewMergedData>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Record Currently Displayed In Merged Document.</para>
@@ -47358,11 +46641,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(13)]
     public ActiveRecord ActiveRecord
 	{
-        get => GetElement<ActiveRecord>(13);
-        set => SetElement(13, value);
+        get => GetElement<ActiveRecord>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Mail Merge Error Reporting Setting.</para>
@@ -47371,11 +46653,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(14)]
     public CheckErrors CheckErrors
 	{
-        get => GetElement<CheckErrors>(14);
-        set => SetElement(14, value);
+        get => GetElement<CheckErrors>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Office Data Source Object Settings.</para>
@@ -47384,11 +46665,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(15)]
     public DataSourceObject DataSourceObject
 	{
-        get => GetElement<DataSourceObject>(15);
-        set => SetElement(15, value);
+        get => GetElement<DataSourceObject>();
+        set => SetElement(value);
 	}
 
 
@@ -48111,12 +47391,12 @@ public partial class HeaderShapeDefaults : ShapeDefaultsType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HeaderShapeDefaults>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ShapeDefaults), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ShapeLayout), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Default Properties for VML Objects in Main Document.</para>
@@ -48167,12 +47447,12 @@ public partial class ShapeDefaults : ShapeDefaultsType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShapeDefaults>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ShapeDefaults), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ShapeLayout), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// Defines the ShapeDefaultsType class.
@@ -48281,7 +47561,7 @@ public partial class FootnoteDocumentWideProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Sequence, 1, 1)
     {
@@ -48300,8 +47580,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.FootnoteSpecialReference), 0, 3)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -48311,11 +47591,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public FootnotePosition FootnotePosition
 	{
-        get => GetElement<FootnotePosition>(0);
-        set => SetElement(0, value);
+        get => GetElement<FootnotePosition>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Footnote Numbering Format.</para>
@@ -48324,11 +47603,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public NumberingFormat NumberingFormat
 	{
-        get => GetElement<NumberingFormat>(1);
-        set => SetElement(1, value);
+        get => GetElement<NumberingFormat>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Footnote and Endnote Numbering Starting Value.</para>
@@ -48337,11 +47615,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public NumberingStart NumberingStart
 	{
-        get => GetElement<NumberingStart>(2);
-        set => SetElement(2, value);
+        get => GetElement<NumberingStart>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Footnote and Endnote Numbering Restart Location.</para>
@@ -48350,11 +47627,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public NumberingRestart NumberingRestart
 	{
-        get => GetElement<NumberingRestart>(3);
-        set => SetElement(3, value);
+        get => GetElement<NumberingRestart>();
+        set => SetElement(value);
 	}
 
 
@@ -48419,7 +47695,7 @@ public partial class EndnoteDocumentWideProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Sequence, 1, 1)
     {
@@ -48438,8 +47714,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.EndnoteSpecialReference), 0, 3)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -48449,11 +47725,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public EndnotePosition EndnotePosition
 	{
-        get => GetElement<EndnotePosition>(0);
-        set => SetElement(0, value);
+        get => GetElement<EndnotePosition>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Endnote Numbering Format.</para>
@@ -48462,11 +47737,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public NumberingFormat NumberingFormat
 	{
-        get => GetElement<NumberingFormat>(1);
-        set => SetElement(1, value);
+        get => GetElement<NumberingFormat>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Footnote and Endnote Numbering Starting Value.</para>
@@ -48475,11 +47749,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public NumberingStart NumberingStart
 	{
-        get => GetElement<NumberingStart>(2);
-        set => SetElement(2, value);
+        get => GetElement<NumberingStart>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Footnote and Endnote Numbering Restart Location.</para>
@@ -48488,11 +47761,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public NumberingRestart NumberingRestart
 	{
-        get => GetElement<NumberingRestart>(3);
-        set => SetElement(3, value);
+        get => GetElement<NumberingRestart>();
+        set => SetElement(value);
 	}
 
 
@@ -48679,7 +47951,7 @@ public partial class Compatibility : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.UseSingleBorderForContiguousCells), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.WordPerfectJustification), 0, 1),
@@ -48747,8 +48019,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.UseAnsiKerningPairs), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CachedColumnBalance), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CompatibilitySetting), 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -48758,11 +48030,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public UseSingleBorderForContiguousCells UseSingleBorderForContiguousCells
 	{
-        get => GetElement<UseSingleBorderForContiguousCells>(0);
-        set => SetElement(0, value);
+        get => GetElement<UseSingleBorderForContiguousCells>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Emulate WordPerfect 6.x Paragraph Justification.</para>
@@ -48771,11 +48042,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public WordPerfectJustification WordPerfectJustification
 	{
-        get => GetElement<WordPerfectJustification>(1);
-        set => SetElement(1, value);
+        get => GetElement<WordPerfectJustification>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Do Not Create Custom Tab Stop for Hanging Indent.</para>
@@ -48784,11 +48054,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(2)]
     public NoTabHangIndent NoTabHangIndent
 	{
-        get => GetElement<NoTabHangIndent>(2);
-        set => SetElement(2, value);
+        get => GetElement<NoTabHangIndent>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Do Not Add Leading Between Lines of Text.</para>
@@ -48797,11 +48066,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(3)]
     public NoLeading NoLeading
 	{
-        get => GetElement<NoLeading>(3);
-        set => SetElement(3, value);
+        get => GetElement<NoLeading>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Add Additional Space Below Baseline For Underlined East Asian Text.</para>
@@ -48810,11 +48078,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(4)]
     public SpaceForUnderline SpaceForUnderline
 	{
-        get => GetElement<SpaceForUnderline>(4);
-        set => SetElement(4, value);
+        get => GetElement<SpaceForUnderline>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Do Not Balance Text Columns within a Section.</para>
@@ -48823,11 +48090,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(5)]
     public NoColumnBalance NoColumnBalance
 	{
-        get => GetElement<NoColumnBalance>(5);
-        set => SetElement(5, value);
+        get => GetElement<NoColumnBalance>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Balance Single Byte and Double Byte Characters.</para>
@@ -48836,11 +48102,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(6)]
     public BalanceSingleByteDoubleByteWidth BalanceSingleByteDoubleByteWidth
 	{
-        get => GetElement<BalanceSingleByteDoubleByteWidth>(6);
-        set => SetElement(6, value);
+        get => GetElement<BalanceSingleByteDoubleByteWidth>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Do Not Center Content on Lines With Exact Line Height.</para>
@@ -48849,11 +48114,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(7)]
     public NoExtraLineSpacing NoExtraLineSpacing
 	{
-        get => GetElement<NoExtraLineSpacing>(7);
-        set => SetElement(7, value);
+        get => GetElement<NoExtraLineSpacing>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Convert Backslash To Yen Sign When Entered.</para>
@@ -48862,11 +48126,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(8)]
     public DoNotLeaveBackslashAlone DoNotLeaveBackslashAlone
 	{
-        get => GetElement<DoNotLeaveBackslashAlone>(8);
-        set => SetElement(8, value);
+        get => GetElement<DoNotLeaveBackslashAlone>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Underline All Trailing Spaces.</para>
@@ -48875,11 +48138,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(9)]
     public UnderlineTrailingSpaces UnderlineTrailingSpaces
 	{
-        get => GetElement<UnderlineTrailingSpaces>(9);
-        set => SetElement(9, value);
+        get => GetElement<UnderlineTrailingSpaces>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Don't Justify Lines Ending in Soft Line Break.</para>
@@ -48888,11 +48150,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(10)]
     public DoNotExpandShiftReturn DoNotExpandShiftReturn
 	{
-        get => GetElement<DoNotExpandShiftReturn>(10);
-        set => SetElement(10, value);
+        get => GetElement<DoNotExpandShiftReturn>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Only Expand/Condense Text By Whole Points.</para>
@@ -48901,11 +48162,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(11)]
     public SpacingInWholePoints SpacingInWholePoints
 	{
-        get => GetElement<SpacingInWholePoints>(11);
-        set => SetElement(11, value);
+        get => GetElement<SpacingInWholePoints>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Emulate Word 6.0 Line Wrapping for East Asian Text.</para>
@@ -48914,11 +48174,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(12)]
     public LineWrapLikeWord6 LineWrapLikeWord6
 	{
-        get => GetElement<LineWrapLikeWord6>(12);
-        set => SetElement(12, value);
+        get => GetElement<LineWrapLikeWord6>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Print Body Text before Header/Footer Contents.</para>
@@ -48927,11 +48186,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(13)]
     public PrintBodyTextBeforeHeader PrintBodyTextBeforeHeader
 	{
-        get => GetElement<PrintBodyTextBeforeHeader>(13);
-        set => SetElement(13, value);
+        get => GetElement<PrintBodyTextBeforeHeader>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Print Colors as Black And White without Dithering.</para>
@@ -48940,11 +48198,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(14)]
     public PrintColorBlackWhite PrintColorBlackWhite
 	{
-        get => GetElement<PrintColorBlackWhite>(14);
-        set => SetElement(14, value);
+        get => GetElement<PrintColorBlackWhite>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Space width.</para>
@@ -48953,11 +48210,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(15)]
     public WordPerfectSpaceWidth WordPerfectSpaceWidth
 	{
-        get => GetElement<WordPerfectSpaceWidth>(15);
-        set => SetElement(15, value);
+        get => GetElement<WordPerfectSpaceWidth>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Display Page/Column Breaks Present in Frames.</para>
@@ -48966,11 +48222,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(16)]
     public ShowBreaksInFrames ShowBreaksInFrames
 	{
-        get => GetElement<ShowBreaksInFrames>(16);
-        set => SetElement(16, value);
+        get => GetElement<ShowBreaksInFrames>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Increase Priority Of Font Size During Font Substitution.</para>
@@ -48979,11 +48234,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(17)]
     public SubFontBySize SubFontBySize
 	{
-        get => GetElement<SubFontBySize>(17);
-        set => SetElement(17, value);
+        get => GetElement<SubFontBySize>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Ignore Exact Line Height for Last Line on Page.</para>
@@ -48992,11 +48246,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(18)]
     public SuppressBottomSpacing SuppressBottomSpacing
 	{
-        get => GetElement<SuppressBottomSpacing>(18);
-        set => SetElement(18, value);
+        get => GetElement<SuppressBottomSpacing>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Ignore Minimum and Exact Line Height for First Line on Page.</para>
@@ -49005,11 +48258,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(19)]
     public SuppressTopSpacing SuppressTopSpacing
 	{
-        get => GetElement<SuppressTopSpacing>(19);
-        set => SetElement(19, value);
+        get => GetElement<SuppressTopSpacing>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Ignore Minimum Line Height for First Line on Page.</para>
@@ -49018,11 +48270,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(20)]
     public SuppressSpacingAtTopOfPage SuppressSpacingAtTopOfPage
 	{
-        get => GetElement<SuppressSpacingAtTopOfPage>(20);
-        set => SetElement(20, value);
+        get => GetElement<SuppressSpacingAtTopOfPage>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Emulate WordPerfect 5.x Line Spacing.</para>
@@ -49031,11 +48282,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(21)]
     public SuppressTopSpacingWordPerfect SuppressTopSpacingWordPerfect
 	{
-        get => GetElement<SuppressTopSpacingWordPerfect>(21);
-        set => SetElement(21, value);
+        get => GetElement<SuppressTopSpacingWordPerfect>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Do Not Use Space Before On First Line After a Page Break.</para>
@@ -49044,11 +48294,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(22)]
     public SuppressSpacingBeforeAfterPageBreak SuppressSpacingBeforeAfterPageBreak
 	{
-        get => GetElement<SuppressSpacingBeforeAfterPageBreak>(22);
-        set => SetElement(22, value);
+        get => GetElement<SuppressSpacingBeforeAfterPageBreak>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Swap Paragraph Borders on Odd Numbered Pages.</para>
@@ -49057,11 +48306,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(23)]
     public SwapBordersFacingPages SwapBordersFacingPages
 	{
-        get => GetElement<SwapBordersFacingPages>(23);
-        set => SetElement(23, value);
+        get => GetElement<SwapBordersFacingPages>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Treat Backslash Quotation Delimiter as Two Quotation Marks.</para>
@@ -49070,11 +48318,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(24)]
     public ConvertMailMergeEscape ConvertMailMergeEscape
 	{
-        get => GetElement<ConvertMailMergeEscape>(24);
-        set => SetElement(24, value);
+        get => GetElement<ConvertMailMergeEscape>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Emulate WordPerfect 6.x Font Height Calculation.</para>
@@ -49083,11 +48330,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(25)]
     public TruncateFontHeightsLikeWordPerfect TruncateFontHeightsLikeWordPerfect
 	{
-        get => GetElement<TruncateFontHeightsLikeWordPerfect>(25);
-        set => SetElement(25, value);
+        get => GetElement<TruncateFontHeightsLikeWordPerfect>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Emulate Word 5.x for the Macintosh Small Caps Formatting.</para>
@@ -49096,11 +48342,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(26)]
     public MacWordSmallCaps MacWordSmallCaps
 	{
-        get => GetElement<MacWordSmallCaps>(26);
-        set => SetElement(26, value);
+        get => GetElement<MacWordSmallCaps>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Use Printer Metrics To Display Documents.</para>
@@ -49109,11 +48354,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(27)]
     public UsePrinterMetrics UsePrinterMetrics
 	{
-        get => GetElement<UsePrinterMetrics>(27);
-        set => SetElement(27, value);
+        get => GetElement<UsePrinterMetrics>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Do Not Suppress Paragraph Borders Next To Frames.</para>
@@ -49122,11 +48366,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(28)]
     public DoNotSuppressParagraphBorders DoNotSuppressParagraphBorders
 	{
-        get => GetElement<DoNotSuppressParagraphBorders>(28);
-        set => SetElement(28, value);
+        get => GetElement<DoNotSuppressParagraphBorders>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Line Wrap Trailing Spaces.</para>
@@ -49135,11 +48378,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(29)]
     public WrapTrailSpaces WrapTrailSpaces
 	{
-        get => GetElement<WrapTrailSpaces>(29);
-        set => SetElement(29, value);
+        get => GetElement<WrapTrailSpaces>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Emulate Word 6.x/95/97 Footnote Placement.</para>
@@ -49148,11 +48390,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(30)]
     public FootnoteLayoutLikeWord8 FootnoteLayoutLikeWord8
 	{
-        get => GetElement<FootnoteLayoutLikeWord8>(30);
-        set => SetElement(30, value);
+        get => GetElement<FootnoteLayoutLikeWord8>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Emulate Word 97 Text Wrapping Around Floating Objects.</para>
@@ -49161,11 +48402,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(31)]
     public ShapeLayoutLikeWord8 ShapeLayoutLikeWord8
 	{
-        get => GetElement<ShapeLayoutLikeWord8>(31);
-        set => SetElement(31, value);
+        get => GetElement<ShapeLayoutLikeWord8>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Align Table Rows Independently.</para>
@@ -49174,11 +48414,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(32)]
     public AlignTablesRowByRow AlignTablesRowByRow
 	{
-        get => GetElement<AlignTablesRowByRow>(32);
-        set => SetElement(32, value);
+        get => GetElement<AlignTablesRowByRow>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Ignore Width of Last Tab Stop When Aligning Paragraph If It Is Not Left Aligned.</para>
@@ -49187,11 +48426,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(33)]
     public ForgetLastTabAlignment ForgetLastTabAlignment
 	{
-        get => GetElement<ForgetLastTabAlignment>(33);
-        set => SetElement(33, value);
+        get => GetElement<ForgetLastTabAlignment>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Add Document Grid Line Pitch To Lines in Table Cells.</para>
@@ -49200,11 +48438,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(34)]
     public AdjustLineHeightInTable AdjustLineHeightInTable
 	{
-        get => GetElement<AdjustLineHeightInTable>(34);
-        set => SetElement(34, value);
+        get => GetElement<AdjustLineHeightInTable>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Emulate Word 95 Full-Width Character Spacing.</para>
@@ -49213,11 +48450,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(35)]
     public AutoSpaceLikeWord95 AutoSpaceLikeWord95
 	{
-        get => GetElement<AutoSpaceLikeWord95>(35);
-        set => SetElement(35, value);
+        get => GetElement<AutoSpaceLikeWord95>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Do Not Increase Line Height for Raised/Lowered Text.</para>
@@ -49226,11 +48462,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(36)]
     public NoSpaceRaiseLower NoSpaceRaiseLower
 	{
-        get => GetElement<NoSpaceRaiseLower>(36);
-        set => SetElement(36, value);
+        get => GetElement<NoSpaceRaiseLower>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Use Fixed Paragraph Spacing for HTML Auto Setting.</para>
@@ -49239,11 +48474,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(37)]
     public DoNotUseHTMLParagraphAutoSpacing DoNotUseHTMLParagraphAutoSpacing
 	{
-        get => GetElement<DoNotUseHTMLParagraphAutoSpacing>(37);
-        set => SetElement(37, value);
+        get => GetElement<DoNotUseHTMLParagraphAutoSpacing>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Ignore Space Before Table When Deciding If Table Should Wrap Floating Object.</para>
@@ -49252,11 +48486,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(38)]
     public LayoutRawTableWidth LayoutRawTableWidth
 	{
-        get => GetElement<LayoutRawTableWidth>(38);
-        set => SetElement(38, value);
+        get => GetElement<LayoutRawTableWidth>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Allow Table Rows to Wrap Inline Objects Independently.</para>
@@ -49265,11 +48498,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(39)]
     public LayoutTableRowsApart LayoutTableRowsApart
 	{
-        get => GetElement<LayoutTableRowsApart>(39);
-        set => SetElement(39, value);
+        get => GetElement<LayoutTableRowsApart>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Emulate Word 97 East Asian Line Breaking.</para>
@@ -49278,11 +48510,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(40)]
     public UseWord97LineBreakRules UseWord97LineBreakRules
 	{
-        get => GetElement<UseWord97LineBreakRules>(40);
-        set => SetElement(40, value);
+        get => GetElement<UseWord97LineBreakRules>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Do Not Allow Floating Tables To Break Across Pages.</para>
@@ -49291,11 +48522,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(41)]
     public DoNotBreakWrappedTables DoNotBreakWrappedTables
 	{
-        get => GetElement<DoNotBreakWrappedTables>(41);
-        set => SetElement(41, value);
+        get => GetElement<DoNotBreakWrappedTables>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Do Not Snap to Document Grid in Table Cells with Objects.</para>
@@ -49304,11 +48534,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(42)]
     public DoNotSnapToGridInCell DoNotSnapToGridInCell
 	{
-        get => GetElement<DoNotSnapToGridInCell>(42);
-        set => SetElement(42, value);
+        get => GetElement<DoNotSnapToGridInCell>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Select Field When First or Last Character Is Selected.</para>
@@ -49317,11 +48546,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(43)]
     public SelectFieldWithFirstOrLastChar SelectFieldWithFirstOrLastChar
 	{
-        get => GetElement<SelectFieldWithFirstOrLastChar>(43);
-        set => SetElement(43, value);
+        get => GetElement<SelectFieldWithFirstOrLastChar>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Use Legacy Ethiopic and Amharic Line Breaking Rules.</para>
@@ -49330,11 +48558,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(44)]
     public ApplyBreakingRules ApplyBreakingRules
 	{
-        get => GetElement<ApplyBreakingRules>(44);
-        set => SetElement(44, value);
+        get => GetElement<ApplyBreakingRules>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Do Not Allow Hanging Punctuation With Character Grid.</para>
@@ -49343,11 +48570,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(45)]
     public DoNotWrapTextWithPunctuation DoNotWrapTextWithPunctuation
 	{
-        get => GetElement<DoNotWrapTextWithPunctuation>(45);
-        set => SetElement(45, value);
+        get => GetElement<DoNotWrapTextWithPunctuation>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Do Not Compress Compressible Characters When Using Document Grid.</para>
@@ -49356,11 +48582,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(46)]
     public DoNotUseEastAsianBreakRules DoNotUseEastAsianBreakRules
 	{
-        get => GetElement<DoNotUseEastAsianBreakRules>(46);
-        set => SetElement(46, value);
+        get => GetElement<DoNotUseEastAsianBreakRules>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Emulate Word 2002 Table Style Rules.</para>
@@ -49369,11 +48594,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(47)]
     public UseWord2002TableStyleRules UseWord2002TableStyleRules
 	{
-        get => GetElement<UseWord2002TableStyleRules>(47);
-        set => SetElement(47, value);
+        get => GetElement<UseWord2002TableStyleRules>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Allow Tables to AutoFit Into Page Margins.</para>
@@ -49382,11 +48606,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(48)]
     public GrowAutofit GrowAutofit
 	{
-        get => GetElement<GrowAutofit>(48);
-        set => SetElement(48, value);
+        get => GetElement<GrowAutofit>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Do Not Bypass East Asian/Complex Script Layout Code.</para>
@@ -49395,11 +48618,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(49)]
     public UseFarEastLayout UseFarEastLayout
 	{
-        get => GetElement<UseFarEastLayout>(49);
-        set => SetElement(49, value);
+        get => GetElement<UseFarEastLayout>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Do Not Automatically Apply List Paragraph Style To Bulleted/Numbered Text.</para>
@@ -49408,11 +48630,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(50)]
     public UseNormalStyleForList UseNormalStyleForList
 	{
-        get => GetElement<UseNormalStyleForList>(50);
-        set => SetElement(50, value);
+        get => GetElement<UseNormalStyleForList>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Ignore Hanging Indent When Creating Tab Stop After Numbering.</para>
@@ -49421,11 +48642,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(51)]
     public DoNotUseIndentAsNumberingTabStop DoNotUseIndentAsNumberingTabStop
 	{
-        get => GetElement<DoNotUseIndentAsNumberingTabStop>(51);
-        set => SetElement(51, value);
+        get => GetElement<DoNotUseIndentAsNumberingTabStop>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Use Alternate Set of East Asian Line Breaking Rules.</para>
@@ -49434,11 +48654,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(52)]
     public UseAltKinsokuLineBreakRules UseAltKinsokuLineBreakRules
 	{
-        get => GetElement<UseAltKinsokuLineBreakRules>(52);
-        set => SetElement(52, value);
+        get => GetElement<UseAltKinsokuLineBreakRules>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Allow Contextual Spacing of Paragraphs in Tables.</para>
@@ -49447,11 +48666,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(53)]
     public AllowSpaceOfSameStyleInTable AllowSpaceOfSameStyleInTable
 	{
-        get => GetElement<AllowSpaceOfSameStyleInTable>(53);
-        set => SetElement(53, value);
+        get => GetElement<AllowSpaceOfSameStyleInTable>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Do Not Ignore Floating Objects When Calculating Paragraph Indentation.</para>
@@ -49460,11 +48678,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(54)]
     public DoNotSuppressIndentation DoNotSuppressIndentation
 	{
-        get => GetElement<DoNotSuppressIndentation>(54);
-        set => SetElement(54, value);
+        get => GetElement<DoNotSuppressIndentation>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Do Not AutoFit Tables To Fit Next To Wrapped Objects.</para>
@@ -49473,11 +48690,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(55)]
     public DoNotAutofitConstrainedTables DoNotAutofitConstrainedTables
 	{
-        get => GetElement<DoNotAutofitConstrainedTables>(55);
-        set => SetElement(55, value);
+        get => GetElement<DoNotAutofitConstrainedTables>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Allow Table Columns To Exceed Preferred Widths of Constituent Cells.</para>
@@ -49486,11 +48702,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(56)]
     public AutofitToFirstFixedWidthCell AutofitToFirstFixedWidthCell
 	{
-        get => GetElement<AutofitToFirstFixedWidthCell>(56);
-        set => SetElement(56, value);
+        get => GetElement<AutofitToFirstFixedWidthCell>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Underline Following Character Following Numbering.</para>
@@ -49499,11 +48714,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(57)]
     public UnderlineTabInNumberingList UnderlineTabInNumberingList
 	{
-        get => GetElement<UnderlineTabInNumberingList>(57);
-        set => SetElement(57, value);
+        get => GetElement<UnderlineTabInNumberingList>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Always Use Fixed Width for Hangul Characters.</para>
@@ -49512,11 +48726,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(58)]
     public DisplayHangulFixedWidth DisplayHangulFixedWidth
 	{
-        get => GetElement<DisplayHangulFixedWidth>(58);
-        set => SetElement(58, value);
+        get => GetElement<DisplayHangulFixedWidth>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Always Move Paragraph Mark to Page after a Page Break.</para>
@@ -49525,11 +48738,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(59)]
     public SplitPageBreakAndParagraphMark SplitPageBreakAndParagraphMark
 	{
-        get => GetElement<SplitPageBreakAndParagraphMark>(59);
-        set => SetElement(59, value);
+        get => GetElement<SplitPageBreakAndParagraphMark>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Don't Vertically Align Cells Containing Floating Objects.</para>
@@ -49538,11 +48750,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(60)]
     public DoNotVerticallyAlignCellWithShape DoNotVerticallyAlignCellWithShape
 	{
-        get => GetElement<DoNotVerticallyAlignCellWithShape>(60);
-        set => SetElement(60, value);
+        get => GetElement<DoNotVerticallyAlignCellWithShape>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Don't Break Table Rows Around Floating Tables.</para>
@@ -49551,11 +48762,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(61)]
     public DoNotBreakConstrainedForcedTable DoNotBreakConstrainedForcedTable
 	{
-        get => GetElement<DoNotBreakConstrainedForcedTable>(61);
-        set => SetElement(61, value);
+        get => GetElement<DoNotBreakConstrainedForcedTable>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Ignore Vertical Alignment in Textboxes.</para>
@@ -49564,11 +48774,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(62)]
     public DoNotVerticallyAlignInTextBox DoNotVerticallyAlignInTextBox
 	{
-        get => GetElement<DoNotVerticallyAlignInTextBox>(62);
-        set => SetElement(62, value);
+        get => GetElement<DoNotVerticallyAlignInTextBox>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Use ANSI Kerning Pairs from Fonts.</para>
@@ -49577,11 +48786,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(63)]
     public UseAnsiKerningPairs UseAnsiKerningPairs
 	{
-        get => GetElement<UseAnsiKerningPairs>(63);
-        set => SetElement(63, value);
+        get => GetElement<UseAnsiKerningPairs>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Use Cached Paragraph Information for Column Balancing.</para>
@@ -49590,11 +48798,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(64)]
     public CachedColumnBalance CachedColumnBalance
 	{
-        get => GetElement<CachedColumnBalance>(64);
-        set => SetElement(64, value);
+        get => GetElement<CachedColumnBalance>();
+        set => SetElement(value);
 	}
 
 
@@ -49651,11 +48858,11 @@ public partial class DocumentVariables : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocumentVariable), 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -49713,12 +48920,12 @@ public partial class Rsids : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.RsidRoot), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Rsid), 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -49728,11 +48935,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(0)]
     public RsidRoot RsidRoot
 	{
-        get => GetElement<RsidRoot>(0);
-        set => SetElement(0, value);
+        get => GetElement<RsidRoot>();
+        set => SetElement(value);
 	}
 
 
@@ -49925,12 +49131,12 @@ public partial class Captions : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Caption), 1, 0),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.AutoCaptions), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -50108,7 +49314,7 @@ public partial class PictureBulletBase : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
 {
     new CompositeParticle(ParticleType.Group, 1, 1)
     {
@@ -50125,8 +49331,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shapetype), 1, 1)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>

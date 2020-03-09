@@ -16,6 +16,7 @@
          helper files to fill the gaps of the various platforms that are targeted -->
     <Compile Remove="System\**\*.cs" />
     <Compile Include="System\UriHelper.cs" />
+    <None Include="**\*.md" />
   </ItemGroup>
 
   <Choose>

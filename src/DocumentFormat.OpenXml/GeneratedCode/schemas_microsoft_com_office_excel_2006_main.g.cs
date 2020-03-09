@@ -145,11 +145,10 @@ public partial class Macrosheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(0)]
     public DocumentFormat.OpenXml.Spreadsheet.SheetProperties SheetProperties
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Macro Sheet Dimensions.</para>
@@ -158,11 +157,10 @@ public partial class Macrosheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(1)]
     public DocumentFormat.OpenXml.Spreadsheet.SheetDimension SheetDimension
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetDimension>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetDimension>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Macro Sheet Views.</para>
@@ -171,11 +169,10 @@ public partial class Macrosheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(2)]
     public DocumentFormat.OpenXml.Spreadsheet.SheetViews SheetViews
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetViews>(2);
-        set => SetElement(2, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetViews>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Sheet Format Properties.</para>
@@ -184,18 +181,17 @@ public partial class Macrosheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-	[Index(3)]
     public DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties SheetFormatProperties
 	{
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties>(3);
-        set => SetElement(3, value);
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties>();
+        set => SetElement(value);
 	}
 
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Macrosheet>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetDimension), 0, 1),
@@ -224,8 +220,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OleObjects), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter), 0, 1, version: FileFormatVersions.Office2010),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Worksheet Sort Map. The root element of WorksheetSortMapPart.</para>
@@ -311,11 +307,10 @@ public partial class WorksheetSortMap : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
     /// </remark>
-	[Index(0)]
     public RowSortMap RowSortMap
 	{
-        get => GetElement<RowSortMap>(0);
-        set => SetElement(0, value);
+        get => GetElement<RowSortMap>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Column Sort Map.</para>
@@ -324,23 +319,22 @@ public partial class WorksheetSortMap : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
     /// </remark>
-	[Index(1)]
     public ColumnSortMap ColumnSortMap
 	{
-        get => GetElement<ColumnSortMap>(1);
-        set => SetElement(1, value);
+        get => GetElement<ColumnSortMap>();
+        set => SetElement(value);
 	}
 
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WorksheetSortMap>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.RowSortMap), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.ColumnSortMap), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Defines the ReferenceSequence Class.</para>
@@ -482,11 +476,11 @@ public partial class RowSortMap : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.RowSortMapItem), 1, 536870910)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -558,11 +552,11 @@ public partial class ColumnSortMap : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.ColumnSortMapItem), 1, 536870910)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>

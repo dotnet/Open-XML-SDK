@@ -8,9 +8,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Added `OpenXmlElementFunctionalExtensions.With` extension methods, which offer flexible means for constructing `OpenXmlElement` instances in the context of pure functional transformations.
 
+## Version 2.10.1 - 2020-02-28
 ### Fixed
-- Ensures attributes are available when `OpenXmlElement` is initialized with outer XML (#684)
+- Ensures attributes are available when `OpenXmlElement` is initialized with outer XML (#684, #692)
 - Some documentation errors (#681)
+- Removed state that made it non-thread safe to validate elements under certain conditions (#686)
+- Correctly inserts strongly-typed elements before known elements that are not strongly-typed (#690)
 
 ## Version 2.10.0 - 2020-01-10
 ### Added
