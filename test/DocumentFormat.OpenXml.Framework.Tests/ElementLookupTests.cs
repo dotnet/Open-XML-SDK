@@ -60,7 +60,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         {
             var lookup = CreateLookup(typeof(OpenXmlPartRootElement));
 
-            Assert.Equal(84, lookup.Count);
+            Assert.Equal(85, lookup.Count);
         }
 
         [Fact]

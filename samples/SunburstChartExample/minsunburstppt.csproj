@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <Reference Include="DocumentFormat.OpenXml">
-      <HintPath>..\..\..\forks\Open-XML-SDK\bin\Debug\DocumentFormat.OpenXml\netstandard2.0\DocumentFormat.OpenXml.dll</HintPath>
+      <HintPath>\\jeebshpzb\d$\source\forks\Open-XML-SDK\bin\Debug\DocumentFormat.OpenXml\netstandard2.0\DocumentFormat.OpenXml.dll</HintPath>
     </Reference>
   </ItemGroup>
 

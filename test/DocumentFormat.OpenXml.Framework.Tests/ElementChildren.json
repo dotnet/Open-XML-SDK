@@ -31401,6 +31401,39 @@
     ]
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartSpace",
+    "Children": [
+      {
+        "Name": "chart",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "chartData",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "clrMapOvr",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "printSettings",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "spPr",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "txPr",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      }
+    ]
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartStringValue",
     "Children": []
   },
@@ -31790,6 +31823,10 @@
         "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
       }
     ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.RelId",
+    "Children": []
   },
   {
     "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.RichTextBody",
@@ -33457,6 +33494,10 @@
       {
         "Name": "timelines",
         "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main"
+      },
+      {
+        "Name": "chartSpace",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
       }
     ]
   },

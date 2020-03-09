@@ -2736,6 +2736,10 @@
     "Type": "OneSequence"
   },
   {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartSpace",
+    "Type": "OneSequence"
+  },
+  {
     "Name": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartTitle",
     "Type": "OneSequence"
   },

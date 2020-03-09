@@ -192,6 +192,8 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 #endif
 
             var expected = GetData<IEnumerable<ParticleInfo>>("CompositeParticleTypes");
+            //string strElementJson = JsonConvert.SerializeObject(elements);
+            //Console.WriteLine("{0}", strElementJson);
 
             CollectionAssert(expected, elements);
         }
