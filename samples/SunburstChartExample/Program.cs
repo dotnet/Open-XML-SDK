@@ -19,6 +19,7 @@ namespace CreatePresentationDocument
     {
         static void Main(string[] args)
         {
+            // TODO: replace "<path>" with the output path for the target document.
             string filepath = @"<path>\sunburst_presentation.pptx";
             CreatePresentation(filepath);
         }
