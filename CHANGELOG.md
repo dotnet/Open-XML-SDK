@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Added `OpenXmlElementFunctionalExtensions.With` extension methods, which offer flexible means for constructing `OpenXmlElement` instances in the context of pure functional transformations.
 
+### Changes
+- Marked the property setters in `OpenXmlAttribute` as obsolete as structs should not have mutable state (#698)
+
 ## Version 2.10.1 - 2020-02-28
 ### Fixed
 - Ensures attributes are available when `OpenXmlElement` is initialized with outer XML (#684, #692)

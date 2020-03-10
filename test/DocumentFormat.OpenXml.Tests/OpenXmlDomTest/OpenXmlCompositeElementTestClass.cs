@@ -587,13 +587,15 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyFalse(object.ReferenceEquals(oxaX, oxaY), "The assigned OpenXmlAttribute variable IS reference equal to original one.");
 
             Log.Comment("Constructing OpenXmlAttribute w:rsidR and assigning it to another variable...");
-            var wrsidR = new OpenXmlAttribute { NamespaceUri = "http://schemas.openxmlformats.org/wordprocessingml/2006/main", Prefix = "w", LocalName = "rsidR", Value = "00B327F7" };
+            var wrsidR = new OpenXmlAttribute("w", "rsidR", "http://schemas.openxmlformats.org/wordprocessingml/2006/main", "00B327F7");
             var wrsidP = wrsidR;
             Log.VerifyTrue(wrsidP == wrsidR, "The assigned OpenXmlAttribute variable is NOT equal to original one.");
             Log.VerifyFalse(object.ReferenceEquals(wrsidP, wrsidR), "The assigned OpenXmlAttribute variable IS reference equal to original one.");
 
+#pragma warning disable CS0618 // Type or member is obsolete
             wrsidP.LocalName = "rsidP";
             wrsidP.Value = "00EC35BB";
+#pragma warning restore CS0618 // Type or member is obsolete
             Log.Comment("Assigned new LocalName: {0} with ByValue: {1} and comparing it with original w:rsidR", wrsidP.LocalName, wrsidP.Value);
             Log.VerifyFalse(wrsidP == wrsidR, "The assigned OpenXmlAttribute variable IS equal to original one.");
             Log.VerifyFalse(object.ReferenceEquals(wrsidP, wrsidR), "The assigned OpenXmlAttribute variable IS reference equal to original one.");
@@ -608,16 +610,16 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyTrue(defaultA == defaultB, "Two default OpenXmlAttribute are NOT equal.");
             Log.VerifyFalse(defaultA != defaultB, "Two default OpenXmlAttribute are Equal.");
 
-            var wrsidRA = new OpenXmlAttribute { NamespaceUri = "http://schemas.openxmlformats.org/wordprocessingml/2006/main", Prefix = "w", LocalName = "rsidR", Value = "00B327F7" };
-            var wrsidRB = new OpenXmlAttribute { NamespaceUri = "http://schemas.openxmlformats.org/wordprocessingml/2006/main", Prefix = "w", LocalName = "rsidR", Value = "00B327F7" };
+            var wrsidRA = new OpenXmlAttribute("w", "rsidR", "http://schemas.openxmlformats.org/wordprocessingml/2006/main", "00B327F7");
+            var wrsidRB = new OpenXmlAttribute("w", "rsidR", "http://schemas.openxmlformats.org/wordprocessingml/2006/main", "00B327F7");
             Log.Comment("Comparing two {0} OpenXmlAttribute with value {1}...", wrsidRA.GetFullName(), wrsidRA.Value);
             Log.Comment("HashCode for {0}: {1}", wrsidRA.XmlQualifiedName, wrsidRA.GetHashCode());
             Log.VerifyTrue(wrsidRA == wrsidRB, "Two OpenXmlAttribute with same leftBorders are NOT equal by ==.");
             Log.VerifyTrue(wrsidRA.Equals((object)wrsidRB), "Two OpenXmlAttribute with same leftBorders are NOT equal by Equals().");
             Log.VerifyFalse(wrsidRA != wrsidRB, "Two OpenXmlAttribute with fame leftBorders are NOT equal by !=.");
 
-            var wrsidR = new OpenXmlAttribute { NamespaceUri = "http://schemas.openxmlformats.org/wordprocessingml/2006/main", Prefix = "w", LocalName = "rsidR", Value = "00B327F7" };
-            var wrsidP = new OpenXmlAttribute { NamespaceUri = "http://schemas.openxmlformats.org/wordprocessingml/2006/main", Prefix = "w", LocalName = "rsidP", Value = "00EC35BB" };
+            var wrsidR = new OpenXmlAttribute("w", "rsidR", "http://schemas.openxmlformats.org/wordprocessingml/2006/main", "00B327F7");
+            var wrsidP = new OpenXmlAttribute("w", "rsidP", "http://schemas.openxmlformats.org/wordprocessingml/2006/main", "00EC35BB");
             Log.Comment("HashCode for {0}: {1}", wrsidR.XmlQualifiedName, wrsidR.GetHashCode());
             Log.Comment("HashCode for {0}: {1}", wrsidP.XmlQualifiedName, wrsidP.GetHashCode());
             Log.Comment("Comparing two different OpenXmlAttribute with different value...");

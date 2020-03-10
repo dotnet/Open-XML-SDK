@@ -440,6 +440,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void OpenXmlAttributeTest()
         {
+#pragma warning disable CS0618 // Type or member is obsolete
             var target = new OpenXmlAttribute("test", "http://test", "test", "value");
             var other = new OpenXmlAttribute("test", "http://test", "test", "value");
 
@@ -480,6 +481,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.False(target.Equals((object)other));
             Assert.False(Equals(target, other));
             Assert.NotEqual(target.GetHashCode(), other.GetHashCode());
+#pragma warning restore CS0618 // Type or member is obsolete
         }
 
         /// <summary>
