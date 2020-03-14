@@ -13,6 +13,8 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public struct OpenXmlAttribute : IEquatable<OpenXmlAttribute>
     {
+        private const string ObsoleteMessage = "OpenXmlAttribute is a struct so setters may not behave as you might expect. Mutable setters will be removed in a future version.";
+
         private string _namespaceUri;
 
         internal OpenXmlAttribute(in ElementPropertyCollection<OpenXmlSimpleType>.PropertyEntry entry)
@@ -37,9 +39,11 @@ namespace DocumentFormat.OpenXml
 
             OpenXmlElement.SplitName(qualifiedName, out var prefix, out var localName);
 
+#pragma warning disable CS0618 // Type or member is obsolete
             Prefix = prefix;
             LocalName = localName;
             Value = value;
+#pragma warning restore CS0618 // Type or member is obsolete
         }
 
         /// <summary>
@@ -56,10 +60,12 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(localName));
             }
 
+#pragma warning disable CS0618 // Type or member is obsolete
             _namespaceUri = namespaceUri;
             LocalName = localName;
             Prefix = prefix;
             Value = value;
+#pragma warning restore CS0618 // Type or member is obsolete
         }
 
         /// <summary>
@@ -68,23 +74,39 @@ namespace DocumentFormat.OpenXml
         public string NamespaceUri
         {
             get => _namespaceUri ?? string.Empty;
+            [Obsolete(ObsoleteMessage)]
             set => _namespaceUri = value;
         }
 
         /// <summary>
         /// Gets or sets the local name of the attribute.
         /// </summary>
-        public string LocalName { get; set; }
+        public string LocalName
+        {
+            get;
+            [Obsolete(ObsoleteMessage)]
+            set;
+        }
 
         /// <summary>
         /// Gets or sets the namespace prefix of the current attribute.
         /// </summary>
-        public string Prefix { get; set; }
+        public string Prefix
+        {
+            get;
+            [Obsolete(ObsoleteMessage)]
+            set;
+        }
 
         /// <summary>
         /// Gets or sets the text value of the attribute.
         /// </summary>
-        public string Value { get; set; }
+        public string Value
+        {
+            get;
+            [Obsolete(ObsoleteMessage)]
+            set;
+        }
 
         /// <summary>
         /// Gets the qualified name of the attribute.
