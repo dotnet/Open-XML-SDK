@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added `FileFormatVersions.2019` enum (#695)
 - Added `OpenXmlElementFunctionalExtensions.With(...)` extension methods, which offer flexible means for constructing `OpenXmlElement` instances in the context of pure functional transformations (#679)
 
+### Changes
+- Marked the property setters in `OpenXmlAttribute` as obsolete as structs should not have mutable state (#698)
+
 ## Version 2.10.1 - 2020-02-28
 ### Fixed
 - Ensured attributes are available when `OpenXmlElement` is initialized with outer XML (#684, #692)
