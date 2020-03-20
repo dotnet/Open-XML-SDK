@@ -680,8 +680,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.AxisTitle), 1, 1, version: FileFormatVersions.Office2013),
@@ -1651,8 +1649,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
@@ -1956,8 +1952,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
@@ -2246,8 +2240,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             get => GetElement<DocumentFormat.OpenXml.Drawing.PresetTextWrap>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -5211,8 +5203,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             get => GetElement<OfficeArtExtensionList>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     }
 
     /// <summary>

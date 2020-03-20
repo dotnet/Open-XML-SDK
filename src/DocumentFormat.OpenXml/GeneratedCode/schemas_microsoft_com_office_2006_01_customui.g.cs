@@ -7299,8 +7299,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommands), 0, 1),
@@ -8084,8 +8082,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
             get => GetElement<UnsizedButton>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -9362,8 +9358,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.SharedQatControls), 0, 1),
@@ -9662,8 +9656,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
             get => GetElement<ContextualTabSets>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.All, 1, 1)
         {
