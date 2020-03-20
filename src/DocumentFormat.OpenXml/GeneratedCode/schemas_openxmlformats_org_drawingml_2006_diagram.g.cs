@@ -1,453 +1,470 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
-using System;
-using System.Collections.Generic;
-using System.IO.Packaging;
+
+using DocumentFormat.OpenXml;
+using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
-using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Drawing;
+using System;
+using System.Collections.Generic;
+using System.IO.Packaging;
 
 namespace DocumentFormat.OpenXml.Drawing.Diagrams
 {
-/// <summary>
-/// <para>Color Transform Definitions. The root element of DiagramColorsPart.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:colorsDef.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>ColorDefinitionTitle &lt;dgm:title></description></item>
-///<item><description>ColorTransformDescription &lt;dgm:desc></description></item>
-///<item><description>ColorTransformCategories &lt;dgm:catLst></description></item>
-///<item><description>ColorTransformStyleLabel &lt;dgm:styleLbl></description></item>
-///<item><description>ExtensionList &lt;dgm:extLst></description></item>
-/// </list>
-/// </remarks>
-
+    /// <summary>
+    /// <para>Color Transform Definitions.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:colorsDef.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>ColorDefinitionTitle &lt;dgm:title></description></item>
+    ///   <item><description>ColorTransformDescription &lt;dgm:desc></description></item>
+    ///   <item><description>ColorTransformCategories &lt;dgm:catLst></description></item>
+    ///   <item><description>ColorTransformStyleLabel &lt;dgm:styleLbl></description></item>
+    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(ColorDefinitionTitle))]
     [ChildElementInfo(typeof(ColorTransformDescription))]
     [ChildElementInfo(typeof(ColorTransformCategories))]
     [ChildElementInfo(typeof(ColorTransformStyleLabel))]
     [ChildElementInfo(typeof(ExtensionList))]
-
-[SchemaAttr(14, "colorsDef")]
-[OfficeAvailability(FileFormatVersions.Office2007)]
-public partial class ColorsDefinition : OpenXmlPartRootElement
-{
-    
+    [SchemaAttr(14, "colorsDef")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class ColorsDefinition : OpenXmlPartRootElement
+    {
         /// <summary>
-    /// <para> Unique ID.</para>
-    /// <para>Represents the following attribute in the schema: uniqueId </para>
-    /// </summary>
-    [SchemaAttr(0, "uniqueId")]
-    [Index(0)]
-    public StringValue UniqueId { get; set; }
-    /// <summary>
-    /// <para> Minimum Version.</para>
-    /// <para>Represents the following attribute in the schema: minVer </para>
-    /// </summary>
-    [SchemaAttr(0, "minVer")]
-    [Index(1)]
-    public StringValue MinVersion { get; set; }
+        /// Initializes a new instance of the ColorsDefinition class.
+        /// </summary>
+        public ColorsDefinition() : base()
+        {
+        }
 
-	internal ColorsDefinition(DiagramColorsPart ownerPart) : base (ownerPart){}
-    /// <summary>
-    /// Loads the DOM from the DiagramColorsPart.
-    /// </summary>
-    /// <param name="openXmlPart">Specifies the part to be loaded.</param>
-    public void Load(DiagramColorsPart openXmlPart)
-    {
-        LoadFromPart(openXmlPart);
-    }
-    /// <summary>
-    /// Gets the DiagramColorsPart associated with this element.
-    /// </summary>
-    public DiagramColorsPart DiagramColorsPart
-    {
-		get => OpenXmlPart as DiagramColorsPart;
-		internal set => OpenXmlPart = value;
-    }
         /// <summary>
-    ///Initializes a new instance of the ColorsDefinition class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public ColorsDefinition(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the ColorsDefinition class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public ColorsDefinition(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the ColorsDefinition class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public ColorsDefinition(string outerXml)
-        : base(outerXml)
-    {
+        /// Initializes a new instance of the ColorsDefinition class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ColorsDefinition(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ColorsDefinition class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ColorsDefinition(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ColorsDefinition class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public ColorsDefinition(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Unique ID</para>
+        /// <para>Represents the following attribute in the schema: uniqueId</para>
+        /// </summary>
+        [SchemaAttr(0, "uniqueId")]
+        [Index(0)]
+        public StringValue UniqueId { get; set; }
+
+        /// <summary>
+        /// <para>Minimum Version</para>
+        /// <para>Represents the following attribute in the schema: minVer</para>
+        /// </summary>
+        [SchemaAttr(0, "minVer")]
+        [Index(1)]
+        public StringValue MinVersion { get; set; }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ColorDefinitionTitle), 0, 0),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformDescription), 0, 0),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformCategories), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformStyleLabel), 0, 0),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorsDefinition>(deep);
+
+        internal ColorsDefinition(DiagramColorsPart ownerPart) : base(ownerPart)
+        {
+        }
+
+        /// <summary>
+        /// Loads the DOM from the DiagramColorsPart
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to be loaded.</param>
+        public void Load(DiagramColorsPart openXmlPart)
+        {
+            LoadFromPart(openXmlPart);
+        }
+
+        /// <summary>
+        /// Saves the DOM into the DiagramColorsPart.
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to save to.</param>
+        public void Save(DiagramColorsPart openXmlPart)
+        {
+            base.SaveToPart(openXmlPart);
+        }
+
+        /// <summary>
+        /// Gets the DiagramColorsPart associated with this element.
+        /// </summary>
+        public DiagramColorsPart DiagramColorsPart
+        {
+            get => OpenXmlPart as DiagramColorsPart;
+            internal set => OpenXmlPart = value;
+        }
     }
 
-    
     /// <summary>
-    /// Initializes a new instance of the ColorsDefinition class.
+    /// <para>Color Transform Header.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:colorsDefHdr.</para>
     /// </summary>
-    public ColorsDefinition():base(){}
-    /// <summary>
-    /// Saves the DOM into the DiagramColorsPart.
-    /// </summary>
-    /// <param name="openXmlPart">Specifies the part to save to.</param>
-    public void Save(DiagramColorsPart openXmlPart)
-    {
-        base.SaveToPart(openXmlPart);
-    }
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorsDefinition>(deep);
-
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ColorDefinitionTitle), 0, 0),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformDescription), 0, 0),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformCategories), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformStyleLabel), 0, 0),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-}
-/// <summary>
-/// <para>Color Transform Header.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:colorsDefHdr.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>ColorDefinitionTitle &lt;dgm:title></description></item>
-///<item><description>ColorTransformDescription &lt;dgm:desc></description></item>
-///<item><description>ColorTransformCategories &lt;dgm:catLst></description></item>
-///<item><description>ExtensionList &lt;dgm:extLst></description></item>
-/// </list>
-/// </remarks>
-
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>ColorDefinitionTitle &lt;dgm:title></description></item>
+    ///   <item><description>ColorTransformDescription &lt;dgm:desc></description></item>
+    ///   <item><description>ColorTransformCategories &lt;dgm:catLst></description></item>
+    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(ColorDefinitionTitle))]
     [ChildElementInfo(typeof(ColorTransformDescription))]
     [ChildElementInfo(typeof(ColorTransformCategories))]
     [ChildElementInfo(typeof(ExtensionList))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "colorsDefHdr")]
-public partial class ColorsDefinitionHeader : OpenXmlCompositeElement
-{
-    
+    [SchemaAttr(14, "colorsDefHdr")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class ColorsDefinitionHeader : OpenXmlCompositeElement
+    {
         /// <summary>
-    /// <para> Unique ID.</para>
-    /// <para>Represents the following attribute in the schema: uniqueId </para>
-    /// </summary>
-[RequiredValidator]
-    [SchemaAttr(0, "uniqueId")]
-    [Index(0)]
-    public StringValue UniqueId { get; set; }
-    /// <summary>
-    /// <para> Minimum Version.</para>
-    /// <para>Represents the following attribute in the schema: minVer </para>
-    /// </summary>
-    [SchemaAttr(0, "minVer")]
-    [Index(1)]
-    public StringValue MinVersion { get; set; }
-    /// <summary>
-    /// <para> Resource ID.</para>
-    /// <para>Represents the following attribute in the schema: resId </para>
-    /// </summary>
-    [SchemaAttr(0, "resId")]
-    [Index(2)]
-    public Int32Value ResourceId { get; set; }
+        /// Initializes a new instance of the ColorsDefinitionHeader class.
+        /// </summary>
+        public ColorsDefinitionHeader() : base()
+        {
+        }
 
-    /// <summary>
-    /// Initializes a new instance of the ColorsDefinitionHeader class.
-    /// </summary>
-    public ColorsDefinitionHeader():base(){}
         /// <summary>
-    ///Initializes a new instance of the ColorsDefinitionHeader class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public ColorsDefinitionHeader(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
+        /// Initializes a new instance of the ColorsDefinitionHeader class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ColorsDefinitionHeader(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ColorsDefinitionHeader class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ColorsDefinitionHeader(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ColorsDefinitionHeader class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public ColorsDefinitionHeader(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Unique ID</para>
+        /// <para>Represents the following attribute in the schema: uniqueId</para>
+        /// </summary>
+        [RequiredValidator()]
+        [SchemaAttr(0, "uniqueId")]
+        [Index(0)]
+        public StringValue UniqueId { get; set; }
+
+        /// <summary>
+        /// <para>Minimum Version</para>
+        /// <para>Represents the following attribute in the schema: minVer</para>
+        /// </summary>
+        [SchemaAttr(0, "minVer")]
+        [Index(1)]
+        public StringValue MinVersion { get; set; }
+
+        /// <summary>
+        /// <para>Resource ID</para>
+        /// <para>Represents the following attribute in the schema: resId</para>
+        /// </summary>
+        [SchemaAttr(0, "resId")]
+        [Index(2)]
+        public Int32Value ResourceId { get; set; }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ColorDefinitionTitle), 1, 0),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformDescription), 1, 0),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformCategories), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorsDefinitionHeader>(deep);
     }
+
     /// <summary>
-    /// Initializes a new instance of the ColorsDefinitionHeader class with the specified child elements.
+    /// <para>Color Transform Header List.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:colorsDefHdrLst.</para>
     /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public ColorsDefinitionHeader(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the ColorsDefinitionHeader class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public ColorsDefinitionHeader(string outerXml)
-        : base(outerXml)
-    {
-    }
-
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ColorDefinitionTitle), 1, 0),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformDescription), 1, 0),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformCategories), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorsDefinitionHeader>(deep);
-
-}
-/// <summary>
-/// <para>Color Transform Header List.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:colorsDefHdrLst.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>ColorsDefinitionHeader &lt;dgm:colorsDefHdr></description></item>
-/// </list>
-/// </remarks>
-
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>ColorsDefinitionHeader &lt;dgm:colorsDefHdr></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(ColorsDefinitionHeader))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "colorsDefHdrLst")]
-public partial class ColorsDefinitionHeaderList : OpenXmlCompositeElement
-{
-    
-    
-    /// <summary>
-    /// Initializes a new instance of the ColorsDefinitionHeaderList class.
-    /// </summary>
-    public ColorsDefinitionHeaderList():base(){}
+    [SchemaAttr(14, "colorsDefHdrLst")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class ColorsDefinitionHeaderList : OpenXmlCompositeElement
+    {
         /// <summary>
-    ///Initializes a new instance of the ColorsDefinitionHeaderList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public ColorsDefinitionHeaderList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
+        /// Initializes a new instance of the ColorsDefinitionHeaderList class.
+        /// </summary>
+        public ColorsDefinitionHeaderList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ColorsDefinitionHeaderList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ColorsDefinitionHeaderList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ColorsDefinitionHeaderList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ColorsDefinitionHeaderList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ColorsDefinitionHeaderList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public ColorsDefinitionHeaderList(string outerXml) : base(outerXml)
+        {
+        }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ColorsDefinitionHeader), 0, 0)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorsDefinitionHeaderList>(deep);
     }
+
     /// <summary>
-    /// Initializes a new instance of the ColorsDefinitionHeaderList class with the specified child elements.
+    /// <para>Data Model.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:dataModel.</para>
     /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public ColorsDefinitionHeaderList(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the ColorsDefinitionHeaderList class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public ColorsDefinitionHeaderList(string outerXml)
-        : base(outerXml)
-    {
-    }
-
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ColorsDefinitionHeader), 0, 0)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorsDefinitionHeaderList>(deep);
-
-}
-/// <summary>
-/// <para>Data Model. The root element of DiagramDataPart.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:dataModel.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>PointList &lt;dgm:ptLst></description></item>
-///<item><description>ConnectionList &lt;dgm:cxnLst></description></item>
-///<item><description>Background &lt;dgm:bg></description></item>
-///<item><description>Whole &lt;dgm:whole></description></item>
-///<item><description>DataModelExtensionList &lt;dgm:extLst></description></item>
-/// </list>
-/// </remarks>
-
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>PointList &lt;dgm:ptLst></description></item>
+    ///   <item><description>ConnectionList &lt;dgm:cxnLst></description></item>
+    ///   <item><description>Background &lt;dgm:bg></description></item>
+    ///   <item><description>Whole &lt;dgm:whole></description></item>
+    ///   <item><description>DataModelExtensionList &lt;dgm:extLst></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(PointList))]
     [ChildElementInfo(typeof(ConnectionList))]
     [ChildElementInfo(typeof(Background))]
     [ChildElementInfo(typeof(Whole))]
     [ChildElementInfo(typeof(DataModelExtensionList))]
-
-[SchemaAttr(14, "dataModel")]
-[OfficeAvailability(FileFormatVersions.Office2007)]
-public partial class DataModelRoot : OpenXmlPartRootElement
-{
-    
-    
-	internal DataModelRoot(DiagramDataPart ownerPart) : base (ownerPart){}
-    /// <summary>
-    /// Loads the DOM from the DiagramDataPart.
-    /// </summary>
-    /// <param name="openXmlPart">Specifies the part to be loaded.</param>
-    public void Load(DiagramDataPart openXmlPart)
+    [SchemaAttr(14, "dataModel")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class DataModelRoot : OpenXmlPartRootElement
     {
-        LoadFromPart(openXmlPart);
-    }
-    /// <summary>
-    /// Gets the DiagramDataPart associated with this element.
-    /// </summary>
-    public DiagramDataPart DiagramDataPart
-    {
-		get => OpenXmlPart as DiagramDataPart;
-		internal set => OpenXmlPart = value;
-    }
         /// <summary>
-    ///Initializes a new instance of the DataModelRoot class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public DataModelRoot(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the DataModelRoot class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public DataModelRoot(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the DataModelRoot class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public DataModelRoot(string outerXml)
-        : base(outerXml)
-    {
-    }
+        /// Initializes a new instance of the DataModelRoot class.
+        /// </summary>
+        public DataModelRoot() : base()
+        {
+        }
 
-    
-    /// <summary>
-    /// Initializes a new instance of the DataModelRoot class.
-    /// </summary>
-    public DataModelRoot():base(){}
-    /// <summary>
-    /// Saves the DOM into the DiagramDataPart.
-    /// </summary>
-    /// <param name="openXmlPart">Specifies the part to save to.</param>
-    public void Save(DiagramDataPart openXmlPart)
-    {
-        base.SaveToPart(openXmlPart);
-    }
-    
+        /// <summary>
+        /// Initializes a new instance of the DataModelRoot class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public DataModelRoot(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DataModelRoot class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public DataModelRoot(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DataModelRoot class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public DataModelRoot(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Point List.</para>
+        /// <para>Represents the following element tag in the schema: dgm:ptLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public PointList PointList
+        {
+            get => GetElement<PointList>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Connection List.</para>
+        /// <para>Represents the following element tag in the schema: dgm:cxnLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public ConnectionList ConnectionList
+        {
+            get => GetElement<ConnectionList>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Background Formatting.</para>
+        /// <para>Represents the following element tag in the schema: dgm:bg.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public Background Background
+        {
+            get => GetElement<Background>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Whole E2O Formatting.</para>
+        /// <para>Represents the following element tag in the schema: dgm:whole.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public Whole Whole
+        {
+            get => GetElement<Whole>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>DataModelExtensionList.</para>
+        /// <para>Represents the following element tag in the schema: dgm:extLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public DataModelExtensionList DataModelExtensionList
+        {
+            get => GetElement<DataModelExtensionList>();
+            set => SetElement(value);
+        }
+
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.PointList), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ConnectionList), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Background), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Whole), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.DataModelExtensionList), 0, 1)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataModelRoot>(deep);
+
+        internal DataModelRoot(DiagramDataPart ownerPart) : base(ownerPart)
+        {
+        }
+
         /// <summary>
-    /// <para> Point List.</para>
-    /// <para> Represents the following element tag in the schema: dgm:ptLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public PointList PointList
-	{
-        get => GetElement<PointList>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> Connection List.</para>
-    /// <para> Represents the following element tag in the schema: dgm:cxnLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public ConnectionList ConnectionList
-	{
-        get => GetElement<ConnectionList>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> Background Formatting.</para>
-    /// <para> Represents the following element tag in the schema: dgm:bg </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public Background Background
-	{
-        get => GetElement<Background>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> Whole E2O Formatting.</para>
-    /// <para> Represents the following element tag in the schema: dgm:whole </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public Whole Whole
-	{
-        get => GetElement<Whole>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> DataModelExtensionList.</para>
-    /// <para> Represents the following element tag in the schema: dgm:extLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public DataModelExtensionList DataModelExtensionList
-	{
-        get => GetElement<DataModelExtensionList>();
-        set => SetElement(value);
-	}
+        /// Loads the DOM from the DiagramDataPart
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to be loaded.</param>
+        public void Load(DiagramDataPart openXmlPart)
+        {
+            LoadFromPart(openXmlPart);
+        }
 
+        /// <summary>
+        /// Saves the DOM into the DiagramDataPart.
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to save to.</param>
+        public void Save(DiagramDataPart openXmlPart)
+        {
+            base.SaveToPart(openXmlPart);
+        }
 
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataModelRoot>(deep);
+        /// <summary>
+        /// Gets the DiagramDataPart associated with this element.
+        /// </summary>
+        public DiagramDataPart DiagramDataPart
+        {
+            get => OpenXmlPart as DiagramDataPart;
+            internal set => OpenXmlPart = value;
+        }
+    }
 
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.PointList), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ConnectionList), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Background), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Whole), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.DataModelExtensionList), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-}
-/// <summary>
-/// <para>Layout Definition. The root element of DiagramLayoutDefinitionPart.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:layoutDef.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>Title &lt;dgm:title></description></item>
-///<item><description>Description &lt;dgm:desc></description></item>
-///<item><description>CategoryList &lt;dgm:catLst></description></item>
-///<item><description>SampleData &lt;dgm:sampData></description></item>
-///<item><description>StyleData &lt;dgm:styleData></description></item>
-///<item><description>ColorData &lt;dgm:clrData></description></item>
-///<item><description>LayoutNode &lt;dgm:layoutNode></description></item>
-///<item><description>ExtensionList &lt;dgm:extLst></description></item>
-/// </list>
-/// </remarks>
-
+    /// <summary>
+    /// <para>Layout Definition.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:layoutDef.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>Title &lt;dgm:title></description></item>
+    ///   <item><description>Description &lt;dgm:desc></description></item>
+    ///   <item><description>CategoryList &lt;dgm:catLst></description></item>
+    ///   <item><description>SampleData &lt;dgm:sampData></description></item>
+    ///   <item><description>StyleData &lt;dgm:styleData></description></item>
+    ///   <item><description>ColorData &lt;dgm:clrData></description></item>
+    ///   <item><description>LayoutNode &lt;dgm:layoutNode></description></item>
+    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(Title))]
     [ChildElementInfo(typeof(Description))]
     [ChildElementInfo(typeof(CategoryList))]
@@ -456,1357 +473,1374 @@ internal override CompiledParticle CompiledParticle => _constraint;
     [ChildElementInfo(typeof(ColorData))]
     [ChildElementInfo(typeof(LayoutNode))]
     [ChildElementInfo(typeof(ExtensionList))]
-
-[SchemaAttr(14, "layoutDef")]
-[OfficeAvailability(FileFormatVersions.Office2007)]
-public partial class LayoutDefinition : OpenXmlPartRootElement
-{
-    
+    [SchemaAttr(14, "layoutDef")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class LayoutDefinition : OpenXmlPartRootElement
+    {
         /// <summary>
-    /// <para> Unique Identifier.</para>
-    /// <para>Represents the following attribute in the schema: uniqueId </para>
-    /// </summary>
-    [SchemaAttr(0, "uniqueId")]
-    [Index(0)]
-    public StringValue UniqueId { get; set; }
-    /// <summary>
-    /// <para> Minimum Version.</para>
-    /// <para>Represents the following attribute in the schema: minVer </para>
-    /// </summary>
-    [SchemaAttr(0, "minVer")]
-    [Index(1)]
-    public StringValue MinVersion { get; set; }
-    /// <summary>
-    /// <para> Default Style.</para>
-    /// <para>Represents the following attribute in the schema: defStyle </para>
-    /// </summary>
-    [SchemaAttr(0, "defStyle")]
-    [Index(2)]
-    public StringValue DefaultStyle { get; set; }
+        /// Initializes a new instance of the LayoutDefinition class.
+        /// </summary>
+        public LayoutDefinition() : base()
+        {
+        }
 
-	internal LayoutDefinition(DiagramLayoutDefinitionPart ownerPart) : base (ownerPart){}
-    /// <summary>
-    /// Loads the DOM from the DiagramLayoutDefinitionPart.
-    /// </summary>
-    /// <param name="openXmlPart">Specifies the part to be loaded.</param>
-    public void Load(DiagramLayoutDefinitionPart openXmlPart)
-    {
-        LoadFromPart(openXmlPart);
-    }
-    /// <summary>
-    /// Gets the DiagramLayoutDefinitionPart associated with this element.
-    /// </summary>
-    public DiagramLayoutDefinitionPart DiagramLayoutDefinitionPart
-    {
-		get => OpenXmlPart as DiagramLayoutDefinitionPart;
-		internal set => OpenXmlPart = value;
-    }
         /// <summary>
-    ///Initializes a new instance of the LayoutDefinition class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public LayoutDefinition(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the LayoutDefinition class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public LayoutDefinition(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the LayoutDefinition class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public LayoutDefinition(string outerXml)
-        : base(outerXml)
-    {
+        /// Initializes a new instance of the LayoutDefinition class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public LayoutDefinition(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the LayoutDefinition class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public LayoutDefinition(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the LayoutDefinition class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public LayoutDefinition(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Unique Identifier</para>
+        /// <para>Represents the following attribute in the schema: uniqueId</para>
+        /// </summary>
+        [SchemaAttr(0, "uniqueId")]
+        [Index(0)]
+        public StringValue UniqueId { get; set; }
+
+        /// <summary>
+        /// <para>Minimum Version</para>
+        /// <para>Represents the following attribute in the schema: minVer</para>
+        /// </summary>
+        [SchemaAttr(0, "minVer")]
+        [Index(1)]
+        public StringValue MinVersion { get; set; }
+
+        /// <summary>
+        /// <para>Default Style</para>
+        /// <para>Represents the following attribute in the schema: defStyle</para>
+        /// </summary>
+        [SchemaAttr(0, "defStyle")]
+        [Index(2)]
+        public StringValue DefaultStyle { get; set; }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Title), 0, 0),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Description), 0, 0),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.CategoryList), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.SampleData), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.StyleData), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ColorData), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.LayoutNode), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<LayoutDefinition>(deep);
+
+        internal LayoutDefinition(DiagramLayoutDefinitionPart ownerPart) : base(ownerPart)
+        {
+        }
+
+        /// <summary>
+        /// Loads the DOM from the DiagramLayoutDefinitionPart
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to be loaded.</param>
+        public void Load(DiagramLayoutDefinitionPart openXmlPart)
+        {
+            LoadFromPart(openXmlPart);
+        }
+
+        /// <summary>
+        /// Saves the DOM into the DiagramLayoutDefinitionPart.
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to save to.</param>
+        public void Save(DiagramLayoutDefinitionPart openXmlPart)
+        {
+            base.SaveToPart(openXmlPart);
+        }
+
+        /// <summary>
+        /// Gets the DiagramLayoutDefinitionPart associated with this element.
+        /// </summary>
+        public DiagramLayoutDefinitionPart DiagramLayoutDefinitionPart
+        {
+            get => OpenXmlPart as DiagramLayoutDefinitionPart;
+            internal set => OpenXmlPart = value;
+        }
     }
 
-    
     /// <summary>
-    /// Initializes a new instance of the LayoutDefinition class.
+    /// <para>Layout Definition Header.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:layoutDefHdr.</para>
     /// </summary>
-    public LayoutDefinition():base(){}
-    /// <summary>
-    /// Saves the DOM into the DiagramLayoutDefinitionPart.
-    /// </summary>
-    /// <param name="openXmlPart">Specifies the part to save to.</param>
-    public void Save(DiagramLayoutDefinitionPart openXmlPart)
-    {
-        base.SaveToPart(openXmlPart);
-    }
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<LayoutDefinition>(deep);
-
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Title), 0, 0),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Description), 0, 0),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.CategoryList), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.SampleData), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.StyleData), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ColorData), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.LayoutNode), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-}
-/// <summary>
-/// <para>Layout Definition Header.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:layoutDefHdr.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>Title &lt;dgm:title></description></item>
-///<item><description>Description &lt;dgm:desc></description></item>
-///<item><description>CategoryList &lt;dgm:catLst></description></item>
-///<item><description>ExtensionList &lt;dgm:extLst></description></item>
-/// </list>
-/// </remarks>
-
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>Title &lt;dgm:title></description></item>
+    ///   <item><description>Description &lt;dgm:desc></description></item>
+    ///   <item><description>CategoryList &lt;dgm:catLst></description></item>
+    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(Title))]
     [ChildElementInfo(typeof(Description))]
     [ChildElementInfo(typeof(CategoryList))]
     [ChildElementInfo(typeof(ExtensionList))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "layoutDefHdr")]
-public partial class LayoutDefinitionHeader : OpenXmlCompositeElement
-{
-    
+    [SchemaAttr(14, "layoutDefHdr")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class LayoutDefinitionHeader : OpenXmlCompositeElement
+    {
         /// <summary>
-    /// <para> Unique Identifier.</para>
-    /// <para>Represents the following attribute in the schema: uniqueId </para>
-    /// </summary>
-[RequiredValidator]
-    [SchemaAttr(0, "uniqueId")]
-    [Index(0)]
-    public StringValue UniqueId { get; set; }
-    /// <summary>
-    /// <para> Minimum Version.</para>
-    /// <para>Represents the following attribute in the schema: minVer </para>
-    /// </summary>
-    [SchemaAttr(0, "minVer")]
-    [Index(1)]
-    public StringValue MinVersion { get; set; }
-    /// <summary>
-    /// <para> Default Style.</para>
-    /// <para>Represents the following attribute in the schema: defStyle </para>
-    /// </summary>
-    [SchemaAttr(0, "defStyle")]
-    [Index(2)]
-    public StringValue DefaultStyle { get; set; }
-    /// <summary>
-    /// <para> Resource Identifier.</para>
-    /// <para>Represents the following attribute in the schema: resId </para>
-    /// </summary>
-    [SchemaAttr(0, "resId")]
-    [Index(3)]
-    public Int32Value ResourceId { get; set; }
+        /// Initializes a new instance of the LayoutDefinitionHeader class.
+        /// </summary>
+        public LayoutDefinitionHeader() : base()
+        {
+        }
 
-    /// <summary>
-    /// Initializes a new instance of the LayoutDefinitionHeader class.
-    /// </summary>
-    public LayoutDefinitionHeader():base(){}
         /// <summary>
-    ///Initializes a new instance of the LayoutDefinitionHeader class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public LayoutDefinitionHeader(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
+        /// Initializes a new instance of the LayoutDefinitionHeader class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public LayoutDefinitionHeader(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the LayoutDefinitionHeader class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public LayoutDefinitionHeader(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the LayoutDefinitionHeader class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public LayoutDefinitionHeader(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Unique Identifier</para>
+        /// <para>Represents the following attribute in the schema: uniqueId</para>
+        /// </summary>
+        [RequiredValidator()]
+        [SchemaAttr(0, "uniqueId")]
+        [Index(0)]
+        public StringValue UniqueId { get; set; }
+
+        /// <summary>
+        /// <para>Minimum Version</para>
+        /// <para>Represents the following attribute in the schema: minVer</para>
+        /// </summary>
+        [SchemaAttr(0, "minVer")]
+        [Index(1)]
+        public StringValue MinVersion { get; set; }
+
+        /// <summary>
+        /// <para>Default Style</para>
+        /// <para>Represents the following attribute in the schema: defStyle</para>
+        /// </summary>
+        [SchemaAttr(0, "defStyle")]
+        [Index(2)]
+        public StringValue DefaultStyle { get; set; }
+
+        /// <summary>
+        /// <para>Resource Identifier</para>
+        /// <para>Represents the following attribute in the schema: resId</para>
+        /// </summary>
+        [SchemaAttr(0, "resId")]
+        [Index(3)]
+        public Int32Value ResourceId { get; set; }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Title), 1, 0),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Description), 1, 0),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.CategoryList), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<LayoutDefinitionHeader>(deep);
     }
+
     /// <summary>
-    /// Initializes a new instance of the LayoutDefinitionHeader class with the specified child elements.
+    /// <para>Diagram Layout Header List.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:layoutDefHdrLst.</para>
     /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public LayoutDefinitionHeader(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the LayoutDefinitionHeader class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public LayoutDefinitionHeader(string outerXml)
-        : base(outerXml)
-    {
-    }
-
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Title), 1, 0),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Description), 1, 0),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.CategoryList), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<LayoutDefinitionHeader>(deep);
-
-}
-/// <summary>
-/// <para>Diagram Layout Header List.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:layoutDefHdrLst.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>LayoutDefinitionHeader &lt;dgm:layoutDefHdr></description></item>
-/// </list>
-/// </remarks>
-
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>LayoutDefinitionHeader &lt;dgm:layoutDefHdr></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(LayoutDefinitionHeader))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "layoutDefHdrLst")]
-public partial class LayoutDefinitionHeaderList : OpenXmlCompositeElement
-{
-    
-    
-    /// <summary>
-    /// Initializes a new instance of the LayoutDefinitionHeaderList class.
-    /// </summary>
-    public LayoutDefinitionHeaderList():base(){}
+    [SchemaAttr(14, "layoutDefHdrLst")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class LayoutDefinitionHeaderList : OpenXmlCompositeElement
+    {
         /// <summary>
-    ///Initializes a new instance of the LayoutDefinitionHeaderList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public LayoutDefinitionHeaderList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the LayoutDefinitionHeaderList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public LayoutDefinitionHeaderList(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the LayoutDefinitionHeaderList class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public LayoutDefinitionHeaderList(string outerXml)
-        : base(outerXml)
-    {
-    }
+        /// Initializes a new instance of the LayoutDefinitionHeaderList class.
+        /// </summary>
+        public LayoutDefinitionHeaderList() : base()
+        {
+        }
 
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.LayoutDefinitionHeader), 0, 0)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<LayoutDefinitionHeaderList>(deep);
-
-}
-/// <summary>
-/// <para>Explicit Relationships to Diagram Parts.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:relIds.</para>
-/// </summary>
-
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "relIds")]
-public partial class RelationshipIds : OpenXmlLeafElement
-{
-    
         /// <summary>
-    /// <para> Explicit Relationship to Diagram Data Part.</para>
-    /// <para>Represents the following attribute in the schema: r:dm </para>
-    /// </summary>
-///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-///</remark>
-[RequiredValidator]
-    [SchemaAttr(19, "dm")]
-    [Index(0)]
-    public StringValue DataPart { get; set; }
-    /// <summary>
-    /// <para> Explicit Relationship to Diagram Layout Definition Part.</para>
-    /// <para>Represents the following attribute in the schema: r:lo </para>
-    /// </summary>
-///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-///</remark>
-[RequiredValidator]
-    [SchemaAttr(19, "lo")]
-    [Index(1)]
-    public StringValue LayoutPart { get; set; }
-    /// <summary>
-    /// <para> Explicit Relationship to Style Definition Part.</para>
-    /// <para>Represents the following attribute in the schema: r:qs </para>
-    /// </summary>
-///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-///</remark>
-[RequiredValidator]
-    [SchemaAttr(19, "qs")]
-    [Index(2)]
-    public StringValue StylePart { get; set; }
-    /// <summary>
-    /// <para> Explicit Relationship to Diagram Colors Part.</para>
-    /// <para>Represents the following attribute in the schema: r:cs </para>
-    /// </summary>
-///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-///</remark>
-[RequiredValidator]
-    [SchemaAttr(19, "cs")]
-    [Index(3)]
-    public StringValue ColorPart { get; set; }
+        /// Initializes a new instance of the LayoutDefinitionHeaderList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public LayoutDefinitionHeaderList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the LayoutDefinitionHeaderList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public LayoutDefinitionHeaderList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the LayoutDefinitionHeaderList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public LayoutDefinitionHeaderList(string outerXml) : base(outerXml)
+        {
+        }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.LayoutDefinitionHeader), 0, 0)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<LayoutDefinitionHeaderList>(deep);
+    }
 
     /// <summary>
-    /// Initializes a new instance of the RelationshipIds class.
+    /// <para>Explicit Relationships to Diagram Parts.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:relIds.</para>
     /// </summary>
-    public RelationshipIds():base(){}
-    
-    
+    [SchemaAttr(14, "relIds")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class RelationshipIds : OpenXmlLeafElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the RelationshipIds class.
+        /// </summary>
+        public RelationshipIds() : base()
+        {
+        }
 
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<RelationshipIds>(deep);
+        /// <summary>
+        /// <para>Explicit Relationship to Diagram Data Part</para>
+        /// <para>Represents the following attribute in the schema: r:dm</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
+        /// </remark>
+        [RequiredValidator()]
+        [SchemaAttr(19, "dm")]
+        [Index(0)]
+        public StringValue DataPart { get; set; }
 
-}
-/// <summary>
-/// <para>Style Definition. The root element of DiagramStylePart.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:styleDef.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>StyleDefinitionTitle &lt;dgm:title></description></item>
-///<item><description>StyleLabelDescription &lt;dgm:desc></description></item>
-///<item><description>StyleDisplayCategories &lt;dgm:catLst></description></item>
-///<item><description>Scene3D &lt;dgm:scene3d></description></item>
-///<item><description>StyleLabel &lt;dgm:styleLbl></description></item>
-///<item><description>ExtensionList &lt;dgm:extLst></description></item>
-/// </list>
-/// </remarks>
+        /// <summary>
+        /// <para>Explicit Relationship to Diagram Layout Definition Part</para>
+        /// <para>Represents the following attribute in the schema: r:lo</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
+        /// </remark>
+        [RequiredValidator()]
+        [SchemaAttr(19, "lo")]
+        [Index(1)]
+        public StringValue LayoutPart { get; set; }
 
+        /// <summary>
+        /// <para>Explicit Relationship to Style Definition Part</para>
+        /// <para>Represents the following attribute in the schema: r:qs</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
+        /// </remark>
+        [RequiredValidator()]
+        [SchemaAttr(19, "qs")]
+        [Index(2)]
+        public StringValue StylePart { get; set; }
+
+        /// <summary>
+        /// <para>Explicit Relationship to Diagram Colors Part</para>
+        /// <para>Represents the following attribute in the schema: r:cs</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
+        /// </remark>
+        [RequiredValidator()]
+        [SchemaAttr(19, "cs")]
+        [Index(3)]
+        public StringValue ColorPart { get; set; }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<RelationshipIds>(deep);
+    }
+
+    /// <summary>
+    /// <para>Style Definition.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:styleDef.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>StyleDefinitionTitle &lt;dgm:title></description></item>
+    ///   <item><description>StyleLabelDescription &lt;dgm:desc></description></item>
+    ///   <item><description>StyleDisplayCategories &lt;dgm:catLst></description></item>
+    ///   <item><description>Scene3D &lt;dgm:scene3d></description></item>
+    ///   <item><description>StyleLabel &lt;dgm:styleLbl></description></item>
+    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(StyleDefinitionTitle))]
     [ChildElementInfo(typeof(StyleLabelDescription))]
     [ChildElementInfo(typeof(StyleDisplayCategories))]
     [ChildElementInfo(typeof(Scene3D))]
     [ChildElementInfo(typeof(StyleLabel))]
     [ChildElementInfo(typeof(ExtensionList))]
-
-[SchemaAttr(14, "styleDef")]
-[OfficeAvailability(FileFormatVersions.Office2007)]
-public partial class StyleDefinition : OpenXmlPartRootElement
-{
-    
+    [SchemaAttr(14, "styleDef")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class StyleDefinition : OpenXmlPartRootElement
+    {
         /// <summary>
-    /// <para> Unique Style ID.</para>
-    /// <para>Represents the following attribute in the schema: uniqueId </para>
-    /// </summary>
-    [SchemaAttr(0, "uniqueId")]
-    [Index(0)]
-    public StringValue UniqueId { get; set; }
-    /// <summary>
-    /// <para> Minimum Version.</para>
-    /// <para>Represents the following attribute in the schema: minVer </para>
-    /// </summary>
-    [SchemaAttr(0, "minVer")]
-    [Index(1)]
-    public StringValue MinVersion { get; set; }
+        /// Initializes a new instance of the StyleDefinition class.
+        /// </summary>
+        public StyleDefinition() : base()
+        {
+        }
 
-	internal StyleDefinition(DiagramStylePart ownerPart) : base (ownerPart){}
-    /// <summary>
-    /// Loads the DOM from the DiagramStylePart.
-    /// </summary>
-    /// <param name="openXmlPart">Specifies the part to be loaded.</param>
-    public void Load(DiagramStylePart openXmlPart)
-    {
-        LoadFromPart(openXmlPart);
-    }
-    /// <summary>
-    /// Gets the DiagramStylePart associated with this element.
-    /// </summary>
-    public DiagramStylePart DiagramStylePart
-    {
-		get => OpenXmlPart as DiagramStylePart;
-		internal set => OpenXmlPart = value;
-    }
         /// <summary>
-    ///Initializes a new instance of the StyleDefinition class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public StyleDefinition(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the StyleDefinition class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public StyleDefinition(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the StyleDefinition class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public StyleDefinition(string outerXml)
-        : base(outerXml)
-    {
+        /// Initializes a new instance of the StyleDefinition class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public StyleDefinition(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the StyleDefinition class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public StyleDefinition(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the StyleDefinition class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public StyleDefinition(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Unique Style ID</para>
+        /// <para>Represents the following attribute in the schema: uniqueId</para>
+        /// </summary>
+        [SchemaAttr(0, "uniqueId")]
+        [Index(0)]
+        public StringValue UniqueId { get; set; }
+
+        /// <summary>
+        /// <para>Minimum Version</para>
+        /// <para>Represents the following attribute in the schema: minVer</para>
+        /// </summary>
+        [SchemaAttr(0, "minVer")]
+        [Index(1)]
+        public StringValue MinVersion { get; set; }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinitionTitle), 0, 0),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.StyleLabelDescription), 0, 0),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.StyleDisplayCategories), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Scene3D), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.StyleLabel), 1, 0),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleDefinition>(deep);
+
+        internal StyleDefinition(DiagramStylePart ownerPart) : base(ownerPart)
+        {
+        }
+
+        /// <summary>
+        /// Loads the DOM from the DiagramStylePart
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to be loaded.</param>
+        public void Load(DiagramStylePart openXmlPart)
+        {
+            LoadFromPart(openXmlPart);
+        }
+
+        /// <summary>
+        /// Saves the DOM into the DiagramStylePart.
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to save to.</param>
+        public void Save(DiagramStylePart openXmlPart)
+        {
+            base.SaveToPart(openXmlPart);
+        }
+
+        /// <summary>
+        /// Gets the DiagramStylePart associated with this element.
+        /// </summary>
+        public DiagramStylePart DiagramStylePart
+        {
+            get => OpenXmlPart as DiagramStylePart;
+            internal set => OpenXmlPart = value;
+        }
     }
 
-    
     /// <summary>
-    /// Initializes a new instance of the StyleDefinition class.
+    /// <para>Style Definition Header.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:styleDefHdr.</para>
     /// </summary>
-    public StyleDefinition():base(){}
-    /// <summary>
-    /// Saves the DOM into the DiagramStylePart.
-    /// </summary>
-    /// <param name="openXmlPart">Specifies the part to save to.</param>
-    public void Save(DiagramStylePart openXmlPart)
-    {
-        base.SaveToPart(openXmlPart);
-    }
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleDefinition>(deep);
-
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinitionTitle), 0, 0),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.StyleLabelDescription), 0, 0),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.StyleDisplayCategories), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Scene3D), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.StyleLabel), 1, 0),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-}
-/// <summary>
-/// <para>Style Definition Header.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:styleDefHdr.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>StyleDefinitionTitle &lt;dgm:title></description></item>
-///<item><description>StyleLabelDescription &lt;dgm:desc></description></item>
-///<item><description>StyleDisplayCategories &lt;dgm:catLst></description></item>
-///<item><description>ExtensionList &lt;dgm:extLst></description></item>
-/// </list>
-/// </remarks>
-
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>StyleDefinitionTitle &lt;dgm:title></description></item>
+    ///   <item><description>StyleLabelDescription &lt;dgm:desc></description></item>
+    ///   <item><description>StyleDisplayCategories &lt;dgm:catLst></description></item>
+    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(StyleDefinitionTitle))]
     [ChildElementInfo(typeof(StyleLabelDescription))]
     [ChildElementInfo(typeof(StyleDisplayCategories))]
     [ChildElementInfo(typeof(ExtensionList))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "styleDefHdr")]
-public partial class StyleDefinitionHeader : OpenXmlCompositeElement
-{
-    
+    [SchemaAttr(14, "styleDefHdr")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class StyleDefinitionHeader : OpenXmlCompositeElement
+    {
         /// <summary>
-    /// <para> Unique Style ID.</para>
-    /// <para>Represents the following attribute in the schema: uniqueId </para>
-    /// </summary>
-[RequiredValidator]
-    [SchemaAttr(0, "uniqueId")]
-    [Index(0)]
-    public StringValue UniqueId { get; set; }
-    /// <summary>
-    /// <para> Minimum Version.</para>
-    /// <para>Represents the following attribute in the schema: minVer </para>
-    /// </summary>
-    [SchemaAttr(0, "minVer")]
-    [Index(1)]
-    public StringValue MinVersion { get; set; }
-    /// <summary>
-    /// <para> Resource ID.</para>
-    /// <para>Represents the following attribute in the schema: resId </para>
-    /// </summary>
-    [SchemaAttr(0, "resId")]
-    [Index(2)]
-    public Int32Value ResourceId { get; set; }
+        /// Initializes a new instance of the StyleDefinitionHeader class.
+        /// </summary>
+        public StyleDefinitionHeader() : base()
+        {
+        }
 
-    /// <summary>
-    /// Initializes a new instance of the StyleDefinitionHeader class.
-    /// </summary>
-    public StyleDefinitionHeader():base(){}
         /// <summary>
-    ///Initializes a new instance of the StyleDefinitionHeader class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public StyleDefinitionHeader(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
+        /// Initializes a new instance of the StyleDefinitionHeader class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public StyleDefinitionHeader(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the StyleDefinitionHeader class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public StyleDefinitionHeader(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the StyleDefinitionHeader class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public StyleDefinitionHeader(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Unique Style ID</para>
+        /// <para>Represents the following attribute in the schema: uniqueId</para>
+        /// </summary>
+        [RequiredValidator()]
+        [SchemaAttr(0, "uniqueId")]
+        [Index(0)]
+        public StringValue UniqueId { get; set; }
+
+        /// <summary>
+        /// <para>Minimum Version</para>
+        /// <para>Represents the following attribute in the schema: minVer</para>
+        /// </summary>
+        [SchemaAttr(0, "minVer")]
+        [Index(1)]
+        public StringValue MinVersion { get; set; }
+
+        /// <summary>
+        /// <para>Resource ID</para>
+        /// <para>Represents the following attribute in the schema: resId</para>
+        /// </summary>
+        [SchemaAttr(0, "resId")]
+        [Index(2)]
+        public Int32Value ResourceId { get; set; }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinitionTitle), 1, 0),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.StyleLabelDescription), 1, 0),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.StyleDisplayCategories), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleDefinitionHeader>(deep);
     }
+
     /// <summary>
-    /// Initializes a new instance of the StyleDefinitionHeader class with the specified child elements.
+    /// <para>List of Style Definition Headers.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:styleDefHdrLst.</para>
     /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public StyleDefinitionHeader(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the StyleDefinitionHeader class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public StyleDefinitionHeader(string outerXml)
-        : base(outerXml)
-    {
-    }
-
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinitionTitle), 1, 0),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.StyleLabelDescription), 1, 0),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.StyleDisplayCategories), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleDefinitionHeader>(deep);
-
-}
-/// <summary>
-/// <para>List of Style Definition Headers.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:styleDefHdrLst.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>StyleDefinitionHeader &lt;dgm:styleDefHdr></description></item>
-/// </list>
-/// </remarks>
-
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>StyleDefinitionHeader &lt;dgm:styleDefHdr></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(StyleDefinitionHeader))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "styleDefHdrLst")]
-public partial class StyleDefinitionHeaderList : OpenXmlCompositeElement
-{
-    
-    
-    /// <summary>
-    /// Initializes a new instance of the StyleDefinitionHeaderList class.
-    /// </summary>
-    public StyleDefinitionHeaderList():base(){}
+    [SchemaAttr(14, "styleDefHdrLst")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class StyleDefinitionHeaderList : OpenXmlCompositeElement
+    {
         /// <summary>
-    ///Initializes a new instance of the StyleDefinitionHeaderList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public StyleDefinitionHeaderList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the StyleDefinitionHeaderList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public StyleDefinitionHeaderList(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the StyleDefinitionHeaderList class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public StyleDefinitionHeaderList(string outerXml)
-        : base(outerXml)
-    {
-    }
-
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinitionHeader), 0, 0)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleDefinitionHeaderList>(deep);
-
-}
-/// <summary>
-/// <para>Color Transform Category.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:cat.</para>
-/// </summary>
-
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "cat")]
-public partial class ColorTransformCategory : OpenXmlLeafElement
-{
-    
-        /// <summary>
-    /// <para> Category Type.</para>
-    /// <para>Represents the following attribute in the schema: type </para>
-    /// </summary>
-[RequiredValidator]
-[StringValidator(IsUri = true)]
-    [SchemaAttr(0, "type")]
-    [Index(0)]
-    public StringValue Type { get; set; }
-    /// <summary>
-    /// <para> Priority.</para>
-    /// <para>Represents the following attribute in the schema: pri </para>
-    /// </summary>
-[RequiredValidator]
-    [SchemaAttr(0, "pri")]
-    [Index(1)]
-    public UInt32Value Priority { get; set; }
-
-    /// <summary>
-    /// Initializes a new instance of the ColorTransformCategory class.
-    /// </summary>
-    public ColorTransformCategory():base(){}
-    
-    
-
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorTransformCategory>(deep);
-
-}
-/// <summary>
-/// <para>Fill Color List.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:fillClrLst.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage &lt;a:scrgbClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelHex &lt;a:srgbClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.HslColor &lt;a:hslClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.SystemColor &lt;a:sysClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.SchemeColor &lt;a:schemeClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
-/// </list>
-/// </remarks>
-
-[SchemaAttr(14, "fillClrLst")]
-[OfficeAvailability(FileFormatVersions.Office2007)]
-public partial class FillColorList : ColorsType
-{
-    /// <summary>
-    /// Initializes a new instance of the FillColorList class.
-    /// </summary>
-    public FillColorList():base(){}
-        /// <summary>
-    ///Initializes a new instance of the FillColorList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public FillColorList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the FillColorList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public FillColorList(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the FillColorList class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public FillColorList(string outerXml)
-        : base(outerXml)
-    {
-    }
-
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<FillColorList>(deep);
-
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new CompositeParticle(ParticleType.Group, 0, 0)
-    {
-        new CompositeParticle(ParticleType.Choice, 1, 1)
+        /// Initializes a new instance of the StyleDefinitionHeaderList class.
+        /// </summary>
+        public StyleDefinitionHeaderList() : base()
         {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
         }
-    }
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-}
-/// <summary>
-/// <para>Line Color List.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:linClrLst.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage &lt;a:scrgbClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelHex &lt;a:srgbClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.HslColor &lt;a:hslClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.SystemColor &lt;a:sysClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.SchemeColor &lt;a:schemeClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
-/// </list>
-/// </remarks>
 
-[SchemaAttr(14, "linClrLst")]
-[OfficeAvailability(FileFormatVersions.Office2007)]
-public partial class LineColorList : ColorsType
-{
-    /// <summary>
-    /// Initializes a new instance of the LineColorList class.
-    /// </summary>
-    public LineColorList():base(){}
         /// <summary>
-    ///Initializes a new instance of the LineColorList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public LineColorList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the LineColorList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public LineColorList(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the LineColorList class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public LineColorList(string outerXml)
-        : base(outerXml)
-    {
-    }
-
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<LineColorList>(deep);
-
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new CompositeParticle(ParticleType.Group, 0, 0)
-    {
-        new CompositeParticle(ParticleType.Choice, 1, 1)
+        /// Initializes a new instance of the StyleDefinitionHeaderList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public StyleDefinitionHeaderList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
         {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
         }
-    }
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-}
-/// <summary>
-/// <para>Effect Color List.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:effectClrLst.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage &lt;a:scrgbClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelHex &lt;a:srgbClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.HslColor &lt;a:hslClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.SystemColor &lt;a:sysClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.SchemeColor &lt;a:schemeClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
-/// </list>
-/// </remarks>
 
-[SchemaAttr(14, "effectClrLst")]
-[OfficeAvailability(FileFormatVersions.Office2007)]
-public partial class EffectColorList : ColorsType
-{
-    /// <summary>
-    /// Initializes a new instance of the EffectColorList class.
-    /// </summary>
-    public EffectColorList():base(){}
         /// <summary>
-    ///Initializes a new instance of the EffectColorList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public EffectColorList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the EffectColorList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public EffectColorList(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the EffectColorList class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public EffectColorList(string outerXml)
-        : base(outerXml)
-    {
-    }
-
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<EffectColorList>(deep);
-
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new CompositeParticle(ParticleType.Group, 0, 0)
-    {
-        new CompositeParticle(ParticleType.Choice, 1, 1)
+        /// Initializes a new instance of the StyleDefinitionHeaderList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public StyleDefinitionHeaderList(params OpenXmlElement[] childElements) : base(childElements)
         {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
         }
-    }
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-}
-/// <summary>
-/// <para>Text Line Color List.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:txLinClrLst.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage &lt;a:scrgbClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelHex &lt;a:srgbClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.HslColor &lt;a:hslClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.SystemColor &lt;a:sysClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.SchemeColor &lt;a:schemeClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
-/// </list>
-/// </remarks>
 
-[SchemaAttr(14, "txLinClrLst")]
-[OfficeAvailability(FileFormatVersions.Office2007)]
-public partial class TextLineColorList : ColorsType
-{
-    /// <summary>
-    /// Initializes a new instance of the TextLineColorList class.
-    /// </summary>
-    public TextLineColorList():base(){}
         /// <summary>
-    ///Initializes a new instance of the TextLineColorList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public TextLineColorList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the TextLineColorList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public TextLineColorList(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the TextLineColorList class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public TextLineColorList(string outerXml)
-        : base(outerXml)
-    {
-    }
-
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextLineColorList>(deep);
-
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new CompositeParticle(ParticleType.Group, 0, 0)
-    {
-        new CompositeParticle(ParticleType.Choice, 1, 1)
+        /// Initializes a new instance of the StyleDefinitionHeaderList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public StyleDefinitionHeaderList(string outerXml) : base(outerXml)
         {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
         }
-    }
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-}
-/// <summary>
-/// <para>Text Fill Color List.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:txFillClrLst.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage &lt;a:scrgbClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelHex &lt;a:srgbClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.HslColor &lt;a:hslClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.SystemColor &lt;a:sysClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.SchemeColor &lt;a:schemeClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
-/// </list>
-/// </remarks>
 
-[SchemaAttr(14, "txFillClrLst")]
-[OfficeAvailability(FileFormatVersions.Office2007)]
-public partial class TextFillColorList : ColorsType
-{
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinitionHeader), 0, 0)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleDefinitionHeaderList>(deep);
+    }
+
     /// <summary>
-    /// Initializes a new instance of the TextFillColorList class.
+    /// <para>Color Transform Category.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:cat.</para>
     /// </summary>
-    public TextFillColorList():base(){}
+    [SchemaAttr(14, "cat")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class ColorTransformCategory : OpenXmlLeafElement
+    {
         /// <summary>
-    ///Initializes a new instance of the TextFillColorList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public TextFillColorList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the TextFillColorList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public TextFillColorList(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the TextFillColorList class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public TextFillColorList(string outerXml)
-        : base(outerXml)
-    {
-    }
-
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextFillColorList>(deep);
-
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new CompositeParticle(ParticleType.Group, 0, 0)
-    {
-        new CompositeParticle(ParticleType.Choice, 1, 1)
+        /// Initializes a new instance of the ColorTransformCategory class.
+        /// </summary>
+        public ColorTransformCategory() : base()
         {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
         }
-    }
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-}
-/// <summary>
-/// <para>Text Effect Color List.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:txEffectClrLst.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage &lt;a:scrgbClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelHex &lt;a:srgbClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.HslColor &lt;a:hslClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.SystemColor &lt;a:sysClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.SchemeColor &lt;a:schemeClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
-/// </list>
-/// </remarks>
 
-[SchemaAttr(14, "txEffectClrLst")]
-[OfficeAvailability(FileFormatVersions.Office2007)]
-public partial class TextEffectColorList : ColorsType
-{
-    /// <summary>
-    /// Initializes a new instance of the TextEffectColorList class.
-    /// </summary>
-    public TextEffectColorList():base(){}
         /// <summary>
-    ///Initializes a new instance of the TextEffectColorList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public TextEffectColorList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the TextEffectColorList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public TextEffectColorList(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the TextEffectColorList class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public TextEffectColorList(string outerXml)
-        : base(outerXml)
-    {
+        /// <para>Category Type</para>
+        /// <para>Represents the following attribute in the schema: type</para>
+        /// </summary>
+        [RequiredValidator()]
+        [StringValidator(IsUri = true)]
+        [SchemaAttr(0, "type")]
+        [Index(0)]
+        public StringValue Type { get; set; }
+
+        /// <summary>
+        /// <para>Priority</para>
+        /// <para>Represents the following attribute in the schema: pri</para>
+        /// </summary>
+        [RequiredValidator()]
+        [SchemaAttr(0, "pri")]
+        [Index(1)]
+        public UInt32Value Priority { get; set; }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorTransformCategory>(deep);
     }
 
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextEffectColorList>(deep);
-
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new CompositeParticle(ParticleType.Group, 0, 0)
+    /// <summary>
+    /// <para>Fill Color List.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:fillClrLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage &lt;a:scrgbClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelHex &lt;a:srgbClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.HslColor &lt;a:hslClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.SystemColor &lt;a:sysClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.SchemeColor &lt;a:schemeClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
+    /// </list>
+    /// </remark>
+    [SchemaAttr(14, "fillClrLst")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class FillColorList : ColorsType
     {
-        new CompositeParticle(ParticleType.Choice, 1, 1)
+        /// <summary>
+        /// Initializes a new instance of the FillColorList class.
+        /// </summary>
+        public FillColorList() : base()
         {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
         }
-    }
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-}
-/// <summary>
-/// Defines the ColorsType class.
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage &lt;a:scrgbClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelHex &lt;a:srgbClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.HslColor &lt;a:hslClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.SystemColor &lt;a:sysClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.SchemeColor &lt;a:schemeClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
-/// </list>
-/// </remarks>
 
+        /// <summary>
+        /// Initializes a new instance of the FillColorList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public FillColorList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the FillColorList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public FillColorList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the FillColorList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public FillColorList(string outerXml) : base(outerXml)
+        {
+        }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new CompositeParticle(ParticleType.Group, 0, 0)
+            {
+                new CompositeParticle(ParticleType.Choice, 1, 1)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+                }
+            }
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<FillColorList>(deep);
+    }
+
+    /// <summary>
+    /// <para>Line Color List.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:linClrLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage &lt;a:scrgbClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelHex &lt;a:srgbClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.HslColor &lt;a:hslClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.SystemColor &lt;a:sysClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.SchemeColor &lt;a:schemeClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
+    /// </list>
+    /// </remark>
+    [SchemaAttr(14, "linClrLst")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class LineColorList : ColorsType
+    {
+        /// <summary>
+        /// Initializes a new instance of the LineColorList class.
+        /// </summary>
+        public LineColorList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the LineColorList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public LineColorList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the LineColorList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public LineColorList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the LineColorList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public LineColorList(string outerXml) : base(outerXml)
+        {
+        }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new CompositeParticle(ParticleType.Group, 0, 0)
+            {
+                new CompositeParticle(ParticleType.Choice, 1, 1)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+                }
+            }
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<LineColorList>(deep);
+    }
+
+    /// <summary>
+    /// <para>Effect Color List.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:effectClrLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage &lt;a:scrgbClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelHex &lt;a:srgbClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.HslColor &lt;a:hslClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.SystemColor &lt;a:sysClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.SchemeColor &lt;a:schemeClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
+    /// </list>
+    /// </remark>
+    [SchemaAttr(14, "effectClrLst")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class EffectColorList : ColorsType
+    {
+        /// <summary>
+        /// Initializes a new instance of the EffectColorList class.
+        /// </summary>
+        public EffectColorList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the EffectColorList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public EffectColorList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the EffectColorList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public EffectColorList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the EffectColorList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public EffectColorList(string outerXml) : base(outerXml)
+        {
+        }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new CompositeParticle(ParticleType.Group, 0, 0)
+            {
+                new CompositeParticle(ParticleType.Choice, 1, 1)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+                }
+            }
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<EffectColorList>(deep);
+    }
+
+    /// <summary>
+    /// <para>Text Line Color List.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:txLinClrLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage &lt;a:scrgbClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelHex &lt;a:srgbClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.HslColor &lt;a:hslClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.SystemColor &lt;a:sysClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.SchemeColor &lt;a:schemeClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
+    /// </list>
+    /// </remark>
+    [SchemaAttr(14, "txLinClrLst")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class TextLineColorList : ColorsType
+    {
+        /// <summary>
+        /// Initializes a new instance of the TextLineColorList class.
+        /// </summary>
+        public TextLineColorList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TextLineColorList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TextLineColorList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TextLineColorList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TextLineColorList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TextLineColorList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public TextLineColorList(string outerXml) : base(outerXml)
+        {
+        }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new CompositeParticle(ParticleType.Group, 0, 0)
+            {
+                new CompositeParticle(ParticleType.Choice, 1, 1)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+                }
+            }
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextLineColorList>(deep);
+    }
+
+    /// <summary>
+    /// <para>Text Fill Color List.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:txFillClrLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage &lt;a:scrgbClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelHex &lt;a:srgbClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.HslColor &lt;a:hslClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.SystemColor &lt;a:sysClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.SchemeColor &lt;a:schemeClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
+    /// </list>
+    /// </remark>
+    [SchemaAttr(14, "txFillClrLst")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class TextFillColorList : ColorsType
+    {
+        /// <summary>
+        /// Initializes a new instance of the TextFillColorList class.
+        /// </summary>
+        public TextFillColorList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TextFillColorList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TextFillColorList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TextFillColorList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TextFillColorList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TextFillColorList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public TextFillColorList(string outerXml) : base(outerXml)
+        {
+        }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new CompositeParticle(ParticleType.Group, 0, 0)
+            {
+                new CompositeParticle(ParticleType.Choice, 1, 1)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+                }
+            }
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextFillColorList>(deep);
+    }
+
+    /// <summary>
+    /// <para>Text Effect Color List.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:txEffectClrLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage &lt;a:scrgbClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelHex &lt;a:srgbClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.HslColor &lt;a:hslClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.SystemColor &lt;a:sysClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.SchemeColor &lt;a:schemeClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
+    /// </list>
+    /// </remark>
+    [SchemaAttr(14, "txEffectClrLst")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class TextEffectColorList : ColorsType
+    {
+        /// <summary>
+        /// Initializes a new instance of the TextEffectColorList class.
+        /// </summary>
+        public TextEffectColorList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TextEffectColorList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TextEffectColorList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TextEffectColorList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TextEffectColorList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TextEffectColorList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public TextEffectColorList(string outerXml) : base(outerXml)
+        {
+        }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new CompositeParticle(ParticleType.Group, 0, 0)
+            {
+                new CompositeParticle(ParticleType.Choice, 1, 1)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+                }
+            }
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextEffectColorList>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the ColorsType Class.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage &lt;a:scrgbClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelHex &lt;a:srgbClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.HslColor &lt;a:hslClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.SystemColor &lt;a:sysClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.SchemeColor &lt;a:schemeClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HslColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor))]
-
-public abstract partial class ColorsType : OpenXmlCompositeElement
-{
-    
+    public abstract partial class ColorsType : OpenXmlCompositeElement
+    {
         /// <summary>
-    /// <para> Color Application Method Type.</para>
-    /// <para>Represents the following attribute in the schema: meth </para>
-    /// </summary>
-[StringValidator(IsToken = true)]
-    [SchemaAttr(0, "meth")]
-    [Index(0)]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ColorApplicationMethodValues> Method { get; set; }
-    /// <summary>
-    /// <para> Hue Direction.</para>
-    /// <para>Represents the following attribute in the schema: hueDir </para>
-    /// </summary>
-[StringValidator(IsToken = true)]
-    [SchemaAttr(0, "hueDir")]
-    [Index(1)]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HueDirectionValues> HueDirection { get; set; }
-
-    
-    
-    /// <summary>
-    /// Initializes a new instance of the ColorsType class.
-    /// </summary>
-    protected ColorsType(){}
-        /// <summary>
-    ///Initializes a new instance of the ColorsType class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    protected ColorsType(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the ColorsType class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    protected ColorsType(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the ColorsType class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    protected ColorsType(string outerXml)
-        : base(outerXml)
-    {
-    }
-
-    
-}
-/// <summary>
-/// <para>Defines the ExtensionList Class.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:extLst.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
-/// </list>
-/// </remarks>
-
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "extLst")]
-public partial class ExtensionList : OpenXmlCompositeElement
-{
-    
-    
-    /// <summary>
-    /// Initializes a new instance of the ExtensionList class.
-    /// </summary>
-    public ExtensionList():base(){}
-        /// <summary>
-    ///Initializes a new instance of the ExtensionList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public ExtensionList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the ExtensionList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public ExtensionList(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the ExtensionList class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public ExtensionList(string outerXml)
-        : base(outerXml)
-    {
-    }
-
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new CompositeParticle(ParticleType.Group, 1, 1)
-    {
-        new CompositeParticle(ParticleType.Sequence, 1, 1)
+        /// Initializes a new instance of the ColorsType class.
+        /// </summary>
+        protected ColorsType() : base()
         {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0, 0)
         }
+
+        /// <summary>
+        /// Initializes a new instance of the ColorsType class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        protected ColorsType(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ColorsType class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        protected ColorsType(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ColorsType class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        protected ColorsType(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Color Application Method Type</para>
+        /// <para>Represents the following attribute in the schema: meth</para>
+        /// </summary>
+        [StringValidator(IsToken = true)]
+        [SchemaAttr(0, "meth")]
+        [Index(0)]
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ColorApplicationMethodValues> Method { get; set; }
+
+        /// <summary>
+        /// <para>Hue Direction</para>
+        /// <para>Represents the following attribute in the schema: hueDir</para>
+        /// </summary>
+        [StringValidator(IsToken = true)]
+        [SchemaAttr(0, "hueDir")]
+        [Index(1)]
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HueDirectionValues> HueDirection { get; set; }
     }
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExtensionList>(deep);
 
-}
-/// <summary>
-/// <para>Title.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:title.</para>
-/// </summary>
-
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "title")]
-public partial class ColorDefinitionTitle : OpenXmlLeafElement
-{
-    
+    /// <summary>
+    /// <para>Defines the ExtensionList Class.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:extLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
+    /// </list>
+    /// </remark>
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
+    [SchemaAttr(14, "extLst")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class ExtensionList : OpenXmlCompositeElement
+    {
         /// <summary>
-    /// <para> Language.</para>
-    /// <para>Represents the following attribute in the schema: lang </para>
-    /// </summary>
-    [SchemaAttr(0, "lang")]
-    [Index(0)]
-    public StringValue Language { get; set; }
-    /// <summary>
-    /// <para> Description Value.</para>
-    /// <para>Represents the following attribute in the schema: val </para>
-    /// </summary>
-[RequiredValidator]
-    [SchemaAttr(0, "val")]
-    [Index(1)]
-    public StringValue Val { get; set; }
+        /// Initializes a new instance of the ExtensionList class.
+        /// </summary>
+        public ExtensionList() : base()
+        {
+        }
 
-    /// <summary>
-    /// Initializes a new instance of the ColorDefinitionTitle class.
-    /// </summary>
-    public ColorDefinitionTitle():base(){}
-    
-    
-
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorDefinitionTitle>(deep);
-
-}
-/// <summary>
-/// <para>Description.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:desc.</para>
-/// </summary>
-
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "desc")]
-public partial class ColorTransformDescription : OpenXmlLeafElement
-{
-    
         /// <summary>
-    /// <para> Language.</para>
-    /// <para>Represents the following attribute in the schema: lang </para>
-    /// </summary>
-    [SchemaAttr(0, "lang")]
-    [Index(0)]
-    public StringValue Language { get; set; }
-    /// <summary>
-    /// <para> Description Value.</para>
-    /// <para>Represents the following attribute in the schema: val </para>
-    /// </summary>
-[RequiredValidator]
-    [SchemaAttr(0, "val")]
-    [Index(1)]
-    public StringValue Val { get; set; }
+        /// Initializes a new instance of the ExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ExtensionList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ExtensionList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public ExtensionList(string outerXml) : base(outerXml)
+        {
+        }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new CompositeParticle(ParticleType.Group, 1, 1)
+            {
+                new CompositeParticle(ParticleType.Sequence, 1, 1)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0, 0)
+                }
+            }
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExtensionList>(deep);
+    }
 
     /// <summary>
-    /// Initializes a new instance of the ColorTransformDescription class.
+    /// <para>Title.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:title.</para>
     /// </summary>
-    public ColorTransformDescription():base(){}
-    
-    
+    [SchemaAttr(14, "title")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class ColorDefinitionTitle : OpenXmlLeafElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the ColorDefinitionTitle class.
+        /// </summary>
+        public ColorDefinitionTitle() : base()
+        {
+        }
 
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorTransformDescription>(deep);
+        /// <summary>
+        /// <para>Language</para>
+        /// <para>Represents the following attribute in the schema: lang</para>
+        /// </summary>
+        [SchemaAttr(0, "lang")]
+        [Index(0)]
+        public StringValue Language { get; set; }
 
-}
-/// <summary>
-/// <para>Color Transform Category List.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:catLst.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>ColorTransformCategory &lt;dgm:cat></description></item>
-/// </list>
-/// </remarks>
+        /// <summary>
+        /// <para>Description Value</para>
+        /// <para>Represents the following attribute in the schema: val</para>
+        /// </summary>
+        [RequiredValidator()]
+        [SchemaAttr(0, "val")]
+        [Index(1)]
+        public StringValue Val { get; set; }
 
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorDefinitionTitle>(deep);
+    }
+
+    /// <summary>
+    /// <para>Description.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:desc.</para>
+    /// </summary>
+    [SchemaAttr(14, "desc")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class ColorTransformDescription : OpenXmlLeafElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the ColorTransformDescription class.
+        /// </summary>
+        public ColorTransformDescription() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>Language</para>
+        /// <para>Represents the following attribute in the schema: lang</para>
+        /// </summary>
+        [SchemaAttr(0, "lang")]
+        [Index(0)]
+        public StringValue Language { get; set; }
+
+        /// <summary>
+        /// <para>Description Value</para>
+        /// <para>Represents the following attribute in the schema: val</para>
+        /// </summary>
+        [RequiredValidator()]
+        [SchemaAttr(0, "val")]
+        [Index(1)]
+        public StringValue Val { get; set; }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorTransformDescription>(deep);
+    }
+
+    /// <summary>
+    /// <para>Color Transform Category List.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:catLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>ColorTransformCategory &lt;dgm:cat></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(ColorTransformCategory))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "catLst")]
-public partial class ColorTransformCategories : OpenXmlCompositeElement
-{
-    
-    
-    /// <summary>
-    /// Initializes a new instance of the ColorTransformCategories class.
-    /// </summary>
-    public ColorTransformCategories():base(){}
+    [SchemaAttr(14, "catLst")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class ColorTransformCategories : OpenXmlCompositeElement
+    {
         /// <summary>
-    ///Initializes a new instance of the ColorTransformCategories class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public ColorTransformCategories(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
+        /// Initializes a new instance of the ColorTransformCategories class.
+        /// </summary>
+        public ColorTransformCategories() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ColorTransformCategories class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ColorTransformCategories(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ColorTransformCategories class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ColorTransformCategories(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ColorTransformCategories class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public ColorTransformCategories(string outerXml) : base(outerXml)
+        {
+        }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 0, 0)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformCategory), 0, 0)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorTransformCategories>(deep);
     }
+
     /// <summary>
-    /// Initializes a new instance of the ColorTransformCategories class with the specified child elements.
+    /// <para>Style Label.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:styleLbl.</para>
     /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public ColorTransformCategories(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the ColorTransformCategories class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public ColorTransformCategories(string outerXml)
-        : base(outerXml)
-    {
-    }
-
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 0, 0)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformCategory), 0, 0)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorTransformCategories>(deep);
-
-}
-/// <summary>
-/// <para>Style Label.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:styleLbl.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>FillColorList &lt;dgm:fillClrLst></description></item>
-///<item><description>LineColorList &lt;dgm:linClrLst></description></item>
-///<item><description>EffectColorList &lt;dgm:effectClrLst></description></item>
-///<item><description>TextLineColorList &lt;dgm:txLinClrLst></description></item>
-///<item><description>TextFillColorList &lt;dgm:txFillClrLst></description></item>
-///<item><description>TextEffectColorList &lt;dgm:txEffectClrLst></description></item>
-///<item><description>ExtensionList &lt;dgm:extLst></description></item>
-/// </list>
-/// </remarks>
-
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>FillColorList &lt;dgm:fillClrLst></description></item>
+    ///   <item><description>LineColorList &lt;dgm:linClrLst></description></item>
+    ///   <item><description>EffectColorList &lt;dgm:effectClrLst></description></item>
+    ///   <item><description>TextLineColorList &lt;dgm:txLinClrLst></description></item>
+    ///   <item><description>TextFillColorList &lt;dgm:txFillClrLst></description></item>
+    ///   <item><description>TextEffectColorList &lt;dgm:txEffectClrLst></description></item>
+    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(FillColorList))]
     [ChildElementInfo(typeof(LineColorList))]
     [ChildElementInfo(typeof(EffectColorList))]
@@ -1814,1534 +1848,1576 @@ internal override CompiledParticle CompiledParticle => _constraint;
     [ChildElementInfo(typeof(TextFillColorList))]
     [ChildElementInfo(typeof(TextEffectColorList))]
     [ChildElementInfo(typeof(ExtensionList))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "styleLbl")]
-public partial class ColorTransformStyleLabel : OpenXmlCompositeElement
-{
-    
+    [SchemaAttr(14, "styleLbl")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class ColorTransformStyleLabel : OpenXmlCompositeElement
+    {
         /// <summary>
-    /// <para> Name.</para>
-    /// <para>Represents the following attribute in the schema: name </para>
-    /// </summary>
-[RequiredValidator]
-    [SchemaAttr(0, "name")]
-    [Index(0)]
-    public StringValue Name { get; set; }
+        /// Initializes a new instance of the ColorTransformStyleLabel class.
+        /// </summary>
+        public ColorTransformStyleLabel() : base()
+        {
+        }
 
-    /// <summary>
-    /// Initializes a new instance of the ColorTransformStyleLabel class.
-    /// </summary>
-    public ColorTransformStyleLabel():base(){}
         /// <summary>
-    ///Initializes a new instance of the ColorTransformStyleLabel class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public ColorTransformStyleLabel(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the ColorTransformStyleLabel class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public ColorTransformStyleLabel(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the ColorTransformStyleLabel class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public ColorTransformStyleLabel(string outerXml)
-        : base(outerXml)
-    {
-    }
+        /// Initializes a new instance of the ColorTransformStyleLabel class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ColorTransformStyleLabel(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
 
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.FillColorList), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.LineColorList), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.EffectColorList), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.TextLineColorList), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.TextFillColorList), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.TextEffectColorList), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
+        /// <summary>
+        /// Initializes a new instance of the ColorTransformStyleLabel class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ColorTransformStyleLabel(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ColorTransformStyleLabel class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public ColorTransformStyleLabel(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Name</para>
+        /// <para>Represents the following attribute in the schema: name</para>
+        /// </summary>
+        [RequiredValidator()]
+        [SchemaAttr(0, "name")]
+        [Index(0)]
+        public StringValue Name { get; set; }
+
+        /// <summary>
+        /// <para>Fill Color List.</para>
+        /// <para>Represents the following element tag in the schema: dgm:fillClrLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public FillColorList FillColorList
+        {
+            get => GetElement<FillColorList>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Line Color List.</para>
+        /// <para>Represents the following element tag in the schema: dgm:linClrLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public LineColorList LineColorList
+        {
+            get => GetElement<LineColorList>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Effect Color List.</para>
+        /// <para>Represents the following element tag in the schema: dgm:effectClrLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public EffectColorList EffectColorList
+        {
+            get => GetElement<EffectColorList>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Text Line Color List.</para>
+        /// <para>Represents the following element tag in the schema: dgm:txLinClrLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public TextLineColorList TextLineColorList
+        {
+            get => GetElement<TextLineColorList>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Text Fill Color List.</para>
+        /// <para>Represents the following element tag in the schema: dgm:txFillClrLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public TextFillColorList TextFillColorList
+        {
+            get => GetElement<TextFillColorList>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Text Effect Color List.</para>
+        /// <para>Represents the following element tag in the schema: dgm:txEffectClrLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public TextEffectColorList TextEffectColorList
+        {
+            get => GetElement<TextEffectColorList>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>ExtensionList.</para>
+        /// <para>Represents the following element tag in the schema: dgm:extLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public ExtensionList ExtensionList
+        {
+            get => GetElement<ExtensionList>();
+            set => SetElement(value);
+        }
+
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-        /// <summary>
-    /// <para> Fill Color List.</para>
-    /// <para> Represents the following element tag in the schema: dgm:fillClrLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public FillColorList FillColorList
-	{
-        get => GetElement<FillColorList>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> Line Color List.</para>
-    /// <para> Represents the following element tag in the schema: dgm:linClrLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public LineColorList LineColorList
-	{
-        get => GetElement<LineColorList>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> Effect Color List.</para>
-    /// <para> Represents the following element tag in the schema: dgm:effectClrLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public EffectColorList EffectColorList
-	{
-        get => GetElement<EffectColorList>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> Text Line Color List.</para>
-    /// <para> Represents the following element tag in the schema: dgm:txLinClrLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public TextLineColorList TextLineColorList
-	{
-        get => GetElement<TextLineColorList>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> Text Fill Color List.</para>
-    /// <para> Represents the following element tag in the schema: dgm:txFillClrLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public TextFillColorList TextFillColorList
-	{
-        get => GetElement<TextFillColorList>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> Text Effect Color List.</para>
-    /// <para> Represents the following element tag in the schema: dgm:txEffectClrLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public TextEffectColorList TextEffectColorList
-	{
-        get => GetElement<TextEffectColorList>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> ExtensionList.</para>
-    /// <para> Represents the following element tag in the schema: dgm:extLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public ExtensionList ExtensionList
-	{
-        get => GetElement<ExtensionList>();
-        set => SetElement(value);
-	}
 
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.FillColorList), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.LineColorList), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.EffectColorList), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.TextLineColorList), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.TextFillColorList), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.TextEffectColorList), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
+        }.Compile();
 
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorTransformStyleLabel>(deep);
+        internal override CompiledParticle CompiledParticle => _constraint;
 
-}
-/// <summary>
-/// <para>Point.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:pt.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>PropertySet &lt;dgm:prSet></description></item>
-///<item><description>ShapeProperties &lt;dgm:spPr></description></item>
-///<item><description>TextBody &lt;dgm:t></description></item>
-///<item><description>PtExtensionList &lt;dgm:extLst></description></item>
-/// </list>
-/// </remarks>
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorTransformStyleLabel>(deep);
+    }
 
+    /// <summary>
+    /// <para>Point.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:pt.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>PropertySet &lt;dgm:prSet></description></item>
+    ///   <item><description>ShapeProperties &lt;dgm:spPr></description></item>
+    ///   <item><description>TextBody &lt;dgm:t></description></item>
+    ///   <item><description>PtExtensionList &lt;dgm:extLst></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(PropertySet))]
     [ChildElementInfo(typeof(ShapeProperties))]
     [ChildElementInfo(typeof(TextBody))]
     [ChildElementInfo(typeof(PtExtensionList))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "pt")]
-public partial class Point : OpenXmlCompositeElement
-{
-    
+    [SchemaAttr(14, "pt")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class Point : OpenXmlCompositeElement
+    {
         /// <summary>
-    /// <para> Model Identifier.</para>
-    /// <para>Represents the following attribute in the schema: modelId </para>
-    /// </summary>
-[RequiredValidator]
-[NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
-[StringValidator(Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}", UnionId = 0)]
-    [SchemaAttr(0, "modelId")]
-    [Index(0)]
-    public StringValue ModelId { get; set; }
-    /// <summary>
-    /// <para> Point Type.</para>
-    /// <para>Represents the following attribute in the schema: type </para>
-    /// </summary>
-[StringValidator(IsToken = true)]
-    [SchemaAttr(0, "type")]
-    [Index(1)]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.PointValues> Type { get; set; }
-    /// <summary>
-    /// <para> Connection Identifier.</para>
-    /// <para>Represents the following attribute in the schema: cxnId </para>
-    /// </summary>
-[NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
-[StringValidator(Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}", UnionId = 0)]
-    [SchemaAttr(0, "cxnId")]
-    [Index(2)]
-    public StringValue ConnectionId { get; set; }
+        /// Initializes a new instance of the Point class.
+        /// </summary>
+        public Point() : base()
+        {
+        }
 
-    /// <summary>
-    /// Initializes a new instance of the Point class.
-    /// </summary>
-    public Point():base(){}
         /// <summary>
-    ///Initializes a new instance of the Point class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public Point(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the Point class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public Point(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the Point class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public Point(string outerXml)
-        : base(outerXml)
-    {
-    }
+        /// Initializes a new instance of the Point class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Point(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
 
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.PropertySet), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ShapeProperties), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.TextBody), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.PtExtensionList), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
+        /// <summary>
+        /// Initializes a new instance of the Point class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Point(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Point class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public Point(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Model Identifier</para>
+        /// <para>Represents the following attribute in the schema: modelId</para>
+        /// </summary>
+        [RequiredValidator()]
+        [NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
+        [StringValidator(Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}", UnionId = 0)]
+        [SchemaAttr(0, "modelId")]
+        [Index(0)]
+        public StringValue ModelId { get; set; }
+
+        /// <summary>
+        /// <para>Point Type</para>
+        /// <para>Represents the following attribute in the schema: type</para>
+        /// </summary>
+        [StringValidator(IsToken = true)]
+        [SchemaAttr(0, "type")]
+        [Index(1)]
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.PointValues> Type { get; set; }
+
+        /// <summary>
+        /// <para>Connection Identifier</para>
+        /// <para>Represents the following attribute in the schema: cxnId</para>
+        /// </summary>
+        [NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
+        [StringValidator(Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}", UnionId = 0)]
+        [SchemaAttr(0, "cxnId")]
+        [Index(2)]
+        public StringValue ConnectionId { get; set; }
+
+        /// <summary>
+        /// <para>Property Set.</para>
+        /// <para>Represents the following element tag in the schema: dgm:prSet.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public PropertySet PropertySet
+        {
+            get => GetElement<PropertySet>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Shape Properties.</para>
+        /// <para>Represents the following element tag in the schema: dgm:spPr.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public ShapeProperties ShapeProperties
+        {
+            get => GetElement<ShapeProperties>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Text Body.</para>
+        /// <para>Represents the following element tag in the schema: dgm:t.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public TextBody TextBody
+        {
+            get => GetElement<TextBody>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>PtExtensionList.</para>
+        /// <para>Represents the following element tag in the schema: dgm:extLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public PtExtensionList PtExtensionList
+        {
+            get => GetElement<PtExtensionList>();
+            set => SetElement(value);
+        }
+
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-        /// <summary>
-    /// <para> Property Set.</para>
-    /// <para> Represents the following element tag in the schema: dgm:prSet </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public PropertySet PropertySet
-	{
-        get => GetElement<PropertySet>();
-        set => SetElement(value);
-	}
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.PropertySet), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ShapeProperties), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.TextBody), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.PtExtensionList), 0, 1)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Point>(deep);
+    }
+
     /// <summary>
-    /// <para> Shape Properties.</para>
-    /// <para> Represents the following element tag in the schema: dgm:spPr </para>
+    /// <para>Connection.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:cxn.</para>
     /// </summary>
     /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    /// </list>
     /// </remark>
-    public ShapeProperties ShapeProperties
-	{
-        get => GetElement<ShapeProperties>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> Text Body.</para>
-    /// <para> Represents the following element tag in the schema: dgm:t </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public TextBody TextBody
-	{
-        get => GetElement<TextBody>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> PtExtensionList.</para>
-    /// <para> Represents the following element tag in the schema: dgm:extLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public PtExtensionList PtExtensionList
-	{
-        get => GetElement<PtExtensionList>();
-        set => SetElement(value);
-	}
-
-
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Point>(deep);
-
-}
-/// <summary>
-/// <para>Connection.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:cxn.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>ExtensionList &lt;dgm:extLst></description></item>
-/// </list>
-/// </remarks>
-
     [ChildElementInfo(typeof(ExtensionList))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "cxn")]
-public partial class Connection : OpenXmlCompositeElement
-{
-    
+    [SchemaAttr(14, "cxn")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class Connection : OpenXmlCompositeElement
+    {
         /// <summary>
-    /// <para> Model Identifier.</para>
-    /// <para>Represents the following attribute in the schema: modelId </para>
-    /// </summary>
-[RequiredValidator]
-[NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
-[StringValidator(Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}", UnionId = 0)]
-    [SchemaAttr(0, "modelId")]
-    [Index(0)]
-    public StringValue ModelId { get; set; }
-    /// <summary>
-    /// <para> Point Type.</para>
-    /// <para>Represents the following attribute in the schema: type </para>
-    /// </summary>
-[StringValidator(IsToken = true)]
-    [SchemaAttr(0, "type")]
-    [Index(1)]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectionValues> Type { get; set; }
-    /// <summary>
-    /// <para> Source Identifier.</para>
-    /// <para>Represents the following attribute in the schema: srcId </para>
-    /// </summary>
-[RequiredValidator]
-[NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
-[StringValidator(Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}", UnionId = 0)]
-    [SchemaAttr(0, "srcId")]
-    [Index(2)]
-    public StringValue SourceId { get; set; }
-    /// <summary>
-    /// <para> Destination Identifier.</para>
-    /// <para>Represents the following attribute in the schema: destId </para>
-    /// </summary>
-[RequiredValidator]
-[NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
-[StringValidator(Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}", UnionId = 0)]
-    [SchemaAttr(0, "destId")]
-    [Index(3)]
-    public StringValue DestinationId { get; set; }
-    /// <summary>
-    /// <para> Source Position.</para>
-    /// <para>Represents the following attribute in the schema: srcOrd </para>
-    /// </summary>
-[RequiredValidator]
-    [SchemaAttr(0, "srcOrd")]
-    [Index(4)]
-    public UInt32Value SourcePosition { get; set; }
-    /// <summary>
-    /// <para> Destination Position.</para>
-    /// <para>Represents the following attribute in the schema: destOrd </para>
-    /// </summary>
-[RequiredValidator]
-    [SchemaAttr(0, "destOrd")]
-    [Index(5)]
-    public UInt32Value DestinationPosition { get; set; }
-    /// <summary>
-    /// <para> Parent Transition Identifier.</para>
-    /// <para>Represents the following attribute in the schema: parTransId </para>
-    /// </summary>
-[NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
-[StringValidator(Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}", UnionId = 0)]
-    [SchemaAttr(0, "parTransId")]
-    [Index(6)]
-    public StringValue ParentTransitionId { get; set; }
-    /// <summary>
-    /// <para> Sibling Transition Identifier.</para>
-    /// <para>Represents the following attribute in the schema: sibTransId </para>
-    /// </summary>
-[NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
-[StringValidator(Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}", UnionId = 0)]
-    [SchemaAttr(0, "sibTransId")]
-    [Index(7)]
-    public StringValue SiblingTransitionId { get; set; }
-    /// <summary>
-    /// <para> Presentation Identifier.</para>
-    /// <para>Represents the following attribute in the schema: presId </para>
-    /// </summary>
-    [SchemaAttr(0, "presId")]
-    [Index(8)]
-    public StringValue PresentationId { get; set; }
+        /// Initializes a new instance of the Connection class.
+        /// </summary>
+        public Connection() : base()
+        {
+        }
 
-    /// <summary>
-    /// Initializes a new instance of the Connection class.
-    /// </summary>
-    public Connection():base(){}
         /// <summary>
-    ///Initializes a new instance of the Connection class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public Connection(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the Connection class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public Connection(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the Connection class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public Connection(string outerXml)
-        : base(outerXml)
-    {
-    }
+        /// Initializes a new instance of the Connection class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Connection(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
 
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
+        /// <summary>
+        /// Initializes a new instance of the Connection class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Connection(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Connection class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public Connection(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Model Identifier</para>
+        /// <para>Represents the following attribute in the schema: modelId</para>
+        /// </summary>
+        [RequiredValidator()]
+        [NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
+        [StringValidator(Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}", UnionId = 0)]
+        [SchemaAttr(0, "modelId")]
+        [Index(0)]
+        public StringValue ModelId { get; set; }
+
+        /// <summary>
+        /// <para>Point Type</para>
+        /// <para>Represents the following attribute in the schema: type</para>
+        /// </summary>
+        [StringValidator(IsToken = true)]
+        [SchemaAttr(0, "type")]
+        [Index(1)]
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectionValues> Type { get; set; }
+
+        /// <summary>
+        /// <para>Source Identifier</para>
+        /// <para>Represents the following attribute in the schema: srcId</para>
+        /// </summary>
+        [RequiredValidator()]
+        [NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
+        [StringValidator(Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}", UnionId = 0)]
+        [SchemaAttr(0, "srcId")]
+        [Index(2)]
+        public StringValue SourceId { get; set; }
+
+        /// <summary>
+        /// <para>Destination Identifier</para>
+        /// <para>Represents the following attribute in the schema: destId</para>
+        /// </summary>
+        [RequiredValidator()]
+        [NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
+        [StringValidator(Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}", UnionId = 0)]
+        [SchemaAttr(0, "destId")]
+        [Index(3)]
+        public StringValue DestinationId { get; set; }
+
+        /// <summary>
+        /// <para>Source Position</para>
+        /// <para>Represents the following attribute in the schema: srcOrd</para>
+        /// </summary>
+        [RequiredValidator()]
+        [SchemaAttr(0, "srcOrd")]
+        [Index(4)]
+        public UInt32Value SourcePosition { get; set; }
+
+        /// <summary>
+        /// <para>Destination Position</para>
+        /// <para>Represents the following attribute in the schema: destOrd</para>
+        /// </summary>
+        [RequiredValidator()]
+        [SchemaAttr(0, "destOrd")]
+        [Index(5)]
+        public UInt32Value DestinationPosition { get; set; }
+
+        /// <summary>
+        /// <para>Parent Transition Identifier</para>
+        /// <para>Represents the following attribute in the schema: parTransId</para>
+        /// </summary>
+        [NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
+        [StringValidator(Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}", UnionId = 0)]
+        [SchemaAttr(0, "parTransId")]
+        [Index(6)]
+        public StringValue ParentTransitionId { get; set; }
+
+        /// <summary>
+        /// <para>Sibling Transition Identifier</para>
+        /// <para>Represents the following attribute in the schema: sibTransId</para>
+        /// </summary>
+        [NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
+        [StringValidator(Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}", UnionId = 0)]
+        [SchemaAttr(0, "sibTransId")]
+        [Index(7)]
+        public StringValue SiblingTransitionId { get; set; }
+
+        /// <summary>
+        /// <para>Presentation Identifier</para>
+        /// <para>Represents the following attribute in the schema: presId</para>
+        /// </summary>
+        [SchemaAttr(0, "presId")]
+        [Index(8)]
+        public StringValue PresentationId { get; set; }
+
+        /// <summary>
+        /// <para>ExtensionList.</para>
+        /// <para>Represents the following element tag in the schema: dgm:extLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public ExtensionList ExtensionList
+        {
+            get => GetElement<ExtensionList>();
+            set => SetElement(value);
+        }
+
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-        /// <summary>
-    /// <para> ExtensionList.</para>
-    /// <para> Represents the following element tag in the schema: dgm:extLst </para>
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Connection>(deep);
+    }
+
+    /// <summary>
+    /// <para>Constraint.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:constr.</para>
     /// </summary>
     /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    /// </list>
     /// </remark>
-    public ExtensionList ExtensionList
-	{
-        get => GetElement<ExtensionList>();
-        set => SetElement(value);
-	}
-
-
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Connection>(deep);
-
-}
-/// <summary>
-/// <para>Constraint.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:constr.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>ExtensionList &lt;dgm:extLst></description></item>
-/// </list>
-/// </remarks>
-
     [ChildElementInfo(typeof(ExtensionList))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "constr")]
-public partial class Constraint : OpenXmlCompositeElement
-{
-    
+    [SchemaAttr(14, "constr")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class Constraint : OpenXmlCompositeElement
+    {
         /// <summary>
-    /// <para> Constraint Type.</para>
-    /// <para>Represents the following attribute in the schema: type </para>
-    /// </summary>
-[RequiredValidator]
-[StringValidator(IsToken = true)]
-    [SchemaAttr(0, "type")]
-    [Index(0)]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintValues> Type { get; set; }
-    /// <summary>
-    /// <para> For.</para>
-    /// <para>Represents the following attribute in the schema: for </para>
-    /// </summary>
-[StringValidator(IsToken = true)]
-    [SchemaAttr(0, "for")]
-    [Index(1)]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintRelationshipValues> For { get; set; }
-    /// <summary>
-    /// <para> For Name.</para>
-    /// <para>Represents the following attribute in the schema: forName </para>
-    /// </summary>
-    [SchemaAttr(0, "forName")]
-    [Index(2)]
-    public StringValue ForName { get; set; }
-    /// <summary>
-    /// <para> Data Point Type.</para>
-    /// <para>Represents the following attribute in the schema: ptType </para>
-    /// </summary>
-[StringValidator(IsToken = true)]
-    [SchemaAttr(0, "ptType")]
-    [Index(3)]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues> PointType { get; set; }
-    /// <summary>
-    /// <para> Reference Type.</para>
-    /// <para>Represents the following attribute in the schema: refType </para>
-    /// </summary>
-[StringValidator(IsToken = true)]
-    [SchemaAttr(0, "refType")]
-    [Index(4)]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintValues> ReferenceType { get; set; }
-    /// <summary>
-    /// <para> Reference For.</para>
-    /// <para>Represents the following attribute in the schema: refFor </para>
-    /// </summary>
-[StringValidator(IsToken = true)]
-    [SchemaAttr(0, "refFor")]
-    [Index(5)]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintRelationshipValues> ReferenceFor { get; set; }
-    /// <summary>
-    /// <para> Reference For Name.</para>
-    /// <para>Represents the following attribute in the schema: refForName </para>
-    /// </summary>
-    [SchemaAttr(0, "refForName")]
-    [Index(6)]
-    public StringValue ReferenceForName { get; set; }
-    /// <summary>
-    /// <para> Reference Point Type.</para>
-    /// <para>Represents the following attribute in the schema: refPtType </para>
-    /// </summary>
-[StringValidator(IsToken = true)]
-    [SchemaAttr(0, "refPtType")]
-    [Index(7)]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues> ReferencePointType { get; set; }
-    /// <summary>
-    /// <para> Operator.</para>
-    /// <para>Represents the following attribute in the schema: op </para>
-    /// </summary>
-[StringValidator(IsToken = true)]
-    [SchemaAttr(0, "op")]
-    [Index(8)]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.BoolOperatorValues> Operator { get; set; }
-    /// <summary>
-    /// <para> Value.</para>
-    /// <para>Represents the following attribute in the schema: val </para>
-    /// </summary>
-    [SchemaAttr(0, "val")]
-    [Index(9)]
-    public DoubleValue Val { get; set; }
-    /// <summary>
-    /// <para> Factor.</para>
-    /// <para>Represents the following attribute in the schema: fact </para>
-    /// </summary>
-    [SchemaAttr(0, "fact")]
-    [Index(10)]
-    public DoubleValue Fact { get; set; }
+        /// Initializes a new instance of the Constraint class.
+        /// </summary>
+        public Constraint() : base()
+        {
+        }
 
-    /// <summary>
-    /// Initializes a new instance of the Constraint class.
-    /// </summary>
-    public Constraint():base(){}
         /// <summary>
-    ///Initializes a new instance of the Constraint class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public Constraint(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the Constraint class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public Constraint(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the Constraint class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public Constraint(string outerXml)
-        : base(outerXml)
-    {
-    }
+        /// Initializes a new instance of the Constraint class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Constraint(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
 
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
+        /// <summary>
+        /// Initializes a new instance of the Constraint class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Constraint(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Constraint class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public Constraint(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Constraint Type</para>
+        /// <para>Represents the following attribute in the schema: type</para>
+        /// </summary>
+        [RequiredValidator()]
+        [StringValidator(IsToken = true)]
+        [SchemaAttr(0, "type")]
+        [Index(0)]
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintValues> Type { get; set; }
+
+        /// <summary>
+        /// <para>For</para>
+        /// <para>Represents the following attribute in the schema: for</para>
+        /// </summary>
+        [StringValidator(IsToken = true)]
+        [SchemaAttr(0, "for")]
+        [Index(1)]
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintRelationshipValues> For { get; set; }
+
+        /// <summary>
+        /// <para>For Name</para>
+        /// <para>Represents the following attribute in the schema: forName</para>
+        /// </summary>
+        [SchemaAttr(0, "forName")]
+        [Index(2)]
+        public StringValue ForName { get; set; }
+
+        /// <summary>
+        /// <para>Data Point Type</para>
+        /// <para>Represents the following attribute in the schema: ptType</para>
+        /// </summary>
+        [StringValidator(IsToken = true)]
+        [SchemaAttr(0, "ptType")]
+        [Index(3)]
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues> PointType { get; set; }
+
+        /// <summary>
+        /// <para>Reference Type</para>
+        /// <para>Represents the following attribute in the schema: refType</para>
+        /// </summary>
+        [StringValidator(IsToken = true)]
+        [SchemaAttr(0, "refType")]
+        [Index(4)]
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintValues> ReferenceType { get; set; }
+
+        /// <summary>
+        /// <para>Reference For</para>
+        /// <para>Represents the following attribute in the schema: refFor</para>
+        /// </summary>
+        [StringValidator(IsToken = true)]
+        [SchemaAttr(0, "refFor")]
+        [Index(5)]
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintRelationshipValues> ReferenceFor { get; set; }
+
+        /// <summary>
+        /// <para>Reference For Name</para>
+        /// <para>Represents the following attribute in the schema: refForName</para>
+        /// </summary>
+        [SchemaAttr(0, "refForName")]
+        [Index(6)]
+        public StringValue ReferenceForName { get; set; }
+
+        /// <summary>
+        /// <para>Reference Point Type</para>
+        /// <para>Represents the following attribute in the schema: refPtType</para>
+        /// </summary>
+        [StringValidator(IsToken = true)]
+        [SchemaAttr(0, "refPtType")]
+        [Index(7)]
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues> ReferencePointType { get; set; }
+
+        /// <summary>
+        /// <para>Operator</para>
+        /// <para>Represents the following attribute in the schema: op</para>
+        /// </summary>
+        [StringValidator(IsToken = true)]
+        [SchemaAttr(0, "op")]
+        [Index(8)]
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.BoolOperatorValues> Operator { get; set; }
+
+        /// <summary>
+        /// <para>Value</para>
+        /// <para>Represents the following attribute in the schema: val</para>
+        /// </summary>
+        [SchemaAttr(0, "val")]
+        [Index(9)]
+        public DoubleValue Val { get; set; }
+
+        /// <summary>
+        /// <para>Factor</para>
+        /// <para>Represents the following attribute in the schema: fact</para>
+        /// </summary>
+        [SchemaAttr(0, "fact")]
+        [Index(10)]
+        public DoubleValue Fact { get; set; }
+
+        /// <summary>
+        /// <para>ExtensionList.</para>
+        /// <para>Represents the following element tag in the schema: dgm:extLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public ExtensionList ExtensionList
+        {
+            get => GetElement<ExtensionList>();
+            set => SetElement(value);
+        }
+
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-        /// <summary>
-    /// <para> ExtensionList.</para>
-    /// <para> Represents the following element tag in the schema: dgm:extLst </para>
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Constraint>(deep);
+    }
+
+    /// <summary>
+    /// <para>Rule.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:rule.</para>
     /// </summary>
     /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    /// </list>
     /// </remark>
-    public ExtensionList ExtensionList
-	{
-        get => GetElement<ExtensionList>();
-        set => SetElement(value);
-	}
-
-
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Constraint>(deep);
-
-}
-/// <summary>
-/// <para>Rule.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:rule.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>ExtensionList &lt;dgm:extLst></description></item>
-/// </list>
-/// </remarks>
-
     [ChildElementInfo(typeof(ExtensionList))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "rule")]
-public partial class Rule : OpenXmlCompositeElement
-{
-    
+    [SchemaAttr(14, "rule")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class Rule : OpenXmlCompositeElement
+    {
         /// <summary>
-    /// <para> Constraint Type.</para>
-    /// <para>Represents the following attribute in the schema: type </para>
-    /// </summary>
-[RequiredValidator]
-[StringValidator(IsToken = true)]
-    [SchemaAttr(0, "type")]
-    [Index(0)]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintValues> Type { get; set; }
-    /// <summary>
-    /// <para> For.</para>
-    /// <para>Represents the following attribute in the schema: for </para>
-    /// </summary>
-[StringValidator(IsToken = true)]
-    [SchemaAttr(0, "for")]
-    [Index(1)]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintRelationshipValues> For { get; set; }
-    /// <summary>
-    /// <para> For Name.</para>
-    /// <para>Represents the following attribute in the schema: forName </para>
-    /// </summary>
-    [SchemaAttr(0, "forName")]
-    [Index(2)]
-    public StringValue ForName { get; set; }
-    /// <summary>
-    /// <para> Data Point Type.</para>
-    /// <para>Represents the following attribute in the schema: ptType </para>
-    /// </summary>
-[StringValidator(IsToken = true)]
-    [SchemaAttr(0, "ptType")]
-    [Index(3)]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues> PointType { get; set; }
-    /// <summary>
-    /// <para> Value.</para>
-    /// <para>Represents the following attribute in the schema: val </para>
-    /// </summary>
-    [SchemaAttr(0, "val")]
-    [Index(4)]
-    public DoubleValue Val { get; set; }
-    /// <summary>
-    /// <para> Factor.</para>
-    /// <para>Represents the following attribute in the schema: fact </para>
-    /// </summary>
-    [SchemaAttr(0, "fact")]
-    [Index(5)]
-    public DoubleValue Fact { get; set; }
-    /// <summary>
-    /// <para> Max Value.</para>
-    /// <para>Represents the following attribute in the schema: max </para>
-    /// </summary>
-    [SchemaAttr(0, "max")]
-    [Index(6)]
-    public DoubleValue Max { get; set; }
+        /// Initializes a new instance of the Rule class.
+        /// </summary>
+        public Rule() : base()
+        {
+        }
 
-    /// <summary>
-    /// Initializes a new instance of the Rule class.
-    /// </summary>
-    public Rule():base(){}
         /// <summary>
-    ///Initializes a new instance of the Rule class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public Rule(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the Rule class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public Rule(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the Rule class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public Rule(string outerXml)
-        : base(outerXml)
-    {
-    }
+        /// Initializes a new instance of the Rule class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Rule(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
 
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
+        /// <summary>
+        /// Initializes a new instance of the Rule class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Rule(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Rule class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public Rule(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Constraint Type</para>
+        /// <para>Represents the following attribute in the schema: type</para>
+        /// </summary>
+        [RequiredValidator()]
+        [StringValidator(IsToken = true)]
+        [SchemaAttr(0, "type")]
+        [Index(0)]
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintValues> Type { get; set; }
+
+        /// <summary>
+        /// <para>For</para>
+        /// <para>Represents the following attribute in the schema: for</para>
+        /// </summary>
+        [StringValidator(IsToken = true)]
+        [SchemaAttr(0, "for")]
+        [Index(1)]
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintRelationshipValues> For { get; set; }
+
+        /// <summary>
+        /// <para>For Name</para>
+        /// <para>Represents the following attribute in the schema: forName</para>
+        /// </summary>
+        [SchemaAttr(0, "forName")]
+        [Index(2)]
+        public StringValue ForName { get; set; }
+
+        /// <summary>
+        /// <para>Data Point Type</para>
+        /// <para>Represents the following attribute in the schema: ptType</para>
+        /// </summary>
+        [StringValidator(IsToken = true)]
+        [SchemaAttr(0, "ptType")]
+        [Index(3)]
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues> PointType { get; set; }
+
+        /// <summary>
+        /// <para>Value</para>
+        /// <para>Represents the following attribute in the schema: val</para>
+        /// </summary>
+        [SchemaAttr(0, "val")]
+        [Index(4)]
+        public DoubleValue Val { get; set; }
+
+        /// <summary>
+        /// <para>Factor</para>
+        /// <para>Represents the following attribute in the schema: fact</para>
+        /// </summary>
+        [SchemaAttr(0, "fact")]
+        [Index(5)]
+        public DoubleValue Fact { get; set; }
+
+        /// <summary>
+        /// <para>Max Value</para>
+        /// <para>Represents the following attribute in the schema: max</para>
+        /// </summary>
+        [SchemaAttr(0, "max")]
+        [Index(6)]
+        public DoubleValue Max { get; set; }
+
+        /// <summary>
+        /// <para>ExtensionList.</para>
+        /// <para>Represents the following element tag in the schema: dgm:extLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public ExtensionList ExtensionList
+        {
+            get => GetElement<ExtensionList>();
+            set => SetElement(value);
+        }
+
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Rule>(deep);
+    }
+
+    /// <summary>
+    /// <para>Shape Adjust.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:adj.</para>
+    /// </summary>
+    [SchemaAttr(14, "adj")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class Adjust : OpenXmlLeafElement
+    {
         /// <summary>
-    /// <para> ExtensionList.</para>
-    /// <para> Represents the following element tag in the schema: dgm:extLst </para>
+        /// Initializes a new instance of the Adjust class.
+        /// </summary>
+        public Adjust() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>Adjust Handle Index</para>
+        /// <para>Represents the following attribute in the schema: idx</para>
+        /// </summary>
+        [RequiredValidator()]
+        [NumberValidator(MinInclusive = 1L)]
+        [SchemaAttr(0, "idx")]
+        [Index(0)]
+        public UInt32Value Index { get; set; }
+
+        /// <summary>
+        /// <para>Value</para>
+        /// <para>Represents the following attribute in the schema: val</para>
+        /// </summary>
+        [RequiredValidator()]
+        [SchemaAttr(0, "val")]
+        [Index(1)]
+        public DoubleValue Val { get; set; }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Adjust>(deep);
+    }
+
+    /// <summary>
+    /// <para>Shape Adjust List.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:adjLst.</para>
     /// </summary>
     /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>Adjust &lt;dgm:adj></description></item>
+    /// </list>
     /// </remark>
-    public ExtensionList ExtensionList
-	{
-        get => GetElement<ExtensionList>();
-        set => SetElement(value);
-	}
-
-
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Rule>(deep);
-
-}
-/// <summary>
-/// <para>Shape Adjust.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:adj.</para>
-/// </summary>
-
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "adj")]
-public partial class Adjust : OpenXmlLeafElement
-{
-    
-        /// <summary>
-    /// <para> Adjust Handle Index.</para>
-    /// <para>Represents the following attribute in the schema: idx </para>
-    /// </summary>
-[RequiredValidator]
-[NumberValidator(MinInclusive = 1)]
-    [SchemaAttr(0, "idx")]
-    [Index(0)]
-    public UInt32Value Index { get; set; }
-    /// <summary>
-    /// <para> Value.</para>
-    /// <para>Represents the following attribute in the schema: val </para>
-    /// </summary>
-[RequiredValidator]
-    [SchemaAttr(0, "val")]
-    [Index(1)]
-    public DoubleValue Val { get; set; }
-
-    /// <summary>
-    /// Initializes a new instance of the Adjust class.
-    /// </summary>
-    public Adjust():base(){}
-    
-    
-
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Adjust>(deep);
-
-}
-/// <summary>
-/// <para>Shape Adjust List.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:adjLst.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>Adjust &lt;dgm:adj></description></item>
-/// </list>
-/// </remarks>
-
     [ChildElementInfo(typeof(Adjust))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "adjLst")]
-public partial class AdjustList : OpenXmlCompositeElement
-{
-    
-    
-    /// <summary>
-    /// Initializes a new instance of the AdjustList class.
-    /// </summary>
-    public AdjustList():base(){}
+    [SchemaAttr(14, "adjLst")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class AdjustList : OpenXmlCompositeElement
+    {
         /// <summary>
-    ///Initializes a new instance of the AdjustList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public AdjustList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the AdjustList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public AdjustList(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the AdjustList class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public AdjustList(string outerXml)
-        : base(outerXml)
-    {
-    }
+        /// Initializes a new instance of the AdjustList class.
+        /// </summary>
+        public AdjustList() : base()
+        {
+        }
 
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Adjust), 0, 0)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<AdjustList>(deep);
-
-}
-/// <summary>
-/// <para>Parameter.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:param.</para>
-/// </summary>
-
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "param")]
-public partial class Parameter : OpenXmlLeafElement
-{
-    
         /// <summary>
-    /// <para> Parameter Type.</para>
-    /// <para>Represents the following attribute in the schema: type </para>
-    /// </summary>
-[RequiredValidator]
-[StringValidator(IsToken = true)]
-    [SchemaAttr(0, "type")]
-    [Index(0)]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ParameterIdValues> Type { get; set; }
-    /// <summary>
-    /// <para> Value.</para>
-    /// <para>Represents the following attribute in the schema: val </para>
-    /// </summary>
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HorizontalAlignmentValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.VerticalAlignmentValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ChildDirectionValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ChildAlignmentValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.SecondaryChildAlignmentValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.LinearDirectionValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.SecondaryLinearDirectionValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.StartingElementValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.BendPointValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorRoutingValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ArrowheadStyleValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorDimensionValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.RotationPathValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.CenterShapeMappingValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.NodeHorizontalAlignmentValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.NodeVerticalAlignmentValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FallbackDimensionValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextDirectionValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.PyramidAccentPositionValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.PyramidAccentTextMarginValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextBlockDirectionValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAnchorHorizontalValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAnchorVerticalValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAlignmentValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AutoTextRotationValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.GrowDirectionValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FlowDirectionValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ContinueDirectionValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.BreakpointValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OffsetValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyAlignmentValues>), UnionId = 0)]
-[NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
-[NumberValidator(SimpleType = typeof(DoubleValue), UnionId = 0)]
-[NumberValidator(SimpleType = typeof(BooleanValue), UnionId = 0)]
-[StringValidator(UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorPointValues>), UnionId = 0)]
-    [SchemaAttr(0, "val")]
-    [Index(1)]
-    public StringValue Val { get; set; }
+        /// Initializes a new instance of the AdjustList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public AdjustList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the AdjustList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public AdjustList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the AdjustList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public AdjustList(string outerXml) : base(outerXml)
+        {
+        }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Adjust), 0, 0)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<AdjustList>(deep);
+    }
 
     /// <summary>
-    /// Initializes a new instance of the Parameter class.
+    /// <para>Parameter.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:param.</para>
     /// </summary>
-    public Parameter():base(){}
-    
-    
+    [SchemaAttr(14, "param")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class Parameter : OpenXmlLeafElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the Parameter class.
+        /// </summary>
+        public Parameter() : base()
+        {
+        }
 
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Parameter>(deep);
+        /// <summary>
+        /// <para>Parameter Type</para>
+        /// <para>Represents the following attribute in the schema: type</para>
+        /// </summary>
+        [RequiredValidator()]
+        [StringValidator(IsToken = true)]
+        [SchemaAttr(0, "type")]
+        [Index(0)]
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ParameterIdValues> Type { get; set; }
 
-}
-/// <summary>
-/// <para>Algorithm.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:alg.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>Parameter &lt;dgm:param></description></item>
-///<item><description>ExtensionList &lt;dgm:extLst></description></item>
-/// </list>
-/// </remarks>
+        /// <summary>
+        /// <para>Value</para>
+        /// <para>Represents the following attribute in the schema: val</para>
+        /// </summary>
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HorizontalAlignmentValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.VerticalAlignmentValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ChildDirectionValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ChildAlignmentValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.SecondaryChildAlignmentValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.LinearDirectionValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.SecondaryLinearDirectionValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.StartingElementValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.BendPointValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorRoutingValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ArrowheadStyleValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorDimensionValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.RotationPathValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.CenterShapeMappingValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.NodeHorizontalAlignmentValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.NodeVerticalAlignmentValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FallbackDimensionValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextDirectionValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.PyramidAccentPositionValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.PyramidAccentTextMarginValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextBlockDirectionValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAnchorHorizontalValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAnchorVerticalValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAlignmentValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AutoTextRotationValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.GrowDirectionValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FlowDirectionValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ContinueDirectionValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.BreakpointValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OffsetValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyAlignmentValues>), UnionId = 0)]
+        [NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
+        [NumberValidator(SimpleType = typeof(DoubleValue), UnionId = 0)]
+        [NumberValidator(SimpleType = typeof(BooleanValue), UnionId = 0)]
+        [StringValidator(UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorPointValues>), UnionId = 0)]
+        [SchemaAttr(0, "val")]
+        [Index(1)]
+        public StringValue Val { get; set; }
 
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Parameter>(deep);
+    }
+
+    /// <summary>
+    /// <para>Algorithm.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:alg.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>Parameter &lt;dgm:param></description></item>
+    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(Parameter))]
     [ChildElementInfo(typeof(ExtensionList))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "alg")]
-public partial class Algorithm : OpenXmlCompositeElement
-{
-    
+    [SchemaAttr(14, "alg")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class Algorithm : OpenXmlCompositeElement
+    {
         /// <summary>
-    /// <para> Algorithm Type.</para>
-    /// <para>Represents the following attribute in the schema: type </para>
-    /// </summary>
-[RequiredValidator]
-[StringValidator(IsToken = true)]
-    [SchemaAttr(0, "type")]
-    [Index(0)]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AlgorithmValues> Type { get; set; }
-    /// <summary>
-    /// <para> Revision Number.</para>
-    /// <para>Represents the following attribute in the schema: rev </para>
-    /// </summary>
-    [SchemaAttr(0, "rev")]
-    [Index(1)]
-    public UInt32Value Revision { get; set; }
+        /// Initializes a new instance of the Algorithm class.
+        /// </summary>
+        public Algorithm() : base()
+        {
+        }
 
-    /// <summary>
-    /// Initializes a new instance of the Algorithm class.
-    /// </summary>
-    public Algorithm():base(){}
         /// <summary>
-    ///Initializes a new instance of the Algorithm class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public Algorithm(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
+        /// Initializes a new instance of the Algorithm class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Algorithm(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Algorithm class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Algorithm(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Algorithm class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public Algorithm(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Algorithm Type</para>
+        /// <para>Represents the following attribute in the schema: type</para>
+        /// </summary>
+        [RequiredValidator()]
+        [StringValidator(IsToken = true)]
+        [SchemaAttr(0, "type")]
+        [Index(0)]
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AlgorithmValues> Type { get; set; }
+
+        /// <summary>
+        /// <para>Revision Number</para>
+        /// <para>Represents the following attribute in the schema: rev</para>
+        /// </summary>
+        [SchemaAttr(0, "rev")]
+        [Index(1)]
+        public UInt32Value Revision { get; set; }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Parameter), 0, 0),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Algorithm>(deep);
     }
+
     /// <summary>
-    /// Initializes a new instance of the Algorithm class with the specified child elements.
+    /// <para>Shape.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:shape.</para>
     /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public Algorithm(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the Algorithm class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public Algorithm(string outerXml)
-        : base(outerXml)
-    {
-    }
-
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Parameter), 0, 0),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Algorithm>(deep);
-
-}
-/// <summary>
-/// <para>Shape.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:shape.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>AdjustList &lt;dgm:adjLst></description></item>
-///<item><description>ExtensionList &lt;dgm:extLst></description></item>
-/// </list>
-/// </remarks>
-
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>AdjustList &lt;dgm:adjLst></description></item>
+    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(AdjustList))]
     [ChildElementInfo(typeof(ExtensionList))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "shape")]
-public partial class Shape : OpenXmlCompositeElement
-{
-    
+    [SchemaAttr(14, "shape")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class Shape : OpenXmlCompositeElement
+    {
         /// <summary>
-    /// <para> Rotation.</para>
-    /// <para>Represents the following attribute in the schema: rot </para>
-    /// </summary>
-    [SchemaAttr(0, "rot")]
-    [Index(0)]
-    public DoubleValue Rotation { get; set; }
-    /// <summary>
-    /// <para> Shape Type.</para>
-    /// <para>Represents the following attribute in the schema: type </para>
-    /// </summary>
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.ShapeTypeValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShapeValues>), UnionId = 0)]
-    [SchemaAttr(0, "type")]
-    [Index(1)]
-    public StringValue Type { get; set; }
-    /// <summary>
-    /// <para> Relationship to Image Part.</para>
-    /// <para>Represents the following attribute in the schema: r:blip </para>
-    /// </summary>
-///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-///</remark>
-    [SchemaAttr(19, "blip")]
-    [Index(2)]
-    public StringValue Blip { get; set; }
-    /// <summary>
-    /// <para> Z-Order Offset.</para>
-    /// <para>Represents the following attribute in the schema: zOrderOff </para>
-    /// </summary>
-    [SchemaAttr(0, "zOrderOff")]
-    [Index(3)]
-    public Int32Value ZOrderOffset { get; set; }
-    /// <summary>
-    /// <para> Hide Geometry.</para>
-    /// <para>Represents the following attribute in the schema: hideGeom </para>
-    /// </summary>
-    [SchemaAttr(0, "hideGeom")]
-    [Index(4)]
-    public BooleanValue HideGeometry { get; set; }
-    /// <summary>
-    /// <para> Prevent Text Editing.</para>
-    /// <para>Represents the following attribute in the schema: lkTxEntry </para>
-    /// </summary>
-    [SchemaAttr(0, "lkTxEntry")]
-    [Index(5)]
-    public BooleanValue LockedText { get; set; }
-    /// <summary>
-    /// <para> Image Placeholder.</para>
-    /// <para>Represents the following attribute in the schema: blipPhldr </para>
-    /// </summary>
-    [SchemaAttr(0, "blipPhldr")]
-    [Index(6)]
-    public BooleanValue BlipPlaceholder { get; set; }
+        /// Initializes a new instance of the Shape class.
+        /// </summary>
+        public Shape() : base()
+        {
+        }
 
-    /// <summary>
-    /// Initializes a new instance of the Shape class.
-    /// </summary>
-    public Shape():base(){}
         /// <summary>
-    ///Initializes a new instance of the Shape class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public Shape(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the Shape class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public Shape(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the Shape class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public Shape(string outerXml)
-        : base(outerXml)
-    {
-    }
+        /// Initializes a new instance of the Shape class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Shape(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
 
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.AdjustList), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
+        /// <summary>
+        /// Initializes a new instance of the Shape class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Shape(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Shape class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public Shape(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Rotation</para>
+        /// <para>Represents the following attribute in the schema: rot</para>
+        /// </summary>
+        [SchemaAttr(0, "rot")]
+        [Index(0)]
+        public DoubleValue Rotation { get; set; }
+
+        /// <summary>
+        /// <para>Shape Type</para>
+        /// <para>Represents the following attribute in the schema: type</para>
+        /// </summary>
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.ShapeTypeValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShapeValues>), UnionId = 0)]
+        [SchemaAttr(0, "type")]
+        [Index(1)]
+        public StringValue Type { get; set; }
+
+        /// <summary>
+        /// <para>Relationship to Image Part</para>
+        /// <para>Represents the following attribute in the schema: r:blip</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
+        /// </remark>
+        [SchemaAttr(19, "blip")]
+        [Index(2)]
+        public StringValue Blip { get; set; }
+
+        /// <summary>
+        /// <para>Z-Order Offset</para>
+        /// <para>Represents the following attribute in the schema: zOrderOff</para>
+        /// </summary>
+        [SchemaAttr(0, "zOrderOff")]
+        [Index(3)]
+        public Int32Value ZOrderOffset { get; set; }
+
+        /// <summary>
+        /// <para>Hide Geometry</para>
+        /// <para>Represents the following attribute in the schema: hideGeom</para>
+        /// </summary>
+        [SchemaAttr(0, "hideGeom")]
+        [Index(4)]
+        public BooleanValue HideGeometry { get; set; }
+
+        /// <summary>
+        /// <para>Prevent Text Editing</para>
+        /// <para>Represents the following attribute in the schema: lkTxEntry</para>
+        /// </summary>
+        [SchemaAttr(0, "lkTxEntry")]
+        [Index(5)]
+        public BooleanValue LockedText { get; set; }
+
+        /// <summary>
+        /// <para>Image Placeholder</para>
+        /// <para>Represents the following attribute in the schema: blipPhldr</para>
+        /// </summary>
+        [SchemaAttr(0, "blipPhldr")]
+        [Index(6)]
+        public BooleanValue BlipPlaceholder { get; set; }
+
+        /// <summary>
+        /// <para>Shape Adjust List.</para>
+        /// <para>Represents the following element tag in the schema: dgm:adjLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public AdjustList AdjustList
+        {
+            get => GetElement<AdjustList>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>ExtensionList.</para>
+        /// <para>Represents the following element tag in the schema: dgm:extLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public ExtensionList ExtensionList
+        {
+            get => GetElement<ExtensionList>();
+            set => SetElement(value);
+        }
+
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-        /// <summary>
-    /// <para> Shape Adjust List.</para>
-    /// <para> Represents the following element tag in the schema: dgm:adjLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public AdjustList AdjustList
-	{
-        get => GetElement<AdjustList>();
-        set => SetElement(value);
-	}
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.AdjustList), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shape>(deep);
+    }
+
     /// <summary>
-    /// <para> ExtensionList.</para>
-    /// <para> Represents the following element tag in the schema: dgm:extLst </para>
+    /// <para>Presentation Of.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:presOf.</para>
     /// </summary>
     /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    /// </list>
     /// </remark>
-    public ExtensionList ExtensionList
-	{
-        get => GetElement<ExtensionList>();
-        set => SetElement(value);
-	}
-
-
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shape>(deep);
-
-}
-/// <summary>
-/// <para>Presentation Of.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:presOf.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>ExtensionList &lt;dgm:extLst></description></item>
-/// </list>
-/// </remarks>
-
     [ChildElementInfo(typeof(ExtensionList))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "presOf")]
-public partial class PresentationOf : OpenXmlCompositeElement
-{
-    
+    [SchemaAttr(14, "presOf")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class PresentationOf : OpenXmlCompositeElement
+    {
         /// <summary>
-    /// <para> Axis.</para>
-    /// <para>Represents the following attribute in the schema: axis </para>
-    /// </summary>
-    [SchemaAttr(0, "axis")]
-    [Index(0)]
-    public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AxisValues>> Axis { get; set; }
-    /// <summary>
-    /// <para> Data Point Type.</para>
-    /// <para>Represents the following attribute in the schema: ptType </para>
-    /// </summary>
-    [SchemaAttr(0, "ptType")]
-    [Index(1)]
-    public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>> PointType { get; set; }
-    /// <summary>
-    /// <para> Hide Last Transition.</para>
-    /// <para>Represents the following attribute in the schema: hideLastTrans </para>
-    /// </summary>
-    [SchemaAttr(0, "hideLastTrans")]
-    [Index(2)]
-    public ListValue<BooleanValue> HideLastTrans { get; set; }
-    /// <summary>
-    /// <para> Start.</para>
-    /// <para>Represents the following attribute in the schema: st </para>
-    /// </summary>
-    [SchemaAttr(0, "st")]
-    [Index(3)]
-    public ListValue<Int32Value> Start { get; set; }
-    /// <summary>
-    /// <para> Count.</para>
-    /// <para>Represents the following attribute in the schema: cnt </para>
-    /// </summary>
-    [SchemaAttr(0, "cnt")]
-    [Index(4)]
-    public ListValue<UInt32Value> Count { get; set; }
-    /// <summary>
-    /// <para> Step.</para>
-    /// <para>Represents the following attribute in the schema: step </para>
-    /// </summary>
-    [SchemaAttr(0, "step")]
-    [Index(5)]
-    public ListValue<Int32Value> Step { get; set; }
+        /// Initializes a new instance of the PresentationOf class.
+        /// </summary>
+        public PresentationOf() : base()
+        {
+        }
 
-    /// <summary>
-    /// Initializes a new instance of the PresentationOf class.
-    /// </summary>
-    public PresentationOf():base(){}
         /// <summary>
-    ///Initializes a new instance of the PresentationOf class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public PresentationOf(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the PresentationOf class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public PresentationOf(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the PresentationOf class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public PresentationOf(string outerXml)
-        : base(outerXml)
-    {
-    }
+        /// Initializes a new instance of the PresentationOf class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public PresentationOf(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
 
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
+        /// <summary>
+        /// Initializes a new instance of the PresentationOf class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public PresentationOf(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PresentationOf class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public PresentationOf(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Axis</para>
+        /// <para>Represents the following attribute in the schema: axis</para>
+        /// </summary>
+        [SchemaAttr(0, "axis")]
+        [Index(0)]
+        public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AxisValues>> Axis { get; set; }
+
+        /// <summary>
+        /// <para>Data Point Type</para>
+        /// <para>Represents the following attribute in the schema: ptType</para>
+        /// </summary>
+        [SchemaAttr(0, "ptType")]
+        [Index(1)]
+        public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>> PointType { get; set; }
+
+        /// <summary>
+        /// <para>Hide Last Transition</para>
+        /// <para>Represents the following attribute in the schema: hideLastTrans</para>
+        /// </summary>
+        [SchemaAttr(0, "hideLastTrans")]
+        [Index(2)]
+        public ListValue<BooleanValue> HideLastTrans { get; set; }
+
+        /// <summary>
+        /// <para>Start</para>
+        /// <para>Represents the following attribute in the schema: st</para>
+        /// </summary>
+        [SchemaAttr(0, "st")]
+        [Index(3)]
+        public ListValue<Int32Value> Start { get; set; }
+
+        /// <summary>
+        /// <para>Count</para>
+        /// <para>Represents the following attribute in the schema: cnt</para>
+        /// </summary>
+        [SchemaAttr(0, "cnt")]
+        [Index(4)]
+        public ListValue<UInt32Value> Count { get; set; }
+
+        /// <summary>
+        /// <para>Step</para>
+        /// <para>Represents the following attribute in the schema: step</para>
+        /// </summary>
+        [SchemaAttr(0, "step")]
+        [Index(5)]
+        public ListValue<Int32Value> Step { get; set; }
+
+        /// <summary>
+        /// <para>ExtensionList.</para>
+        /// <para>Represents the following element tag in the schema: dgm:extLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public ExtensionList ExtensionList
+        {
+            get => GetElement<ExtensionList>();
+            set => SetElement(value);
+        }
+
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-        /// <summary>
-    /// <para> ExtensionList.</para>
-    /// <para> Represents the following element tag in the schema: dgm:extLst </para>
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<PresentationOf>(deep);
+    }
+
+    /// <summary>
+    /// <para>Constraint List.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:constrLst.</para>
     /// </summary>
     /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>Constraint &lt;dgm:constr></description></item>
+    /// </list>
     /// </remark>
-    public ExtensionList ExtensionList
-	{
-        get => GetElement<ExtensionList>();
-        set => SetElement(value);
-	}
-
-
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<PresentationOf>(deep);
-
-}
-/// <summary>
-/// <para>Constraint List.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:constrLst.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>Constraint &lt;dgm:constr></description></item>
-/// </list>
-/// </remarks>
-
     [ChildElementInfo(typeof(Constraint))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "constrLst")]
-public partial class Constraints : OpenXmlCompositeElement
-{
-    
-    
-    /// <summary>
-    /// Initializes a new instance of the Constraints class.
-    /// </summary>
-    public Constraints():base(){}
+    [SchemaAttr(14, "constrLst")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class Constraints : OpenXmlCompositeElement
+    {
         /// <summary>
-    ///Initializes a new instance of the Constraints class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public Constraints(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
+        /// Initializes a new instance of the Constraints class.
+        /// </summary>
+        public Constraints() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Constraints class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Constraints(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Constraints class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Constraints(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Constraints class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public Constraints(string outerXml) : base(outerXml)
+        {
+        }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Constraint), 0, 0)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Constraints>(deep);
     }
+
     /// <summary>
-    /// Initializes a new instance of the Constraints class with the specified child elements.
+    /// <para>Rule List.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:ruleLst.</para>
     /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public Constraints(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the Constraints class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public Constraints(string outerXml)
-        : base(outerXml)
-    {
-    }
-
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Constraint), 0, 0)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Constraints>(deep);
-
-}
-/// <summary>
-/// <para>Rule List.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:ruleLst.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>Rule &lt;dgm:rule></description></item>
-/// </list>
-/// </remarks>
-
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>Rule &lt;dgm:rule></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(Rule))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "ruleLst")]
-public partial class RuleList : OpenXmlCompositeElement
-{
-    
-    
-    /// <summary>
-    /// Initializes a new instance of the RuleList class.
-    /// </summary>
-    public RuleList():base(){}
+    [SchemaAttr(14, "ruleLst")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class RuleList : OpenXmlCompositeElement
+    {
         /// <summary>
-    ///Initializes a new instance of the RuleList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public RuleList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the RuleList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public RuleList(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the RuleList class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public RuleList(string outerXml)
-        : base(outerXml)
-    {
-    }
+        /// Initializes a new instance of the RuleList class.
+        /// </summary>
+        public RuleList() : base()
+        {
+        }
 
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Rule), 0, 0)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<RuleList>(deep);
-
-}
-/// <summary>
-/// <para>Variable List.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:varLst.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>OrganizationChart &lt;dgm:orgChart></description></item>
-///<item><description>MaxNumberOfChildren &lt;dgm:chMax></description></item>
-///<item><description>PreferredNumberOfChildren &lt;dgm:chPref></description></item>
-///<item><description>BulletEnabled &lt;dgm:bulletEnabled></description></item>
-///<item><description>Direction &lt;dgm:dir></description></item>
-///<item><description>HierarchyBranch &lt;dgm:hierBranch></description></item>
-///<item><description>AnimateOneByOne &lt;dgm:animOne></description></item>
-///<item><description>AnimationLevel &lt;dgm:animLvl></description></item>
-///<item><description>ResizeHandles &lt;dgm:resizeHandles></description></item>
-/// </list>
-/// </remarks>
-
-[SchemaAttr(14, "varLst")]
-[OfficeAvailability(FileFormatVersions.Office2007)]
-public partial class VariableList : LayoutVariablePropertySetType
-{
-    /// <summary>
-    /// Initializes a new instance of the VariableList class.
-    /// </summary>
-    public VariableList():base(){}
         /// <summary>
-    ///Initializes a new instance of the VariableList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public VariableList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the VariableList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public VariableList(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the VariableList class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public VariableList(string outerXml)
-        : base(outerXml)
-    {
-    }
+        /// Initializes a new instance of the RuleList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public RuleList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
 
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VariableList>(deep);
-
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.OrganizationChart), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.MaxNumberOfChildren), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.PreferredNumberOfChildren), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.BulletEnabled), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Direction), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyBranch), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.AnimateOneByOne), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevel), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandles), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-}
-/// <summary>
-/// <para>Presentation Layout Variables.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:presLayoutVars.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>OrganizationChart &lt;dgm:orgChart></description></item>
-///<item><description>MaxNumberOfChildren &lt;dgm:chMax></description></item>
-///<item><description>PreferredNumberOfChildren &lt;dgm:chPref></description></item>
-///<item><description>BulletEnabled &lt;dgm:bulletEnabled></description></item>
-///<item><description>Direction &lt;dgm:dir></description></item>
-///<item><description>HierarchyBranch &lt;dgm:hierBranch></description></item>
-///<item><description>AnimateOneByOne &lt;dgm:animOne></description></item>
-///<item><description>AnimationLevel &lt;dgm:animLvl></description></item>
-///<item><description>ResizeHandles &lt;dgm:resizeHandles></description></item>
-/// </list>
-/// </remarks>
-
-[SchemaAttr(14, "presLayoutVars")]
-[OfficeAvailability(FileFormatVersions.Office2007)]
-public partial class PresentationLayoutVariables : LayoutVariablePropertySetType
-{
-    /// <summary>
-    /// Initializes a new instance of the PresentationLayoutVariables class.
-    /// </summary>
-    public PresentationLayoutVariables():base(){}
         /// <summary>
-    ///Initializes a new instance of the PresentationLayoutVariables class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public PresentationLayoutVariables(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
+        /// Initializes a new instance of the RuleList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public RuleList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the RuleList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public RuleList(string outerXml) : base(outerXml)
+        {
+        }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Rule), 0, 0)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<RuleList>(deep);
     }
+
     /// <summary>
-    /// Initializes a new instance of the PresentationLayoutVariables class with the specified child elements.
+    /// <para>Variable List.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:varLst.</para>
     /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public PresentationLayoutVariables(params OpenXmlElement[] childElements) : base(childElements)
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>OrganizationChart &lt;dgm:orgChart></description></item>
+    ///   <item><description>MaxNumberOfChildren &lt;dgm:chMax></description></item>
+    ///   <item><description>PreferredNumberOfChildren &lt;dgm:chPref></description></item>
+    ///   <item><description>BulletEnabled &lt;dgm:bulletEnabled></description></item>
+    ///   <item><description>Direction &lt;dgm:dir></description></item>
+    ///   <item><description>HierarchyBranch &lt;dgm:hierBranch></description></item>
+    ///   <item><description>AnimateOneByOne &lt;dgm:animOne></description></item>
+    ///   <item><description>AnimationLevel &lt;dgm:animLvl></description></item>
+    ///   <item><description>ResizeHandles &lt;dgm:resizeHandles></description></item>
+    /// </list>
+    /// </remark>
+    [SchemaAttr(14, "varLst")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class VariableList : LayoutVariablePropertySetType
     {
+        /// <summary>
+        /// Initializes a new instance of the VariableList class.
+        /// </summary>
+        public VariableList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the VariableList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public VariableList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the VariableList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public VariableList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the VariableList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public VariableList(string outerXml) : base(outerXml)
+        {
+        }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.OrganizationChart), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.MaxNumberOfChildren), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.PreferredNumberOfChildren), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.BulletEnabled), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Direction), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyBranch), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.AnimateOneByOne), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevel), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandles), 0, 1)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<VariableList>(deep);
     }
+
     /// <summary>
-    /// Initializes a new instance of the PresentationLayoutVariables class from outer XML.
+    /// <para>Presentation Layout Variables.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:presLayoutVars.</para>
     /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public PresentationLayoutVariables(string outerXml)
-        : base(outerXml)
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>OrganizationChart &lt;dgm:orgChart></description></item>
+    ///   <item><description>MaxNumberOfChildren &lt;dgm:chMax></description></item>
+    ///   <item><description>PreferredNumberOfChildren &lt;dgm:chPref></description></item>
+    ///   <item><description>BulletEnabled &lt;dgm:bulletEnabled></description></item>
+    ///   <item><description>Direction &lt;dgm:dir></description></item>
+    ///   <item><description>HierarchyBranch &lt;dgm:hierBranch></description></item>
+    ///   <item><description>AnimateOneByOne &lt;dgm:animOne></description></item>
+    ///   <item><description>AnimationLevel &lt;dgm:animLvl></description></item>
+    ///   <item><description>ResizeHandles &lt;dgm:resizeHandles></description></item>
+    /// </list>
+    /// </remark>
+    [SchemaAttr(14, "presLayoutVars")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class PresentationLayoutVariables : LayoutVariablePropertySetType
     {
+        /// <summary>
+        /// Initializes a new instance of the PresentationLayoutVariables class.
+        /// </summary>
+        public PresentationLayoutVariables() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PresentationLayoutVariables class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public PresentationLayoutVariables(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PresentationLayoutVariables class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public PresentationLayoutVariables(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PresentationLayoutVariables class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public PresentationLayoutVariables(string outerXml) : base(outerXml)
+        {
+        }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.OrganizationChart), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.MaxNumberOfChildren), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.PreferredNumberOfChildren), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.BulletEnabled), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Direction), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyBranch), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.AnimateOneByOne), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevel), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandles), 0, 1)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<PresentationLayoutVariables>(deep);
     }
 
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<PresentationLayoutVariables>(deep);
-
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.OrganizationChart), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.MaxNumberOfChildren), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.PreferredNumberOfChildren), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.BulletEnabled), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Direction), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyBranch), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.AnimateOneByOne), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevel), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandles), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-}
-/// <summary>
-/// Defines the LayoutVariablePropertySetType class.
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>OrganizationChart &lt;dgm:orgChart></description></item>
-///<item><description>MaxNumberOfChildren &lt;dgm:chMax></description></item>
-///<item><description>PreferredNumberOfChildren &lt;dgm:chPref></description></item>
-///<item><description>BulletEnabled &lt;dgm:bulletEnabled></description></item>
-///<item><description>Direction &lt;dgm:dir></description></item>
-///<item><description>HierarchyBranch &lt;dgm:hierBranch></description></item>
-///<item><description>AnimateOneByOne &lt;dgm:animOne></description></item>
-///<item><description>AnimationLevel &lt;dgm:animLvl></description></item>
-///<item><description>ResizeHandles &lt;dgm:resizeHandles></description></item>
-/// </list>
-/// </remarks>
-
+    /// <summary>
+    /// <para>Defines the LayoutVariablePropertySetType Class.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>OrganizationChart &lt;dgm:orgChart></description></item>
+    ///   <item><description>MaxNumberOfChildren &lt;dgm:chMax></description></item>
+    ///   <item><description>PreferredNumberOfChildren &lt;dgm:chPref></description></item>
+    ///   <item><description>BulletEnabled &lt;dgm:bulletEnabled></description></item>
+    ///   <item><description>Direction &lt;dgm:dir></description></item>
+    ///   <item><description>HierarchyBranch &lt;dgm:hierBranch></description></item>
+    ///   <item><description>AnimateOneByOne &lt;dgm:animOne></description></item>
+    ///   <item><description>AnimationLevel &lt;dgm:animLvl></description></item>
+    ///   <item><description>ResizeHandles &lt;dgm:resizeHandles></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(OrganizationChart))]
     [ChildElementInfo(typeof(MaxNumberOfChildren))]
     [ChildElementInfo(typeof(PreferredNumberOfChildren))]
@@ -3351,173 +3427,178 @@ internal override CompiledParticle CompiledParticle => _constraint;
     [ChildElementInfo(typeof(AnimateOneByOne))]
     [ChildElementInfo(typeof(AnimationLevel))]
     [ChildElementInfo(typeof(ResizeHandles))]
+    public abstract partial class LayoutVariablePropertySetType : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the LayoutVariablePropertySetType class.
+        /// </summary>
+        protected LayoutVariablePropertySetType() : base()
+        {
+        }
 
-public abstract partial class LayoutVariablePropertySetType : OpenXmlCompositeElement
-{
-    
-    
-    
+        /// <summary>
+        /// Initializes a new instance of the LayoutVariablePropertySetType class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        protected LayoutVariablePropertySetType(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the LayoutVariablePropertySetType class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        protected LayoutVariablePropertySetType(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the LayoutVariablePropertySetType class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        protected LayoutVariablePropertySetType(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Show Organization Chart User Interface.</para>
+        /// <para>Represents the following element tag in the schema: dgm:orgChart.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public OrganizationChart OrganizationChart
+        {
+            get => GetElement<OrganizationChart>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Maximum Children.</para>
+        /// <para>Represents the following element tag in the schema: dgm:chMax.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public MaxNumberOfChildren MaxNumberOfChildren
+        {
+            get => GetElement<MaxNumberOfChildren>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Preferred Number of Children.</para>
+        /// <para>Represents the following element tag in the schema: dgm:chPref.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public PreferredNumberOfChildren PreferredNumberOfChildren
+        {
+            get => GetElement<PreferredNumberOfChildren>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Show Insert Bullet.</para>
+        /// <para>Represents the following element tag in the schema: dgm:bulletEnabled.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public BulletEnabled BulletEnabled
+        {
+            get => GetElement<BulletEnabled>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Diagram Direction.</para>
+        /// <para>Represents the following element tag in the schema: dgm:dir.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public Direction Direction
+        {
+            get => GetElement<Direction>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Organization Chart Branch Style.</para>
+        /// <para>Represents the following element tag in the schema: dgm:hierBranch.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public HierarchyBranch HierarchyBranch
+        {
+            get => GetElement<HierarchyBranch>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>One by One Animation String.</para>
+        /// <para>Represents the following element tag in the schema: dgm:animOne.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public AnimateOneByOne AnimateOneByOne
+        {
+            get => GetElement<AnimateOneByOne>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Level Animation.</para>
+        /// <para>Represents the following element tag in the schema: dgm:animLvl.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public AnimationLevel AnimationLevel
+        {
+            get => GetElement<AnimationLevel>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Shape Resize Style.</para>
+        /// <para>Represents the following element tag in the schema: dgm:resizeHandles.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public ResizeHandles ResizeHandles
+        {
+            get => GetElement<ResizeHandles>();
+            set => SetElement(value);
+        }
+
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-        /// <summary>
-    /// <para> Show Organization Chart User Interface.</para>
-    /// <para> Represents the following element tag in the schema: dgm:orgChart </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public OrganizationChart OrganizationChart
-	{
-        get => GetElement<OrganizationChart>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> Maximum Children.</para>
-    /// <para> Represents the following element tag in the schema: dgm:chMax </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public MaxNumberOfChildren MaxNumberOfChildren
-	{
-        get => GetElement<MaxNumberOfChildren>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> Preferred Number of Children.</para>
-    /// <para> Represents the following element tag in the schema: dgm:chPref </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public PreferredNumberOfChildren PreferredNumberOfChildren
-	{
-        get => GetElement<PreferredNumberOfChildren>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> Show Insert Bullet.</para>
-    /// <para> Represents the following element tag in the schema: dgm:bulletEnabled </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public BulletEnabled BulletEnabled
-	{
-        get => GetElement<BulletEnabled>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> Diagram Direction.</para>
-    /// <para> Represents the following element tag in the schema: dgm:dir </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public Direction Direction
-	{
-        get => GetElement<Direction>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> Organization Chart Branch Style.</para>
-    /// <para> Represents the following element tag in the schema: dgm:hierBranch </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public HierarchyBranch HierarchyBranch
-	{
-        get => GetElement<HierarchyBranch>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> One by One Animation String.</para>
-    /// <para> Represents the following element tag in the schema: dgm:animOne </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public AnimateOneByOne AnimateOneByOne
-	{
-        get => GetElement<AnimateOneByOne>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> Level Animation.</para>
-    /// <para> Represents the following element tag in the schema: dgm:animLvl </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public AnimationLevel AnimationLevel
-	{
-        get => GetElement<AnimationLevel>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> Shape Resize Style.</para>
-    /// <para> Represents the following element tag in the schema: dgm:resizeHandles </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public ResizeHandles ResizeHandles
-	{
-        get => GetElement<ResizeHandles>();
-        set => SetElement(value);
-	}
-
-
-    /// <summary>
-    /// Initializes a new instance of the LayoutVariablePropertySetType class.
-    /// </summary>
-    protected LayoutVariablePropertySetType(){}
-        /// <summary>
-    ///Initializes a new instance of the LayoutVariablePropertySetType class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    protected LayoutVariablePropertySetType(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the LayoutVariablePropertySetType class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    protected LayoutVariablePropertySetType(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the LayoutVariablePropertySetType class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    protected LayoutVariablePropertySetType(string outerXml)
-        : base(outerXml)
-    {
     }
 
-    
-}
-/// <summary>
-/// <para>For Each.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:forEach.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>Algorithm &lt;dgm:alg></description></item>
-///<item><description>Shape &lt;dgm:shape></description></item>
-///<item><description>PresentationOf &lt;dgm:presOf></description></item>
-///<item><description>Constraints &lt;dgm:constrLst></description></item>
-///<item><description>RuleList &lt;dgm:ruleLst></description></item>
-///<item><description>ForEach &lt;dgm:forEach></description></item>
-///<item><description>LayoutNode &lt;dgm:layoutNode></description></item>
-///<item><description>Choose &lt;dgm:choose></description></item>
-///<item><description>ExtensionList &lt;dgm:extLst></description></item>
-/// </list>
-/// </remarks>
-
+    /// <summary>
+    /// <para>For Each.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:forEach.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>Algorithm &lt;dgm:alg></description></item>
+    ///   <item><description>Shape &lt;dgm:shape></description></item>
+    ///   <item><description>PresentationOf &lt;dgm:presOf></description></item>
+    ///   <item><description>Constraints &lt;dgm:constrLst></description></item>
+    ///   <item><description>RuleList &lt;dgm:ruleLst></description></item>
+    ///   <item><description>ForEach &lt;dgm:forEach></description></item>
+    ///   <item><description>LayoutNode &lt;dgm:layoutNode></description></item>
+    ///   <item><description>Choose &lt;dgm:choose></description></item>
+    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(Algorithm))]
     [ChildElementInfo(typeof(Shape))]
     [ChildElementInfo(typeof(PresentationOf))]
@@ -3527,138 +3608,144 @@ public abstract partial class LayoutVariablePropertySetType : OpenXmlCompositeEl
     [ChildElementInfo(typeof(LayoutNode))]
     [ChildElementInfo(typeof(Choose))]
     [ChildElementInfo(typeof(ExtensionList))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "forEach")]
-public partial class ForEach : OpenXmlCompositeElement
-{
-    
+    [SchemaAttr(14, "forEach")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class ForEach : OpenXmlCompositeElement
+    {
         /// <summary>
-    /// <para> Name.</para>
-    /// <para>Represents the following attribute in the schema: name </para>
-    /// </summary>
-    [SchemaAttr(0, "name")]
-    [Index(0)]
-    public StringValue Name { get; set; }
-    /// <summary>
-    /// <para> Reference.</para>
-    /// <para>Represents the following attribute in the schema: ref </para>
-    /// </summary>
-    [SchemaAttr(0, "ref")]
-    [Index(1)]
-    public StringValue Reference { get; set; }
-    /// <summary>
-    /// <para> Axis.</para>
-    /// <para>Represents the following attribute in the schema: axis </para>
-    /// </summary>
-    [SchemaAttr(0, "axis")]
-    [Index(2)]
-    public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AxisValues>> Axis { get; set; }
-    /// <summary>
-    /// <para> Data Point Type.</para>
-    /// <para>Represents the following attribute in the schema: ptType </para>
-    /// </summary>
-    [SchemaAttr(0, "ptType")]
-    [Index(3)]
-    public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>> PointType { get; set; }
-    /// <summary>
-    /// <para> Hide Last Transition.</para>
-    /// <para>Represents the following attribute in the schema: hideLastTrans </para>
-    /// </summary>
-    [SchemaAttr(0, "hideLastTrans")]
-    [Index(4)]
-    public ListValue<BooleanValue> HideLastTrans { get; set; }
-    /// <summary>
-    /// <para> Start.</para>
-    /// <para>Represents the following attribute in the schema: st </para>
-    /// </summary>
-    [SchemaAttr(0, "st")]
-    [Index(5)]
-    public ListValue<Int32Value> Start { get; set; }
-    /// <summary>
-    /// <para> Count.</para>
-    /// <para>Represents the following attribute in the schema: cnt </para>
-    /// </summary>
-    [SchemaAttr(0, "cnt")]
-    [Index(6)]
-    public ListValue<UInt32Value> Count { get; set; }
-    /// <summary>
-    /// <para> Step.</para>
-    /// <para>Represents the following attribute in the schema: step </para>
-    /// </summary>
-    [SchemaAttr(0, "step")]
-    [Index(7)]
-    public ListValue<Int32Value> Step { get; set; }
+        /// Initializes a new instance of the ForEach class.
+        /// </summary>
+        public ForEach() : base()
+        {
+        }
 
-    /// <summary>
-    /// Initializes a new instance of the ForEach class.
-    /// </summary>
-    public ForEach():base(){}
         /// <summary>
-    ///Initializes a new instance of the ForEach class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public ForEach(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
+        /// Initializes a new instance of the ForEach class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ForEach(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ForEach class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ForEach(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ForEach class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public ForEach(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Name</para>
+        /// <para>Represents the following attribute in the schema: name</para>
+        /// </summary>
+        [SchemaAttr(0, "name")]
+        [Index(0)]
+        public StringValue Name { get; set; }
+
+        /// <summary>
+        /// <para>Reference</para>
+        /// <para>Represents the following attribute in the schema: ref</para>
+        /// </summary>
+        [SchemaAttr(0, "ref")]
+        [Index(1)]
+        public StringValue Reference { get; set; }
+
+        /// <summary>
+        /// <para>Axis</para>
+        /// <para>Represents the following attribute in the schema: axis</para>
+        /// </summary>
+        [SchemaAttr(0, "axis")]
+        [Index(2)]
+        public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AxisValues>> Axis { get; set; }
+
+        /// <summary>
+        /// <para>Data Point Type</para>
+        /// <para>Represents the following attribute in the schema: ptType</para>
+        /// </summary>
+        [SchemaAttr(0, "ptType")]
+        [Index(3)]
+        public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>> PointType { get; set; }
+
+        /// <summary>
+        /// <para>Hide Last Transition</para>
+        /// <para>Represents the following attribute in the schema: hideLastTrans</para>
+        /// </summary>
+        [SchemaAttr(0, "hideLastTrans")]
+        [Index(4)]
+        public ListValue<BooleanValue> HideLastTrans { get; set; }
+
+        /// <summary>
+        /// <para>Start</para>
+        /// <para>Represents the following attribute in the schema: st</para>
+        /// </summary>
+        [SchemaAttr(0, "st")]
+        [Index(5)]
+        public ListValue<Int32Value> Start { get; set; }
+
+        /// <summary>
+        /// <para>Count</para>
+        /// <para>Represents the following attribute in the schema: cnt</para>
+        /// </summary>
+        [SchemaAttr(0, "cnt")]
+        [Index(6)]
+        public ListValue<UInt32Value> Count { get; set; }
+
+        /// <summary>
+        /// <para>Step</para>
+        /// <para>Represents the following attribute in the schema: step</para>
+        /// </summary>
+        [SchemaAttr(0, "step")]
+        [Index(7)]
+        public ListValue<Int32Value> Step { get; set; }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Algorithm), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Shape), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.PresentationOf), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Constraints), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.RuleList), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ForEach), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.LayoutNode), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Choose), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ForEach>(deep);
     }
+
     /// <summary>
-    /// Initializes a new instance of the ForEach class with the specified child elements.
+    /// <para>Layout Node.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:layoutNode.</para>
     /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public ForEach(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the ForEach class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public ForEach(string outerXml)
-        : base(outerXml)
-    {
-    }
-
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Algorithm), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Shape), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.PresentationOf), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Constraints), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.RuleList), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ForEach), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.LayoutNode), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Choose), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ForEach>(deep);
-
-}
-/// <summary>
-/// <para>Layout Node.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:layoutNode.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>Algorithm &lt;dgm:alg></description></item>
-///<item><description>Shape &lt;dgm:shape></description></item>
-///<item><description>PresentationOf &lt;dgm:presOf></description></item>
-///<item><description>Constraints &lt;dgm:constrLst></description></item>
-///<item><description>RuleList &lt;dgm:ruleLst></description></item>
-///<item><description>VariableList &lt;dgm:varLst></description></item>
-///<item><description>ForEach &lt;dgm:forEach></description></item>
-///<item><description>LayoutNode &lt;dgm:layoutNode></description></item>
-///<item><description>Choose &lt;dgm:choose></description></item>
-///<item><description>ExtensionList &lt;dgm:extLst></description></item>
-/// </list>
-/// </remarks>
-
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>Algorithm &lt;dgm:alg></description></item>
+    ///   <item><description>Shape &lt;dgm:shape></description></item>
+    ///   <item><description>PresentationOf &lt;dgm:presOf></description></item>
+    ///   <item><description>Constraints &lt;dgm:constrLst></description></item>
+    ///   <item><description>RuleList &lt;dgm:ruleLst></description></item>
+    ///   <item><description>VariableList &lt;dgm:varLst></description></item>
+    ///   <item><description>ForEach &lt;dgm:forEach></description></item>
+    ///   <item><description>LayoutNode &lt;dgm:layoutNode></description></item>
+    ///   <item><description>Choose &lt;dgm:choose></description></item>
+    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(Algorithm))]
     [ChildElementInfo(typeof(Shape))]
     [ChildElementInfo(typeof(PresentationOf))]
@@ -3669,181 +3756,182 @@ internal override CompiledParticle CompiledParticle => _constraint;
     [ChildElementInfo(typeof(LayoutNode))]
     [ChildElementInfo(typeof(Choose))]
     [ChildElementInfo(typeof(ExtensionList))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "layoutNode")]
-public partial class LayoutNode : OpenXmlCompositeElement
-{
-    
+    [SchemaAttr(14, "layoutNode")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class LayoutNode : OpenXmlCompositeElement
+    {
         /// <summary>
-    /// <para> Name.</para>
-    /// <para>Represents the following attribute in the schema: name </para>
-    /// </summary>
-    [SchemaAttr(0, "name")]
-    [Index(0)]
-    public StringValue Name { get; set; }
-    /// <summary>
-    /// <para> Style Label.</para>
-    /// <para>Represents the following attribute in the schema: styleLbl </para>
-    /// </summary>
-    [SchemaAttr(0, "styleLbl")]
-    [Index(1)]
-    public StringValue StyleLabel { get; set; }
-    /// <summary>
-    /// <para> Child Order.</para>
-    /// <para>Represents the following attribute in the schema: chOrder </para>
-    /// </summary>
-[StringValidator(IsToken = true)]
-    [SchemaAttr(0, "chOrder")]
-    [Index(2)]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ChildOrderValues> ChildOrder { get; set; }
-    /// <summary>
-    /// <para> Move With.</para>
-    /// <para>Represents the following attribute in the schema: moveWith </para>
-    /// </summary>
-    [SchemaAttr(0, "moveWith")]
-    [Index(3)]
-    public StringValue MoveWith { get; set; }
+        /// Initializes a new instance of the LayoutNode class.
+        /// </summary>
+        public LayoutNode() : base()
+        {
+        }
 
-    /// <summary>
-    /// Initializes a new instance of the LayoutNode class.
-    /// </summary>
-    public LayoutNode():base(){}
         /// <summary>
-    ///Initializes a new instance of the LayoutNode class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public LayoutNode(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
+        /// Initializes a new instance of the LayoutNode class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public LayoutNode(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the LayoutNode class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public LayoutNode(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the LayoutNode class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public LayoutNode(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Name</para>
+        /// <para>Represents the following attribute in the schema: name</para>
+        /// </summary>
+        [SchemaAttr(0, "name")]
+        [Index(0)]
+        public StringValue Name { get; set; }
+
+        /// <summary>
+        /// <para>Style Label</para>
+        /// <para>Represents the following attribute in the schema: styleLbl</para>
+        /// </summary>
+        [SchemaAttr(0, "styleLbl")]
+        [Index(1)]
+        public StringValue StyleLabel { get; set; }
+
+        /// <summary>
+        /// <para>Child Order</para>
+        /// <para>Represents the following attribute in the schema: chOrder</para>
+        /// </summary>
+        [StringValidator(IsToken = true)]
+        [SchemaAttr(0, "chOrder")]
+        [Index(2)]
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ChildOrderValues> ChildOrder { get; set; }
+
+        /// <summary>
+        /// <para>Move With</para>
+        /// <para>Represents the following attribute in the schema: moveWith</para>
+        /// </summary>
+        [SchemaAttr(0, "moveWith")]
+        [Index(3)]
+        public StringValue MoveWith { get; set; }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Algorithm), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Shape), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.PresentationOf), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Constraints), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.RuleList), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.VariableList), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ForEach), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.LayoutNode), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Choose), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<LayoutNode>(deep);
     }
+
     /// <summary>
-    /// Initializes a new instance of the LayoutNode class with the specified child elements.
+    /// <para>Choose Element.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:choose.</para>
     /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public LayoutNode(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the LayoutNode class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public LayoutNode(string outerXml)
-        : base(outerXml)
-    {
-    }
-
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Algorithm), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Shape), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.PresentationOf), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Constraints), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.RuleList), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.VariableList), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ForEach), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.LayoutNode), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Choose), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<LayoutNode>(deep);
-
-}
-/// <summary>
-/// <para>Choose Element.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:choose.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>DiagramChooseIf &lt;dgm:if></description></item>
-///<item><description>DiagramChooseElse &lt;dgm:else></description></item>
-/// </list>
-/// </remarks>
-
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DiagramChooseIf &lt;dgm:if></description></item>
+    ///   <item><description>DiagramChooseElse &lt;dgm:else></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(DiagramChooseIf))]
     [ChildElementInfo(typeof(DiagramChooseElse))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "choose")]
-public partial class Choose : OpenXmlCompositeElement
-{
-    
+    [SchemaAttr(14, "choose")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class Choose : OpenXmlCompositeElement
+    {
         /// <summary>
-    /// <para> Name.</para>
-    /// <para>Represents the following attribute in the schema: name </para>
-    /// </summary>
-    [SchemaAttr(0, "name")]
-    [Index(0)]
-    public StringValue Name { get; set; }
+        /// Initializes a new instance of the Choose class.
+        /// </summary>
+        public Choose() : base()
+        {
+        }
 
-    /// <summary>
-    /// Initializes a new instance of the Choose class.
-    /// </summary>
-    public Choose():base(){}
         /// <summary>
-    ///Initializes a new instance of the Choose class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public Choose(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
+        /// Initializes a new instance of the Choose class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Choose(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Choose class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Choose(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Choose class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public Choose(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Name</para>
+        /// <para>Represents the following attribute in the schema: name</para>
+        /// </summary>
+        [SchemaAttr(0, "name")]
+        [Index(0)]
+        public StringValue Name { get; set; }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.DiagramChooseIf), 1, 0),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.DiagramChooseElse), 0, 1)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Choose>(deep);
     }
+
     /// <summary>
-    /// Initializes a new instance of the Choose class with the specified child elements.
+    /// <para>If.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:if.</para>
     /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public Choose(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the Choose class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public Choose(string outerXml)
-        : base(outerXml)
-    {
-    }
-
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.DiagramChooseIf), 1, 0),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.DiagramChooseElse), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Choose>(deep);
-
-}
-/// <summary>
-/// <para>If.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:if.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>Algorithm &lt;dgm:alg></description></item>
-///<item><description>Shape &lt;dgm:shape></description></item>
-///<item><description>PresentationOf &lt;dgm:presOf></description></item>
-///<item><description>Constraints &lt;dgm:constrLst></description></item>
-///<item><description>RuleList &lt;dgm:ruleLst></description></item>
-///<item><description>ForEach &lt;dgm:forEach></description></item>
-///<item><description>LayoutNode &lt;dgm:layoutNode></description></item>
-///<item><description>Choose &lt;dgm:choose></description></item>
-///<item><description>ExtensionList &lt;dgm:extLst></description></item>
-/// </list>
-/// </remarks>
-
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>Algorithm &lt;dgm:alg></description></item>
+    ///   <item><description>Shape &lt;dgm:shape></description></item>
+    ///   <item><description>PresentationOf &lt;dgm:presOf></description></item>
+    ///   <item><description>Constraints &lt;dgm:constrLst></description></item>
+    ///   <item><description>RuleList &lt;dgm:ruleLst></description></item>
+    ///   <item><description>ForEach &lt;dgm:forEach></description></item>
+    ///   <item><description>LayoutNode &lt;dgm:layoutNode></description></item>
+    ///   <item><description>Choose &lt;dgm:choose></description></item>
+    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(Algorithm))]
     [ChildElementInfo(typeof(Shape))]
     [ChildElementInfo(typeof(PresentationOf))]
@@ -3853,171 +3941,180 @@ internal override CompiledParticle CompiledParticle => _constraint;
     [ChildElementInfo(typeof(LayoutNode))]
     [ChildElementInfo(typeof(Choose))]
     [ChildElementInfo(typeof(ExtensionList))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "if")]
-public partial class DiagramChooseIf : OpenXmlCompositeElement
-{
-    
+    [SchemaAttr(14, "if")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class DiagramChooseIf : OpenXmlCompositeElement
+    {
         /// <summary>
-    /// <para> Name.</para>
-    /// <para>Represents the following attribute in the schema: name </para>
-    /// </summary>
-    [SchemaAttr(0, "name")]
-    [Index(0)]
-    public StringValue Name { get; set; }
-    /// <summary>
-    /// <para> Axis.</para>
-    /// <para>Represents the following attribute in the schema: axis </para>
-    /// </summary>
-    [SchemaAttr(0, "axis")]
-    [Index(1)]
-    public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AxisValues>> Axis { get; set; }
-    /// <summary>
-    /// <para> Data Point Type.</para>
-    /// <para>Represents the following attribute in the schema: ptType </para>
-    /// </summary>
-    [SchemaAttr(0, "ptType")]
-    [Index(2)]
-    public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>> PointType { get; set; }
-    /// <summary>
-    /// <para> Hide Last Transition.</para>
-    /// <para>Represents the following attribute in the schema: hideLastTrans </para>
-    /// </summary>
-    [SchemaAttr(0, "hideLastTrans")]
-    [Index(3)]
-    public ListValue<BooleanValue> HideLastTrans { get; set; }
-    /// <summary>
-    /// <para> Start.</para>
-    /// <para>Represents the following attribute in the schema: st </para>
-    /// </summary>
-    [SchemaAttr(0, "st")]
-    [Index(4)]
-    public ListValue<Int32Value> Start { get; set; }
-    /// <summary>
-    /// <para> Count.</para>
-    /// <para>Represents the following attribute in the schema: cnt </para>
-    /// </summary>
-    [SchemaAttr(0, "cnt")]
-    [Index(5)]
-    public ListValue<UInt32Value> Count { get; set; }
-    /// <summary>
-    /// <para> Step.</para>
-    /// <para>Represents the following attribute in the schema: step </para>
-    /// </summary>
-    [SchemaAttr(0, "step")]
-    [Index(6)]
-    public ListValue<Int32Value> Step { get; set; }
-    /// <summary>
-    /// <para> Function.</para>
-    /// <para>Represents the following attribute in the schema: func </para>
-    /// </summary>
-[RequiredValidator]
-[StringValidator(IsToken = true)]
-    [SchemaAttr(0, "func")]
-    [Index(7)]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FunctionValues> Function { get; set; }
-    /// <summary>
-    /// <para> Argument.</para>
-    /// <para>Represents the following attribute in the schema: arg </para>
-    /// </summary>
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.VariableValues>), UnionId = 0)]
-    [SchemaAttr(0, "arg")]
-    [Index(8)]
-    public StringValue Argument { get; set; }
-    /// <summary>
-    /// <para> Operator.</para>
-    /// <para>Represents the following attribute in the schema: op </para>
-    /// </summary>
-[RequiredValidator]
-[StringValidator(IsToken = true)]
-    [SchemaAttr(0, "op")]
-    [Index(9)]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FunctionOperatorValues> Operator { get; set; }
-    /// <summary>
-    /// <para> Value.</para>
-    /// <para>Represents the following attribute in the schema: val </para>
-    /// </summary>
-[RequiredValidator]
-[NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
-[NumberValidator(SimpleType = typeof(BooleanValue), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.DirectionValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyBranchStyleValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimateOneByOneValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevelStringValues>), UnionId = 0)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandlesStringValues>), UnionId = 0)]
-    [SchemaAttr(0, "val")]
-    [Index(10)]
-    public StringValue Val { get; set; }
+        /// Initializes a new instance of the DiagramChooseIf class.
+        /// </summary>
+        public DiagramChooseIf() : base()
+        {
+        }
 
-    /// <summary>
-    /// Initializes a new instance of the DiagramChooseIf class.
-    /// </summary>
-    public DiagramChooseIf():base(){}
         /// <summary>
-    ///Initializes a new instance of the DiagramChooseIf class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public DiagramChooseIf(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
+        /// Initializes a new instance of the DiagramChooseIf class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public DiagramChooseIf(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DiagramChooseIf class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public DiagramChooseIf(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DiagramChooseIf class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public DiagramChooseIf(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Name</para>
+        /// <para>Represents the following attribute in the schema: name</para>
+        /// </summary>
+        [SchemaAttr(0, "name")]
+        [Index(0)]
+        public StringValue Name { get; set; }
+
+        /// <summary>
+        /// <para>Axis</para>
+        /// <para>Represents the following attribute in the schema: axis</para>
+        /// </summary>
+        [SchemaAttr(0, "axis")]
+        [Index(1)]
+        public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AxisValues>> Axis { get; set; }
+
+        /// <summary>
+        /// <para>Data Point Type</para>
+        /// <para>Represents the following attribute in the schema: ptType</para>
+        /// </summary>
+        [SchemaAttr(0, "ptType")]
+        [Index(2)]
+        public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>> PointType { get; set; }
+
+        /// <summary>
+        /// <para>Hide Last Transition</para>
+        /// <para>Represents the following attribute in the schema: hideLastTrans</para>
+        /// </summary>
+        [SchemaAttr(0, "hideLastTrans")]
+        [Index(3)]
+        public ListValue<BooleanValue> HideLastTrans { get; set; }
+
+        /// <summary>
+        /// <para>Start</para>
+        /// <para>Represents the following attribute in the schema: st</para>
+        /// </summary>
+        [SchemaAttr(0, "st")]
+        [Index(4)]
+        public ListValue<Int32Value> Start { get; set; }
+
+        /// <summary>
+        /// <para>Count</para>
+        /// <para>Represents the following attribute in the schema: cnt</para>
+        /// </summary>
+        [SchemaAttr(0, "cnt")]
+        [Index(5)]
+        public ListValue<UInt32Value> Count { get; set; }
+
+        /// <summary>
+        /// <para>Step</para>
+        /// <para>Represents the following attribute in the schema: step</para>
+        /// </summary>
+        [SchemaAttr(0, "step")]
+        [Index(6)]
+        public ListValue<Int32Value> Step { get; set; }
+
+        /// <summary>
+        /// <para>Function</para>
+        /// <para>Represents the following attribute in the schema: func</para>
+        /// </summary>
+        [RequiredValidator()]
+        [StringValidator(IsToken = true)]
+        [SchemaAttr(0, "func")]
+        [Index(7)]
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FunctionValues> Function { get; set; }
+
+        /// <summary>
+        /// <para>Argument</para>
+        /// <para>Represents the following attribute in the schema: arg</para>
+        /// </summary>
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.VariableValues>), UnionId = 0)]
+        [SchemaAttr(0, "arg")]
+        [Index(8)]
+        public StringValue Argument { get; set; }
+
+        /// <summary>
+        /// <para>Operator</para>
+        /// <para>Represents the following attribute in the schema: op</para>
+        /// </summary>
+        [RequiredValidator()]
+        [StringValidator(IsToken = true)]
+        [SchemaAttr(0, "op")]
+        [Index(9)]
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FunctionOperatorValues> Operator { get; set; }
+
+        /// <summary>
+        /// <para>Value</para>
+        /// <para>Represents the following attribute in the schema: val</para>
+        /// </summary>
+        [RequiredValidator()]
+        [NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
+        [NumberValidator(SimpleType = typeof(BooleanValue), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.DirectionValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyBranchStyleValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimateOneByOneValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevelStringValues>), UnionId = 0)]
+        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandlesStringValues>), UnionId = 0)]
+        [SchemaAttr(0, "val")]
+        [Index(10)]
+        public StringValue Val { get; set; }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Algorithm), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Shape), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.PresentationOf), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Constraints), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.RuleList), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ForEach), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.LayoutNode), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Choose), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<DiagramChooseIf>(deep);
     }
+
     /// <summary>
-    /// Initializes a new instance of the DiagramChooseIf class with the specified child elements.
+    /// <para>Else.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:else.</para>
     /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public DiagramChooseIf(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the DiagramChooseIf class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public DiagramChooseIf(string outerXml)
-        : base(outerXml)
-    {
-    }
-
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Algorithm), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Shape), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.PresentationOf), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Constraints), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.RuleList), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ForEach), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.LayoutNode), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Choose), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<DiagramChooseIf>(deep);
-
-}
-/// <summary>
-/// <para>Else.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:else.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>Algorithm &lt;dgm:alg></description></item>
-///<item><description>Shape &lt;dgm:shape></description></item>
-///<item><description>PresentationOf &lt;dgm:presOf></description></item>
-///<item><description>Constraints &lt;dgm:constrLst></description></item>
-///<item><description>RuleList &lt;dgm:ruleLst></description></item>
-///<item><description>ForEach &lt;dgm:forEach></description></item>
-///<item><description>LayoutNode &lt;dgm:layoutNode></description></item>
-///<item><description>Choose &lt;dgm:choose></description></item>
-///<item><description>ExtensionList &lt;dgm:extLst></description></item>
-/// </list>
-/// </remarks>
-
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>Algorithm &lt;dgm:alg></description></item>
+    ///   <item><description>Shape &lt;dgm:shape></description></item>
+    ///   <item><description>PresentationOf &lt;dgm:presOf></description></item>
+    ///   <item><description>Constraints &lt;dgm:constrLst></description></item>
+    ///   <item><description>RuleList &lt;dgm:ruleLst></description></item>
+    ///   <item><description>ForEach &lt;dgm:forEach></description></item>
+    ///   <item><description>LayoutNode &lt;dgm:layoutNode></description></item>
+    ///   <item><description>Choose &lt;dgm:choose></description></item>
+    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(Algorithm))]
     [ChildElementInfo(typeof(Shape))]
     [ChildElementInfo(typeof(PresentationOf))]
@@ -4027,1887 +4124,1836 @@ internal override CompiledParticle CompiledParticle => _constraint;
     [ChildElementInfo(typeof(LayoutNode))]
     [ChildElementInfo(typeof(Choose))]
     [ChildElementInfo(typeof(ExtensionList))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "else")]
-public partial class DiagramChooseElse : OpenXmlCompositeElement
-{
-    
+    [SchemaAttr(14, "else")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class DiagramChooseElse : OpenXmlCompositeElement
+    {
         /// <summary>
-    /// <para> Name.</para>
-    /// <para>Represents the following attribute in the schema: name </para>
-    /// </summary>
-    [SchemaAttr(0, "name")]
-    [Index(0)]
-    public StringValue Name { get; set; }
+        /// Initializes a new instance of the DiagramChooseElse class.
+        /// </summary>
+        public DiagramChooseElse() : base()
+        {
+        }
 
-    /// <summary>
-    /// Initializes a new instance of the DiagramChooseElse class.
-    /// </summary>
-    public DiagramChooseElse():base(){}
         /// <summary>
-    ///Initializes a new instance of the DiagramChooseElse class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public DiagramChooseElse(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
+        /// Initializes a new instance of the DiagramChooseElse class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public DiagramChooseElse(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DiagramChooseElse class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public DiagramChooseElse(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DiagramChooseElse class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public DiagramChooseElse(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Name</para>
+        /// <para>Represents the following attribute in the schema: name</para>
+        /// </summary>
+        [SchemaAttr(0, "name")]
+        [Index(0)]
+        public StringValue Name { get; set; }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Algorithm), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Shape), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.PresentationOf), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Constraints), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.RuleList), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ForEach), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.LayoutNode), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Choose), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<DiagramChooseElse>(deep);
     }
+
     /// <summary>
-    /// Initializes a new instance of the DiagramChooseElse class with the specified child elements.
+    /// <para>Data Model.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:dataModel.</para>
     /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public DiagramChooseElse(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the DiagramChooseElse class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public DiagramChooseElse(string outerXml)
-        : base(outerXml)
-    {
-    }
-
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Algorithm), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Shape), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.PresentationOf), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Constraints), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.RuleList), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ForEach), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.LayoutNode), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Choose), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<DiagramChooseElse>(deep);
-
-}
-/// <summary>
-/// <para>Data Model.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:dataModel.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>PointList &lt;dgm:ptLst></description></item>
-///<item><description>ConnectionList &lt;dgm:cxnLst></description></item>
-///<item><description>Background &lt;dgm:bg></description></item>
-///<item><description>Whole &lt;dgm:whole></description></item>
-///<item><description>DataModelExtensionList &lt;dgm:extLst></description></item>
-/// </list>
-/// </remarks>
-
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>PointList &lt;dgm:ptLst></description></item>
+    ///   <item><description>ConnectionList &lt;dgm:cxnLst></description></item>
+    ///   <item><description>Background &lt;dgm:bg></description></item>
+    ///   <item><description>Whole &lt;dgm:whole></description></item>
+    ///   <item><description>DataModelExtensionList &lt;dgm:extLst></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(PointList))]
     [ChildElementInfo(typeof(ConnectionList))]
     [ChildElementInfo(typeof(Background))]
     [ChildElementInfo(typeof(Whole))]
     [ChildElementInfo(typeof(DataModelExtensionList))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "dataModel")]
-public partial class DataModel : OpenXmlCompositeElement
-{
-    
-    
-    /// <summary>
-    /// Initializes a new instance of the DataModel class.
-    /// </summary>
-    public DataModel():base(){}
+    [SchemaAttr(14, "dataModel")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class DataModel : OpenXmlCompositeElement
+    {
         /// <summary>
-    ///Initializes a new instance of the DataModel class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public DataModel(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the DataModel class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public DataModel(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the DataModel class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public DataModel(string outerXml)
-        : base(outerXml)
-    {
-    }
+        /// Initializes a new instance of the DataModel class.
+        /// </summary>
+        public DataModel() : base()
+        {
+        }
 
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.PointList), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ConnectionList), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Background), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Whole), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.DataModelExtensionList), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
+        /// <summary>
+        /// Initializes a new instance of the DataModel class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public DataModel(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DataModel class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public DataModel(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DataModel class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public DataModel(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Point List.</para>
+        /// <para>Represents the following element tag in the schema: dgm:ptLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public PointList PointList
+        {
+            get => GetElement<PointList>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Connection List.</para>
+        /// <para>Represents the following element tag in the schema: dgm:cxnLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public ConnectionList ConnectionList
+        {
+            get => GetElement<ConnectionList>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Background Formatting.</para>
+        /// <para>Represents the following element tag in the schema: dgm:bg.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public Background Background
+        {
+            get => GetElement<Background>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Whole E2O Formatting.</para>
+        /// <para>Represents the following element tag in the schema: dgm:whole.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public Whole Whole
+        {
+            get => GetElement<Whole>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>DataModelExtensionList.</para>
+        /// <para>Represents the following element tag in the schema: dgm:extLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public DataModelExtensionList DataModelExtensionList
+        {
+            get => GetElement<DataModelExtensionList>();
+            set => SetElement(value);
+        }
+
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.PointList), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ConnectionList), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Background), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Whole), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.DataModelExtensionList), 0, 1)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataModel>(deep);
+    }
+
+    /// <summary>
+    /// <para>Category.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:cat.</para>
+    /// </summary>
+    [SchemaAttr(14, "cat")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class Category : OpenXmlLeafElement
+    {
         /// <summary>
-    /// <para> Point List.</para>
-    /// <para> Represents the following element tag in the schema: dgm:ptLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public PointList PointList
-	{
-        get => GetElement<PointList>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> Connection List.</para>
-    /// <para> Represents the following element tag in the schema: dgm:cxnLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public ConnectionList ConnectionList
-	{
-        get => GetElement<ConnectionList>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> Background Formatting.</para>
-    /// <para> Represents the following element tag in the schema: dgm:bg </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public Background Background
-	{
-        get => GetElement<Background>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> Whole E2O Formatting.</para>
-    /// <para> Represents the following element tag in the schema: dgm:whole </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public Whole Whole
-	{
-        get => GetElement<Whole>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> DataModelExtensionList.</para>
-    /// <para> Represents the following element tag in the schema: dgm:extLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public DataModelExtensionList DataModelExtensionList
-	{
-        get => GetElement<DataModelExtensionList>();
-        set => SetElement(value);
-	}
+        /// Initializes a new instance of the Category class.
+        /// </summary>
+        public Category() : base()
+        {
+        }
 
-
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataModel>(deep);
-
-}
-/// <summary>
-/// <para>Category.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:cat.</para>
-/// </summary>
-
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "cat")]
-public partial class Category : OpenXmlLeafElement
-{
-    
         /// <summary>
-    /// <para> Category Type.</para>
-    /// <para>Represents the following attribute in the schema: type </para>
-    /// </summary>
-[RequiredValidator]
-[StringValidator(IsUri = true)]
-    [SchemaAttr(0, "type")]
-    [Index(0)]
-    public StringValue Type { get; set; }
-    /// <summary>
-    /// <para> Priority.</para>
-    /// <para>Represents the following attribute in the schema: pri </para>
-    /// </summary>
-[RequiredValidator]
-    [SchemaAttr(0, "pri")]
-    [Index(1)]
-    public UInt32Value Priority { get; set; }
+        /// <para>Category Type</para>
+        /// <para>Represents the following attribute in the schema: type</para>
+        /// </summary>
+        [RequiredValidator()]
+        [StringValidator(IsUri = true)]
+        [SchemaAttr(0, "type")]
+        [Index(0)]
+        public StringValue Type { get; set; }
 
-    /// <summary>
-    /// Initializes a new instance of the Category class.
-    /// </summary>
-    public Category():base(){}
-    
-    
-
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Category>(deep);
-
-}
-/// <summary>
-/// <para>Title.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:title.</para>
-/// </summary>
-
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "title")]
-public partial class Title : OpenXmlLeafElement
-{
-    
         /// <summary>
-    /// <para> Language.</para>
-    /// <para>Represents the following attribute in the schema: lang </para>
-    /// </summary>
-    [SchemaAttr(0, "lang")]
-    [Index(0)]
-    public StringValue Language { get; set; }
-    /// <summary>
-    /// <para> Value.</para>
-    /// <para>Represents the following attribute in the schema: val </para>
-    /// </summary>
-[RequiredValidator]
-    [SchemaAttr(0, "val")]
-    [Index(1)]
-    public StringValue Val { get; set; }
+        /// <para>Priority</para>
+        /// <para>Represents the following attribute in the schema: pri</para>
+        /// </summary>
+        [RequiredValidator()]
+        [SchemaAttr(0, "pri")]
+        [Index(1)]
+        public UInt32Value Priority { get; set; }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Category>(deep);
+    }
 
     /// <summary>
-    /// Initializes a new instance of the Title class.
+    /// <para>Title.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:title.</para>
     /// </summary>
-    public Title():base(){}
-    
-    
-
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Title>(deep);
-
-}
-/// <summary>
-/// <para>Description.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:desc.</para>
-/// </summary>
-
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "desc")]
-public partial class Description : OpenXmlLeafElement
-{
-    
+    [SchemaAttr(14, "title")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class Title : OpenXmlLeafElement
+    {
         /// <summary>
-    /// <para> Language.</para>
-    /// <para>Represents the following attribute in the schema: lang </para>
-    /// </summary>
-    [SchemaAttr(0, "lang")]
-    [Index(0)]
-    public StringValue Language { get; set; }
-    /// <summary>
-    /// <para> Value.</para>
-    /// <para>Represents the following attribute in the schema: val </para>
-    /// </summary>
-[RequiredValidator]
-    [SchemaAttr(0, "val")]
-    [Index(1)]
-    public StringValue Val { get; set; }
+        /// Initializes a new instance of the Title class.
+        /// </summary>
+        public Title() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>Language</para>
+        /// <para>Represents the following attribute in the schema: lang</para>
+        /// </summary>
+        [SchemaAttr(0, "lang")]
+        [Index(0)]
+        public StringValue Language { get; set; }
+
+        /// <summary>
+        /// <para>Value</para>
+        /// <para>Represents the following attribute in the schema: val</para>
+        /// </summary>
+        [RequiredValidator()]
+        [SchemaAttr(0, "val")]
+        [Index(1)]
+        public StringValue Val { get; set; }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Title>(deep);
+    }
 
     /// <summary>
-    /// Initializes a new instance of the Description class.
+    /// <para>Description.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:desc.</para>
     /// </summary>
-    public Description():base(){}
-    
-    
+    [SchemaAttr(14, "desc")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class Description : OpenXmlLeafElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the Description class.
+        /// </summary>
+        public Description() : base()
+        {
+        }
 
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Description>(deep);
+        /// <summary>
+        /// <para>Language</para>
+        /// <para>Represents the following attribute in the schema: lang</para>
+        /// </summary>
+        [SchemaAttr(0, "lang")]
+        [Index(0)]
+        public StringValue Language { get; set; }
 
-}
-/// <summary>
-/// <para>Category List.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:catLst.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>Category &lt;dgm:cat></description></item>
-/// </list>
-/// </remarks>
+        /// <summary>
+        /// <para>Value</para>
+        /// <para>Represents the following attribute in the schema: val</para>
+        /// </summary>
+        [RequiredValidator()]
+        [SchemaAttr(0, "val")]
+        [Index(1)]
+        public StringValue Val { get; set; }
 
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Description>(deep);
+    }
+
+    /// <summary>
+    /// <para>Category List.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:catLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>Category &lt;dgm:cat></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(Category))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "catLst")]
-public partial class CategoryList : OpenXmlCompositeElement
-{
-    
-    
-    /// <summary>
-    /// Initializes a new instance of the CategoryList class.
-    /// </summary>
-    public CategoryList():base(){}
+    [SchemaAttr(14, "catLst")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class CategoryList : OpenXmlCompositeElement
+    {
         /// <summary>
-    ///Initializes a new instance of the CategoryList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public CategoryList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the CategoryList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public CategoryList(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the CategoryList class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public CategoryList(string outerXml)
-        : base(outerXml)
-    {
-    }
+        /// Initializes a new instance of the CategoryList class.
+        /// </summary>
+        public CategoryList() : base()
+        {
+        }
 
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Category), 0, 0)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<CategoryList>(deep);
-
-}
-/// <summary>
-/// <para>Sample Data.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:sampData.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>DataModel &lt;dgm:dataModel></description></item>
-/// </list>
-/// </remarks>
-
-[SchemaAttr(14, "sampData")]
-[OfficeAvailability(FileFormatVersions.Office2007)]
-public partial class SampleData : SampleDataType
-{
-    /// <summary>
-    /// Initializes a new instance of the SampleData class.
-    /// </summary>
-    public SampleData():base(){}
         /// <summary>
-    ///Initializes a new instance of the SampleData class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public SampleData(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the SampleData class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public SampleData(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the SampleData class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public SampleData(string outerXml)
-        : base(outerXml)
-    {
-    }
+        /// Initializes a new instance of the CategoryList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public CategoryList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
 
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<SampleData>(deep);
-
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.DataModel), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-}
-/// <summary>
-/// <para>Style Data.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:styleData.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>DataModel &lt;dgm:dataModel></description></item>
-/// </list>
-/// </remarks>
-
-[SchemaAttr(14, "styleData")]
-[OfficeAvailability(FileFormatVersions.Office2007)]
-public partial class StyleData : SampleDataType
-{
-    /// <summary>
-    /// Initializes a new instance of the StyleData class.
-    /// </summary>
-    public StyleData():base(){}
         /// <summary>
-    ///Initializes a new instance of the StyleData class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public StyleData(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the StyleData class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public StyleData(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the StyleData class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public StyleData(string outerXml)
-        : base(outerXml)
-    {
-    }
+        /// Initializes a new instance of the CategoryList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public CategoryList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
 
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleData>(deep);
-
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.DataModel), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-}
-/// <summary>
-/// <para>Color Transform Sample Data.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:clrData.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>DataModel &lt;dgm:dataModel></description></item>
-/// </list>
-/// </remarks>
-
-[SchemaAttr(14, "clrData")]
-[OfficeAvailability(FileFormatVersions.Office2007)]
-public partial class ColorData : SampleDataType
-{
-    /// <summary>
-    /// Initializes a new instance of the ColorData class.
-    /// </summary>
-    public ColorData():base(){}
         /// <summary>
-    ///Initializes a new instance of the ColorData class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public ColorData(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
+        /// Initializes a new instance of the CategoryList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public CategoryList(string outerXml) : base(outerXml)
+        {
+        }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Category), 0, 0)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<CategoryList>(deep);
     }
+
     /// <summary>
-    /// Initializes a new instance of the ColorData class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public ColorData(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the ColorData class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public ColorData(string outerXml)
-        : base(outerXml)
-    {
-    }
-
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorData>(deep);
-
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.DataModel), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-}
-/// <summary>
-/// Defines the SampleDataType class.
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>DataModel &lt;dgm:dataModel></description></item>
-/// </list>
-/// </remarks>
-
-    [ChildElementInfo(typeof(DataModel))]
-
-public abstract partial class SampleDataType : OpenXmlCompositeElement
-{
-    
-        /// <summary>
-    /// <para> Use Default.</para>
-    /// <para>Represents the following attribute in the schema: useDef </para>
-    /// </summary>
-    [SchemaAttr(0, "useDef")]
-    [Index(0)]
-    public BooleanValue UseDefault { get; set; }
-
-    
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-        /// <summary>
-    /// <para> Data Model.</para>
-    /// <para> Represents the following element tag in the schema: dgm:dataModel </para>
+    /// <para>Sample Data.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:sampData.</para>
     /// </summary>
     /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DataModel &lt;dgm:dataModel></description></item>
+    /// </list>
     /// </remark>
-    public DataModel DataModel
-	{
-        get => GetElement<DataModel>();
-        set => SetElement(value);
-	}
-
-
-    /// <summary>
-    /// Initializes a new instance of the SampleDataType class.
-    /// </summary>
-    protected SampleDataType(){}
+    [SchemaAttr(14, "sampData")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class SampleData : SampleDataType
+    {
         /// <summary>
-    ///Initializes a new instance of the SampleDataType class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    protected SampleDataType(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the SampleDataType class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    protected SampleDataType(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the SampleDataType class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    protected SampleDataType(string outerXml)
-        : base(outerXml)
-    {
+        /// Initializes a new instance of the SampleData class.
+        /// </summary>
+        public SampleData() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the SampleData class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public SampleData(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the SampleData class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public SampleData(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the SampleData class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public SampleData(string outerXml) : base(outerXml)
+        {
+        }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.DataModel), 0, 1)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<SampleData>(deep);
     }
 
-    
-}
-/// <summary>
-/// <para>Shape Style.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:style.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>DocumentFormat.OpenXml.Drawing.LineReference &lt;a:lnRef></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.FillReference &lt;a:fillRef></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.EffectReference &lt;a:effectRef></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.FontReference &lt;a:fontRef></description></item>
-/// </list>
-/// </remarks>
+    /// <summary>
+    /// <para>Style Data.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:styleData.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DataModel &lt;dgm:dataModel></description></item>
+    /// </list>
+    /// </remark>
+    [SchemaAttr(14, "styleData")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class StyleData : SampleDataType
+    {
+        /// <summary>
+        /// Initializes a new instance of the StyleData class.
+        /// </summary>
+        public StyleData() : base()
+        {
+        }
 
+        /// <summary>
+        /// Initializes a new instance of the StyleData class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public StyleData(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the StyleData class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public StyleData(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the StyleData class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public StyleData(string outerXml) : base(outerXml)
+        {
+        }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.DataModel), 0, 1)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleData>(deep);
+    }
+
+    /// <summary>
+    /// <para>Color Transform Sample Data.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:clrData.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DataModel &lt;dgm:dataModel></description></item>
+    /// </list>
+    /// </remark>
+    [SchemaAttr(14, "clrData")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class ColorData : SampleDataType
+    {
+        /// <summary>
+        /// Initializes a new instance of the ColorData class.
+        /// </summary>
+        public ColorData() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ColorData class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ColorData(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ColorData class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ColorData(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ColorData class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public ColorData(string outerXml) : base(outerXml)
+        {
+        }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.DataModel), 0, 1)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorData>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the SampleDataType Class.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DataModel &lt;dgm:dataModel></description></item>
+    /// </list>
+    /// </remark>
+    [ChildElementInfo(typeof(DataModel))]
+    public abstract partial class SampleDataType : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the SampleDataType class.
+        /// </summary>
+        protected SampleDataType() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the SampleDataType class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        protected SampleDataType(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the SampleDataType class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        protected SampleDataType(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the SampleDataType class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        protected SampleDataType(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Use Default</para>
+        /// <para>Represents the following attribute in the schema: useDef</para>
+        /// </summary>
+        [SchemaAttr(0, "useDef")]
+        [Index(0)]
+        public BooleanValue UseDefault { get; set; }
+
+        /// <summary>
+        /// <para>Data Model.</para>
+        /// <para>Represents the following element tag in the schema: dgm:dataModel.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public DataModel DataModel
+        {
+            get => GetElement<DataModel>();
+            set => SetElement(value);
+        }
+
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+    }
+
+    /// <summary>
+    /// <para>Shape Style.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:style.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.LineReference &lt;a:lnRef></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.FillReference &lt;a:fillRef></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectReference &lt;a:effectRef></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.FontReference &lt;a:fontRef></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.LineReference))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FillReference))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectReference))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FontReference))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "style")]
-public partial class Style : OpenXmlCompositeElement
-{
-    
-    
-    /// <summary>
-    /// Initializes a new instance of the Style class.
-    /// </summary>
-    public Style():base(){}
+    [SchemaAttr(14, "style")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class Style : OpenXmlCompositeElement
+    {
         /// <summary>
-    ///Initializes a new instance of the Style class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public Style(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the Style class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public Style(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the Style class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public Style(string outerXml)
-        : base(outerXml)
-    {
-    }
+        /// Initializes a new instance of the Style class.
+        /// </summary>
+        public Style() : base()
+        {
+        }
 
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineReference), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FillReference), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectReference), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FontReference), 1, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
+        /// <summary>
+        /// Initializes a new instance of the Style class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Style(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Style class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Style(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Style class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public Style(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>LineReference.</para>
+        /// <para>Represents the following element tag in the schema: a:lnRef.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.LineReference LineReference
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.LineReference>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>FillReference.</para>
+        /// <para>Represents the following element tag in the schema: a:fillRef.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.FillReference FillReference
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.FillReference>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>EffectReference.</para>
+        /// <para>Represents the following element tag in the schema: a:effectRef.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.EffectReference EffectReference
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.EffectReference>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Font Reference.</para>
+        /// <para>Represents the following element tag in the schema: a:fontRef.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.FontReference FontReference
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.FontReference>();
+            set => SetElement(value);
+        }
+
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineReference), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FillReference), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectReference), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FontReference), 1, 1)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Style>(deep);
+    }
+
+    /// <summary>
+    /// <para>Show Organization Chart User Interface.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:orgChart.</para>
+    /// </summary>
+    [SchemaAttr(14, "orgChart")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class OrganizationChart : OpenXmlLeafElement
+    {
         /// <summary>
-    /// <para> LineReference.</para>
-    /// <para> Represents the following element tag in the schema: a:lnRef </para>
+        /// Initializes a new instance of the OrganizationChart class.
+        /// </summary>
+        public OrganizationChart() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>Show Organization Chart User Interface Value</para>
+        /// <para>Represents the following attribute in the schema: val</para>
+        /// </summary>
+        [SchemaAttr(0, "val")]
+        [Index(0)]
+        public BooleanValue Val { get; set; }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<OrganizationChart>(deep);
+    }
+
+    /// <summary>
+    /// <para>Maximum Children.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:chMax.</para>
+    /// </summary>
+    [SchemaAttr(14, "chMax")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class MaxNumberOfChildren : OpenXmlLeafElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the MaxNumberOfChildren class.
+        /// </summary>
+        public MaxNumberOfChildren() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>Maximum Children Value</para>
+        /// <para>Represents the following attribute in the schema: val</para>
+        /// </summary>
+        [NumberValidator(MinInclusive = -1L)]
+        [SchemaAttr(0, "val")]
+        [Index(0)]
+        public Int32Value Val { get; set; }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<MaxNumberOfChildren>(deep);
+    }
+
+    /// <summary>
+    /// <para>Preferred Number of Children.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:chPref.</para>
+    /// </summary>
+    [SchemaAttr(14, "chPref")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class PreferredNumberOfChildren : OpenXmlLeafElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the PreferredNumberOfChildren class.
+        /// </summary>
+        public PreferredNumberOfChildren() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>Preferred Number of CHildren Value</para>
+        /// <para>Represents the following attribute in the schema: val</para>
+        /// </summary>
+        [NumberValidator(MinInclusive = -1L)]
+        [SchemaAttr(0, "val")]
+        [Index(0)]
+        public Int32Value Val { get; set; }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<PreferredNumberOfChildren>(deep);
+    }
+
+    /// <summary>
+    /// <para>Show Insert Bullet.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:bulletEnabled.</para>
+    /// </summary>
+    [SchemaAttr(14, "bulletEnabled")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class BulletEnabled : OpenXmlLeafElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the BulletEnabled class.
+        /// </summary>
+        public BulletEnabled() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>Show Insert Bullet Value</para>
+        /// <para>Represents the following attribute in the schema: val</para>
+        /// </summary>
+        [SchemaAttr(0, "val")]
+        [Index(0)]
+        public BooleanValue Val { get; set; }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<BulletEnabled>(deep);
+    }
+
+    /// <summary>
+    /// <para>Diagram Direction.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:dir.</para>
+    /// </summary>
+    [SchemaAttr(14, "dir")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class Direction : OpenXmlLeafElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the Direction class.
+        /// </summary>
+        public Direction() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>Diagram Direction Value</para>
+        /// <para>Represents the following attribute in the schema: val</para>
+        /// </summary>
+        [StringValidator(IsToken = true)]
+        [SchemaAttr(0, "val")]
+        [Index(0)]
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.DirectionValues> Val { get; set; }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Direction>(deep);
+    }
+
+    /// <summary>
+    /// <para>Organization Chart Branch Style.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:hierBranch.</para>
+    /// </summary>
+    [SchemaAttr(14, "hierBranch")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class HierarchyBranch : OpenXmlLeafElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the HierarchyBranch class.
+        /// </summary>
+        public HierarchyBranch() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>Organization Chart Branch Style Value</para>
+        /// <para>Represents the following attribute in the schema: val</para>
+        /// </summary>
+        [StringValidator(IsToken = true)]
+        [SchemaAttr(0, "val")]
+        [Index(0)]
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyBranchStyleValues> Val { get; set; }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<HierarchyBranch>(deep);
+    }
+
+    /// <summary>
+    /// <para>One by One Animation String.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:animOne.</para>
+    /// </summary>
+    [SchemaAttr(14, "animOne")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class AnimateOneByOne : OpenXmlLeafElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the AnimateOneByOne class.
+        /// </summary>
+        public AnimateOneByOne() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>One By One Animation Value</para>
+        /// <para>Represents the following attribute in the schema: val</para>
+        /// </summary>
+        [StringValidator(IsToken = true)]
+        [SchemaAttr(0, "val")]
+        [Index(0)]
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimateOneByOneValues> Val { get; set; }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<AnimateOneByOne>(deep);
+    }
+
+    /// <summary>
+    /// <para>Level Animation.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:animLvl.</para>
+    /// </summary>
+    [SchemaAttr(14, "animLvl")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class AnimationLevel : OpenXmlLeafElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the AnimationLevel class.
+        /// </summary>
+        public AnimationLevel() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>Level Animation Value</para>
+        /// <para>Represents the following attribute in the schema: val</para>
+        /// </summary>
+        [StringValidator(IsToken = true)]
+        [SchemaAttr(0, "val")]
+        [Index(0)]
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevelStringValues> Val { get; set; }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<AnimationLevel>(deep);
+    }
+
+    /// <summary>
+    /// <para>Shape Resize Style.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:resizeHandles.</para>
+    /// </summary>
+    [SchemaAttr(14, "resizeHandles")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class ResizeHandles : OpenXmlLeafElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the ResizeHandles class.
+        /// </summary>
+        public ResizeHandles() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>Shape Resize Style Type</para>
+        /// <para>Represents the following attribute in the schema: val</para>
+        /// </summary>
+        [StringValidator(IsToken = true)]
+        [SchemaAttr(0, "val")]
+        [Index(0)]
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandlesStringValues> Val { get; set; }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ResizeHandles>(deep);
+    }
+
+    /// <summary>
+    /// <para>Category.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:cat.</para>
+    /// </summary>
+    [SchemaAttr(14, "cat")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class StyleDisplayCategory : OpenXmlLeafElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the StyleDisplayCategory class.
+        /// </summary>
+        public StyleDisplayCategory() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>Category Type</para>
+        /// <para>Represents the following attribute in the schema: type</para>
+        /// </summary>
+        [RequiredValidator()]
+        [StringValidator(IsUri = true)]
+        [SchemaAttr(0, "type")]
+        [Index(0)]
+        public StringValue Type { get; set; }
+
+        /// <summary>
+        /// <para>Priority</para>
+        /// <para>Represents the following attribute in the schema: pri</para>
+        /// </summary>
+        [RequiredValidator()]
+        [SchemaAttr(0, "pri")]
+        [Index(1)]
+        public UInt32Value Priority { get; set; }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleDisplayCategory>(deep);
+    }
+
+    /// <summary>
+    /// <para>3-D Scene.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:scene3d.</para>
     /// </summary>
     /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.Camera &lt;a:camera></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.LightRig &lt;a:lightRig></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.Backdrop &lt;a:backdrop></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
+    /// </list>
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.LineReference LineReference
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.LineReference>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> FillReference.</para>
-    /// <para> Represents the following element tag in the schema: a:fillRef </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-    public DocumentFormat.OpenXml.Drawing.FillReference FillReference
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.FillReference>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> EffectReference.</para>
-    /// <para> Represents the following element tag in the schema: a:effectRef </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-    public DocumentFormat.OpenXml.Drawing.EffectReference EffectReference
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.EffectReference>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> Font Reference.</para>
-    /// <para> Represents the following element tag in the schema: a:fontRef </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-    public DocumentFormat.OpenXml.Drawing.FontReference FontReference
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.FontReference>();
-        set => SetElement(value);
-	}
-
-
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Style>(deep);
-
-}
-/// <summary>
-/// <para>Show Organization Chart User Interface.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:orgChart.</para>
-/// </summary>
-
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "orgChart")]
-public partial class OrganizationChart : OpenXmlLeafElement
-{
-    
-        /// <summary>
-    /// <para> Show Organization Chart User Interface Value.</para>
-    /// <para>Represents the following attribute in the schema: val </para>
-    /// </summary>
-    [SchemaAttr(0, "val")]
-    [Index(0)]
-    public BooleanValue Val { get; set; }
-
-    /// <summary>
-    /// Initializes a new instance of the OrganizationChart class.
-    /// </summary>
-    public OrganizationChart():base(){}
-    
-    
-
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<OrganizationChart>(deep);
-
-}
-/// <summary>
-/// <para>Maximum Children.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:chMax.</para>
-/// </summary>
-
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "chMax")]
-public partial class MaxNumberOfChildren : OpenXmlLeafElement
-{
-    
-        /// <summary>
-    /// <para> Maximum Children Value.</para>
-    /// <para>Represents the following attribute in the schema: val </para>
-    /// </summary>
-[NumberValidator(MinInclusive = -1)]
-    [SchemaAttr(0, "val")]
-    [Index(0)]
-    public Int32Value Val { get; set; }
-
-    /// <summary>
-    /// Initializes a new instance of the MaxNumberOfChildren class.
-    /// </summary>
-    public MaxNumberOfChildren():base(){}
-    
-    
-
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<MaxNumberOfChildren>(deep);
-
-}
-/// <summary>
-/// <para>Preferred Number of Children.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:chPref.</para>
-/// </summary>
-
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "chPref")]
-public partial class PreferredNumberOfChildren : OpenXmlLeafElement
-{
-    
-        /// <summary>
-    /// <para> Preferred Number of CHildren Value.</para>
-    /// <para>Represents the following attribute in the schema: val </para>
-    /// </summary>
-[NumberValidator(MinInclusive = -1)]
-    [SchemaAttr(0, "val")]
-    [Index(0)]
-    public Int32Value Val { get; set; }
-
-    /// <summary>
-    /// Initializes a new instance of the PreferredNumberOfChildren class.
-    /// </summary>
-    public PreferredNumberOfChildren():base(){}
-    
-    
-
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<PreferredNumberOfChildren>(deep);
-
-}
-/// <summary>
-/// <para>Show Insert Bullet.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:bulletEnabled.</para>
-/// </summary>
-
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "bulletEnabled")]
-public partial class BulletEnabled : OpenXmlLeafElement
-{
-    
-        /// <summary>
-    /// <para> Show Insert Bullet Value.</para>
-    /// <para>Represents the following attribute in the schema: val </para>
-    /// </summary>
-    [SchemaAttr(0, "val")]
-    [Index(0)]
-    public BooleanValue Val { get; set; }
-
-    /// <summary>
-    /// Initializes a new instance of the BulletEnabled class.
-    /// </summary>
-    public BulletEnabled():base(){}
-    
-    
-
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<BulletEnabled>(deep);
-
-}
-/// <summary>
-/// <para>Diagram Direction.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:dir.</para>
-/// </summary>
-
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "dir")]
-public partial class Direction : OpenXmlLeafElement
-{
-    
-        /// <summary>
-    /// <para> Diagram Direction Value.</para>
-    /// <para>Represents the following attribute in the schema: val </para>
-    /// </summary>
-[StringValidator(IsToken = true)]
-    [SchemaAttr(0, "val")]
-    [Index(0)]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.DirectionValues> Val { get; set; }
-
-    /// <summary>
-    /// Initializes a new instance of the Direction class.
-    /// </summary>
-    public Direction():base(){}
-    
-    
-
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Direction>(deep);
-
-}
-/// <summary>
-/// <para>Organization Chart Branch Style.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:hierBranch.</para>
-/// </summary>
-
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "hierBranch")]
-public partial class HierarchyBranch : OpenXmlLeafElement
-{
-    
-        /// <summary>
-    /// <para> Organization Chart Branch Style Value.</para>
-    /// <para>Represents the following attribute in the schema: val </para>
-    /// </summary>
-[StringValidator(IsToken = true)]
-    [SchemaAttr(0, "val")]
-    [Index(0)]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyBranchStyleValues> Val { get; set; }
-
-    /// <summary>
-    /// Initializes a new instance of the HierarchyBranch class.
-    /// </summary>
-    public HierarchyBranch():base(){}
-    
-    
-
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<HierarchyBranch>(deep);
-
-}
-/// <summary>
-/// <para>One by One Animation String.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:animOne.</para>
-/// </summary>
-
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "animOne")]
-public partial class AnimateOneByOne : OpenXmlLeafElement
-{
-    
-        /// <summary>
-    /// <para> One By One Animation Value.</para>
-    /// <para>Represents the following attribute in the schema: val </para>
-    /// </summary>
-[StringValidator(IsToken = true)]
-    [SchemaAttr(0, "val")]
-    [Index(0)]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimateOneByOneValues> Val { get; set; }
-
-    /// <summary>
-    /// Initializes a new instance of the AnimateOneByOne class.
-    /// </summary>
-    public AnimateOneByOne():base(){}
-    
-    
-
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<AnimateOneByOne>(deep);
-
-}
-/// <summary>
-/// <para>Level Animation.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:animLvl.</para>
-/// </summary>
-
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "animLvl")]
-public partial class AnimationLevel : OpenXmlLeafElement
-{
-    
-        /// <summary>
-    /// <para> Level Animation Value.</para>
-    /// <para>Represents the following attribute in the schema: val </para>
-    /// </summary>
-[StringValidator(IsToken = true)]
-    [SchemaAttr(0, "val")]
-    [Index(0)]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevelStringValues> Val { get; set; }
-
-    /// <summary>
-    /// Initializes a new instance of the AnimationLevel class.
-    /// </summary>
-    public AnimationLevel():base(){}
-    
-    
-
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<AnimationLevel>(deep);
-
-}
-/// <summary>
-/// <para>Shape Resize Style.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:resizeHandles.</para>
-/// </summary>
-
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "resizeHandles")]
-public partial class ResizeHandles : OpenXmlLeafElement
-{
-    
-        /// <summary>
-    /// <para> Shape Resize Style Type.</para>
-    /// <para>Represents the following attribute in the schema: val </para>
-    /// </summary>
-[StringValidator(IsToken = true)]
-    [SchemaAttr(0, "val")]
-    [Index(0)]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandlesStringValues> Val { get; set; }
-
-    /// <summary>
-    /// Initializes a new instance of the ResizeHandles class.
-    /// </summary>
-    public ResizeHandles():base(){}
-    
-    
-
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ResizeHandles>(deep);
-
-}
-/// <summary>
-/// <para>Category.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:cat.</para>
-/// </summary>
-
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "cat")]
-public partial class StyleDisplayCategory : OpenXmlLeafElement
-{
-    
-        /// <summary>
-    /// <para> Category Type.</para>
-    /// <para>Represents the following attribute in the schema: type </para>
-    /// </summary>
-[RequiredValidator]
-[StringValidator(IsUri = true)]
-    [SchemaAttr(0, "type")]
-    [Index(0)]
-    public StringValue Type { get; set; }
-    /// <summary>
-    /// <para> Priority.</para>
-    /// <para>Represents the following attribute in the schema: pri </para>
-    /// </summary>
-[RequiredValidator]
-    [SchemaAttr(0, "pri")]
-    [Index(1)]
-    public UInt32Value Priority { get; set; }
-
-    /// <summary>
-    /// Initializes a new instance of the StyleDisplayCategory class.
-    /// </summary>
-    public StyleDisplayCategory():base(){}
-    
-    
-
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleDisplayCategory>(deep);
-
-}
-/// <summary>
-/// <para>3-D Scene.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:scene3d.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>DocumentFormat.OpenXml.Drawing.Camera &lt;a:camera></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.LightRig &lt;a:lightRig></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.Backdrop &lt;a:backdrop></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
-/// </list>
-/// </remarks>
-
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Camera))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.LightRig))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Backdrop))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "scene3d")]
-public partial class Scene3D : OpenXmlCompositeElement
-{
-    
-    
-    /// <summary>
-    /// Initializes a new instance of the Scene3D class.
-    /// </summary>
-    public Scene3D():base(){}
+    [SchemaAttr(14, "scene3d")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class Scene3D : OpenXmlCompositeElement
+    {
         /// <summary>
-    ///Initializes a new instance of the Scene3D class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public Scene3D(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the Scene3D class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public Scene3D(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the Scene3D class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public Scene3D(string outerXml)
-        : base(outerXml)
-    {
-    }
+        /// Initializes a new instance of the Scene3D class.
+        /// </summary>
+        public Scene3D() : base()
+        {
+        }
 
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Camera), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LightRig), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Backdrop), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
+        /// <summary>
+        /// Initializes a new instance of the Scene3D class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Scene3D(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Scene3D class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Scene3D(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Scene3D class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public Scene3D(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Camera.</para>
+        /// <para>Represents the following element tag in the schema: a:camera.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Camera Camera
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Camera>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Light Rig.</para>
+        /// <para>Represents the following element tag in the schema: a:lightRig.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.LightRig LightRig
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.LightRig>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Backdrop Plane.</para>
+        /// <para>Represents the following element tag in the schema: a:backdrop.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Backdrop Backdrop
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Backdrop>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>ExtensionList.</para>
+        /// <para>Represents the following element tag in the schema: a:extLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            set => SetElement(value);
+        }
+
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-        /// <summary>
-    /// <para> Camera.</para>
-    /// <para> Represents the following element tag in the schema: a:camera </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Camera Camera
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Camera>();
-        set => SetElement(value);
-	}
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Camera), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LightRig), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Backdrop), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Scene3D>(deep);
+    }
+
     /// <summary>
-    /// <para> Light Rig.</para>
-    /// <para> Represents the following element tag in the schema: a:lightRig </para>
+    /// <para>3-D Shape Properties.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:sp3d.</para>
     /// </summary>
     /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.BevelTop &lt;a:bevelT></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.BevelBottom &lt;a:bevelB></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtrusionColor &lt;a:extrusionClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.ContourColor &lt;a:contourClr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
+    /// </list>
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.LightRig LightRig
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.LightRig>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> Backdrop Plane.</para>
-    /// <para> Represents the following element tag in the schema: a:backdrop </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Backdrop Backdrop
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Backdrop>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> ExtensionList.</para>
-    /// <para> Represents the following element tag in the schema: a:extLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-    public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-        set => SetElement(value);
-	}
-
-
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Scene3D>(deep);
-
-}
-/// <summary>
-/// <para>3-D Shape Properties.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:sp3d.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>DocumentFormat.OpenXml.Drawing.BevelTop &lt;a:bevelT></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.BevelBottom &lt;a:bevelB></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.ExtrusionColor &lt;a:extrusionClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.ContourColor &lt;a:contourClr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
-/// </list>
-/// </remarks>
-
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BevelTop))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BevelBottom))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtrusionColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ContourColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "sp3d")]
-public partial class Shape3D : OpenXmlCompositeElement
-{
-    
+    [SchemaAttr(14, "sp3d")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class Shape3D : OpenXmlCompositeElement
+    {
         /// <summary>
-    /// <para> Shape Depth.</para>
-    /// <para>Represents the following attribute in the schema: z </para>
-    /// </summary>
-[NumberValidator(MinInclusive = -27273042329600, MaxInclusive = 27273042316900)]
-    [SchemaAttr(0, "z")]
-    [Index(0)]
-    public Int64Value Z { get; set; }
-    /// <summary>
-    /// <para> Extrusion Height.</para>
-    /// <para>Represents the following attribute in the schema: extrusionH </para>
-    /// </summary>
-[NumberValidator(MinInclusive = 0, MaxInclusive = 2147483647)]
-    [SchemaAttr(0, "extrusionH")]
-    [Index(1)]
-    public Int64Value ExtrusionHeight { get; set; }
-    /// <summary>
-    /// <para> Contour Width.</para>
-    /// <para>Represents the following attribute in the schema: contourW </para>
-    /// </summary>
-[NumberValidator(MinInclusive = 0, MaxInclusive = 2147483647)]
-    [SchemaAttr(0, "contourW")]
-    [Index(2)]
-    public Int64Value ContourWidth { get; set; }
-    /// <summary>
-    /// <para> Preset Material Type.</para>
-    /// <para>Represents the following attribute in the schema: prstMaterial </para>
-    /// </summary>
-[StringValidator(IsToken = true)]
-    [SchemaAttr(0, "prstMaterial")]
-    [Index(3)]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues> PresetMaterial { get; set; }
+        /// Initializes a new instance of the Shape3D class.
+        /// </summary>
+        public Shape3D() : base()
+        {
+        }
 
-    /// <summary>
-    /// Initializes a new instance of the Shape3D class.
-    /// </summary>
-    public Shape3D():base(){}
         /// <summary>
-    ///Initializes a new instance of the Shape3D class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public Shape3D(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the Shape3D class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public Shape3D(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the Shape3D class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public Shape3D(string outerXml)
-        : base(outerXml)
-    {
-    }
+        /// Initializes a new instance of the Shape3D class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Shape3D(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
 
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BevelTop), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BevelBottom), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtrusionColor), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ContourColor), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
+        /// <summary>
+        /// Initializes a new instance of the Shape3D class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Shape3D(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Shape3D class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public Shape3D(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Shape Depth</para>
+        /// <para>Represents the following attribute in the schema: z</para>
+        /// </summary>
+        [NumberValidator(MinInclusive = -27273042329600L, MaxInclusive = 27273042316900L)]
+        [SchemaAttr(0, "z")]
+        [Index(0)]
+        public Int64Value Z { get; set; }
+
+        /// <summary>
+        /// <para>Extrusion Height</para>
+        /// <para>Represents the following attribute in the schema: extrusionH</para>
+        /// </summary>
+        [NumberValidator(MinInclusive = 0L, MaxInclusive = 2147483647L)]
+        [SchemaAttr(0, "extrusionH")]
+        [Index(1)]
+        public Int64Value ExtrusionHeight { get; set; }
+
+        /// <summary>
+        /// <para>Contour Width</para>
+        /// <para>Represents the following attribute in the schema: contourW</para>
+        /// </summary>
+        [NumberValidator(MinInclusive = 0L, MaxInclusive = 2147483647L)]
+        [SchemaAttr(0, "contourW")]
+        [Index(2)]
+        public Int64Value ContourWidth { get; set; }
+
+        /// <summary>
+        /// <para>Preset Material Type</para>
+        /// <para>Represents the following attribute in the schema: prstMaterial</para>
+        /// </summary>
+        [StringValidator(IsToken = true)]
+        [SchemaAttr(0, "prstMaterial")]
+        [Index(3)]
+        public EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues> PresetMaterial { get; set; }
+
+        /// <summary>
+        /// <para>Top Bevel.</para>
+        /// <para>Represents the following element tag in the schema: a:bevelT.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.BevelTop BevelTop
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.BevelTop>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Bottom Bevel.</para>
+        /// <para>Represents the following element tag in the schema: a:bevelB.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.BevelBottom BevelBottom
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.BevelBottom>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Extrusion Color.</para>
+        /// <para>Represents the following element tag in the schema: a:extrusionClr.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.ExtrusionColor ExtrusionColor
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtrusionColor>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Contour Color.</para>
+        /// <para>Represents the following element tag in the schema: a:contourClr.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.ContourColor ContourColor
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ContourColor>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>ExtensionList.</para>
+        /// <para>Represents the following element tag in the schema: a:extLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            set => SetElement(value);
+        }
+
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-        /// <summary>
-    /// <para> Top Bevel.</para>
-    /// <para> Represents the following element tag in the schema: a:bevelT </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-    public DocumentFormat.OpenXml.Drawing.BevelTop BevelTop
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.BevelTop>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> Bottom Bevel.</para>
-    /// <para> Represents the following element tag in the schema: a:bevelB </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-    public DocumentFormat.OpenXml.Drawing.BevelBottom BevelBottom
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.BevelBottom>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> Extrusion Color.</para>
-    /// <para> Represents the following element tag in the schema: a:extrusionClr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-    public DocumentFormat.OpenXml.Drawing.ExtrusionColor ExtrusionColor
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.ExtrusionColor>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> Contour Color.</para>
-    /// <para> Represents the following element tag in the schema: a:contourClr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-    public DocumentFormat.OpenXml.Drawing.ContourColor ContourColor
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.ContourColor>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> ExtensionList.</para>
-    /// <para> Represents the following element tag in the schema: a:extLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-    public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-        set => SetElement(value);
-	}
 
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BevelTop), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BevelBottom), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtrusionColor), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ContourColor), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+        }.Compile();
 
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shape3D>(deep);
+        internal override CompiledParticle CompiledParticle => _constraint;
 
-}
-/// <summary>
-/// <para>Text Properties.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:txPr.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>DocumentFormat.OpenXml.Drawing.Shape3DType &lt;a:sp3d></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.FlatText &lt;a:flatTx></description></item>
-/// </list>
-/// </remarks>
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shape3D>(deep);
+    }
 
+    /// <summary>
+    /// <para>Text Properties.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:txPr.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.Shape3DType &lt;a:sp3d></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.FlatText &lt;a:flatTx></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FlatText))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "txPr")]
-public partial class TextProperties : OpenXmlCompositeElement
-{
-    
-    
-    /// <summary>
-    /// Initializes a new instance of the TextProperties class.
-    /// </summary>
-    public TextProperties():base(){}
+    [SchemaAttr(14, "txPr")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class TextProperties : OpenXmlCompositeElement
+    {
         /// <summary>
-    ///Initializes a new instance of the TextProperties class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public TextProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the TextProperties class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public TextProperties(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the TextProperties class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public TextProperties(string outerXml)
-        : base(outerXml)
-    {
-    }
-
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new CompositeParticle(ParticleType.Group, 0, 1)
-    {
-        new CompositeParticle(ParticleType.Choice, 1, 1)
+        /// Initializes a new instance of the TextProperties class.
+        /// </summary>
+        public TextProperties() : base()
         {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FlatText), 1, 1)
         }
-    }
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
+
+        /// <summary>
+        /// Initializes a new instance of the TextProperties class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TextProperties(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TextProperties class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TextProperties(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TextProperties class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public TextProperties(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Apply 3D shape properties.</para>
+        /// <para>Represents the following element tag in the schema: a:sp3d.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Shape3DType Shape3DType
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Shape3DType>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>No text in 3D scene.</para>
+        /// <para>Represents the following element tag in the schema: a:flatTx.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.FlatText FlatText
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.FlatText>();
+            set => SetElement(value);
+        }
+
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new CompositeParticle(ParticleType.Group, 0, 1)
+            {
+                new CompositeParticle(ParticleType.Choice, 1, 1)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FlatText), 1, 1)
+                }
+            }
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextProperties>(deep);
+    }
+
+    /// <summary>
+    /// <para>Title.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:title.</para>
+    /// </summary>
+    [SchemaAttr(14, "title")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class StyleDefinitionTitle : OpenXmlLeafElement
+    {
         /// <summary>
-    /// <para> Apply 3D shape properties.</para>
-    /// <para> Represents the following element tag in the schema: a:sp3d </para>
+        /// Initializes a new instance of the StyleDefinitionTitle class.
+        /// </summary>
+        public StyleDefinitionTitle() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>Natural Language</para>
+        /// <para>Represents the following attribute in the schema: lang</para>
+        /// </summary>
+        [SchemaAttr(0, "lang")]
+        [Index(0)]
+        public StringValue Language { get; set; }
+
+        /// <summary>
+        /// <para>Description Value</para>
+        /// <para>Represents the following attribute in the schema: val</para>
+        /// </summary>
+        [RequiredValidator()]
+        [SchemaAttr(0, "val")]
+        [Index(1)]
+        public StringValue Val { get; set; }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleDefinitionTitle>(deep);
+    }
+
+    /// <summary>
+    /// <para>Style Label Description.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:desc.</para>
+    /// </summary>
+    [SchemaAttr(14, "desc")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class StyleLabelDescription : OpenXmlLeafElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the StyleLabelDescription class.
+        /// </summary>
+        public StyleLabelDescription() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>Natural Language</para>
+        /// <para>Represents the following attribute in the schema: lang</para>
+        /// </summary>
+        [SchemaAttr(0, "lang")]
+        [Index(0)]
+        public StringValue Language { get; set; }
+
+        /// <summary>
+        /// <para>Description Value</para>
+        /// <para>Represents the following attribute in the schema: val</para>
+        /// </summary>
+        [RequiredValidator()]
+        [SchemaAttr(0, "val")]
+        [Index(1)]
+        public StringValue Val { get; set; }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleLabelDescription>(deep);
+    }
+
+    /// <summary>
+    /// <para>Category List.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:catLst.</para>
     /// </summary>
     /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>StyleDisplayCategory &lt;dgm:cat></description></item>
+    /// </list>
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Shape3DType Shape3DType
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Shape3DType>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> No text in 3D scene.</para>
-    /// <para> Represents the following element tag in the schema: a:flatTx </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-    public DocumentFormat.OpenXml.Drawing.FlatText FlatText
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.FlatText>();
-        set => SetElement(value);
-	}
-
-
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextProperties>(deep);
-
-}
-/// <summary>
-/// <para>Title.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:title.</para>
-/// </summary>
-
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "title")]
-public partial class StyleDefinitionTitle : OpenXmlLeafElement
-{
-    
-        /// <summary>
-    /// <para> Natural Language.</para>
-    /// <para>Represents the following attribute in the schema: lang </para>
-    /// </summary>
-    [SchemaAttr(0, "lang")]
-    [Index(0)]
-    public StringValue Language { get; set; }
-    /// <summary>
-    /// <para> Description Value.</para>
-    /// <para>Represents the following attribute in the schema: val </para>
-    /// </summary>
-[RequiredValidator]
-    [SchemaAttr(0, "val")]
-    [Index(1)]
-    public StringValue Val { get; set; }
-
-    /// <summary>
-    /// Initializes a new instance of the StyleDefinitionTitle class.
-    /// </summary>
-    public StyleDefinitionTitle():base(){}
-    
-    
-
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleDefinitionTitle>(deep);
-
-}
-/// <summary>
-/// <para>Style Label Description.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:desc.</para>
-/// </summary>
-
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "desc")]
-public partial class StyleLabelDescription : OpenXmlLeafElement
-{
-    
-        /// <summary>
-    /// <para> Natural Language.</para>
-    /// <para>Represents the following attribute in the schema: lang </para>
-    /// </summary>
-    [SchemaAttr(0, "lang")]
-    [Index(0)]
-    public StringValue Language { get; set; }
-    /// <summary>
-    /// <para> Description Value.</para>
-    /// <para>Represents the following attribute in the schema: val </para>
-    /// </summary>
-[RequiredValidator]
-    [SchemaAttr(0, "val")]
-    [Index(1)]
-    public StringValue Val { get; set; }
-
-    /// <summary>
-    /// Initializes a new instance of the StyleLabelDescription class.
-    /// </summary>
-    public StyleLabelDescription():base(){}
-    
-    
-
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleLabelDescription>(deep);
-
-}
-/// <summary>
-/// <para>Category List.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:catLst.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>StyleDisplayCategory &lt;dgm:cat></description></item>
-/// </list>
-/// </remarks>
-
     [ChildElementInfo(typeof(StyleDisplayCategory))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "catLst")]
-public partial class StyleDisplayCategories : OpenXmlCompositeElement
-{
-    
-    
-    /// <summary>
-    /// Initializes a new instance of the StyleDisplayCategories class.
-    /// </summary>
-    public StyleDisplayCategories():base(){}
+    [SchemaAttr(14, "catLst")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class StyleDisplayCategories : OpenXmlCompositeElement
+    {
         /// <summary>
-    ///Initializes a new instance of the StyleDisplayCategories class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public StyleDisplayCategories(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
+        /// Initializes a new instance of the StyleDisplayCategories class.
+        /// </summary>
+        public StyleDisplayCategories() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the StyleDisplayCategories class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public StyleDisplayCategories(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the StyleDisplayCategories class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public StyleDisplayCategories(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the StyleDisplayCategories class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public StyleDisplayCategories(string outerXml) : base(outerXml)
+        {
+        }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 0, 0)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.StyleDisplayCategory), 0, 0)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleDisplayCategories>(deep);
     }
+
     /// <summary>
-    /// Initializes a new instance of the StyleDisplayCategories class with the specified child elements.
+    /// <para>Style Label.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:styleLbl.</para>
     /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public StyleDisplayCategories(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the StyleDisplayCategories class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public StyleDisplayCategories(string outerXml)
-        : base(outerXml)
-    {
-    }
-
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 0, 0)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.StyleDisplayCategory), 0, 0)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleDisplayCategories>(deep);
-
-}
-/// <summary>
-/// <para>Style Label.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:styleLbl.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>Scene3D &lt;dgm:scene3d></description></item>
-///<item><description>Shape3D &lt;dgm:sp3d></description></item>
-///<item><description>TextProperties &lt;dgm:txPr></description></item>
-///<item><description>Style &lt;dgm:style></description></item>
-///<item><description>ExtensionList &lt;dgm:extLst></description></item>
-/// </list>
-/// </remarks>
-
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>Scene3D &lt;dgm:scene3d></description></item>
+    ///   <item><description>Shape3D &lt;dgm:sp3d></description></item>
+    ///   <item><description>TextProperties &lt;dgm:txPr></description></item>
+    ///   <item><description>Style &lt;dgm:style></description></item>
+    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(Scene3D))]
     [ChildElementInfo(typeof(Shape3D))]
     [ChildElementInfo(typeof(TextProperties))]
     [ChildElementInfo(typeof(Style))]
     [ChildElementInfo(typeof(ExtensionList))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "styleLbl")]
-public partial class StyleLabel : OpenXmlCompositeElement
-{
-    
+    [SchemaAttr(14, "styleLbl")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class StyleLabel : OpenXmlCompositeElement
+    {
         /// <summary>
-    /// <para> Style Name.</para>
-    /// <para>Represents the following attribute in the schema: name </para>
-    /// </summary>
-[RequiredValidator]
-    [SchemaAttr(0, "name")]
-    [Index(0)]
-    public StringValue Name { get; set; }
+        /// Initializes a new instance of the StyleLabel class.
+        /// </summary>
+        public StyleLabel() : base()
+        {
+        }
 
-    /// <summary>
-    /// Initializes a new instance of the StyleLabel class.
-    /// </summary>
-    public StyleLabel():base(){}
         /// <summary>
-    ///Initializes a new instance of the StyleLabel class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public StyleLabel(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the StyleLabel class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public StyleLabel(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the StyleLabel class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public StyleLabel(string outerXml)
-        : base(outerXml)
-    {
-    }
+        /// Initializes a new instance of the StyleLabel class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public StyleLabel(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
 
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Scene3D), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Shape3D), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.TextProperties), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Style), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
+        /// <summary>
+        /// Initializes a new instance of the StyleLabel class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public StyleLabel(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the StyleLabel class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public StyleLabel(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Style Name</para>
+        /// <para>Represents the following attribute in the schema: name</para>
+        /// </summary>
+        [RequiredValidator()]
+        [SchemaAttr(0, "name")]
+        [Index(0)]
+        public StringValue Name { get; set; }
+
+        /// <summary>
+        /// <para>3-D Scene.</para>
+        /// <para>Represents the following element tag in the schema: dgm:scene3d.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public Scene3D Scene3D
+        {
+            get => GetElement<Scene3D>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>3-D Shape Properties.</para>
+        /// <para>Represents the following element tag in the schema: dgm:sp3d.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public Shape3D Shape3D
+        {
+            get => GetElement<Shape3D>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Text Properties.</para>
+        /// <para>Represents the following element tag in the schema: dgm:txPr.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public TextProperties TextProperties
+        {
+            get => GetElement<TextProperties>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Shape Style.</para>
+        /// <para>Represents the following element tag in the schema: dgm:style.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public Style Style
+        {
+            get => GetElement<Style>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>ExtensionList.</para>
+        /// <para>Represents the following element tag in the schema: dgm:extLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public ExtensionList ExtensionList
+        {
+            get => GetElement<ExtensionList>();
+            set => SetElement(value);
+        }
+
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-        /// <summary>
-    /// <para> 3-D Scene.</para>
-    /// <para> Represents the following element tag in the schema: dgm:scene3d </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public Scene3D Scene3D
-	{
-        get => GetElement<Scene3D>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> 3-D Shape Properties.</para>
-    /// <para> Represents the following element tag in the schema: dgm:sp3d </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public Shape3D Shape3D
-	{
-        get => GetElement<Shape3D>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> Text Properties.</para>
-    /// <para> Represents the following element tag in the schema: dgm:txPr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public TextProperties TextProperties
-	{
-        get => GetElement<TextProperties>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> Shape Style.</para>
-    /// <para> Represents the following element tag in the schema: dgm:style </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public Style Style
-	{
-        get => GetElement<Style>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> ExtensionList.</para>
-    /// <para> Represents the following element tag in the schema: dgm:extLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public ExtensionList ExtensionList
-	{
-        get => GetElement<ExtensionList>();
-        set => SetElement(value);
-	}
 
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Scene3D), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Shape3D), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.TextProperties), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Style), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
+        }.Compile();
 
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleLabel>(deep);
+        internal override CompiledParticle CompiledParticle => _constraint;
 
-}
-/// <summary>
-/// <para>Point List.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:ptLst.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>Point &lt;dgm:pt></description></item>
-/// </list>
-/// </remarks>
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleLabel>(deep);
+    }
 
+    /// <summary>
+    /// <para>Point List.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:ptLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>Point &lt;dgm:pt></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(Point))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "ptLst")]
-public partial class PointList : OpenXmlCompositeElement
-{
-    
-    
-    /// <summary>
-    /// Initializes a new instance of the PointList class.
-    /// </summary>
-    public PointList():base(){}
+    [SchemaAttr(14, "ptLst")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class PointList : OpenXmlCompositeElement
+    {
         /// <summary>
-    ///Initializes a new instance of the PointList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public PointList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
+        /// Initializes a new instance of the PointList class.
+        /// </summary>
+        public PointList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PointList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public PointList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PointList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public PointList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PointList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public PointList(string outerXml) : base(outerXml)
+        {
+        }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Point), 0, 0)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<PointList>(deep);
     }
+
     /// <summary>
-    /// Initializes a new instance of the PointList class with the specified child elements.
+    /// <para>Connection List.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:cxnLst.</para>
     /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public PointList(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the PointList class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public PointList(string outerXml)
-        : base(outerXml)
-    {
-    }
-
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Point), 0, 0)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<PointList>(deep);
-
-}
-/// <summary>
-/// <para>Connection List.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:cxnLst.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>Connection &lt;dgm:cxn></description></item>
-/// </list>
-/// </remarks>
-
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>Connection &lt;dgm:cxn></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(Connection))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "cxnLst")]
-public partial class ConnectionList : OpenXmlCompositeElement
-{
-    
-    
-    /// <summary>
-    /// Initializes a new instance of the ConnectionList class.
-    /// </summary>
-    public ConnectionList():base(){}
+    [SchemaAttr(14, "cxnLst")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class ConnectionList : OpenXmlCompositeElement
+    {
         /// <summary>
-    ///Initializes a new instance of the ConnectionList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public ConnectionList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
+        /// Initializes a new instance of the ConnectionList class.
+        /// </summary>
+        public ConnectionList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ConnectionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ConnectionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ConnectionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ConnectionList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ConnectionList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public ConnectionList(string outerXml) : base(outerXml)
+        {
+        }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Connection), 0, 0)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConnectionList>(deep);
     }
+
     /// <summary>
-    /// Initializes a new instance of the ConnectionList class with the specified child elements.
+    /// <para>Background Formatting.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:bg.</para>
     /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public ConnectionList(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the ConnectionList class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public ConnectionList(string outerXml)
-        : base(outerXml)
-    {
-    }
-
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Connection), 0, 0)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConnectionList>(deep);
-
-}
-/// <summary>
-/// <para>Background Formatting.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:bg.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>DocumentFormat.OpenXml.Drawing.NoFill &lt;a:noFill></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.SolidFill &lt;a:solidFill></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.GradientFill &lt;a:gradFill></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.BlipFill &lt;a:blipFill></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.PatternFill &lt;a:pattFill></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.GroupFill &lt;a:grpFill></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.EffectList &lt;a:effectLst></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.EffectDag &lt;a:effectDag></description></item>
-/// </list>
-/// </remarks>
-
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.NoFill &lt;a:noFill></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.SolidFill &lt;a:solidFill></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.GradientFill &lt;a:gradFill></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.BlipFill &lt;a:blipFill></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.PatternFill &lt;a:pattFill></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.GroupFill &lt;a:grpFill></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectList &lt;a:effectLst></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectDag &lt;a:effectDag></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NoFill))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SolidFill))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GradientFill))]
@@ -5916,531 +5962,554 @@ internal override CompiledParticle CompiledParticle => _constraint;
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupFill))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "bg")]
-public partial class Background : OpenXmlCompositeElement
-{
-    
-    
-    /// <summary>
-    /// Initializes a new instance of the Background class.
-    /// </summary>
-    public Background():base(){}
+    [SchemaAttr(14, "bg")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class Background : OpenXmlCompositeElement
+    {
         /// <summary>
-    ///Initializes a new instance of the Background class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public Background(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the Background class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public Background(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the Background class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public Background(string outerXml)
-        : base(outerXml)
-    {
-    }
-
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new CompositeParticle(ParticleType.Group, 0, 1)
-    {
-        new CompositeParticle(ParticleType.Choice, 1, 1)
+        /// Initializes a new instance of the Background class.
+        /// </summary>
+        public Background() : base()
         {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
         }
-    },
-    new CompositeParticle(ParticleType.Group, 0, 1)
-    {
-        new CompositeParticle(ParticleType.Choice, 1, 1)
+
+        /// <summary>
+        /// Initializes a new instance of the Background class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Background(IEnumerable<OpenXmlElement> childElements) : base(childElements)
         {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
         }
+
+        /// <summary>
+        /// Initializes a new instance of the Background class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Background(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Background class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public Background(string outerXml) : base(outerXml)
+        {
+        }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new CompositeParticle(ParticleType.Group, 0, 1)
+            {
+                new CompositeParticle(ParticleType.Choice, 1, 1)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
+                }
+            },
+            new CompositeParticle(ParticleType.Group, 0, 1)
+            {
+                new CompositeParticle(ParticleType.Choice, 1, 1)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
+                }
+            }
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Background>(deep);
     }
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Background>(deep);
 
-}
-/// <summary>
-/// <para>Whole E2O Formatting.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:whole.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>DocumentFormat.OpenXml.Drawing.Outline &lt;a:ln></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.EffectList &lt;a:effectLst></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.EffectDag &lt;a:effectDag></description></item>
-/// </list>
-/// </remarks>
-
+    /// <summary>
+    /// <para>Whole E2O Formatting.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:whole.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.Outline &lt;a:ln></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectList &lt;a:effectLst></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectDag &lt;a:effectDag></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Outline))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "whole")]
-public partial class Whole : OpenXmlCompositeElement
-{
-    
-    
-    /// <summary>
-    /// Initializes a new instance of the Whole class.
-    /// </summary>
-    public Whole():base(){}
+    [SchemaAttr(14, "whole")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class Whole : OpenXmlCompositeElement
+    {
         /// <summary>
-    ///Initializes a new instance of the Whole class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public Whole(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the Whole class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public Whole(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the Whole class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public Whole(string outerXml)
-        : base(outerXml)
-    {
-    }
-
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
-    new CompositeParticle(ParticleType.Group, 0, 1)
-    {
-        new CompositeParticle(ParticleType.Choice, 1, 1)
+        /// Initializes a new instance of the Whole class.
+        /// </summary>
+        public Whole() : base()
         {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
         }
-    }
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+
         /// <summary>
-    /// <para> Outline.</para>
-    /// <para> Represents the following element tag in the schema: a:ln </para>
+        /// Initializes a new instance of the Whole class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Whole(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Whole class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Whole(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Whole class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public Whole(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Outline.</para>
+        /// <para>Represents the following element tag in the schema: a:ln.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Outline Outline
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Outline>();
+            set => SetElement(value);
+        }
+
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
+            new CompositeParticle(ParticleType.Group, 0, 1)
+            {
+                new CompositeParticle(ParticleType.Choice, 1, 1)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
+                }
+            }
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Whole>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the DataModelExtensionList Class.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:extLst.</para>
     /// </summary>
     /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.DataModelExtension &lt;a:ext></description></item>
+    /// </list>
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Outline Outline
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Outline>();
-        set => SetElement(value);
-	}
-
-
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Whole>(deep);
-
-}
-/// <summary>
-/// <para>Defines the DataModelExtensionList Class.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:extLst.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>DocumentFormat.OpenXml.Drawing.DataModelExtension &lt;a:ext></description></item>
-/// </list>
-/// </remarks>
-
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.DataModelExtension))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "extLst")]
-public partial class DataModelExtensionList : OpenXmlCompositeElement
-{
-    
-    
-    /// <summary>
-    /// Initializes a new instance of the DataModelExtensionList class.
-    /// </summary>
-    public DataModelExtensionList():base(){}
+    [SchemaAttr(14, "extLst")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class DataModelExtensionList : OpenXmlCompositeElement
+    {
         /// <summary>
-    ///Initializes a new instance of the DataModelExtensionList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public DataModelExtensionList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
+        /// Initializes a new instance of the DataModelExtensionList class.
+        /// </summary>
+        public DataModelExtensionList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DataModelExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public DataModelExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DataModelExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public DataModelExtensionList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DataModelExtensionList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public DataModelExtensionList(string outerXml) : base(outerXml)
+        {
+        }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DataModelExtension), 0, 0)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataModelExtensionList>(deep);
     }
+
     /// <summary>
-    /// Initializes a new instance of the DataModelExtensionList class with the specified child elements.
+    /// <para>Property Set.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:prSet.</para>
     /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public DataModelExtensionList(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the DataModelExtensionList class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public DataModelExtensionList(string outerXml)
-        : base(outerXml)
-    {
-    }
-
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DataModelExtension), 0, 0)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataModelExtensionList>(deep);
-
-}
-/// <summary>
-/// <para>Property Set.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:prSet.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>PresentationLayoutVariables &lt;dgm:presLayoutVars></description></item>
-///<item><description>Style &lt;dgm:style></description></item>
-/// </list>
-/// </remarks>
-
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>PresentationLayoutVariables &lt;dgm:presLayoutVars></description></item>
+    ///   <item><description>Style &lt;dgm:style></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(PresentationLayoutVariables))]
     [ChildElementInfo(typeof(Style))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "prSet")]
-public partial class PropertySet : OpenXmlCompositeElement
-{
-    
+    [SchemaAttr(14, "prSet")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class PropertySet : OpenXmlCompositeElement
+    {
         /// <summary>
-    /// <para> Presentation Element Identifier.</para>
-    /// <para>Represents the following attribute in the schema: presAssocID </para>
-    /// </summary>
-[NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
-[StringValidator(Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}", UnionId = 0)]
-    [SchemaAttr(0, "presAssocID")]
-    [Index(0)]
-    public StringValue PresentationElementId { get; set; }
-    /// <summary>
-    /// <para> Presentation Name.</para>
-    /// <para>Represents the following attribute in the schema: presName </para>
-    /// </summary>
-    [SchemaAttr(0, "presName")]
-    [Index(1)]
-    public StringValue PresentationName { get; set; }
-    /// <summary>
-    /// <para> Presentation Style Label.</para>
-    /// <para>Represents the following attribute in the schema: presStyleLbl </para>
-    /// </summary>
-    [SchemaAttr(0, "presStyleLbl")]
-    [Index(2)]
-    public StringValue PresentationStyleLabel { get; set; }
-    /// <summary>
-    /// <para> Presentation Style Index.</para>
-    /// <para>Represents the following attribute in the schema: presStyleIdx </para>
-    /// </summary>
-    [SchemaAttr(0, "presStyleIdx")]
-    [Index(3)]
-    public Int32Value PresentationStyleIndex { get; set; }
-    /// <summary>
-    /// <para> Presentation Style Count.</para>
-    /// <para>Represents the following attribute in the schema: presStyleCnt </para>
-    /// </summary>
-    [SchemaAttr(0, "presStyleCnt")]
-    [Index(4)]
-    public Int32Value PresentationStyleCount { get; set; }
-    /// <summary>
-    /// <para> Current Diagram Type.</para>
-    /// <para>Represents the following attribute in the schema: loTypeId </para>
-    /// </summary>
-    [SchemaAttr(0, "loTypeId")]
-    [Index(5)]
-    public StringValue LayoutTypeId { get; set; }
-    /// <summary>
-    /// <para> Current Diagram Category.</para>
-    /// <para>Represents the following attribute in the schema: loCatId </para>
-    /// </summary>
-    [SchemaAttr(0, "loCatId")]
-    [Index(6)]
-    public StringValue LayoutCategoryId { get; set; }
-    /// <summary>
-    /// <para> Current Style Type.</para>
-    /// <para>Represents the following attribute in the schema: qsTypeId </para>
-    /// </summary>
-    [SchemaAttr(0, "qsTypeId")]
-    [Index(7)]
-    public StringValue QuickStyleTypeId { get; set; }
-    /// <summary>
-    /// <para> Current Style Category.</para>
-    /// <para>Represents the following attribute in the schema: qsCatId </para>
-    /// </summary>
-    [SchemaAttr(0, "qsCatId")]
-    [Index(8)]
-    public StringValue QuickStyleCategoryId { get; set; }
-    /// <summary>
-    /// <para> Color Transform Type Identifier.</para>
-    /// <para>Represents the following attribute in the schema: csTypeId </para>
-    /// </summary>
-    [SchemaAttr(0, "csTypeId")]
-    [Index(9)]
-    public StringValue ColorType { get; set; }
-    /// <summary>
-    /// <para> Color Transform Category.</para>
-    /// <para>Represents the following attribute in the schema: csCatId </para>
-    /// </summary>
-    [SchemaAttr(0, "csCatId")]
-    [Index(10)]
-    public StringValue ColorCategoryId { get; set; }
-    /// <summary>
-    /// <para> Coherent 3D Behavior.</para>
-    /// <para>Represents the following attribute in the schema: coherent3DOff </para>
-    /// </summary>
-    [SchemaAttr(0, "coherent3DOff")]
-    [Index(11)]
-    public BooleanValue Coherent3D { get; set; }
-    /// <summary>
-    /// <para> Placeholder Text.</para>
-    /// <para>Represents the following attribute in the schema: phldrT </para>
-    /// </summary>
-    [SchemaAttr(0, "phldrT")]
-    [Index(12)]
-    public StringValue PlaceholderText { get; set; }
-    /// <summary>
-    /// <para> Placeholder.</para>
-    /// <para>Represents the following attribute in the schema: phldr </para>
-    /// </summary>
-    [SchemaAttr(0, "phldr")]
-    [Index(13)]
-    public BooleanValue Placeholder { get; set; }
-    /// <summary>
-    /// <para> Custom Rotation.</para>
-    /// <para>Represents the following attribute in the schema: custAng </para>
-    /// </summary>
-    [SchemaAttr(0, "custAng")]
-    [Index(14)]
-    public Int32Value Rotation { get; set; }
-    /// <summary>
-    /// <para> Custom Vertical Flip.</para>
-    /// <para>Represents the following attribute in the schema: custFlipVert </para>
-    /// </summary>
-    [SchemaAttr(0, "custFlipVert")]
-    [Index(15)]
-    public BooleanValue VerticalFlip { get; set; }
-    /// <summary>
-    /// <para> Custom Horizontal Flip.</para>
-    /// <para>Represents the following attribute in the schema: custFlipHor </para>
-    /// </summary>
-    [SchemaAttr(0, "custFlipHor")]
-    [Index(16)]
-    public BooleanValue HorizontalFlip { get; set; }
-    /// <summary>
-    /// <para> Fixed Width Override.</para>
-    /// <para>Represents the following attribute in the schema: custSzX </para>
-    /// </summary>
-    [SchemaAttr(0, "custSzX")]
-    [Index(17)]
-    public Int32Value FixedWidthOverride { get; set; }
-    /// <summary>
-    /// <para> Fixed Height Override.</para>
-    /// <para>Represents the following attribute in the schema: custSzY </para>
-    /// </summary>
-    [SchemaAttr(0, "custSzY")]
-    [Index(18)]
-    public Int32Value FixedHeightOverride { get; set; }
-    /// <summary>
-    /// <para> Width Scale.</para>
-    /// <para>Represents the following attribute in the schema: custScaleX </para>
-    /// </summary>
-    [SchemaAttr(0, "custScaleX")]
-    [Index(19)]
-    public Int32Value WidthScale { get; set; }
-    /// <summary>
-    /// <para> Height Scale.</para>
-    /// <para>Represents the following attribute in the schema: custScaleY </para>
-    /// </summary>
-    [SchemaAttr(0, "custScaleY")]
-    [Index(20)]
-    public Int32Value HightScale { get; set; }
-    /// <summary>
-    /// <para> Text Changed.</para>
-    /// <para>Represents the following attribute in the schema: custT </para>
-    /// </summary>
-    [SchemaAttr(0, "custT")]
-    [Index(21)]
-    public BooleanValue TextChanged { get; set; }
-    /// <summary>
-    /// <para> Custom Factor Width.</para>
-    /// <para>Represents the following attribute in the schema: custLinFactX </para>
-    /// </summary>
-    [SchemaAttr(0, "custLinFactX")]
-    [Index(22)]
-    public Int32Value FactorWidth { get; set; }
-    /// <summary>
-    /// <para> Custom Factor Height.</para>
-    /// <para>Represents the following attribute in the schema: custLinFactY </para>
-    /// </summary>
-    [SchemaAttr(0, "custLinFactY")]
-    [Index(23)]
-    public Int32Value FactorHeight { get; set; }
-    /// <summary>
-    /// <para> Neighbor Offset Width.</para>
-    /// <para>Represents the following attribute in the schema: custLinFactNeighborX </para>
-    /// </summary>
-    [SchemaAttr(0, "custLinFactNeighborX")]
-    [Index(24)]
-    public Int32Value NeighborOffsetWidth { get; set; }
-    /// <summary>
-    /// <para> Neighbor Offset Height.</para>
-    /// <para>Represents the following attribute in the schema: custLinFactNeighborY </para>
-    /// </summary>
-    [SchemaAttr(0, "custLinFactNeighborY")]
-    [Index(25)]
-    public Int32Value NeighborOffsetHeight { get; set; }
-    /// <summary>
-    /// <para> Radius Scale.</para>
-    /// <para>Represents the following attribute in the schema: custRadScaleRad </para>
-    /// </summary>
-    [SchemaAttr(0, "custRadScaleRad")]
-    [Index(26)]
-    public Int32Value RadiusScale { get; set; }
-    /// <summary>
-    /// <para> Include Angle Scale.</para>
-    /// <para>Represents the following attribute in the schema: custRadScaleInc </para>
-    /// </summary>
-    [SchemaAttr(0, "custRadScaleInc")]
-    [Index(27)]
-    public Int32Value IncludeAngleScale { get; set; }
+        /// Initializes a new instance of the PropertySet class.
+        /// </summary>
+        public PropertySet() : base()
+        {
+        }
 
-    /// <summary>
-    /// Initializes a new instance of the PropertySet class.
-    /// </summary>
-    public PropertySet():base(){}
         /// <summary>
-    ///Initializes a new instance of the PropertySet class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public PropertySet(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the PropertySet class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public PropertySet(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the PropertySet class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public PropertySet(string outerXml)
-        : base(outerXml)
-    {
-    }
+        /// Initializes a new instance of the PropertySet class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public PropertySet(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
 
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.PresentationLayoutVariables), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Style), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
+        /// <summary>
+        /// Initializes a new instance of the PropertySet class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public PropertySet(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PropertySet class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public PropertySet(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Presentation Element Identifier</para>
+        /// <para>Represents the following attribute in the schema: presAssocID</para>
+        /// </summary>
+        [NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
+        [StringValidator(Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}", UnionId = 0)]
+        [SchemaAttr(0, "presAssocID")]
+        [Index(0)]
+        public StringValue PresentationElementId { get; set; }
+
+        /// <summary>
+        /// <para>Presentation Name</para>
+        /// <para>Represents the following attribute in the schema: presName</para>
+        /// </summary>
+        [SchemaAttr(0, "presName")]
+        [Index(1)]
+        public StringValue PresentationName { get; set; }
+
+        /// <summary>
+        /// <para>Presentation Style Label</para>
+        /// <para>Represents the following attribute in the schema: presStyleLbl</para>
+        /// </summary>
+        [SchemaAttr(0, "presStyleLbl")]
+        [Index(2)]
+        public StringValue PresentationStyleLabel { get; set; }
+
+        /// <summary>
+        /// <para>Presentation Style Index</para>
+        /// <para>Represents the following attribute in the schema: presStyleIdx</para>
+        /// </summary>
+        [SchemaAttr(0, "presStyleIdx")]
+        [Index(3)]
+        public Int32Value PresentationStyleIndex { get; set; }
+
+        /// <summary>
+        /// <para>Presentation Style Count</para>
+        /// <para>Represents the following attribute in the schema: presStyleCnt</para>
+        /// </summary>
+        [SchemaAttr(0, "presStyleCnt")]
+        [Index(4)]
+        public Int32Value PresentationStyleCount { get; set; }
+
+        /// <summary>
+        /// <para>Current Diagram Type</para>
+        /// <para>Represents the following attribute in the schema: loTypeId</para>
+        /// </summary>
+        [SchemaAttr(0, "loTypeId")]
+        [Index(5)]
+        public StringValue LayoutTypeId { get; set; }
+
+        /// <summary>
+        /// <para>Current Diagram Category</para>
+        /// <para>Represents the following attribute in the schema: loCatId</para>
+        /// </summary>
+        [SchemaAttr(0, "loCatId")]
+        [Index(6)]
+        public StringValue LayoutCategoryId { get; set; }
+
+        /// <summary>
+        /// <para>Current Style Type</para>
+        /// <para>Represents the following attribute in the schema: qsTypeId</para>
+        /// </summary>
+        [SchemaAttr(0, "qsTypeId")]
+        [Index(7)]
+        public StringValue QuickStyleTypeId { get; set; }
+
+        /// <summary>
+        /// <para>Current Style Category</para>
+        /// <para>Represents the following attribute in the schema: qsCatId</para>
+        /// </summary>
+        [SchemaAttr(0, "qsCatId")]
+        [Index(8)]
+        public StringValue QuickStyleCategoryId { get; set; }
+
+        /// <summary>
+        /// <para>Color Transform Type Identifier</para>
+        /// <para>Represents the following attribute in the schema: csTypeId</para>
+        /// </summary>
+        [SchemaAttr(0, "csTypeId")]
+        [Index(9)]
+        public StringValue ColorType { get; set; }
+
+        /// <summary>
+        /// <para>Color Transform Category</para>
+        /// <para>Represents the following attribute in the schema: csCatId</para>
+        /// </summary>
+        [SchemaAttr(0, "csCatId")]
+        [Index(10)]
+        public StringValue ColorCategoryId { get; set; }
+
+        /// <summary>
+        /// <para>Coherent 3D Behavior</para>
+        /// <para>Represents the following attribute in the schema: coherent3DOff</para>
+        /// </summary>
+        [SchemaAttr(0, "coherent3DOff")]
+        [Index(11)]
+        public BooleanValue Coherent3D { get; set; }
+
+        /// <summary>
+        /// <para>Placeholder Text</para>
+        /// <para>Represents the following attribute in the schema: phldrT</para>
+        /// </summary>
+        [SchemaAttr(0, "phldrT")]
+        [Index(12)]
+        public StringValue PlaceholderText { get; set; }
+
+        /// <summary>
+        /// <para>Placeholder</para>
+        /// <para>Represents the following attribute in the schema: phldr</para>
+        /// </summary>
+        [SchemaAttr(0, "phldr")]
+        [Index(13)]
+        public BooleanValue Placeholder { get; set; }
+
+        /// <summary>
+        /// <para>Custom Rotation</para>
+        /// <para>Represents the following attribute in the schema: custAng</para>
+        /// </summary>
+        [SchemaAttr(0, "custAng")]
+        [Index(14)]
+        public Int32Value Rotation { get; set; }
+
+        /// <summary>
+        /// <para>Custom Vertical Flip</para>
+        /// <para>Represents the following attribute in the schema: custFlipVert</para>
+        /// </summary>
+        [SchemaAttr(0, "custFlipVert")]
+        [Index(15)]
+        public BooleanValue VerticalFlip { get; set; }
+
+        /// <summary>
+        /// <para>Custom Horizontal Flip</para>
+        /// <para>Represents the following attribute in the schema: custFlipHor</para>
+        /// </summary>
+        [SchemaAttr(0, "custFlipHor")]
+        [Index(16)]
+        public BooleanValue HorizontalFlip { get; set; }
+
+        /// <summary>
+        /// <para>Fixed Width Override</para>
+        /// <para>Represents the following attribute in the schema: custSzX</para>
+        /// </summary>
+        [SchemaAttr(0, "custSzX")]
+        [Index(17)]
+        public Int32Value FixedWidthOverride { get; set; }
+
+        /// <summary>
+        /// <para>Fixed Height Override</para>
+        /// <para>Represents the following attribute in the schema: custSzY</para>
+        /// </summary>
+        [SchemaAttr(0, "custSzY")]
+        [Index(18)]
+        public Int32Value FixedHeightOverride { get; set; }
+
+        /// <summary>
+        /// <para>Width Scale</para>
+        /// <para>Represents the following attribute in the schema: custScaleX</para>
+        /// </summary>
+        [SchemaAttr(0, "custScaleX")]
+        [Index(19)]
+        public Int32Value WidthScale { get; set; }
+
+        /// <summary>
+        /// <para>Height Scale</para>
+        /// <para>Represents the following attribute in the schema: custScaleY</para>
+        /// </summary>
+        [SchemaAttr(0, "custScaleY")]
+        [Index(20)]
+        public Int32Value HightScale { get; set; }
+
+        /// <summary>
+        /// <para>Text Changed</para>
+        /// <para>Represents the following attribute in the schema: custT</para>
+        /// </summary>
+        [SchemaAttr(0, "custT")]
+        [Index(21)]
+        public BooleanValue TextChanged { get; set; }
+
+        /// <summary>
+        /// <para>Custom Factor Width</para>
+        /// <para>Represents the following attribute in the schema: custLinFactX</para>
+        /// </summary>
+        [SchemaAttr(0, "custLinFactX")]
+        [Index(22)]
+        public Int32Value FactorWidth { get; set; }
+
+        /// <summary>
+        /// <para>Custom Factor Height</para>
+        /// <para>Represents the following attribute in the schema: custLinFactY</para>
+        /// </summary>
+        [SchemaAttr(0, "custLinFactY")]
+        [Index(23)]
+        public Int32Value FactorHeight { get; set; }
+
+        /// <summary>
+        /// <para>Neighbor Offset Width</para>
+        /// <para>Represents the following attribute in the schema: custLinFactNeighborX</para>
+        /// </summary>
+        [SchemaAttr(0, "custLinFactNeighborX")]
+        [Index(24)]
+        public Int32Value NeighborOffsetWidth { get; set; }
+
+        /// <summary>
+        /// <para>Neighbor Offset Height</para>
+        /// <para>Represents the following attribute in the schema: custLinFactNeighborY</para>
+        /// </summary>
+        [SchemaAttr(0, "custLinFactNeighborY")]
+        [Index(25)]
+        public Int32Value NeighborOffsetHeight { get; set; }
+
+        /// <summary>
+        /// <para>Radius Scale</para>
+        /// <para>Represents the following attribute in the schema: custRadScaleRad</para>
+        /// </summary>
+        [SchemaAttr(0, "custRadScaleRad")]
+        [Index(26)]
+        public Int32Value RadiusScale { get; set; }
+
+        /// <summary>
+        /// <para>Include Angle Scale</para>
+        /// <para>Represents the following attribute in the schema: custRadScaleInc</para>
+        /// </summary>
+        [SchemaAttr(0, "custRadScaleInc")]
+        [Index(27)]
+        public Int32Value IncludeAngleScale { get; set; }
+
+        /// <summary>
+        /// <para>Presentation Layout Variables.</para>
+        /// <para>Represents the following element tag in the schema: dgm:presLayoutVars.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public PresentationLayoutVariables PresentationLayoutVariables
+        {
+            get => GetElement<PresentationLayoutVariables>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Shape Style.</para>
+        /// <para>Represents the following element tag in the schema: dgm:style.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public Style Style
+        {
+            get => GetElement<Style>();
+            set => SetElement(value);
+        }
+
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-        /// <summary>
-    /// <para> Presentation Layout Variables.</para>
-    /// <para> Represents the following element tag in the schema: dgm:presLayoutVars </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-    /// </remark>
-    public PresentationLayoutVariables PresentationLayoutVariables
-	{
-        get => GetElement<PresentationLayoutVariables>();
-        set => SetElement(value);
-	}
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.PresentationLayoutVariables), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Style), 0, 1)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<PropertySet>(deep);
+    }
+
     /// <summary>
-    /// <para> Shape Style.</para>
-    /// <para> Represents the following element tag in the schema: dgm:style </para>
+    /// <para>Shape Properties.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:spPr.</para>
     /// </summary>
     /// <remark>
-    /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.Transform2D &lt;a:xfrm></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.CustomGeometry &lt;a:custGeom></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetGeometry &lt;a:prstGeom></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.NoFill &lt;a:noFill></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.SolidFill &lt;a:solidFill></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.GradientFill &lt;a:gradFill></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.BlipFill &lt;a:blipFill></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.PatternFill &lt;a:pattFill></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.GroupFill &lt;a:grpFill></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.Outline &lt;a:ln></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectList &lt;a:effectLst></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectDag &lt;a:effectDag></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.Scene3DType &lt;a:scene3d></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.Shape3DType &lt;a:sp3d></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList &lt;a:extLst></description></item>
+    /// </list>
     /// </remark>
-    public Style Style
-	{
-        get => GetElement<Style>();
-        set => SetElement(value);
-	}
-
-
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<PropertySet>(deep);
-
-}
-/// <summary>
-/// <para>Shape Properties.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:spPr.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>DocumentFormat.OpenXml.Drawing.Transform2D &lt;a:xfrm></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.CustomGeometry &lt;a:custGeom></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.PresetGeometry &lt;a:prstGeom></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.NoFill &lt;a:noFill></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.SolidFill &lt;a:solidFill></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.GradientFill &lt;a:gradFill></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.BlipFill &lt;a:blipFill></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.PatternFill &lt;a:pattFill></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.GroupFill &lt;a:grpFill></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.Outline &lt;a:ln></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.EffectList &lt;a:effectLst></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.EffectDag &lt;a:effectDag></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.Scene3DType &lt;a:scene3d></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.Shape3DType &lt;a:sp3d></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList &lt;a:extLst></description></item>
-/// </list>
-/// </remarks>
-
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Transform2D))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry))]
@@ -6456,2632 +6525,2630 @@ internal override CompiledParticle CompiledParticle => _constraint;
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "spPr")]
-public partial class ShapeProperties : OpenXmlCompositeElement
-{
-    
+    [SchemaAttr(14, "spPr")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class ShapeProperties : OpenXmlCompositeElement
+    {
         /// <summary>
-    /// <para> Black and White Mode.</para>
-    /// <para>Represents the following attribute in the schema: bwMode </para>
-    /// </summary>
-[StringValidator(IsToken = true)]
-    [SchemaAttr(0, "bwMode")]
-    [Index(0)]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
+        /// Initializes a new instance of the ShapeProperties class.
+        /// </summary>
+        public ShapeProperties() : base()
+        {
+        }
 
-    /// <summary>
-    /// Initializes a new instance of the ShapeProperties class.
-    /// </summary>
-    public ShapeProperties():base(){}
         /// <summary>
-    ///Initializes a new instance of the ShapeProperties class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public ShapeProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the ShapeProperties class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public ShapeProperties(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the ShapeProperties class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public ShapeProperties(string outerXml)
-        : base(outerXml)
-    {
-    }
+        /// Initializes a new instance of the ShapeProperties class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ShapeProperties(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
 
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
-    new CompositeParticle(ParticleType.Group, 0, 1)
-    {
-        new CompositeParticle(ParticleType.Choice, 1, 1)
+        /// <summary>
+        /// Initializes a new instance of the ShapeProperties class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ShapeProperties(params OpenXmlElement[] childElements) : base(childElements)
         {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1, 1)
         }
-    },
-    new CompositeParticle(ParticleType.Group, 0, 1)
-    {
-        new CompositeParticle(ParticleType.Choice, 1, 1)
+
+        /// <summary>
+        /// Initializes a new instance of the ShapeProperties class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public ShapeProperties(string outerXml) : base(outerXml)
         {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
         }
-    },
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
-    new CompositeParticle(ParticleType.Group, 0, 1)
-    {
-        new CompositeParticle(ParticleType.Choice, 1, 1)
+
+        /// <summary>
+        /// <para>Black and White Mode</para>
+        /// <para>Represents the following attribute in the schema: bwMode</para>
+        /// </summary>
+        [StringValidator(IsToken = true)]
+        [SchemaAttr(0, "bwMode")]
+        [Index(0)]
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
+
+        /// <summary>
+        /// <para>2D Transform for Individual Objects.</para>
+        /// <para>Represents the following element tag in the schema: a:xfrm.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Transform2D Transform2D
         {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
+            set => SetElement(value);
         }
-    },
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
+
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-        /// <summary>
-    /// <para> 2D Transform for Individual Objects.</para>
-    /// <para> Represents the following element tag in the schema: a:xfrm </para>
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
+            new CompositeParticle(ParticleType.Group, 0, 1)
+            {
+                new CompositeParticle(ParticleType.Choice, 1, 1)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1, 1)
+                }
+            },
+            new CompositeParticle(ParticleType.Group, 0, 1)
+            {
+                new CompositeParticle(ParticleType.Choice, 1, 1)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
+                }
+            },
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
+            new CompositeParticle(ParticleType.Group, 0, 1)
+            {
+                new CompositeParticle(ParticleType.Choice, 1, 1)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
+                }
+            },
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList), 0, 1)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShapeProperties>(deep);
+    }
+
+    /// <summary>
+    /// <para>Text Body.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:t.</para>
     /// </summary>
     /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.BodyProperties &lt;a:bodyPr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.ListStyle &lt;a:lstStyle></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.Paragraph &lt;a:p></description></item>
+    /// </list>
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Transform2D Transform2D
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
-        set => SetElement(value);
-	}
-
-
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShapeProperties>(deep);
-
-}
-/// <summary>
-/// <para>Text Body.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:t.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>DocumentFormat.OpenXml.Drawing.BodyProperties &lt;a:bodyPr></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.ListStyle &lt;a:lstStyle></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.Paragraph &lt;a:p></description></item>
-/// </list>
-/// </remarks>
-
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ListStyle))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Paragraph))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "t")]
-public partial class TextBody : OpenXmlCompositeElement
-{
-    
-    
-    /// <summary>
-    /// Initializes a new instance of the TextBody class.
-    /// </summary>
-    public TextBody():base(){}
+    [SchemaAttr(14, "t")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class TextBody : OpenXmlCompositeElement
+    {
         /// <summary>
-    ///Initializes a new instance of the TextBody class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public TextBody(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the TextBody class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public TextBody(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the TextBody class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public TextBody(string outerXml)
-        : base(outerXml)
-    {
-    }
+        /// Initializes a new instance of the TextBody class.
+        /// </summary>
+        public TextBody() : base()
+        {
+        }
 
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ListStyle), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Paragraph), 1, 0)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
+        /// <summary>
+        /// Initializes a new instance of the TextBody class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TextBody(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TextBody class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TextBody(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TextBody class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public TextBody(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Body Properties.</para>
+        /// <para>Represents the following element tag in the schema: a:bodyPr.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.BodyProperties BodyProperties
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.BodyProperties>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Text List Styles.</para>
+        /// <para>Represents the following element tag in the schema: a:lstStyle.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.ListStyle ListStyle
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>();
+            set => SetElement(value);
+        }
+
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-        /// <summary>
-    /// <para> Body Properties.</para>
-    /// <para> Represents the following element tag in the schema: a:bodyPr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-    public DocumentFormat.OpenXml.Drawing.BodyProperties BodyProperties
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.BodyProperties>();
-        set => SetElement(value);
-	}
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ListStyle), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Paragraph), 1, 0)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextBody>(deep);
+    }
+
     /// <summary>
-    /// <para> Text List Styles.</para>
-    /// <para> Represents the following element tag in the schema: a:lstStyle </para>
+    /// <para>Defines the PtExtensionList Class.</para>
+    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:extLst.</para>
     /// </summary>
     /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.PtExtension &lt;a:ext></description></item>
+    /// </list>
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.ListStyle ListStyle
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>();
-        set => SetElement(value);
-	}
-
-
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextBody>(deep);
-
-}
-/// <summary>
-/// <para>Defines the PtExtensionList Class.</para>
-/// <para>This class is available in Office 2007 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is dgm:extLst.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>DocumentFormat.OpenXml.Drawing.PtExtension &lt;a:ext></description></item>
-/// </list>
-/// </remarks>
-
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PtExtension))]
-
-[OfficeAvailability(FileFormatVersions.Office2007)]
-[SchemaAttr(14, "extLst")]
-public partial class PtExtensionList : OpenXmlCompositeElement
-{
-    
-    
-    /// <summary>
-    /// Initializes a new instance of the PtExtensionList class.
-    /// </summary>
-    public PtExtensionList():base(){}
+    [SchemaAttr(14, "extLst")]
+    [OfficeAvailability(FileFormatVersions.Office2007)]
+    public partial class PtExtensionList : OpenXmlCompositeElement
+    {
         /// <summary>
-    ///Initializes a new instance of the PtExtensionList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public PtExtensionList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
+        /// Initializes a new instance of the PtExtensionList class.
+        /// </summary>
+        public PtExtensionList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PtExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public PtExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PtExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public PtExtensionList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PtExtensionList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public PtExtensionList(string outerXml) : base(outerXml)
+        {
+        }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PtExtension), 0, 0)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<PtExtensionList>(deep);
     }
+
     /// <summary>
-    /// Initializes a new instance of the PtExtensionList class with the specified child elements.
+    /// Color Application Method Type
     /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public PtExtensionList(params OpenXmlElement[] childElements) : base(childElements)
+    public enum ColorApplicationMethodValues
     {
+        ///<summary>
+        ///Span.
+        ///<para>When the item is serialized out as xml, its value is "span".</para>
+        ///</summary>
+        [EnumString("span")]
+        Span,
+        ///<summary>
+        ///Cycle.
+        ///<para>When the item is serialized out as xml, its value is "cycle".</para>
+        ///</summary>
+        [EnumString("cycle")]
+        Cycle,
+        ///<summary>
+        ///Repeat.
+        ///<para>When the item is serialized out as xml, its value is "repeat".</para>
+        ///</summary>
+        [EnumString("repeat")]
+        Repeat,
     }
+
     /// <summary>
-    /// Initializes a new instance of the PtExtensionList class from outer XML.
+    /// Hue Direction
     /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public PtExtensionList(string outerXml)
-        : base(outerXml)
+    public enum HueDirectionValues
     {
+        ///<summary>
+        ///Clockwise Hue Direction.
+        ///<para>When the item is serialized out as xml, its value is "cw".</para>
+        ///</summary>
+        [EnumString("cw")]
+        Clockwise,
+        ///<summary>
+        ///Counterclockwise Hue Direction.
+        ///<para>When the item is serialized out as xml, its value is "ccw".</para>
+        ///</summary>
+        [EnumString("ccw")]
+        Counterclockwise,
     }
 
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PtExtension), 0, 0)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<PtExtensionList>(deep);
+    /// <summary>
+    /// Point Type
+    /// </summary>
+    public enum PointValues
+    {
+        ///<summary>
+        ///Node.
+        ///<para>When the item is serialized out as xml, its value is "node".</para>
+        ///</summary>
+        [EnumString("node")]
+        Node,
+        ///<summary>
+        ///Assistant Element.
+        ///<para>When the item is serialized out as xml, its value is "asst".</para>
+        ///</summary>
+        [EnumString("asst")]
+        Assistant,
+        ///<summary>
+        ///Document.
+        ///<para>When the item is serialized out as xml, its value is "doc".</para>
+        ///</summary>
+        [EnumString("doc")]
+        Document,
+        ///<summary>
+        ///Presentation.
+        ///<para>When the item is serialized out as xml, its value is "pres".</para>
+        ///</summary>
+        [EnumString("pres")]
+        Presentation,
+        ///<summary>
+        ///Parent Transition.
+        ///<para>When the item is serialized out as xml, its value is "parTrans".</para>
+        ///</summary>
+        [EnumString("parTrans")]
+        ParentTransition,
+        ///<summary>
+        ///Sibling Transition.
+        ///<para>When the item is serialized out as xml, its value is "sibTrans".</para>
+        ///</summary>
+        [EnumString("sibTrans")]
+        SiblingTransition,
+    }
 
-}
-/// <summary>
-/// Color Application Method Type
-/// </summary>
-public enum ColorApplicationMethodValues
-{
-	///<summary>
-///Span.
-///<para>When the item is serialized out as xml, its value is "span".</para>
-///</summary>
-[EnumString("span")]
-Span,
-///<summary>
-///Cycle.
-///<para>When the item is serialized out as xml, its value is "cycle".</para>
-///</summary>
-[EnumString("cycle")]
-Cycle,
-///<summary>
-///Repeat.
-///<para>When the item is serialized out as xml, its value is "repeat".</para>
-///</summary>
-[EnumString("repeat")]
-Repeat,
+    /// <summary>
+    /// Connection Type
+    /// </summary>
+    public enum ConnectionValues
+    {
+        ///<summary>
+        ///Parent Of.
+        ///<para>When the item is serialized out as xml, its value is "parOf".</para>
+        ///</summary>
+        [EnumString("parOf")]
+        ParentOf,
+        ///<summary>
+        ///Presentation Of.
+        ///<para>When the item is serialized out as xml, its value is "presOf".</para>
+        ///</summary>
+        [EnumString("presOf")]
+        PresentationOf,
+        ///<summary>
+        ///Presentation Parent Of.
+        ///<para>When the item is serialized out as xml, its value is "presParOf".</para>
+        ///</summary>
+        [EnumString("presParOf")]
+        PresentationParentOf,
+        ///<summary>
+        ///Unknown Relationship.
+        ///<para>When the item is serialized out as xml, its value is "unknownRelationship".</para>
+        ///</summary>
+        [EnumString("unknownRelationship")]
+        UnknownRelationship,
+    }
 
-}
-/// <summary>
-/// Hue Direction
-/// </summary>
-public enum HueDirectionValues
-{
-	///<summary>
-///Clockwise Hue Direction.
-///<para>When the item is serialized out as xml, its value is "cw".</para>
-///</summary>
-[EnumString("cw")]
-Clockwise,
-///<summary>
-///Counterclockwise Hue Direction.
-///<para>When the item is serialized out as xml, its value is "ccw".</para>
-///</summary>
-[EnumString("ccw")]
-Counterclockwise,
+    /// <summary>
+    /// Diagram Direction Definition
+    /// </summary>
+    public enum DirectionValues
+    {
+        ///<summary>
+        ///Normal Direction.
+        ///<para>When the item is serialized out as xml, its value is "norm".</para>
+        ///</summary>
+        [EnumString("norm")]
+        Normal,
+        ///<summary>
+        ///Reversed Direction.
+        ///<para>When the item is serialized out as xml, its value is "rev".</para>
+        ///</summary>
+        [EnumString("rev")]
+        Reversed,
+    }
 
-}
-/// <summary>
-/// Point Type
-/// </summary>
-public enum PointValues
-{
-	///<summary>
-///Node.
-///<para>When the item is serialized out as xml, its value is "node".</para>
-///</summary>
-[EnumString("node")]
-Node,
-///<summary>
-///Assistant Element.
-///<para>When the item is serialized out as xml, its value is "asst".</para>
-///</summary>
-[EnumString("asst")]
-Assistant,
-///<summary>
-///Document.
-///<para>When the item is serialized out as xml, its value is "doc".</para>
-///</summary>
-[EnumString("doc")]
-Document,
-///<summary>
-///Presentation.
-///<para>When the item is serialized out as xml, its value is "pres".</para>
-///</summary>
-[EnumString("pres")]
-Presentation,
-///<summary>
-///Parent Transition.
-///<para>When the item is serialized out as xml, its value is "parTrans".</para>
-///</summary>
-[EnumString("parTrans")]
-ParentTransition,
-///<summary>
-///Sibling Transition.
-///<para>When the item is serialized out as xml, its value is "sibTrans".</para>
-///</summary>
-[EnumString("sibTrans")]
-SiblingTransition,
+    /// <summary>
+    /// Hierarchy Branch Style Definition
+    /// </summary>
+    public enum HierarchyBranchStyleValues
+    {
+        ///<summary>
+        ///Left.
+        ///<para>When the item is serialized out as xml, its value is "l".</para>
+        ///</summary>
+        [EnumString("l")]
+        Left,
+        ///<summary>
+        ///Right.
+        ///<para>When the item is serialized out as xml, its value is "r".</para>
+        ///</summary>
+        [EnumString("r")]
+        Right,
+        ///<summary>
+        ///Hanging.
+        ///<para>When the item is serialized out as xml, its value is "hang".</para>
+        ///</summary>
+        [EnumString("hang")]
+        Hanging,
+        ///<summary>
+        ///Standard.
+        ///<para>When the item is serialized out as xml, its value is "std".</para>
+        ///</summary>
+        [EnumString("std")]
+        Standard,
+        ///<summary>
+        ///Initial.
+        ///<para>When the item is serialized out as xml, its value is "init".</para>
+        ///</summary>
+        [EnumString("init")]
+        Initial,
+    }
 
-}
-/// <summary>
-/// Connection Type
-/// </summary>
-public enum ConnectionValues
-{
-	///<summary>
-///Parent Of.
-///<para>When the item is serialized out as xml, its value is "parOf".</para>
-///</summary>
-[EnumString("parOf")]
-ParentOf,
-///<summary>
-///Presentation Of.
-///<para>When the item is serialized out as xml, its value is "presOf".</para>
-///</summary>
-[EnumString("presOf")]
-PresentationOf,
-///<summary>
-///Presentation Parent Of.
-///<para>When the item is serialized out as xml, its value is "presParOf".</para>
-///</summary>
-[EnumString("presParOf")]
-PresentationParentOf,
-///<summary>
-///Unknown Relationship.
-///<para>When the item is serialized out as xml, its value is "unknownRelationship".</para>
-///</summary>
-[EnumString("unknownRelationship")]
-UnknownRelationship,
+    /// <summary>
+    /// One by One Animation Value Definition
+    /// </summary>
+    public enum AnimateOneByOneValues
+    {
+        ///<summary>
+        ///Disable One-by-One.
+        ///<para>When the item is serialized out as xml, its value is "none".</para>
+        ///</summary>
+        [EnumString("none")]
+        None,
+        ///<summary>
+        ///One By One.
+        ///<para>When the item is serialized out as xml, its value is "one".</para>
+        ///</summary>
+        [EnumString("one")]
+        One,
+        ///<summary>
+        ///By Branch One By One.
+        ///<para>When the item is serialized out as xml, its value is "branch".</para>
+        ///</summary>
+        [EnumString("branch")]
+        Branch,
+    }
 
-}
-/// <summary>
-/// Diagram Direction Definition
-/// </summary>
-public enum DirectionValues
-{
-	///<summary>
-///Normal Direction.
-///<para>When the item is serialized out as xml, its value is "norm".</para>
-///</summary>
-[EnumString("norm")]
-Normal,
-///<summary>
-///Reversed Direction.
-///<para>When the item is serialized out as xml, its value is "rev".</para>
-///</summary>
-[EnumString("rev")]
-Reversed,
+    /// <summary>
+    /// Animation Level String Definition
+    /// </summary>
+    public enum AnimationLevelStringValues
+    {
+        ///<summary>
+        ///Disable Level At Once.
+        ///<para>When the item is serialized out as xml, its value is "none".</para>
+        ///</summary>
+        [EnumString("none")]
+        None,
+        ///<summary>
+        ///By Level Animation.
+        ///<para>When the item is serialized out as xml, its value is "lvl".</para>
+        ///</summary>
+        [EnumString("lvl")]
+        Level,
+        ///<summary>
+        ///From Center Animation.
+        ///<para>When the item is serialized out as xml, its value is "ctr".</para>
+        ///</summary>
+        [EnumString("ctr")]
+        Center,
+    }
 
-}
-/// <summary>
-/// Hierarchy Branch Style Definition
-/// </summary>
-public enum HierarchyBranchStyleValues
-{
-	///<summary>
-///Left.
-///<para>When the item is serialized out as xml, its value is "l".</para>
-///</summary>
-[EnumString("l")]
-Left,
-///<summary>
-///Right.
-///<para>When the item is serialized out as xml, its value is "r".</para>
-///</summary>
-[EnumString("r")]
-Right,
-///<summary>
-///Hanging.
-///<para>When the item is serialized out as xml, its value is "hang".</para>
-///</summary>
-[EnumString("hang")]
-Hanging,
-///<summary>
-///Standard.
-///<para>When the item is serialized out as xml, its value is "std".</para>
-///</summary>
-[EnumString("std")]
-Standard,
-///<summary>
-///Initial.
-///<para>When the item is serialized out as xml, its value is "init".</para>
-///</summary>
-[EnumString("init")]
-Initial,
+    /// <summary>
+    /// Resize Handle
+    /// </summary>
+    public enum ResizeHandlesStringValues
+    {
+        ///<summary>
+        ///Exact.
+        ///<para>When the item is serialized out as xml, its value is "exact".</para>
+        ///</summary>
+        [EnumString("exact")]
+        Exact,
+        ///<summary>
+        ///Relative.
+        ///<para>When the item is serialized out as xml, its value is "rel".</para>
+        ///</summary>
+        [EnumString("rel")]
+        Relative,
+    }
 
-}
-/// <summary>
-/// One by One Animation Value Definition
-/// </summary>
-public enum AnimateOneByOneValues
-{
-	///<summary>
-///Disable One-by-One.
-///<para>When the item is serialized out as xml, its value is "none".</para>
-///</summary>
-[EnumString("none")]
-None,
-///<summary>
-///One By One.
-///<para>When the item is serialized out as xml, its value is "one".</para>
-///</summary>
-[EnumString("one")]
-One,
-///<summary>
-///By Branch One By One.
-///<para>When the item is serialized out as xml, its value is "branch".</para>
-///</summary>
-[EnumString("branch")]
-Branch,
+    /// <summary>
+    /// Algorithm Types
+    /// </summary>
+    public enum AlgorithmValues
+    {
+        ///<summary>
+        ///Composite.
+        ///<para>When the item is serialized out as xml, its value is "composite".</para>
+        ///</summary>
+        [EnumString("composite")]
+        Composite,
+        ///<summary>
+        ///Connector Algorithm.
+        ///<para>When the item is serialized out as xml, its value is "conn".</para>
+        ///</summary>
+        [EnumString("conn")]
+        Connector,
+        ///<summary>
+        ///Cycle Algorithm.
+        ///<para>When the item is serialized out as xml, its value is "cycle".</para>
+        ///</summary>
+        [EnumString("cycle")]
+        Cycle,
+        ///<summary>
+        ///Hierarchy Child Algorithm.
+        ///<para>When the item is serialized out as xml, its value is "hierChild".</para>
+        ///</summary>
+        [EnumString("hierChild")]
+        HierarchyChild,
+        ///<summary>
+        ///Hierarchy Root Algorithm.
+        ///<para>When the item is serialized out as xml, its value is "hierRoot".</para>
+        ///</summary>
+        [EnumString("hierRoot")]
+        HierarchyRoot,
+        ///<summary>
+        ///Pyramid Algorithm.
+        ///<para>When the item is serialized out as xml, its value is "pyra".</para>
+        ///</summary>
+        [EnumString("pyra")]
+        Pyramid,
+        ///<summary>
+        ///Linear Algorithm.
+        ///<para>When the item is serialized out as xml, its value is "lin".</para>
+        ///</summary>
+        [EnumString("lin")]
+        Linear,
+        ///<summary>
+        ///Space Algorithm.
+        ///<para>When the item is serialized out as xml, its value is "sp".</para>
+        ///</summary>
+        [EnumString("sp")]
+        Space,
+        ///<summary>
+        ///Text Algorithm.
+        ///<para>When the item is serialized out as xml, its value is "tx".</para>
+        ///</summary>
+        [EnumString("tx")]
+        Text,
+        ///<summary>
+        ///Snake Algorithm.
+        ///<para>When the item is serialized out as xml, its value is "snake".</para>
+        ///</summary>
+        [EnumString("snake")]
+        Snake,
+    }
 
-}
-/// <summary>
-/// Animation Level String Definition
-/// </summary>
-public enum AnimationLevelStringValues
-{
-	///<summary>
-///Disable Level At Once.
-///<para>When the item is serialized out as xml, its value is "none".</para>
-///</summary>
-[EnumString("none")]
-None,
-///<summary>
-///By Level Animation.
-///<para>When the item is serialized out as xml, its value is "lvl".</para>
-///</summary>
-[EnumString("lvl")]
-Level,
-///<summary>
-///From Center Animation.
-///<para>When the item is serialized out as xml, its value is "ctr".</para>
-///</summary>
-[EnumString("ctr")]
-Center,
+    /// <summary>
+    /// Axis Type
+    /// </summary>
+    public enum AxisValues
+    {
+        ///<summary>
+        ///Self.
+        ///<para>When the item is serialized out as xml, its value is "self".</para>
+        ///</summary>
+        [EnumString("self")]
+        Self,
+        ///<summary>
+        ///Child.
+        ///<para>When the item is serialized out as xml, its value is "ch".</para>
+        ///</summary>
+        [EnumString("ch")]
+        Child,
+        ///<summary>
+        ///Descendant.
+        ///<para>When the item is serialized out as xml, its value is "des".</para>
+        ///</summary>
+        [EnumString("des")]
+        Descendant,
+        ///<summary>
+        ///Descendant or Self.
+        ///<para>When the item is serialized out as xml, its value is "desOrSelf".</para>
+        ///</summary>
+        [EnumString("desOrSelf")]
+        DescendantOrSelf,
+        ///<summary>
+        ///Parent.
+        ///<para>When the item is serialized out as xml, its value is "par".</para>
+        ///</summary>
+        [EnumString("par")]
+        Parent,
+        ///<summary>
+        ///Ancestor.
+        ///<para>When the item is serialized out as xml, its value is "ancst".</para>
+        ///</summary>
+        [EnumString("ancst")]
+        Ancestor,
+        ///<summary>
+        ///Ancestor or Self.
+        ///<para>When the item is serialized out as xml, its value is "ancstOrSelf".</para>
+        ///</summary>
+        [EnumString("ancstOrSelf")]
+        AncestorOrSelf,
+        ///<summary>
+        ///Follow Sibling.
+        ///<para>When the item is serialized out as xml, its value is "followSib".</para>
+        ///</summary>
+        [EnumString("followSib")]
+        FollowSibling,
+        ///<summary>
+        ///Preceding Sibling.
+        ///<para>When the item is serialized out as xml, its value is "precedSib".</para>
+        ///</summary>
+        [EnumString("precedSib")]
+        PrecedingSibling,
+        ///<summary>
+        ///Follow.
+        ///<para>When the item is serialized out as xml, its value is "follow".</para>
+        ///</summary>
+        [EnumString("follow")]
+        Follow,
+        ///<summary>
+        ///Preceding.
+        ///<para>When the item is serialized out as xml, its value is "preced".</para>
+        ///</summary>
+        [EnumString("preced")]
+        Preceding,
+        ///<summary>
+        ///Root.
+        ///<para>When the item is serialized out as xml, its value is "root".</para>
+        ///</summary>
+        [EnumString("root")]
+        Root,
+        ///<summary>
+        ///None.
+        ///<para>When the item is serialized out as xml, its value is "none".</para>
+        ///</summary>
+        [EnumString("none")]
+        None,
+    }
 
-}
-/// <summary>
-/// Resize Handle
-/// </summary>
-public enum ResizeHandlesStringValues
-{
-	///<summary>
-///Exact.
-///<para>When the item is serialized out as xml, its value is "exact".</para>
-///</summary>
-[EnumString("exact")]
-Exact,
-///<summary>
-///Relative.
-///<para>When the item is serialized out as xml, its value is "rel".</para>
-///</summary>
-[EnumString("rel")]
-Relative,
+    /// <summary>
+    /// Boolean Constraint
+    /// </summary>
+    public enum BoolOperatorValues
+    {
+        ///<summary>
+        ///None.
+        ///<para>When the item is serialized out as xml, its value is "none".</para>
+        ///</summary>
+        [EnumString("none")]
+        None,
+        ///<summary>
+        ///Equal.
+        ///<para>When the item is serialized out as xml, its value is "equ".</para>
+        ///</summary>
+        [EnumString("equ")]
+        Equal,
+        ///<summary>
+        ///Greater Than or Equal to.
+        ///<para>When the item is serialized out as xml, its value is "gte".</para>
+        ///</summary>
+        [EnumString("gte")]
+        GreaterThanOrEqualTo,
+        ///<summary>
+        ///Less Than or Equal to.
+        ///<para>When the item is serialized out as xml, its value is "lte".</para>
+        ///</summary>
+        [EnumString("lte")]
+        LessThanOrEqualTo,
+    }
 
-}
-/// <summary>
-/// Algorithm Types
-/// </summary>
-public enum AlgorithmValues
-{
-	///<summary>
-///Composite.
-///<para>When the item is serialized out as xml, its value is "composite".</para>
-///</summary>
-[EnumString("composite")]
-Composite,
-///<summary>
-///Connector Algorithm.
-///<para>When the item is serialized out as xml, its value is "conn".</para>
-///</summary>
-[EnumString("conn")]
-Connector,
-///<summary>
-///Cycle Algorithm.
-///<para>When the item is serialized out as xml, its value is "cycle".</para>
-///</summary>
-[EnumString("cycle")]
-Cycle,
-///<summary>
-///Hierarchy Child Algorithm.
-///<para>When the item is serialized out as xml, its value is "hierChild".</para>
-///</summary>
-[EnumString("hierChild")]
-HierarchyChild,
-///<summary>
-///Hierarchy Root Algorithm.
-///<para>When the item is serialized out as xml, its value is "hierRoot".</para>
-///</summary>
-[EnumString("hierRoot")]
-HierarchyRoot,
-///<summary>
-///Pyramid Algorithm.
-///<para>When the item is serialized out as xml, its value is "pyra".</para>
-///</summary>
-[EnumString("pyra")]
-Pyramid,
-///<summary>
-///Linear Algorithm.
-///<para>When the item is serialized out as xml, its value is "lin".</para>
-///</summary>
-[EnumString("lin")]
-Linear,
-///<summary>
-///Space Algorithm.
-///<para>When the item is serialized out as xml, its value is "sp".</para>
-///</summary>
-[EnumString("sp")]
-Space,
-///<summary>
-///Text Algorithm.
-///<para>When the item is serialized out as xml, its value is "tx".</para>
-///</summary>
-[EnumString("tx")]
-Text,
-///<summary>
-///Snake Algorithm.
-///<para>When the item is serialized out as xml, its value is "snake".</para>
-///</summary>
-[EnumString("snake")]
-Snake,
+    /// <summary>
+    /// Child Order
+    /// </summary>
+    public enum ChildOrderValues
+    {
+        ///<summary>
+        ///Bottom.
+        ///<para>When the item is serialized out as xml, its value is "b".</para>
+        ///</summary>
+        [EnumString("b")]
+        Bottom,
+        ///<summary>
+        ///Top.
+        ///<para>When the item is serialized out as xml, its value is "t".</para>
+        ///</summary>
+        [EnumString("t")]
+        Top,
+    }
 
-}
-/// <summary>
-/// Axis Type
-/// </summary>
-public enum AxisValues
-{
-	///<summary>
-///Self.
-///<para>When the item is serialized out as xml, its value is "self".</para>
-///</summary>
-[EnumString("self")]
-Self,
-///<summary>
-///Child.
-///<para>When the item is serialized out as xml, its value is "ch".</para>
-///</summary>
-[EnumString("ch")]
-Child,
-///<summary>
-///Descendant.
-///<para>When the item is serialized out as xml, its value is "des".</para>
-///</summary>
-[EnumString("des")]
-Descendant,
-///<summary>
-///Descendant or Self.
-///<para>When the item is serialized out as xml, its value is "desOrSelf".</para>
-///</summary>
-[EnumString("desOrSelf")]
-DescendantOrSelf,
-///<summary>
-///Parent.
-///<para>When the item is serialized out as xml, its value is "par".</para>
-///</summary>
-[EnumString("par")]
-Parent,
-///<summary>
-///Ancestor.
-///<para>When the item is serialized out as xml, its value is "ancst".</para>
-///</summary>
-[EnumString("ancst")]
-Ancestor,
-///<summary>
-///Ancestor or Self.
-///<para>When the item is serialized out as xml, its value is "ancstOrSelf".</para>
-///</summary>
-[EnumString("ancstOrSelf")]
-AncestorOrSelf,
-///<summary>
-///Follow Sibling.
-///<para>When the item is serialized out as xml, its value is "followSib".</para>
-///</summary>
-[EnumString("followSib")]
-FollowSibling,
-///<summary>
-///Preceding Sibling.
-///<para>When the item is serialized out as xml, its value is "precedSib".</para>
-///</summary>
-[EnumString("precedSib")]
-PrecedingSibling,
-///<summary>
-///Follow.
-///<para>When the item is serialized out as xml, its value is "follow".</para>
-///</summary>
-[EnumString("follow")]
-Follow,
-///<summary>
-///Preceding.
-///<para>When the item is serialized out as xml, its value is "preced".</para>
-///</summary>
-[EnumString("preced")]
-Preceding,
-///<summary>
-///Root.
-///<para>When the item is serialized out as xml, its value is "root".</para>
-///</summary>
-[EnumString("root")]
-Root,
-///<summary>
-///None.
-///<para>When the item is serialized out as xml, its value is "none".</para>
-///</summary>
-[EnumString("none")]
-None,
+    /// <summary>
+    /// Constraint Type
+    /// </summary>
+    public enum ConstraintValues
+    {
+        ///<summary>
+        ///Unknown.
+        ///<para>When the item is serialized out as xml, its value is "none".</para>
+        ///</summary>
+        [EnumString("none")]
+        None,
+        ///<summary>
+        ///Alignment Offset.
+        ///<para>When the item is serialized out as xml, its value is "alignOff".</para>
+        ///</summary>
+        [EnumString("alignOff")]
+        AlignmentOffset,
+        ///<summary>
+        ///Beginning Margin.
+        ///<para>When the item is serialized out as xml, its value is "begMarg".</para>
+        ///</summary>
+        [EnumString("begMarg")]
+        BeginningMargin,
+        ///<summary>
+        ///Bending Distance.
+        ///<para>When the item is serialized out as xml, its value is "bendDist".</para>
+        ///</summary>
+        [EnumString("bendDist")]
+        BendingDistance,
+        ///<summary>
+        ///Beginning Padding.
+        ///<para>When the item is serialized out as xml, its value is "begPad".</para>
+        ///</summary>
+        [EnumString("begPad")]
+        BeginningPadding,
+        ///<summary>
+        ///Bottom.
+        ///<para>When the item is serialized out as xml, its value is "b".</para>
+        ///</summary>
+        [EnumString("b")]
+        Bottom,
+        ///<summary>
+        ///Bottom Margin.
+        ///<para>When the item is serialized out as xml, its value is "bMarg".</para>
+        ///</summary>
+        [EnumString("bMarg")]
+        BottomMargin,
+        ///<summary>
+        ///Bottom Offset.
+        ///<para>When the item is serialized out as xml, its value is "bOff".</para>
+        ///</summary>
+        [EnumString("bOff")]
+        BottomOffset,
+        ///<summary>
+        ///Center Height.
+        ///<para>When the item is serialized out as xml, its value is "ctrX".</para>
+        ///</summary>
+        [EnumString("ctrX")]
+        CenterHeight,
+        ///<summary>
+        ///Center X Offset.
+        ///<para>When the item is serialized out as xml, its value is "ctrXOff".</para>
+        ///</summary>
+        [EnumString("ctrXOff")]
+        CenterXOffset,
+        ///<summary>
+        ///Center Width.
+        ///<para>When the item is serialized out as xml, its value is "ctrY".</para>
+        ///</summary>
+        [EnumString("ctrY")]
+        CenterWidth,
+        ///<summary>
+        ///Center Y Offset.
+        ///<para>When the item is serialized out as xml, its value is "ctrYOff".</para>
+        ///</summary>
+        [EnumString("ctrYOff")]
+        CenterYOffset,
+        ///<summary>
+        ///Connection Distance.
+        ///<para>When the item is serialized out as xml, its value is "connDist".</para>
+        ///</summary>
+        [EnumString("connDist")]
+        ConnectionDistance,
+        ///<summary>
+        ///Diameter.
+        ///<para>When the item is serialized out as xml, its value is "diam".</para>
+        ///</summary>
+        [EnumString("diam")]
+        Diameter,
+        ///<summary>
+        ///End Margin.
+        ///<para>When the item is serialized out as xml, its value is "endMarg".</para>
+        ///</summary>
+        [EnumString("endMarg")]
+        EndMargin,
+        ///<summary>
+        ///End Padding.
+        ///<para>When the item is serialized out as xml, its value is "endPad".</para>
+        ///</summary>
+        [EnumString("endPad")]
+        EndPadding,
+        ///<summary>
+        ///Height.
+        ///<para>When the item is serialized out as xml, its value is "h".</para>
+        ///</summary>
+        [EnumString("h")]
+        Height,
+        ///<summary>
+        ///Arrowhead Height.
+        ///<para>When the item is serialized out as xml, its value is "hArH".</para>
+        ///</summary>
+        [EnumString("hArH")]
+        ArrowheadHeight,
+        ///<summary>
+        ///Height Offset.
+        ///<para>When the item is serialized out as xml, its value is "hOff".</para>
+        ///</summary>
+        [EnumString("hOff")]
+        HeightOffset,
+        ///<summary>
+        ///Left.
+        ///<para>When the item is serialized out as xml, its value is "l".</para>
+        ///</summary>
+        [EnumString("l")]
+        Left,
+        ///<summary>
+        ///Left Margin.
+        ///<para>When the item is serialized out as xml, its value is "lMarg".</para>
+        ///</summary>
+        [EnumString("lMarg")]
+        LeftMargin,
+        ///<summary>
+        ///Left Offset.
+        ///<para>When the item is serialized out as xml, its value is "lOff".</para>
+        ///</summary>
+        [EnumString("lOff")]
+        LeftOffset,
+        ///<summary>
+        ///Right.
+        ///<para>When the item is serialized out as xml, its value is "r".</para>
+        ///</summary>
+        [EnumString("r")]
+        Right,
+        ///<summary>
+        ///Right Margin.
+        ///<para>When the item is serialized out as xml, its value is "rMarg".</para>
+        ///</summary>
+        [EnumString("rMarg")]
+        RightMargin,
+        ///<summary>
+        ///Right Offset.
+        ///<para>When the item is serialized out as xml, its value is "rOff".</para>
+        ///</summary>
+        [EnumString("rOff")]
+        RightOffset,
+        ///<summary>
+        ///Primary Font Size.
+        ///<para>When the item is serialized out as xml, its value is "primFontSz".</para>
+        ///</summary>
+        [EnumString("primFontSz")]
+        PrimaryFontSize,
+        ///<summary>
+        ///Pyramid Accent Ratio.
+        ///<para>When the item is serialized out as xml, its value is "pyraAcctRatio".</para>
+        ///</summary>
+        [EnumString("pyraAcctRatio")]
+        PyramidAccentRatio,
+        ///<summary>
+        ///Secondary Font Size.
+        ///<para>When the item is serialized out as xml, its value is "secFontSz".</para>
+        ///</summary>
+        [EnumString("secFontSz")]
+        SecondaryFontSize,
+        ///<summary>
+        ///Sibling Spacing.
+        ///<para>When the item is serialized out as xml, its value is "sibSp".</para>
+        ///</summary>
+        [EnumString("sibSp")]
+        SiblingSpacing,
+        ///<summary>
+        ///Secondary Sibling Spacing.
+        ///<para>When the item is serialized out as xml, its value is "secSibSp".</para>
+        ///</summary>
+        [EnumString("secSibSp")]
+        SecondarySiblingSpacing,
+        ///<summary>
+        ///Spacing.
+        ///<para>When the item is serialized out as xml, its value is "sp".</para>
+        ///</summary>
+        [EnumString("sp")]
+        Spacing,
+        ///<summary>
+        ///Stem Thickness.
+        ///<para>When the item is serialized out as xml, its value is "stemThick".</para>
+        ///</summary>
+        [EnumString("stemThick")]
+        StemThickness,
+        ///<summary>
+        ///Top.
+        ///<para>When the item is serialized out as xml, its value is "t".</para>
+        ///</summary>
+        [EnumString("t")]
+        Top,
+        ///<summary>
+        ///Top Margin.
+        ///<para>When the item is serialized out as xml, its value is "tMarg".</para>
+        ///</summary>
+        [EnumString("tMarg")]
+        TopMargin,
+        ///<summary>
+        ///Top Offset.
+        ///<para>When the item is serialized out as xml, its value is "tOff".</para>
+        ///</summary>
+        [EnumString("tOff")]
+        TopOffset,
+        ///<summary>
+        ///User Defined A.
+        ///<para>When the item is serialized out as xml, its value is "userA".</para>
+        ///</summary>
+        [EnumString("userA")]
+        UserDefinedA,
+        ///<summary>
+        ///User Defined B.
+        ///<para>When the item is serialized out as xml, its value is "userB".</para>
+        ///</summary>
+        [EnumString("userB")]
+        UserDefinedB,
+        ///<summary>
+        ///User Defined C.
+        ///<para>When the item is serialized out as xml, its value is "userC".</para>
+        ///</summary>
+        [EnumString("userC")]
+        UserDefinedC,
+        ///<summary>
+        ///User Defined D.
+        ///<para>When the item is serialized out as xml, its value is "userD".</para>
+        ///</summary>
+        [EnumString("userD")]
+        UserDefinedD,
+        ///<summary>
+        ///User Defined E.
+        ///<para>When the item is serialized out as xml, its value is "userE".</para>
+        ///</summary>
+        [EnumString("userE")]
+        UserDefinedE,
+        ///<summary>
+        ///User Defined F.
+        ///<para>When the item is serialized out as xml, its value is "userF".</para>
+        ///</summary>
+        [EnumString("userF")]
+        UserDefinedF,
+        ///<summary>
+        ///User Defined G.
+        ///<para>When the item is serialized out as xml, its value is "userG".</para>
+        ///</summary>
+        [EnumString("userG")]
+        UserDefinedG,
+        ///<summary>
+        ///User Defined H.
+        ///<para>When the item is serialized out as xml, its value is "userH".</para>
+        ///</summary>
+        [EnumString("userH")]
+        UserDefinedH,
+        ///<summary>
+        ///User Defined I.
+        ///<para>When the item is serialized out as xml, its value is "userI".</para>
+        ///</summary>
+        [EnumString("userI")]
+        UserDefinedI,
+        ///<summary>
+        ///User Defined J.
+        ///<para>When the item is serialized out as xml, its value is "userJ".</para>
+        ///</summary>
+        [EnumString("userJ")]
+        UserDefinedJ,
+        ///<summary>
+        ///User Defined K.
+        ///<para>When the item is serialized out as xml, its value is "userK".</para>
+        ///</summary>
+        [EnumString("userK")]
+        UserDefinedK,
+        ///<summary>
+        ///User Defined L.
+        ///<para>When the item is serialized out as xml, its value is "userL".</para>
+        ///</summary>
+        [EnumString("userL")]
+        UserDefinedL,
+        ///<summary>
+        ///User Defined M.
+        ///<para>When the item is serialized out as xml, its value is "userM".</para>
+        ///</summary>
+        [EnumString("userM")]
+        UserDefinedM,
+        ///<summary>
+        ///User Defined N.
+        ///<para>When the item is serialized out as xml, its value is "userN".</para>
+        ///</summary>
+        [EnumString("userN")]
+        UserDefinedN,
+        ///<summary>
+        ///User Defined O.
+        ///<para>When the item is serialized out as xml, its value is "userO".</para>
+        ///</summary>
+        [EnumString("userO")]
+        UserDefinedO,
+        ///<summary>
+        ///User Defined P.
+        ///<para>When the item is serialized out as xml, its value is "userP".</para>
+        ///</summary>
+        [EnumString("userP")]
+        UserDefinedP,
+        ///<summary>
+        ///User Defined Q.
+        ///<para>When the item is serialized out as xml, its value is "userQ".</para>
+        ///</summary>
+        [EnumString("userQ")]
+        UserDefinedQ,
+        ///<summary>
+        ///User Defined R.
+        ///<para>When the item is serialized out as xml, its value is "userR".</para>
+        ///</summary>
+        [EnumString("userR")]
+        UserDefinedR,
+        ///<summary>
+        ///User Defined S.
+        ///<para>When the item is serialized out as xml, its value is "userS".</para>
+        ///</summary>
+        [EnumString("userS")]
+        UserDefinedS,
+        ///<summary>
+        ///User Defined T.
+        ///<para>When the item is serialized out as xml, its value is "userT".</para>
+        ///</summary>
+        [EnumString("userT")]
+        UserDefinedT,
+        ///<summary>
+        ///User Defined U.
+        ///<para>When the item is serialized out as xml, its value is "userU".</para>
+        ///</summary>
+        [EnumString("userU")]
+        UserDefinedU,
+        ///<summary>
+        ///User Defined V.
+        ///<para>When the item is serialized out as xml, its value is "userV".</para>
+        ///</summary>
+        [EnumString("userV")]
+        UserDefinedV,
+        ///<summary>
+        ///User Defined W.
+        ///<para>When the item is serialized out as xml, its value is "userW".</para>
+        ///</summary>
+        [EnumString("userW")]
+        UserDefinedW,
+        ///<summary>
+        ///User Defined X.
+        ///<para>When the item is serialized out as xml, its value is "userX".</para>
+        ///</summary>
+        [EnumString("userX")]
+        UserDefinedX,
+        ///<summary>
+        ///User Defined Y.
+        ///<para>When the item is serialized out as xml, its value is "userY".</para>
+        ///</summary>
+        [EnumString("userY")]
+        UserDefinedY,
+        ///<summary>
+        ///User Defined Z.
+        ///<para>When the item is serialized out as xml, its value is "userZ".</para>
+        ///</summary>
+        [EnumString("userZ")]
+        UserDefinedZ,
+        ///<summary>
+        ///Width.
+        ///<para>When the item is serialized out as xml, its value is "w".</para>
+        ///</summary>
+        [EnumString("w")]
+        Width,
+        ///<summary>
+        ///Arrowhead Width.
+        ///<para>When the item is serialized out as xml, its value is "wArH".</para>
+        ///</summary>
+        [EnumString("wArH")]
+        ArrowheadWidth,
+        ///<summary>
+        ///Width Offset.
+        ///<para>When the item is serialized out as xml, its value is "wOff".</para>
+        ///</summary>
+        [EnumString("wOff")]
+        WidthOffset,
+    }
 
-}
-/// <summary>
-/// Boolean Constraint
-/// </summary>
-public enum BoolOperatorValues
-{
-	///<summary>
-///None.
-///<para>When the item is serialized out as xml, its value is "none".</para>
-///</summary>
-[EnumString("none")]
-None,
-///<summary>
-///Equal.
-///<para>When the item is serialized out as xml, its value is "equ".</para>
-///</summary>
-[EnumString("equ")]
-Equal,
-///<summary>
-///Greater Than or Equal to.
-///<para>When the item is serialized out as xml, its value is "gte".</para>
-///</summary>
-[EnumString("gte")]
-GreaterThanOrEqualTo,
-///<summary>
-///Less Than or Equal to.
-///<para>When the item is serialized out as xml, its value is "lte".</para>
-///</summary>
-[EnumString("lte")]
-LessThanOrEqualTo,
+    /// <summary>
+    /// Constraint Relationship
+    /// </summary>
+    public enum ConstraintRelationshipValues
+    {
+        ///<summary>
+        ///Self.
+        ///<para>When the item is serialized out as xml, its value is "self".</para>
+        ///</summary>
+        [EnumString("self")]
+        Self,
+        ///<summary>
+        ///Child.
+        ///<para>When the item is serialized out as xml, its value is "ch".</para>
+        ///</summary>
+        [EnumString("ch")]
+        Child,
+        ///<summary>
+        ///Descendant.
+        ///<para>When the item is serialized out as xml, its value is "des".</para>
+        ///</summary>
+        [EnumString("des")]
+        Descendant,
+    }
 
-}
-/// <summary>
-/// Child Order
-/// </summary>
-public enum ChildOrderValues
-{
-	///<summary>
-///Bottom.
-///<para>When the item is serialized out as xml, its value is "b".</para>
-///</summary>
-[EnumString("b")]
-Bottom,
-///<summary>
-///Top.
-///<para>When the item is serialized out as xml, its value is "t".</para>
-///</summary>
-[EnumString("t")]
-Top,
+    /// <summary>
+    /// Element Type
+    /// </summary>
+    public enum ElementValues
+    {
+        ///<summary>
+        ///All.
+        ///<para>When the item is serialized out as xml, its value is "all".</para>
+        ///</summary>
+        [EnumString("all")]
+        All,
+        ///<summary>
+        ///Document.
+        ///<para>When the item is serialized out as xml, its value is "doc".</para>
+        ///</summary>
+        [EnumString("doc")]
+        Document,
+        ///<summary>
+        ///Node.
+        ///<para>When the item is serialized out as xml, its value is "node".</para>
+        ///</summary>
+        [EnumString("node")]
+        Node,
+        ///<summary>
+        ///Normal.
+        ///<para>When the item is serialized out as xml, its value is "norm".</para>
+        ///</summary>
+        [EnumString("norm")]
+        Normal,
+        ///<summary>
+        ///Non Normal.
+        ///<para>When the item is serialized out as xml, its value is "nonNorm".</para>
+        ///</summary>
+        [EnumString("nonNorm")]
+        NonNormal,
+        ///<summary>
+        ///Assistant.
+        ///<para>When the item is serialized out as xml, its value is "asst".</para>
+        ///</summary>
+        [EnumString("asst")]
+        Assistant,
+        ///<summary>
+        ///Non Assistant.
+        ///<para>When the item is serialized out as xml, its value is "nonAsst".</para>
+        ///</summary>
+        [EnumString("nonAsst")]
+        NonAssistant,
+        ///<summary>
+        ///Parent Transition.
+        ///<para>When the item is serialized out as xml, its value is "parTrans".</para>
+        ///</summary>
+        [EnumString("parTrans")]
+        ParentTransition,
+        ///<summary>
+        ///Presentation.
+        ///<para>When the item is serialized out as xml, its value is "pres".</para>
+        ///</summary>
+        [EnumString("pres")]
+        Presentation,
+        ///<summary>
+        ///Sibling Transition.
+        ///<para>When the item is serialized out as xml, its value is "sibTrans".</para>
+        ///</summary>
+        [EnumString("sibTrans")]
+        SiblingTransition,
+    }
 
-}
-/// <summary>
-/// Constraint Type
-/// </summary>
-public enum ConstraintValues
-{
-	///<summary>
-///Unknown.
-///<para>When the item is serialized out as xml, its value is "none".</para>
-///</summary>
-[EnumString("none")]
-None,
-///<summary>
-///Alignment Offset.
-///<para>When the item is serialized out as xml, its value is "alignOff".</para>
-///</summary>
-[EnumString("alignOff")]
-AlignmentOffset,
-///<summary>
-///Beginning Margin.
-///<para>When the item is serialized out as xml, its value is "begMarg".</para>
-///</summary>
-[EnumString("begMarg")]
-BeginningMargin,
-///<summary>
-///Bending Distance.
-///<para>When the item is serialized out as xml, its value is "bendDist".</para>
-///</summary>
-[EnumString("bendDist")]
-BendingDistance,
-///<summary>
-///Beginning Padding.
-///<para>When the item is serialized out as xml, its value is "begPad".</para>
-///</summary>
-[EnumString("begPad")]
-BeginningPadding,
-///<summary>
-///Bottom.
-///<para>When the item is serialized out as xml, its value is "b".</para>
-///</summary>
-[EnumString("b")]
-Bottom,
-///<summary>
-///Bottom Margin.
-///<para>When the item is serialized out as xml, its value is "bMarg".</para>
-///</summary>
-[EnumString("bMarg")]
-BottomMargin,
-///<summary>
-///Bottom Offset.
-///<para>When the item is serialized out as xml, its value is "bOff".</para>
-///</summary>
-[EnumString("bOff")]
-BottomOffset,
-///<summary>
-///Center Height.
-///<para>When the item is serialized out as xml, its value is "ctrX".</para>
-///</summary>
-[EnumString("ctrX")]
-CenterHeight,
-///<summary>
-///Center X Offset.
-///<para>When the item is serialized out as xml, its value is "ctrXOff".</para>
-///</summary>
-[EnumString("ctrXOff")]
-CenterXOffset,
-///<summary>
-///Center Width.
-///<para>When the item is serialized out as xml, its value is "ctrY".</para>
-///</summary>
-[EnumString("ctrY")]
-CenterWidth,
-///<summary>
-///Center Y Offset.
-///<para>When the item is serialized out as xml, its value is "ctrYOff".</para>
-///</summary>
-[EnumString("ctrYOff")]
-CenterYOffset,
-///<summary>
-///Connection Distance.
-///<para>When the item is serialized out as xml, its value is "connDist".</para>
-///</summary>
-[EnumString("connDist")]
-ConnectionDistance,
-///<summary>
-///Diameter.
-///<para>When the item is serialized out as xml, its value is "diam".</para>
-///</summary>
-[EnumString("diam")]
-Diameter,
-///<summary>
-///End Margin.
-///<para>When the item is serialized out as xml, its value is "endMarg".</para>
-///</summary>
-[EnumString("endMarg")]
-EndMargin,
-///<summary>
-///End Padding.
-///<para>When the item is serialized out as xml, its value is "endPad".</para>
-///</summary>
-[EnumString("endPad")]
-EndPadding,
-///<summary>
-///Height.
-///<para>When the item is serialized out as xml, its value is "h".</para>
-///</summary>
-[EnumString("h")]
-Height,
-///<summary>
-///Arrowhead Height.
-///<para>When the item is serialized out as xml, its value is "hArH".</para>
-///</summary>
-[EnumString("hArH")]
-ArrowheadHeight,
-///<summary>
-///Height Offset.
-///<para>When the item is serialized out as xml, its value is "hOff".</para>
-///</summary>
-[EnumString("hOff")]
-HeightOffset,
-///<summary>
-///Left.
-///<para>When the item is serialized out as xml, its value is "l".</para>
-///</summary>
-[EnumString("l")]
-Left,
-///<summary>
-///Left Margin.
-///<para>When the item is serialized out as xml, its value is "lMarg".</para>
-///</summary>
-[EnumString("lMarg")]
-LeftMargin,
-///<summary>
-///Left Offset.
-///<para>When the item is serialized out as xml, its value is "lOff".</para>
-///</summary>
-[EnumString("lOff")]
-LeftOffset,
-///<summary>
-///Right.
-///<para>When the item is serialized out as xml, its value is "r".</para>
-///</summary>
-[EnumString("r")]
-Right,
-///<summary>
-///Right Margin.
-///<para>When the item is serialized out as xml, its value is "rMarg".</para>
-///</summary>
-[EnumString("rMarg")]
-RightMargin,
-///<summary>
-///Right Offset.
-///<para>When the item is serialized out as xml, its value is "rOff".</para>
-///</summary>
-[EnumString("rOff")]
-RightOffset,
-///<summary>
-///Primary Font Size.
-///<para>When the item is serialized out as xml, its value is "primFontSz".</para>
-///</summary>
-[EnumString("primFontSz")]
-PrimaryFontSize,
-///<summary>
-///Pyramid Accent Ratio.
-///<para>When the item is serialized out as xml, its value is "pyraAcctRatio".</para>
-///</summary>
-[EnumString("pyraAcctRatio")]
-PyramidAccentRatio,
-///<summary>
-///Secondary Font Size.
-///<para>When the item is serialized out as xml, its value is "secFontSz".</para>
-///</summary>
-[EnumString("secFontSz")]
-SecondaryFontSize,
-///<summary>
-///Sibling Spacing.
-///<para>When the item is serialized out as xml, its value is "sibSp".</para>
-///</summary>
-[EnumString("sibSp")]
-SiblingSpacing,
-///<summary>
-///Secondary Sibling Spacing.
-///<para>When the item is serialized out as xml, its value is "secSibSp".</para>
-///</summary>
-[EnumString("secSibSp")]
-SecondarySiblingSpacing,
-///<summary>
-///Spacing.
-///<para>When the item is serialized out as xml, its value is "sp".</para>
-///</summary>
-[EnumString("sp")]
-Spacing,
-///<summary>
-///Stem Thickness.
-///<para>When the item is serialized out as xml, its value is "stemThick".</para>
-///</summary>
-[EnumString("stemThick")]
-StemThickness,
-///<summary>
-///Top.
-///<para>When the item is serialized out as xml, its value is "t".</para>
-///</summary>
-[EnumString("t")]
-Top,
-///<summary>
-///Top Margin.
-///<para>When the item is serialized out as xml, its value is "tMarg".</para>
-///</summary>
-[EnumString("tMarg")]
-TopMargin,
-///<summary>
-///Top Offset.
-///<para>When the item is serialized out as xml, its value is "tOff".</para>
-///</summary>
-[EnumString("tOff")]
-TopOffset,
-///<summary>
-///User Defined A.
-///<para>When the item is serialized out as xml, its value is "userA".</para>
-///</summary>
-[EnumString("userA")]
-UserDefinedA,
-///<summary>
-///User Defined B.
-///<para>When the item is serialized out as xml, its value is "userB".</para>
-///</summary>
-[EnumString("userB")]
-UserDefinedB,
-///<summary>
-///User Defined C.
-///<para>When the item is serialized out as xml, its value is "userC".</para>
-///</summary>
-[EnumString("userC")]
-UserDefinedC,
-///<summary>
-///User Defined D.
-///<para>When the item is serialized out as xml, its value is "userD".</para>
-///</summary>
-[EnumString("userD")]
-UserDefinedD,
-///<summary>
-///User Defined E.
-///<para>When the item is serialized out as xml, its value is "userE".</para>
-///</summary>
-[EnumString("userE")]
-UserDefinedE,
-///<summary>
-///User Defined F.
-///<para>When the item is serialized out as xml, its value is "userF".</para>
-///</summary>
-[EnumString("userF")]
-UserDefinedF,
-///<summary>
-///User Defined G.
-///<para>When the item is serialized out as xml, its value is "userG".</para>
-///</summary>
-[EnumString("userG")]
-UserDefinedG,
-///<summary>
-///User Defined H.
-///<para>When the item is serialized out as xml, its value is "userH".</para>
-///</summary>
-[EnumString("userH")]
-UserDefinedH,
-///<summary>
-///User Defined I.
-///<para>When the item is serialized out as xml, its value is "userI".</para>
-///</summary>
-[EnumString("userI")]
-UserDefinedI,
-///<summary>
-///User Defined J.
-///<para>When the item is serialized out as xml, its value is "userJ".</para>
-///</summary>
-[EnumString("userJ")]
-UserDefinedJ,
-///<summary>
-///User Defined K.
-///<para>When the item is serialized out as xml, its value is "userK".</para>
-///</summary>
-[EnumString("userK")]
-UserDefinedK,
-///<summary>
-///User Defined L.
-///<para>When the item is serialized out as xml, its value is "userL".</para>
-///</summary>
-[EnumString("userL")]
-UserDefinedL,
-///<summary>
-///User Defined M.
-///<para>When the item is serialized out as xml, its value is "userM".</para>
-///</summary>
-[EnumString("userM")]
-UserDefinedM,
-///<summary>
-///User Defined N.
-///<para>When the item is serialized out as xml, its value is "userN".</para>
-///</summary>
-[EnumString("userN")]
-UserDefinedN,
-///<summary>
-///User Defined O.
-///<para>When the item is serialized out as xml, its value is "userO".</para>
-///</summary>
-[EnumString("userO")]
-UserDefinedO,
-///<summary>
-///User Defined P.
-///<para>When the item is serialized out as xml, its value is "userP".</para>
-///</summary>
-[EnumString("userP")]
-UserDefinedP,
-///<summary>
-///User Defined Q.
-///<para>When the item is serialized out as xml, its value is "userQ".</para>
-///</summary>
-[EnumString("userQ")]
-UserDefinedQ,
-///<summary>
-///User Defined R.
-///<para>When the item is serialized out as xml, its value is "userR".</para>
-///</summary>
-[EnumString("userR")]
-UserDefinedR,
-///<summary>
-///User Defined S.
-///<para>When the item is serialized out as xml, its value is "userS".</para>
-///</summary>
-[EnumString("userS")]
-UserDefinedS,
-///<summary>
-///User Defined T.
-///<para>When the item is serialized out as xml, its value is "userT".</para>
-///</summary>
-[EnumString("userT")]
-UserDefinedT,
-///<summary>
-///User Defined U.
-///<para>When the item is serialized out as xml, its value is "userU".</para>
-///</summary>
-[EnumString("userU")]
-UserDefinedU,
-///<summary>
-///User Defined V.
-///<para>When the item is serialized out as xml, its value is "userV".</para>
-///</summary>
-[EnumString("userV")]
-UserDefinedV,
-///<summary>
-///User Defined W.
-///<para>When the item is serialized out as xml, its value is "userW".</para>
-///</summary>
-[EnumString("userW")]
-UserDefinedW,
-///<summary>
-///User Defined X.
-///<para>When the item is serialized out as xml, its value is "userX".</para>
-///</summary>
-[EnumString("userX")]
-UserDefinedX,
-///<summary>
-///User Defined Y.
-///<para>When the item is serialized out as xml, its value is "userY".</para>
-///</summary>
-[EnumString("userY")]
-UserDefinedY,
-///<summary>
-///User Defined Z.
-///<para>When the item is serialized out as xml, its value is "userZ".</para>
-///</summary>
-[EnumString("userZ")]
-UserDefinedZ,
-///<summary>
-///Width.
-///<para>When the item is serialized out as xml, its value is "w".</para>
-///</summary>
-[EnumString("w")]
-Width,
-///<summary>
-///Arrowhead Width.
-///<para>When the item is serialized out as xml, its value is "wArH".</para>
-///</summary>
-[EnumString("wArH")]
-ArrowheadWidth,
-///<summary>
-///Width Offset.
-///<para>When the item is serialized out as xml, its value is "wOff".</para>
-///</summary>
-[EnumString("wOff")]
-WidthOffset,
+    /// <summary>
+    /// Parameter Identifier
+    /// </summary>
+    public enum ParameterIdValues
+    {
+        ///<summary>
+        ///Horizontal Alignment.
+        ///<para>When the item is serialized out as xml, its value is "horzAlign".</para>
+        ///</summary>
+        [EnumString("horzAlign")]
+        HorizontalAlignment,
+        ///<summary>
+        ///Vertical Alignment.
+        ///<para>When the item is serialized out as xml, its value is "vertAlign".</para>
+        ///</summary>
+        [EnumString("vertAlign")]
+        VerticalAlignment,
+        ///<summary>
+        ///Child Direction.
+        ///<para>When the item is serialized out as xml, its value is "chDir".</para>
+        ///</summary>
+        [EnumString("chDir")]
+        ChildDirection,
+        ///<summary>
+        ///Child Alignment.
+        ///<para>When the item is serialized out as xml, its value is "chAlign".</para>
+        ///</summary>
+        [EnumString("chAlign")]
+        ChildAlignment,
+        ///<summary>
+        ///Secondary Child Alignment.
+        ///<para>When the item is serialized out as xml, its value is "secChAlign".</para>
+        ///</summary>
+        [EnumString("secChAlign")]
+        SecondaryChildAlignment,
+        ///<summary>
+        ///Linear Direction.
+        ///<para>When the item is serialized out as xml, its value is "linDir".</para>
+        ///</summary>
+        [EnumString("linDir")]
+        LinearDirection,
+        ///<summary>
+        ///Secondary Linear Direction.
+        ///<para>When the item is serialized out as xml, its value is "secLinDir".</para>
+        ///</summary>
+        [EnumString("secLinDir")]
+        SecondaryLinearDirection,
+        ///<summary>
+        ///Start Element.
+        ///<para>When the item is serialized out as xml, its value is "stElem".</para>
+        ///</summary>
+        [EnumString("stElem")]
+        StartElement,
+        ///<summary>
+        ///Bend Point.
+        ///<para>When the item is serialized out as xml, its value is "bendPt".</para>
+        ///</summary>
+        [EnumString("bendPt")]
+        BendPoint,
+        ///<summary>
+        ///Connection Route.
+        ///<para>When the item is serialized out as xml, its value is "connRout".</para>
+        ///</summary>
+        [EnumString("connRout")]
+        ConnectionRoute,
+        ///<summary>
+        ///Beginning Arrowhead Style.
+        ///<para>When the item is serialized out as xml, its value is "begSty".</para>
+        ///</summary>
+        [EnumString("begSty")]
+        BeginningArrowheadStyle,
+        ///<summary>
+        ///End Style.
+        ///<para>When the item is serialized out as xml, its value is "endSty".</para>
+        ///</summary>
+        [EnumString("endSty")]
+        EndStyle,
+        ///<summary>
+        ///Connector Dimension.
+        ///<para>When the item is serialized out as xml, its value is "dim".</para>
+        ///</summary>
+        [EnumString("dim")]
+        ConnectorDimension,
+        ///<summary>
+        ///Rotation Path.
+        ///<para>When the item is serialized out as xml, its value is "rotPath".</para>
+        ///</summary>
+        [EnumString("rotPath")]
+        RotationPath,
+        ///<summary>
+        ///Center Shape Mapping.
+        ///<para>When the item is serialized out as xml, its value is "ctrShpMap".</para>
+        ///</summary>
+        [EnumString("ctrShpMap")]
+        CenterShapeMapping,
+        ///<summary>
+        ///Node Horizontal Alignment.
+        ///<para>When the item is serialized out as xml, its value is "nodeHorzAlign".</para>
+        ///</summary>
+        [EnumString("nodeHorzAlign")]
+        NodeHorizontalAlignment,
+        ///<summary>
+        ///Node Vertical Alignment.
+        ///<para>When the item is serialized out as xml, its value is "nodeVertAlign".</para>
+        ///</summary>
+        [EnumString("nodeVertAlign")]
+        NodeVerticalAlignment,
+        ///<summary>
+        ///Fallback Scale.
+        ///<para>When the item is serialized out as xml, its value is "fallback".</para>
+        ///</summary>
+        [EnumString("fallback")]
+        FallbackScale,
+        ///<summary>
+        ///Text Direction.
+        ///<para>When the item is serialized out as xml, its value is "txDir".</para>
+        ///</summary>
+        [EnumString("txDir")]
+        TextDirection,
+        ///<summary>
+        ///Pyramid Accent Position.
+        ///<para>When the item is serialized out as xml, its value is "pyraAcctPos".</para>
+        ///</summary>
+        [EnumString("pyraAcctPos")]
+        PyramidAccentPosition,
+        ///<summary>
+        ///Pyramid Accent Text Margin.
+        ///<para>When the item is serialized out as xml, its value is "pyraAcctTxMar".</para>
+        ///</summary>
+        [EnumString("pyraAcctTxMar")]
+        PyramidAccentTextMargin,
+        ///<summary>
+        ///Text Block Direction.
+        ///<para>When the item is serialized out as xml, its value is "txBlDir".</para>
+        ///</summary>
+        [EnumString("txBlDir")]
+        TextBlockDirection,
+        ///<summary>
+        ///Text Anchor Horizontal.
+        ///<para>When the item is serialized out as xml, its value is "txAnchorHorz".</para>
+        ///</summary>
+        [EnumString("txAnchorHorz")]
+        TextAnchorHorizontal,
+        ///<summary>
+        ///Text Anchor Vertical.
+        ///<para>When the item is serialized out as xml, its value is "txAnchorVert".</para>
+        ///</summary>
+        [EnumString("txAnchorVert")]
+        TextAnchorVertical,
+        ///<summary>
+        ///Text Anchor Horizontal With Children.
+        ///<para>When the item is serialized out as xml, its value is "txAnchorHorzCh".</para>
+        ///</summary>
+        [EnumString("txAnchorHorzCh")]
+        TextAnchorHorizontalWithChildren,
+        ///<summary>
+        ///Text Anchor Vertical With Children.
+        ///<para>When the item is serialized out as xml, its value is "txAnchorVertCh".</para>
+        ///</summary>
+        [EnumString("txAnchorVertCh")]
+        TextAnchorVerticalWithChildren,
+        ///<summary>
+        ///Parent Text Left-to-Right Alignment.
+        ///<para>When the item is serialized out as xml, its value is "parTxLTRAlign".</para>
+        ///</summary>
+        [EnumString("parTxLTRAlign")]
+        ParentTextLeftToRightAlignment,
+        ///<summary>
+        ///Parent Text Right-to-Left Alignment.
+        ///<para>When the item is serialized out as xml, its value is "parTxRTLAlign".</para>
+        ///</summary>
+        [EnumString("parTxRTLAlign")]
+        ParentTextRightToLeftAlignment,
+        ///<summary>
+        ///Shape Text Left-to-Right Alignment.
+        ///<para>When the item is serialized out as xml, its value is "shpTxLTRAlignCh".</para>
+        ///</summary>
+        [EnumString("shpTxLTRAlignCh")]
+        ShapeTextLeftToRightAlignment,
+        ///<summary>
+        ///Shape Text Right-to-Left Alignment.
+        ///<para>When the item is serialized out as xml, its value is "shpTxRTLAlignCh".</para>
+        ///</summary>
+        [EnumString("shpTxRTLAlignCh")]
+        ShapeTextRightToLeftAlignment,
+        ///<summary>
+        ///Auto Text Rotation.
+        ///<para>When the item is serialized out as xml, its value is "autoTxRot".</para>
+        ///</summary>
+        [EnumString("autoTxRot")]
+        AutoTextRotation,
+        ///<summary>
+        ///Grow Direction.
+        ///<para>When the item is serialized out as xml, its value is "grDir".</para>
+        ///</summary>
+        [EnumString("grDir")]
+        GrowDirection,
+        ///<summary>
+        ///Flow Direction.
+        ///<para>When the item is serialized out as xml, its value is "flowDir".</para>
+        ///</summary>
+        [EnumString("flowDir")]
+        FlowDirection,
+        ///<summary>
+        ///Continue Direction.
+        ///<para>When the item is serialized out as xml, its value is "contDir".</para>
+        ///</summary>
+        [EnumString("contDir")]
+        ContinueDirection,
+        ///<summary>
+        ///Breakpoint.
+        ///<para>When the item is serialized out as xml, its value is "bkpt".</para>
+        ///</summary>
+        [EnumString("bkpt")]
+        Breakpoint,
+        ///<summary>
+        ///Offset.
+        ///<para>When the item is serialized out as xml, its value is "off".</para>
+        ///</summary>
+        [EnumString("off")]
+        Offset,
+        ///<summary>
+        ///Hierarchy Alignment.
+        ///<para>When the item is serialized out as xml, its value is "hierAlign".</para>
+        ///</summary>
+        [EnumString("hierAlign")]
+        HierarchyAlignment,
+        ///<summary>
+        ///Breakpoint Fixed Value.
+        ///<para>When the item is serialized out as xml, its value is "bkPtFixedVal".</para>
+        ///</summary>
+        [EnumString("bkPtFixedVal")]
+        BreakpointFixedValue,
+        ///<summary>
+        ///Start Bullets At Level.
+        ///<para>When the item is serialized out as xml, its value is "stBulletLvl".</para>
+        ///</summary>
+        [EnumString("stBulletLvl")]
+        StartBulletsAtLevel,
+        ///<summary>
+        ///Start Angle.
+        ///<para>When the item is serialized out as xml, its value is "stAng".</para>
+        ///</summary>
+        [EnumString("stAng")]
+        StartAngle,
+        ///<summary>
+        ///Span Angle.
+        ///<para>When the item is serialized out as xml, its value is "spanAng".</para>
+        ///</summary>
+        [EnumString("spanAng")]
+        SpanAngle,
+        ///<summary>
+        ///Aspect Ratio.
+        ///<para>When the item is serialized out as xml, its value is "ar".</para>
+        ///</summary>
+        [EnumString("ar")]
+        AspectRatio,
+        ///<summary>
+        ///Line Spacing Parent.
+        ///<para>When the item is serialized out as xml, its value is "lnSpPar".</para>
+        ///</summary>
+        [EnumString("lnSpPar")]
+        LineSpacingParent,
+        ///<summary>
+        ///Line Spacing After Parent Paragraph.
+        ///<para>When the item is serialized out as xml, its value is "lnSpAfParP".</para>
+        ///</summary>
+        [EnumString("lnSpAfParP")]
+        LineSpacingAfterParentParagraph,
+        ///<summary>
+        ///Line Spacing Children.
+        ///<para>When the item is serialized out as xml, its value is "lnSpCh".</para>
+        ///</summary>
+        [EnumString("lnSpCh")]
+        LineSpacingChildren,
+        ///<summary>
+        ///Line Spacing After Children Paragraph.
+        ///<para>When the item is serialized out as xml, its value is "lnSpAfChP".</para>
+        ///</summary>
+        [EnumString("lnSpAfChP")]
+        LineSpacingAfterChildrenParagraph,
+        ///<summary>
+        ///Route Shortest Distance.
+        ///<para>When the item is serialized out as xml, its value is "rtShortDist".</para>
+        ///</summary>
+        [EnumString("rtShortDist")]
+        RouteShortestDistance,
+        ///<summary>
+        ///Text Alignment.
+        ///<para>When the item is serialized out as xml, its value is "alignTx".</para>
+        ///</summary>
+        [EnumString("alignTx")]
+        TextAlignment,
+        ///<summary>
+        ///Pyramid Level Node.
+        ///<para>When the item is serialized out as xml, its value is "pyraLvlNode".</para>
+        ///</summary>
+        [EnumString("pyraLvlNode")]
+        PyramidLevelNode,
+        ///<summary>
+        ///Pyramid Accent Background Node.
+        ///<para>When the item is serialized out as xml, its value is "pyraAcctBkgdNode".</para>
+        ///</summary>
+        [EnumString("pyraAcctBkgdNode")]
+        PyramidAccentBackgroundNode,
+        ///<summary>
+        ///Pyramid Accent Text Node.
+        ///<para>When the item is serialized out as xml, its value is "pyraAcctTxNode".</para>
+        ///</summary>
+        [EnumString("pyraAcctTxNode")]
+        PyramidAccentTextNode,
+        ///<summary>
+        ///Source Node.
+        ///<para>When the item is serialized out as xml, its value is "srcNode".</para>
+        ///</summary>
+        [EnumString("srcNode")]
+        SourceNode,
+        ///<summary>
+        ///Destination Node.
+        ///<para>When the item is serialized out as xml, its value is "dstNode".</para>
+        ///</summary>
+        [EnumString("dstNode")]
+        DestinationNode,
+        ///<summary>
+        ///Beginning Points.
+        ///<para>When the item is serialized out as xml, its value is "begPts".</para>
+        ///</summary>
+        [EnumString("begPts")]
+        BeginningPoints,
+        ///<summary>
+        ///End Points.
+        ///<para>When the item is serialized out as xml, its value is "endPts".</para>
+        ///</summary>
+        [EnumString("endPts")]
+        EndPoints,
+    }
 
-}
-/// <summary>
-/// Constraint Relationship
-/// </summary>
-public enum ConstraintRelationshipValues
-{
-	///<summary>
-///Self.
-///<para>When the item is serialized out as xml, its value is "self".</para>
-///</summary>
-[EnumString("self")]
-Self,
-///<summary>
-///Child.
-///<para>When the item is serialized out as xml, its value is "ch".</para>
-///</summary>
-[EnumString("ch")]
-Child,
-///<summary>
-///Descendant.
-///<para>When the item is serialized out as xml, its value is "des".</para>
-///</summary>
-[EnumString("des")]
-Descendant,
+    /// <summary>
+    /// Function Type
+    /// </summary>
+    public enum FunctionValues
+    {
+        ///<summary>
+        ///Count.
+        ///<para>When the item is serialized out as xml, its value is "cnt".</para>
+        ///</summary>
+        [EnumString("cnt")]
+        Count,
+        ///<summary>
+        ///Position.
+        ///<para>When the item is serialized out as xml, its value is "pos".</para>
+        ///</summary>
+        [EnumString("pos")]
+        Position,
+        ///<summary>
+        ///Reverse Position.
+        ///<para>When the item is serialized out as xml, its value is "revPos".</para>
+        ///</summary>
+        [EnumString("revPos")]
+        ReversePosition,
+        ///<summary>
+        ///Position Even.
+        ///<para>When the item is serialized out as xml, its value is "posEven".</para>
+        ///</summary>
+        [EnumString("posEven")]
+        PositionEven,
+        ///<summary>
+        ///Position Odd.
+        ///<para>When the item is serialized out as xml, its value is "posOdd".</para>
+        ///</summary>
+        [EnumString("posOdd")]
+        PositionOdd,
+        ///<summary>
+        ///Variable.
+        ///<para>When the item is serialized out as xml, its value is "var".</para>
+        ///</summary>
+        [EnumString("var")]
+        Variable,
+        ///<summary>
+        ///Depth.
+        ///<para>When the item is serialized out as xml, its value is "depth".</para>
+        ///</summary>
+        [EnumString("depth")]
+        Depth,
+        ///<summary>
+        ///Max Depth.
+        ///<para>When the item is serialized out as xml, its value is "maxDepth".</para>
+        ///</summary>
+        [EnumString("maxDepth")]
+        MaxDepth,
+    }
 
-}
-/// <summary>
-/// Element Type
-/// </summary>
-public enum ElementValues
-{
-	///<summary>
-///All.
-///<para>When the item is serialized out as xml, its value is "all".</para>
-///</summary>
-[EnumString("all")]
-All,
-///<summary>
-///Document.
-///<para>When the item is serialized out as xml, its value is "doc".</para>
-///</summary>
-[EnumString("doc")]
-Document,
-///<summary>
-///Node.
-///<para>When the item is serialized out as xml, its value is "node".</para>
-///</summary>
-[EnumString("node")]
-Node,
-///<summary>
-///Normal.
-///<para>When the item is serialized out as xml, its value is "norm".</para>
-///</summary>
-[EnumString("norm")]
-Normal,
-///<summary>
-///Non Normal.
-///<para>When the item is serialized out as xml, its value is "nonNorm".</para>
-///</summary>
-[EnumString("nonNorm")]
-NonNormal,
-///<summary>
-///Assistant.
-///<para>When the item is serialized out as xml, its value is "asst".</para>
-///</summary>
-[EnumString("asst")]
-Assistant,
-///<summary>
-///Non Assistant.
-///<para>When the item is serialized out as xml, its value is "nonAsst".</para>
-///</summary>
-[EnumString("nonAsst")]
-NonAssistant,
-///<summary>
-///Parent Transition.
-///<para>When the item is serialized out as xml, its value is "parTrans".</para>
-///</summary>
-[EnumString("parTrans")]
-ParentTransition,
-///<summary>
-///Presentation.
-///<para>When the item is serialized out as xml, its value is "pres".</para>
-///</summary>
-[EnumString("pres")]
-Presentation,
-///<summary>
-///Sibling Transition.
-///<para>When the item is serialized out as xml, its value is "sibTrans".</para>
-///</summary>
-[EnumString("sibTrans")]
-SiblingTransition,
+    /// <summary>
+    /// Function Operator
+    /// </summary>
+    public enum FunctionOperatorValues
+    {
+        ///<summary>
+        ///Equal.
+        ///<para>When the item is serialized out as xml, its value is "equ".</para>
+        ///</summary>
+        [EnumString("equ")]
+        Equal,
+        ///<summary>
+        ///Not Equal To.
+        ///<para>When the item is serialized out as xml, its value is "neq".</para>
+        ///</summary>
+        [EnumString("neq")]
+        NotEqualTo,
+        ///<summary>
+        ///Greater Than.
+        ///<para>When the item is serialized out as xml, its value is "gt".</para>
+        ///</summary>
+        [EnumString("gt")]
+        GreaterThan,
+        ///<summary>
+        ///Less Than.
+        ///<para>When the item is serialized out as xml, its value is "lt".</para>
+        ///</summary>
+        [EnumString("lt")]
+        LessThan,
+        ///<summary>
+        ///Greater Than or Equal to.
+        ///<para>When the item is serialized out as xml, its value is "gte".</para>
+        ///</summary>
+        [EnumString("gte")]
+        GreaterThanOrEqualTo,
+        ///<summary>
+        ///Less Than or Equal to.
+        ///<para>When the item is serialized out as xml, its value is "lte".</para>
+        ///</summary>
+        [EnumString("lte")]
+        LessThanOrEqualTo,
+    }
 
-}
-/// <summary>
-/// Parameter Identifier
-/// </summary>
-public enum ParameterIdValues
-{
-	///<summary>
-///Horizontal Alignment.
-///<para>When the item is serialized out as xml, its value is "horzAlign".</para>
-///</summary>
-[EnumString("horzAlign")]
-HorizontalAlignment,
-///<summary>
-///Vertical Alignment.
-///<para>When the item is serialized out as xml, its value is "vertAlign".</para>
-///</summary>
-[EnumString("vertAlign")]
-VerticalAlignment,
-///<summary>
-///Child Direction.
-///<para>When the item is serialized out as xml, its value is "chDir".</para>
-///</summary>
-[EnumString("chDir")]
-ChildDirection,
-///<summary>
-///Child Alignment.
-///<para>When the item is serialized out as xml, its value is "chAlign".</para>
-///</summary>
-[EnumString("chAlign")]
-ChildAlignment,
-///<summary>
-///Secondary Child Alignment.
-///<para>When the item is serialized out as xml, its value is "secChAlign".</para>
-///</summary>
-[EnumString("secChAlign")]
-SecondaryChildAlignment,
-///<summary>
-///Linear Direction.
-///<para>When the item is serialized out as xml, its value is "linDir".</para>
-///</summary>
-[EnumString("linDir")]
-LinearDirection,
-///<summary>
-///Secondary Linear Direction.
-///<para>When the item is serialized out as xml, its value is "secLinDir".</para>
-///</summary>
-[EnumString("secLinDir")]
-SecondaryLinearDirection,
-///<summary>
-///Start Element.
-///<para>When the item is serialized out as xml, its value is "stElem".</para>
-///</summary>
-[EnumString("stElem")]
-StartElement,
-///<summary>
-///Bend Point.
-///<para>When the item is serialized out as xml, its value is "bendPt".</para>
-///</summary>
-[EnumString("bendPt")]
-BendPoint,
-///<summary>
-///Connection Route.
-///<para>When the item is serialized out as xml, its value is "connRout".</para>
-///</summary>
-[EnumString("connRout")]
-ConnectionRoute,
-///<summary>
-///Beginning Arrowhead Style.
-///<para>When the item is serialized out as xml, its value is "begSty".</para>
-///</summary>
-[EnumString("begSty")]
-BeginningArrowheadStyle,
-///<summary>
-///End Style.
-///<para>When the item is serialized out as xml, its value is "endSty".</para>
-///</summary>
-[EnumString("endSty")]
-EndStyle,
-///<summary>
-///Connector Dimension.
-///<para>When the item is serialized out as xml, its value is "dim".</para>
-///</summary>
-[EnumString("dim")]
-ConnectorDimension,
-///<summary>
-///Rotation Path.
-///<para>When the item is serialized out as xml, its value is "rotPath".</para>
-///</summary>
-[EnumString("rotPath")]
-RotationPath,
-///<summary>
-///Center Shape Mapping.
-///<para>When the item is serialized out as xml, its value is "ctrShpMap".</para>
-///</summary>
-[EnumString("ctrShpMap")]
-CenterShapeMapping,
-///<summary>
-///Node Horizontal Alignment.
-///<para>When the item is serialized out as xml, its value is "nodeHorzAlign".</para>
-///</summary>
-[EnumString("nodeHorzAlign")]
-NodeHorizontalAlignment,
-///<summary>
-///Node Vertical Alignment.
-///<para>When the item is serialized out as xml, its value is "nodeVertAlign".</para>
-///</summary>
-[EnumString("nodeVertAlign")]
-NodeVerticalAlignment,
-///<summary>
-///Fallback Scale.
-///<para>When the item is serialized out as xml, its value is "fallback".</para>
-///</summary>
-[EnumString("fallback")]
-FallbackScale,
-///<summary>
-///Text Direction.
-///<para>When the item is serialized out as xml, its value is "txDir".</para>
-///</summary>
-[EnumString("txDir")]
-TextDirection,
-///<summary>
-///Pyramid Accent Position.
-///<para>When the item is serialized out as xml, its value is "pyraAcctPos".</para>
-///</summary>
-[EnumString("pyraAcctPos")]
-PyramidAccentPosition,
-///<summary>
-///Pyramid Accent Text Margin.
-///<para>When the item is serialized out as xml, its value is "pyraAcctTxMar".</para>
-///</summary>
-[EnumString("pyraAcctTxMar")]
-PyramidAccentTextMargin,
-///<summary>
-///Text Block Direction.
-///<para>When the item is serialized out as xml, its value is "txBlDir".</para>
-///</summary>
-[EnumString("txBlDir")]
-TextBlockDirection,
-///<summary>
-///Text Anchor Horizontal.
-///<para>When the item is serialized out as xml, its value is "txAnchorHorz".</para>
-///</summary>
-[EnumString("txAnchorHorz")]
-TextAnchorHorizontal,
-///<summary>
-///Text Anchor Vertical.
-///<para>When the item is serialized out as xml, its value is "txAnchorVert".</para>
-///</summary>
-[EnumString("txAnchorVert")]
-TextAnchorVertical,
-///<summary>
-///Text Anchor Horizontal With Children.
-///<para>When the item is serialized out as xml, its value is "txAnchorHorzCh".</para>
-///</summary>
-[EnumString("txAnchorHorzCh")]
-TextAnchorHorizontalWithChildren,
-///<summary>
-///Text Anchor Vertical With Children.
-///<para>When the item is serialized out as xml, its value is "txAnchorVertCh".</para>
-///</summary>
-[EnumString("txAnchorVertCh")]
-TextAnchorVerticalWithChildren,
-///<summary>
-///Parent Text Left-to-Right Alignment.
-///<para>When the item is serialized out as xml, its value is "parTxLTRAlign".</para>
-///</summary>
-[EnumString("parTxLTRAlign")]
-ParentTextLeftToRightAlignment,
-///<summary>
-///Parent Text Right-to-Left Alignment.
-///<para>When the item is serialized out as xml, its value is "parTxRTLAlign".</para>
-///</summary>
-[EnumString("parTxRTLAlign")]
-ParentTextRightToLeftAlignment,
-///<summary>
-///Shape Text Left-to-Right Alignment.
-///<para>When the item is serialized out as xml, its value is "shpTxLTRAlignCh".</para>
-///</summary>
-[EnumString("shpTxLTRAlignCh")]
-ShapeTextLeftToRightAlignment,
-///<summary>
-///Shape Text Right-to-Left Alignment.
-///<para>When the item is serialized out as xml, its value is "shpTxRTLAlignCh".</para>
-///</summary>
-[EnumString("shpTxRTLAlignCh")]
-ShapeTextRightToLeftAlignment,
-///<summary>
-///Auto Text Rotation.
-///<para>When the item is serialized out as xml, its value is "autoTxRot".</para>
-///</summary>
-[EnumString("autoTxRot")]
-AutoTextRotation,
-///<summary>
-///Grow Direction.
-///<para>When the item is serialized out as xml, its value is "grDir".</para>
-///</summary>
-[EnumString("grDir")]
-GrowDirection,
-///<summary>
-///Flow Direction.
-///<para>When the item is serialized out as xml, its value is "flowDir".</para>
-///</summary>
-[EnumString("flowDir")]
-FlowDirection,
-///<summary>
-///Continue Direction.
-///<para>When the item is serialized out as xml, its value is "contDir".</para>
-///</summary>
-[EnumString("contDir")]
-ContinueDirection,
-///<summary>
-///Breakpoint.
-///<para>When the item is serialized out as xml, its value is "bkpt".</para>
-///</summary>
-[EnumString("bkpt")]
-Breakpoint,
-///<summary>
-///Offset.
-///<para>When the item is serialized out as xml, its value is "off".</para>
-///</summary>
-[EnumString("off")]
-Offset,
-///<summary>
-///Hierarchy Alignment.
-///<para>When the item is serialized out as xml, its value is "hierAlign".</para>
-///</summary>
-[EnumString("hierAlign")]
-HierarchyAlignment,
-///<summary>
-///Breakpoint Fixed Value.
-///<para>When the item is serialized out as xml, its value is "bkPtFixedVal".</para>
-///</summary>
-[EnumString("bkPtFixedVal")]
-BreakpointFixedValue,
-///<summary>
-///Start Bullets At Level.
-///<para>When the item is serialized out as xml, its value is "stBulletLvl".</para>
-///</summary>
-[EnumString("stBulletLvl")]
-StartBulletsAtLevel,
-///<summary>
-///Start Angle.
-///<para>When the item is serialized out as xml, its value is "stAng".</para>
-///</summary>
-[EnumString("stAng")]
-StartAngle,
-///<summary>
-///Span Angle.
-///<para>When the item is serialized out as xml, its value is "spanAng".</para>
-///</summary>
-[EnumString("spanAng")]
-SpanAngle,
-///<summary>
-///Aspect Ratio.
-///<para>When the item is serialized out as xml, its value is "ar".</para>
-///</summary>
-[EnumString("ar")]
-AspectRatio,
-///<summary>
-///Line Spacing Parent.
-///<para>When the item is serialized out as xml, its value is "lnSpPar".</para>
-///</summary>
-[EnumString("lnSpPar")]
-LineSpacingParent,
-///<summary>
-///Line Spacing After Parent Paragraph.
-///<para>When the item is serialized out as xml, its value is "lnSpAfParP".</para>
-///</summary>
-[EnumString("lnSpAfParP")]
-LineSpacingAfterParentParagraph,
-///<summary>
-///Line Spacing Children.
-///<para>When the item is serialized out as xml, its value is "lnSpCh".</para>
-///</summary>
-[EnumString("lnSpCh")]
-LineSpacingChildren,
-///<summary>
-///Line Spacing After Children Paragraph.
-///<para>When the item is serialized out as xml, its value is "lnSpAfChP".</para>
-///</summary>
-[EnumString("lnSpAfChP")]
-LineSpacingAfterChildrenParagraph,
-///<summary>
-///Route Shortest Distance.
-///<para>When the item is serialized out as xml, its value is "rtShortDist".</para>
-///</summary>
-[EnumString("rtShortDist")]
-RouteShortestDistance,
-///<summary>
-///Text Alignment.
-///<para>When the item is serialized out as xml, its value is "alignTx".</para>
-///</summary>
-[EnumString("alignTx")]
-TextAlignment,
-///<summary>
-///Pyramid Level Node.
-///<para>When the item is serialized out as xml, its value is "pyraLvlNode".</para>
-///</summary>
-[EnumString("pyraLvlNode")]
-PyramidLevelNode,
-///<summary>
-///Pyramid Accent Background Node.
-///<para>When the item is serialized out as xml, its value is "pyraAcctBkgdNode".</para>
-///</summary>
-[EnumString("pyraAcctBkgdNode")]
-PyramidAccentBackgroundNode,
-///<summary>
-///Pyramid Accent Text Node.
-///<para>When the item is serialized out as xml, its value is "pyraAcctTxNode".</para>
-///</summary>
-[EnumString("pyraAcctTxNode")]
-PyramidAccentTextNode,
-///<summary>
-///Source Node.
-///<para>When the item is serialized out as xml, its value is "srcNode".</para>
-///</summary>
-[EnumString("srcNode")]
-SourceNode,
-///<summary>
-///Destination Node.
-///<para>When the item is serialized out as xml, its value is "dstNode".</para>
-///</summary>
-[EnumString("dstNode")]
-DestinationNode,
-///<summary>
-///Beginning Points.
-///<para>When the item is serialized out as xml, its value is "begPts".</para>
-///</summary>
-[EnumString("begPts")]
-BeginningPoints,
-///<summary>
-///End Points.
-///<para>When the item is serialized out as xml, its value is "endPts".</para>
-///</summary>
-[EnumString("endPts")]
-EndPoints,
+    /// <summary>
+    /// Horizontal Alignment
+    /// </summary>
+    public enum HorizontalAlignmentValues
+    {
+        ///<summary>
+        ///Left.
+        ///<para>When the item is serialized out as xml, its value is "l".</para>
+        ///</summary>
+        [EnumString("l")]
+        Left,
+        ///<summary>
+        ///Center.
+        ///<para>When the item is serialized out as xml, its value is "ctr".</para>
+        ///</summary>
+        [EnumString("ctr")]
+        Center,
+        ///<summary>
+        ///Right.
+        ///<para>When the item is serialized out as xml, its value is "r".</para>
+        ///</summary>
+        [EnumString("r")]
+        Right,
+        ///<summary>
+        ///None.
+        ///<para>When the item is serialized out as xml, its value is "none".</para>
+        ///</summary>
+        [EnumString("none")]
+        None,
+    }
 
-}
-/// <summary>
-/// Function Type
-/// </summary>
-public enum FunctionValues
-{
-	///<summary>
-///Count.
-///<para>When the item is serialized out as xml, its value is "cnt".</para>
-///</summary>
-[EnumString("cnt")]
-Count,
-///<summary>
-///Position.
-///<para>When the item is serialized out as xml, its value is "pos".</para>
-///</summary>
-[EnumString("pos")]
-Position,
-///<summary>
-///Reverse Position.
-///<para>When the item is serialized out as xml, its value is "revPos".</para>
-///</summary>
-[EnumString("revPos")]
-ReversePosition,
-///<summary>
-///Position Even.
-///<para>When the item is serialized out as xml, its value is "posEven".</para>
-///</summary>
-[EnumString("posEven")]
-PositionEven,
-///<summary>
-///Position Odd.
-///<para>When the item is serialized out as xml, its value is "posOdd".</para>
-///</summary>
-[EnumString("posOdd")]
-PositionOdd,
-///<summary>
-///Variable.
-///<para>When the item is serialized out as xml, its value is "var".</para>
-///</summary>
-[EnumString("var")]
-Variable,
-///<summary>
-///Depth.
-///<para>When the item is serialized out as xml, its value is "depth".</para>
-///</summary>
-[EnumString("depth")]
-Depth,
-///<summary>
-///Max Depth.
-///<para>When the item is serialized out as xml, its value is "maxDepth".</para>
-///</summary>
-[EnumString("maxDepth")]
-MaxDepth,
+    /// <summary>
+    /// Child Direction
+    /// </summary>
+    public enum ChildDirectionValues
+    {
+        ///<summary>
+        ///Horizontal.
+        ///<para>When the item is serialized out as xml, its value is "horz".</para>
+        ///</summary>
+        [EnumString("horz")]
+        Horizontal,
+        ///<summary>
+        ///Vertical.
+        ///<para>When the item is serialized out as xml, its value is "vert".</para>
+        ///</summary>
+        [EnumString("vert")]
+        Vertical,
+    }
 
-}
-/// <summary>
-/// Function Operator
-/// </summary>
-public enum FunctionOperatorValues
-{
-	///<summary>
-///Equal.
-///<para>When the item is serialized out as xml, its value is "equ".</para>
-///</summary>
-[EnumString("equ")]
-Equal,
-///<summary>
-///Not Equal To.
-///<para>When the item is serialized out as xml, its value is "neq".</para>
-///</summary>
-[EnumString("neq")]
-NotEqualTo,
-///<summary>
-///Greater Than.
-///<para>When the item is serialized out as xml, its value is "gt".</para>
-///</summary>
-[EnumString("gt")]
-GreaterThan,
-///<summary>
-///Less Than.
-///<para>When the item is serialized out as xml, its value is "lt".</para>
-///</summary>
-[EnumString("lt")]
-LessThan,
-///<summary>
-///Greater Than or Equal to.
-///<para>When the item is serialized out as xml, its value is "gte".</para>
-///</summary>
-[EnumString("gte")]
-GreaterThanOrEqualTo,
-///<summary>
-///Less Than or Equal to.
-///<para>When the item is serialized out as xml, its value is "lte".</para>
-///</summary>
-[EnumString("lte")]
-LessThanOrEqualTo,
+    /// <summary>
+    /// Child Alignment
+    /// </summary>
+    public enum ChildAlignmentValues
+    {
+        ///<summary>
+        ///Top.
+        ///<para>When the item is serialized out as xml, its value is "t".</para>
+        ///</summary>
+        [EnumString("t")]
+        Top,
+        ///<summary>
+        ///Bottom.
+        ///<para>When the item is serialized out as xml, its value is "b".</para>
+        ///</summary>
+        [EnumString("b")]
+        Bottom,
+        ///<summary>
+        ///Left.
+        ///<para>When the item is serialized out as xml, its value is "l".</para>
+        ///</summary>
+        [EnumString("l")]
+        Left,
+        ///<summary>
+        ///Right.
+        ///<para>When the item is serialized out as xml, its value is "r".</para>
+        ///</summary>
+        [EnumString("r")]
+        Right,
+    }
 
-}
-/// <summary>
-/// Horizontal Alignment
-/// </summary>
-public enum HorizontalAlignmentValues
-{
-	///<summary>
-///Left.
-///<para>When the item is serialized out as xml, its value is "l".</para>
-///</summary>
-[EnumString("l")]
-Left,
-///<summary>
-///Center.
-///<para>When the item is serialized out as xml, its value is "ctr".</para>
-///</summary>
-[EnumString("ctr")]
-Center,
-///<summary>
-///Right.
-///<para>When the item is serialized out as xml, its value is "r".</para>
-///</summary>
-[EnumString("r")]
-Right,
-///<summary>
-///None.
-///<para>When the item is serialized out as xml, its value is "none".</para>
-///</summary>
-[EnumString("none")]
-None,
+    /// <summary>
+    /// Secondary Child Alignment
+    /// </summary>
+    public enum SecondaryChildAlignmentValues
+    {
+        ///<summary>
+        ///None.
+        ///<para>When the item is serialized out as xml, its value is "none".</para>
+        ///</summary>
+        [EnumString("none")]
+        None,
+        ///<summary>
+        ///Top.
+        ///<para>When the item is serialized out as xml, its value is "t".</para>
+        ///</summary>
+        [EnumString("t")]
+        Top,
+        ///<summary>
+        ///Bottom.
+        ///<para>When the item is serialized out as xml, its value is "b".</para>
+        ///</summary>
+        [EnumString("b")]
+        Bottom,
+        ///<summary>
+        ///Left.
+        ///<para>When the item is serialized out as xml, its value is "l".</para>
+        ///</summary>
+        [EnumString("l")]
+        Left,
+        ///<summary>
+        ///Right.
+        ///<para>When the item is serialized out as xml, its value is "r".</para>
+        ///</summary>
+        [EnumString("r")]
+        Right,
+    }
 
-}
-/// <summary>
-/// Child Direction
-/// </summary>
-public enum ChildDirectionValues
-{
-	///<summary>
-///Horizontal.
-///<para>When the item is serialized out as xml, its value is "horz".</para>
-///</summary>
-[EnumString("horz")]
-Horizontal,
-///<summary>
-///Vertical.
-///<para>When the item is serialized out as xml, its value is "vert".</para>
-///</summary>
-[EnumString("vert")]
-Vertical,
+    /// <summary>
+    /// Linear Direction
+    /// </summary>
+    public enum LinearDirectionValues
+    {
+        ///<summary>
+        ///From Left.
+        ///<para>When the item is serialized out as xml, its value is "fromL".</para>
+        ///</summary>
+        [EnumString("fromL")]
+        FromLeft,
+        ///<summary>
+        ///From Right.
+        ///<para>When the item is serialized out as xml, its value is "fromR".</para>
+        ///</summary>
+        [EnumString("fromR")]
+        FromRight,
+        ///<summary>
+        ///From Top.
+        ///<para>When the item is serialized out as xml, its value is "fromT".</para>
+        ///</summary>
+        [EnumString("fromT")]
+        FromTop,
+        ///<summary>
+        ///From Bottom.
+        ///<para>When the item is serialized out as xml, its value is "fromB".</para>
+        ///</summary>
+        [EnumString("fromB")]
+        FromBottom,
+    }
 
-}
-/// <summary>
-/// Child Alignment
-/// </summary>
-public enum ChildAlignmentValues
-{
-	///<summary>
-///Top.
-///<para>When the item is serialized out as xml, its value is "t".</para>
-///</summary>
-[EnumString("t")]
-Top,
-///<summary>
-///Bottom.
-///<para>When the item is serialized out as xml, its value is "b".</para>
-///</summary>
-[EnumString("b")]
-Bottom,
-///<summary>
-///Left.
-///<para>When the item is serialized out as xml, its value is "l".</para>
-///</summary>
-[EnumString("l")]
-Left,
-///<summary>
-///Right.
-///<para>When the item is serialized out as xml, its value is "r".</para>
-///</summary>
-[EnumString("r")]
-Right,
+    /// <summary>
+    /// Secondary Linear Direction
+    /// </summary>
+    public enum SecondaryLinearDirectionValues
+    {
+        ///<summary>
+        ///None.
+        ///<para>When the item is serialized out as xml, its value is "none".</para>
+        ///</summary>
+        [EnumString("none")]
+        None,
+        ///<summary>
+        ///From Left.
+        ///<para>When the item is serialized out as xml, its value is "fromL".</para>
+        ///</summary>
+        [EnumString("fromL")]
+        FromLeft,
+        ///<summary>
+        ///From Right.
+        ///<para>When the item is serialized out as xml, its value is "fromR".</para>
+        ///</summary>
+        [EnumString("fromR")]
+        FromRight,
+        ///<summary>
+        ///From Top.
+        ///<para>When the item is serialized out as xml, its value is "fromT".</para>
+        ///</summary>
+        [EnumString("fromT")]
+        FromTop,
+        ///<summary>
+        ///From Bottom.
+        ///<para>When the item is serialized out as xml, its value is "fromB".</para>
+        ///</summary>
+        [EnumString("fromB")]
+        FromBottom,
+    }
 
-}
-/// <summary>
-/// Secondary Child Alignment
-/// </summary>
-public enum SecondaryChildAlignmentValues
-{
-	///<summary>
-///None.
-///<para>When the item is serialized out as xml, its value is "none".</para>
-///</summary>
-[EnumString("none")]
-None,
-///<summary>
-///Top.
-///<para>When the item is serialized out as xml, its value is "t".</para>
-///</summary>
-[EnumString("t")]
-Top,
-///<summary>
-///Bottom.
-///<para>When the item is serialized out as xml, its value is "b".</para>
-///</summary>
-[EnumString("b")]
-Bottom,
-///<summary>
-///Left.
-///<para>When the item is serialized out as xml, its value is "l".</para>
-///</summary>
-[EnumString("l")]
-Left,
-///<summary>
-///Right.
-///<para>When the item is serialized out as xml, its value is "r".</para>
-///</summary>
-[EnumString("r")]
-Right,
+    /// <summary>
+    /// Starting Element
+    /// </summary>
+    public enum StartingElementValues
+    {
+        ///<summary>
+        ///Node.
+        ///<para>When the item is serialized out as xml, its value is "node".</para>
+        ///</summary>
+        [EnumString("node")]
+        Node,
+        ///<summary>
+        ///Transition.
+        ///<para>When the item is serialized out as xml, its value is "trans".</para>
+        ///</summary>
+        [EnumString("trans")]
+        Transition,
+    }
 
-}
-/// <summary>
-/// Linear Direction
-/// </summary>
-public enum LinearDirectionValues
-{
-	///<summary>
-///From Left.
-///<para>When the item is serialized out as xml, its value is "fromL".</para>
-///</summary>
-[EnumString("fromL")]
-FromLeft,
-///<summary>
-///From Right.
-///<para>When the item is serialized out as xml, its value is "fromR".</para>
-///</summary>
-[EnumString("fromR")]
-FromRight,
-///<summary>
-///From Top.
-///<para>When the item is serialized out as xml, its value is "fromT".</para>
-///</summary>
-[EnumString("fromT")]
-FromTop,
-///<summary>
-///From Bottom.
-///<para>When the item is serialized out as xml, its value is "fromB".</para>
-///</summary>
-[EnumString("fromB")]
-FromBottom,
+    /// <summary>
+    /// Rotation Path
+    /// </summary>
+    public enum RotationPathValues
+    {
+        ///<summary>
+        ///None.
+        ///<para>When the item is serialized out as xml, its value is "none".</para>
+        ///</summary>
+        [EnumString("none")]
+        None,
+        ///<summary>
+        ///Along Path.
+        ///<para>When the item is serialized out as xml, its value is "alongPath".</para>
+        ///</summary>
+        [EnumString("alongPath")]
+        AlongPath,
+    }
 
-}
-/// <summary>
-/// Secondary Linear Direction
-/// </summary>
-public enum SecondaryLinearDirectionValues
-{
-	///<summary>
-///None.
-///<para>When the item is serialized out as xml, its value is "none".</para>
-///</summary>
-[EnumString("none")]
-None,
-///<summary>
-///From Left.
-///<para>When the item is serialized out as xml, its value is "fromL".</para>
-///</summary>
-[EnumString("fromL")]
-FromLeft,
-///<summary>
-///From Right.
-///<para>When the item is serialized out as xml, its value is "fromR".</para>
-///</summary>
-[EnumString("fromR")]
-FromRight,
-///<summary>
-///From Top.
-///<para>When the item is serialized out as xml, its value is "fromT".</para>
-///</summary>
-[EnumString("fromT")]
-FromTop,
-///<summary>
-///From Bottom.
-///<para>When the item is serialized out as xml, its value is "fromB".</para>
-///</summary>
-[EnumString("fromB")]
-FromBottom,
+    /// <summary>
+    /// Center Shape Mapping
+    /// </summary>
+    public enum CenterShapeMappingValues
+    {
+        ///<summary>
+        ///None.
+        ///<para>When the item is serialized out as xml, its value is "none".</para>
+        ///</summary>
+        [EnumString("none")]
+        None,
+        ///<summary>
+        ///First Node.
+        ///<para>When the item is serialized out as xml, its value is "fNode".</para>
+        ///</summary>
+        [EnumString("fNode")]
+        FirstNode,
+    }
 
-}
-/// <summary>
-/// Starting Element
-/// </summary>
-public enum StartingElementValues
-{
-	///<summary>
-///Node.
-///<para>When the item is serialized out as xml, its value is "node".</para>
-///</summary>
-[EnumString("node")]
-Node,
-///<summary>
-///Transition.
-///<para>When the item is serialized out as xml, its value is "trans".</para>
-///</summary>
-[EnumString("trans")]
-Transition,
+    /// <summary>
+    /// Bend Point
+    /// </summary>
+    public enum BendPointValues
+    {
+        ///<summary>
+        ///Beginning.
+        ///<para>When the item is serialized out as xml, its value is "beg".</para>
+        ///</summary>
+        [EnumString("beg")]
+        Beginning,
+        ///<summary>
+        ///Default.
+        ///<para>When the item is serialized out as xml, its value is "def".</para>
+        ///</summary>
+        [EnumString("def")]
+        Default,
+        ///<summary>
+        ///End.
+        ///<para>When the item is serialized out as xml, its value is "end".</para>
+        ///</summary>
+        [EnumString("end")]
+        End,
+    }
 
-}
-/// <summary>
-/// Rotation Path
-/// </summary>
-public enum RotationPathValues
-{
-	///<summary>
-///None.
-///<para>When the item is serialized out as xml, its value is "none".</para>
-///</summary>
-[EnumString("none")]
-None,
-///<summary>
-///Along Path.
-///<para>When the item is serialized out as xml, its value is "alongPath".</para>
-///</summary>
-[EnumString("alongPath")]
-AlongPath,
+    /// <summary>
+    /// Connector Routing
+    /// </summary>
+    public enum ConnectorRoutingValues
+    {
+        ///<summary>
+        ///Straight.
+        ///<para>When the item is serialized out as xml, its value is "stra".</para>
+        ///</summary>
+        [EnumString("stra")]
+        Straight,
+        ///<summary>
+        ///Bending.
+        ///<para>When the item is serialized out as xml, its value is "bend".</para>
+        ///</summary>
+        [EnumString("bend")]
+        Bending,
+        ///<summary>
+        ///Curve.
+        ///<para>When the item is serialized out as xml, its value is "curve".</para>
+        ///</summary>
+        [EnumString("curve")]
+        Curve,
+        ///<summary>
+        ///Long Curve.
+        ///<para>When the item is serialized out as xml, its value is "longCurve".</para>
+        ///</summary>
+        [EnumString("longCurve")]
+        LongCurve,
+    }
 
-}
-/// <summary>
-/// Center Shape Mapping
-/// </summary>
-public enum CenterShapeMappingValues
-{
-	///<summary>
-///None.
-///<para>When the item is serialized out as xml, its value is "none".</para>
-///</summary>
-[EnumString("none")]
-None,
-///<summary>
-///First Node.
-///<para>When the item is serialized out as xml, its value is "fNode".</para>
-///</summary>
-[EnumString("fNode")]
-FirstNode,
+    /// <summary>
+    /// Arrowhead Styles
+    /// </summary>
+    public enum ArrowheadStyleValues
+    {
+        ///<summary>
+        ///Auto.
+        ///<para>When the item is serialized out as xml, its value is "auto".</para>
+        ///</summary>
+        [EnumString("auto")]
+        Auto,
+        ///<summary>
+        ///Arrowhead Present.
+        ///<para>When the item is serialized out as xml, its value is "arr".</para>
+        ///</summary>
+        [EnumString("arr")]
+        Arrow,
+        ///<summary>
+        ///No Arrowhead.
+        ///<para>When the item is serialized out as xml, its value is "noArr".</para>
+        ///</summary>
+        [EnumString("noArr")]
+        NoArrow,
+    }
 
-}
-/// <summary>
-/// Bend Point
-/// </summary>
-public enum BendPointValues
-{
-	///<summary>
-///Beginning.
-///<para>When the item is serialized out as xml, its value is "beg".</para>
-///</summary>
-[EnumString("beg")]
-Beginning,
-///<summary>
-///Default.
-///<para>When the item is serialized out as xml, its value is "def".</para>
-///</summary>
-[EnumString("def")]
-Default,
-///<summary>
-///End.
-///<para>When the item is serialized out as xml, its value is "end".</para>
-///</summary>
-[EnumString("end")]
-End,
+    /// <summary>
+    /// Connector Dimension
+    /// </summary>
+    public enum ConnectorDimensionValues
+    {
+        ///<summary>
+        ///1 Dimension.
+        ///<para>When the item is serialized out as xml, its value is "1D".</para>
+        ///</summary>
+        [EnumString("1D")]
+        OneDimension,
+        ///<summary>
+        ///2 Dimensions.
+        ///<para>When the item is serialized out as xml, its value is "2D".</para>
+        ///</summary>
+        [EnumString("2D")]
+        TwoDimension,
+        ///<summary>
+        ///Custom.
+        ///<para>When the item is serialized out as xml, its value is "cust".</para>
+        ///</summary>
+        [EnumString("cust")]
+        Custom,
+    }
 
-}
-/// <summary>
-/// Connector Routing
-/// </summary>
-public enum ConnectorRoutingValues
-{
-	///<summary>
-///Straight.
-///<para>When the item is serialized out as xml, its value is "stra".</para>
-///</summary>
-[EnumString("stra")]
-Straight,
-///<summary>
-///Bending.
-///<para>When the item is serialized out as xml, its value is "bend".</para>
-///</summary>
-[EnumString("bend")]
-Bending,
-///<summary>
-///Curve.
-///<para>When the item is serialized out as xml, its value is "curve".</para>
-///</summary>
-[EnumString("curve")]
-Curve,
-///<summary>
-///Long Curve.
-///<para>When the item is serialized out as xml, its value is "longCurve".</para>
-///</summary>
-[EnumString("longCurve")]
-LongCurve,
+    /// <summary>
+    /// Connector Point
+    /// </summary>
+    public enum ConnectorPointValues
+    {
+        ///<summary>
+        ///Auto.
+        ///<para>When the item is serialized out as xml, its value is "auto".</para>
+        ///</summary>
+        [EnumString("auto")]
+        Auto,
+        ///<summary>
+        ///Bottom Center.
+        ///<para>When the item is serialized out as xml, its value is "bCtr".</para>
+        ///</summary>
+        [EnumString("bCtr")]
+        BottomCenter,
+        ///<summary>
+        ///Center.
+        ///<para>When the item is serialized out as xml, its value is "ctr".</para>
+        ///</summary>
+        [EnumString("ctr")]
+        Center,
+        ///<summary>
+        ///Middle Left.
+        ///<para>When the item is serialized out as xml, its value is "midL".</para>
+        ///</summary>
+        [EnumString("midL")]
+        MiddleLeft,
+        ///<summary>
+        ///Middle Right.
+        ///<para>When the item is serialized out as xml, its value is "midR".</para>
+        ///</summary>
+        [EnumString("midR")]
+        MiddleRight,
+        ///<summary>
+        ///Top Center.
+        ///<para>When the item is serialized out as xml, its value is "tCtr".</para>
+        ///</summary>
+        [EnumString("tCtr")]
+        TopCenter,
+        ///<summary>
+        ///Bottom Left.
+        ///<para>When the item is serialized out as xml, its value is "bL".</para>
+        ///</summary>
+        [EnumString("bL")]
+        BottomLeft,
+        ///<summary>
+        ///Bottom Right.
+        ///<para>When the item is serialized out as xml, its value is "bR".</para>
+        ///</summary>
+        [EnumString("bR")]
+        BottomRight,
+        ///<summary>
+        ///Top Left.
+        ///<para>When the item is serialized out as xml, its value is "tL".</para>
+        ///</summary>
+        [EnumString("tL")]
+        TopLeft,
+        ///<summary>
+        ///Top Right.
+        ///<para>When the item is serialized out as xml, its value is "tR".</para>
+        ///</summary>
+        [EnumString("tR")]
+        TopRight,
+        ///<summary>
+        ///Radial.
+        ///<para>When the item is serialized out as xml, its value is "radial".</para>
+        ///</summary>
+        [EnumString("radial")]
+        Radial,
+    }
 
-}
-/// <summary>
-/// Arrowhead Styles
-/// </summary>
-public enum ArrowheadStyleValues
-{
-	///<summary>
-///Auto.
-///<para>When the item is serialized out as xml, its value is "auto".</para>
-///</summary>
-[EnumString("auto")]
-Auto,
-///<summary>
-///Arrowhead Present.
-///<para>When the item is serialized out as xml, its value is "arr".</para>
-///</summary>
-[EnumString("arr")]
-Arrow,
-///<summary>
-///No Arrowhead.
-///<para>When the item is serialized out as xml, its value is "noArr".</para>
-///</summary>
-[EnumString("noArr")]
-NoArrow,
+    /// <summary>
+    /// Node Horizontal Alignment
+    /// </summary>
+    public enum NodeHorizontalAlignmentValues
+    {
+        ///<summary>
+        ///Left.
+        ///<para>When the item is serialized out as xml, its value is "l".</para>
+        ///</summary>
+        [EnumString("l")]
+        Left,
+        ///<summary>
+        ///Center.
+        ///<para>When the item is serialized out as xml, its value is "ctr".</para>
+        ///</summary>
+        [EnumString("ctr")]
+        Center,
+        ///<summary>
+        ///Right.
+        ///<para>When the item is serialized out as xml, its value is "r".</para>
+        ///</summary>
+        [EnumString("r")]
+        Right,
+    }
 
-}
-/// <summary>
-/// Connector Dimension
-/// </summary>
-public enum ConnectorDimensionValues
-{
-	///<summary>
-///1 Dimension.
-///<para>When the item is serialized out as xml, its value is "1D".</para>
-///</summary>
-[EnumString("1D")]
-OneDimension,
-///<summary>
-///2 Dimensions.
-///<para>When the item is serialized out as xml, its value is "2D".</para>
-///</summary>
-[EnumString("2D")]
-TwoDimension,
-///<summary>
-///Custom.
-///<para>When the item is serialized out as xml, its value is "cust".</para>
-///</summary>
-[EnumString("cust")]
-Custom,
+    /// <summary>
+    /// Node Vertical Alignment
+    /// </summary>
+    public enum NodeVerticalAlignmentValues
+    {
+        ///<summary>
+        ///Top.
+        ///<para>When the item is serialized out as xml, its value is "t".</para>
+        ///</summary>
+        [EnumString("t")]
+        Top,
+        ///<summary>
+        ///Middle.
+        ///<para>When the item is serialized out as xml, its value is "mid".</para>
+        ///</summary>
+        [EnumString("mid")]
+        Middle,
+        ///<summary>
+        ///Bottom.
+        ///<para>When the item is serialized out as xml, its value is "b".</para>
+        ///</summary>
+        [EnumString("b")]
+        Bottom,
+    }
 
-}
-/// <summary>
-/// Connector Point
-/// </summary>
-public enum ConnectorPointValues
-{
-	///<summary>
-///Auto.
-///<para>When the item is serialized out as xml, its value is "auto".</para>
-///</summary>
-[EnumString("auto")]
-Auto,
-///<summary>
-///Bottom Center.
-///<para>When the item is serialized out as xml, its value is "bCtr".</para>
-///</summary>
-[EnumString("bCtr")]
-BottomCenter,
-///<summary>
-///Center.
-///<para>When the item is serialized out as xml, its value is "ctr".</para>
-///</summary>
-[EnumString("ctr")]
-Center,
-///<summary>
-///Middle Left.
-///<para>When the item is serialized out as xml, its value is "midL".</para>
-///</summary>
-[EnumString("midL")]
-MiddleLeft,
-///<summary>
-///Middle Right.
-///<para>When the item is serialized out as xml, its value is "midR".</para>
-///</summary>
-[EnumString("midR")]
-MiddleRight,
-///<summary>
-///Top Center.
-///<para>When the item is serialized out as xml, its value is "tCtr".</para>
-///</summary>
-[EnumString("tCtr")]
-TopCenter,
-///<summary>
-///Bottom Left.
-///<para>When the item is serialized out as xml, its value is "bL".</para>
-///</summary>
-[EnumString("bL")]
-BottomLeft,
-///<summary>
-///Bottom Right.
-///<para>When the item is serialized out as xml, its value is "bR".</para>
-///</summary>
-[EnumString("bR")]
-BottomRight,
-///<summary>
-///Top Left.
-///<para>When the item is serialized out as xml, its value is "tL".</para>
-///</summary>
-[EnumString("tL")]
-TopLeft,
-///<summary>
-///Top Right.
-///<para>When the item is serialized out as xml, its value is "tR".</para>
-///</summary>
-[EnumString("tR")]
-TopRight,
-///<summary>
-///Radial.
-///<para>When the item is serialized out as xml, its value is "radial".</para>
-///</summary>
-[EnumString("radial")]
-Radial,
+    /// <summary>
+    /// Fallback Dimension
+    /// </summary>
+    public enum FallbackDimensionValues
+    {
+        ///<summary>
+        ///1 Dimension.
+        ///<para>When the item is serialized out as xml, its value is "1D".</para>
+        ///</summary>
+        [EnumString("1D")]
+        OneDimension,
+        ///<summary>
+        ///2 Dimensions.
+        ///<para>When the item is serialized out as xml, its value is "2D".</para>
+        ///</summary>
+        [EnumString("2D")]
+        TwoDimension,
+    }
 
-}
-/// <summary>
-/// Node Horizontal Alignment
-/// </summary>
-public enum NodeHorizontalAlignmentValues
-{
-	///<summary>
-///Left.
-///<para>When the item is serialized out as xml, its value is "l".</para>
-///</summary>
-[EnumString("l")]
-Left,
-///<summary>
-///Center.
-///<para>When the item is serialized out as xml, its value is "ctr".</para>
-///</summary>
-[EnumString("ctr")]
-Center,
-///<summary>
-///Right.
-///<para>When the item is serialized out as xml, its value is "r".</para>
-///</summary>
-[EnumString("r")]
-Right,
+    /// <summary>
+    /// Text Direction
+    /// </summary>
+    public enum TextDirectionValues
+    {
+        ///<summary>
+        ///From Top.
+        ///<para>When the item is serialized out as xml, its value is "fromT".</para>
+        ///</summary>
+        [EnumString("fromT")]
+        FromTop,
+        ///<summary>
+        ///From Bottom.
+        ///<para>When the item is serialized out as xml, its value is "fromB".</para>
+        ///</summary>
+        [EnumString("fromB")]
+        FromBottom,
+    }
 
-}
-/// <summary>
-/// Node Vertical Alignment
-/// </summary>
-public enum NodeVerticalAlignmentValues
-{
-	///<summary>
-///Top.
-///<para>When the item is serialized out as xml, its value is "t".</para>
-///</summary>
-[EnumString("t")]
-Top,
-///<summary>
-///Middle.
-///<para>When the item is serialized out as xml, its value is "mid".</para>
-///</summary>
-[EnumString("mid")]
-Middle,
-///<summary>
-///Bottom.
-///<para>When the item is serialized out as xml, its value is "b".</para>
-///</summary>
-[EnumString("b")]
-Bottom,
+    /// <summary>
+    /// Pyramid Accent Position
+    /// </summary>
+    public enum PyramidAccentPositionValues
+    {
+        ///<summary>
+        ///Before.
+        ///<para>When the item is serialized out as xml, its value is "bef".</para>
+        ///</summary>
+        [EnumString("bef")]
+        Before,
+        ///<summary>
+        ///Pyramid Accent After.
+        ///<para>When the item is serialized out as xml, its value is "aft".</para>
+        ///</summary>
+        [EnumString("aft")]
+        After,
+    }
 
-}
-/// <summary>
-/// Fallback Dimension
-/// </summary>
-public enum FallbackDimensionValues
-{
-	///<summary>
-///1 Dimension.
-///<para>When the item is serialized out as xml, its value is "1D".</para>
-///</summary>
-[EnumString("1D")]
-OneDimension,
-///<summary>
-///2 Dimensions.
-///<para>When the item is serialized out as xml, its value is "2D".</para>
-///</summary>
-[EnumString("2D")]
-TwoDimension,
+    /// <summary>
+    /// Pyramid Accent Text Margin
+    /// </summary>
+    public enum PyramidAccentTextMarginValues
+    {
+        ///<summary>
+        ///Step.
+        ///<para>When the item is serialized out as xml, its value is "step".</para>
+        ///</summary>
+        [EnumString("step")]
+        Step,
+        ///<summary>
+        ///Stack.
+        ///<para>When the item is serialized out as xml, its value is "stack".</para>
+        ///</summary>
+        [EnumString("stack")]
+        Stack,
+    }
 
-}
-/// <summary>
-/// Text Direction
-/// </summary>
-public enum TextDirectionValues
-{
-	///<summary>
-///From Top.
-///<para>When the item is serialized out as xml, its value is "fromT".</para>
-///</summary>
-[EnumString("fromT")]
-FromTop,
-///<summary>
-///From Bottom.
-///<para>When the item is serialized out as xml, its value is "fromB".</para>
-///</summary>
-[EnumString("fromB")]
-FromBottom,
+    /// <summary>
+    /// Text Block Direction
+    /// </summary>
+    public enum TextBlockDirectionValues
+    {
+        ///<summary>
+        ///Horizontal.
+        ///<para>When the item is serialized out as xml, its value is "horz".</para>
+        ///</summary>
+        [EnumString("horz")]
+        Horizontal,
+        ///<summary>
+        ///Vertical Direction.
+        ///<para>When the item is serialized out as xml, its value is "vert".</para>
+        ///</summary>
+        [EnumString("vert")]
+        Vertical,
+    }
 
-}
-/// <summary>
-/// Pyramid Accent Position
-/// </summary>
-public enum PyramidAccentPositionValues
-{
-	///<summary>
-///Before.
-///<para>When the item is serialized out as xml, its value is "bef".</para>
-///</summary>
-[EnumString("bef")]
-Before,
-///<summary>
-///Pyramid Accent After.
-///<para>When the item is serialized out as xml, its value is "aft".</para>
-///</summary>
-[EnumString("aft")]
-After,
+    /// <summary>
+    /// Text Anchor Horizontal
+    /// </summary>
+    public enum TextAnchorHorizontalValues
+    {
+        ///<summary>
+        ///None.
+        ///<para>When the item is serialized out as xml, its value is "none".</para>
+        ///</summary>
+        [EnumString("none")]
+        None,
+        ///<summary>
+        ///Center.
+        ///<para>When the item is serialized out as xml, its value is "ctr".</para>
+        ///</summary>
+        [EnumString("ctr")]
+        Center,
+    }
 
-}
-/// <summary>
-/// Pyramid Accent Text Margin
-/// </summary>
-public enum PyramidAccentTextMarginValues
-{
-	///<summary>
-///Step.
-///<para>When the item is serialized out as xml, its value is "step".</para>
-///</summary>
-[EnumString("step")]
-Step,
-///<summary>
-///Stack.
-///<para>When the item is serialized out as xml, its value is "stack".</para>
-///</summary>
-[EnumString("stack")]
-Stack,
+    /// <summary>
+    /// Text Anchor Vertical
+    /// </summary>
+    public enum TextAnchorVerticalValues
+    {
+        ///<summary>
+        ///Top.
+        ///<para>When the item is serialized out as xml, its value is "t".</para>
+        ///</summary>
+        [EnumString("t")]
+        Top,
+        ///<summary>
+        ///Middle.
+        ///<para>When the item is serialized out as xml, its value is "mid".</para>
+        ///</summary>
+        [EnumString("mid")]
+        Middle,
+        ///<summary>
+        ///Bottom.
+        ///<para>When the item is serialized out as xml, its value is "b".</para>
+        ///</summary>
+        [EnumString("b")]
+        Bottom,
+    }
 
-}
-/// <summary>
-/// Text Block Direction
-/// </summary>
-public enum TextBlockDirectionValues
-{
-	///<summary>
-///Horizontal.
-///<para>When the item is serialized out as xml, its value is "horz".</para>
-///</summary>
-[EnumString("horz")]
-Horizontal,
-///<summary>
-///Vertical Direction.
-///<para>When the item is serialized out as xml, its value is "vert".</para>
-///</summary>
-[EnumString("vert")]
-Vertical,
+    /// <summary>
+    /// Text Alignment
+    /// </summary>
+    public enum TextAlignmentValues
+    {
+        ///<summary>
+        ///Left.
+        ///<para>When the item is serialized out as xml, its value is "l".</para>
+        ///</summary>
+        [EnumString("l")]
+        Left,
+        ///<summary>
+        ///Center.
+        ///<para>When the item is serialized out as xml, its value is "ctr".</para>
+        ///</summary>
+        [EnumString("ctr")]
+        Center,
+        ///<summary>
+        ///Right.
+        ///<para>When the item is serialized out as xml, its value is "r".</para>
+        ///</summary>
+        [EnumString("r")]
+        Right,
+    }
 
-}
-/// <summary>
-/// Text Anchor Horizontal
-/// </summary>
-public enum TextAnchorHorizontalValues
-{
-	///<summary>
-///None.
-///<para>When the item is serialized out as xml, its value is "none".</para>
-///</summary>
-[EnumString("none")]
-None,
-///<summary>
-///Center.
-///<para>When the item is serialized out as xml, its value is "ctr".</para>
-///</summary>
-[EnumString("ctr")]
-Center,
+    /// <summary>
+    /// Auto Text Rotation
+    /// </summary>
+    public enum AutoTextRotationValues
+    {
+        ///<summary>
+        ///None.
+        ///<para>When the item is serialized out as xml, its value is "none".</para>
+        ///</summary>
+        [EnumString("none")]
+        None,
+        ///<summary>
+        ///Upright.
+        ///<para>When the item is serialized out as xml, its value is "upr".</para>
+        ///</summary>
+        [EnumString("upr")]
+        Upright,
+        ///<summary>
+        ///Gravity.
+        ///<para>When the item is serialized out as xml, its value is "grav".</para>
+        ///</summary>
+        [EnumString("grav")]
+        Gravity,
+    }
 
-}
-/// <summary>
-/// Text Anchor Vertical
-/// </summary>
-public enum TextAnchorVerticalValues
-{
-	///<summary>
-///Top.
-///<para>When the item is serialized out as xml, its value is "t".</para>
-///</summary>
-[EnumString("t")]
-Top,
-///<summary>
-///Middle.
-///<para>When the item is serialized out as xml, its value is "mid".</para>
-///</summary>
-[EnumString("mid")]
-Middle,
-///<summary>
-///Bottom.
-///<para>When the item is serialized out as xml, its value is "b".</para>
-///</summary>
-[EnumString("b")]
-Bottom,
+    /// <summary>
+    /// Grow Direction
+    /// </summary>
+    public enum GrowDirectionValues
+    {
+        ///<summary>
+        ///Top Left.
+        ///<para>When the item is serialized out as xml, its value is "tL".</para>
+        ///</summary>
+        [EnumString("tL")]
+        TopLeft,
+        ///<summary>
+        ///Top Right.
+        ///<para>When the item is serialized out as xml, its value is "tR".</para>
+        ///</summary>
+        [EnumString("tR")]
+        TopRight,
+        ///<summary>
+        ///Bottom Left.
+        ///<para>When the item is serialized out as xml, its value is "bL".</para>
+        ///</summary>
+        [EnumString("bL")]
+        BottomLeft,
+        ///<summary>
+        ///Bottom Right.
+        ///<para>When the item is serialized out as xml, its value is "bR".</para>
+        ///</summary>
+        [EnumString("bR")]
+        BottomRight,
+    }
 
-}
-/// <summary>
-/// Text Alignment
-/// </summary>
-public enum TextAlignmentValues
-{
-	///<summary>
-///Left.
-///<para>When the item is serialized out as xml, its value is "l".</para>
-///</summary>
-[EnumString("l")]
-Left,
-///<summary>
-///Center.
-///<para>When the item is serialized out as xml, its value is "ctr".</para>
-///</summary>
-[EnumString("ctr")]
-Center,
-///<summary>
-///Right.
-///<para>When the item is serialized out as xml, its value is "r".</para>
-///</summary>
-[EnumString("r")]
-Right,
+    /// <summary>
+    /// Flow Direction
+    /// </summary>
+    public enum FlowDirectionValues
+    {
+        ///<summary>
+        ///Row.
+        ///<para>When the item is serialized out as xml, its value is "row".</para>
+        ///</summary>
+        [EnumString("row")]
+        Row,
+        ///<summary>
+        ///Column.
+        ///<para>When the item is serialized out as xml, its value is "col".</para>
+        ///</summary>
+        [EnumString("col")]
+        Column,
+    }
 
-}
-/// <summary>
-/// Auto Text Rotation
-/// </summary>
-public enum AutoTextRotationValues
-{
-	///<summary>
-///None.
-///<para>When the item is serialized out as xml, its value is "none".</para>
-///</summary>
-[EnumString("none")]
-None,
-///<summary>
-///Upright.
-///<para>When the item is serialized out as xml, its value is "upr".</para>
-///</summary>
-[EnumString("upr")]
-Upright,
-///<summary>
-///Gravity.
-///<para>When the item is serialized out as xml, its value is "grav".</para>
-///</summary>
-[EnumString("grav")]
-Gravity,
+    /// <summary>
+    /// Continue Direction
+    /// </summary>
+    public enum ContinueDirectionValues
+    {
+        ///<summary>
+        ///Reverse Direction.
+        ///<para>When the item is serialized out as xml, its value is "revDir".</para>
+        ///</summary>
+        [EnumString("revDir")]
+        ReverseDirection,
+        ///<summary>
+        ///Same Direction.
+        ///<para>When the item is serialized out as xml, its value is "sameDir".</para>
+        ///</summary>
+        [EnumString("sameDir")]
+        SameDirection,
+    }
 
-}
-/// <summary>
-/// Grow Direction
-/// </summary>
-public enum GrowDirectionValues
-{
-	///<summary>
-///Top Left.
-///<para>When the item is serialized out as xml, its value is "tL".</para>
-///</summary>
-[EnumString("tL")]
-TopLeft,
-///<summary>
-///Top Right.
-///<para>When the item is serialized out as xml, its value is "tR".</para>
-///</summary>
-[EnumString("tR")]
-TopRight,
-///<summary>
-///Bottom Left.
-///<para>When the item is serialized out as xml, its value is "bL".</para>
-///</summary>
-[EnumString("bL")]
-BottomLeft,
-///<summary>
-///Bottom Right.
-///<para>When the item is serialized out as xml, its value is "bR".</para>
-///</summary>
-[EnumString("bR")]
-BottomRight,
+    /// <summary>
+    /// Breakpoint
+    /// </summary>
+    public enum BreakpointValues
+    {
+        ///<summary>
+        ///End of Canvas.
+        ///<para>When the item is serialized out as xml, its value is "endCnv".</para>
+        ///</summary>
+        [EnumString("endCnv")]
+        EndCanvas,
+        ///<summary>
+        ///Balanced.
+        ///<para>When the item is serialized out as xml, its value is "bal".</para>
+        ///</summary>
+        [EnumString("bal")]
+        Balanced,
+        ///<summary>
+        ///Fixed.
+        ///<para>When the item is serialized out as xml, its value is "fixed".</para>
+        ///</summary>
+        [EnumString("fixed")]
+        Fixed,
+    }
 
-}
-/// <summary>
-/// Flow Direction
-/// </summary>
-public enum FlowDirectionValues
-{
-	///<summary>
-///Row.
-///<para>When the item is serialized out as xml, its value is "row".</para>
-///</summary>
-[EnumString("row")]
-Row,
-///<summary>
-///Column.
-///<para>When the item is serialized out as xml, its value is "col".</para>
-///</summary>
-[EnumString("col")]
-Column,
+    /// <summary>
+    /// Offset
+    /// </summary>
+    public enum OffsetValues
+    {
+        ///<summary>
+        ///Center.
+        ///<para>When the item is serialized out as xml, its value is "ctr".</para>
+        ///</summary>
+        [EnumString("ctr")]
+        Center,
+        ///<summary>
+        ///Offset.
+        ///<para>When the item is serialized out as xml, its value is "off".</para>
+        ///</summary>
+        [EnumString("off")]
+        Offset,
+    }
 
-}
-/// <summary>
-/// Continue Direction
-/// </summary>
-public enum ContinueDirectionValues
-{
-	///<summary>
-///Reverse Direction.
-///<para>When the item is serialized out as xml, its value is "revDir".</para>
-///</summary>
-[EnumString("revDir")]
-ReverseDirection,
-///<summary>
-///Same Direction.
-///<para>When the item is serialized out as xml, its value is "sameDir".</para>
-///</summary>
-[EnumString("sameDir")]
-SameDirection,
+    /// <summary>
+    /// Hierarchy Alignment
+    /// </summary>
+    public enum HierarchyAlignmentValues
+    {
+        ///<summary>
+        ///Top Left.
+        ///<para>When the item is serialized out as xml, its value is "tL".</para>
+        ///</summary>
+        [EnumString("tL")]
+        TopLeft,
+        ///<summary>
+        ///Top Right.
+        ///<para>When the item is serialized out as xml, its value is "tR".</para>
+        ///</summary>
+        [EnumString("tR")]
+        TopRight,
+        ///<summary>
+        ///Top Center Children.
+        ///<para>When the item is serialized out as xml, its value is "tCtrCh".</para>
+        ///</summary>
+        [EnumString("tCtrCh")]
+        TopCenterChildren,
+        ///<summary>
+        ///Top Center Descendants.
+        ///<para>When the item is serialized out as xml, its value is "tCtrDes".</para>
+        ///</summary>
+        [EnumString("tCtrDes")]
+        TopCenterDescendants,
+        ///<summary>
+        ///Bottom Left.
+        ///<para>When the item is serialized out as xml, its value is "bL".</para>
+        ///</summary>
+        [EnumString("bL")]
+        BottomLeft,
+        ///<summary>
+        ///Bottom Right.
+        ///<para>When the item is serialized out as xml, its value is "bR".</para>
+        ///</summary>
+        [EnumString("bR")]
+        BottomRight,
+        ///<summary>
+        ///Bottom Center Child.
+        ///<para>When the item is serialized out as xml, its value is "bCtrCh".</para>
+        ///</summary>
+        [EnumString("bCtrCh")]
+        BottomCenterChild,
+        ///<summary>
+        ///Bottom Center Descendant.
+        ///<para>When the item is serialized out as xml, its value is "bCtrDes".</para>
+        ///</summary>
+        [EnumString("bCtrDes")]
+        BottomCenterDescendant,
+        ///<summary>
+        ///Left Top.
+        ///<para>When the item is serialized out as xml, its value is "lT".</para>
+        ///</summary>
+        [EnumString("lT")]
+        LeftTop,
+        ///<summary>
+        ///Left Bottom.
+        ///<para>When the item is serialized out as xml, its value is "lB".</para>
+        ///</summary>
+        [EnumString("lB")]
+        LeftBottom,
+        ///<summary>
+        ///Left Center Child.
+        ///<para>When the item is serialized out as xml, its value is "lCtrCh".</para>
+        ///</summary>
+        [EnumString("lCtrCh")]
+        LeftCenterChild,
+        ///<summary>
+        ///Left Center Descendant.
+        ///<para>When the item is serialized out as xml, its value is "lCtrDes".</para>
+        ///</summary>
+        [EnumString("lCtrDes")]
+        LeftCenterDescendant,
+        ///<summary>
+        ///Right Top.
+        ///<para>When the item is serialized out as xml, its value is "rT".</para>
+        ///</summary>
+        [EnumString("rT")]
+        RightTop,
+        ///<summary>
+        ///Right Bottom.
+        ///<para>When the item is serialized out as xml, its value is "rB".</para>
+        ///</summary>
+        [EnumString("rB")]
+        RightBottom,
+        ///<summary>
+        ///Right Center Children.
+        ///<para>When the item is serialized out as xml, its value is "rCtrCh".</para>
+        ///</summary>
+        [EnumString("rCtrCh")]
+        RightCenterChildren,
+        ///<summary>
+        ///Right Center Descendants.
+        ///<para>When the item is serialized out as xml, its value is "rCtrDes".</para>
+        ///</summary>
+        [EnumString("rCtrDes")]
+        RightCenterDescendants,
+    }
 
-}
-/// <summary>
-/// Breakpoint
-/// </summary>
-public enum BreakpointValues
-{
-	///<summary>
-///End of Canvas.
-///<para>When the item is serialized out as xml, its value is "endCnv".</para>
-///</summary>
-[EnumString("endCnv")]
-EndCanvas,
-///<summary>
-///Balanced.
-///<para>When the item is serialized out as xml, its value is "bal".</para>
-///</summary>
-[EnumString("bal")]
-Balanced,
-///<summary>
-///Fixed.
-///<para>When the item is serialized out as xml, its value is "fixed".</para>
-///</summary>
-[EnumString("fixed")]
-Fixed,
+    /// <summary>
+    /// Variable Type
+    /// </summary>
+    public enum VariableValues
+    {
+        ///<summary>
+        ///Unknown.
+        ///<para>When the item is serialized out as xml, its value is "none".</para>
+        ///</summary>
+        [EnumString("none")]
+        None,
+        ///<summary>
+        ///Organizational Chart Algorithm.
+        ///<para>When the item is serialized out as xml, its value is "orgChart".</para>
+        ///</summary>
+        [EnumString("orgChart")]
+        OrganizationalChart,
+        ///<summary>
+        ///Child Max.
+        ///<para>When the item is serialized out as xml, its value is "chMax".</para>
+        ///</summary>
+        [EnumString("chMax")]
+        ChildMax,
+        ///<summary>
+        ///Child Preference.
+        ///<para>When the item is serialized out as xml, its value is "chPref".</para>
+        ///</summary>
+        [EnumString("chPref")]
+        ChildPreference,
+        ///<summary>
+        ///Bullets Enabled.
+        ///<para>When the item is serialized out as xml, its value is "bulEnabled".</para>
+        ///</summary>
+        [EnumString("bulEnabled")]
+        BulletsEnabled,
+        ///<summary>
+        ///Direction.
+        ///<para>When the item is serialized out as xml, its value is "dir".</para>
+        ///</summary>
+        [EnumString("dir")]
+        Direction,
+        ///<summary>
+        ///Hierarchy Branch.
+        ///<para>When the item is serialized out as xml, its value is "hierBranch".</para>
+        ///</summary>
+        [EnumString("hierBranch")]
+        HierarchyBranch,
+        ///<summary>
+        ///Animate One.
+        ///<para>When the item is serialized out as xml, its value is "animOne".</para>
+        ///</summary>
+        [EnumString("animOne")]
+        AnimateOne,
+        ///<summary>
+        ///Animation Level.
+        ///<para>When the item is serialized out as xml, its value is "animLvl".</para>
+        ///</summary>
+        [EnumString("animLvl")]
+        AnimationLevel,
+        ///<summary>
+        ///Resize Handles.
+        ///<para>When the item is serialized out as xml, its value is "resizeHandles".</para>
+        ///</summary>
+        [EnumString("resizeHandles")]
+        ResizeHandles,
+    }
 
-}
-/// <summary>
-/// Offset
-/// </summary>
-public enum OffsetValues
-{
-	///<summary>
-///Center.
-///<para>When the item is serialized out as xml, its value is "ctr".</para>
-///</summary>
-[EnumString("ctr")]
-Center,
-///<summary>
-///Offset.
-///<para>When the item is serialized out as xml, its value is "off".</para>
-///</summary>
-[EnumString("off")]
-Offset,
+    /// <summary>
+    /// Output Shape Type
+    /// </summary>
+    public enum OutputShapeValues
+    {
+        ///<summary>
+        ///None.
+        ///<para>When the item is serialized out as xml, its value is "none".</para>
+        ///</summary>
+        [EnumString("none")]
+        None,
+        ///<summary>
+        ///Connection.
+        ///<para>When the item is serialized out as xml, its value is "conn".</para>
+        ///</summary>
+        [EnumString("conn")]
+        Connection,
+    }
 
-}
-/// <summary>
-/// Hierarchy Alignment
-/// </summary>
-public enum HierarchyAlignmentValues
-{
-	///<summary>
-///Top Left.
-///<para>When the item is serialized out as xml, its value is "tL".</para>
-///</summary>
-[EnumString("tL")]
-TopLeft,
-///<summary>
-///Top Right.
-///<para>When the item is serialized out as xml, its value is "tR".</para>
-///</summary>
-[EnumString("tR")]
-TopRight,
-///<summary>
-///Top Center Children.
-///<para>When the item is serialized out as xml, its value is "tCtrCh".</para>
-///</summary>
-[EnumString("tCtrCh")]
-TopCenterChildren,
-///<summary>
-///Top Center Descendants.
-///<para>When the item is serialized out as xml, its value is "tCtrDes".</para>
-///</summary>
-[EnumString("tCtrDes")]
-TopCenterDescendants,
-///<summary>
-///Bottom Left.
-///<para>When the item is serialized out as xml, its value is "bL".</para>
-///</summary>
-[EnumString("bL")]
-BottomLeft,
-///<summary>
-///Bottom Right.
-///<para>When the item is serialized out as xml, its value is "bR".</para>
-///</summary>
-[EnumString("bR")]
-BottomRight,
-///<summary>
-///Bottom Center Child.
-///<para>When the item is serialized out as xml, its value is "bCtrCh".</para>
-///</summary>
-[EnumString("bCtrCh")]
-BottomCenterChild,
-///<summary>
-///Bottom Center Descendant.
-///<para>When the item is serialized out as xml, its value is "bCtrDes".</para>
-///</summary>
-[EnumString("bCtrDes")]
-BottomCenterDescendant,
-///<summary>
-///Left Top.
-///<para>When the item is serialized out as xml, its value is "lT".</para>
-///</summary>
-[EnumString("lT")]
-LeftTop,
-///<summary>
-///Left Bottom.
-///<para>When the item is serialized out as xml, its value is "lB".</para>
-///</summary>
-[EnumString("lB")]
-LeftBottom,
-///<summary>
-///Left Center Child.
-///<para>When the item is serialized out as xml, its value is "lCtrCh".</para>
-///</summary>
-[EnumString("lCtrCh")]
-LeftCenterChild,
-///<summary>
-///Left Center Descendant.
-///<para>When the item is serialized out as xml, its value is "lCtrDes".</para>
-///</summary>
-[EnumString("lCtrDes")]
-LeftCenterDescendant,
-///<summary>
-///Right Top.
-///<para>When the item is serialized out as xml, its value is "rT".</para>
-///</summary>
-[EnumString("rT")]
-RightTop,
-///<summary>
-///Right Bottom.
-///<para>When the item is serialized out as xml, its value is "rB".</para>
-///</summary>
-[EnumString("rB")]
-RightBottom,
-///<summary>
-///Right Center Children.
-///<para>When the item is serialized out as xml, its value is "rCtrCh".</para>
-///</summary>
-[EnumString("rCtrCh")]
-RightCenterChildren,
-///<summary>
-///Right Center Descendants.
-///<para>When the item is serialized out as xml, its value is "rCtrDes".</para>
-///</summary>
-[EnumString("rCtrDes")]
-RightCenterDescendants,
-
-}
-/// <summary>
-/// Variable Type
-/// </summary>
-public enum VariableValues
-{
-	///<summary>
-///Unknown.
-///<para>When the item is serialized out as xml, its value is "none".</para>
-///</summary>
-[EnumString("none")]
-None,
-///<summary>
-///Organizational Chart Algorithm.
-///<para>When the item is serialized out as xml, its value is "orgChart".</para>
-///</summary>
-[EnumString("orgChart")]
-OrganizationalChart,
-///<summary>
-///Child Max.
-///<para>When the item is serialized out as xml, its value is "chMax".</para>
-///</summary>
-[EnumString("chMax")]
-ChildMax,
-///<summary>
-///Child Preference.
-///<para>When the item is serialized out as xml, its value is "chPref".</para>
-///</summary>
-[EnumString("chPref")]
-ChildPreference,
-///<summary>
-///Bullets Enabled.
-///<para>When the item is serialized out as xml, its value is "bulEnabled".</para>
-///</summary>
-[EnumString("bulEnabled")]
-BulletsEnabled,
-///<summary>
-///Direction.
-///<para>When the item is serialized out as xml, its value is "dir".</para>
-///</summary>
-[EnumString("dir")]
-Direction,
-///<summary>
-///Hierarchy Branch.
-///<para>When the item is serialized out as xml, its value is "hierBranch".</para>
-///</summary>
-[EnumString("hierBranch")]
-HierarchyBranch,
-///<summary>
-///Animate One.
-///<para>When the item is serialized out as xml, its value is "animOne".</para>
-///</summary>
-[EnumString("animOne")]
-AnimateOne,
-///<summary>
-///Animation Level.
-///<para>When the item is serialized out as xml, its value is "animLvl".</para>
-///</summary>
-[EnumString("animLvl")]
-AnimationLevel,
-///<summary>
-///Resize Handles.
-///<para>When the item is serialized out as xml, its value is "resizeHandles".</para>
-///</summary>
-[EnumString("resizeHandles")]
-ResizeHandles,
-
-}
-/// <summary>
-/// Output Shape Type
-/// </summary>
-public enum OutputShapeValues
-{
-	///<summary>
-///None.
-///<para>When the item is serialized out as xml, its value is "none".</para>
-///</summary>
-[EnumString("none")]
-None,
-///<summary>
-///Connection.
-///<para>When the item is serialized out as xml, its value is "conn".</para>
-///</summary>
-[EnumString("conn")]
-Connection,
-
-}
-/// <summary>
-/// Vertical Alignment
-/// </summary>
-public enum VerticalAlignmentValues
-{
-	///<summary>
-///Top.
-///<para>When the item is serialized out as xml, its value is "t".</para>
-///</summary>
-[EnumString("t")]
-Top,
-///<summary>
-///Middle.
-///<para>When the item is serialized out as xml, its value is "mid".</para>
-///</summary>
-[EnumString("mid")]
-Middle,
-///<summary>
-///Bottom.
-///<para>When the item is serialized out as xml, its value is "b".</para>
-///</summary>
-[EnumString("b")]
-Bottom,
-///<summary>
-///None.
-///<para>When the item is serialized out as xml, its value is "none".</para>
-///</summary>
-[EnumString("none")]
-None,
-///<summary>
-///top.
-///<para>When the item is serialized out as xml, its value is "top".</para>
-///</summary>
-[EnumString("top")]
-Top2010,
-///<summary>
-///center.
-///<para>When the item is serialized out as xml, its value is "center".</para>
-///</summary>
-[EnumString("center")]
-Middle2010,
-///<summary>
-///bottom.
-///<para>When the item is serialized out as xml, its value is "bottom".</para>
-///</summary>
-[EnumString("bottom")]
-Bottom2010,
-
-}
+    /// <summary>
+    /// Vertical Alignment
+    /// </summary>
+    public enum VerticalAlignmentValues
+    {
+        ///<summary>
+        ///Top.
+        ///<para>When the item is serialized out as xml, its value is "t".</para>
+        ///</summary>
+        [EnumString("t")]
+        Top,
+        ///<summary>
+        ///Middle.
+        ///<para>When the item is serialized out as xml, its value is "mid".</para>
+        ///</summary>
+        [EnumString("mid")]
+        Middle,
+        ///<summary>
+        ///Bottom.
+        ///<para>When the item is serialized out as xml, its value is "b".</para>
+        ///</summary>
+        [EnumString("b")]
+        Bottom,
+        ///<summary>
+        ///None.
+        ///<para>When the item is serialized out as xml, its value is "none".</para>
+        ///</summary>
+        [EnumString("none")]
+        None,
+        ///<summary>
+        ///top.
+        ///<para>When the item is serialized out as xml, its value is "top".</para>
+        ///</summary>
+        [EnumString("top")]
+        Top2010,
+        ///<summary>
+        ///center.
+        ///<para>When the item is serialized out as xml, its value is "center".</para>
+        ///</summary>
+        [EnumString("center")]
+        Middle2010,
+        ///<summary>
+        ///bottom.
+        ///<para>When the item is serialized out as xml, its value is "bottom".</para>
+        ///</summary>
+        [EnumString("bottom")]
+        Bottom2010,
+    }
 }
