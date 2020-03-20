@@ -758,8 +758,6 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        internal virtual OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.Other;
-
         internal virtual CompiledParticle CompiledParticle { get; }
 
         internal sealed override ParticleConstraint ParticleConstraint => CompiledParticle?.Particle;
