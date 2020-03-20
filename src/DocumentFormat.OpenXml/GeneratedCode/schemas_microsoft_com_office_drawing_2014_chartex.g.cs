@@ -12,24 +12,23 @@ using System.IO.Packaging;
 
 namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
 {
-<<<<<<< HEAD
-/// <summary>
-/// <para>Defines the ChartSpace Class. The root element of ExtendedChartPart.</para>
-/// <para> When the object is serialized out as xml, its qualified name is cx:chartSpace.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>ChartData &lt;cx:chartData></description></item>
-///<item><description>Chart &lt;cx:chart></description></item>
-///<item><description>ShapeProperties &lt;cx:spPr></description></item>
-///<item><description>TxPrTextBody &lt;cx:txPr></description></item>
-///<item><description>ColorMappingType &lt;cx:clrMapOvr></description></item>
-///<item><description>PrintSettings &lt;cx:printSettings></description></item>
-///<item><description>ExtensionList &lt;cx:extLst></description></item>
-/// </list>
-/// </remarks>
-
+    /// <summary>
+    /// <para>Defines the ChartSpace Class.</para>
+    /// <para>This class is available in Office 2016 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is cx:chartSpace.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>ChartData &lt;cx:chartData></description></item>
+    ///   <item><description>Chart &lt;cx:chart></description></item>
+    ///   <item><description>ShapeProperties &lt;cx:spPr></description></item>
+    ///   <item><description>TxPrTextBody &lt;cx:txPr></description></item>
+    ///   <item><description>ColorMappingType &lt;cx:clrMapOvr></description></item>
+    ///   <item><description>PrintSettings &lt;cx:printSettings></description></item>
+    ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(ChartData), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(Chart), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2016)]
@@ -37,219 +36,214 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     [ChildElementInfo(typeof(ColorMappingType), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(PrintSettings), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
-
-[SchemaAttr(80, "chartSpace")]
-[OfficeAvailability(FileFormatVersions.Office2016)]
-public partial class ChartSpace : OpenXmlPartRootElement
-{
-    
-    
-	internal ChartSpace(ExtendedChartPart ownerPart) : base (ownerPart){}
-    /// <summary>
-    /// Loads the DOM from the ExtendedChartPart.
-    /// </summary>
-    /// <param name="openXmlPart">Specifies the part to be loaded.</param>
-    public void Load(ExtendedChartPart openXmlPart)
+    [SchemaAttr(80, "chartSpace")]
+    [OfficeAvailability(FileFormatVersions.Office2016)]
+    public partial class ChartSpace : OpenXmlPartRootElement
     {
-        LoadFromPart(openXmlPart);
-    }
-    /// <summary>
-    /// Gets the ExtendedChartPart associated with this element.
-    /// </summary>
-    public ExtendedChartPart ExtendedChartPart
-    {
-		get => OpenXmlPart as ExtendedChartPart;
-		internal set => OpenXmlPart = value;
-    }
         /// <summary>
-    ///Initializes a new instance of the ChartSpace class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public ChartSpace(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the ChartSpace class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public ChartSpace(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the ChartSpace class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public ChartSpace(string outerXml)
-        : base(outerXml)
-    {
-    }
+        /// Initializes a new instance of the ChartSpace class.
+        /// </summary>
+        public ChartSpace() : base()
+        {
+        }
 
-    
-    /// <summary>
-    /// Initializes a new instance of the ChartSpace class.
-    /// </summary>
-    public ChartSpace():base(){}
-    /// <summary>
-    /// Saves the DOM into the ExtendedChartPart.
-    /// </summary>
-    /// <param name="openXmlPart">Specifies the part to save to.</param>
-    public void Save(ExtendedChartPart openXmlPart)
-    {
-        base.SaveToPart(openXmlPart);
-    }
-    
+        /// <summary>
+        /// Initializes a new instance of the ChartSpace class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ChartSpace(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ChartSpace class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ChartSpace(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ChartSpace class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public ChartSpace(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>ChartData.</para>
+        /// <para>Represents the following element tag in the schema: cx:chartData.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
+        /// </remark>
+        public ChartData ChartData
+        {
+            get => GetElement<ChartData>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Chart.</para>
+        /// <para>Represents the following element tag in the schema: cx:chart.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
+        /// </remark>
+        public Chart Chart
+        {
+            get => GetElement<Chart>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>ShapeProperties.</para>
+        /// <para>Represents the following element tag in the schema: cx:spPr.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
+        /// </remark>
+        public ShapeProperties ShapeProperties
+        {
+            get => GetElement<ShapeProperties>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>TxPrTextBody.</para>
+        /// <para>Represents the following element tag in the schema: cx:txPr.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
+        /// </remark>
+        public TxPrTextBody TxPrTextBody
+        {
+            get => GetElement<TxPrTextBody>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>ColorMappingType.</para>
+        /// <para>Represents the following element tag in the schema: cx:clrMapOvr.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
+        /// </remark>
+        public ColorMappingType ColorMappingType
+        {
+            get => GetElement<ColorMappingType>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>PrintSettings.</para>
+        /// <para>Represents the following element tag in the schema: cx:printSettings.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
+        /// </remark>
+        public PrintSettings PrintSettings
+        {
+            get => GetElement<PrintSettings>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>ExtensionList.</para>
+        /// <para>Represents the following element tag in the schema: cx:extLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
+        /// </remark>
+        public ExtensionList ExtensionList
+        {
+            get => GetElement<ExtensionList>();
+            set => SetElement(value);
+        }
+
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartData), 1, 1, version: FileFormatVersions.Office2016),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Chart), 1, 1, version: FileFormatVersions.Office2016),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties), 0, 1, version: FileFormatVersions.Office2016),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody), 0, 1, version: FileFormatVersions.Office2016),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ColorMappingType), 0, 1, version: FileFormatVersions.Office2016),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PrintSettings), 0, 1, version: FileFormatVersions.Office2016),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList), 0, 1, version: FileFormatVersions.Office2016)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChartSpace>(deep);
+
+        internal ChartSpace(ExtendedChartPart ownerPart) : base(ownerPart)
+        {
+        }
+
         /// <summary>
-    /// <para> ChartData.</para>
-    /// <para> Represents the following element tag in the schema: cx:chartData </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-    /// </remark>
-	[Index(0)]
-    public ChartData ChartData
-	{
-        get => GetElement<ChartData>(0);
-        set => SetElement(0, value);
-	}
-    /// <summary>
-    /// <para> Chart.</para>
-    /// <para> Represents the following element tag in the schema: cx:chart </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-    /// </remark>
-	[Index(1)]
-    public Chart Chart
-	{
-        get => GetElement<Chart>(1);
-        set => SetElement(1, value);
-	}
-    /// <summary>
-    /// <para> ShapeProperties.</para>
-    /// <para> Represents the following element tag in the schema: cx:spPr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-    /// </remark>
-	[Index(2)]
-    public ShapeProperties ShapeProperties
-	{
-        get => GetElement<ShapeProperties>(2);
-        set => SetElement(2, value);
-	}
-    /// <summary>
-    /// <para> TxPrTextBody.</para>
-    /// <para> Represents the following element tag in the schema: cx:txPr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-    /// </remark>
-	[Index(3)]
-    public TxPrTextBody TxPrTextBody
-	{
-        get => GetElement<TxPrTextBody>(3);
-        set => SetElement(3, value);
-	}
-    /// <summary>
-    /// <para> ColorMappingType.</para>
-    /// <para> Represents the following element tag in the schema: cx:clrMapOvr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-    /// </remark>
-	[Index(4)]
-    public ColorMappingType ColorMappingType
-	{
-        get => GetElement<ColorMappingType>(4);
-        set => SetElement(4, value);
-	}
-    /// <summary>
-    /// <para> PrintSettings.</para>
-    /// <para> Represents the following element tag in the schema: cx:printSettings </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-    /// </remark>
-	[Index(5)]
-    public PrintSettings PrintSettings
-	{
-        get => GetElement<PrintSettings>(5);
-        set => SetElement(5, value);
-	}
-    /// <summary>
-    /// <para> ExtensionList.</para>
-    /// <para> Represents the following element tag in the schema: cx:extLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-    /// </remark>
-	[Index(6)]
-    public ExtensionList ExtensionList
-	{
-        get => GetElement<ExtensionList>(6);
-        set => SetElement(6, value);
-	}
+        /// Loads the DOM from the ExtendedChartPart
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to be loaded.</param>
+        public void Load(ExtendedChartPart openXmlPart)
+        {
+            LoadFromPart(openXmlPart);
+        }
 
-
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChartSpace>(deep);
-
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartData), 1, 1, version: FileFormatVersions.Office2016),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Chart), 1, 1, version: FileFormatVersions.Office2016),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties), 0, 1, version: FileFormatVersions.Office2016),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody), 0, 1, version: FileFormatVersions.Office2016),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ColorMappingType), 0, 1, version: FileFormatVersions.Office2016),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PrintSettings), 0, 1, version: FileFormatVersions.Office2016),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList), 0, 1, version: FileFormatVersions.Office2016)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
-}
-/// <summary>
-/// <para>Defines the RelId Class.</para>
-/// <para>This class is available in Office 2016 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is cx:chart.</para>
-/// </summary>
-
-
-[OfficeAvailability(FileFormatVersions.Office2016)]
-[SchemaAttr(80, "chart")]
-public partial class RelId : OpenXmlLeafElement
-{
-    
         /// <summary>
-    /// <para> id, this property is only available in Office2016.</para>
-    /// <para>Represents the following attribute in the schema: r:id </para>
-    /// </summary>
-///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-///</remark>
-[RequiredValidator]
-    [SchemaAttr(19, "id")]
-    [Index(0)]
-    public StringValue Id { get; set; }
+        /// Saves the DOM into the ExtendedChartPart.
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to save to.</param>
+        public void Save(ExtendedChartPart openXmlPart)
+        {
+            base.SaveToPart(openXmlPart);
+        }
+
+        /// <summary>
+        /// Gets the ExtendedChartPart associated with this element.
+        /// </summary>
+        public ExtendedChartPart ExtendedChartPart
+        {
+            get => OpenXmlPart as ExtendedChartPart;
+            internal set => OpenXmlPart = value;
+        }
+    }
 
     /// <summary>
-    /// Initializes a new instance of the RelId class.
+    /// <para>Defines the RelId Class.</para>
+    /// <para>This class is available in Office 2016 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is cx:chart.</para>
     /// </summary>
-    public RelId():base(){}
-    
-    
+    [SchemaAttr(80, "chart")]
+    [OfficeAvailability(FileFormatVersions.Office2016)]
+    public partial class RelId : OpenXmlLeafElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the RelId class.
+        /// </summary>
+        public RelId() : base()
+        {
+        }
 
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<RelId>(deep);
+        /// <summary>
+        /// <para>id, this property is only available in Office2016</para>
+        /// <para>Represents the following attribute in the schema: r:id</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
+        /// </remark>
+        [RequiredValidator()]
+        [SchemaAttr(19, "id")]
+        [Index(0)]
+        public StringValue Id { get; set; }
 
-}
-/// <summary>
-/// <para>Defines the Extension2 Class.</para>
-/// <para>This class is available in Office 2016 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is cx:ext.</para>
-/// </summary>
-=======
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<RelId>(deep);
+    }
+
     /// <summary>
     /// <para>Defines the Extension2 Class.</para>
     /// <para>This class is available in Office 2016 or above.</para>
@@ -265,7 +259,6 @@ public partial class RelId : OpenXmlLeafElement
         public Extension2() : base()
         {
         }
->>>>>>> origin/master
 
         /// <summary>
         /// Initializes a new instance of the Extension2 class with the specified child elements.
