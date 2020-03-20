@@ -150,8 +150,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth), 1, 1, version: FileFormatVersions.Office2010)
@@ -232,8 +230,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
             get => GetElement<PercentageHeight>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {

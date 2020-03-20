@@ -772,8 +772,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TextProperties), 0, 1, version: FileFormatVersions.Office2013),
@@ -1190,8 +1188,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ModelTables), 0, 1, version: FileFormatVersions.Office2013),
@@ -1572,8 +1568,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
@@ -1864,8 +1858,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.SurveyPrSurveyElementPr), 0, 1, version: FileFormatVersions.Office2013),
@@ -2078,8 +2070,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotTables), 0, 1, version: FileFormatVersions.Office2013),
@@ -2225,8 +2215,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Formula), 1, 1)
@@ -2370,8 +2358,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             get => GetElement<TimelineStyleElements>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -2783,8 +2769,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TextFields), 0, 1)
@@ -2936,8 +2920,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.DbTables), 1, 1, version: FileFormatVersions.Office2013),
@@ -3018,8 +3000,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             get => GetElement<DbTables>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -3480,8 +3460,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             get => GetElement<PivotValueCellExtra>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -4153,8 +4131,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     }
 
     /// <summary>
@@ -4218,8 +4194,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             get => GetElement<QuestionsPrSurveyElementPr>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -4380,8 +4354,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -4546,8 +4518,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -4973,8 +4943,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {

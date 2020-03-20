@@ -1084,8 +1084,6 @@ namespace DocumentFormat.OpenXml.InkML
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Emma), 0, 1)
@@ -1281,8 +1279,6 @@ namespace DocumentFormat.OpenXml.InkML
             get => GetElement<TraceFormat>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1533,8 +1529,6 @@ namespace DocumentFormat.OpenXml.InkML
             get => GetElement<ActiveArea>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -2217,8 +2211,6 @@ namespace DocumentFormat.OpenXml.InkML
             get => GetElement<Timestamp>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {

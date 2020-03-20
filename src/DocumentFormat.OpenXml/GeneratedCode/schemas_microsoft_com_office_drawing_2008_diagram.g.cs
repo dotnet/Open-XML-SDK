@@ -73,8 +73,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.ShapeTree), 1, 1)
@@ -286,8 +284,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
@@ -384,8 +380,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapeLocks), 0, 1),
@@ -472,8 +466,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
             get => GetElement<NonVisualDrawingShapeProperties>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -583,8 +575,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
             get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -734,8 +724,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineReference), 1, 1),
@@ -826,8 +814,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
             get => GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -940,8 +926,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
             get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1094,8 +1078,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupShapeLocks), 0, 1),
@@ -1182,8 +1164,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
             get => GetElement<NonVisualGroupDrawingShapeProperties>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1285,8 +1265,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
             get => GetElement<DocumentFormat.OpenXml.Drawing.TransformGroup>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1466,8 +1444,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
             get => GetElement<OfficeArtExtensionList>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1699,7 +1675,5 @@ namespace DocumentFormat.OpenXml.Office.Drawing
             get => GetElement<GroupShapeProperties>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     }
 }

@@ -5439,8 +5439,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.NumberingLevelReference), 0, 1),
@@ -5589,8 +5587,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<BarBorder>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -6597,8 +6593,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<ParagraphPropertiesExtended>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -7844,8 +7838,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.FieldData), 0, 1),
@@ -7948,8 +7940,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<RubyBase>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -8117,8 +8107,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.Inline>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -9806,8 +9794,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -10632,8 +10618,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 1)
@@ -11393,8 +11377,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties), 0, 1),
@@ -11736,8 +11718,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<FieldData>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -12392,8 +12372,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 1)
@@ -12552,8 +12530,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<SdtContentRunRuby>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -14092,8 +14068,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtProperties), 0, 1),
@@ -14259,8 +14233,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public CustomXmlBlock(string outerXml) : base(outerXml)
         {
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -14458,8 +14430,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<SdtContentBlock>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -14789,8 +14759,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<ParagraphProperties>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -15408,8 +15376,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TablePropertyExceptions), 0, 1),
@@ -15610,8 +15576,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties), 0, 1),
@@ -15802,8 +15766,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtProperties), 0, 1),
@@ -15984,8 +15946,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<TableCellProperties>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -16212,8 +16172,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties), 0, 1),
@@ -16403,8 +16361,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<SdtContentCell>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -16623,8 +16579,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public CustomXmlRun(string outerXml) : base(outerXml)
         {
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -17000,8 +16954,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<FieldData>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -19127,8 +19079,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TopBorder), 0, 1),
@@ -19689,8 +19639,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<EndMargin>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -20292,8 +20240,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TopBorder), 0, 1),
@@ -20478,8 +20424,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TopMargin), 0, 1),
@@ -20630,8 +20574,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<AltChunkProperties>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -20853,8 +20795,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.FootnotePosition), 0, 1),
@@ -20979,8 +20919,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<NumberingRestart>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -21383,8 +21321,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<RightBorder>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -23419,8 +23355,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.WriteProtection), 0, 1),
@@ -23790,8 +23724,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Frameset), 0, 1),
@@ -24109,8 +24041,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocDefaults), 0, 1),
@@ -24209,8 +24139,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<Body>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -24335,8 +24263,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<DocParts>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -24566,8 +24492,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<TableLook>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -24833,8 +24757,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<HideMark>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -25282,8 +25204,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<TableDescription>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -25738,8 +25658,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -26317,8 +26235,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -26849,8 +26765,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<MoveTo>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -27449,8 +27363,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<MoveTo>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -28231,8 +28143,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DropDownListSelection), 0, 1),
@@ -28350,8 +28260,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<Format>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -28732,8 +28640,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -28846,8 +28752,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -28921,8 +28825,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<MatchSource>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -29166,8 +29068,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<Dirty>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -31391,8 +31291,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlPlaceholder), 0, 1),
@@ -31569,8 +31467,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -31683,8 +31579,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<PreviousTableCellProperties>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -31948,8 +31842,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -32129,8 +32021,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -32242,8 +32132,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<PreviousTablePropertyExceptions>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -32543,8 +32431,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<TablePropertiesChange>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -33046,8 +32932,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Active), 0, 1),
@@ -33259,8 +33143,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<DynamicAddress>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.All, 1, 1)
         {
@@ -33512,8 +33394,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<FirstRowHeader>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -34242,8 +34122,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 1)
@@ -34807,8 +34685,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 1)
@@ -34915,8 +34791,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.RunPropertiesBaseStyle), 0, 1)
@@ -34987,8 +34861,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<ParagraphPropertiesBaseStyle>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -35355,8 +35227,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Width), 0, 1),
@@ -35496,8 +35366,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<FrameLayout>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -35684,8 +35552,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<LinkedToFile>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -36380,8 +36246,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 1)
@@ -37020,8 +36884,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 1)
@@ -37384,8 +37246,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.StartNumberingValue), 0, 1),
@@ -37495,8 +37355,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.StartOverrideNumberingValue), 0, 1),
@@ -37595,8 +37453,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<Drawing>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -37763,8 +37619,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Nsid), 0, 1),
@@ -37855,8 +37709,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<AbstractNumId>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -38380,8 +38232,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -38575,8 +38425,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<TableCellMarginDefault>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -38801,8 +38649,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<TableCellVerticalAlignment>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -39473,8 +39319,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 1)
@@ -39721,8 +39565,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 1)
@@ -39863,8 +39705,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<TableCellVerticalAlignment>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -40023,8 +39863,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<TableStyleConditionalFormattingTableCellProperties>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -40203,8 +40041,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<ParagraphPropertiesDefault>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -40750,8 +40586,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.StyleName), 0, 1),
@@ -41006,8 +40840,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.AltName), 0, 1),
@@ -41243,8 +41075,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<RightBorder>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -41585,8 +41415,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<DivBorder>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -42725,8 +42553,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Background), 1, 1)
@@ -42914,8 +42740,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<Gallery>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -43237,8 +43061,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<DocPartId>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -43834,8 +43656,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPartProperties), 0, 1),
@@ -44179,8 +43999,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -44434,8 +44252,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<PreviousTableRowProperties>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -45036,8 +44852,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -45492,8 +45306,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPartReference), 1, 1)
@@ -45745,8 +45557,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DateFormat), 0, 1),
@@ -45970,8 +45780,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<DocPartUnique>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     }
 
     /// <summary>
@@ -47065,8 +46873,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MainDocumentType), 0, 1),
@@ -48044,8 +47850,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -48179,8 +47983,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<NumberingRestart>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -49231,8 +49033,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.UseSingleBorderForContiguousCells), 0, 1),
@@ -49428,8 +49228,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             get => GetElement<RsidRoot>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
