@@ -15,9 +15,6 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public class OpenXmlDomReader : OpenXmlReader
     {
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private static ReadOnlyCollection<OpenXmlAttribute> _emptyReadOnlyList;
-
         private readonly Stack<OpenXmlElement> _elementStack;
 
         private OpenXmlElement _rootElement;
@@ -88,12 +85,7 @@ namespace DocumentFormat.OpenXml
                 }
                 else
                 {
-                    if (_emptyReadOnlyList == null)
-                    {
-                        _emptyReadOnlyList = Cached.ReadOnlyCollection<OpenXmlAttribute>();
-                    }
-
-                    return _emptyReadOnlyList;
+                    return Cached.ReadOnlyCollection<OpenXmlAttribute>();
                 }
             }
         }
