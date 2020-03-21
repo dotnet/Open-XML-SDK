@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
+using DocumentFormat.OpenXml.Framework;
 
 namespace DocumentFormat.OpenXml
 {
@@ -89,9 +90,7 @@ namespace DocumentFormat.OpenXml
                 {
                     if (_emptyReadOnlyList == null)
                     {
-#pragma warning disable CA1825 // Because we also need to support the .NET Framework versions below 4.6, and these versions do not exist Array.Empty method
-                        _emptyReadOnlyList = new ReadOnlyCollection<OpenXmlAttribute>(new OpenXmlAttribute[0]);
-#pragma warning restore CA1825 // End Avoid zero-length array allocations
+                        _emptyReadOnlyList = Cached.ReadOnlyCollection<OpenXmlAttribute>();
                     }
 
                     return _emptyReadOnlyList;
