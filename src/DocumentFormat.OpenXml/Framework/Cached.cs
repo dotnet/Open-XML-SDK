@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Framework
 
         private static class ReadOnlyCollectionCache<T>
         {
-            internal static ReadOnlyCollection<T> Value = new ReadOnlyCollection<T>(Array<T>());
+            internal static readonly ReadOnlyCollection<T> Value = new ReadOnlyCollection<T>(Array<T>());
         }
     }
 }
