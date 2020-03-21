@@ -1,694 +1,693 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+using DocumentFormat.OpenXml;
+using DocumentFormat.OpenXml.Drawing;
+using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Office2010.Drawing;
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
-using DocumentFormat.OpenXml.Framework;
-using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Validation.Schema;
-using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Drawing;
-using DocumentFormat.OpenXml.Office2010.Drawing;
 
 namespace DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing
 {
-/// <summary>
-/// <para>Defines the ContentPart Class.</para>
-/// <para>This class is available in Office 2010 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is cdr14:contentPart.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>NonVisualContentPartProperties &lt;cdr14:nvContentPartPr></description></item>
-///<item><description>ApplicationNonVisualDrawingProperties &lt;cdr14:nvPr></description></item>
-///<item><description>Transform2D &lt;cdr14:xfrm></description></item>
-///<item><description>OfficeArtExtensionList &lt;cdr14:extLst></description></item>
-/// </list>
-/// </remarks>
-
+    /// <summary>
+    /// <para>Defines the ContentPart Class.</para>
+    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is cdr14:contentPart.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>NonVisualContentPartProperties &lt;cdr14:nvContentPartPr></description></item>
+    ///   <item><description>ApplicationNonVisualDrawingProperties &lt;cdr14:nvPr></description></item>
+    ///   <item><description>Transform2D &lt;cdr14:xfrm></description></item>
+    ///   <item><description>OfficeArtExtensionList &lt;cdr14:extLst></description></item>
+    /// </list>
+    /// </remark>
     [ChildElementInfo(typeof(NonVisualContentPartProperties), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(ApplicationNonVisualDrawingProperties), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(Transform2D), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2010)]
-
-[OfficeAvailability(FileFormatVersions.Office2010)]
-[SchemaAttr(47, "contentPart")]
-public partial class ContentPart : OpenXmlCompositeElement
-{
-    
-        /// <summary>
-    /// <para> id, this property is only available in Office2010, Office2013, Office2016.</para>
-    /// <para>Represents the following attribute in the schema: r:id </para>
-    /// </summary>
-///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-///</remark>
-[RequiredValidator]
-    [SchemaAttr(19, "id")]
-    [Index(0)]
-    public StringValue RelationshipId { get; set; }
-    /// <summary>
-    /// <para> bwMode, this property is only available in Office2010, Office2013, Office2016.</para>
-    /// <para>Represents the following attribute in the schema: bwMode </para>
-    /// </summary>
-[StringValidator(IsToken = true)]
-    [SchemaAttr(0, "bwMode")]
-    [Index(1)]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
-
-    /// <summary>
-    /// Initializes a new instance of the ContentPart class.
-    /// </summary>
-    public ContentPart():base(){}
-        /// <summary>
-    ///Initializes a new instance of the ContentPart class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public ContentPart(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
+    [SchemaAttr(47, "contentPart")]
+    [OfficeAvailability(FileFormatVersions.Office2010)]
+    public partial class ContentPart : OpenXmlCompositeElement
     {
-    }
-    /// <summary>
-    /// Initializes a new instance of the ContentPart class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public ContentPart(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the ContentPart class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public ContentPart(string outerXml)
-        : base(outerXml)
-    {
-    }
-
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.NonVisualContentPartProperties), 0, 1, version: FileFormatVersions.Office2010),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ApplicationNonVisualDrawingProperties), 0, 1, version: FileFormatVersions.Office2010),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.Transform2D), 0, 1, version: FileFormatVersions.Office2010),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
-    /// <para> NonVisualContentPartProperties.</para>
-    /// <para> Represents the following element tag in the schema: cdr14:nvContentPartPr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
-    /// </remark>
-    public NonVisualContentPartProperties NonVisualContentPartProperties
-	{
-        get => GetElement<NonVisualContentPartProperties>();
-        set => SetElement(value);
-	}
+        /// Initializes a new instance of the ContentPart class.
+        /// </summary>
+        public ContentPart() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ContentPart class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ContentPart(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ContentPart class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ContentPart(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ContentPart class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public ContentPart(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>Represents the following attribute in the schema: r:id</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
+        /// </remark>
+        [RequiredValidator()]
+        [SchemaAttr(19, "id")]
+        [Index(0)]
+        public StringValue RelationshipId { get; set; }
+
+        /// <summary>
+        /// <para>bwMode, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>Represents the following attribute in the schema: bwMode</para>
+        /// </summary>
+        [StringValidator(IsToken = true)]
+        [SchemaAttr(0, "bwMode")]
+        [Index(1)]
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
+
+        /// <summary>
+        /// <para>NonVisualContentPartProperties.</para>
+        /// <para>Represents the following element tag in the schema: cdr14:nvContentPartPr.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
+        /// </remark>
+        public NonVisualContentPartProperties NonVisualContentPartProperties
+        {
+            get => GetElement<NonVisualContentPartProperties>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>ApplicationNonVisualDrawingProperties.</para>
+        /// <para>Represents the following element tag in the schema: cdr14:nvPr.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
+        /// </remark>
+        public ApplicationNonVisualDrawingProperties ApplicationNonVisualDrawingProperties
+        {
+            get => GetElement<ApplicationNonVisualDrawingProperties>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Transform2D.</para>
+        /// <para>Represents the following element tag in the schema: cdr14:xfrm.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
+        /// </remark>
+        public Transform2D Transform2D
+        {
+            get => GetElement<Transform2D>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>OfficeArtExtensionList.</para>
+        /// <para>Represents the following element tag in the schema: cdr14:extLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
+        /// </remark>
+        public OfficeArtExtensionList OfficeArtExtensionList
+        {
+            get => GetElement<OfficeArtExtensionList>();
+            set => SetElement(value);
+        }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.NonVisualContentPartProperties), 0, 1, version: FileFormatVersions.Office2010),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ApplicationNonVisualDrawingProperties), 0, 1, version: FileFormatVersions.Office2010),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.Transform2D), 0, 1, version: FileFormatVersions.Office2010),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ContentPart>(deep);
+    }
+
     /// <summary>
-    /// <para> ApplicationNonVisualDrawingProperties.</para>
-    /// <para> Represents the following element tag in the schema: cdr14:nvPr </para>
+    /// <para>Defines the NonVisualDrawingProperties Class.</para>
+    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is cdr14:cNvPr.</para>
     /// </summary>
     /// <remark>
-    /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.HyperlinkOnClick &lt;a:hlinkClick></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.HyperlinkOnHover &lt;a:hlinkHover></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList &lt;a:extLst></description></item>
+    /// </list>
     /// </remark>
-    public ApplicationNonVisualDrawingProperties ApplicationNonVisualDrawingProperties
-	{
-        get => GetElement<ApplicationNonVisualDrawingProperties>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> Transform2D.</para>
-    /// <para> Represents the following element tag in the schema: cdr14:xfrm </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
-    /// </remark>
-    public Transform2D Transform2D
-	{
-        get => GetElement<Transform2D>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> OfficeArtExtensionList.</para>
-    /// <para> Represents the following element tag in the schema: cdr14:extLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
-    /// </remark>
-    public OfficeArtExtensionList OfficeArtExtensionList
-	{
-        get => GetElement<OfficeArtExtensionList>();
-        set => SetElement(value);
-	}
-
-
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ContentPart>(deep);
-
-}
-/// <summary>
-/// <para>Defines the NonVisualDrawingProperties Class.</para>
-/// <para>This class is available in Office 2010 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is cdr14:cNvPr.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>DocumentFormat.OpenXml.Drawing.HyperlinkOnClick &lt;a:hlinkClick></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.HyperlinkOnHover &lt;a:hlinkHover></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList &lt;a:extLst></description></item>
-/// </list>
-/// </remarks>
-
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList))]
-
-[OfficeAvailability(FileFormatVersions.Office2010)]
-[SchemaAttr(47, "cNvPr")]
-public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
-{
-    
-        /// <summary>
-    /// <para> id.</para>
-    /// <para>Represents the following attribute in the schema: id </para>
-    /// </summary>
-[RequiredValidator]
-    [SchemaAttr(0, "id")]
-    [Index(0)]
-    public UInt32Value Id { get; set; }
-    /// <summary>
-    /// <para> name.</para>
-    /// <para>Represents the following attribute in the schema: name </para>
-    /// </summary>
-[RequiredValidator]
-    [SchemaAttr(0, "name")]
-    [Index(1)]
-    public StringValue Name { get; set; }
-    /// <summary>
-    /// <para> descr.</para>
-    /// <para>Represents the following attribute in the schema: descr </para>
-    /// </summary>
-    [SchemaAttr(0, "descr")]
-    [Index(2)]
-    public StringValue Description { get; set; }
-    /// <summary>
-    /// <para> hidden.</para>
-    /// <para>Represents the following attribute in the schema: hidden </para>
-    /// </summary>
-    [SchemaAttr(0, "hidden")]
-    [Index(3)]
-    public BooleanValue Hidden { get; set; }
-    /// <summary>
-    /// <para> title.</para>
-    /// <para>Represents the following attribute in the schema: title </para>
-    /// </summary>
-    [SchemaAttr(0, "title")]
-    [Index(4)]
-    public StringValue Title { get; set; }
-
-    /// <summary>
-    /// Initializes a new instance of the NonVisualDrawingProperties class.
-    /// </summary>
-    public NonVisualDrawingProperties():base(){}
-        /// <summary>
-    ///Initializes a new instance of the NonVisualDrawingProperties class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public NonVisualDrawingProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
+    [SchemaAttr(47, "cNvPr")]
+    [OfficeAvailability(FileFormatVersions.Office2010)]
+    public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
-    }
-    /// <summary>
-    /// Initializes a new instance of the NonVisualDrawingProperties class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public NonVisualDrawingProperties(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the NonVisualDrawingProperties class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public NonVisualDrawingProperties(string outerXml)
-        : base(outerXml)
-    {
+        /// <summary>
+        /// Initializes a new instance of the NonVisualDrawingProperties class.
+        /// </summary>
+        public NonVisualDrawingProperties() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the NonVisualDrawingProperties class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public NonVisualDrawingProperties(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the NonVisualDrawingProperties class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public NonVisualDrawingProperties(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the NonVisualDrawingProperties class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public NonVisualDrawingProperties(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>id</para>
+        /// <para>Represents the following attribute in the schema: id</para>
+        /// </summary>
+        [RequiredValidator()]
+        [SchemaAttr(0, "id")]
+        [Index(0)]
+        public UInt32Value Id { get; set; }
+
+        /// <summary>
+        /// <para>name</para>
+        /// <para>Represents the following attribute in the schema: name</para>
+        /// </summary>
+        [RequiredValidator()]
+        [SchemaAttr(0, "name")]
+        [Index(1)]
+        public StringValue Name { get; set; }
+
+        /// <summary>
+        /// <para>descr</para>
+        /// <para>Represents the following attribute in the schema: descr</para>
+        /// </summary>
+        [SchemaAttr(0, "descr")]
+        [Index(2)]
+        public StringValue Description { get; set; }
+
+        /// <summary>
+        /// <para>hidden</para>
+        /// <para>Represents the following attribute in the schema: hidden</para>
+        /// </summary>
+        [SchemaAttr(0, "hidden")]
+        [Index(3)]
+        public BooleanValue Hidden { get; set; }
+
+        /// <summary>
+        /// <para>title</para>
+        /// <para>Represents the following attribute in the schema: title</para>
+        /// </summary>
+        [SchemaAttr(0, "title")]
+        [Index(4)]
+        public StringValue Title { get; set; }
+
+        /// <summary>
+        /// <para>HyperlinkOnClick.</para>
+        /// <para>Represents the following element tag in the schema: a:hlinkClick.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick HyperlinkOnClick
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>HyperlinkOnHover.</para>
+        /// <para>Represents the following element tag in the schema: a:hlinkHover.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover HyperlinkOnHover
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>NonVisualDrawingPropertiesExtensionList.</para>
+        /// <para>Represents the following element tag in the schema: a:extLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
+            set => SetElement(value);
+        }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList), 0, 1)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualDrawingProperties>(deep);
     }
 
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-        /// <summary>
-    /// <para> HyperlinkOnClick.</para>
-    /// <para> Represents the following element tag in the schema: a:hlinkClick </para>
+    /// <summary>
+    /// <para>Defines the NonVisualInkContentPartProperties Class.</para>
+    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is cdr14:cNvContentPartPr.</para>
     /// </summary>
     /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks &lt;a14:cpLocks></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList &lt;a14:extLst></description></item>
+    /// </list>
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick HyperlinkOnClick
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> HyperlinkOnHover.</para>
-    /// <para> Represents the following element tag in the schema: a:hlinkHover </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-    public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover HyperlinkOnHover
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> NonVisualDrawingPropertiesExtensionList.</para>
-    /// <para> Represents the following element tag in the schema: a:extLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-    public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
-        set => SetElement(value);
-	}
-
-
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualDrawingProperties>(deep);
-
-}
-/// <summary>
-/// <para>Defines the NonVisualInkContentPartProperties Class.</para>
-/// <para>This class is available in Office 2010 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is cdr14:cNvContentPartPr.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks &lt;a14:cpLocks></description></item>
-///<item><description>DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList &lt;a14:extLst></description></item>
-/// </list>
-/// </remarks>
-
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList), FileFormatVersions.Office2010)]
-
-[OfficeAvailability(FileFormatVersions.Office2010)]
-[SchemaAttr(47, "cNvContentPartPr")]
-public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
-{
-    
+    [SchemaAttr(47, "cNvContentPartPr")]
+    [OfficeAvailability(FileFormatVersions.Office2010)]
+    public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
+    {
         /// <summary>
-    /// <para> isComment, this property is only available in Office2010, Office2013, Office2016.</para>
-    /// <para>Represents the following attribute in the schema: isComment </para>
-    /// </summary>
-    [SchemaAttr(0, "isComment")]
-    [Index(0)]
-    public BooleanValue IsComment { get; set; }
+        /// Initializes a new instance of the NonVisualInkContentPartProperties class.
+        /// </summary>
+        public NonVisualInkContentPartProperties() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the NonVisualInkContentPartProperties class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public NonVisualInkContentPartProperties(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the NonVisualInkContentPartProperties class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public NonVisualInkContentPartProperties(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the NonVisualInkContentPartProperties class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public NonVisualInkContentPartProperties(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>isComment, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>Represents the following attribute in the schema: isComment</para>
+        /// </summary>
+        [SchemaAttr(0, "isComment")]
+        [Index(0)]
+        public BooleanValue IsComment { get; set; }
+
+        /// <summary>
+        /// <para>ContentPartLocks.</para>
+        /// <para>Represents the following element tag in the schema: a14:cpLocks.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks ContentPartLocks
+        {
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>OfficeArtExtensionList.</para>
+        /// <para>Represents the following element tag in the schema: a14:extLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList OfficeArtExtensionList
+        {
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
+            set => SetElement(value);
+        }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks), 0, 1, version: FileFormatVersions.Office2010),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualInkContentPartProperties>(deep);
+    }
 
     /// <summary>
-    /// Initializes a new instance of the NonVisualInkContentPartProperties class.
-    /// </summary>
-    public NonVisualInkContentPartProperties():base(){}
-        /// <summary>
-    ///Initializes a new instance of the NonVisualInkContentPartProperties class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public NonVisualInkContentPartProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the NonVisualInkContentPartProperties class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public NonVisualInkContentPartProperties(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the NonVisualInkContentPartProperties class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public NonVisualInkContentPartProperties(string outerXml)
-        : base(outerXml)
-    {
-    }
-
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks), 0, 1, version: FileFormatVersions.Office2010),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-        /// <summary>
-    /// <para> ContentPartLocks.</para>
-    /// <para> Represents the following element tag in the schema: a14:cpLocks </para>
+    /// <para>Defines the NonVisualContentPartProperties Class.</para>
+    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is cdr14:nvContentPartPr.</para>
     /// </summary>
     /// <remark>
-    /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>NonVisualDrawingProperties &lt;cdr14:cNvPr></description></item>
+    ///   <item><description>NonVisualInkContentPartProperties &lt;cdr14:cNvContentPartPr></description></item>
+    /// </list>
     /// </remark>
-    public DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks ContentPartLocks
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> OfficeArtExtensionList.</para>
-    /// <para> Represents the following element tag in the schema: a14:extLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-    /// </remark>
-    public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList OfficeArtExtensionList
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
-        set => SetElement(value);
-	}
-
-
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualInkContentPartProperties>(deep);
-
-}
-/// <summary>
-/// <para>Defines the NonVisualContentPartProperties Class.</para>
-/// <para>This class is available in Office 2010 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is cdr14:nvContentPartPr.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>NonVisualDrawingProperties &lt;cdr14:cNvPr></description></item>
-///<item><description>NonVisualInkContentPartProperties &lt;cdr14:cNvContentPartPr></description></item>
-/// </list>
-/// </remarks>
-
     [ChildElementInfo(typeof(NonVisualDrawingProperties), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(NonVisualInkContentPartProperties), FileFormatVersions.Office2010)]
-
-[OfficeAvailability(FileFormatVersions.Office2010)]
-[SchemaAttr(47, "nvContentPartPr")]
-public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
-{
-    
-    
-    /// <summary>
-    /// Initializes a new instance of the NonVisualContentPartProperties class.
-    /// </summary>
-    public NonVisualContentPartProperties():base(){}
+    [SchemaAttr(47, "nvContentPartPr")]
+    [OfficeAvailability(FileFormatVersions.Office2010)]
+    public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
+    {
         /// <summary>
-    ///Initializes a new instance of the NonVisualContentPartProperties class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public NonVisualContentPartProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the NonVisualContentPartProperties class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public NonVisualContentPartProperties(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the NonVisualContentPartProperties class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public NonVisualContentPartProperties(string outerXml)
-        : base(outerXml)
-    {
+        /// Initializes a new instance of the NonVisualContentPartProperties class.
+        /// </summary>
+        public NonVisualContentPartProperties() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the NonVisualContentPartProperties class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public NonVisualContentPartProperties(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the NonVisualContentPartProperties class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public NonVisualContentPartProperties(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the NonVisualContentPartProperties class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public NonVisualContentPartProperties(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>NonVisualDrawingProperties.</para>
+        /// <para>Represents the following element tag in the schema: cdr14:cNvPr.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
+        /// </remark>
+        public NonVisualDrawingProperties NonVisualDrawingProperties
+        {
+            get => GetElement<NonVisualDrawingProperties>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>NonVisualInkContentPartProperties.</para>
+        /// <para>Represents the following element tag in the schema: cdr14:cNvContentPartPr.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
+        /// </remark>
+        public NonVisualInkContentPartProperties NonVisualInkContentPartProperties
+        {
+            get => GetElement<NonVisualInkContentPartProperties>();
+            set => SetElement(value);
+        }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.NonVisualDrawingProperties), 1, 1, version: FileFormatVersions.Office2010),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.NonVisualInkContentPartProperties), 0, 1, version: FileFormatVersions.Office2010)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualContentPartProperties>(deep);
     }
 
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.NonVisualDrawingProperties), 1, 1, version: FileFormatVersions.Office2010),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.NonVisualInkContentPartProperties), 0, 1, version: FileFormatVersions.Office2010)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+    /// <summary>
+    /// <para>Defines the ApplicationNonVisualDrawingProperties Class.</para>
+    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is cdr14:nvPr.</para>
+    /// </summary>
+    [SchemaAttr(47, "nvPr")]
+    [OfficeAvailability(FileFormatVersions.Office2010)]
+    public partial class ApplicationNonVisualDrawingProperties : OpenXmlLeafElement
+    {
         /// <summary>
-    /// <para> NonVisualDrawingProperties.</para>
-    /// <para> Represents the following element tag in the schema: cdr14:cNvPr </para>
+        /// Initializes a new instance of the ApplicationNonVisualDrawingProperties class.
+        /// </summary>
+        public ApplicationNonVisualDrawingProperties() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>macro, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>Represents the following attribute in the schema: macro</para>
+        /// </summary>
+        [SchemaAttr(0, "macro")]
+        [Index(0)]
+        public StringValue Macro { get; set; }
+
+        /// <summary>
+        /// <para>fPublished, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>Represents the following attribute in the schema: fPublished</para>
+        /// </summary>
+        [SchemaAttr(0, "fPublished")]
+        [Index(1)]
+        public BooleanValue Published { get; set; }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ApplicationNonVisualDrawingProperties>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the Transform2D Class.</para>
+    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is cdr14:xfrm.</para>
     /// </summary>
     /// <remark>
-    /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.Offset &lt;a:off></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.Extents &lt;a:ext></description></item>
+    /// </list>
     /// </remark>
-    public NonVisualDrawingProperties NonVisualDrawingProperties
-	{
-        get => GetElement<NonVisualDrawingProperties>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> NonVisualInkContentPartProperties.</para>
-    /// <para> Represents the following element tag in the schema: cdr14:cNvContentPartPr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
-    /// </remark>
-    public NonVisualInkContentPartProperties NonVisualInkContentPartProperties
-	{
-        get => GetElement<NonVisualInkContentPartProperties>();
-        set => SetElement(value);
-	}
-
-
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualContentPartProperties>(deep);
-
-}
-/// <summary>
-/// <para>Defines the ApplicationNonVisualDrawingProperties Class.</para>
-/// <para>This class is available in Office 2010 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is cdr14:nvPr.</para>
-/// </summary>
-
-
-[OfficeAvailability(FileFormatVersions.Office2010)]
-[SchemaAttr(47, "nvPr")]
-public partial class ApplicationNonVisualDrawingProperties : OpenXmlLeafElement
-{
-    
-        /// <summary>
-    /// <para> macro, this property is only available in Office2010, Office2013, Office2016.</para>
-    /// <para>Represents the following attribute in the schema: macro </para>
-    /// </summary>
-    [SchemaAttr(0, "macro")]
-    [Index(0)]
-    public StringValue Macro { get; set; }
-    /// <summary>
-    /// <para> fPublished, this property is only available in Office2010, Office2013, Office2016.</para>
-    /// <para>Represents the following attribute in the schema: fPublished </para>
-    /// </summary>
-    [SchemaAttr(0, "fPublished")]
-    [Index(1)]
-    public BooleanValue Published { get; set; }
-
-    /// <summary>
-    /// Initializes a new instance of the ApplicationNonVisualDrawingProperties class.
-    /// </summary>
-    public ApplicationNonVisualDrawingProperties():base(){}
-    
-    
-
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ApplicationNonVisualDrawingProperties>(deep);
-
-}
-/// <summary>
-/// <para>Defines the Transform2D Class.</para>
-/// <para>This class is available in Office 2010 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is cdr14:xfrm.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>DocumentFormat.OpenXml.Drawing.Offset &lt;a:off></description></item>
-///<item><description>DocumentFormat.OpenXml.Drawing.Extents &lt;a:ext></description></item>
-/// </list>
-/// </remarks>
-
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Offset))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extents))]
-
-[OfficeAvailability(FileFormatVersions.Office2010)]
-[SchemaAttr(47, "xfrm")]
-public partial class Transform2D : OpenXmlCompositeElement
-{
-    
+    [SchemaAttr(47, "xfrm")]
+    [OfficeAvailability(FileFormatVersions.Office2010)]
+    public partial class Transform2D : OpenXmlCompositeElement
+    {
         /// <summary>
-    /// <para> Rotation.</para>
-    /// <para>Represents the following attribute in the schema: rot </para>
-    /// </summary>
-    [SchemaAttr(0, "rot")]
-    [Index(0)]
-    public Int32Value Rotation { get; set; }
-    /// <summary>
-    /// <para> Horizontal Flip.</para>
-    /// <para>Represents the following attribute in the schema: flipH </para>
-    /// </summary>
-    [SchemaAttr(0, "flipH")]
-    [Index(1)]
-    public BooleanValue HorizontalFlip { get; set; }
-    /// <summary>
-    /// <para> Vertical Flip.</para>
-    /// <para>Represents the following attribute in the schema: flipV </para>
-    /// </summary>
-    [SchemaAttr(0, "flipV")]
-    [Index(2)]
-    public BooleanValue VerticalFlip { get; set; }
-
-    /// <summary>
-    /// Initializes a new instance of the Transform2D class.
-    /// </summary>
-    public Transform2D():base(){}
-        /// <summary>
-    ///Initializes a new instance of the Transform2D class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public Transform2D(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the Transform2D class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public Transform2D(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the Transform2D class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public Transform2D(string outerXml)
-        : base(outerXml)
-    {
-    }
-
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Offset), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extents), 0, 1)
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-        /// <summary>
-    /// <para> Offset.</para>
-    /// <para> Represents the following element tag in the schema: a:off </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Offset Offset
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>();
-        set => SetElement(value);
-	}
-    /// <summary>
-    /// <para> Extents.</para>
-    /// <para> Represents the following element tag in the schema: a:ext </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Extents Extents
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>();
-        set => SetElement(value);
-	}
-
-
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Transform2D>(deep);
-
-}
-/// <summary>
-/// <para>Defines the OfficeArtExtensionList Class.</para>
-/// <para>This class is available in Office 2010 or above.</para>
-/// <para> When the object is serialized out as xml, its qualified name is cdr14:extLst.</para>
-/// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-///<item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
-/// </list>
-/// </remarks>
-
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
-
-[OfficeAvailability(FileFormatVersions.Office2010)]
-[SchemaAttr(47, "extLst")]
-public partial class OfficeArtExtensionList : OpenXmlCompositeElement
-{
-    
-    
-    /// <summary>
-    /// Initializes a new instance of the OfficeArtExtensionList class.
-    /// </summary>
-    public OfficeArtExtensionList():base(){}
-        /// <summary>
-    ///Initializes a new instance of the OfficeArtExtensionList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public OfficeArtExtensionList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
-        : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the OfficeArtExtensionList class with the specified child elements.
-    /// </summary>
-    /// <param name="childElements">Specifies the child elements.</param>
-    public OfficeArtExtensionList(params OpenXmlElement[] childElements) : base(childElements)
-    {
-    }
-    /// <summary>
-    /// Initializes a new instance of the OfficeArtExtensionList class from outer XML.
-    /// </summary>
-    /// <param name="outerXml">Specifies the outer XML of the element.</param>
-    public OfficeArtExtensionList(string outerXml)
-        : base(outerXml)
-    {
-    }
-
-    
-private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-{
-    new CompositeParticle(ParticleType.Group, 1, 1)
-    {
-        new CompositeParticle(ParticleType.Sequence, 1, 1)
+        /// Initializes a new instance of the Transform2D class.
+        /// </summary>
+        public Transform2D() : base()
         {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0, 0)
         }
-    }
-}.Compile();
-internal override CompiledParticle CompiledParticle => _constraint;
-    
-    
-    /// <inheritdoc/>
-    public override OpenXmlElement CloneNode(bool deep) => CloneImp<OfficeArtExtensionList>(deep);
 
-}
+        /// <summary>
+        /// Initializes a new instance of the Transform2D class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Transform2D(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Transform2D class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Transform2D(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Transform2D class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public Transform2D(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Rotation</para>
+        /// <para>Represents the following attribute in the schema: rot</para>
+        /// </summary>
+        [SchemaAttr(0, "rot")]
+        [Index(0)]
+        public Int32Value Rotation { get; set; }
+
+        /// <summary>
+        /// <para>Horizontal Flip</para>
+        /// <para>Represents the following attribute in the schema: flipH</para>
+        /// </summary>
+        [SchemaAttr(0, "flipH")]
+        [Index(1)]
+        public BooleanValue HorizontalFlip { get; set; }
+
+        /// <summary>
+        /// <para>Vertical Flip</para>
+        /// <para>Represents the following attribute in the schema: flipV</para>
+        /// </summary>
+        [SchemaAttr(0, "flipV")]
+        [Index(2)]
+        public BooleanValue VerticalFlip { get; set; }
+
+        /// <summary>
+        /// <para>Offset.</para>
+        /// <para>Represents the following element tag in the schema: a:off.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Offset Offset
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Extents.</para>
+        /// <para>Represents the following element tag in the schema: a:ext.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Extents Extents
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>();
+            set => SetElement(value);
+        }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Offset), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extents), 0, 1)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Transform2D>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the OfficeArtExtensionList Class.</para>
+    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is cdr14:extLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
+    /// </list>
+    /// </remark>
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
+    [SchemaAttr(47, "extLst")]
+    [OfficeAvailability(FileFormatVersions.Office2010)]
+    public partial class OfficeArtExtensionList : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the OfficeArtExtensionList class.
+        /// </summary>
+        public OfficeArtExtensionList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the OfficeArtExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public OfficeArtExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the OfficeArtExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public OfficeArtExtensionList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the OfficeArtExtensionList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public OfficeArtExtensionList(string outerXml) : base(outerXml)
+        {
+        }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new CompositeParticle(ParticleType.Group, 1, 1)
+            {
+                new CompositeParticle(ParticleType.Sequence, 1, 1)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0, 0)
+                }
+            }
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<OfficeArtExtensionList>(deep);
+    }
 }
