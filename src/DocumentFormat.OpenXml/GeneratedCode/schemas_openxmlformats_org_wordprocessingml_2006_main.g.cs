@@ -55585,5 +55585,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         ///</summary>
         [EnumString("differentiateMultirowTableHeaders")]
         DifferentiateMultirowTableHeaders,
+        ///<summary>
+        ///useWord2013TrackBottomHyphenation.
+        ///<para>When the item is serialized out as xml, its value is "useWord2013TrackBottomHyphenation".</para>
+        ///</summary>
+        [EnumString("useWord2013TrackBottomHyphenation")]
+        UseWord2013TrackBottomHyphenation,
     }
 }
