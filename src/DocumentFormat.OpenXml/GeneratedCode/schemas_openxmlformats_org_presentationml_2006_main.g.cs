@@ -22503,8 +22503,10 @@ namespace DocumentFormat.OpenXml.Presentation
         ///<summary>
         ///onMediaBookmark.
         ///<para>When the item is serialized out as xml, its value is "onMediaBookmark".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("onMediaBookmark")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         OnMediaBookmark,
     }
 

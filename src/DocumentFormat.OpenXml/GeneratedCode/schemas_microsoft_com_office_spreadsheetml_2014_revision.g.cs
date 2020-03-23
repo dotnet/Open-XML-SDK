@@ -5498,6 +5498,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <summary>
     /// Defines the RevisionContext enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum RevisionContext
     {
         ///<summary>
@@ -5529,6 +5530,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <summary>
     /// Defines the RwColAction enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum RwColAction
     {
         ///<summary>
@@ -5560,6 +5562,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <summary>
     /// Defines the FeatureType enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum FeatureType
     {
         ///<summary>
@@ -5645,6 +5648,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <summary>
     /// Defines the ExtFeatureType enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum ExtFeatureType
     {
         ///<summary>
@@ -5658,6 +5662,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <summary>
     /// Defines the SubFeatureType enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum SubFeatureType
     {
         ///<summary>
@@ -5677,6 +5682,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <summary>
     /// Defines the ExtSubFeatureType enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum ExtSubFeatureType
     {
         ///<summary>
@@ -5690,6 +5696,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <summary>
     /// Defines the RowColVisualOp enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum RowColVisualOp
     {
         ///<summary>
@@ -5721,6 +5728,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <summary>
     /// Defines the SheetOp enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum SheetOp
     {
         ///<summary>
@@ -5752,6 +5760,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <summary>
     /// Defines the FillType enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum FillType
     {
         ///<summary>
@@ -5777,6 +5786,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <summary>
     /// Defines the FillTypeExt enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum FillTypeExt
     {
         ///<summary>
@@ -5790,6 +5800,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <summary>
     /// Defines the AdjustType enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum AdjustType
     {
         ///<summary>
@@ -5851,6 +5862,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <summary>
     /// Defines the AdjustTypeExt enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum AdjustTypeExt
     {
         ///<summary>
@@ -5864,6 +5876,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <summary>
     /// Defines the OartAnchorType enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum OartAnchorType
     {
         ///<summary>

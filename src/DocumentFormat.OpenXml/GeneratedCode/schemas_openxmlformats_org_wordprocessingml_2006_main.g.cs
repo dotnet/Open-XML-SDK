@@ -53457,8 +53457,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         ///<summary>
         ///umalqura.
         ///<para>When the item is serialized out as xml, its value is "umalqura".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("umalqura")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         Umalqura,
         ///<summary>
         ///Hebrew.
@@ -53511,26 +53513,34 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         ///<summary>
         ///gregorianUs.
         ///<para>When the item is serialized out as xml, its value is "gregorianUs".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("gregorianUs")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         GregorianUs,
         ///<summary>
         ///gregorianMeFrench.
         ///<para>When the item is serialized out as xml, its value is "gregorianMeFrench".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("gregorianMeFrench")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         GregorianMeFrench,
         ///<summary>
         ///gregorianArabic.
         ///<para>When the item is serialized out as xml, its value is "gregorianArabic".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("gregorianArabic")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         GregorianArabic,
         ///<summary>
         ///none.
         ///<para>When the item is serialized out as xml, its value is "none".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("none")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         None,
     }
 
@@ -53902,20 +53912,26 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         ///<summary>
         ///bahtText.
         ///<para>When the item is serialized out as xml, its value is "bahtText".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("bahtText")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         BahtText,
         ///<summary>
         ///dollarText.
         ///<para>When the item is serialized out as xml, its value is "dollarText".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("dollarText")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         DollarText,
         ///<summary>
         ///custom.
         ///<para>When the item is serialized out as xml, its value is "custom".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("custom")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         Custom,
     }
 
@@ -53933,8 +53949,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         ///<summary>
         ///tb.
         ///<para>When the item is serialized out as xml, its value is "tb".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("tb")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         LeftToRightTopToBottom2010,
         ///<summary>
         ///Top to Bottom, Right to Left.
@@ -53945,8 +53963,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         ///<summary>
         ///rl.
         ///<para>When the item is serialized out as xml, its value is "rl".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("rl")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         TopToBottomRightToLeft2010,
         ///<summary>
         ///Bottom to Top, Left to Right.
@@ -53957,8 +53977,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         ///<summary>
         ///lr.
         ///<para>When the item is serialized out as xml, its value is "lr".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("lr")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         BottomToTopLeftToRight2010,
         ///<summary>
         ///Left to Right, Top to Bottom Rotated.
@@ -53969,8 +53991,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         ///<summary>
         ///tbV.
         ///<para>When the item is serialized out as xml, its value is "tbV".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("tbV")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         LeftToRightTopToBottomRotated2010,
         ///<summary>
         ///Top to Bottom, Right to Left Rotated.
@@ -53981,8 +54005,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         ///<summary>
         ///rlV.
         ///<para>When the item is serialized out as xml, its value is "rlV".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("rlV")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         TopToBottomRightToLeftRotated2010,
         ///<summary>
         ///Top to Bottom, Left to Right Rotated.
@@ -53993,8 +54019,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         ///<summary>
         ///lrV.
         ///<para>When the item is serialized out as xml, its value is "lrV".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("lrV")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         TopToBottomLeftToRightRotated2010,
     }
 
@@ -54012,8 +54040,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         ///<summary>
         ///custom.
         ///<para>When the item is serialized out as xml, its value is "custom".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("custom")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         Custom,
     }
 
@@ -54031,8 +54061,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         ///<summary>
         ///custom.
         ///<para>When the item is serialized out as xml, its value is "custom".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("custom")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         Custom,
     }
 
@@ -54056,8 +54088,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         ///<summary>
         ///custom.
         ///<para>When the item is serialized out as xml, its value is "custom".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("custom")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         Custom,
     }
 
@@ -54075,8 +54109,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         ///<summary>
         ///start.
         ///<para>When the item is serialized out as xml, its value is "start".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("start")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         Start,
         ///<summary>
         ///Align Center.
@@ -54093,8 +54129,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         ///<summary>
         ///end.
         ///<para>When the item is serialized out as xml, its value is "end".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("end")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         End,
         ///<summary>
         ///Justified.
@@ -55588,20 +55626,26 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         ///<summary>
         ///useWord2013TrackBottomHyphenation.
         ///<para>When the item is serialized out as xml, its value is "useWord2013TrackBottomHyphenation".</para>
+        ///<para>This item is only available in Office2016.</para>
         ///</summary>
         [EnumString("useWord2013TrackBottomHyphenation")]
+        [OfficeAvailability(FileFormatVersions.Office2016)]
         UseWord2013TrackBottomHyphenation,
         ///<summary>
         ///allowHyphenationAtTrackBottom.
         ///<para>When the item is serialized out as xml, its value is "allowHyphenationAtTrackBottom".</para>
+        ///<para>This item is only available in Office2016.</para>
         ///</summary>
         [EnumString("allowHyphenationAtTrackBottom")]
+        [OfficeAvailability(FileFormatVersions.Office2016)]
         AllowHyphenationAtTrackBottom,
         ///<summary>
         ///allowTextAfterFloatingTableBreak.
         ///<para>When the item is serialized out as xml, its value is "allowTextAfterFloatingTableBreak".</para>
+        ///<para>This item is only available in Office2016.</para>
         ///</summary>
         [EnumString("allowTextAfterFloatingTableBreak")]
+        [OfficeAvailability(FileFormatVersions.Office2016)]
         AllowTextAfterFloatingTableBreak,
     }
 }
