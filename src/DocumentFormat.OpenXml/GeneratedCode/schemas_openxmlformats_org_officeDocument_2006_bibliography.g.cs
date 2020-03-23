@@ -2909,8 +2909,6 @@ namespace DocumentFormat.OpenXml.Bibliography
             get => GetElement<NameList>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     }
 
     /// <summary>
@@ -3109,8 +3107,6 @@ namespace DocumentFormat.OpenXml.Bibliography
             get => GetElement<Corporate>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     }
 
     /// <summary>
@@ -3397,8 +3393,6 @@ namespace DocumentFormat.OpenXml.Bibliography
             get => GetElement<Writer>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -4287,8 +4281,6 @@ namespace DocumentFormat.OpenXml.Bibliography
             get => GetElement<YearAccessed>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {

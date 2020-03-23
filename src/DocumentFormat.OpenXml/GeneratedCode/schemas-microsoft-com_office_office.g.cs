@@ -314,8 +314,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
             set => SetElement(value);
         }
 
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.All, 0, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 0, 1),
@@ -437,8 +435,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
             get => GetElement<Rules>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.All, 1, 1)
         {
@@ -769,8 +765,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
             get => GetElement<RelationTable>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1527,8 +1521,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
             get => GetElement<FieldCodes>();
             set => SetElement(value);
         }
-
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
