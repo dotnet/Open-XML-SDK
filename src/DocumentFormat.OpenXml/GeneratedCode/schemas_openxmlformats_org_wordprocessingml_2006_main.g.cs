@@ -55626,41 +55626,26 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         ///<summary>
         ///useWord2013TrackBottomHyphenation.
         ///<para>When the item is serialized out as xml, its value is "useWord2013TrackBottomHyphenation".</para>
-<<<<<<< HEAD
         ///<para>This item is only available in Office2016.</para>
         ///</summary>
         [EnumString("useWord2013TrackBottomHyphenation")]
         [OfficeAvailability(FileFormatVersions.Office2016)]
-=======
-        ///</summary>
-        [EnumString("useWord2013TrackBottomHyphenation")]
->>>>>>> origin/master
         UseWord2013TrackBottomHyphenation,
         ///<summary>
         ///allowHyphenationAtTrackBottom.
         ///<para>When the item is serialized out as xml, its value is "allowHyphenationAtTrackBottom".</para>
-<<<<<<< HEAD
         ///<para>This item is only available in Office2016.</para>
         ///</summary>
         [EnumString("allowHyphenationAtTrackBottom")]
         [OfficeAvailability(FileFormatVersions.Office2016)]
-=======
-        ///</summary>
-        [EnumString("allowHyphenationAtTrackBottom")]
->>>>>>> origin/master
         AllowHyphenationAtTrackBottom,
         ///<summary>
         ///allowTextAfterFloatingTableBreak.
         ///<para>When the item is serialized out as xml, its value is "allowTextAfterFloatingTableBreak".</para>
-<<<<<<< HEAD
-        ///<para>This item is only available in Office2016.</para>
+        ///<para>This item is only available in Office2013.</para>
         ///</summary>
         [EnumString("allowTextAfterFloatingTableBreak")]
-        [OfficeAvailability(FileFormatVersions.Office2016)]
-=======
-        ///</summary>
-        [EnumString("allowTextAfterFloatingTableBreak")]
->>>>>>> origin/master
+        [OfficeAvailability(FileFormatVersions.Office2013)]
         AllowTextAfterFloatingTableBreak,
     }
 }
