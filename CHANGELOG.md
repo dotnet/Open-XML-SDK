@@ -7,7 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## Version 2.11.0 - Unreleased
 ### Added
 - Added `OpenXmlElementFunctionalExtensions.With` extension methods, which offer flexible means for constructing `OpenXmlElement` instances in the context of pure functional transformations.
+<<<<<<< HEAD
 - Added chartSpace and chart elements for the new 2016 namespace. This allows the connecting pieces for building a chart part with chart styles like "Sunburst".
+=======
+- Added additional `CompatSettingNameValues` values: `UseWord2013TrackBottomHyphenation`, `AllowHyphenationAtTrackBottom`, and `AllowTextAfterFloatingTableBreak` (#706).
+>>>>>>> origin/master
 
 ### Changes
 - Marked the property setters in `OpenXmlAttribute` as obsolete as structs should not have mutable state (#698)
