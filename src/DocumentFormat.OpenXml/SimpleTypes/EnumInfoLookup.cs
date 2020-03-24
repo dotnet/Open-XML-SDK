@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml
     ///   - Does not have an <see cref="EnumStringAttribute"/> for each member
     ///   - Has no members
     /// </remarks>
-    internal static class EnumStringLookup<TEnum>
+    internal static class EnumInfoLookup<TEnum>
         where TEnum : struct
     {
         private static EnumStringLookupImpl Instance { get; } = new EnumStringLookupImpl();
@@ -32,6 +32,8 @@ namespace DocumentFormat.OpenXml
         public static string ToString(TEnum value) => Instance.ToString(value);
 
         public static FileFormatVersions GetVersion(TEnum value) => Instance.GetVersion(value);
+
+        public static FileFormatVersions Version => Instance.Version;
 
         public static bool IsDefined(TEnum value) => Instance.IsDefined(value);
 
@@ -57,6 +59,8 @@ namespace DocumentFormat.OpenXml
             }
 
             public string ToString(TEnum value) => Lookup(value).Name;
+
+            public FileFormatVersions Version { get; }
 
             public FileFormatVersions GetVersion(TEnum value) => Lookup(value).Versions;
 
@@ -108,6 +112,9 @@ namespace DocumentFormat.OpenXml
                     return;
                 }
 
+                var initialVersion = enumType.GetCustomAttribute<OfficeAvailabilityAttribute>()?.OfficeVersion ?? FileFormatVersions.Office2007;
+                Version = initialVersion;
+
                 var nameLookup = new Dictionary<string, TEnum>(values.Length, StringComparer.Ordinal);
                 var enumInfo = new EnumStringInfo[values.Length];
 
@@ -124,7 +131,7 @@ namespace DocumentFormat.OpenXml
 
                     nameLookup.Add(enumString.Value, (TEnum)enumVal);
 
-                    var versions = officeAvailability?.OfficeVersion ?? FileFormatVersions.Office2007.AndLater();
+                    var versions = officeAvailability?.OfficeVersion ?? Version;
 
                     var index = Convert.ToInt32(enumVal);
 
