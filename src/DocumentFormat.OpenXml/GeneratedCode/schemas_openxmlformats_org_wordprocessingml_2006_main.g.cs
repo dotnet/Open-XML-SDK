@@ -55591,8 +55591,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         ///</summary>
         [EnumString("useWord2013TrackBottomHyphenation")]
         UseWord2013TrackBottomHyphenation,
-<<<<<<< HEAD
-=======
         ///<summary>
         ///allowHyphenationAtTrackBottom.
         ///<para>When the item is serialized out as xml, its value is "allowHyphenationAtTrackBottom".</para>
@@ -55605,6 +55603,5 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         ///</summary>
         [EnumString("allowTextAfterFloatingTableBreak")]
         AllowTextAfterFloatingTableBreak,
->>>>>>> origin/master
     }
 }
