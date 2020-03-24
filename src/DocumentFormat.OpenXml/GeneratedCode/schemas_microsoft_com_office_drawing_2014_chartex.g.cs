@@ -4996,6 +4996,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <summary>
     /// Defines the FormulaDirection enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum FormulaDirection
     {
         ///<summary>
@@ -5015,6 +5016,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <summary>
     /// Defines the StringDimensionType enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum StringDimensionType
     {
         ///<summary>
@@ -5028,6 +5030,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <summary>
     /// Defines the NumericDimensionType enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum NumericDimensionType
     {
         ///<summary>
@@ -5059,6 +5062,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <summary>
     /// Defines the SidePos enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum SidePos
     {
         ///<summary>
@@ -5090,6 +5094,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <summary>
     /// Defines the PosAlign enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum PosAlign
     {
         ///<summary>
@@ -5115,6 +5120,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <summary>
     /// Defines the AxisUnit enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum AxisUnit
     {
         ///<summary>
@@ -5182,6 +5188,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <summary>
     /// Defines the TickMarksType enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum TickMarksType
     {
         ///<summary>
@@ -5213,6 +5220,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <summary>
     /// Defines the SeriesLayout enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum SeriesLayout
     {
         ///<summary>
@@ -5256,6 +5264,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <summary>
     /// Defines the ParentLabelLayoutVal enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum ParentLabelLayoutVal
     {
         ///<summary>
@@ -5281,6 +5290,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <summary>
     /// Defines the IntervalClosedSide enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum IntervalClosedSide
     {
         ///<summary>
@@ -5300,6 +5310,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <summary>
     /// Defines the QuartileMethod enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum QuartileMethod
     {
         ///<summary>
@@ -5319,6 +5330,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <summary>
     /// Defines the DataLabelPos enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum DataLabelPos
     {
         ///<summary>
@@ -5380,6 +5392,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <summary>
     /// Defines the PageOrientation enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum PageOrientation
     {
         ///<summary>

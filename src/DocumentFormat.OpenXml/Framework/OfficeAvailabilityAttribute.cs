@@ -10,7 +10,7 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Defines an OfficeAvailabilityAttribute class to indicate whether the property is available in a specific version of an Office application.
     /// </summary>
-    [AttributeUsage(AttributeTargets.Property | AttributeTargets.Class | AttributeTargets.Field)]
+    [AttributeUsage(AttributeTargets.Property | AttributeTargets.Class | AttributeTargets.Field | AttributeTargets.Enum)]
     public sealed class OfficeAvailabilityAttribute : Attribute, IOpenXmlSimpleTypeValidator
     {
         /// <summary>
