@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -14,9 +15,6 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public class OpenXmlDomReader : OpenXmlReader
     {
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private static ReadOnlyCollection<OpenXmlAttribute> _emptyReadOnlyList;
-
         private readonly Stack<OpenXmlElement> _elementStack;
 
         private OpenXmlElement _rootElement;
@@ -87,12 +85,7 @@ namespace DocumentFormat.OpenXml
                 }
                 else
                 {
-                    if (_emptyReadOnlyList == null)
-                    {
-                        _emptyReadOnlyList = new ReadOnlyCollection<OpenXmlAttribute>(new List<OpenXmlAttribute>());
-                    }
-
-                    return _emptyReadOnlyList;
+                    return Cached.ReadOnlyCollection<OpenXmlAttribute>();
                 }
             }
         }
