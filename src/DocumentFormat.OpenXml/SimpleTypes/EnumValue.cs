@@ -98,28 +98,26 @@ namespace DocumentFormat.OpenXml
         {
             Debug.Assert(HasValue);
 
-            var supportedVersion = EnumStringLookup<T>.GetVersion(Value);
-
-            return supportedVersion.Includes(fileFormat);
+            return fileFormat.AtLeast(EnumInfoLookup<T>.GetVersion(Value));
         }
 
         private protected override bool ShouldParse(string value) => value != null;
 
         private protected override void ValidateSet(T value)
         {
-            if (!EnumStringLookup<T>.IsDefined(value))
+            if (!EnumInfoLookup<T>.IsDefined(value))
             {
                 throw new ArgumentOutOfRangeException(nameof(value), ExceptionMessages.InvalidEnumValue);
             }
         }
 
-        private protected override string GetText(T input) => EnumStringLookup<T>.ToString(input);
+        private protected override string GetText(T input) => EnumInfoLookup<T>.ToString(input);
 
-        private protected override bool TryParse(string input, out T value) => EnumStringLookup<T>.TryParse(input, out value);
+        private protected override bool TryParse(string input, out T value) => EnumInfoLookup<T>.TryParse(input, out value);
 
         private protected override T Parse(string input)
         {
-            if (EnumStringLookup<T>.TryParse(input, out var value))
+            if (EnumInfoLookup<T>.TryParse(input, out var value))
             {
                 return value;
             }

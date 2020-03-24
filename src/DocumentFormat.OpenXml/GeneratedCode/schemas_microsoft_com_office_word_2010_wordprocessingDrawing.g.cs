@@ -313,6 +313,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     /// <summary>
     /// Defines the SizeRelativeHorizontallyValues enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum SizeRelativeHorizontallyValues
     {
         ///<summary>
@@ -356,6 +357,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     /// <summary>
     /// Defines the SizeRelativeVerticallyValues enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum SizeRelativeVerticallyValues
     {
         ///<summary>

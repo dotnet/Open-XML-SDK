@@ -34003,302 +34003,402 @@ namespace DocumentFormat.OpenXml.Drawing
         ///<summary>
         ///darkBlue.
         ///<para>When the item is serialized out as xml, its value is "darkBlue".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("darkBlue")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         DarkBlue2010,
         ///<summary>
         ///darkCyan.
         ///<para>When the item is serialized out as xml, its value is "darkCyan".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("darkCyan")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         DarkCyan2010,
         ///<summary>
         ///darkGoldenrod.
         ///<para>When the item is serialized out as xml, its value is "darkGoldenrod".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("darkGoldenrod")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         DarkGoldenrod2010,
         ///<summary>
         ///darkGray.
         ///<para>When the item is serialized out as xml, its value is "darkGray".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("darkGray")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         DarkGray2010,
         ///<summary>
         ///darkGrey.
         ///<para>When the item is serialized out as xml, its value is "darkGrey".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("darkGrey")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         DarkGrey2010,
         ///<summary>
         ///darkGreen.
         ///<para>When the item is serialized out as xml, its value is "darkGreen".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("darkGreen")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         DarkGreen2010,
         ///<summary>
         ///darkKhaki.
         ///<para>When the item is serialized out as xml, its value is "darkKhaki".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("darkKhaki")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         DarkKhaki2010,
         ///<summary>
         ///darkMagenta.
         ///<para>When the item is serialized out as xml, its value is "darkMagenta".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("darkMagenta")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         DarkMagenta2010,
         ///<summary>
         ///darkOliveGreen.
         ///<para>When the item is serialized out as xml, its value is "darkOliveGreen".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("darkOliveGreen")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         DarkOliveGreen2010,
         ///<summary>
         ///darkOrange.
         ///<para>When the item is serialized out as xml, its value is "darkOrange".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("darkOrange")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         DarkOrange2010,
         ///<summary>
         ///darkOrchid.
         ///<para>When the item is serialized out as xml, its value is "darkOrchid".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("darkOrchid")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         DarkOrchid2010,
         ///<summary>
         ///darkRed.
         ///<para>When the item is serialized out as xml, its value is "darkRed".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("darkRed")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         DarkRed2010,
         ///<summary>
         ///darkSalmon.
         ///<para>When the item is serialized out as xml, its value is "darkSalmon".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("darkSalmon")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         DarkSalmon2010,
         ///<summary>
         ///darkSeaGreen.
         ///<para>When the item is serialized out as xml, its value is "darkSeaGreen".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("darkSeaGreen")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         DarkSeaGreen2010,
         ///<summary>
         ///darkSlateBlue.
         ///<para>When the item is serialized out as xml, its value is "darkSlateBlue".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("darkSlateBlue")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         DarkSlateBlue2010,
         ///<summary>
         ///darkSlateGray.
         ///<para>When the item is serialized out as xml, its value is "darkSlateGray".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("darkSlateGray")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         DarkSlateGray2010,
         ///<summary>
         ///darkSlateGrey.
         ///<para>When the item is serialized out as xml, its value is "darkSlateGrey".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("darkSlateGrey")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         DarkSlateGrey2010,
         ///<summary>
         ///darkTurquoise.
         ///<para>When the item is serialized out as xml, its value is "darkTurquoise".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("darkTurquoise")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         DarkTurquoise2010,
         ///<summary>
         ///darkViolet.
         ///<para>When the item is serialized out as xml, its value is "darkViolet".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("darkViolet")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         DarkViolet2010,
         ///<summary>
         ///lightBlue.
         ///<para>When the item is serialized out as xml, its value is "lightBlue".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("lightBlue")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         LightBlue2010,
         ///<summary>
         ///lightCoral.
         ///<para>When the item is serialized out as xml, its value is "lightCoral".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("lightCoral")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         LightCoral2010,
         ///<summary>
         ///lightCyan.
         ///<para>When the item is serialized out as xml, its value is "lightCyan".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("lightCyan")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         LightCyan2010,
         ///<summary>
         ///lightGoldenrodYellow.
         ///<para>When the item is serialized out as xml, its value is "lightGoldenrodYellow".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("lightGoldenrodYellow")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         LightGoldenrodYellow2010,
         ///<summary>
         ///lightGray.
         ///<para>When the item is serialized out as xml, its value is "lightGray".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("lightGray")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         LightGray2010,
         ///<summary>
         ///lightGrey.
         ///<para>When the item is serialized out as xml, its value is "lightGrey".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("lightGrey")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         LightGrey2010,
         ///<summary>
         ///lightGreen.
         ///<para>When the item is serialized out as xml, its value is "lightGreen".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("lightGreen")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         LightGreen2010,
         ///<summary>
         ///lightPink.
         ///<para>When the item is serialized out as xml, its value is "lightPink".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("lightPink")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         LightPink2010,
         ///<summary>
         ///lightSalmon.
         ///<para>When the item is serialized out as xml, its value is "lightSalmon".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("lightSalmon")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         LightSalmon2010,
         ///<summary>
         ///lightSeaGreen.
         ///<para>When the item is serialized out as xml, its value is "lightSeaGreen".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("lightSeaGreen")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         LightSeaGreen2010,
         ///<summary>
         ///lightSkyBlue.
         ///<para>When the item is serialized out as xml, its value is "lightSkyBlue".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("lightSkyBlue")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         LightSkyBlue2010,
         ///<summary>
         ///lightSlateGray.
         ///<para>When the item is serialized out as xml, its value is "lightSlateGray".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("lightSlateGray")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         LightSlateGray2010,
         ///<summary>
         ///lightSlateGrey.
         ///<para>When the item is serialized out as xml, its value is "lightSlateGrey".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("lightSlateGrey")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         LightSlateGrey2010,
         ///<summary>
         ///lightSteelBlue.
         ///<para>When the item is serialized out as xml, its value is "lightSteelBlue".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("lightSteelBlue")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         LightSteelBlue2010,
         ///<summary>
         ///lightYellow.
         ///<para>When the item is serialized out as xml, its value is "lightYellow".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("lightYellow")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         LightYellow2010,
         ///<summary>
         ///mediumAquamarine.
         ///<para>When the item is serialized out as xml, its value is "mediumAquamarine".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("mediumAquamarine")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         MediumAquamarine2010,
         ///<summary>
         ///mediumBlue.
         ///<para>When the item is serialized out as xml, its value is "mediumBlue".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("mediumBlue")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         MediumBlue2010,
         ///<summary>
         ///mediumOrchid.
         ///<para>When the item is serialized out as xml, its value is "mediumOrchid".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("mediumOrchid")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         MediumOrchid2010,
         ///<summary>
         ///mediumPurple.
         ///<para>When the item is serialized out as xml, its value is "mediumPurple".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("mediumPurple")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         MediumPurple2010,
         ///<summary>
         ///mediumSeaGreen.
         ///<para>When the item is serialized out as xml, its value is "mediumSeaGreen".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("mediumSeaGreen")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         MediumSeaGreen2010,
         ///<summary>
         ///mediumSlateBlue.
         ///<para>When the item is serialized out as xml, its value is "mediumSlateBlue".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("mediumSlateBlue")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         MediumSlateBlue2010,
         ///<summary>
         ///mediumSpringGreen.
         ///<para>When the item is serialized out as xml, its value is "mediumSpringGreen".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("mediumSpringGreen")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         MediumSpringGreen2010,
         ///<summary>
         ///mediumTurquoise.
         ///<para>When the item is serialized out as xml, its value is "mediumTurquoise".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("mediumTurquoise")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         MediumTurquoise2010,
         ///<summary>
         ///mediumVioletRed.
         ///<para>When the item is serialized out as xml, its value is "mediumVioletRed".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("mediumVioletRed")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         MediumVioletRed2010,
         ///<summary>
         ///dkGrey.
         ///<para>When the item is serialized out as xml, its value is "dkGrey".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("dkGrey")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         DarkGrey,
         ///<summary>
         ///dimGrey.
         ///<para>When the item is serialized out as xml, its value is "dimGrey".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("dimGrey")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         DimGrey,
         ///<summary>
         ///dkSlateGrey.
         ///<para>When the item is serialized out as xml, its value is "dkSlateGrey".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("dkSlateGrey")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         DarkSlateGrey,
         ///<summary>
         ///grey.
         ///<para>When the item is serialized out as xml, its value is "grey".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("grey")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         Grey,
         ///<summary>
         ///ltGrey.
         ///<para>When the item is serialized out as xml, its value is "ltGrey".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("ltGrey")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         LightGrey,
         ///<summary>
         ///ltSlateGrey.
         ///<para>When the item is serialized out as xml, its value is "ltSlateGrey".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("ltSlateGrey")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         LightSlateGrey,
         ///<summary>
         ///slateGrey.
         ///<para>When the item is serialized out as xml, its value is "slateGrey".</para>
+        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("slateGrey")]
+        [OfficeAvailability(FileFormatVersions.Office2010)]
         SlateGrey,
     }
 }
