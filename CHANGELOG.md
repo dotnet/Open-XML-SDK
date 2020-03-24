@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Added `FileFormatVersions.2019` enum (#695)
 - Added `OpenXmlElementFunctionalExtensions.With(...)` extension methods, which offer flexible means for constructing `OpenXmlElement` instances in the context of pure functional transformations (#679)
+- Added additional `CompatSettingNameValues` values: `UseWord2013TrackBottomHyphenation`, `AllowHyphenationAtTrackBottom`, and `AllowTextAfterFloatingTableBreak` (#706).
 
 ### Changes
 - Marked the property setters in `OpenXmlAttribute` as obsolete as structs should not have mutable state (#698)
