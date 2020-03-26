@@ -14,6 +14,7 @@ namespace DocumentFormat.OpenXml
             FileFormatVersions.Office2010,
             FileFormatVersions.Office2013,
             FileFormatVersions.Office2016,
+            FileFormatVersions.Office2019,
         };
 
         /// <summary>
@@ -26,7 +27,8 @@ namespace DocumentFormat.OpenXml
             return version == FileFormatVersions.Office2007
                 || version == FileFormatVersions.Office2010
                 || version == FileFormatVersions.Office2013
-                || version == FileFormatVersions.Office2016;
+                || version == FileFormatVersions.Office2016
+                || version == FileFormatVersions.Office2019;
         }
 
         /// <summary>
@@ -40,7 +42,8 @@ namespace DocumentFormat.OpenXml
                   FileFormatVersions.Office2007
                 | FileFormatVersions.Office2010
                 | FileFormatVersions.Office2013
-                | FileFormatVersions.Office2016;
+                | FileFormatVersions.Office2016
+                | FileFormatVersions.Office2019;
 
             return version == AllVersions;
         }
@@ -58,16 +61,22 @@ namespace DocumentFormat.OpenXml
                     return FileFormatVersions.Office2007
                          | FileFormatVersions.Office2010
                          | FileFormatVersions.Office2013
-                         | FileFormatVersions.Office2016;
+                         | FileFormatVersions.Office2016
+                         | FileFormatVersions.Office2019;
                 case FileFormatVersions.Office2010:
                     return FileFormatVersions.Office2010
                          | FileFormatVersions.Office2013
-                         | FileFormatVersions.Office2016;
+                         | FileFormatVersions.Office2016
+                         | FileFormatVersions.Office2019;
                 case FileFormatVersions.Office2013:
                     return FileFormatVersions.Office2013
-                         | FileFormatVersions.Office2016;
+                         | FileFormatVersions.Office2016
+                         | FileFormatVersions.Office2019;
                 case FileFormatVersions.Office2016:
-                    return FileFormatVersions.Office2016;
+                    return FileFormatVersions.Office2016
+                         | FileFormatVersions.Office2019;
+                case FileFormatVersions.Office2019:
+                    return FileFormatVersions.Office2019;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(version));
             }
@@ -136,6 +145,11 @@ namespace DocumentFormat.OpenXml
                 if ((FileFormatVersions.Office2016 & v) == FileFormatVersions.Office2016)
                 {
                     return 4;
+                }
+
+                if ((FileFormatVersions.Office2019 & v) == FileFormatVersions.Office2019)
+                {
+                    return 5;
                 }
 
                 throw new ArgumentOutOfRangeException(name);
