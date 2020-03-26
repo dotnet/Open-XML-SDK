@@ -45397,7 +45397,7 @@
        "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Xsddouble"
       },
       {
-       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.BinCountXsdunsignedInt"
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.XsdunsignedInt"
       }
      ],
      "MinOccurs": 0,
@@ -45463,7 +45463,7 @@
   "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartSpace",
   "Value": [
    {
-    "Key": "Office2016",
+    "Key": "Office2016, Office2019",
     "Value": {
      "ChildrenParticles": [
       {
@@ -46261,7 +46261,7 @@
     "Value": {
      "ChildrenParticles": [
       {
-       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.IdxXsdunsignedInt",
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.UnsignedIntegerType",
        "MaxOccurs": 0,
        "MinOccurs": 0
       }
