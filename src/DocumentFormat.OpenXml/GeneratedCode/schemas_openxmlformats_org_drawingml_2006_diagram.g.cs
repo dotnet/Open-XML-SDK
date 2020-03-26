@@ -9095,26 +9095,20 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         ///<summary>
         ///top.
         ///<para>When the item is serialized out as xml, its value is "top".</para>
-        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("top")]
-        [OfficeAvailability(FileFormatVersions.Office2010)]
         Top2010,
         ///<summary>
         ///center.
         ///<para>When the item is serialized out as xml, its value is "center".</para>
-        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("center")]
-        [OfficeAvailability(FileFormatVersions.Office2010)]
         Middle2010,
         ///<summary>
         ///bottom.
         ///<para>When the item is serialized out as xml, its value is "bottom".</para>
-        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("bottom")]
-        [OfficeAvailability(FileFormatVersions.Office2010)]
         Bottom2010,
     }
 }

@@ -44152,10 +44152,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         ///<summary>
         ///d.
         ///<para>When the item is serialized out as xml, its value is "d".</para>
-        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("d")]
-        [OfficeAvailability(FileFormatVersions.Office2010)]
         Date,
     }
 
@@ -44209,10 +44207,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         ///<summary>
         ///topEnd.
         ///<para>When the item is serialized out as xml, its value is "topEnd".</para>
-        ///<para>This item is only available in Office2010.</para>
         ///</summary>
         [EnumString("topEnd")]
-        [OfficeAvailability(FileFormatVersions.Office2010)]
         TopEnd,
     }
 

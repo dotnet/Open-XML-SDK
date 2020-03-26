@@ -214,7 +214,6 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
     /// <summary>
     /// Defines the ModelTimeGroupingContentType enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum ModelTimeGroupingContentType
     {
         ///<summary>

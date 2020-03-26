@@ -881,7 +881,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <summary>
     /// Defines the SdtAppearance enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum SdtAppearance
     {
         ///<summary>

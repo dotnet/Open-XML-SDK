@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
+using DocumentFormat.OpenXml.Drawing.Charts;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
@@ -607,7 +608,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2016</para>
+        /// <para>RelId of the relationship for the external data, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
         /// <remark>
@@ -619,10 +620,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         public StringValue Id { get; set; }
 
         /// <summary>
-        /// <para>autoUpdate, this property is only available in Office2016</para>
-        /// <para>Represents the following attribute in the schema: autoUpdate</para>
+        /// <para>True if the external link should automatically update, this property is only available in Office2016</para>
+        /// <para>Represents the following attribute in the schema: cx:autoUpdate</para>
         /// </summary>
-        [SchemaAttr(0, "autoUpdate")]
+        /// <remark>
+        /// xmlns:cx=http://schemas.microsoft.com/office/drawing/2014/chartex
+        /// </remark>
+        [OfficeAvailability(FileFormatVersions.Office2016)]
+        [SchemaAttr(80, "autoUpdate")]
         [Index(1)]
         public BooleanValue AutoUpdate { get; set; }
 
@@ -2137,27 +2142,27 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     }
 
     /// <summary>
-    /// <para>Defines the BinCountXsdunsignedInt Class.</para>
+    /// <para>Defines the XsdunsignedInt Class.</para>
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:binCount.</para>
     /// </summary>
     [NumberValidator(SimpleType = typeof(UInt32Value))]
     [SchemaAttr(80, "binCount")]
     [OfficeAvailability(FileFormatVersions.Office2016)]
-    public partial class BinCountXsdunsignedInt : OpenXmlLeafTextElement
+    public partial class XsdunsignedInt : OpenXmlLeafTextElement
     {
         /// <summary>
-        /// Initializes a new instance of the BinCountXsdunsignedInt class.
+        /// Initializes a new instance of the XsdunsignedInt class.
         /// </summary>
-        public BinCountXsdunsignedInt() : base()
+        public XsdunsignedInt() : base()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the BinCountXsdunsignedInt class with the specified text content.
+        /// Initializes a new instance of the XsdunsignedInt class with the specified text content.
         /// </summary>
         /// <param name="text">Specifies the text content of the element.</param>
-        public BinCountXsdunsignedInt(string text) : base(text)
+        public XsdunsignedInt(string text) : base(text)
         {
         }
 
@@ -2167,41 +2172,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         }
 
         /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<BinCountXsdunsignedInt>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the IdxXsdunsignedInt Class.</para>
-    /// <para>This class is available in Office 2016 or above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is cx:idx.</para>
-    /// </summary>
-    [NumberValidator(SimpleType = typeof(UInt32Value))]
-    [SchemaAttr(80, "idx")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
-    public partial class IdxXsdunsignedInt : OpenXmlLeafTextElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the IdxXsdunsignedInt class.
-        /// </summary>
-        public IdxXsdunsignedInt() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the IdxXsdunsignedInt class with the specified text content.
-        /// </summary>
-        /// <param name="text">Specifies the text content of the element.</param>
-        public IdxXsdunsignedInt(string text) : base(text)
-        {
-        }
-
-        internal override OpenXmlSimpleType InnerTextToValue(string text)
-        {
-            return new UInt32Value { InnerText = text };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<IdxXsdunsignedInt>(deep);
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<XsdunsignedInt>(deep);
     }
 
     /// <summary>
@@ -2322,11 +2293,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description>Xsddouble &lt;cx:binSize></description></item>
-    ///   <item><description>BinCountXsdunsignedInt &lt;cx:binCount></description></item>
+    ///   <item><description>XsdunsignedInt &lt;cx:binCount></description></item>
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Xsddouble), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(BinCountXsdunsignedInt), FileFormatVersions.Office2016)]
+    [ChildElementInfo(typeof(XsdunsignedInt), FileFormatVersions.Office2016)]
     [SchemaAttr(80, "binning")]
     [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class Binning : OpenXmlCompositeElement
@@ -2404,22 +2375,22 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         }
 
         /// <summary>
-        /// <para>BinCountXsdunsignedInt.</para>
+        /// <para>XsdunsignedInt.</para>
         /// <para>Represents the following element tag in the schema: cx:binCount.</para>
         /// </summary>
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public BinCountXsdunsignedInt BinCountXsdunsignedInt
+        public XsdunsignedInt XsdunsignedInt
         {
-            get => GetElement<BinCountXsdunsignedInt>();
+            get => GetElement<XsdunsignedInt>();
             set => SetElement(value);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Xsddouble), 1, 1, version: FileFormatVersions.Office2016),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.BinCountXsdunsignedInt), 1, 1, version: FileFormatVersions.Office2016)
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.XsdunsignedInt), 1, 1, version: FileFormatVersions.Office2016)
         }.Compile();
 
         internal override CompiledParticle CompiledParticle => _constraint;
@@ -2464,10 +2435,10 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>IdxXsdunsignedInt &lt;cx:idx></description></item>
+    ///   <item><description>UnsignedIntegerType &lt;cx:idx></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(IdxXsdunsignedInt), FileFormatVersions.Office2016)]
+    [ChildElementInfo(typeof(UnsignedIntegerType), FileFormatVersions.Office2016)]
     [SchemaAttr(80, "subtotals")]
     [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class Subtotals : OpenXmlCompositeElement
@@ -2505,7 +2476,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.IdxXsdunsignedInt), 0, 0, version: FileFormatVersions.Office2016)
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.UnsignedIntegerType), 0, 0, version: FileFormatVersions.Office2016)
         }.Compile();
 
         internal override CompiledParticle CompiledParticle => _constraint;
@@ -5224,9 +5195,37 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     }
 
     /// <summary>
+    /// <para>Index of subtotal data point.</para>
+    /// <para>This class is available in Office 2016 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is cx:idx.</para>
+    /// </summary>
+    [SchemaAttr(80, "idx")]
+    [OfficeAvailability(FileFormatVersions.Office2016)]
+    public partial class UnsignedIntegerType : OpenXmlLeafElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the UnsignedIntegerType class.
+        /// </summary>
+        public UnsignedIntegerType() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>Integer Value</para>
+        /// <para>Represents the following attribute in the schema: val</para>
+        /// </summary>
+        [RequiredValidator()]
+        [SchemaAttr(0, "val")]
+        [Index(0)]
+        public UInt32Value Val { get; set; }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<UnsignedIntegerType>(deep);
+    }
+
+    /// <summary>
     /// Defines the FormulaDirection enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum FormulaDirection
     {
         ///<summary>
@@ -5246,7 +5245,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <summary>
     /// Defines the StringDimensionType enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum StringDimensionType
     {
         ///<summary>
@@ -5260,7 +5258,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <summary>
     /// Defines the NumericDimensionType enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum NumericDimensionType
     {
         ///<summary>
@@ -5292,7 +5289,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <summary>
     /// Defines the SidePos enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum SidePos
     {
         ///<summary>
@@ -5324,7 +5320,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <summary>
     /// Defines the PosAlign enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum PosAlign
     {
         ///<summary>
@@ -5350,7 +5345,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <summary>
     /// Defines the AxisUnit enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum AxisUnit
     {
         ///<summary>
@@ -5418,7 +5412,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <summary>
     /// Defines the TickMarksType enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum TickMarksType
     {
         ///<summary>
@@ -5450,7 +5443,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <summary>
     /// Defines the SeriesLayout enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum SeriesLayout
     {
         ///<summary>
@@ -5494,7 +5486,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <summary>
     /// Defines the ParentLabelLayoutVal enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum ParentLabelLayoutVal
     {
         ///<summary>
@@ -5520,7 +5511,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <summary>
     /// Defines the IntervalClosedSide enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum IntervalClosedSide
     {
         ///<summary>
@@ -5540,7 +5530,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <summary>
     /// Defines the QuartileMethod enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum QuartileMethod
     {
         ///<summary>
@@ -5560,7 +5549,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <summary>
     /// Defines the DataLabelPos enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum DataLabelPos
     {
         ///<summary>
@@ -5622,7 +5610,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <summary>
     /// Defines the PageOrientation enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum PageOrientation
     {
         ///<summary>

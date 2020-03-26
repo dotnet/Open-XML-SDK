@@ -2977,7 +2977,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <summary>
     /// Defines the TransitionPatternValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum TransitionPatternValues
     {
         ///<summary>
@@ -2997,7 +2996,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <summary>
     /// Defines the TransitionCenterDirectionTypeValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum TransitionCenterDirectionTypeValues
     {
         ///<summary>
@@ -3011,7 +3009,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <summary>
     /// Defines the TransitionShredPatternValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum TransitionShredPatternValues
     {
         ///<summary>
@@ -3031,7 +3028,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <summary>
     /// Defines the TransitionLeftRightDirectionTypeValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum TransitionLeftRightDirectionTypeValues
     {
         ///<summary>

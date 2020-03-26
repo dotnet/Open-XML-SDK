@@ -4751,7 +4751,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <summary>
     /// Defines the OnOffValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum OnOffValues
     {
         ///<summary>
@@ -4783,7 +4782,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <summary>
     /// Defines the SchemeColorValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum SchemeColorValues
     {
         ///<summary>
@@ -4893,7 +4891,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <summary>
     /// Defines the RectangleAlignmentValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum RectangleAlignmentValues
     {
         ///<summary>
@@ -4961,7 +4958,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <summary>
     /// Defines the PathShadeTypeValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum PathShadeTypeValues
     {
         ///<summary>
@@ -4987,7 +4983,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <summary>
     /// Defines the LineCapValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum LineCapValues
     {
         ///<summary>
@@ -5013,7 +5008,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <summary>
     /// Defines the PresetLineDashValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum PresetLineDashValues
     {
         ///<summary>
@@ -5087,7 +5081,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <summary>
     /// Defines the PenAlignmentValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum PenAlignmentValues
     {
         ///<summary>
@@ -5107,7 +5100,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <summary>
     /// Defines the CompoundLineValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum CompoundLineValues
     {
         ///<summary>
@@ -5145,7 +5137,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <summary>
     /// Defines the PresetCameraTypeValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum PresetCameraTypeValues
     {
         ///<summary>
@@ -5525,7 +5516,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <summary>
     /// Defines the LightRigTypeValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum LightRigTypeValues
     {
         ///<summary>
@@ -5695,7 +5685,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <summary>
     /// Defines the LightRigDirectionValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum LightRigDirectionValues
     {
         ///<summary>
@@ -5751,7 +5740,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <summary>
     /// Defines the BevelPresetTypeValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum BevelPresetTypeValues
     {
         ///<summary>
@@ -5831,7 +5819,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <summary>
     /// Defines the PresetMaterialTypeValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum PresetMaterialTypeValues
     {
         ///<summary>
@@ -5935,7 +5922,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <summary>
     /// Defines the LigaturesValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum LigaturesValues
     {
         ///<summary>
@@ -6039,7 +6025,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <summary>
     /// Defines the NumberFormValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum NumberFormValues
     {
         ///<summary>
@@ -6065,7 +6050,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <summary>
     /// Defines the NumberSpacingValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum NumberSpacingValues
     {
         ///<summary>

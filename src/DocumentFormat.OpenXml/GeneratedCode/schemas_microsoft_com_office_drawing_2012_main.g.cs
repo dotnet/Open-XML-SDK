@@ -261,7 +261,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
     /// <summary>
     /// Defines the TargetScreenSize enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum TargetScreenSize
     {
         ///<summary>

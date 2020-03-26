@@ -31342,10 +31342,6 @@
     ]
   },
   {
-    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.BinCountXsdunsignedInt",
-    "Children": []
-  },
-  {
     "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Binning",
     "Children": [
       {
@@ -31640,10 +31636,6 @@
         "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
       }
     ]
-  },
-  {
-    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.IdxXsdunsignedInt",
-    "Children": []
   },
   {
     "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Legend",
@@ -32076,6 +32068,10 @@
     ]
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.UnsignedIntegerType",
+    "Children": []
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueAxisScaling",
     "Children": []
   },
@@ -32085,6 +32081,10 @@
   },
   {
     "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Xsddouble",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.XsdunsignedInt",
     "Children": []
   },
   {

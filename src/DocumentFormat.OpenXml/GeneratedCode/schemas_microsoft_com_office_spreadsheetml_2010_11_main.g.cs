@@ -5036,7 +5036,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <summary>
     /// Defines the TimelineStyleType enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum TimelineStyleType
     {
         ///<summary>
@@ -5086,7 +5085,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <summary>
     /// Defines the CalculatedMemberNumberFormat enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum CalculatedMemberNumberFormat
     {
         ///<summary>
@@ -5112,7 +5110,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <summary>
     /// Defines the SXVCellType enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum SXVCellType
     {
         ///<summary>
@@ -5156,7 +5153,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <summary>
     /// Defines the MovingPeriodStep enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum MovingPeriodStep
     {
         ///<summary>
@@ -5194,7 +5190,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <summary>
     /// Defines the QuestionType enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum QuestionType
     {
         ///<summary>
@@ -5244,7 +5239,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <summary>
     /// Defines the QuestionFormat enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum QuestionFormat
     {
         ///<summary>
@@ -5312,7 +5306,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <summary>
     /// Defines the SurveyPosition enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum SurveyPosition
     {
         ///<summary>

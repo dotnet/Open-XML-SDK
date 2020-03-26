@@ -8421,7 +8421,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <summary>
     /// Defines the DisplayBlanksAsValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum DisplayBlanksAsValues
     {
         ///<summary>
@@ -8447,7 +8446,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <summary>
     /// Defines the SparklineAxisMinMaxValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum SparklineAxisMinMaxValues
     {
         ///<summary>
@@ -8473,7 +8471,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <summary>
     /// Defines the SparklineTypeValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum SparklineTypeValues
     {
         ///<summary>
@@ -8499,7 +8496,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <summary>
     /// Defines the PivotShowAsValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum PivotShowAsValues
     {
         ///<summary>
@@ -8543,7 +8539,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <summary>
     /// Defines the DataBarDirectionValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum DataBarDirectionValues
     {
         ///<summary>
@@ -8569,7 +8564,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <summary>
     /// Defines the DataBarAxisPositionValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum DataBarAxisPositionValues
     {
         ///<summary>
@@ -8595,7 +8589,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <summary>
     /// Defines the ConditionalFormattingValueObjectTypeValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum ConditionalFormattingValueObjectTypeValues
     {
         ///<summary>
@@ -8651,7 +8644,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <summary>
     /// Defines the IconSetTypeValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum IconSetTypeValues
     {
         ///<summary>
@@ -8785,7 +8777,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <summary>
     /// Defines the PivotEditValueTypeValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum PivotEditValueTypeValues
     {
         ///<summary>
@@ -8823,7 +8814,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <summary>
     /// Defines the AllocationMethodValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum AllocationMethodValues
     {
         ///<summary>
@@ -8855,7 +8845,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <summary>
     /// Defines the SlicerStyleTypeValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum SlicerStyleTypeValues
     {
         ///<summary>
@@ -8911,7 +8900,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <summary>
     /// Defines the CheckedValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum CheckedValues
     {
         ///<summary>
@@ -8937,7 +8925,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <summary>
     /// Defines the DropStyleValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum DropStyleValues
     {
         ///<summary>
@@ -8963,7 +8950,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <summary>
     /// Defines the SelectionTypeValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum SelectionTypeValues
     {
         ///<summary>
@@ -8989,7 +8975,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <summary>
     /// Defines the TextHorizontalAlignmentValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum TextHorizontalAlignmentValues
     {
         ///<summary>
@@ -9027,7 +9012,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <summary>
     /// Defines the TextVerticalAlignmentValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum TextVerticalAlignmentValues
     {
         ///<summary>
@@ -9065,7 +9049,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <summary>
     /// Defines the EditValidationValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum EditValidationValues
     {
         ///<summary>
@@ -9103,7 +9086,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <summary>
     /// Defines the OlapSlicerCacheSortOrderValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum OlapSlicerCacheSortOrderValues
     {
         ///<summary>
@@ -9129,7 +9111,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <summary>
     /// Defines the TabularSlicerCacheSortOrderValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum TabularSlicerCacheSortOrderValues
     {
         ///<summary>
@@ -9149,7 +9130,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <summary>
     /// Defines the SlicerCacheCrossFilterValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum SlicerCacheCrossFilterValues
     {
         ///<summary>
@@ -9175,7 +9155,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <summary>
     /// Defines the ObjectTypeValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum ObjectTypeValues
     {
         ///<summary>
