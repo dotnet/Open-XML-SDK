@@ -42,6 +42,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IsolatedStorageExceptionWorkaround", "samples\IsolatedStorageExceptionWorkaround\IsolatedStorageExceptionWorkaround.csproj", "{F38D119D-A5B7-4027-83B1-804432922E55}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "minsunburstppt", "samples\SunburstChartExample\minsunburstppt.csproj", "{D8AA334F-A60C-4917-9981-E5D0F9D1E400}"
+	ProjectSection(ProjectDependencies) = postProject
+		{16941A4A-F8DE-4C8D-BA2B-3C0774848D4B} = {16941A4A-F8DE-4C8D-BA2B-3C0774848D4B}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
