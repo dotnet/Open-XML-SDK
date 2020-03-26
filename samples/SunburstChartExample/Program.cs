@@ -20,8 +20,7 @@ namespace CreatePresentationDocument
     {
         private static void Main(string[] args)
         {
-            // TODO: replace "<path>" with the output path for the target document.
-            var filepath = @"<path>\sunburst_presentation.pptx";
+            var filepath = @"./sunburst_presentation.pptx";
             CreatePresentation(filepath);
         }
 
