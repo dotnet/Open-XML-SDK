@@ -5246,6 +5246,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <summary>
     /// Defines the ColorStyleMethodEnum enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum ColorStyleMethodEnum
     {
         ///<summary>
@@ -5283,6 +5284,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <summary>
     /// Defines the StyleReferenceModifierEnum enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum StyleReferenceModifierEnum
     {
         ///<summary>
@@ -5296,6 +5298,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <summary>
     /// Defines the StyleColorEnum enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum StyleColorEnum
     {
         ///<summary>
@@ -5309,6 +5312,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <summary>
     /// Defines the StyleEntryModifierEnum enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum StyleEntryModifierEnum
     {
         ///<summary>
@@ -5328,6 +5332,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <summary>
     /// Defines the MarkerStyle enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum MarkerStyle
     {
         ///<summary>
@@ -5389,6 +5394,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <summary>
     /// Defines the Boolean enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum Boolean
     {
         ///<summary>
@@ -5414,6 +5420,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <summary>
     /// Defines the TickMarkNinch enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum TickMarkNinch
     {
         ///<summary>
@@ -5451,6 +5458,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <summary>
     /// Defines the TickLabelPositionNinch enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum TickLabelPositionNinch
     {
         ///<summary>
@@ -5488,6 +5496,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <summary>
     /// Defines the DataLabelsPosition enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum DataLabelsPosition
     {
         ///<summary>
@@ -5525,6 +5534,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <summary>
     /// Defines the LegendPosition enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum LegendPosition
     {
         ///<summary>
@@ -5562,6 +5572,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <summary>
     /// Defines the TitlePosition enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum TitlePosition
     {
         ///<summary>

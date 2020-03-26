@@ -15778,6 +15778,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <summary>
     /// Defines the GalleryShowInRibbonValues enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum GalleryShowInRibbonValues
     {
         ///<summary>
@@ -15797,6 +15798,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <summary>
     /// Defines the SizeValues enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum SizeValues
     {
         ///<summary>
@@ -15816,6 +15818,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <summary>
     /// Defines the ItemSizeValues enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum ItemSizeValues
     {
         ///<summary>
@@ -15835,6 +15838,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <summary>
     /// Defines the BoxStyleValues enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum BoxStyleValues
     {
         ///<summary>
@@ -15854,6 +15858,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <summary>
     /// Defines the TaskSizesValues enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum TaskSizesValues
     {
         ///<summary>
@@ -15897,6 +15902,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <summary>
     /// Defines the ExpandValues enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum ExpandValues
     {
         ///<summary>
@@ -15958,6 +15964,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <summary>
     /// Defines the StyleValues enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum StyleValues
     {
         ///<summary>
@@ -15983,6 +15990,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <summary>
     /// Defines the Style2Values enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum Style2Values
     {
         ///<summary>
@@ -16008,6 +16016,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <summary>
     /// Defines the LayoutChildrenValues enumeration.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum LayoutChildrenValues
     {
         ///<summary>
