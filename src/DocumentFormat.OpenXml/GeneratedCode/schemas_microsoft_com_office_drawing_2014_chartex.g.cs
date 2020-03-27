@@ -244,40 +244,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     }
 
     /// <summary>
-    /// <para>Defines the Openxmlsdk_49BECFFA_3B03_4D13_8272_D6CCB22579E3XsdunsignedInt Class.</para>
-    /// <para>This class is available in Office 2016 or above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is cx:openxmlsdk_49BECFFA_3B03_4D13_8272_D6CCB22579E3.</para>
-    /// </summary>
-    [NumberValidator(SimpleType = typeof(UInt32Value))]
-    [SchemaAttr(80, "openxmlsdk_49BECFFA_3B03_4D13_8272_D6CCB22579E3")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
-    public partial class Openxmlsdk_49BECFFA_3B03_4D13_8272_D6CCB22579E3XsdunsignedInt : OpenXmlLeafTextElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the Openxmlsdk_49BECFFA_3B03_4D13_8272_D6CCB22579E3XsdunsignedInt class.
-        /// </summary>
-        public Openxmlsdk_49BECFFA_3B03_4D13_8272_D6CCB22579E3XsdunsignedInt() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the Openxmlsdk_49BECFFA_3B03_4D13_8272_D6CCB22579E3XsdunsignedInt class with the specified text content.
-        /// </summary>
-        /// <param name="text">Specifies the text content of the element.</param>
-        public Openxmlsdk_49BECFFA_3B03_4D13_8272_D6CCB22579E3XsdunsignedInt(string text) : base(text)
-        {
-        }
-
-        internal override OpenXmlSimpleType InnerTextToValue(string text)
-        {
-            return new UInt32Value { InnerText = text };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Openxmlsdk_49BECFFA_3B03_4D13_8272_D6CCB22579E3XsdunsignedInt>(deep);
-    }
-
-    /// <summary>
     /// <para>Defines the BinCountXsdunsignedInt Class.</para>
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:binCount.</para>
