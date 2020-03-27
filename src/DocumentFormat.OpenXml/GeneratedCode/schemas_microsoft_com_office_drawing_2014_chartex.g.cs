@@ -244,6 +244,74 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     }
 
     /// <summary>
+    /// <para>Defines the Openxmlsdk_49BECFFA_3B03_4D13_8272_D6CCB22579E3XsdunsignedInt Class.</para>
+    /// <para>This class is available in Office 2016 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is cx:openxmlsdk_49BECFFA_3B03_4D13_8272_D6CCB22579E3.</para>
+    /// </summary>
+    [NumberValidator(SimpleType = typeof(UInt32Value))]
+    [SchemaAttr(80, "openxmlsdk_49BECFFA_3B03_4D13_8272_D6CCB22579E3")]
+    [OfficeAvailability(FileFormatVersions.Office2016)]
+    public partial class Openxmlsdk_49BECFFA_3B03_4D13_8272_D6CCB22579E3XsdunsignedInt : OpenXmlLeafTextElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the Openxmlsdk_49BECFFA_3B03_4D13_8272_D6CCB22579E3XsdunsignedInt class.
+        /// </summary>
+        public Openxmlsdk_49BECFFA_3B03_4D13_8272_D6CCB22579E3XsdunsignedInt() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Openxmlsdk_49BECFFA_3B03_4D13_8272_D6CCB22579E3XsdunsignedInt class with the specified text content.
+        /// </summary>
+        /// <param name="text">Specifies the text content of the element.</param>
+        public Openxmlsdk_49BECFFA_3B03_4D13_8272_D6CCB22579E3XsdunsignedInt(string text) : base(text)
+        {
+        }
+
+        internal override OpenXmlSimpleType InnerTextToValue(string text)
+        {
+            return new UInt32Value { InnerText = text };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Openxmlsdk_49BECFFA_3B03_4D13_8272_D6CCB22579E3XsdunsignedInt>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the BinCountXsdunsignedInt Class.</para>
+    /// <para>This class is available in Office 2016 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is cx:binCount.</para>
+    /// </summary>
+    [NumberValidator(SimpleType = typeof(UInt32Value))]
+    [SchemaAttr(80, "binCount")]
+    [OfficeAvailability(FileFormatVersions.Office2016)]
+    public partial class BinCountXsdunsignedInt : OpenXmlLeafTextElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the BinCountXsdunsignedInt class.
+        /// </summary>
+        public BinCountXsdunsignedInt() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the BinCountXsdunsignedInt class with the specified text content.
+        /// </summary>
+        /// <param name="text">Specifies the text content of the element.</param>
+        public BinCountXsdunsignedInt(string text) : base(text)
+        {
+        }
+
+        internal override OpenXmlSimpleType InnerTextToValue(string text)
+        {
+            return new UInt32Value { InnerText = text };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<BinCountXsdunsignedInt>(deep);
+    }
+
+    /// <summary>
     /// <para>Defines the Extension2 Class.</para>
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:ext.</para>
@@ -2142,40 +2210,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     }
 
     /// <summary>
-    /// <para>Defines the XsdunsignedInt Class.</para>
-    /// <para>This class is available in Office 2016 or above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is cx:binCount.</para>
-    /// </summary>
-    [NumberValidator(SimpleType = typeof(UInt32Value))]
-    [SchemaAttr(80, "binCount")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
-    public partial class XsdunsignedInt : OpenXmlLeafTextElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the XsdunsignedInt class.
-        /// </summary>
-        public XsdunsignedInt() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the XsdunsignedInt class with the specified text content.
-        /// </summary>
-        /// <param name="text">Specifies the text content of the element.</param>
-        public XsdunsignedInt(string text) : base(text)
-        {
-        }
-
-        internal override OpenXmlSimpleType InnerTextToValue(string text)
-        {
-            return new UInt32Value { InnerText = text };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<XsdunsignedInt>(deep);
-    }
-
-    /// <summary>
     /// <para>Defines the ParentLabelLayout Class.</para>
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:parentLabelLayout.</para>
@@ -2293,11 +2327,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description>Xsddouble &lt;cx:binSize></description></item>
-    ///   <item><description>XsdunsignedInt &lt;cx:binCount></description></item>
+    ///   <item><description>BinCountXsdunsignedInt &lt;cx:binCount></description></item>
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Xsddouble), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(XsdunsignedInt), FileFormatVersions.Office2016)]
+    [ChildElementInfo(typeof(BinCountXsdunsignedInt), FileFormatVersions.Office2016)]
     [SchemaAttr(80, "binning")]
     [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class Binning : OpenXmlCompositeElement
@@ -2375,22 +2409,22 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         }
 
         /// <summary>
-        /// <para>XsdunsignedInt.</para>
+        /// <para>BinCountXsdunsignedInt.</para>
         /// <para>Represents the following element tag in the schema: cx:binCount.</para>
         /// </summary>
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public XsdunsignedInt XsdunsignedInt
+        public BinCountXsdunsignedInt BinCountXsdunsignedInt
         {
-            get => GetElement<XsdunsignedInt>();
+            get => GetElement<BinCountXsdunsignedInt>();
             set => SetElement(value);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Xsddouble), 1, 1, version: FileFormatVersions.Office2016),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.XsdunsignedInt), 1, 1, version: FileFormatVersions.Office2016)
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.BinCountXsdunsignedInt), 1, 1, version: FileFormatVersions.Office2016)
         }.Compile();
 
         internal override CompiledParticle CompiledParticle => _constraint;

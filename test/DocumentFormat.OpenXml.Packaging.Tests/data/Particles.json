@@ -45397,7 +45397,7 @@
        "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Xsddouble"
       },
       {
-       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.XsdunsignedInt"
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.BinCountXsdunsignedInt"
       }
      ],
      "MinOccurs": 0,
