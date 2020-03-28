@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
+using DocumentFormat.OpenXml.Drawing.Charts;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
@@ -12,6 +13,238 @@ using System.IO.Packaging;
 
 namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
 {
+    /// <summary>
+    /// <para>Defines the ChartSpace Class.</para>
+    /// <para>This class is available in Office 2016 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is cx:chartSpace.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>ChartData &lt;cx:chartData></description></item>
+    ///   <item><description>Chart &lt;cx:chart></description></item>
+    ///   <item><description>ShapeProperties &lt;cx:spPr></description></item>
+    ///   <item><description>TxPrTextBody &lt;cx:txPr></description></item>
+    ///   <item><description>ColorMappingType &lt;cx:clrMapOvr></description></item>
+    ///   <item><description>PrintSettings &lt;cx:printSettings></description></item>
+    ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
+    /// </list>
+    /// </remark>
+    [ChildElementInfo(typeof(ChartData), FileFormatVersions.Office2016)]
+    [ChildElementInfo(typeof(Chart), FileFormatVersions.Office2016)]
+    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2016)]
+    [ChildElementInfo(typeof(TxPrTextBody), FileFormatVersions.Office2016)]
+    [ChildElementInfo(typeof(ColorMappingType), FileFormatVersions.Office2016)]
+    [ChildElementInfo(typeof(PrintSettings), FileFormatVersions.Office2016)]
+    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
+    [SchemaAttr(80, "chartSpace")]
+    [OfficeAvailability(FileFormatVersions.Office2016)]
+    public partial class ChartSpace : OpenXmlPartRootElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the ChartSpace class.
+        /// </summary>
+        public ChartSpace() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ChartSpace class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ChartSpace(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ChartSpace class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ChartSpace(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ChartSpace class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public ChartSpace(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>ChartData.</para>
+        /// <para>Represents the following element tag in the schema: cx:chartData.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
+        /// </remark>
+        public ChartData ChartData
+        {
+            get => GetElement<ChartData>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Chart.</para>
+        /// <para>Represents the following element tag in the schema: cx:chart.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
+        /// </remark>
+        public Chart Chart
+        {
+            get => GetElement<Chart>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>ShapeProperties.</para>
+        /// <para>Represents the following element tag in the schema: cx:spPr.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
+        /// </remark>
+        public ShapeProperties ShapeProperties
+        {
+            get => GetElement<ShapeProperties>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>TxPrTextBody.</para>
+        /// <para>Represents the following element tag in the schema: cx:txPr.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
+        /// </remark>
+        public TxPrTextBody TxPrTextBody
+        {
+            get => GetElement<TxPrTextBody>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>ColorMappingType.</para>
+        /// <para>Represents the following element tag in the schema: cx:clrMapOvr.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
+        /// </remark>
+        public ColorMappingType ColorMappingType
+        {
+            get => GetElement<ColorMappingType>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>PrintSettings.</para>
+        /// <para>Represents the following element tag in the schema: cx:printSettings.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
+        /// </remark>
+        public PrintSettings PrintSettings
+        {
+            get => GetElement<PrintSettings>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>ExtensionList.</para>
+        /// <para>Represents the following element tag in the schema: cx:extLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
+        /// </remark>
+        public ExtensionList ExtensionList
+        {
+            get => GetElement<ExtensionList>();
+            set => SetElement(value);
+        }
+
+        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartData), 1, 1, version: FileFormatVersions.Office2016),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Chart), 1, 1, version: FileFormatVersions.Office2016),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties), 0, 1, version: FileFormatVersions.Office2016),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody), 0, 1, version: FileFormatVersions.Office2016),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ColorMappingType), 0, 1, version: FileFormatVersions.Office2016),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PrintSettings), 0, 1, version: FileFormatVersions.Office2016),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList), 0, 1, version: FileFormatVersions.Office2016)
+        }.Compile();
+
+        internal override CompiledParticle CompiledParticle => _constraint;
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChartSpace>(deep);
+
+        internal ChartSpace(ExtendedChartPart ownerPart) : base(ownerPart)
+        {
+        }
+
+        /// <summary>
+        /// Loads the DOM from the ExtendedChartPart
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to be loaded.</param>
+        public void Load(ExtendedChartPart openXmlPart)
+        {
+            LoadFromPart(openXmlPart);
+        }
+
+        /// <summary>
+        /// Saves the DOM into the ExtendedChartPart.
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to save to.</param>
+        public void Save(ExtendedChartPart openXmlPart)
+        {
+            base.SaveToPart(openXmlPart);
+        }
+
+        /// <summary>
+        /// Gets the ExtendedChartPart associated with this element.
+        /// </summary>
+        public ExtendedChartPart ExtendedChartPart
+        {
+            get => OpenXmlPart as ExtendedChartPart;
+            internal set => OpenXmlPart = value;
+        }
+    }
+
+    /// <summary>
+    /// <para>Defines the BinCountXsdunsignedInt Class.</para>
+    /// <para>This class is available in Office 2016 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is cx:binCount.</para>
+    /// </summary>
+    [NumberValidator(SimpleType = typeof(UInt32Value))]
+    [SchemaAttr(80, "binCount")]
+    [OfficeAvailability(FileFormatVersions.Office2016)]
+    public partial class BinCountXsdunsignedInt : OpenXmlLeafTextElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the BinCountXsdunsignedInt class.
+        /// </summary>
+        public BinCountXsdunsignedInt() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the BinCountXsdunsignedInt class with the specified text content.
+        /// </summary>
+        /// <param name="text">Specifies the text content of the element.</param>
+        public BinCountXsdunsignedInt(string text) : base(text)
+        {
+        }
+
+        internal override OpenXmlSimpleType InnerTextToValue(string text)
+        {
+            return new UInt32Value { InnerText = text };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<BinCountXsdunsignedInt>(deep);
+    }
+
     /// <summary>
     /// <para>Defines the Extension2 Class.</para>
     /// <para>This class is available in Office 2016 or above.</para>
@@ -377,7 +610,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2016</para>
+        /// <para>RelId of the relationship for the external data, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
         /// <remark>
@@ -389,10 +622,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         public StringValue Id { get; set; }
 
         /// <summary>
-        /// <para>autoUpdate, this property is only available in Office2016</para>
-        /// <para>Represents the following attribute in the schema: autoUpdate</para>
+        /// <para>True if the external link should automatically update, this property is only available in Office2016</para>
+        /// <para>Represents the following attribute in the schema: cx:autoUpdate</para>
         /// </summary>
-        [SchemaAttr(0, "autoUpdate")]
+        /// <remark>
+        /// xmlns:cx=http://schemas.microsoft.com/office/drawing/2014/chartex
+        /// </remark>
+        [OfficeAvailability(FileFormatVersions.Office2016)]
+        [SchemaAttr(80, "autoUpdate")]
         [Index(1)]
         public BooleanValue AutoUpdate { get; set; }
 
@@ -1907,74 +2144,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     }
 
     /// <summary>
-    /// <para>Defines the BinCountXsdunsignedInt Class.</para>
-    /// <para>This class is available in Office 2016 or above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is cx:binCount.</para>
-    /// </summary>
-    [NumberValidator(SimpleType = typeof(UInt32Value))]
-    [SchemaAttr(80, "binCount")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
-    public partial class BinCountXsdunsignedInt : OpenXmlLeafTextElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the BinCountXsdunsignedInt class.
-        /// </summary>
-        public BinCountXsdunsignedInt() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the BinCountXsdunsignedInt class with the specified text content.
-        /// </summary>
-        /// <param name="text">Specifies the text content of the element.</param>
-        public BinCountXsdunsignedInt(string text) : base(text)
-        {
-        }
-
-        internal override OpenXmlSimpleType InnerTextToValue(string text)
-        {
-            return new UInt32Value { InnerText = text };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<BinCountXsdunsignedInt>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the IdxXsdunsignedInt Class.</para>
-    /// <para>This class is available in Office 2016 or above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is cx:idx.</para>
-    /// </summary>
-    [NumberValidator(SimpleType = typeof(UInt32Value))]
-    [SchemaAttr(80, "idx")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
-    public partial class IdxXsdunsignedInt : OpenXmlLeafTextElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the IdxXsdunsignedInt class.
-        /// </summary>
-        public IdxXsdunsignedInt() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the IdxXsdunsignedInt class with the specified text content.
-        /// </summary>
-        /// <param name="text">Specifies the text content of the element.</param>
-        public IdxXsdunsignedInt(string text) : base(text)
-        {
-        }
-
-        internal override OpenXmlSimpleType InnerTextToValue(string text)
-        {
-            return new UInt32Value { InnerText = text };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<IdxXsdunsignedInt>(deep);
-    }
-
-    /// <summary>
     /// <para>Defines the ParentLabelLayout Class.</para>
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:parentLabelLayout.</para>
@@ -2234,10 +2403,10 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>IdxXsdunsignedInt &lt;cx:idx></description></item>
+    ///   <item><description>UnsignedIntegerType &lt;cx:idx></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(IdxXsdunsignedInt), FileFormatVersions.Office2016)]
+    [ChildElementInfo(typeof(UnsignedIntegerType), FileFormatVersions.Office2016)]
     [SchemaAttr(80, "subtotals")]
     [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class Subtotals : OpenXmlCompositeElement
@@ -2275,7 +2444,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.IdxXsdunsignedInt), 0, 0, version: FileFormatVersions.Office2016)
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.UnsignedIntegerType), 0, 0, version: FileFormatVersions.Office2016)
         }.Compile();
 
         internal override CompiledParticle CompiledParticle => _constraint;
@@ -4991,6 +5160,35 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumericLevel>(deep);
+    }
+
+    /// <summary>
+    /// <para>Index of subtotal data point.</para>
+    /// <para>This class is available in Office 2016 or above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is cx:idx.</para>
+    /// </summary>
+    [SchemaAttr(80, "idx")]
+    [OfficeAvailability(FileFormatVersions.Office2016)]
+    public partial class UnsignedIntegerType : OpenXmlLeafElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the UnsignedIntegerType class.
+        /// </summary>
+        public UnsignedIntegerType() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>Integer Value</para>
+        /// <para>Represents the following attribute in the schema: val</para>
+        /// </summary>
+        [RequiredValidator()]
+        [SchemaAttr(0, "val")]
+        [Index(0)]
+        public UInt32Value Val { get; set; }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<UnsignedIntegerType>(deep);
     }
 
     /// <summary>

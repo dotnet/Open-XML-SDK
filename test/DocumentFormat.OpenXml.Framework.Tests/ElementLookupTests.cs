@@ -1,12 +1,16 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Xml;
 using Xunit;
+using Xunit.Abstractions;
 
 using static DocumentFormat.OpenXml.Framework.Tests.TestUtility;
 
@@ -21,6 +25,12 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         private const string Name1 = "Name1";
         private const string Name2 = "Name1";
         private const string Name3 = "Name1";
+        private readonly ITestOutputHelper _output;
+
+        public ElementLookupTests(ITestOutputHelper output)
+        {
+            _output = output;
+        }
 
         [Fact]
         public void NoProperties()
@@ -60,7 +70,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         {
             var lookup = CreateLookup(typeof(OpenXmlPartRootElement));
 
-            Assert.Equal(84, lookup.Count);
+            Assert.Equal(85, lookup.Count);
         }
 
         [Fact]
@@ -89,6 +99,18 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void BuiltInOpenXmlElements()
         {
+            var elements = typeof(OpenXmlElement).GetTypeInfo().Assembly.GetTypes()
+                .Where(t => !t.GetTypeInfo().IsAbstract && typeof(OpenXmlElement).GetTypeInfo().IsAssignableFrom(t))
+                .Concat(new[] { typeof(OpenXmlPartRootElement) })
+                .OrderBy(type => type.FullName)
+                .Select(type => new LookupData(type));
+#if DEBUG
+            var tmp = Path.GetTempFileName();
+
+            _output.WriteLine($"Wrote to temp path {tmp}");
+
+            File.WriteAllText(tmp, JsonConvert.SerializeObject(elements, Newtonsoft.Json.Formatting.Indented, new StringEnumConverter()));
+#endif
             var expected = Deserialize<LookupData[]>("ElementChildren.json");
             var actual = GetBuiltIn().ToArray();
 
@@ -147,6 +169,11 @@ namespace DocumentFormat.OpenXml.Framework.Tests
                 if (other == null)
                 {
                     return false;
+                }
+
+                if (!string.Equals(Element, other.Element, StringComparison.Ordinal) || !Children.SequenceEqual(other.Children))
+                {
+                    System.Diagnostics.Debugger.Break();
                 }
 
                 return string.Equals(Element, other.Element, StringComparison.Ordinal)
