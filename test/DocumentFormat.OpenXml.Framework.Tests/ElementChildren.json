@@ -31642,6 +31642,10 @@
     ]
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.IdxXsdunsignedInt",
+    "Children": []
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Legend",
     "Children": [
       {
