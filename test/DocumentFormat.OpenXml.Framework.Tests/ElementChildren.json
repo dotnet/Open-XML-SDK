@@ -31825,10 +31825,6 @@
     ]
   },
   {
-    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.RelId",
-    "Children": []
-  },
-  {
     "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.RichTextBody",
     "Children": [
       {

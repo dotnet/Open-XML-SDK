@@ -212,38 +212,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     }
 
     /// <summary>
-    /// <para>Defines the RelId Class.</para>
-    /// <para>This class is available in Office 2016 or above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is cx:chart.</para>
-    /// </summary>
-    [SchemaAttr(80, "chart")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
-    public partial class RelId : OpenXmlLeafElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the RelId class.
-        /// </summary>
-        public RelId() : base()
-        {
-        }
-
-        /// <summary>
-        /// <para>id, this property is only available in Office2016</para>
-        /// <para>Represents the following attribute in the schema: r:id</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<RelId>(deep);
-    }
-
-    /// <summary>
     /// <para>Defines the BinCountXsdunsignedInt Class.</para>
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:binCount.</para>
