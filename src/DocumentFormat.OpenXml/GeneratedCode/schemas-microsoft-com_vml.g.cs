@@ -3169,11 +3169,22 @@ namespace DocumentFormat.OpenXml.Vml
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
 
         /// <summary>
+        /// <para>Encoded Package</para>
+        /// <para>Represents the following attribute in the schema: o:gfxdata</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:o=urn:schemas-microsoft-com:office:office
+        /// </remark>
+        [SchemaAttr(27, "gfxdata")]
+        [Index(30)]
+        public Base64BinaryValue Gfxdata { get; set; }
+
+        /// <summary>
         /// <para>Group Diagram Type</para>
         /// <para>Represents the following attribute in the schema: editas</para>
         /// </summary>
         [SchemaAttr(0, "editas")]
-        [Index(30)]
+        [Index(31)]
         public EnumValue<DocumentFormat.OpenXml.Vml.EditAsValues> EditAs { get; set; }
 
         /// <summary>
@@ -3184,7 +3195,7 @@ namespace DocumentFormat.OpenXml.Vml
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
         [SchemaAttr(27, "tableproperties")]
-        [Index(31)]
+        [Index(32)]
         public StringValue TableProperties { get; set; }
 
         /// <summary>
@@ -3195,7 +3206,7 @@ namespace DocumentFormat.OpenXml.Vml
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
         [SchemaAttr(27, "tablelimits")]
-        [Index(32)]
+        [Index(33)]
         public StringValue TableLimits { get; set; }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
@@ -3880,12 +3891,23 @@ namespace DocumentFormat.OpenXml.Vml
         public TrueFalseValue Clip { get; set; }
 
         /// <summary>
+        /// <para>Encoded Package</para>
+        /// <para>Represents the following attribute in the schema: o:gfxdata</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:o=urn:schemas-microsoft-com:office:office
+        /// </remark>
+        [SchemaAttr(27, "gfxdata")]
+        [Index(40)]
+        public Base64BinaryValue Gfxdata { get; set; }
+
+        /// <summary>
         /// <para>Unique Identifier</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
         [StringValidator(IsToken = true, MaxLength = 255L)]
         [SchemaAttr(0, "id")]
-        [Index(40)]
+        [Index(41)]
         public StringValue Id { get; set; }
 
         /// <summary>
@@ -3893,7 +3915,7 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
         [SchemaAttr(0, "style")]
-        [Index(41)]
+        [Index(42)]
         public StringValue Style { get; set; }
 
         /// <summary>
@@ -3901,7 +3923,7 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Represents the following attribute in the schema: href</para>
         /// </summary>
         [SchemaAttr(0, "href")]
-        [Index(42)]
+        [Index(43)]
         public StringValue Href { get; set; }
 
         /// <summary>
@@ -3909,7 +3931,7 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Represents the following attribute in the schema: target</para>
         /// </summary>
         [SchemaAttr(0, "target")]
-        [Index(43)]
+        [Index(44)]
         public StringValue Target { get; set; }
 
         /// <summary>
@@ -3917,7 +3939,7 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
         [SchemaAttr(0, "title")]
-        [Index(44)]
+        [Index(45)]
         public StringValue Title { get; set; }
 
         /// <summary>
@@ -3925,7 +3947,7 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Represents the following attribute in the schema: alt</para>
         /// </summary>
         [SchemaAttr(0, "alt")]
-        [Index(45)]
+        [Index(46)]
         public StringValue Alternate { get; set; }
 
         /// <summary>
@@ -3933,7 +3955,7 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Represents the following attribute in the schema: coordsize</para>
         /// </summary>
         [SchemaAttr(0, "coordsize")]
-        [Index(46)]
+        [Index(47)]
         public StringValue CoordinateSize { get; set; }
 
         /// <summary>
@@ -3941,7 +3963,7 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Represents the following attribute in the schema: coordorigin</para>
         /// </summary>
         [SchemaAttr(0, "coordorigin")]
-        [Index(47)]
+        [Index(48)]
         public StringValue CoordinateOrigin { get; set; }
 
         /// <summary>
@@ -3949,7 +3971,7 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Represents the following attribute in the schema: wrapcoords</para>
         /// </summary>
         [SchemaAttr(0, "wrapcoords")]
-        [Index(48)]
+        [Index(49)]
         public StringValue Wrapcoords { get; set; }
 
         /// <summary>
@@ -3957,7 +3979,7 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Represents the following attribute in the schema: print</para>
         /// </summary>
         [SchemaAttr(0, "print")]
-        [Index(49)]
+        [Index(50)]
         public TrueFalseValue Print { get; set; }
 
         /// <summary>
@@ -3965,7 +3987,7 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Represents the following attribute in the schema: startangle</para>
         /// </summary>
         [SchemaAttr(0, "startangle")]
-        [Index(50)]
+        [Index(51)]
         public DecimalValue StartAngle { get; set; }
 
         /// <summary>
@@ -3973,7 +3995,7 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Represents the following attribute in the schema: endangle</para>
         /// </summary>
         [SchemaAttr(0, "endangle")]
-        [Index(51)]
+        [Index(52)]
         public DecimalValue EndAngle { get; set; }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4618,11 +4640,22 @@ namespace DocumentFormat.OpenXml.Vml
         public TrueFalseValue Clip { get; set; }
 
         /// <summary>
+        /// <para>Encoded Package</para>
+        /// <para>Represents the following attribute in the schema: o:gfxdata</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:o=urn:schemas-microsoft-com:office:office
+        /// </remark>
+        [SchemaAttr(27, "gfxdata")]
+        [Index(51)]
+        public Base64BinaryValue Gfxdata { get; set; }
+
+        /// <summary>
         /// <para>Curve Starting Point</para>
         /// <para>Represents the following attribute in the schema: from</para>
         /// </summary>
         [SchemaAttr(0, "from")]
-        [Index(51)]
+        [Index(52)]
         public StringValue From { get; set; }
 
         /// <summary>
@@ -4630,7 +4663,7 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Represents the following attribute in the schema: control1</para>
         /// </summary>
         [SchemaAttr(0, "control1")]
-        [Index(52)]
+        [Index(53)]
         public StringValue Control1 { get; set; }
 
         /// <summary>
@@ -4638,7 +4671,7 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Represents the following attribute in the schema: control2</para>
         /// </summary>
         [SchemaAttr(0, "control2")]
-        [Index(53)]
+        [Index(54)]
         public StringValue Control2 { get; set; }
 
         /// <summary>
@@ -4646,7 +4679,7 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Represents the following attribute in the schema: to</para>
         /// </summary>
         [SchemaAttr(0, "to")]
-        [Index(54)]
+        [Index(55)]
         public StringValue To { get; set; }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5362,6 +5395,17 @@ namespace DocumentFormat.OpenXml.Vml
         [Index(59)]
         public TrueFalseValue BiLevel { get; set; }
 
+        /// <summary>
+        /// <para>Encoded Package</para>
+        /// <para>Represents the following attribute in the schema: o:gfxdata</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:o=urn:schemas-microsoft-com:office:office
+        /// </remark>
+        [SchemaAttr(27, "gfxdata")]
+        [Index(60)]
+        public Base64BinaryValue Gfxdata { get; set; }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 0)
@@ -6004,11 +6048,22 @@ namespace DocumentFormat.OpenXml.Vml
         public TrueFalseValue Clip { get; set; }
 
         /// <summary>
+        /// <para>Encoded Package</para>
+        /// <para>Represents the following attribute in the schema: o:gfxdata</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:o=urn:schemas-microsoft-com:office:office
+        /// </remark>
+        [SchemaAttr(27, "gfxdata")]
+        [Index(51)]
+        public Base64BinaryValue Gfxdata { get; set; }
+
+        /// <summary>
         /// <para>Line Start</para>
         /// <para>Represents the following attribute in the schema: from</para>
         /// </summary>
         [SchemaAttr(0, "from")]
-        [Index(51)]
+        [Index(52)]
         public StringValue From { get; set; }
 
         /// <summary>
@@ -6016,7 +6071,7 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Represents the following attribute in the schema: to</para>
         /// </summary>
         [SchemaAttr(0, "to")]
-        [Index(52)]
+        [Index(53)]
         public StringValue To { get; set; }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -6659,6 +6714,17 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "clip")]
         [Index(50)]
         public TrueFalseValue Clip { get; set; }
+
+        /// <summary>
+        /// <para>Encoded Package</para>
+        /// <para>Represents the following attribute in the schema: o:gfxdata</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:o=urn:schemas-microsoft-com:office:office
+        /// </remark>
+        [SchemaAttr(27, "gfxdata")]
+        [Index(51)]
+        public Base64BinaryValue Gfxdata { get; set; }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
@@ -7304,11 +7370,22 @@ namespace DocumentFormat.OpenXml.Vml
         public TrueFalseValue Clip { get; set; }
 
         /// <summary>
+        /// <para>Encoded Package</para>
+        /// <para>Represents the following attribute in the schema: o:gfxdata</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:o=urn:schemas-microsoft-com:office:office
+        /// </remark>
+        [SchemaAttr(27, "gfxdata")]
+        [Index(51)]
+        public Base64BinaryValue Gfxdata { get; set; }
+
+        /// <summary>
         /// <para>Points for Compound Line</para>
         /// <para>Represents the following attribute in the schema: points</para>
         /// </summary>
         [SchemaAttr(0, "points")]
-        [Index(51)]
+        [Index(52)]
         public StringValue Points { get; set; }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
@@ -7953,6 +8030,17 @@ namespace DocumentFormat.OpenXml.Vml
         [Index(50)]
         public TrueFalseValue Clip { get; set; }
 
+        /// <summary>
+        /// <para>Encoded Package</para>
+        /// <para>Represents the following attribute in the schema: o:gfxdata</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:o=urn:schemas-microsoft-com:office:office
+        /// </remark>
+        [SchemaAttr(27, "gfxdata")]
+        [Index(51)]
+        public Base64BinaryValue Gfxdata { get; set; }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
             new CompositeParticle(ParticleType.Group, 0, 0)
@@ -8587,11 +8675,22 @@ namespace DocumentFormat.OpenXml.Vml
         public TrueFalseValue Clip { get; set; }
 
         /// <summary>
+        /// <para>Encoded Package</para>
+        /// <para>Represents the following attribute in the schema: o:gfxdata</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:o=urn:schemas-microsoft-com:office:office
+        /// </remark>
+        [SchemaAttr(27, "gfxdata")]
+        [Index(50)]
+        public Base64BinaryValue Gfxdata { get; set; }
+
+        /// <summary>
         /// <para>Rounded Corner Arc Size</para>
         /// <para>Represents the following attribute in the schema: arcsize</para>
         /// </summary>
         [SchemaAttr(0, "arcsize")]
-        [Index(50)]
+        [Index(51)]
         public StringValue ArcSize { get; set; }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
