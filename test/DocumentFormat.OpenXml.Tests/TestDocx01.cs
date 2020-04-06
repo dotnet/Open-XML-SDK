@@ -756,7 +756,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var errs = v.Validate(doc);
                 var cnt = errs.Count();
 
-                Assert.Equal(1, v.Validate(doc).Count());
+                Assert.Single(v.Validate(doc));
             }
         }
 
