@@ -1466,13 +1466,13 @@ namespace DocumentFormat.OpenXml
         /// <param name="namespaceUri"></param>
         /// <param name="localName"></param>
         /// <param name="value"></param>
-        /// <param name="strictTranslation"></param>
+        /// <param name="strictRelationshipFound"></param>
         /// <returns>true if the attribute is a known attribute.</returns>
-        private bool TrySetFixedAttribute(string namespaceUri, string localName, string value, bool strictTranslation)
+        private bool TrySetFixedAttribute(string namespaceUri, string localName, string value, bool strictRelationshipFound)
         {
             if (ElementData.RawAttributes.Any())
             {
-                if (strictTranslation)
+                if (strictRelationshipFound)
                 {
                     return StrictTranslateAttribute(namespaceUri, localName, value);
                 }
@@ -1505,7 +1505,7 @@ namespace DocumentFormat.OpenXml
             {
                 while (xmlReader.MoveToNextAttribute())
                 {
-                    if (!TrySetFixedAttribute(xmlReader.NamespaceURI, xmlReader.LocalName, xmlReader.Value, ((XmlConvertingReader)xmlReader).StrictTranslation))
+                    if (!TrySetFixedAttribute(xmlReader.NamespaceURI, xmlReader.LocalName, xmlReader.Value, ((XmlConvertingReader)xmlReader).StrictRelationshipFound))
                     {
                         if (xmlReader.NamespaceURI == AlternateContent.MarkupCompatibilityNamespace)
                         {

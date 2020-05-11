@@ -26,13 +26,13 @@ namespace DocumentFormat.OpenXml.Tests
         [Theory]
         [InlineData(true)]
         [InlineData(false)]
-        public void SetsProperties(bool strictTranslation)
+        public void SetsProperties(bool strictRelationshipFound)
         {
             using (var baseReader = Substitute.For<XmlReader>())
-            using (var reader = new AccessBaseReader(baseReader, strictTranslation))
+            using (var reader = new AccessBaseReader(baseReader, strictRelationshipFound))
             {
                 Assert.Same(baseReader, reader.BaseReader);
-                Assert.Equal(strictTranslation, reader.StrictTranslation);
+                Assert.Equal(strictRelationshipFound, reader.StrictRelationshipFound);
             }
         }
 
@@ -40,10 +40,10 @@ namespace DocumentFormat.OpenXml.Tests
         [Theory]
         [InlineData(true)]
         [InlineData(false)]
-        public void DelegatesCallClose(bool strictTranslation)
+        public void DelegatesCallClose(bool strictRelationshipFound)
         {
             using (var baseReader = Substitute.For<XmlReader>())
-            using (var reader = new XmlConvertingReader(baseReader, strictTranslation))
+            using (var reader = new XmlConvertingReader(baseReader, strictRelationshipFound))
             {
                 reader.Close();
                 baseReader.Received(1).Close();
@@ -54,10 +54,10 @@ namespace DocumentFormat.OpenXml.Tests
         [Theory]
         [InlineData(true)]
         [InlineData(false)]
-        public void DelegatesCallDispose(bool strictTranslation)
+        public void DelegatesCallDispose(bool strictRelationshipFound)
         {
             using (var baseReader = Substitute.For<XmlReader>())
-            using (var reader = new XmlConvertingReader(baseReader, strictTranslation))
+            using (var reader = new XmlConvertingReader(baseReader, strictRelationshipFound))
             {
                 ((IDisposable)reader).Dispose();
                 ((IDisposable)baseReader).Received(1).Dispose();
@@ -77,10 +77,10 @@ namespace DocumentFormat.OpenXml.Tests
         [InlineData(TranslationalNamespaceExample1, TranslationalNamespaceExample1, false)]
         [InlineData(RandomNamespace, RandomNamespace, false)]
         [InlineData(ExtendedNamespace1, ExtendedNamespace1Result, false)]
-        public void NamespaceUriIsHandled(string baseNamespaceUri, string expectedNamespaceUri, bool strictTranslation)
+        public void NamespaceUriIsHandled(string baseNamespaceUri, string expectedNamespaceUri, bool strictRelationshipFound)
         {
             using (var baseReader = Substitute.For<XmlReader>())
-            using (var reader = new XmlConvertingReader(baseReader, strictTranslation))
+            using (var reader = new XmlConvertingReader(baseReader, strictRelationshipFound))
             {
                 baseReader.NamespaceURI.Returns(baseNamespaceUri);
 
@@ -101,10 +101,10 @@ namespace DocumentFormat.OpenXml.Tests
         [InlineData(RandomNamespace, RandomNamespace, XmlNodeType.Element, false)]
         [InlineData(ExtendedNamespace1, ExtendedNamespace1Result, XmlNodeType.Attribute, false)]
         [InlineData(ExtendedNamespace1, ExtendedNamespace1, XmlNodeType.Element, false)]
-        public void StrictTranslationAppliesToValue(string baseValue, string expectedValue, XmlNodeType nodeType, bool strictTranslation)
+        public void StrictTranslationAppliesToValue(string baseValue, string expectedValue, XmlNodeType nodeType, bool strictRelationshipFound)
         {
             using (var baseReader = Substitute.For<XmlReader>())
-            using (var reader = new XmlConvertingReader(baseReader, strictTranslation))
+            using (var reader = new XmlConvertingReader(baseReader, strictRelationshipFound))
             {
                 baseReader.Value.Returns(baseValue);
                 baseReader.NodeType.Returns(nodeType);
@@ -115,8 +115,8 @@ namespace DocumentFormat.OpenXml.Tests
 
         private class AccessBaseReader : XmlConvertingReader
         {
-            public AccessBaseReader(XmlReader baseReader, bool strictTranslation)
-                : base(baseReader, strictTranslation)
+            public AccessBaseReader(XmlReader baseReader, bool strictRelationshipFound)
+                : base(baseReader, strictRelationshipFound)
             {
             }
 

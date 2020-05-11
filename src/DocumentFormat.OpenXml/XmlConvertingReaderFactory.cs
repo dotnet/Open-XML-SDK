@@ -11,18 +11,18 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     internal static class XmlConvertingReaderFactory
     {
-        // When the strictTranslation flag is 'true', the XmlConvertingReader tries to search the incoming xml stream for any Strict namespace
+        // When the strictRelationshipFound flag is 'true', the XmlConvertingReader tries to search the incoming xml stream for any Strict namespace
         // that can be translated to Transitional. When the flag is 'false', the reader skips searching.
         public static XmlReader Create(Stream partStream, XmlReaderSettings settings)
         {
             return Create(partStream, settings, true);
         }
 
-        public static XmlReader Create(Stream partStream, XmlReaderSettings settings, bool strictTranslation)
+        public static XmlReader Create(Stream partStream, XmlReaderSettings settings, bool strictRelationshipFound)
         {
             XmlReader xmlReader = XmlReader.Create(partStream, settings);
 
-            return new XmlConvertingReader(xmlReader, strictTranslation);
+            return new XmlConvertingReader(xmlReader, strictRelationshipFound);
         }
 
         public static XmlReader Create(TextReader textReader, XmlReaderSettings settings)
@@ -30,11 +30,11 @@ namespace DocumentFormat.OpenXml
             return Create(textReader, settings, true);
         }
 
-        public static XmlReader Create(TextReader textReader, XmlReaderSettings settings, bool strictTranslation)
+        public static XmlReader Create(TextReader textReader, XmlReaderSettings settings, bool strictRelationshipFound)
         {
             XmlReader xmlReader = XmlReader.Create(textReader, settings);
 
-            return new XmlConvertingReader(xmlReader, strictTranslation);
+            return new XmlConvertingReader(xmlReader, strictRelationshipFound);
         }
 
         public static XmlReader Create(TextReader textReader)
@@ -42,11 +42,11 @@ namespace DocumentFormat.OpenXml
             return Create(textReader, true);
         }
 
-        public static XmlReader Create(TextReader textReader, bool strictTranslation)
+        public static XmlReader Create(TextReader textReader, bool strictRelationshipFound)
         {
             XmlReader xmlReader = XmlReader.Create(textReader);
 
-            return new XmlConvertingReader(xmlReader, strictTranslation);
+            return new XmlConvertingReader(xmlReader, strictRelationshipFound);
         }
     }
 }

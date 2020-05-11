@@ -16,11 +16,11 @@ namespace DocumentFormat.OpenXml
         /// Creates an instance of <see cref="XmlConvertingReader"/>
         /// </summary>
         /// <param name="baseReader">XmlReader</param>
-        /// <param name="strictTranslation">bool</param>
-        public XmlConvertingReader(XmlReader baseReader, bool strictTranslation)
+        /// <param name="strictRelationshipFound">bool</param>
+        public XmlConvertingReader(XmlReader baseReader, bool strictRelationshipFound)
         {
             BaseReader = baseReader ?? throw new ArgumentNullException(nameof(baseReader));
-            StrictTranslation = strictTranslation;
+            StrictRelationshipFound = strictRelationshipFound;
         }
 
         /// <summary>
@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets a value indicating whether strict translation is enabled.
         /// </summary>
-        public bool StrictTranslation { get; }
+        public bool StrictRelationshipFound { get; }
 
 #if FEATURE_ABSTRACT_XML_CLOSE
         /// <inheritdoc/>
@@ -166,7 +166,7 @@ namespace DocumentFormat.OpenXml
 
         private string ApplyStrictTranslation(string uri)
         {
-            if (StrictTranslation)
+            if (StrictRelationshipFound)
             {
                 if (NamespaceIdMap.TryGetTransitionalNamespace(uri, out var transitionalNamespace))
                 {

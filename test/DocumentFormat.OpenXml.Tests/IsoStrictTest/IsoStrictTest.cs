@@ -32,7 +32,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var file = OpenFile(path, false))
             using (var document = file.Open(false))
             {
-                Assert.True(document.StrictTranslation);
+                Assert.True(document.StrictRelationshipFound);
             }
         }
 

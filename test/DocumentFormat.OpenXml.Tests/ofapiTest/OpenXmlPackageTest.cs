@@ -813,7 +813,7 @@ namespace DocumentFormat.OpenXml.Tests
                 // Should open without exception.
 
                 // Referencing doc.MainDocumentPart.RootElement triggers to load the MainDocumentPart which underneath
-                // calls methods in XmlConvertingReader with the strictTranslation flag enabled.
+                // calls methods in XmlConvertingReader with the strictRelationshipFound flag enabled.
                 Assert.NotNull(doc.MainDocumentPart.RootElement);
             }
         }
@@ -832,7 +832,7 @@ namespace DocumentFormat.OpenXml.Tests
                 // Should open without exception.
 
                 // Calling doc.PresentationPart.RootElement triggers to load the PresentationPart which underneath
-                // calls methods in XmlConvertingReader with the strictTranslation flag enabled.
+                // calls methods in XmlConvertingReader with the strictRelationshipFound flag enabled.
                 Assert.NotNull(doc.PresentationPart.RootElement);
             }
         }
@@ -851,7 +851,7 @@ namespace DocumentFormat.OpenXml.Tests
                 // Should open without exception.
 
                 // Referencing doc.WorkbookPart.RootElement triggers to load the WorkbookPart which underneath
-                // calls methods in XmlConvertingReader with the strictTranslation flag enabled.
+                // calls methods in XmlConvertingReader with the strictRelationshipFound flag enabled.
                 Assert.NotNull(doc.WorkbookPart.RootElement);
             }
         }
