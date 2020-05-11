@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added additional `CompatSettingNameValues` values: `UseWord2013TrackBottomHyphenation`, `AllowHyphenationAtTrackBottom`, and `AllowTextAfterFloatingTableBreak` (#706).
 - Added gfxdata attribue to Arc, Curve, Line, PolyLine, Group, Image, Oval, Rect, and RoundRect shape complex types per MS-OI29500 2.1.1783-1799 (#709)
 - Added `TryGetPartById` in `OpenXmlPartContainer`. This allows try to get the child part by the relationship ID (#714)
+- Added `StrictRelationshipFound` property on `OpenXmlPackage` indicating whether this package contains Transitional relationships converted from Strict. (#716)
 
 ### Changes
 - Marked the property setters in `OpenXmlAttribute` as obsolete as structs should not have mutable state (#698)

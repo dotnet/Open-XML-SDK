@@ -237,7 +237,10 @@ namespace DocumentFormat.OpenXml.Packaging
 
         internal virtual ApplicationType ApplicationType => ApplicationType.None;
 
-        internal bool StrictRelationshipFound { get; set; } = false;
+        /// <summary>
+        /// Gets a value indicating whether this package contains Transitional relationships converted from Strict.
+        /// </summary>
+        public bool StrictRelationshipFound { get; internal set; } = false;
 
         /// <summary>
         /// Gets the package of the document.
