@@ -547,7 +547,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Try gets the child part through the relationship ID.
+        /// Try to get the child part by the relationship ID.
         /// </summary>
         /// <param name="id">The relationship ID of the part.</param>
         /// <param name="part">The part.</param>
