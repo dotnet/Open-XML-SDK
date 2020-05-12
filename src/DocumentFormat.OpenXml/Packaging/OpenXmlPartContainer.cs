@@ -551,7 +551,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <param name="id">The relationship ID of the part.</param>
         /// <param name="part">The part.</param>
-        /// <returns>Return true when the part with the specified id exist, otherwise false</returns>
+        /// <returns>Return <c>true</c> when the part with the specified id exist, otherwise <c>false</c></returns>
         public bool TryGetPartById(string id, out OpenXmlPart part)
         {
             ThrowIfObjectDisposed();
