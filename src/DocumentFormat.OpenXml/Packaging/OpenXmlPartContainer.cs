@@ -547,6 +547,24 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
+        /// Try to get the child part by the relationship ID.
+        /// </summary>
+        /// <param name="id">The relationship ID of the part.</param>
+        /// <param name="part">The part.</param>
+        /// <returns>Return <c>true</c> when the part with the specified id exist, otherwise <c>false</c></returns>
+        public bool TryGetPartById(string id, out OpenXmlPart part)
+        {
+            ThrowIfObjectDisposed();
+
+            if (id is null)
+            {
+                throw new ArgumentNullException(nameof(id));
+            }
+
+            return ChildrenRelationshipParts.TryGetValue(id, out part);
+        }
+
+        /// <summary>
         /// Gets the relationship ID of the part.
         /// </summary>
         /// <param name="part">The part.</param>
