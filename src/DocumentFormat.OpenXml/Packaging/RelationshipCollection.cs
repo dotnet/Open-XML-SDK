@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         protected PackageRelationshipCollection BasePackageRelationshipCollection { get; set; }
 
-        internal bool StrictTranslation { get; set; }
+        internal bool StrictRelationshipFound { get; set; }
 
         /// <summary>
         /// This method fills the collection with PackageRels from the PackageRelationshipCollection that is given in the sub class.
@@ -36,7 +36,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 if (NamespaceIdMap.TryGetTransitionalRelationship(relationshipProperty.RelationshipType, out var transitionalNamespace))
                 {
                     relationshipProperty.RelationshipType = transitionalNamespace;
-                    StrictTranslation = true;
+                    StrictRelationshipFound = true;
                 }
 
                 Add(relationshipProperty);

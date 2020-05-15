@@ -181,13 +181,13 @@ namespace DocumentFormat.OpenXml.Packaging
                 bool hasMainPart = false;
                 RelationshipCollection relationshipCollection = new PackageRelationshipPropertyCollection(_package);
 
-                // relationCollection.StrictTranslation is true when this collection contains Transitional relationships converted from Strict.
-                StrictTranslation = relationshipCollection.StrictTranslation;
+                // relationCollection.StrictRelationshipFound is true when this collection contains Transitional relationships converted from Strict.
+                StrictRelationshipFound = relationshipCollection.StrictRelationshipFound;
 
                 // AutoSave must be false when opening ISO Strict doc as editable.
                 // (Attention: #2545529. Now we disable this code until we finally decide to go with this. Instead, we take an alternative approach that is added in the SavePartContents() method
-                // which we ignore AutoSave when this.StrictTranslation is true to keep consistency in the document.)
-                //if (this.StrictTranslation && (this._accessMode == FileAccess.ReadWrite || this._accessMode == FileAccess.Write) && !this.AutoSave)
+                // which we ignore AutoSave when this.StrictRelationshipFound is true to keep consistency in the document.)
+                //if (this.StrictRelationshipFound && (this._accessMode == FileAccess.ReadWrite || this._accessMode == FileAccess.Write) && !this.AutoSave)
                 //{
                 //    OpenXmlPackageException exception = new OpenXmlPackageException(ExceptionMessages.StrictEditNeedsAutoSave);
                 //    throw exception;
@@ -237,7 +237,10 @@ namespace DocumentFormat.OpenXml.Packaging
 
         internal virtual ApplicationType ApplicationType => ApplicationType.None;
 
-        internal bool StrictTranslation { get; set; } = false;
+        /// <summary>
+        /// Gets a value indicating whether this package contains Transitional relationships converted from Strict.
+        /// </summary>
+        public bool StrictRelationshipFound { get; private set; } = false;
 
         /// <summary>
         /// Gets the package of the document.
@@ -698,8 +701,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 return; // do nothing if the package is open in read-only mode.
             }
 
-            // When this.StrictTranslation is true, we ignore the save argument to do the translation if isAnyPartChanged is true. That's the way to keep consistency.
-            if (!save && !StrictTranslation)
+            // When this.StrictRelationshipFound is true, we ignore the save argument to do the translation if isAnyPartChanged is true. That's the way to keep consistency.
+            if (!save && !StrictRelationshipFound)
             {
                 return; // do nothing if saving is false.
             }
@@ -726,7 +729,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     TrySavePartContent(part);
                 }
 
-                if (StrictTranslation)
+                if (StrictRelationshipFound)
                 {
                     RelationshipCollection relationshipCollection;
 
@@ -745,8 +748,8 @@ namespace DocumentFormat.OpenXml.Packaging
             Debug.Assert(part != null);
             Debug.Assert(part.OpenXmlPackage != null);
 
-            // If StrictTranslation is true, we need to update the part anyway.
-            if (part.OpenXmlPackage.StrictTranslation)
+            // If StrictRelationshipFound is true, we need to update the part anyway.
+            if (part.OpenXmlPackage.StrictRelationshipFound)
             {
                 RelationshipCollection relationshipCollection;
 

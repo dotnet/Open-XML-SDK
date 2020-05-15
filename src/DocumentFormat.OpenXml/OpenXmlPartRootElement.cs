@@ -121,7 +121,7 @@ namespace DocumentFormat.OpenXml
             OpenXmlElementContext.XmlReaderSettings.DtdProcessing = DtdProcessing.Prohibit; // set to prohibit explicitly for security fix
 #endif
 
-            using (XmlReader xmlReader = XmlConvertingReaderFactory.Create(partStream, OpenXmlElementContext.XmlReaderSettings, openXmlPart.OpenXmlPackage.StrictTranslation))
+            using (XmlReader xmlReader = XmlConvertingReaderFactory.Create(partStream, OpenXmlElementContext.XmlReaderSettings, openXmlPart.OpenXmlPackage.StrictRelationshipFound))
             {
                 OpenXmlElementContext.MCSettings = openXmlPart.MCSettings;
 
