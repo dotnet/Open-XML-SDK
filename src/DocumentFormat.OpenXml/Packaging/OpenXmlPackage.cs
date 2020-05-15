@@ -240,7 +240,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets a value indicating whether this package contains Transitional relationships converted from Strict.
         /// </summary>
-        public bool StrictRelationshipFound { get; internal set; } = false;
+        public bool StrictRelationshipFound { get; private set; } = false;
 
         /// <summary>
         /// Gets the package of the document.
