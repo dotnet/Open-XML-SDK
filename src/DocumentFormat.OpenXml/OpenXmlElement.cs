@@ -4,6 +4,7 @@
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
+using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -208,6 +209,8 @@ namespace DocumentFormat.OpenXml
         internal virtual OpenXmlElementContext RootElementContext => Parent?.RootElementContext;
 
         internal virtual ParticleConstraint ParticleConstraint { get; }
+
+        internal virtual SemanticConstraint[] SemanticConstraints => Cached.Array<SemanticConstraint>();
 
         /// <summary>
         /// Gets the first child of the OpenXmlElement element.

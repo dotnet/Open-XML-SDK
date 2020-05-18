@@ -6,10 +6,9 @@ using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
-    internal partial class SemanticConstraintRegistry
+    internal class SemanticConstraintRegistry
     {
-        protected readonly MultivalueCollection<Type, SemanticConstraint> _semConstraintMap = new MultivalueCollection<Type, SemanticConstraint>();
-
+        private readonly Dictionary<Type, SemanticConstraint[]> _constraints;
         private readonly FileFormatVersions _format;
         private readonly ApplicationType _appType;
 
@@ -17,19 +16,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         {
             _format = format;
             _appType = appType;
-
-            Initialize();
-        }
-
-        /// <summary>
-        /// Register a constraint to this registry.
-        /// </summary>
-        public void RegisterConstraint(Type type, FileFormatVersions fileFormat, ApplicationType appType, SemanticConstraint constraint)
-        {
-            if (_format.AtLeast(fileFormat) && (appType & _appType) == _appType)
-            {
-                _semConstraintMap.Add(type, constraint);
-            }
+            _constraints = new Dictionary<Type, SemanticConstraint[]>(4);
         }
 
         /// <summary>
@@ -54,11 +41,11 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             context.Events.OnElementValidationStarted(context);
 
-            if (_semConstraintMap.TryGetValue(context.Stack.Current.Element.GetType(), out var constraints))
+            foreach (var constraint in current.Element.SemanticConstraints)
             {
-                foreach (var constraint in constraints)
+                if ((constraint.SemanticValidationLevel & level) == level)
                 {
-                    if ((constraint.SemanticValidationLevel & level) == level)
+                    if (_format.AtLeast(constraint.Version) && (constraint.Application & _appType) == _appType)
                     {
                         var err = constraint.Validate(context);
 

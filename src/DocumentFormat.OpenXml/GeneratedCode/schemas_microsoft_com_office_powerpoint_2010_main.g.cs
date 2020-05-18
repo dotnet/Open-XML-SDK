@@ -8,6 +8,7 @@ using DocumentFormat.OpenXml.Office2010.Drawing;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Presentation;
 using DocumentFormat.OpenXml.Validation.Schema;
+using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
@@ -426,6 +427,11 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
+
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new RelationshipExistConstraint(1 /*r:link*/) { Version = FileFormatVersions.Office2010 },
+            new RelationshipExistConstraint(0 /*r:embed*/) { Version = FileFormatVersions.Office2010 }
+        };
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -2133,6 +2139,11 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         [SchemaAttr(0, "time")]
         [Index(1)]
         public StringValue Time { get; set; }
+
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:name*/, true, typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList)) { Version = FileFormatVersions.Office2010 },
+            new UniqueAttributeValueConstraint(1 /*:time*/, true, typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList)) { Version = FileFormatVersions.Office2010 }
+        };
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MediaBookmark>(deep);

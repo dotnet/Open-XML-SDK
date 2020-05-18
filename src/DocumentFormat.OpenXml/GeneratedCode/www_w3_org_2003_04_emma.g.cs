@@ -6,6 +6,7 @@ using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Office2010.Ink;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
+using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
@@ -587,6 +588,11 @@ namespace DocumentFormat.OpenXml.EMMA
         [Index(25)]
         public BooleanValue Uninterpreted { get; set; }
 
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new AttributeValuePatternConstraint(0 /*:id*/, @"[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}") { Version = FileFormatVersions.Office2010 },
+            new AttributeValueSetConstraint(16 /*emma:mode*/, true, new string[] { "ink" }) { Version = FileFormatVersions.Office2010 }
+        };
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
         {
             new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -934,6 +940,10 @@ namespace DocumentFormat.OpenXml.EMMA
         [SchemaAttr(44, "dialog-turn")]
         [Index(24)]
         public StringValue DialogTurn { get; set; }
+
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new AttributeValueSetConstraint(0 /*:disjunction-type*/, true, new string[] { "recognition" }) { Version = FileFormatVersions.Office2010 }
+        };
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
         {

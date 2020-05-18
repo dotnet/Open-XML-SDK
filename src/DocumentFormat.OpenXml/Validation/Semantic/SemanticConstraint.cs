@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Spreadsheet;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -25,6 +24,10 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         public SemanticValidationLevel SemanticValidationLevel { get; }
 
         public virtual SemanticValidationLevel StateScope => SemanticValidationLevel;
+
+        public ApplicationType Application { get; set; } = ApplicationType.All;
+
+        public FileFormatVersions Version { get; set; } = FileFormatVersions.Office2007;
 
         /// <summary>
         /// Semantic validation logic

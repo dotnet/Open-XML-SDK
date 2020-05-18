@@ -6,6 +6,7 @@ using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
+using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
@@ -163,6 +164,10 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
             get => GetElement<OfficeArtExtensionList>();
             set => SetElement(value);
         }
+
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new AttributeValueLengthConstraint(0 /*:id*/, 1, 1000) { Application = ApplicationType.Word | ApplicationType.Excel, Version = FileFormatVersions.Office2013 }
+        };
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -536,6 +541,10 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
             get => GetElement<OfficeArtExtensionList>();
             set => SetElement(value);
         }
+
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new AttributeValueLengthConstraint(0 /*:id*/, 1, 1000) { Application = ApplicationType.Word | ApplicationType.Excel, Version = FileFormatVersions.Office2013 }
+        };
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {

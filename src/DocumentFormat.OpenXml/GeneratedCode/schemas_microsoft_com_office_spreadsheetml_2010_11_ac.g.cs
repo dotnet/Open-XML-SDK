@@ -6,6 +6,7 @@ using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
 using DocumentFormat.OpenXml.Validation.Schema;
+using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
@@ -36,6 +37,10 @@ namespace DocumentFormat.OpenXml.Office2013.ExcelAc
         [SchemaAttr(0, "url")]
         [Index(0)]
         public StringValue Url { get; set; }
+
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new AttributeValueLengthConstraint(0 /*:url*/, 1, 1000) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2013 }
+        };
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AbsolutePath>(deep);

@@ -8,6 +8,7 @@ using DocumentFormat.OpenXml.Office2010.Excel;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
 using DocumentFormat.OpenXml.Validation.Schema;
+using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
@@ -4518,6 +4519,10 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
+
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new AttributeValueLengthConstraint(0 /*:name*/, 1, 1000) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2013 }
+        };
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {

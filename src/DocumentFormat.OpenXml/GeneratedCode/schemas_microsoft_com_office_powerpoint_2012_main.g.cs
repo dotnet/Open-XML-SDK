@@ -7,6 +7,7 @@ using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Presentation;
 using DocumentFormat.OpenXml.Validation.Schema;
+using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
@@ -90,6 +91,11 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         [SchemaAttr(0, "providerId")]
         [Index(1)]
         public StringValue ProviderId { get; set; }
+
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new AttributeValueLengthConstraint(1 /*:providerId*/, 1, 100) { Application = ApplicationType.PowerPoint, Version = FileFormatVersions.Office2013 },
+            new AttributeValueLengthConstraint(0 /*:userId*/, 1, 300) { Application = ApplicationType.PowerPoint, Version = FileFormatVersions.Office2013 }
+        };
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PresenceInfo>(deep);

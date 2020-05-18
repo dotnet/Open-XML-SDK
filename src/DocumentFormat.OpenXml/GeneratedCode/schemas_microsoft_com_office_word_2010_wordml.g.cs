@@ -7,6 +7,7 @@ using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Office2010.Drawing;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
+using DocumentFormat.OpenXml.Validation.Semantic;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System;
 using System.Collections.Generic;
@@ -3186,6 +3187,10 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         [Index(0)]
         public HexBinaryValue Val { get; set; }
 
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*w14:val*/, true, 0, false, 2147483648, false) { Version = FileFormatVersions.Office2010 }
+        };
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocumentId>(deep);
     }
@@ -4161,6 +4166,10 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         [SchemaAttr(52, "val")]
         [Index(1)]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues> Val { get; set; }
+
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*w14:id*/, true, 1, true, 20, true) { Version = FileFormatVersions.Office2010 }
+        };
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleSet>(deep);

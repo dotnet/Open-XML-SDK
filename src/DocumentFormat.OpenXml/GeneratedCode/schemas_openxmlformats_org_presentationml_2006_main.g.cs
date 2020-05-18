@@ -9,6 +9,7 @@ using DocumentFormat.OpenXml.Office2010.PowerPoint;
 using DocumentFormat.OpenXml.Office2013.PowerPoint;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
+using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
@@ -306,6 +307,10 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new AttributeValueLessEqualToAnother(0 /*:st*/, 1 /*:end*/, true)
+        };
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideRange>(deep);
     }
@@ -407,6 +412,10 @@ namespace DocumentFormat.OpenXml.Presentation
         [SchemaAttr(0, "id")]
         [Index(0)]
         public UInt32Value Id { get; set; }
+
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:id*/, false, null) { Application = ApplicationType.PowerPoint }
+        };
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomShowReference>(deep);
@@ -1366,6 +1375,10 @@ namespace DocumentFormat.OpenXml.Presentation
         [Index(6)]
         public StringValue ProgId { get; set; }
 
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new RelationshipExistConstraint(3 /*r:id*/)
+        };
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -1733,6 +1746,10 @@ namespace DocumentFormat.OpenXml.Presentation
             get => GetElement<PresentationExtensionList>();
             set => SetElement(value);
         }
+
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new AttributeValueRangeConstraint(1 /*:firstSlideNum*/, true, 0, true, 9999, true) { Application = ApplicationType.PowerPoint }
+        };
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -3679,6 +3696,10 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetElement(value);
         }
 
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new RelationshipExistConstraint(1 /*r:id*/) { Version = FileFormatVersions.Office2010 }
+        };
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualContentPartProperties), 0, 1, version: FileFormatVersions.Office2010),
@@ -3912,6 +3933,10 @@ namespace DocumentFormat.OpenXml.Presentation
         [SchemaAttr(0, "val")]
         [Index(0)]
         public Int32Value Val { get; set; }
+
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483625, true) { Application = ApplicationType.PowerPoint }
+        };
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TimePercentage>(deep);
@@ -5180,6 +5205,10 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetElement(value);
         }
 
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new AttributeValueRangeConstraint(3 /*:rAng*/, true, -2147483554, true, 2147483554, true) { Application = ApplicationType.PowerPoint }
+        };
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1),
@@ -5291,6 +5320,12 @@ namespace DocumentFormat.OpenXml.Presentation
             get => GetElement<CommonBehavior>();
             set => SetElement(value);
         }
+
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:by*/, true, -2147483554, true, 2147483554, true) { Application = ApplicationType.PowerPoint },
+            new AttributeValueRangeConstraint(1 /*:from*/, true, -2147483554, true, 2147483554, true) { Application = ApplicationType.PowerPoint },
+            new AttributeValueRangeConstraint(2 /*:to*/, true, -2147483554, true, 2147483554, true) { Application = ApplicationType.PowerPoint }
+        };
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -6115,6 +6150,10 @@ namespace DocumentFormat.OpenXml.Presentation
             get => GetElement<SubTimeNodeList>();
             set => SetElement(value);
         }
+
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new AttributeValueSetConstraint(7 /*:spd*/, false, new string[] { "0" }) { Application = ApplicationType.PowerPoint }
+        };
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -7864,6 +7903,11 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetElement(value);
         }
 
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:lvl*/, true, double.NegativeInfinity, true, 9, true) { Application = ApplicationType.PowerPoint },
+            new UniqueAttributeValueConstraint(0 /*:lvl*/, true, typeof(DocumentFormat.OpenXml.Presentation.TemplateList)) { Application = ApplicationType.PowerPoint }
+        };
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimeNodeList), 1, 1)
@@ -8162,6 +8206,10 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetElement(value);
         }
 
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new ReferenceExistConstraint(0 /*:spid*/, ".", typeof(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties), "DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties", 0 /*:id*/) { Application = ApplicationType.PowerPoint }
+        };
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TemplateList), 0, 1)
@@ -8226,6 +8274,11 @@ namespace DocumentFormat.OpenXml.Presentation
         [SchemaAttr(0, "bld")]
         [Index(3)]
         public EnumValue<DocumentFormat.OpenXml.Presentation.DiagramBuildValues> Build { get; set; }
+
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new ReferenceExistConstraint(1 /*:grpId*/, ".", typeof(DocumentFormat.OpenXml.Presentation.CommonTimeNode), "DocumentFormat.OpenXml.Presentation.CommonTimeNode", 19 /*:grpId*/) { Application = ApplicationType.PowerPoint },
+            new ReferenceExistConstraint(0 /*:spid*/, ".", typeof(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties), "DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties", 0 /*:id*/) { Application = ApplicationType.PowerPoint }
+        };
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BuildDiagram>(deep);
@@ -8292,6 +8345,11 @@ namespace DocumentFormat.OpenXml.Presentation
         [SchemaAttr(0, "animBg")]
         [Index(4)]
         public BooleanValue AnimateBackground { get; set; }
+
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new ReferenceExistConstraint(0 /*:spid*/, ".", typeof(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties), "DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties", 0 /*:id*/) { Application = ApplicationType.PowerPoint },
+            new ReferenceExistConstraint(1 /*:grpId*/, ".", typeof(DocumentFormat.OpenXml.Presentation.CommonTimeNode), "DocumentFormat.OpenXml.Presentation.CommonTimeNode", 19 /*:grpId*/) { Application = ApplicationType.PowerPoint }
+        };
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BuildOleChart>(deep);
@@ -8400,6 +8458,11 @@ namespace DocumentFormat.OpenXml.Presentation
             get => GetElement<BuildSubElement>();
             set => SetElement(value);
         }
+
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new ReferenceExistConstraint(0 /*:spid*/, ".", typeof(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties), "DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties", 0 /*:id*/) { Application = ApplicationType.PowerPoint },
+            new ReferenceExistConstraint(1 /*:grpId*/, ".", typeof(DocumentFormat.OpenXml.Presentation.CommonTimeNode), "DocumentFormat.OpenXml.Presentation.CommonTimeNode", 19 /*:grpId*/) { Application = ApplicationType.PowerPoint }
+        };
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -8935,6 +8998,10 @@ namespace DocumentFormat.OpenXml.Presentation
         [Index(0)]
         public StringValue Id { get; set; }
 
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new RelationshipExistConstraint(0 /*r:id*/)
+        };
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideListEntry>(deep);
     }
@@ -9107,6 +9174,12 @@ namespace DocumentFormat.OpenXml.Presentation
             get => GetElement<CommentAuthorExtensionList>();
             set => SetElement(value);
         }
+
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:id*/, false, null),
+            new AttributeValueRangeConstraint(0 /*:id*/, true, 0, true, double.PositiveInfinity, true),
+            new UniqueAttributeValueConstraint(4 /*:clrIdx*/, true, typeof(DocumentFormat.OpenXml.Presentation.CommentAuthorList))
+        };
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -9535,6 +9608,11 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetElement(value);
         }
 
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:id*/, true, null),
+            new RelationshipExistConstraint(1 /*r:id*/)
+        };
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
@@ -9627,6 +9705,11 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetElement(value);
         }
 
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:id*/, false, null),
+            new RelationshipExistConstraint(1 /*r:id*/)
+        };
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
@@ -9710,6 +9793,10 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetElement(value);
         }
 
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new RelationshipExistConstraint(0 /*r:id*/)
+        };
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
@@ -9792,6 +9879,10 @@ namespace DocumentFormat.OpenXml.Presentation
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
+
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new RelationshipExistConstraint(0 /*r:id*/)
+        };
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -12666,6 +12757,11 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetElement(value);
         }
 
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:id*/, true, null),
+            new RelationshipExistConstraint(1 /*r:id*/)
+        };
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
@@ -12853,6 +12949,10 @@ namespace DocumentFormat.OpenXml.Presentation
         [SchemaAttr(0, "val")]
         [Index(1)]
         public StringValue Val { get; set; }
+
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:name*/, false, typeof(DocumentFormat.OpenXml.Presentation.TagList)) { Application = ApplicationType.PowerPoint }
+        };
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Tag>(deep);
@@ -14851,6 +14951,10 @@ namespace DocumentFormat.OpenXml.Presentation
         [SchemaAttr(0, "advTm")]
         [Index(3)]
         public StringValue AdvanceAfterTime { get; set; }
+
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new AttributeValueRangeConstraint(3 /*:advTm*/, true, 0, true, 2147483647, true) { Application = ApplicationType.PowerPoint }
+        };
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -18480,6 +18584,13 @@ namespace DocumentFormat.OpenXml.Presentation
         [SchemaAttr(0, "spinValue")]
         [Index(15)]
         public UInt32Value SpinValue { get; set; }
+
+        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+            new AttributeValueSetConstraint(3 /*:cryptAlgorithmSid*/, true, new string[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14" }) { Application = ApplicationType.Word | ApplicationType.Excel },
+            new AttributeValueSetConstraint(3 /*:cryptAlgorithmSid*/, true, new string[] { "1", "2", "3", "4", "12", "13", "14" }) { Application = ApplicationType.PowerPoint },
+            new AttributeValueSetConstraint(11 /*:cryptProviderTypeExtSource*/, true, new string[] { "wincrypt", "" }) { Application = ApplicationType.PowerPoint },
+            new AttributeValueSetConstraint(9 /*:algIdExtSource*/, true, new string[] { "wincrypt", "" }) { Application = ApplicationType.PowerPoint }
+        };
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ModificationVerifier>(deep);
