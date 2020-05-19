@@ -1,14 +1,12 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using System;
 using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     internal class SemanticConstraintRegistry
     {
-        private readonly Dictionary<Type, SemanticConstraint[]> _constraints;
         private readonly FileFormatVersions _format;
         private readonly ApplicationType _appType;
 
@@ -16,7 +14,6 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         {
             _format = format;
             _appType = appType;
-            _constraints = new Dictionary<Type, SemanticConstraint[]>(4);
         }
 
         /// <summary>

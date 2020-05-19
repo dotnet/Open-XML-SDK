@@ -281,11 +281,11 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
             set => SetElement(value);
         }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*:id*/, true, typeof(DocumentFormat.OpenXml.Drawing.GraphicData))
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {

@@ -379,11 +379,11 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
             set => SetElement(value);
         }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueLengthConstraint(0 /*:macro*/, 0, 256)
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -613,11 +613,11 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
             set => SetElement(value);
         }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueLengthConstraint(0 /*:macro*/, 0, 256)
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -738,11 +738,11 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
             set => SetElement(value);
         }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueLengthConstraint(0 /*:macro*/, 0, 256)
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -878,11 +878,11 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
             set => SetElement(value);
         }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueLengthConstraint(0 /*:macro*/, 0, 256)
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1030,11 +1030,11 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
             set => SetElement(value);
         }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*:id*/, true, null)
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {

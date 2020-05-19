@@ -92,12 +92,12 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         [Index(1)]
         public StringValue ProviderId { get; set; }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueLengthConstraint(1 /*:providerId*/, 1, 100) { Application = ApplicationType.PowerPoint, Version = FileFormatVersions.Office2013 },
             new AttributeValueLengthConstraint(0 /*:userId*/, 1, 300) { Application = ApplicationType.PowerPoint, Version = FileFormatVersions.Office2013 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PresenceInfo>(deep);

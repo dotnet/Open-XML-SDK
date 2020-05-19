@@ -584,11 +584,11 @@ namespace DocumentFormat.OpenXml.Vml.Office
         [Index(12)]
         public StringValue SignatureProviderUrl { get; set; }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(2 /*:id*/, true, null)
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SignatureLine>(deep);
@@ -1122,14 +1122,14 @@ namespace DocumentFormat.OpenXml.Vml.Office
         [Index(30)]
         public TrueFalseValue LightHarsh2 { get; set; }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(22 /*:facet*/, true, 1, true, 65536, true),
             new AttributeValuePatternConstraint(21 /*:edge*/, @"(\d{1,5}|1[0-6][0-8]\d{3}|1690[0-8]\d|16909[0-3])pt"),
             new AttributeValueRangeConstraint(11 /*:orientationangle*/, true, -32767, true, 32767, true),
             new AttributeValueRangeConstraint(6 /*:skewangle*/, true, -32767, true, 32767, true)
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Extrusion>(deep);
@@ -1266,11 +1266,11 @@ namespace DocumentFormat.OpenXml.Vml.Office
         [Index(13)]
         public TrueFalseValue MinusY { get; set; }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(2 /*:type*/, true, new string[] { "rightAngle", "oneSegment", "twoSegment", "threeSegment" })
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Callout>(deep);
@@ -1544,12 +1544,12 @@ namespace DocumentFormat.OpenXml.Vml.Office
             set => SetElement(value);
         }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValuePatternConstraint(4 /*:ObjectID*/, @"_(\d{1,9}|1\d{9}|20\d{8}|21[0-3]\d{7}|214[0-6]\d{6}|2147[0-3]\d{5}|21474[0-7]\d{4}|214748[0-2]\d{3}|2147483[0-5]\d{2}|21474836[0-3]\d|214748364[0-7])"),
             new ReferenceExistConstraint(2 /*:ShapeID*/, ".", typeof(DocumentFormat.OpenXml.Vml.Shape), "DocumentFormat.OpenXml.Vml.Shape", 0 /*:id*/)
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1671,12 +1671,12 @@ namespace DocumentFormat.OpenXml.Vml.Office
         {
         }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(2 /*:weight*/, true, 0, true, 20116800, true),
             new AttributeValueRangeConstraint(7 /*:miterlimit*/, true, double.NegativeInfinity, true, 32767, true)
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BottomStroke>(deep);
@@ -1698,11 +1698,11 @@ namespace DocumentFormat.OpenXml.Vml.Office
         {
         }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(10 /*:dashstyle*/, true, new string[] { "solid", "shortdash", "shortdot", "shortdashdot", "shortdashdotdot", "dot", "dash", "longdash", "longdashdotdot", "dashdot" })
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnStroke>(deep);

@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     /// <summary>
     /// Base class for each semantic constraint category.
     /// </summary>
-    internal abstract partial class SemanticConstraint
+    internal abstract class SemanticConstraint : ISemanticConstraint
     {
         public SemanticConstraint(SemanticValidationLevel level)
         {

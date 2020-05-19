@@ -151,12 +151,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         [Index(3)]
         public UInt32Value Count { get; set; }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(1 /*:xWindow*/, true, double.NegativeInfinity, true, 65535, true) { Version = FileFormatVersions.Office2010 },
             new AttributeValueRangeConstraint(2 /*:yWindow*/, true, double.NegativeInfinity, true, 65535, true) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -618,11 +618,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         [Index(2)]
         public UInt32Value AccuracyVersion { get; set; }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(0 /*:defaultImageDpi*/, true, new string[] { "96", "150", "220" }) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WorkbookProperties>(deep);
@@ -728,12 +728,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             set => SetElement(value);
         }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueLengthConstraint(0 /*:displayFolder*/, 0, 65535) { Version = FileFormatVersions.Office2010 },
             new AttributeValueLengthConstraint(4 /*:mdxLong*/, 32766, 1073741822) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -838,13 +838,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             set => SetElement(value);
         }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueConditionToAnother(0 /*:flattenHierarchies*/, 3 /*:ignore*/, new string[] { "false" }, new string[] { "true" }) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2010 },
             new AttributeValueConditionToAnother(1 /*:measuresSet*/, 3 /*:ignore*/, new string[] { "false" }, new string[] { "true" }) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2010 },
             new AttributeValueConditionToAnother(2 /*:hierarchizeDistinct*/, 3 /*:ignore*/, new string[] { "false" }, new string[] { "true" }) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -897,12 +897,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         [Index(2)]
         public StringValue UniqueName { get; set; }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(2 /*:uniqueName*/, true, null) { Version = FileFormatVersions.Office2010 },
             new AttributeValueLengthConstraint(2 /*:uniqueName*/, 0, 65535) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataField>(deep);
@@ -1114,13 +1114,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             set => SetElement(value);
         }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueLengthConstraint(3 /*:altText*/, 0, 2000) { Version = FileFormatVersions.Office2010 },
             new AttributeValueLengthConstraint(4 /*:altTextSummary*/, 0, 2000) { Version = FileFormatVersions.Office2010 },
             new AttributeValueLengthConstraint(8 /*:weightExpression*/, 0, 65535) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1271,12 +1271,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             set => SetElement(value);
         }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueLengthConstraint(0 /*:culture*/, 0, 84) { Version = FileFormatVersions.Office2010 },
             new AttributeValueLengthConstraint(1 /*:embeddedDataId*/, 0, 65535) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1321,12 +1321,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         [Index(1)]
         public StringValue AltTextSummary { get; set; }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueLengthConstraint(0 /*:altText*/, 0, 25000) { Version = FileFormatVersions.Office2010 },
             new AttributeValueLengthConstraint(1 /*:altTextSummary*/, 0, 50000) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Table>(deep);
@@ -1388,11 +1388,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         [Index(0)]
         public StringValue DefaultSlicerStyle { get; set; }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueLengthConstraint(0 /*:defaultSlicerStyle*/, 1, 255) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1870,13 +1870,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         [Index(6)]
         public UInt32Value IconId { get; set; }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeAbsentConditionToValue(4 /*:dxfId*/, 1 /*:sortBy*/ , "icon", "value") { Version = FileFormatVersions.Office2010 },
             new AttributeAbsentConditionToNonValue(5 /*:iconSet*/, 1 /*:sortBy*/ , "icon") { Version = FileFormatVersions.Office2010 },
             new AttributeAbsentConditionToNonValue(6 /*:iconId*/, 1 /*:sortBy*/ , "icon") { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SortCondition>(deep);
@@ -1980,11 +1980,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             set => SetElement(value);
         }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueLengthConstraint(0 /*:id*/, 0, 65535) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -2356,7 +2356,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             set => SetElement(value);
         }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(3 /*:dropLines*/, true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 },
             new AttributeValueRangeConstraint(12 /*:inc*/, true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 },
             new AttributeValueRangeConstraint(15 /*:max*/, true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 },
@@ -2364,7 +2364,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             new AttributeValueRangeConstraint(20 /*:page*/, true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -2892,7 +2892,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         [Index(13)]
         public StringValue Id { get; set; }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(1 /*:priority*/, true, 0, false, double.PositiveInfinity, true) { Version = FileFormatVersions.Office2010 },
             new UniqueAttributeValueConstraint(1 /*:priority*/, true, null) { Version = FileFormatVersions.Office2010 },
             new AttributeAbsentConditionToNonValue(3 /*:aboveAverage*/, 0 /*:type*/ , "aboveAverage") { Version = FileFormatVersions.Office2010 },
@@ -2904,7 +2904,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             new AttributeAbsentConditionToNonValue(11 /*:equalAverage*/, 0 /*:type*/ , "aboveAverage") { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -3172,13 +3172,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             set => SetElement(value);
         }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueLengthConstraint(9 /*:error*/, 0, 225) { Version = FileFormatVersions.Office2010 },
             new AttributeValueLengthConstraint(10 /*:promptTitle*/, 0, 32) { Version = FileFormatVersions.Office2010 },
             new AttributeValueLengthConstraint(11 /*:prompt*/, 0, 225) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -3697,12 +3697,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             set => SetElement(value);
         }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueConditionToAnother(1 /*:manualMin*/, 14 /*:minAxisType*/, new string[] { "0" }, new string[] { "individual", "group" }) { Version = FileFormatVersions.Office2010 },
             new AttributeValueRangeConstraint(2 /*:lineWeight*/, true, 0, true, 1584, true) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -3740,11 +3740,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SeriesColor>(deep);
@@ -3766,11 +3766,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NegativeColor>(deep);
@@ -3792,11 +3792,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AxisColor>(deep);
@@ -3818,11 +3818,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MarkersColor>(deep);
@@ -3844,11 +3844,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstMarkerColor>(deep);
@@ -3870,11 +3870,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LastMarkerColor>(deep);
@@ -3896,11 +3896,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HighMarkerColor>(deep);
@@ -4275,11 +4275,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         [Index(0)]
         public StringValue Id { get; set; }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipExistConstraint(0 /*r:id*/) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlicerRef>(deep);
@@ -4313,11 +4313,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         [Index(0)]
         public StringValue Id { get; set; }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipExistConstraint(0 /*r:id*/) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlicerCache>(deep);
@@ -4392,11 +4392,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             set => SetElement(value);
         }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*:name*/, true, typeof(DocumentFormat.OpenXml.Office2010.Excel.DefinedNames)) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -4513,11 +4513,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         [Index(0)]
         public UInt32Value Index { get; set; }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*:index*/, true, typeof(DocumentFormat.OpenXml.Office2010.Excel.ArgumentDescriptions)) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArgumentDescription>(deep);
@@ -4774,12 +4774,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         [Index(1)]
         public StringValue HierarchyName { get; set; }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueLengthConstraint(0 /*:uniqueName*/, 0, 65535) { Version = FileFormatVersions.Office2010 },
             new AttributeValueLengthConstraint(1 /*:hierarchyName*/, 0, 65535) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TupleSetHeader>(deep);
@@ -4875,12 +4875,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         [Index(1)]
         public StringValue DisplayName { get; set; }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueLengthConstraint(0 /*:u*/, 0, 65535) { Version = FileFormatVersions.Office2010 },
             new AttributeValueLengthConstraint(1 /*:d*/, 0, 65535) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TupleSetRowItem>(deep);
@@ -4911,11 +4911,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         [Index(0)]
         public Int32Value Hierarchy { get; set; }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*:hierarchy*/, true, -2, true, double.PositiveInfinity, true) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SetLevel>(deep);
@@ -5177,12 +5177,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         [Index(8)]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DataBarAxisPositionValues> AxisPosition { get; set; }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueLessEqualToAnother(0 /*:minLength*/, 1 /*:maxLength*/, true) { Version = FileFormatVersions.Office2010 },
             new AttributeValueRangeConstraint(1 /*:maxLength*/, true, double.NegativeInfinity, true, 100, true) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -6411,11 +6411,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             set => SetElement(value);
         }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueLengthConstraint(1 /*:weightExpression*/, 1, 65535) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -6468,11 +6468,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         [Index(0)]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.PivotEditValueTypeValues> ValueType { get; set; }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueLengthConstraint(0 /*:valueType*/, 1, 32767) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotEditValue>(deep);
@@ -6752,13 +6752,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             set => SetElement(value);
         }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(1 /*:type*/, true, new string[] { "none" }) { Version = FileFormatVersions.Office2010 },
             new AttributeValueRangeConstraint(2 /*:priority*/, true, 1, true, double.PositiveInfinity, true) { Version = FileFormatVersions.Office2010 },
             new ReferenceExistConstraint(2 /*:priority*/, "..", typeof(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingRule), "DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingRule", 1 /*:priority*/) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -6907,13 +6907,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             set => SetElement(value);
         }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueLengthConstraint(0 /*:name*/, 1, 255) { Version = FileFormatVersions.Office2010 },
             new ReferenceExistConstraint(0 /*:name*/, ".", typeof(DocumentFormat.OpenXml.Spreadsheet.TableStyle), "DocumentFormat.OpenXml.Spreadsheet.TableStyle", 0 /*:name*/) { Version = FileFormatVersions.Office2010 },
             new UniqueAttributeValueConstraint(0 /*:name*/, true, typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerStyles)) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -6959,12 +6959,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         [Index(1)]
         public UInt32Value FormatId { get; set; }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*:type*/, true, typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElements)) { Version = FileFormatVersions.Office2010 },
             new IndexReferenceConstraint(1 /*:dxfId*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlicerStyleElement>(deep);
@@ -7231,13 +7231,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             set => SetElement(value);
         }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeMutualExclusive(0, 1) /*:password, :algorithmName*/ { Version = FileFormatVersions.Office2010 },
             new AttributeValueRangeConstraint(4 /*:spinCount*/, true, double.NegativeInfinity, true, 10000000, true) { Version = FileFormatVersions.Office2010 },
             new AttributeValueLengthConstraint(5 /*:name*/, 1, 255) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -7519,14 +7519,14 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             set => SetElement(value);
         }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*:name*/, false, null) { Version = FileFormatVersions.Office2010 },
             new AttributeValueLengthConstraint(0 /*:name*/, 1, 32767) { Version = FileFormatVersions.Office2010 },
             new AttributeValueLengthConstraint(2 /*:caption*/, 1, int.MaxValue) { Version = FileFormatVersions.Office2010 },
             new AttributeValueRangeConstraint(4 /*:columnCount*/, true, 1, true, 20000, true) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -7813,11 +7813,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         [Index(1)]
         public StringValue Name { get; set; }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new ReferenceExistConstraint(0 /*:tabId*/, "/WorkbookPart", typeof(DocumentFormat.OpenXml.Spreadsheet.Sheet), "DocumentFormat.OpenXml.Spreadsheet.Sheet", 1 /*:sheetId*/) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlicerCachePivotTable>(deep);
@@ -7991,11 +7991,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         [Index(0)]
         public UInt32Value StartItem { get; set; }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValuePatternConstraint(0 /*:startItem*/, @"(0|[1-9][0-9]*000)") { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -8168,11 +8168,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             set => SetElement(value);
         }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueLengthConstraint(0 /*:uniqueName*/, 1, 32767) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -8491,11 +8491,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         [Index(2)]
         public BooleanValue NonDisplay { get; set; }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*:x*/, true, typeof(DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheItems)) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TabularSlicerCacheItem>(deep);

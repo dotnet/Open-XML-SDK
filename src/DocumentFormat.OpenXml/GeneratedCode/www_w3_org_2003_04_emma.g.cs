@@ -588,12 +588,12 @@ namespace DocumentFormat.OpenXml.EMMA
         [Index(25)]
         public BooleanValue Uninterpreted { get; set; }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValuePatternConstraint(0 /*:id*/, @"[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}") { Version = FileFormatVersions.Office2010 },
             new AttributeValueSetConstraint(16 /*emma:mode*/, true, new string[] { "ink" }) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
         {
@@ -943,11 +943,11 @@ namespace DocumentFormat.OpenXml.EMMA
         [Index(24)]
         public StringValue DialogTurn { get; set; }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(0 /*:disjunction-type*/, true, new string[] { "recognition" }) { Version = FileFormatVersions.Office2010 }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
         {

@@ -692,12 +692,12 @@ namespace DocumentFormat.OpenXml.CustomProperties
             set => SetElement(value);
         }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(1 /*:pid*/, true, 2, true, double.PositiveInfinity, true),
             new UniqueAttributeValueConstraint(2 /*:name*/, false, null)
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {

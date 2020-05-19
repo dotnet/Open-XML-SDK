@@ -200,12 +200,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         [Index(0)]
         public EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues> ObjectType { get; set; }
 
-        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(0 /*:ObjectType*/, false, new string[] { "Movie" }) { Application = ApplicationType.Excel },
             new AttributeValueSetConstraint(0 /*:ObjectType*/, false, new string[] { "LineA", "RectA" }) { Application = ApplicationType.Excel }
         };
 
-        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
         {

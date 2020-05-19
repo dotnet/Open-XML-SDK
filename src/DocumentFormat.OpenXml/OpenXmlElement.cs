@@ -210,7 +210,7 @@ namespace DocumentFormat.OpenXml
 
         internal virtual ParticleConstraint ParticleConstraint { get; }
 
-        internal virtual SemanticConstraint[] SemanticConstraints => Cached.Array<SemanticConstraint>();
+        internal virtual ISemanticConstraint[] SemanticConstraints => Cached.Array<ISemanticConstraint>();
 
         /// <summary>
         /// Gets the first child of the OpenXmlElement element.
