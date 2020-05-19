@@ -94,9 +94,11 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             }
         }
 
+#pragma warning disable CA1812
         private sealed class PsWorksheetPart : WorksheetPart
         {
         }
+#pragma warning restore CA1812
 
         [RelationshipType(Relationship)]
         private class ConstraintTest1
