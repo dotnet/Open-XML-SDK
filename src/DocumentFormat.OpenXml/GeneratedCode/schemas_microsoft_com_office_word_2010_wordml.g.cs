@@ -3187,9 +3187,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         [Index(0)]
         public HexBinaryValue Val { get; set; }
 
-        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*w14:val*/, true, 0, false, 2147483648, false) { Version = FileFormatVersions.Office2010 }
         };
+
+        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocumentId>(deep);
@@ -4167,9 +4169,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         [Index(1)]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues> Val { get; set; }
 
-        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*w14:id*/, true, 1, true, 20, true) { Version = FileFormatVersions.Office2010 }
         };
+
+        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleSet>(deep);

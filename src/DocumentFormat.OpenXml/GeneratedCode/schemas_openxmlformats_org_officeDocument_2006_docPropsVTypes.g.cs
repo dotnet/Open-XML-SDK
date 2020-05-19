@@ -1890,9 +1890,11 @@ namespace DocumentFormat.OpenXml.VariantTypes
         [Index(0)]
         public StringValue Version { get; set; }
 
-        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*:version*/, true, null)
         };
+
+        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTVStreamData>(deep);

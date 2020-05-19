@@ -700,10 +700,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         [Index(2)]
         public OnOffValue Done { get; set; }
 
-        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
             new AttributeValuePatternConstraint(0 /*w15:paraId*/, @"[0-9a-fA-F]{8}") { Application = ApplicationType.Word, Version = FileFormatVersions.Office2013 },
             new AttributeValueLengthConstraint(2 /*w15:done*/, 1, int.MaxValue) { Application = ApplicationType.Word, Version = FileFormatVersions.Office2013 }
         };
+
+        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommentEx>(deep);
@@ -848,10 +850,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         [Index(1)]
         public StringValue UserId { get; set; }
 
-        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
             new AttributeValueLengthConstraint(0 /*w15:providerId*/, 1, 100) { Application = ApplicationType.Word, Version = FileFormatVersions.Office2013 },
             new AttributeValueLengthConstraint(1 /*w15:userId*/, 1, 300) { Application = ApplicationType.Word, Version = FileFormatVersions.Office2013 }
         };
+
+        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PresenceInfo>(deep);

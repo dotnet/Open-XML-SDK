@@ -511,9 +511,11 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             set => SetElement(value);
         }
 
-        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
             new AttributeValueLengthConstraint(0 /*:macro*/, 0, 256)
         };
+
+        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -743,9 +745,11 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             set => SetElement(value);
         }
 
-        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
             new AttributeValueLengthConstraint(0 /*:macro*/, 0, 256)
         };
+
+        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -866,9 +870,11 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             set => SetElement(value);
         }
 
-        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
             new AttributeValueLengthConstraint(0 /*:macro*/, 0, 256)
         };
+
+        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -2788,9 +2794,11 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             set => SetElement(value);
         }
 
-        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*:id*/, true, null)
         };
+
+        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {

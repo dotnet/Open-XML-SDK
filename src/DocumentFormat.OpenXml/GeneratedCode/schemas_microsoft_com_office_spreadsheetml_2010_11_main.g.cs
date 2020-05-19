@@ -4520,9 +4520,11 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             set => SetElement(value);
         }
 
-        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
             new AttributeValueLengthConstraint(0 /*:name*/, 1, 1000) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2013 }
         };
+
+        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {

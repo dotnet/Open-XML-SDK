@@ -131,9 +131,11 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
         [Index(0)]
         public StringValue Id { get; set; }
 
-        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
             new RelationshipExistConstraint(0 /*r:id*/) { Application = ApplicationType.Word | ApplicationType.Excel, Version = FileFormatVersions.Office2013 }
         };
+
+        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebExtensionPartReference>(deep);

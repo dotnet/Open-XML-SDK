@@ -119,11 +119,13 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         [Index(2)]
         public StringValue SchemaLocation { get; set; }
 
-        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
             new AttributeValueLengthConstraint(1 /*sl:manifestLocation*/, 0, 2083) { Application = ApplicationType.Word },
             new AttributeValueLengthConstraint(2 /*sl:schemaLocation*/, 0, 2083) { Application = ApplicationType.Word },
             new AttributeValueLengthConstraint(0 /*sl:uri*/, 0, 255) { Application = ApplicationType.Word }
         };
+
+        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Schema>(deep);

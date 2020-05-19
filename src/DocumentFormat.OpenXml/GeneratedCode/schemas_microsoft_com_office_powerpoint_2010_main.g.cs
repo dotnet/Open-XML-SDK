@@ -428,10 +428,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             set => SetElement(value);
         }
 
-        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
             new RelationshipExistConstraint(1 /*r:link*/) { Version = FileFormatVersions.Office2010 },
             new RelationshipExistConstraint(0 /*r:embed*/) { Version = FileFormatVersions.Office2010 }
         };
+
+        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -2140,10 +2142,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         [Index(1)]
         public StringValue Time { get; set; }
 
-        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*:name*/, true, typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList)) { Version = FileFormatVersions.Office2010 },
             new UniqueAttributeValueConstraint(1 /*:time*/, true, typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList)) { Version = FileFormatVersions.Office2010 }
         };
+
+        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MediaBookmark>(deep);

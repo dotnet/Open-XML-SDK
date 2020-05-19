@@ -544,9 +544,11 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         [Index(29)]
         public StringValue GetShowImage { get; set; }
 
-        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
             new AttributeMutualExclusive(18, 20, 19, 21) /*:insertAfterMso, :insertAfterQ, :insertBeforeMso, :insertBeforeQ*/ { Version = FileFormatVersions.Office2010 }
         };
+
+        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ButtonRegular>(deep);
@@ -3493,9 +3495,11 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         [Index(29)]
         public StringValue GetShowImage { get; set; }
 
-        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
             new AttributeMutualExclusive(0, 1) /*:size, :getSize*/ { Version = FileFormatVersions.Office2010 }
         };
+
+        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ControlClone>(deep);
@@ -3997,9 +4001,11 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         [Index(31)]
         public StringValue GetShowImage { get; set; }
 
-        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
             new AttributeMutualExclusive(0, 1) /*:size, :getSize*/ { Version = FileFormatVersions.Office2010 }
         };
+
+        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Button>(deep);
@@ -12105,9 +12111,11 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         [Index(29)]
         public StringValue GetShowImage { get; set; }
 
-        internal override SemanticConstraint[] SemanticConstraints => new SemanticConstraint[] {
+        private static readonly SemanticConstraint[] _semanticConstraint = new SemanticConstraint[] {
             new AttributeMutualExclusive(5, 6) /*:size, :getSize*/ { Version = FileFormatVersions.Office2010 }
         };
+
+        internal override SemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ControlCloneQat>(deep);
