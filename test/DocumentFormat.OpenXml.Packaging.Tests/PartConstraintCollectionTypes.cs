@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Framework;
 using System;
+using System.IO;
 using Xunit;
 
 #pragma warning disable IDE0028 // Simplify collection initialization
@@ -76,6 +77,25 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
             Assert.True(collection.ContainsRelationship(ConstraintTest1.Relationship));
             Assert.False(collection.ContainsRelationship("b"));
+        }
+
+        [Fact]
+        public void PartsAreInherited()
+        {
+            using (var m = new MemoryStream())
+            using (var doc = SpreadsheetDocument.Create(m, SpreadsheetDocumentType.Workbook, true))
+            {
+                var wb = doc.AddWorkbookPart();
+
+                // Adding new worksheet part using custom worksheetpart derived class
+                var ws = wb.AddNewPart<PsWorksheetPart>();
+
+                Assert.NotNull(ws.AddNewPart<SpreadsheetPrinterSettingsPart>());
+            }
+        }
+
+        private sealed class PsWorksheetPart : WorksheetPart
+        {
         }
 
         [RelationshipType(Relationship)]

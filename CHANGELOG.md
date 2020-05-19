@@ -9,11 +9,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added `FileFormatVersions.2019` enum (#695)
 - Added `ChartSpace` and chart elements for the new 2016 namespaces. This allows the connecting pieces for building a chart part with chart styles like "Sunburst" (#687).
 - Added `OpenXmlElementFunctionalExtensions.With(...)` extension methods, which offer flexible means for constructing `OpenXmlElement` instances in the context of pure functional transformations (#679)
-- Added minimum Office versions for enum types and values (#707).
-- Added additional `CompatSettingNameValues` values: `UseWord2013TrackBottomHyphenation`, `AllowHyphenationAtTrackBottom`, and `AllowTextAfterFloatingTableBreak` (#706).
+- Added minimum Office versions for enum types and values (#707)
+- Added additional `CompatSettingNameValues` values: `UseWord2013TrackBottomHyphenation`, `AllowHyphenationAtTrackBottom`, and `AllowTextAfterFloatingTableBreak` (#706)
 - Added gfxdata attribue to Arc, Curve, Line, PolyLine, Group, Image, Oval, Rect, and RoundRect shape complex types per MS-OI29500 2.1.1783-1799 (#709)
-- Added `TryGetPartById` in `OpenXmlPartContainer`. This allows try to get the child part by the relationship ID (#714)
-- Added `StrictRelationshipFound` property on `OpenXmlPackage` indicating whether this package contains Transitional relationships converted from Strict. (#716)
+- Added `OpenXmlPartContainer.TryGetPartById` to enable chidl part retrieval without exception if it does not exist (#714)
+- Added `OpenXmlPackage.StrictRelationshipFound` property that indicates whether this package contains Transitional relationships converted from Strict (#716)
+
+### Fixed
+- Custom derived parts did not inherit known parts from its parent, causing failure when adding parts (#722)
 
 ### Changes
 - Marked the property setters in `OpenXmlAttribute` as obsolete as structs should not have mutable state (#698)
