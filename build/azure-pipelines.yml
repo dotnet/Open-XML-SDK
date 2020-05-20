@@ -16,7 +16,7 @@ stages:
     jobs:
       - template: build.yml
         parameters:
-          loadStyle:
+          buildTargets:
             - name: All
               pool: Hosted Windows 2019 with VS2019
               upload: true
