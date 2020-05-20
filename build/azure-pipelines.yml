@@ -16,9 +16,6 @@ stages:
             - name: All
               vmImage: 'windows-2019'
               upload: true
-            - name: DevFramework35
-              vmImage: 'windows-2019'
-              upload: false 
             - name: DevCore31
               vmImage: 'ubuntu-latest'
               upload: false      
