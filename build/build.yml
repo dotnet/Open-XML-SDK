@@ -1,43 +1,54 @@
-steps:
-  - task: UseDotNet@2
-    displayName: 'Install SDK'
-    inputs:
-      packageType: 'sdk'
-      useGlobalJson: true
+parameters:
+  buildTargets: []
 
-  - task: PowerShell@2
-    displayName: 'Update version'
-    name: updateVersion
-    inputs:
-      targetType: 'inline'
-      script: |
-        dotnet tool install --global GitVersion.Tool --version 5.1.2      
-        dotnet gitversion /output buildserver /nofetch
+jobs:
+- ${{ each buildTarget in parameters.buildTargets }}:
+  - job: ${{ buildTarget.name }}
+    pool:
+      name: ${{ buildTarget.pool }}
+    steps:
+    - task: UseDotNet@2
+      displayName: 'Install SDK'
+      inputs:
+        packageType: 'sdk'
+        useGlobalJson: true
 
-  - task: DotNetCoreCLI@2
-    displayName: 'Build SDK'
-    inputs:
-      command: 'build'
-      arguments: '-configuration $(BuildConfiguration) -p:ProjectLoadStyle=$(ProjectLoadStyle)'
+    - task: PowerShell@2
+      displayName: 'Update version'
+      name: updateVersion
+      inputs:
+        targetType: 'inline'
+        script: |
+          dotnet tool install --global GitVersion.Tool --version 5.1.2      
+          dotnet gitversion /output buildserver /nofetch
 
-  - task: DotNetCoreCLI@2
-    displayName: 'Test SDK'
-    inputs:
-      command: 'test'
-      arguments: '-p:ProjectLoadStyle=$(ProjectLoadStyle)'
+    - task: DotNetCoreCLI@2
+      displayName: 'Build SDK'
+      inputs:
+        command: 'build'
+        arguments: '-configuration $(BuildConfiguration) -p:ProjectLoadStyle=${{ buildTarget.name }}'
 
-  - publish: 'bin/$(BuildConfiguration)'
-    artifact: build
-    displayName: 'Upload build assets'
+    - task: DotNetCoreCLI@2
+      displayName: 'Test SDK'
+      inputs:
+        command: 'test'
+        arguments: '-p:ProjectLoadStyle=${{ buildTarget.name }}'
 
-  - task: DotNetCoreCLI@2
-    inputs:
-      command: 'pack'
-      packagesToPack: 'src/DocumentFormat.OpenXml/DocumentFormat.OpenXml.csproj'
-      configuration: '$(BuildConfiguration)'
-      packDirectory: '$(Build.ArtifactStagingDirectory)/unsigned'
-      versioningScheme: 'off'
+    - publish: 'bin/$(BuildConfiguration)'
+      artifact: build
+      displayName: 'Upload build assets'
+      condition: ${{ buildTarget.upload }}
 
-  - publish: '$(Build.ArtifactStagingDirectory)/unsigned'
-    artifact: unsigned
-    displayName: 'Upload Unsigned Packages'
+    - task: DotNetCoreCLI@2
+      inputs:
+        command: 'pack'
+        packagesToPack: 'src/DocumentFormat.OpenXml/DocumentFormat.OpenXml.csproj'
+        configuration: '$(BuildConfiguration)'
+        packDirectory: '$(Build.ArtifactStagingDirectory)/unsigned'
+        versioningScheme: 'off'
+      condition: ${{ buildTarget.upload }}
+
+    - publish: '$(Build.ArtifactStagingDirectory)/unsigned'
+      artifact: unsigned
+      displayName: 'Upload Unsigned Packages'
+      condition: ${{ buildTarget.upload }}

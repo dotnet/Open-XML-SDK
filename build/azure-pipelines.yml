@@ -14,12 +14,13 @@ pr:
 stages:
   - stage: Build
     jobs:
-      - job: Build
-        displayName: Build SDK
-        pool:
-          name: Hosted Windows 2019 with VS2019
-        steps:
-          - template: build.yml
+      - template: build.yml
+        parameters:
+          loadStyle:
+            - name: All
+              pool: Hosted Windows 2019 with VS2019
+              upload: true
+      
 
   - stage: PerformanceTests
     jobs:
