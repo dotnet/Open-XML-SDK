@@ -11,6 +11,10 @@ stages:
   - stage: Build
     jobs:
       - template: build.yml
+
+  - stage: UnitTest
+    jobs:
+      - template: test.yml
         parameters:
           buildTargets:
             - name: DevFramework35
@@ -86,6 +90,7 @@ stages:
     dependsOn: 
       - Sign
       - PerformanceTests
+      - UnitTests
     condition: succeeded()
 
   - stage: NuGet
