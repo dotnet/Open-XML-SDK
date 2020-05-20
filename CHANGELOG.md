@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added minimum Office versions for enum types and values (#707)
 - Added additional `CompatSettingNameValues` values: `UseWord2013TrackBottomHyphenation`, `AllowHyphenationAtTrackBottom`, and `AllowTextAfterFloatingTableBreak` (#706)
 - Added gfxdata attribue to Arc, Curve, Line, PolyLine, Group, Image, Oval, Rect, and RoundRect shape complex types per MS-OI29500 2.1.1783-1799 (#709)
-- Added `OpenXmlPartContainer.TryGetPartById` to enable chidl part retrieval without exception if it does not exist (#714)
+- Added `OpenXmlPartContainer.TryGetPartById` to enable child part retrieval without exception if it does not exist (#714)
 - Added `OpenXmlPackage.StrictRelationshipFound` property that indicates whether this package contains Transitional relationships converted from Strict (#716)
 
 ### Fixed
