@@ -16,7 +16,12 @@ stages:
             - name: All
               pool: Hosted Windows 2019 with VS2019
               upload: true
-      
+            - name: DevFramework35
+              pool: Hosted Windows 2019 with VS2019
+              upload: false 
+            - name: DevCore31
+              pool: ubuntu-latest
+              upload: false      
 
   - stage: PerformanceTests
     jobs:
