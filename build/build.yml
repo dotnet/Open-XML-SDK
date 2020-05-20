@@ -1,41 +1,56 @@
+parameters:
+  buildTargets: []
+
 jobs:
-  - job: Build
-    pool:
-      vmImage: 'windows-2019'
-    steps:
-    - task: UseDotNet@2
-      displayName: 'Install SDK'
-      inputs:
-        packageType: 'sdk'
-        useGlobalJson: true
+- ${{ each buildTarget in parameters.buildTargets }}:
+  - ${{ each vmImage in buildTarget.vmImages }}:
+    - job: ${{ buildTarget.name }}_${{ vmImage.name }}
+      pool:
+        vmImage: ${{ vmImage.image }}
+      strategy:
+        matrix:
+          debug:
+            buildConfiguration: debug
+            upload: false
+          release:
+            buildConfiguration: release
+            upload: ${{ buildTarget.upload }}
+      steps:
+      - task: UseDotNet@2
+        displayName: 'Install SDK'
+        inputs:
+          packageType: 'sdk'
+          useGlobalJson: true
 
-    - task: PowerShell@2
-      displayName: 'Update version'
-      name: updateVersion
-      inputs:
-        targetType: 'inline'
-        script: |
-          dotnet tool install --global GitVersion.Tool --version 5.1.2      
-          dotnet gitversion /output buildserver /nofetch
+      - task: UseDotNet@2
+        displayName: 'Install .NET Core 1.1'
+        inputs:
+          packageType: 'sdk'
+          version: 1.1.14
+        condition: eq('DevCore11', '${{ buildTarget.name }}')
 
-    - task: DotNetCoreCLI@2
-      displayName: 'Build SDK'
-      inputs:
-        command: 'build'
-        arguments: '-c Release -p:ProjectLoadStyle=All'
+      - task: UseDotNet@2
+        displayName: 'Install .NET Core 2.1'
+        inputs:
+          packageType: 'sdk'
+          version: 2.1.806
+        condition: eq('DevCore21', '${{ buildTarget.name }}')
 
-    - publish: 'bin/Release'
-      artifact: build
-      displayName: 'Upload build assets'
+      - task: DotNetCoreCLI@2
+        displayName: 'Test SDK'
+        inputs:
+          command: 'test'
+          arguments: '-c $(buildConfiguration) -p:ProjectLoadStyle=${{ buildTarget.name }}'
+      
+      - task: DotNetCoreCLI@2
+        displayName: 'Benchmark'
+        inputs:
+          command: 'run'
+          projects: 'test/DocumentFormat.OpenXml.Benchmarks/DocumentFormat.OpenXml.Benchmarks.csproj'
+          arguments: '-c Release -p:ProjectLoadStyle=${{ buildTarget.name }} -- $(Build.ArtifactStagingDirectory)/results'
+        condition: eq('release', variables['buildConfiguration'])
 
-    - task: DotNetCoreCLI@2
-      inputs:
-        command: 'pack'
-        packagesToPack: 'src/DocumentFormat.OpenXml/DocumentFormat.OpenXml.csproj'
-        configuration: 'Release'
-        packDirectory: '$(Build.ArtifactStagingDirectory)/unsigned'
-        versioningScheme: 'off'
-
-    - publish: '$(Build.ArtifactStagingDirectory)/unsigned'
-      artifact: unsigned
-      displayName: 'Upload Unsigned Packages'
+      - publish: '$(Build.ArtifactStagingDirectory)/results'
+        artifact: benchmarks_${{ buildTarget.name }}_${{ vmImage.name }}
+        displayName: 'Upload benchmark results'
+        condition: eq('release', variables['buildConfiguration'])
