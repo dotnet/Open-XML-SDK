@@ -13,12 +13,18 @@ stages:
       - template: build.yml
         parameters:
           buildTargets:
-            - name: All
-              vmImage: 'windows-2019'
-              upload: true
+            - name: DevFramework35
+              vmImages: ['windows-2019']
+            - name: DevFramework40
+              vmImages: ['windows-2019']
+            - name: DevFramework46
+              vmImages: ['windows-2019']
+            - name: DevCore11
+              vmImages: ['windows-2019', 'ubuntu-latest']
+            - name: DevCore21
+              vmImages: ['windows-2019', 'ubuntu-latest']
             - name: DevCore31
-              vmImage: 'ubuntu-latest'
-              upload: false      
+              vmImages: ['windows-2019', 'ubuntu-latest']
 
   - stage: PerformanceTests
     jobs:
