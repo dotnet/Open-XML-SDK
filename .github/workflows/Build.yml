@@ -1,0 +1,52 @@
+name: Build
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    strategy:
+      matrix:
+        ProjectLoadStyle: [DevFramework35, DevFramework40, DevFramework46, DevCore11, DevCore21, DevCore31]
+
+    env:
+      MainProjectPath: src\DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj
+      ProjectLoadStyle: ${{ matrix.ProjectLoadStyle }}
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Setup dotnet 1.1
+      uses: actions/setup-dotnet@v1
+      with: 
+        dotnet-version: 1.1.14
+      if: matrix.ProjectLoadStyle == 'DevCore11'
+
+    - name: Setup dotnet 3.1
+      uses: actions/setup-dotnet@v1
+      with: 
+        dotnet-version: 3.1.202
+      if: matrix.ProjectLoadStyle == 'DevCore11' || matrix.ProjectLoadStyle == 'DevCore21' || matrix.ProjectLoadStyle == 'DevCore31'
+
+    - name: Add msbuild to PATH
+      uses: microsoft/setup-msbuild@v1.0.0
+
+    - name: Restore
+      run: 'msbuild /t:restore /p:configuration="release" /p:ProjectLoadStyle=$env:ProjectLoadStyle'
+    - name: Build dotnet Framework
+      run: 'msbuild $env:MainProjectPath /p:configuration="release" /p:ProjectLoadStyle=$env:ProjectLoadStyle'
+      if: matrix.ProjectLoadStyle == 'DevFramework35' || matrix.ProjectLoadStyle == 'DevFramework40' || matrix.ProjectLoadStyle == 'DevFramework46'
+
+    - name: Build dotnet core 1.1
+      run: 'dotnet msbuild $env:MainProjectPath /p:configuration="release" /p:ProjectLoadStyle=$env:ProjectLoadStyle'
+      if: matrix.ProjectLoadStyle == 'DevCore11'
+
+    - name: Build dotnet core
+      run: 'dotnet msbuild /p:configuration="release" /p:ProjectLoadStyle=$env:ProjectLoadStyle'
+      if: matrix.ProjectLoadStyle == 'DevCore21' || matrix.ProjectLoadStyle == 'DevCore31'
+
+    - name: Test
+      run: dotnet test --configuration Release
+      if: matrix.ProjectLoadStyle == 'DevCore21'
