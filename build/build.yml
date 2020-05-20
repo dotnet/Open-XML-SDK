@@ -34,7 +34,7 @@ jobs:
       displayName: 'Build SDK'
       inputs:
         command: 'build'
-        arguments: -c $(variables.buildConfiguration) -p:ProjectLoadStyle=${{ buildTarget.name }}
+        arguments: '-c $(buildConfiguration) -p:ProjectLoadStyle=${{ buildTarget.name }}'
 
     - task: DotNetCoreCLI@2
       displayName: 'Test SDK'
@@ -42,7 +42,7 @@ jobs:
         command: 'test'
         arguments: '-p:ProjectLoadStyle=${{ buildTarget.name }}'
 
-    - publish: 'bin/$(variables.buildConfiguration)'
+    - publish: 'bin/$(buildConfiguration)'
       artifact: build
       displayName: 'Upload build assets'
       condition: variables.upload
@@ -51,7 +51,7 @@ jobs:
       inputs:
         command: 'pack'
         packagesToPack: 'src/DocumentFormat.OpenXml/DocumentFormat.OpenXml.csproj'
-        configuration: '$(variables.buildConfiguration)'
+        configuration: variables.buildConfiguration
         packDirectory: '$(Build.ArtifactStagingDirectory)/unsigned'
         versioningScheme: 'off'
       condition: variables.upload
