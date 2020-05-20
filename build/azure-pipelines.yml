@@ -8,7 +8,7 @@ pr:
     - master
 
 stages:
-  - stage: Tests
+  - stage: Build
     jobs:
       - template: test.yml
         parameters:
@@ -44,23 +44,10 @@ stages:
                 - image: 'ubuntu-latest'
                   name: 'linux'
 
-  - stage: Build
+  - stage: Package
     jobs:
       - template: build.yml
-
-  - stage: PerformanceTests
-    jobs:
-    - template: perf.yml
-      parameters:
-        frameworks:
-          - tfm: net461
-            name: net461
-          - tfm: netcoreapp2.1
-            name: netcoreapp2_1
-          - tfm: netcoreapp3.1
-            name: netcoreapp3_1
-    dependsOn: Build
-    condition: succeeded()
+        condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
   - stage: Sign
     jobs:
@@ -71,7 +58,6 @@ stages:
       steps:
         - template: sign.yml
     dependsOn: Build
-    condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
   
   - stage: MyGet
     jobs:
