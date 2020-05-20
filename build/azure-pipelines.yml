@@ -27,8 +27,8 @@ stages:
                   name: 'windows'
             - name: DevCore11
               runtimes:
-                - 1.1.14
-                - 2.1.806
+                - 1.1.13
+                - 2.1.18
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'
@@ -36,7 +36,7 @@ stages:
                   name: 'linux'
             - name: DevCore21
               runtimes:
-                - 2.1.806
+                - 2.1.18
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'
