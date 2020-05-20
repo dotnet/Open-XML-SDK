@@ -36,42 +36,8 @@ jobs:
           version: 2.1.806
         condition: eq('DevCore21', '${{ buildTarget.name }}')
 
-      - task: PowerShell@2
-        displayName: 'Update version'
-        name: updateVersion
-        inputs:
-          targetType: 'inline'
-          script: |
-            dotnet tool install --global GitVersion.Tool --version 5.1.2      
-            dotnet gitversion /output buildserver /nofetch
-
-      - task: DotNetCoreCLI@2
-        displayName: 'Build SDK'
-        inputs:
-          command: 'build'
-          arguments: '-c $(buildConfiguration) -p:ProjectLoadStyle=${{ buildTarget.name }}'
-
       - task: DotNetCoreCLI@2
         displayName: 'Test SDK'
         inputs:
           command: 'test'
-          arguments: '-p:ProjectLoadStyle=${{ buildTarget.name }}'
-
-      # - publish: 'bin/$(buildConfiguration)'
-      #   artifact: build
-      #   displayName: 'Upload build assets'
-      #   condition: and(succeeded(), eq(variables['upload'], true))
-
-      # - task: DotNetCoreCLI@2
-      #   inputs:
-      #     command: 'pack'
-      #     packagesToPack: 'src/DocumentFormat.OpenXml/DocumentFormat.OpenXml.csproj'
-      #     configuration: variables.buildConfiguration
-      #     packDirectory: '$(Build.ArtifactStagingDirectory)/unsigned'
-      #     versioningScheme: 'off'
-      #   condition: and(succeeded(), eq(variables['upload'], true))
-
-      # - publish: '$(Build.ArtifactStagingDirectory)/unsigned'
-      #   artifact: unsigned
-      #   displayName: 'Upload Unsigned Packages'
-      #   condition: and(succeeded(), eq(variables['upload'], true))
+          arguments: '-c $(buildConfiguration) -p:ProjectLoadStyle=${{ buildTarget.name }}'
