@@ -34,7 +34,7 @@ jobs:
       displayName: 'Build SDK'
       inputs:
         command: 'build'
-        arguments: '-c $(variables.buildConfiguration) -p:ProjectLoadStyle=${{ buildTarget.name }}'
+        arguments: -c $(variables.buildConfiguration) -p:ProjectLoadStyle=${{ buildTarget.name }}
 
     - task: DotNetCoreCLI@2
       displayName: 'Test SDK'
