@@ -14,32 +14,29 @@ steps:
         dotnet tool install --global GitVersion.Tool --version 5.1.2      
         dotnet gitversion /output buildserver /nofetch
 
-  - task: VSBuild@1
+  - task: DotNetCoreCLI@2
     displayName: 'Build SDK'
     inputs:
-      solution: 'Open-XML-SDK.sln'
-      msbuildArgs: '/m /t:restore;build /p:ProjectLoadStyle=$(ProjectLoadStyle)'
-      platform: '$(BuildPlatform)'
-      configuration: '$(BuildConfiguration)'
+      command: 'build'
+      arguments: '-configuration $(BuildConfiguration) -p:ProjectLoadStyle=$(ProjectLoadStyle)'
 
-  - task: VSBuild@1
-    displayName: 'Publish tests'
+  - task: DotNetCoreCLI@2
+    displayName: 'Test SDK'
     inputs:
-      solution: 'Open-XML-SDK.sln'
-      msbuildArgs: '/m /t:PublishAll /p:ProjectLoadStyle=$(ProjectLoadStyle)'
-      platform: '$(BuildPlatform)'
-      configuration: '$(BuildConfiguration)'
+      command: 'test'
+      arguments: '-p:ProjectLoadStyle=$(ProjectLoadStyle)'
 
   - publish: 'bin/$(BuildConfiguration)'
     artifact: build
     displayName: 'Upload build assets'
 
-  - task: VSBuild@1
-    displayName: 'Pack SDK'
+  - task: DotNetCoreCLI@2
     inputs:
-      msbuildArgs: '/t:pack /p:ProjectLoadStyle=$(ProjectLoadStyle) /p:PackageOutputPath=$(Build.ArtifactStagingDirectory)/unsigned'
-      platform: '$(BuildPlatform)'
+      command: 'pack'
+      packagesToPack: 'src/DocumentFormat.OpenXml/DocumentFormat.OpenXml.csproj'
       configuration: '$(BuildConfiguration)'
+      packDirectory: '$(Build.ArtifactStagingDirectory)/unsigned'
+      versioningScheme: 'off'
 
   - publish: '$(Build.ArtifactStagingDirectory)/unsigned'
     artifact: unsigned
