@@ -1688,16 +1688,16 @@ namespace DocumentFormat.OpenXml.Tests
             actual = O12Validator.Validate(element);
 
             Assert.Collection(
-                actual.OrderBy(e => e.Description),
+                actual.OrderBy(e => e.Description, StringComparer.Ordinal),
                 e =>
                 {
-                    Assert.Equal("The attribute 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:val' has invalid value 'invalid'. The actual length according to data type 'string' is not equal to the specified length. The expected length is 12.", e.Description);
+                    Assert.Equal("The attribute 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:val' has invalid value 'invalid'. The Pattern constraint failed. The expected pattern is [01]*.", e.Description);
                     Assert.Equal("/w:cnfStyle[1]", e.Path.XPath);
                     Assert.Same(element, e.Node);
                 },
                 e =>
                 {
-                    Assert.Equal("The attribute 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:val' has invalid value 'invalid'. The Pattern constraint failed. The expected pattern is [01]*.", e.Description);
+                    Assert.Equal("The attribute 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:val' has invalid value 'invalid'. The actual length according to data type 'string' is not equal to the specified length. The expected length is 12.", e.Description);
                     Assert.Equal("/w:cnfStyle[1]", e.Path.XPath);
                     Assert.Same(element, e.Node);
                 });

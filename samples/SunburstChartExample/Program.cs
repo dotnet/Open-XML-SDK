@@ -203,9 +203,10 @@ namespace CreatePresentationDocument
         // Generates content of embeddedPackagePart1.
         private static void GenerateEmbeddedPackagePart1Content(EmbeddedPackagePart embeddedPackagePart1)
         {
-            var data = GetBinaryDataStream(embeddedPackagePart1Data);
-            embeddedPackagePart1.FeedData(data);
-            data.Close();
+            using(var data = GetBinaryDataStream(embeddedPackagePart1Data))
+            {
+              embeddedPackagePart1.FeedData(data);
+            }
         }
 
         // Generates content of chartStylePart1.
@@ -1313,9 +1314,10 @@ namespace CreatePresentationDocument
         // Generates the content of imagePart1
         private static void GenerateImagePart1Content(ImagePart imagePart1)
         {
-            var data = GetBinaryDataStream(imagePart1Data);
-            imagePart1.FeedData(data);
-            data.Close();
+            using(var data = GetBinaryDataStream(imagePart1Data))
+            {
+              imagePart1.FeedData(data);
+            }
         }
 
         #region Binary Data

@@ -32,9 +32,12 @@
         <TestTargetFrameworks>net452</TestTargetFrameworks>
         <AssetsTargetFrameworks>net452</AssetsTargetFrameworks>
         <!-- BenchmarkDotNet only supports .NET Standard 2.0-->
-        <BenchmarkTargetFrameworks>net461</BenchmarkTargetFrameworks>
+        <BenchmarkTargetFramework>net461</BenchmarkTargetFramework>
         <SamplesFrameworks>net46</SamplesFrameworks>
       </PropertyGroup>
+      <ItemGroup>
+        <Reference Include="WindowsBase" Version="3.0.0.0" />
+      </ItemGroup>
     </When>
     <When Condition=" '$(ProjectLoadStyle)' == 'DevFramework40' ">
       <PropertyGroup>
@@ -42,16 +45,19 @@
         <TestTargetFrameworks>net452</TestTargetFrameworks>
         <AssetsTargetFrameworks>net452</AssetsTargetFrameworks>
         <!-- BenchmarkDotNet only supports .NET Standard 2.0-->
-        <BenchmarkTargetFrameworks>net461</BenchmarkTargetFrameworks>
+        <BenchmarkTargetFramework>net461</BenchmarkTargetFramework>
         <SamplesFrameworks>net46</SamplesFrameworks>
       </PropertyGroup>
+      <ItemGroup>
+        <Reference Include="WindowsBase" Version="4.0.0.0" />
+      </ItemGroup>
     </When>
     <When Condition=" '$(ProjectLoadStyle)' == 'DevFramework46' ">
       <PropertyGroup>
         <ProductTargetFrameworks>net46</ProductTargetFrameworks>
         <TestTargetFrameworks>net46</TestTargetFrameworks>
         <AssetsTargetFrameworks>net452</AssetsTargetFrameworks>
-        <BenchmarkTargetFrameworks>net461</BenchmarkTargetFrameworks>
+        <BenchmarkTargetFramework>net461</BenchmarkTargetFramework>
         <SamplesFrameworks>net46</SamplesFrameworks>
       </PropertyGroup>
     </When>
@@ -61,7 +67,7 @@
         <TestTargetFrameworks>netcoreapp1.1</TestTargetFrameworks>
         <AssetsTargetFrameworks>netstandard1.3</AssetsTargetFrameworks>
         <!-- BenchmarkDotNet only supports .NET Standard 2.0-->
-        <BenchmarkTargetFrameworks>netcoreapp2.1</BenchmarkTargetFrameworks>
+        <BenchmarkTargetFramework>netcoreapp2.1</BenchmarkTargetFramework>
         <SamplesFrameworks>netcoreapp1.1</SamplesFrameworks>
       </PropertyGroup>
     </When>
@@ -70,7 +76,7 @@
         <ProductTargetFrameworks>netstandard2.0</ProductTargetFrameworks>
         <TestTargetFrameworks>netcoreapp2.1</TestTargetFrameworks>
         <AssetsTargetFrameworks>netstandard1.3</AssetsTargetFrameworks>
-        <BenchmarkTargetFrameworks>netcoreapp2.1</BenchmarkTargetFrameworks>
+        <BenchmarkTargetFramework>netcoreapp2.1</BenchmarkTargetFramework>
         <SamplesFrameworks>netcoreapp2.1</SamplesFrameworks>
       </PropertyGroup>
     </When>
@@ -79,7 +85,7 @@
         <ProductTargetFrameworks>netstandard2.0</ProductTargetFrameworks>
         <TestTargetFrameworks>netcoreapp3.1</TestTargetFrameworks>
         <AssetsTargetFrameworks>netstandard1.3</AssetsTargetFrameworks>
-        <BenchmarkTargetFrameworks>netcoreapp3.1</BenchmarkTargetFrameworks>
+        <BenchmarkTargetFramework>netcoreapp3.1</BenchmarkTargetFramework>
         <SamplesFrameworks>netcoreapp3.1</SamplesFrameworks>
       </PropertyGroup>
     </When>
@@ -92,7 +98,7 @@
         <ProductTargetFrameworks>netstandard1.3;netstandard2.0;net35;net40;net46</ProductTargetFrameworks>
         <AssetsTargetFrameworks>net452;netstandard1.3</AssetsTargetFrameworks>
         <TestTargetFrameworks>net452;net46;netcoreapp1.1;netcoreapp2.1;netcoreapp3.1</TestTargetFrameworks>
-        <BenchmarkTargetFrameworks>net461;netcoreapp2.1;netcoreapp3.1</BenchmarkTargetFrameworks>
+        <BenchmarkTargetFramework>netcoreapp3.1</BenchmarkTargetFramework>
         <SamplesFrameworks>net46;netcoreapp2.1;netcoreapp3.1</SamplesFrameworks>
 
         <!-- Must disable this due to https://github.com/NuGet/Home/issues/7414 so .NET Core 1.x will build -->
@@ -104,7 +110,7 @@
         <ProductTargetFrameworks>netstandard2.0</ProductTargetFrameworks>
         <TestTargetFrameworks>netcoreapp3.1</TestTargetFrameworks>
         <AssetsTargetFrameworks>netstandard1.3</AssetsTargetFrameworks>
-        <BenchmarkTargetFrameworks>netcoreapp3.1</BenchmarkTargetFrameworks>
+        <BenchmarkTargetFramework>netcoreapp3.1</BenchmarkTargetFramework>
         <SamplesFrameworks>netcoreapp3.1</SamplesFrameworks>
         <__InvalidProjectLoadStyle>true</__InvalidProjectLoadStyle>
       </PropertyGroup>

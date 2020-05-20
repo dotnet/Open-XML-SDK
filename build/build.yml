@@ -1,46 +1,55 @@
-steps:
-  - task: UseDotNet@2
-    displayName: 'Install SDK'
-    inputs:
-      packageType: 'sdk'
-      useGlobalJson: true
+parameters:
+  buildTargets: []
 
-  - task: PowerShell@2
-    displayName: 'Update version'
-    name: updateVersion
-    inputs:
-      targetType: 'inline'
-      script: |
-        dotnet tool install --global GitVersion.Tool --version 5.1.2      
-        dotnet gitversion /output buildserver /nofetch
+jobs:
+- ${{ each buildTarget in parameters.buildTargets }}:
+  - ${{ each vmImage in buildTarget.vmImages }}:
+    - job: ${{ buildTarget.name }}_${{ vmImage.name }}
+      pool:
+        vmImage: ${{ vmImage.image }}
+      strategy:
+        matrix:
+          debug:
+            buildConfiguration: debug
+            upload: false
+            ProjectLoadStyle: ${{ buildTarget.name }}
+          release:
+            buildConfiguration: release
+            upload: ${{ buildTarget.upload }}
+            ProjectLoadStyle: ${{ buildTarget.name }}
+      steps:
+      - task: UseDotNet@2
+        displayName: 'Install .NET Core SDK for building'
+        inputs:
+          packageType: 'sdk'
+          useGlobalJson: true
 
-  - task: VSBuild@1
-    displayName: 'Build SDK'
-    inputs:
-      solution: 'Open-XML-SDK.sln'
-      msbuildArgs: '/m /t:restore;build /p:ProjectLoadStyle=$(ProjectLoadStyle)'
-      platform: '$(BuildPlatform)'
-      configuration: '$(BuildConfiguration)'
+      - ${{ each runtime in buildTarget.runtimes }}:
+        - task: UseDotNet@2
+          displayName: 'Install .NET Runtime ${{ runtime }}'
+          inputs:
+            packageType: 'runtime'
+            version: ${{ runtime }}
 
-  - task: VSBuild@1
-    displayName: 'Publish tests'
-    inputs:
-      solution: 'Open-XML-SDK.sln'
-      msbuildArgs: '/m /t:PublishAll /p:ProjectLoadStyle=$(ProjectLoadStyle)'
-      platform: '$(BuildPlatform)'
-      configuration: '$(BuildConfiguration)'
+      - task: DotNetCoreCLI@2
+        inputs:
+          command: 'build'
+          arguments: '-c $(buildConfiguration)'
 
-  - publish: 'bin/$(BuildConfiguration)'
-    artifact: build
-    displayName: 'Upload build assets'
+      - task: DotNetCoreCLI@2
+        inputs:
+          command: 'test'
+          arguments: '-c $(buildConfiguration)'
+      
+      - task: DotNetCoreCLI@2
+        displayName: 'Benchmark'
+        inputs:
+          command: 'run'
+          projects: 'test/DocumentFormat.OpenXml.Benchmarks/DocumentFormat.OpenXml.Benchmarks.csproj'
+          arguments: '-c Release -- $(Build.ArtifactStagingDirectory)/results'
+        condition: eq('release', variables['buildConfiguration'])
 
-  - task: VSBuild@1
-    displayName: 'Pack SDK'
-    inputs:
-      msbuildArgs: '/t:pack /p:ProjectLoadStyle=$(ProjectLoadStyle) /p:PackageOutputPath=$(Build.ArtifactStagingDirectory)/unsigned'
-      platform: '$(BuildPlatform)'
-      configuration: '$(BuildConfiguration)'
-
-  - publish: '$(Build.ArtifactStagingDirectory)/unsigned'
-    artifact: unsigned
-    displayName: 'Upload Unsigned Packages'
+      - publish: '$(Build.ArtifactStagingDirectory)/results'
+        artifact: benchmarks_${{ buildTarget.name }}_${{ vmImage.name }}
+        displayName: 'Upload benchmark results'
+        condition: eq('release', variables['buildConfiguration'])

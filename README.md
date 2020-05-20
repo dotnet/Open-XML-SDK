@@ -118,38 +118,12 @@ Known Issues
 - On .NET Core, zip packages do not have a way to stream data. Thus, the working set can explode in certain situations. This is a [known issue](https://github.com/dotnet/corefx/issues/24457).
 - On .NET Framework, an `IsolatedStorageException` may be thrown under certain circumstances. This generally occurs when manipulating a large document in an environment with an AppDomain that does not have enough evidence. A sample with a workaround is available [here](/samples/IsolatedStorageExceptionWorkaround).
 
-  **Note:** Once `System.IO.Packaging` on .NET Core has feature parity with `WindowsBase` (i.e. streaming support), we can investigate using the new .NET Core on .NET Framework.
-
 Documentation
 -------------
 
 The functionality of the specific classes in this version of the Open XML SDK is similar to version 2.5, therefore the [Open XML SDK 2.5 for Office](http://msdn.microsoft.com/en-us/library/office/bb448854.aspx) documentation available on MSDN is still accurate.
 
 In addition to open sourcing of the SDK, Microsoft has opened up the conceptual documentation for public review / contributions.  A copy of the documentation is  available for you to edit and review [in GitHub](https://github.com/OfficeDev/office-content).
-
-Build Instructions
-------------------
-
-This project uses the csproj format and the release versions of the tooling in Visual Studio 2017. For more information on how to use this project type to build your project, see the [release notes for Visual Studio 2017]( https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes#dotnetcore). Other editors that support the latest .NET project files include Visual Studio Code, Visual Studio for Mac, or .NET CLI. See [.NET Downloads](https://www.microsoft.com/net/download/core) for details.
-
-The project often requires the latest release of the C# compiler as many new features come on-line that greatly aid in ease of development. As of now, the C# 7.3 compiler is required and comes standard in Visual Studio 2017 Update 7, with other IDEs providing updates to the compiler, as well.
-
-Since there are a number of targets for the project, and loading all at once may cause slow performance in Visual Studio, the target framework can be controlled by an environment variable. This is controlled in [Directory.Build.props](./Directory.Build.props) via the environment variable `ProjectLoadStyle`. This changes over time, but that file will contain what the available load configurations are. By default, this will try to default to the current LTS version of .NET Core, but allows development against previous targets if needed. This is helpful, for instance, if you don't have the latest .NET installed.  The continuous integration system sets `ProjectLoadStyle=All` to build for all targets.
-
-To build the Open XML SDK
--------------------------
-
-1. Clone the [Open-XML-SDK](https://github.com/OfficeDev/Open-XML-SDK) repository.
-1. Open the solution with an editor that supports the latest .NET project files.
-1. Build the solution (using either Debug or Release configuration).
-1. Run the Xunit tests to verify the installation.
-
-If you want to use a command line approach:
-
-1. Go to the directory that contains the solution.
-1. Run `dotnet restore` in the directory.
-1. Run `dotnet test DocumentFormat.OpenXml.Tests` to run the tests.
-1. Run `dotnet pack DocumentFormat.OpenXml` to generate a nupkg.
 
 Related tools
 -------------
