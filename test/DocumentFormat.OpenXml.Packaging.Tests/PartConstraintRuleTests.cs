@@ -203,7 +203,9 @@ namespace DocumentFormat.OpenXml.Tests
                     FileFormat = rule.FileFormat,
                     MaxOccursGreatThanOne = rule.MaxOccursGreatThanOne,
                     MinOccursIsNonZero = rule.MinOccursIsNonZero,
+#pragma warning disable CS0618 // Type or member is obsolete
                     PartClassName = rule.PartClassName,
+#pragma warning restore CS0618 // Type or member is obsolete
                     PartContentType = rule.PartContentType,
                 };
             }
