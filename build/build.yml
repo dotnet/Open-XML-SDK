@@ -37,7 +37,11 @@ jobs:
         condition: eq('DevCore21', '${{ buildTarget.name }}')
 
       - task: DotNetCoreCLI@2
-        displayName: 'Test SDK'
+        inputs:
+          command: 'build'
+          arguments: '-c $(buildConfiguration) -p:ProjectLoadStyle=${{ buildTarget.name }}'
+
+      - task: DotNetCoreCLI@2
         inputs:
           command: 'test'
           arguments: '-c $(buildConfiguration) -p:ProjectLoadStyle=${{ buildTarget.name }}'

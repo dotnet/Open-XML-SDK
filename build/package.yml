@@ -1,5 +1,5 @@
 jobs:
-  - job: Build
+  - job: Pack
     pool:
       vmImage: 'windows-2019'
     steps:
