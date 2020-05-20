@@ -29,6 +29,13 @@ jobs:
           version: 1.1.14
         condition: eq('DevCore11', '${{ buildTarget.name }}')
 
+      - task: UseDotNet@2
+        displayName: 'Install .NET Core 2.1'
+        inputs:
+          packageType: 'sdk'
+          version: 2.1.806
+        condition: eq('DevCore21', '${{ buildTarget.name }}')
+
       - task: PowerShell@2
         displayName: 'Update version'
         name: updateVersion

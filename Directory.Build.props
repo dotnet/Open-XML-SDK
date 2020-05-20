@@ -48,6 +48,9 @@
         <BenchmarkTargetFrameworks>net461</BenchmarkTargetFrameworks>
         <SamplesFrameworks>net46</SamplesFrameworks>
       </PropertyGroup>
+      <ItemGroup>
+        <Reference Include="WindowsBase" Version="4.0.0.0" />
+      </ItemGroup>
     </When>
     <When Condition=" '$(ProjectLoadStyle)' == 'DevFramework46' ">
       <PropertyGroup>
