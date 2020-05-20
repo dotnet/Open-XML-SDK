@@ -12,7 +12,7 @@ stages:
     jobs:
       - template: build.yml
 
-  - stage: UnitTest
+  - stage: UnitTests
     jobs:
       - template: test.yml
         parameters:
