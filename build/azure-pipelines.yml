@@ -63,7 +63,6 @@ stages:
     dependsOn: 
       - Sign
       - PerformanceTests
-      - UnitTests
     condition: succeeded()
 
   - stage: NuGet
