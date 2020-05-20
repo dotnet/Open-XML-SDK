@@ -57,7 +57,7 @@ stages:
         name: Hosted Windows 2019 with VS2019
       steps:
         - template: sign.yml
-    dependsOn: Build
+    dependsOn: Package
   
   - stage: MyGet
     jobs:
@@ -74,9 +74,8 @@ stages:
                   parameters:
                     feed: 'OpenXML MyGet Feed'
     dependsOn: 
+      - Build
       - Sign
-      - PerformanceTests
-      - Tests
     condition: succeeded()
 
   - stage: NuGet
