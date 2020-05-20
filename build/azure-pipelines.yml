@@ -47,7 +47,7 @@ stages:
   - stage: Package
     jobs:
       - template: package.yml
-        condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
+    condition: ne(variables['Build.Reason'], 'PullRequest')
 
   - stage: Sign
     jobs:
