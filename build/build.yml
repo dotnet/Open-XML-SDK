@@ -26,7 +26,7 @@ jobs:
       inputs:
         packageType: 'sdk'
         version: 1.1.14
-      condition: equals('All', ${{ buildTarget.name }})
+      condition: eq('All', ${{ buildTarget.name }})
 
     - task: PowerShell@2
       displayName: 'Update version'
