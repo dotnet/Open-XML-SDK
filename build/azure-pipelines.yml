@@ -1,7 +1,3 @@
-variables:
-  BuildConfiguration: 'Release'
-  ProjectLoadStyle: 'All'
-
 trigger:
 - master
 

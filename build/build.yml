@@ -6,6 +6,14 @@ jobs:
   - job: ${{ buildTarget.name }}
     pool:
       name: ${{ buildTarget.pool }}
+    strategy:
+      matrix:
+        debug:
+          buildConfiguration: debug
+          upload: false
+        release:
+          buildConfiguration: release
+          upload: ${{ buildTarget.upload }}
     steps:
     - task: UseDotNet@2
       displayName: 'Install SDK'
@@ -26,7 +34,7 @@ jobs:
       displayName: 'Build SDK'
       inputs:
         command: 'build'
-        arguments: '-c $(BuildConfiguration) -p:ProjectLoadStyle=${{ buildTarget.name }}'
+        arguments: '-c $(variables.buildConfiguration) -p:ProjectLoadStyle=${{ buildTarget.name }}'
 
     - task: DotNetCoreCLI@2
       displayName: 'Test SDK'
@@ -34,21 +42,21 @@ jobs:
         command: 'test'
         arguments: '-p:ProjectLoadStyle=${{ buildTarget.name }}'
 
-    - publish: 'bin/$(BuildConfiguration)'
+    - publish: 'bin/$(variables.buildConfiguration)'
       artifact: build
       displayName: 'Upload build assets'
-      condition: ${{ buildTarget.upload }}
+      condition: $(variables.upload)
 
     - task: DotNetCoreCLI@2
       inputs:
         command: 'pack'
         packagesToPack: 'src/DocumentFormat.OpenXml/DocumentFormat.OpenXml.csproj'
-        configuration: '$(BuildConfiguration)'
+        configuration: '$(variables.buildConfiguration)'
         packDirectory: '$(Build.ArtifactStagingDirectory)/unsigned'
         versioningScheme: 'off'
-      condition: ${{ buildTarget.upload }}
+      condition: $(variables.upload)
 
     - publish: '$(Build.ArtifactStagingDirectory)/unsigned'
       artifact: unsigned
       displayName: 'Upload Unsigned Packages'
-      condition: ${{ buildTarget.upload }}
+      condition: $(variables.upload)
