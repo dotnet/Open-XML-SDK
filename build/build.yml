@@ -26,9 +26,9 @@ jobs:
 
       - ${{ each runtime in buildTarget.runtimes }}:
         - task: UseDotNet@2
-          displayName: 'Install .NET Core runtime for tests'
+          displayName: 'Install .NET Runtime ${{ runtime }}'
           inputs:
-            packageType: 'sdk'
+            packageType: 'runtime'
             version: ${{ runtime }}
 
       - task: DotNetCoreCLI@2
