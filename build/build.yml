@@ -4,9 +4,9 @@ parameters:
 jobs:
 - ${{ each buildTarget in parameters.buildTargets }}:
   - ${{ each vmImage in buildTarget.vmImages }}:
-    - job: ${{ buildTarget.name }}_${{ vmImage }}
+    - job: ${{ buildTarget.name }}_${{ vmImage.name }}
       pool:
-        vmImage: ${{ vmImage }}
+        vmImage: ${{ vmImage.image }}
       strategy:
         matrix:
           debug:

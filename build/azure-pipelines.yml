@@ -14,17 +14,35 @@ stages:
         parameters:
           buildTargets:
             - name: DevFramework35
-              vmImages: ['windows-2019']
+              vmImages: 
+                - image: 'windows-2019'
+                  name: 'windows'
             - name: DevFramework40
-              vmImages: ['windows-2019']
+              vmImages: 
+                - image: 'windows-2019'
+                  name: 'windows'
             - name: DevFramework46
-              vmImages: ['windows-2019']
+              vmImages: 
+                - image: 'windows-2019'
+                  name: 'windows'
             - name: DevCore11
-              vmImages: ['windows-2019', 'ubuntu-latest']
+              vmImages: 
+                - image: 'windows-2019'
+                  name: 'windows'
+                - image: 'ubuntu-latest'
+                  name: 'linux'
             - name: DevCore21
-              vmImages: ['windows-2019', 'ubuntu-latest']
+              vmImages: 
+                - image: 'windows-2019'
+                  name: 'windows'
+                - image: 'ubuntu-latest'
+                  name: 'linux'
             - name: DevCore31
-              vmImages: ['windows-2019', 'ubuntu-latest']
+              vmImages: 
+                - image: 'windows-2019'
+                  name: 'windows'
+                - image: 'ubuntu-latest'
+                  name: 'linux'
 
   - stage: PerformanceTests
     jobs:
