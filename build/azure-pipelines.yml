@@ -63,6 +63,7 @@ stages:
       steps:
         - template: sign.yml
     dependsOn: Package
+    condition: succeeded()
   
   - stage: MyGet
     jobs:
