@@ -10,7 +10,7 @@ pr:
 stages:
   - stage: Build
     jobs:
-      - template: test.yml
+      - template: build.yml
         parameters:
           buildTargets:
             - name: DevFramework35
@@ -46,7 +46,7 @@ stages:
 
   - stage: Package
     jobs:
-      - template: build.yml
+      - template: package.yml
         condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
   - stage: Sign
