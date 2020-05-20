@@ -1,7 +1,7 @@
 jobs:
   - job: Build
     pool:
-      vmImage: ${{ vmImage.image }}
+      vmImage: 'windows-2019'
     steps:
     - task: UseDotNet@2
       displayName: 'Install SDK'
