@@ -8,10 +8,6 @@ pr:
     - master
 
 stages:
-  - stage: Build
-    jobs:
-      - template: build.yml
-
   - stage: Tests
     jobs:
       - template: test.yml
@@ -47,6 +43,10 @@ stages:
                   name: 'windows'
                 - image: 'ubuntu-latest'
                   name: 'linux'
+
+  - stage: Build
+    jobs:
+      - template: build.yml
 
   - stage: PerformanceTests
     jobs:
