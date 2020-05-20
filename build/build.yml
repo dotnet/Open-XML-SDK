@@ -45,7 +45,7 @@ jobs:
     - publish: 'bin/$(variables.buildConfiguration)'
       artifact: build
       displayName: 'Upload build assets'
-      condition: $(variables.upload)
+      condition: variables.upload
 
     - task: DotNetCoreCLI@2
       inputs:
@@ -54,9 +54,9 @@ jobs:
         configuration: '$(variables.buildConfiguration)'
         packDirectory: '$(Build.ArtifactStagingDirectory)/unsigned'
         versioningScheme: 'off'
-      condition: $(variables.upload)
+      condition: variables.upload
 
     - publish: '$(Build.ArtifactStagingDirectory)/unsigned'
       artifact: unsigned
       displayName: 'Upload Unsigned Packages'
-      condition: $(variables.upload)
+      condition: variables.upload
