@@ -186,7 +186,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             var element = (OpenXmlLeafTextElement)validationContext.Stack.Current.Element;
             var value = element.InnerTextToValue(element.Text);
-            var state = new ElementProperty<OpenXmlSimpleType>(element.NamespaceId, element.LocalName, 0, element.ElementData.Info.Validators, new ElementPropertyAccessor<OpenXmlSimpleType>(_ => value, (_, __) => throw new NotImplementedException(), value.GetType()));
+            var state = ElementProperty<OpenXmlSimpleType>.Create(element.NamespaceId, element.LocalName, 0, element.ElementData.Info.Validators, new ElementPropertyAccessor<OpenXmlSimpleType>(_ => value, (_, __) => throw new NotImplementedException(), value.GetType()));
 
             SchemaTypeValidator.ValidateValue(validationContext, element.ElementData.Info.Validators, value, state, false);
         }

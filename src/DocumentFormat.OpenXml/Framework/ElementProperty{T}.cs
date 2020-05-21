@@ -6,47 +6,84 @@ using System.Xml;
 
 namespace DocumentFormat.OpenXml.Framework
 {
-    internal class ElementProperty<T>
+    internal abstract class ElementProperty<T>
     {
-        private readonly ElementPropertyAccessor<T> _accessor;
-
-        internal ElementProperty(
+        public static ElementProperty<T> Create(
             byte namespaceId,
             string name,
             int order,
             ValidatorCollection validators,
             ElementPropertyAccessor<T> accessor)
         {
-            _accessor = accessor;
-
-            Order = order;
-            Name = name;
-            NamespaceId = namespaceId;
-            Validators = validators;
+            return new AccessorElementProperty(namespaceId, name, order, validators, accessor);
         }
 
-        public XmlQualifiedName TypeName => Validators.GetSimpleTypeQualifiedName(Type);
+        public abstract XmlQualifiedName TypeName { get; }
 
-        public int Order { get; }
+        public abstract int Order { get; }
 
-        public string Name { get; }
+        public abstract string Name { get; }
 
-        public byte NamespaceId { get; }
+        public abstract byte NamespaceId { get; }
 
-        public ValidatorCollection Validators { get; }
+        public abstract ValidatorCollection Validators { get; }
 
-        public string Namespace => NamespaceIdMap.GetNamespaceUri(NamespaceId);
+        public abstract string Namespace { get; }
 
-        public string NamespacePrefix => NamespaceIdMap.GetNamespacePrefix(NamespaceId);
+        public abstract string NamespacePrefix { get; }
 
-        public T GetValue(OpenXmlElement element) => _accessor.Get(element);
+        public abstract T GetValue(OpenXmlElement element);
 
-        public void SetValue(OpenXmlElement element, T value) => _accessor.Set(element, value);
+        public abstract void SetValue(OpenXmlElement element, T value);
 
-        public T CreateNew() => _accessor.Create();
+        public abstract T CreateNew();
 
-        public Type Type => _accessor?.Type;
+        public abstract Type Type { get; }
 
-        public XmlQualifiedName GetQName() => new XmlQualifiedName(Name, Namespace);
+        public abstract XmlQualifiedName GetQName();
+
+        private class AccessorElementProperty : ElementProperty<T>
+        {
+            private readonly ElementPropertyAccessor<T> _accessor;
+
+            public AccessorElementProperty(
+                byte namespaceId,
+                string name,
+                int order,
+                ValidatorCollection validators,
+                ElementPropertyAccessor<T> accessor)
+            {
+                _accessor = accessor;
+
+                Order = order;
+                Name = name;
+                NamespaceId = namespaceId;
+                Validators = validators;
+            }
+
+            public override XmlQualifiedName TypeName => Validators.GetSimpleTypeQualifiedName(Type);
+
+            public override int Order { get; }
+
+            public override string Name { get; }
+
+            public override byte NamespaceId { get; }
+
+            public override ValidatorCollection Validators { get; }
+
+            public override string Namespace => NamespaceIdMap.GetNamespaceUri(NamespaceId);
+
+            public override string NamespacePrefix => NamespaceIdMap.GetNamespacePrefix(NamespaceId);
+
+            public override T GetValue(OpenXmlElement element) => _accessor.Get(element);
+
+            public override void SetValue(OpenXmlElement element, T value) => _accessor.Set(element, value);
+
+            public override T CreateNew() => _accessor.Create();
+
+            public override Type Type => _accessor?.Type;
+
+            public override XmlQualifiedName GetQName() => new XmlQualifiedName(Name, Namespace);
+        }
     }
 }

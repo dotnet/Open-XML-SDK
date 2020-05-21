@@ -87,7 +87,7 @@ namespace DocumentFormat.OpenXml.Framework
                         return null;
                     }
 
-                    return new ElementProperty<T>(
+                    return ElementProperty<T>.Create(
                         schema.NamespaceId,
                         schema.Tag,
                         schema.Index,
