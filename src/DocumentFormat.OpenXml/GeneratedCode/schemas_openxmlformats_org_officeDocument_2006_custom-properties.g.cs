@@ -5,6 +5,7 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
+using DocumentFormat.OpenXml.Validation.Semantic;
 using DocumentFormat.OpenXml.VariantTypes;
 using System;
 using System.Collections.Generic;
@@ -690,6 +691,13 @@ namespace DocumentFormat.OpenXml.CustomProperties
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTClipboardData>();
             set => SetElement(value);
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(1 /*:pid*/, true, 2, true, double.PositiveInfinity, true),
+            new UniqueAttributeValueConstraint(2 /*:name*/, false, null)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {

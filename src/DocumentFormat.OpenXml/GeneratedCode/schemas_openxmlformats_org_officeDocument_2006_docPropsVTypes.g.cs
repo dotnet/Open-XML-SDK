@@ -5,6 +5,7 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
+using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
@@ -1888,6 +1889,12 @@ namespace DocumentFormat.OpenXml.VariantTypes
         [SchemaAttr(0, "version")]
         [Index(0)]
         public StringValue Version { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:version*/, true, null)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTVStreamData>(deep);

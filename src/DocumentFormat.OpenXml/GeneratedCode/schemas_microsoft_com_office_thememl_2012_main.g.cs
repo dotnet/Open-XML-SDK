@@ -6,6 +6,7 @@ using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
+using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
@@ -100,6 +101,12 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
             get => GetElement<OfficeArtExtensionList>();
             set => SetElement(value);
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(1 /*:id*/, 1, 100) { Application = ApplicationType.Excel | ApplicationType.PowerPoint, Version = FileFormatVersions.Office2013 }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {

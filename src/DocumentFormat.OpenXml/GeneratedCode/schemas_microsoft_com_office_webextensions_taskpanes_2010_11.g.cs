@@ -7,6 +7,7 @@ using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Office2013.WebExtension;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
+using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
@@ -129,6 +130,12 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
         [SchemaAttr(19, "id")]
         [Index(0)]
         public StringValue Id { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new RelationshipExistConstraint(0 /*r:id*/) { Application = ApplicationType.Word | ApplicationType.Excel, Version = FileFormatVersions.Office2013 }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebExtensionPartReference>(deep);

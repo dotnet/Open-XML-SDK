@@ -6,6 +6,7 @@ using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
+using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
@@ -44,6 +45,12 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         [Index(1)]
         public StringValue ShapeId { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValuePatternConstraint(1 /*:spid*/, @"_x0000_s(102[5-9]|10[3-9][0-9]|1[1-9][0-9]{2}|[1-9][0-9]{3,7}|1[0-9]{8}|2[0-5][0-9]{7}|26[0-7][0-9]{6}|268[0-3][0-9]{5}|2684[0-2][0-9]{4}|26843[0-4][0-9]{3}|268435[0-3][0-9]{2}|2684354[0-4][0-9]|26843545[0-6])") { Version = FileFormatVersions.Office2010 }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CameraTool>(deep);
     }
@@ -71,6 +78,12 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         [SchemaAttr(0, "spid")]
         [Index(0)]
         public StringValue ShapeId { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValuePatternConstraint(0 /*:spid*/, @"_x0000_s(102[5-9]|10[3-9][0-9]|1[1-9][0-9]{2}|[1-9][0-9]{3,7}|1[0-9]{8}|2[0-5][0-9]{7}|26[0-7][0-9]{6}|268[0-3][0-9]{5}|2684[0-2][0-9]{4}|26843[0-4][0-9]{3}|268435[0-3][0-9]{2}|2684354[0-4][0-9]|26843545[0-6])") { Version = FileFormatVersions.Office2010 }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CompatExtension>(deep);

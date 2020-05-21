@@ -6,6 +6,7 @@ using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
+using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
@@ -82,6 +83,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         [SchemaAttr(0, "minVer")]
         [Index(1)]
         public StringValue MinVersion { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueSetConstraint(1 /*:minVer*/, true, new string[] { "12.0" })
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -800,6 +807,16 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         [SchemaAttr(19, "cs")]
         [Index(3)]
         public StringValue ColorPart { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new RelationshipTypeConstraint(3 /*r:cs*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors"),
+            new RelationshipTypeConstraint(0 /*r:dm*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData"),
+            new RelationshipTypeConstraint(1 /*r:lo*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout"),
+            new RelationshipTypeConstraint(2 /*r:qs*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle"),
+            new RelationshipExistConstraint(0 /*r:dm*/)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RelationshipIds>(deep);
@@ -2295,6 +2312,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:modelId*/, true, typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ConnectionList)),
+            new UniqueAttributeValueConstraint(6 /*:parTransId*/, true, null)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
@@ -2989,6 +3013,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new RelationshipTypeConstraint(2 /*r:blip*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"),
+            new RelationshipExistConstraint(2 /*r:blip*/)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -3689,6 +3720,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         [Index(7)]
         public ListValue<Int32Value> Step { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:name*/, true, null)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Algorithm), 0, 1),
@@ -3806,6 +3843,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         [Index(3)]
         public StringValue MoveWith { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:name*/, true, null)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Algorithm), 0, 1),
@@ -3882,6 +3925,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         [SchemaAttr(0, "name")]
         [Index(0)]
         public StringValue Name { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:name*/, true, null)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -4059,6 +4108,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         [Index(10)]
         public StringValue Val { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:name*/, true, null)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Algorithm), 0, 1),
@@ -4148,6 +4203,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         [SchemaAttr(0, "name")]
         [Index(0)]
         public StringValue Name { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:name*/, true, null)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
         {

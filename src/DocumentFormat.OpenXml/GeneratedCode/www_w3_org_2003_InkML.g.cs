@@ -5,6 +5,7 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
+using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
@@ -495,6 +496,12 @@ namespace DocumentFormat.OpenXml.InkML
         [Index(8)]
         public StringValue Units { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueSetConstraint(8 /*:units*/, true, new string[] { "dev", "in", "cm", "deg", "rad", "s", "lb", "g" }) { Version = FileFormatVersions.Office2010 }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 0, 0)
@@ -629,6 +636,12 @@ namespace DocumentFormat.OpenXml.InkML
         [SchemaAttr(0, "units")]
         [Index(3)]
         public StringValue Units { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueSetConstraint(3 /*:units*/, true, new string[] { "dev", "in", "cm", "deg", "rad", "s", "lb", "g" }) { Version = FileFormatVersions.Office2010 }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChannelProperty>(deep);
@@ -831,6 +844,12 @@ namespace DocumentFormat.OpenXml.InkML
         [Index(3)]
         public StringValue Units { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueSetConstraint(3 /*:units*/, true, new string[] { "dev", "in", "cm", "deg", "rad", "s", "lb", "g" }) { Version = FileFormatVersions.Office2010 }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ActiveArea>(deep);
     }
@@ -887,6 +906,12 @@ namespace DocumentFormat.OpenXml.InkML
         [SchemaAttr(0, "units")]
         [Index(2)]
         public StringValue Units { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueSetConstraint(2 /*:units*/, true, new string[] { "dev", "in", "cm", "deg", "rad", "s", "lb", "g" }) { Version = FileFormatVersions.Office2010 }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SourceProperty>(deep);
@@ -1187,6 +1212,12 @@ namespace DocumentFormat.OpenXml.InkML
         [SchemaAttr(0, "units")]
         [Index(2)]
         public StringValue Units { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueSetConstraint(2 /*:units*/, true, new string[] { "dev", "in", "cm", "deg", "rad", "s", "lb", "g" }) { Version = FileFormatVersions.Office2010 }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {

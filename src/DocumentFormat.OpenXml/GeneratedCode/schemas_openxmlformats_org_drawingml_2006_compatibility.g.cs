@@ -6,6 +6,7 @@ using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
+using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
@@ -37,6 +38,12 @@ namespace DocumentFormat.OpenXml.Drawing.LegacyCompatibility
         [SchemaAttr(0, "spid")]
         [Index(0)]
         public StringValue ShapeId { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:spid*/, true, null)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LegacyDrawing>(deep);

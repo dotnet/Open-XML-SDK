@@ -11,6 +11,7 @@ using DocumentFormat.OpenXml.Office2013.Theme;
 using DocumentFormat.OpenXml.Office2013.Word.Drawing;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
+using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
@@ -826,6 +827,12 @@ namespace DocumentFormat.OpenXml.Drawing
         public Luminance() : base()
         {
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:val*/, true, 0, true, 100000, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Luminance>(deep);
@@ -10381,6 +10388,13 @@ namespace DocumentFormat.OpenXml.Drawing
         [Index(2)]
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues> CompressionState { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new RelationshipExistConstraint(0 /*r:embed*/),
+            new RelationshipExistConstraint(1 /*r:link*/)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Choice, 0, 0)
@@ -18469,6 +18483,13 @@ namespace DocumentFormat.OpenXml.Drawing
         [Index(1)]
         public Int32Value SpaceLength { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:d*/, true, 1, true, double.PositiveInfinity, true),
+            new AttributeValueRangeConstraint(1 /*:sp*/, true, 1, true, double.PositiveInfinity, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DashStop>(deep);
     }
@@ -20500,6 +20521,13 @@ namespace DocumentFormat.OpenXml.Drawing
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:rowSpan*/, true, 1, true, double.PositiveInfinity, true),
+            new AttributeValueRangeConstraint(1 /*:gridSpan*/, true, 1, true, double.PositiveInfinity, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TextBody), 0, 1),
@@ -20572,6 +20600,12 @@ namespace DocumentFormat.OpenXml.Drawing
         public TableStyle(string outerXml) : base(outerXml)
         {
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:styleId*/, true, null)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -20657,6 +20691,12 @@ namespace DocumentFormat.OpenXml.Drawing
         public TableStyleEntry(string outerXml) : base(outerXml)
         {
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:styleId*/, true, null)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -27204,6 +27244,13 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeCannotOmitConstraint(0 /*r:id*/),
+            new RelationshipExistConstraint(0 /*r:id*/)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkSound), 0, 1),
@@ -27263,6 +27310,12 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeCannotOmitConstraint(0 /*r:id*/)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkSound), 0, 1),
@@ -27321,6 +27374,13 @@ namespace DocumentFormat.OpenXml.Drawing
         public HyperlinkOnMouseOver(string outerXml) : base(outerXml)
         {
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeCannotOmitConstraint(0 /*r:id*/),
+            new RelationshipExistConstraint(0 /*r:id*/)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
