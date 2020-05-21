@@ -15,13 +15,13 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void Sanity()
         {
-            var data = ElementBuilder.Create()
+            var data = ElementMetadataBuilder.Create()
                 .Add<SomeElement>()
                 .AddAttribute(0, "s", a => a.Str, a =>
                 {
                 })
                 .Build();
-            var element = new AttributeCollection(data);
+            var element = new ElementMetadata(data);
 
             ref var str = ref element.GetProperty(nameof(SomeElement.Str));
 
@@ -41,7 +41,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void IsRequired()
         {
-            var data = ElementBuilder.Create()
+            var data = ElementMetadataBuilder.Create()
                 .Add<SomeElement>()
                 .AddAttribute(0, "s", a => a.Str, a =>
                 {

@@ -172,13 +172,13 @@ namespace DocumentFormat.OpenXml
         /// Gets an array of fixed attributes (attributes that are defined in the schema) without forcing any parsing of the element.
         /// If parsing is required, please use <see cref="Attributes"/>
         /// </summary>
-        internal virtual AttributeCollection RawAttributes => AttributeCollection.Empty;
+        internal virtual ElementMetadata RawAttributes => ElementMetadata.Empty;
 
         /// <summary>
         /// Gets an array of fixed attributes which will be parsed out if they are not yet parsed. If parsing is not requried, please
         /// use <see cref="RawAttributes"/>.
         /// </summary>
-        internal AttributeCollection Attributes
+        internal ElementMetadata Attributes
         {
             get
             {

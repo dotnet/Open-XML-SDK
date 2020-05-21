@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void NoValidators()
         {
-            var attributes = AttributeCollectionBuilder.Create<NoValidatorsElement>();
+            var attributes = ElementMetadata.Create<NoValidatorsElement>();
             var attribute = Assert.Single(attributes.Raw);
 
             var single = Assert.Single(attribute.Validators);
@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void RequiredValidation()
         {
-            var attributes = AttributeCollectionBuilder.Create<RequiredValidator>();
+            var attributes = ElementMetadata.Create<RequiredValidator>();
             var attribute = Assert.Single(attributes.Raw);
 
             Assert.Collection(
@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void JustUnion()
         {
-            var attributes = AttributeCollectionBuilder.Create<JustUnionValidator>();
+            var attributes = ElementMetadata.Create<JustUnionValidator>();
             var attribute = Assert.Single(attributes.Raw);
 
             Assert.Collection(
@@ -56,30 +56,30 @@ namespace DocumentFormat.OpenXml.Framework.Tests
                 t => Assert.IsType<StringValidatorAttribute>(t));
         }
 
-        private class NoValidatorsElement : BaseElement, IMetadataBuilder
+        private class NoValidatorsElement : BaseElement, IElementMetadataProvider
         {
             public StringValue Val { get; set; }
 
-            void IMetadataBuilder.BuildAttributes(ElementBuilder builder) => builder.Add<NoValidatorsElement>()
+            void IElementMetadataProvider.BuildAttributes(ElementMetadataBuilder builder) => builder.Add<NoValidatorsElement>()
                 .AddAttribute(0, "val", a => a.Val);
         }
 
-        private class RequiredValidator : BaseElement, IMetadataBuilder
+        private class RequiredValidator : BaseElement, IElementMetadataProvider
         {
             public StringValue Val { get; set; }
 
-            void IMetadataBuilder.BuildAttributes(ElementBuilder builder) => builder.Add<NoValidatorsElement>()
+            void IElementMetadataProvider.BuildAttributes(ElementMetadataBuilder builder) => builder.Add<NoValidatorsElement>()
                 .AddAttribute(0, "val", a => a.Val, a =>
                 {
                     a.IsRequired();
                 });
         }
 
-        private class JustUnionValidator : BaseElement, IMetadataBuilder
+        private class JustUnionValidator : BaseElement, IElementMetadataProvider
         {
             public StringValue Val { get; set; }
 
-            void IMetadataBuilder.BuildAttributes(ElementBuilder builder) => builder.Add<NoValidatorsElement>()
+            void IElementMetadataProvider.BuildAttributes(ElementMetadataBuilder builder) => builder.Add<NoValidatorsElement>()
                 .AddAttribute(0, "val", a => a.Val, a =>
                 {
                     a.AddUnion(aa =>
