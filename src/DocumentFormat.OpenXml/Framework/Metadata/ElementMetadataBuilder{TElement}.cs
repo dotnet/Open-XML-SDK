@@ -8,6 +8,7 @@ using System.Linq.Expressions;
 namespace DocumentFormat.OpenXml.Framework.Metadata
 {
     internal class ElementMetadataBuilder<TElement> : IElementMetadataBuilder
+        where TElement : OpenXmlElement
     {
         private List<IAttributeMetadataBuilder> _attributes;
 

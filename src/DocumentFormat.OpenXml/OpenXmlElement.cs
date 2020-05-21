@@ -189,10 +189,6 @@ namespace DocumentFormat.OpenXml
 
         internal ElementPropertyCollection<OpenXmlElement> RawElements => ElementData.RawElements.WrapElement(this);
 
-        internal OpenXmlSimpleType GetAttribute(string name) => null;
-
-        internal void SetAttribute(string name, OpenXmlSimpleType value) { }
-
         /// <summary>
         /// Gets the namespace ID of the current element.
         /// </summary>
@@ -1475,7 +1471,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>true if the attribute is a known attribute.</returns>
         private bool TrySetFixedAttribute(string namespaceUri, string localName, string value, bool strictRelationshipFound)
         {
-            if ( RawAttributes.Any())
+            if (RawAttributes.Any())
             {
                 if (strictRelationshipFound)
                 {

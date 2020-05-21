@@ -15,9 +15,10 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public static ElementMetadataBuilder Create() => new ElementMetadataBuilder();
 
-        public ElementMetadataBuilder<T> Add<T>()
+        public ElementMetadataBuilder<TElement> Add<TElement>()
+            where TElement : OpenXmlElement
         {
-            var builder = new ElementMetadataBuilder<T>();
+            var builder = new ElementMetadataBuilder<TElement>();
             _list.Add(builder);
             return builder;
         }
