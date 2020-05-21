@@ -102,7 +102,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             var elements = typeof(OpenXmlElement).GetTypeInfo().Assembly.GetTypes()
                 .Where(t => !t.GetTypeInfo().IsAbstract && typeof(OpenXmlElement).GetTypeInfo().IsAssignableFrom(t))
                 .Concat(new[] { typeof(OpenXmlPartRootElement) })
-                .OrderBy(type => type.FullName)
+                .OrderBy(type => type.FullName, StringComparer.Ordinal)
                 .Select(type => new LookupData(type));
 #if DEBUG
             var tmp = Path.GetTempFileName();
@@ -131,7 +131,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             return typeof(OpenXmlElement).GetTypeInfo().Assembly.GetTypes()
                 .Where(t => !t.GetTypeInfo().IsAbstract && typeof(OpenXmlElement).GetTypeInfo().IsAssignableFrom(t))
                 .Concat(new[] { typeof(OpenXmlPartRootElement) })
-                .OrderBy(type => type.FullName)
+                .OrderBy(type => type.FullName, StringComparer.Ordinal)
                 .Select(type => new LookupData(type));
         }
 

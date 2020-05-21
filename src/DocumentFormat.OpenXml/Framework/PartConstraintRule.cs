@@ -28,6 +28,7 @@ namespace DocumentFormat.OpenXml.Framework
         /// <summary>
         /// Gets the class name for the relationship type.
         /// </summary>
+        [Obsolete(ObsoleteAttributeMessages.ObsoleteV1ValidationFunctionality, false)]
         public string PartClassName => _info.PartClassName;
 
         /// <summary>

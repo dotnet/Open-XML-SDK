@@ -240,7 +240,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                 using (var textWriter = new StreamWriter(fs))
                 using (var writer = new JsonTextWriter(textWriter) { Indentation = 1 })
                 {
-                    serializer.Serialize(writer, constraints.OrderBy(t => t.Key.FullName));
+                    serializer.Serialize(writer, constraints.OrderBy(t => t.Key.FullName, StringComparer.Ordinal));
                 }
             }
 

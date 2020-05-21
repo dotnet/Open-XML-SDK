@@ -61,6 +61,19 @@
 
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="jnm2.ReferenceAssemblies.net35" Version="1.0.1" PrivateAssets="All" />
+
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
   <Import Project="$(MSBuildThisFileDirectory)\Tests.targets" />
+
+  <!-- The tool is used by default, but we don't want it to. It must be set in a target to ensure it is not overridden -->
+  <Target Name="BeforeResGen" Condition=" '$(TargetFramework)' == 'net35' ">
+    <PropertyGroup>
+      <ResGenExecuteAsTool>false</ResGenExecuteAsTool>
+    </PropertyGroup>
+  </Target>
 
 </Project>

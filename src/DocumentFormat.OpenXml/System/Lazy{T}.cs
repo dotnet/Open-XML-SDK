@@ -22,6 +22,11 @@ namespace DocumentFormat.OpenXml
             _factory = factory;
         }
 
+        public Lazy(Func<T> factory)
+        {
+            _factory = factory;
+        }
+
         public bool IsValueCreated
         {
             get

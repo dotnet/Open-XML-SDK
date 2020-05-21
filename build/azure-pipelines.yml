@@ -1,8 +1,3 @@
-variables:
-  BuildPlatform: 'Any CPU'
-  BuildConfiguration: 'Release'
-  ProjectLoadStyle: 'All'
-
 trigger:
 - master
 
@@ -15,45 +10,49 @@ pr:
 stages:
   - stage: Build
     jobs:
-      - job: Build
-        displayName: Build SDK
-        pool:
-          name: Hosted Windows 2019 with VS2019
-        steps:
-          - template: build.yml
+      - template: build.yml
+        parameters:
+          buildTargets:
+            - name: DevFramework35
+              vmImages: 
+                - image: 'windows-2019'
+                  name: 'windows'
+            - name: DevFramework40
+              vmImages: 
+                - image: 'windows-2019'
+                  name: 'windows'
+            - name: DevFramework46
+              vmImages: 
+                - image: 'windows-2019'
+                  name: 'windows'
+            - name: DevCore11
+              runtimes:
+                - 1.1.13
+                - 2.1.18
+              vmImages: 
+                - image: 'windows-2019'
+                  name: 'windows'
+                - image: 'ubuntu-latest'
+                  name: 'linux'
+            - name: DevCore21
+              runtimes:
+                - 2.1.18
+              vmImages: 
+                - image: 'windows-2019'
+                  name: 'windows'
+                - image: 'ubuntu-latest'
+                  name: 'linux'
+            - name: DevCore31
+              vmImages: 
+                - image: 'windows-2019'
+                  name: 'windows'
+                - image: 'ubuntu-latest'
+                  name: 'linux'
 
-  - stage: PerformanceTests
+  - stage: Package
     jobs:
-    - template: perf.yml
-      parameters:
-        frameworks:
-          - tfm: net461
-            name: net461
-          - tfm: netcoreapp2.1
-            name: netcoreapp2_1
-          - tfm: netcoreapp3.1
-            name: netcoreapp3_1
-    dependsOn: Build
-    condition: succeeded()
-
-  - stage: UnitTests
-    jobs:
-    - template: test.yml
-      parameters:
-        frameworks:
-          - tfm: net452
-            name: net452
-          - tfm: net46
-            name: net46
-          - tfm: netcoreapp1.1
-            name: netcoreapp1_1
-            runtime: '1.1.14'
-          - tfm: netcoreapp2.1
-            name: netcoreapp2_1
-          - tfm: netcoreapp3.1
-            name: netcoreapp3_1
-    dependsOn: Build
-    condition: succeeded()
+      - template: package.yml
+    condition: ne(variables['Build.Reason'], 'PullRequest')
 
   - stage: Sign
     jobs:
@@ -63,8 +62,8 @@ stages:
         name: Hosted Windows 2019 with VS2019
       steps:
         - template: sign.yml
-    dependsOn: Build
-    condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
+    dependsOn: Package
+    condition: succeeded()
   
   - stage: MyGet
     jobs:
@@ -81,9 +80,8 @@ stages:
                   parameters:
                     feed: 'OpenXML MyGet Feed'
     dependsOn: 
+      - Build
       - Sign
-      - PerformanceTests
-      - UnitTests
     condition: succeeded()
 
   - stage: NuGet
