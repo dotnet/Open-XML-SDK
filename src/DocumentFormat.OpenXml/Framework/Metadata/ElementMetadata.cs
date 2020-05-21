@@ -122,7 +122,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             {
                 var metadata = new T();
 
-                var builder = ElementMetadataBuilder.Create();
+                var builder = new ElementMetadataBuilder();
 
                 metadata.BuildAttributes(builder);
 

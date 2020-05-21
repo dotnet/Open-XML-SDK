@@ -9,12 +9,6 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
     {
         private readonly List<IElementMetadataBuilder> _list = new List<IElementMetadataBuilder>();
 
-        private ElementMetadataBuilder()
-        {
-        }
-
-        public static ElementMetadataBuilder Create() => new ElementMetadataBuilder();
-
         public ElementMetadataBuilder<TElement> Add<TElement>()
             where TElement : OpenXmlElement
         {
