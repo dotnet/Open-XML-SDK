@@ -188,6 +188,10 @@ namespace DocumentFormat.OpenXml
 
         internal ElementPropertyCollection<OpenXmlElement> RawElements => ElementData.RawElements.WrapElement(this);
 
+        internal OpenXmlSimpleType GetAttribute(string name) => null;
+
+        internal void SetAttribute(string name, OpenXmlSimpleType value) { }
+
         /// <summary>
         /// Gets the namespace ID of the current element.
         /// </summary>

@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Drawing.Charts;
 using DocumentFormat.OpenXml.Validation;
 using System;
 using System.Collections.Generic;
@@ -18,13 +19,14 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void Sanity()
         {
-            var builder = PropertyBuilder<SomeElement>.Create()
+            var data = PropertyBuilder<SomeElement>.Create()
                             .AddAttribute(0, "s", a => a.Str, a =>
-                             {
-                             })
+                            {
+                            })
                             .Build();
+            var element = new ElementHolder(data);
 
-            ref var str = ref builder.GetAttributeValue(nameof(SomeElement.Str));
+            ref var str = ref element.GetAttributeValue(nameof(SomeElement.Str));
 
             Assert.Null(str);
 
@@ -34,9 +36,25 @@ namespace DocumentFormat.OpenXml.Framework.Tests
 
             Assert.NotNull(str);
 
-            var str2 = builder.GetAttributeValue(nameof(SomeElement.Str));
+            var str2 = element.GetAttributeValue(nameof(SomeElement.Str));
 
             Assert.Same(str, tmp);
+        }
+
+        [Fact]
+        public void IsRequired()
+        {
+            var data = PropertyBuilder<SomeElement>.Create()
+                            .AddAttribute(0, "s", a => a.Str, a =>
+                            {
+                                a.IsRequired();
+                            })
+                            .Build();
+
+            var elementData = Assert.Single(data);
+            var validator = Assert.Single(elementData.Validators);
+
+            Assert.IsType<RequiredValidatorAttribute>(validator);
         }
 
         private class SomeElement : OpenXmlElement

@@ -18,7 +18,9 @@ namespace DocumentFormat.OpenXml.Framework
             return new AccessorElementProperty(namespaceId, name, order, validators, accessor);
         }
 
-        public abstract XmlQualifiedName TypeName { get; }
+        public XmlQualifiedName TypeName => Validators.GetSimpleTypeQualifiedName(Type);
+
+        public virtual string PropertyName { get; }
 
         public abstract int Order { get; }
 
@@ -28,9 +30,9 @@ namespace DocumentFormat.OpenXml.Framework
 
         public abstract ValidatorCollection Validators { get; }
 
-        public abstract string Namespace { get; }
+        public string Namespace => NamespaceIdMap.GetNamespaceUri(NamespaceId);
 
-        public abstract string NamespacePrefix { get; }
+        public string NamespacePrefix => NamespaceIdMap.GetNamespacePrefix(NamespaceId);
 
         public abstract T GetValue(OpenXmlElement element);
 
@@ -40,7 +42,7 @@ namespace DocumentFormat.OpenXml.Framework
 
         public abstract Type Type { get; }
 
-        public abstract XmlQualifiedName GetQName();
+        public XmlQualifiedName GetQName() => new XmlQualifiedName(Name, Namespace);
 
         private class AccessorElementProperty : ElementProperty<T>
         {
@@ -61,8 +63,6 @@ namespace DocumentFormat.OpenXml.Framework
                 Validators = validators;
             }
 
-            public override XmlQualifiedName TypeName => Validators.GetSimpleTypeQualifiedName(Type);
-
             public override int Order { get; }
 
             public override string Name { get; }
@@ -71,10 +71,6 @@ namespace DocumentFormat.OpenXml.Framework
 
             public override ValidatorCollection Validators { get; }
 
-            public override string Namespace => NamespaceIdMap.GetNamespaceUri(NamespaceId);
-
-            public override string NamespacePrefix => NamespaceIdMap.GetNamespacePrefix(NamespaceId);
-
             public override T GetValue(OpenXmlElement element) => _accessor.Get(element);
 
             public override void SetValue(OpenXmlElement element, T value) => _accessor.Set(element, value);
@@ -82,8 +78,6 @@ namespace DocumentFormat.OpenXml.Framework
             public override T CreateNew() => _accessor.Create();
 
             public override Type Type => _accessor?.Type;
-
-            public override XmlQualifiedName GetQName() => new XmlQualifiedName(Name, Namespace);
         }
     }
 }
