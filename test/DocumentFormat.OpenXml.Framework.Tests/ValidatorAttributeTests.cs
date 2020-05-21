@@ -56,30 +56,30 @@ namespace DocumentFormat.OpenXml.Framework.Tests
                 t => Assert.IsType<StringValidatorAttribute>(t));
         }
 
-        private class NoValidatorsElement : BaseElement, IElementMetadataProvider
+        private class NoValidatorsElement : BaseElement
         {
             public StringValue Val { get; set; }
 
-            void IElementMetadataProvider.ConfigureAttributes(ElementMetadataBuilder builder) => builder.Add<NoValidatorsElement>()
+            internal override void ConfigureMetadata(ElementMetadataBuilder builder) => builder.Add<NoValidatorsElement>()
                 .AddAttribute(0, "val", a => a.Val);
         }
 
-        private class RequiredValidator : BaseElement, IElementMetadataProvider
+        private class RequiredValidator : BaseElement
         {
             public StringValue Val { get; set; }
 
-            void IElementMetadataProvider.ConfigureAttributes(ElementMetadataBuilder builder) => builder.Add<NoValidatorsElement>()
+            internal override void ConfigureMetadata(ElementMetadataBuilder builder) => builder.Add<NoValidatorsElement>()
                 .AddAttribute(0, "val", a => a.Val, a =>
                 {
                     a.IsRequired();
                 });
         }
 
-        private class JustUnionValidator : BaseElement, IElementMetadataProvider
+        private class JustUnionValidator : BaseElement
         {
             public StringValue Val { get; set; }
 
-            void IElementMetadataProvider.ConfigureAttributes(ElementMetadataBuilder builder) => builder.Add<NoValidatorsElement>()
+            internal override void ConfigureMetadata(ElementMetadataBuilder builder) => builder.Add<NoValidatorsElement>()
                 .AddAttribute(0, "val", a => a.Val, a =>
                 {
                     a.AddUnion(aa =>

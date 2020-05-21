@@ -196,6 +196,10 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         internal byte NamespaceId => ElementData.Info.Schema?.NamespaceId ?? throw new InvalidOperationException();
 
+        internal virtual void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+        }
+
         private protected void SetAttribute<TSimpleType>(TSimpleType value, [CallerMemberName] string propertyName = null)
             where TSimpleType : OpenXmlSimpleType
             => Attributes.GetProperty(propertyName) = value;
