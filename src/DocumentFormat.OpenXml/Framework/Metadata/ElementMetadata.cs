@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
         public static ElementMetadata Empty => new ElementMetadata(null);
 
         public static ElementMetadata Create<TMetadataProvider>()
-            where TMetadataProvider : IElementMetadataProvider, new()
+            where TMetadataProvider : new()
             => CreatorHelper<TMetadataProvider>.Instance;
 
         public ElementMetadata(ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> tags)
@@ -114,7 +114,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
         }
 
         private static class CreatorHelper<T>
-            where T : IElementMetadataProvider, new()
+            where T : new()
         {
             public static ElementMetadata Instance { get; } = InternalCreate();
 
@@ -124,7 +124,10 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
                 var builder = new ElementMetadataBuilder();
 
-                metadata.ConfigureAttributes(builder);
+                if (metadata is IElementMetadataProvider provider)
+                {
+                    provider.ConfigureAttributes(builder);
+                }
 
                 return new ElementMetadata(builder.Build());
             }

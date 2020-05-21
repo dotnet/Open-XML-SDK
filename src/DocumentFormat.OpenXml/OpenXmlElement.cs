@@ -13,6 +13,7 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Xml;
 using System.Xml.Linq;
 
@@ -194,6 +195,14 @@ namespace DocumentFormat.OpenXml
         /// Gets the namespace ID of the current element.
         /// </summary>
         internal byte NamespaceId => ElementData.Info.Schema?.NamespaceId ?? throw new InvalidOperationException();
+
+        private protected void SetAttribute<TSimpleType>(TSimpleType value, [CallerMemberName] string propertyName = null)
+            where TSimpleType : OpenXmlSimpleType
+            => Attributes.GetProperty(propertyName) = value;
+
+        private protected TSimpleType GetAttribute<TSimpleType>([CallerMemberName] string propertyName = null)
+            where TSimpleType : OpenXmlSimpleType
+            => Attributes.GetProperty(propertyName) as TSimpleType;
 
         #endregion
 
