@@ -7,69 +7,137 @@ using System.Linq.Expressions;
 
 namespace DocumentFormat.OpenXml.Framework
 {
-    internal struct ElementHolder
+    internal interface IMetadataBuilder
     {
-        private readonly ElementProperty<OpenXmlSimpleType>[] _info;
+        void BuildAttributes(ElementBuilder builder);
+    }
 
-        private OpenXmlSimpleType[] _values;
+    internal static class AttributeCollectionBuilder
+    {
+        public static AttributeCollection Create<T>()
+            where T : IMetadataBuilder, new()
+            => CreatorHelper<T>.Instance;
 
-        public ElementHolder(ElementProperty<OpenXmlSimpleType>[] info)
+        private static class CreatorHelper<T>
+            where T : IMetadataBuilder, new()
         {
-            _info = info;
-            _values = null;
+            public static AttributeCollection Instance { get; } = InternalCreate();
+
+            private static AttributeCollection InternalCreate()
+            {
+                var metadata = new T();
+
+                var builder = ElementBuilder.Create();
+
+                metadata.BuildAttributes(builder);
+
+                return new AttributeCollection(builder.Build());
+            }
+        }
+    }
+
+    internal readonly struct AttributeCollection
+    {
+        private readonly OpenXmlSimpleType[] _data;
+
+        public static AttributeCollection Empty => new AttributeCollection(null);
+
+        public AttributeCollection(ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> tags)
+        {
+            Raw = tags;
+
+            if (tags.Length == 0)
+            {
+                _data = Array.Empty<OpenXmlSimpleType>();
+            }
+            else
+            {
+                _data = new OpenXmlSimpleType[tags.Length];
+            }
         }
 
-        public ElementProperty<OpenXmlSimpleType> GetAttribute(string propertyName)
+        public ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> Raw { get; }
+
+        public bool Any() => Length > 0;
+
+        public ref OpenXmlSimpleType GetProperty(string propertyName)
         {
-            foreach (var element in _info)
+            for (var i = 0; i < Raw.Length; i++)
             {
-                if (element.PropertyName == propertyName)
+                var property = Raw[i];
+
+                if (property.PropertyName.Equals(propertyName, StringComparison.Ordinal))
                 {
-                    return element;
+                    return ref _data[i];
                 }
             }
 
             throw new InvalidOperationException();
         }
 
-        public ref OpenXmlSimpleType GetAttributeValue(string propertyName)
-        {
-            for (int i = 0; i < _info.Length; i++)
-            {
-                var current = _info[i];
+        public PropertyEntry this[int index] => new PropertyEntry(this, index);
 
-                if (current.PropertyName == propertyName)
+        public PropertyEntry this[string namespaceUri, string tagName] => this[GetIndex(namespaceUri, tagName)];
+
+        public int Length => Raw.Length;
+
+        public Enumerator GetEnumerator() => new Enumerator(this);
+
+        private int GetIndex(string namespaceUri, string tagName)
+        {
+            if (!string.IsNullOrEmpty(tagName) && NamespaceIdMap.TryGetNamespaceId(namespaceUri, out var nsId))
+            {
+                for (var i = 0; i < Raw.Length; i++)
                 {
-                    if (_values is null)
+                    var tag = Raw[i];
+
+                    if (tag.Name.Equals(tagName, StringComparison.Ordinal) && tag.NamespaceId == nsId)
                     {
-                        _values = new OpenXmlSimpleType[_info.Length];
+                        return i;
                     }
-
-                    return ref _values[i];
                 }
             }
 
-            throw new InvalidOperationException();
+            return -1;
         }
 
-        public ref OpenXmlSimpleType GetAttributeValue(byte nsId, string name)
+        public struct Enumerator
         {
-            for (int i = 0; i < _info.Length; i++)
+            private readonly AttributeCollection _collection;
+            private int _index;
+
+            public Enumerator(in AttributeCollection collection)
             {
-                var current = _info[i];
-
-                if (current.Name == name && current.NamespaceId == nsId)
-                {
-                    if (_values is null)
-                    {
-                        _values = new OpenXmlSimpleType[_info.Length];
-                    }
-
-                    return ref _values[i];
-                }
+                _collection = collection;
+                _index = -1;
             }
 
-            throw new InvalidOperationException();
+            public PropertyEntry Current => _collection[_index];
+
+            public bool MoveNext() => ++_index < _collection.Length;
+        }
+
+        public readonly struct PropertyEntry
+        {
+            private readonly AttributeCollection _collection;
+
+            private readonly int _index;
+
+            public PropertyEntry(in AttributeCollection collection, int index)
+            {
+                _collection = collection;
+                _index = index;
+            }
+
+            public bool IsNil => _index == -1;
+
+            public ref readonly ElementProperty<OpenXmlSimpleType> Property => ref _collection.Raw[_index];
+
+            public OpenXmlSimpleType Value => _collection._data[_index];
+
+            public void SetValue(OpenXmlSimpleType value) => _collection._data[_index] = value;
+
+            public bool HasValue => Value != null;
         }
     }
 

@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Drawing.Charts;
 using DocumentFormat.OpenXml.Validation;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -24,9 +25,9 @@ namespace DocumentFormat.OpenXml.Framework.Tests
                 {
                 })
                 .Build();
-            var element = new ElementHolder(data);
+            var element = new AttributeCollection(data);
 
-            ref var str = ref element.GetAttributeValue(nameof(SomeElement.Str));
+            ref var str = ref element.GetProperty(nameof(SomeElement.Str));
 
             Assert.Null(str);
 
@@ -36,7 +37,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
 
             Assert.NotNull(str);
 
-            var str2 = element.GetAttributeValue(nameof(SomeElement.Str));
+            var str2 = element.GetProperty(nameof(SomeElement.Str));
 
             Assert.Same(str, tmp);
         }
@@ -53,9 +54,11 @@ namespace DocumentFormat.OpenXml.Framework.Tests
                 .Build();
 
             var elementData = Assert.Single(data);
-            var validator = Assert.Single(elementData.Validators);
 
-            Assert.IsType<RequiredValidatorAttribute>(validator);
+            Assert.Collection(
+                elementData.Validators,
+                v => Assert.IsType<RequiredValidatorAttribute>(v),
+                v => Assert.IsType<StringValidatorAttribute>(v));
         }
 
         private class SomeElement : OpenXmlElement
