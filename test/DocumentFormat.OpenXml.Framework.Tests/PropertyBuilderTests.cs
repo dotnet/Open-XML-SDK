@@ -1,12 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Drawing.Charts;
-using DocumentFormat.OpenXml.Validation;
-using Newtonsoft.Json;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Xml;
 using Xunit;
 

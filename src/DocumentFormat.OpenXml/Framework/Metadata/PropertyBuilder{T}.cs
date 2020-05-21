@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace DocumentFormat.OpenXml.Framework
+namespace DocumentFormat.OpenXml.Framework.Metadata
 {
     internal interface IMetadataBuilder
     {
