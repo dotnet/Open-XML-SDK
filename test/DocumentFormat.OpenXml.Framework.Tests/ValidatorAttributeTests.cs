@@ -60,7 +60,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         {
             public StringValue Val { get; set; }
 
-            void IElementMetadataProvider.BuildAttributes(ElementMetadataBuilder builder) => builder.Add<NoValidatorsElement>()
+            void IElementMetadataProvider.ConfigureAttributes(ElementMetadataBuilder builder) => builder.Add<NoValidatorsElement>()
                 .AddAttribute(0, "val", a => a.Val);
         }
 
@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         {
             public StringValue Val { get; set; }
 
-            void IElementMetadataProvider.BuildAttributes(ElementMetadataBuilder builder) => builder.Add<NoValidatorsElement>()
+            void IElementMetadataProvider.ConfigureAttributes(ElementMetadataBuilder builder) => builder.Add<NoValidatorsElement>()
                 .AddAttribute(0, "val", a => a.Val, a =>
                 {
                     a.IsRequired();
@@ -79,7 +79,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         {
             public StringValue Val { get; set; }
 
-            void IElementMetadataProvider.BuildAttributes(ElementMetadataBuilder builder) => builder.Add<NoValidatorsElement>()
+            void IElementMetadataProvider.ConfigureAttributes(ElementMetadataBuilder builder) => builder.Add<NoValidatorsElement>()
                 .AddAttribute(0, "val", a => a.Val, a =>
                 {
                     a.AddUnion(aa =>

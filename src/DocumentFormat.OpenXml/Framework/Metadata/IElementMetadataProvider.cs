@@ -5,6 +5,6 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 {
     internal interface IElementMetadataProvider
     {
-        void BuildAttributes(ElementMetadataBuilder builder);
+        void ConfigureAttributes(ElementMetadataBuilder builder);
     }
 }

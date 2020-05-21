@@ -124,7 +124,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
                 var builder = new ElementMetadataBuilder();
 
-                metadata.BuildAttributes(builder);
+                metadata.ConfigureAttributes(builder);
 
                 return new ElementMetadata(builder.Build());
             }
