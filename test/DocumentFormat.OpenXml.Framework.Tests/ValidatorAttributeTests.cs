@@ -3,8 +3,6 @@
 
 using DocumentFormat.OpenXml.Validation;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Xml;
 using Xunit;
 
@@ -17,7 +15,8 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void NoValidators()
         {
-            var attribute = Assert.Single(Parse(typeof(NoValidatorsElement)).RawAttributes);
+            var attributes = AttributeCollectionBuilder.Create<NoValidatorsElement>();
+            var attribute = Assert.Single(attributes.Raw);
 
             var single = Assert.Single(attribute.Validators);
 
@@ -27,7 +26,8 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void RequiredValidation()
         {
-            var attribute = Assert.Single(Parse(typeof(RequiredValidator)).RawAttributes);
+            var attributes = AttributeCollectionBuilder.Create<RequiredValidator>();
+            var attribute = Assert.Single(attributes.Raw);
 
             Assert.Collection(
                 attribute.Validators,
@@ -38,47 +38,55 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void JustUnion()
         {
-            var attribute = Assert.Single(Parse(typeof(JustUnionValidator)).RawAttributes);
+            var attributes = AttributeCollectionBuilder.Create<JustUnionValidator>();
+            var attribute = Assert.Single(attributes.Raw);
 
             Assert.Collection(
                 attribute.Validators,
-                t => Assert.IsType<StringValidatorAttribute>(t),
                 t =>
                 {
                     var union = Assert.IsType<UnionValidator>(t);
 
-                    Assert.Equal(0, union.Id);
                     Assert.Collection(
                         union.Validators,
                         v => Assert.IsType<StringValidatorAttribute>(v),
                         v => Assert.IsType<StringValidatorAttribute>(v));
+                },
+                t => Assert.IsType<StringValidatorAttribute>(t));
+        }
+
+        private class NoValidatorsElement : BaseElement, IMetadataBuilder
+        {
+            public StringValue Val { get; set; }
+
+            void IMetadataBuilder.BuildAttributes(ElementBuilder builder) => builder.Add<NoValidatorsElement>()
+                .AddAttribute(0, "val", a => a.Val);
+        }
+
+        private class RequiredValidator : BaseElement, IMetadataBuilder
+        {
+            public StringValue Val { get; set; }
+
+            void IMetadataBuilder.BuildAttributes(ElementBuilder builder) => builder.Add<NoValidatorsElement>()
+                .AddAttribute(0, "val", a => a.Val, a =>
+                {
+                    a.IsRequired();
                 });
         }
 
-        private static OpenXmlElementData Parse(Type type) => new OpenXmlElementData(type, new PackageCache());
-
-        private class NoValidatorsElement : BaseElement
+        private class JustUnionValidator : BaseElement, IMetadataBuilder
         {
-            [Index(0)]
-            [SchemaAttr(0, "val")]
             public StringValue Val { get; set; }
-        }
 
-        private class RequiredValidator : BaseElement
-        {
-            [RequiredValidator]
-            [Index(0)]
-            [SchemaAttr(0, "val")]
-            public StringValue Val { get; set; }
-        }
-
-        private class JustUnionValidator : BaseElement
-        {
-            [StringValidator(IsId = true, UnionId = 0)]
-            [StringValidator(IsNcName = true, UnionId = 0)]
-            [Index(0)]
-            [SchemaAttr(0, "val")]
-            public StringValue Val { get; set; }
+            void IMetadataBuilder.BuildAttributes(ElementBuilder builder) => builder.Add<NoValidatorsElement>()
+                .AddAttribute(0, "val", a => a.Val, a =>
+                {
+                    a.AddUnion(aa =>
+                    {
+                        aa.AddValidator(new StringValidatorAttribute { IsId = true });
+                        aa.AddValidator(new StringValidatorAttribute { IsNcName = true });
+                    });
+                });
         }
 
         private class CustomValidator : Attribute, IOpenXmlSimpleTypeValidator

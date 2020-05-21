@@ -18,11 +18,12 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void Sanity()
         {
-            var data = PropertyBuilder<SomeElement>.Create()
-                            .AddAttribute(0, "s", a => a.Str, a =>
-                            {
-                            })
-                            .Build();
+            var data = ElementBuilder.Create()
+                .Add<SomeElement>()
+                .AddAttribute(0, "s", a => a.Str, a =>
+                {
+                })
+                .Build();
             var element = new ElementHolder(data);
 
             ref var str = ref element.GetAttributeValue(nameof(SomeElement.Str));
@@ -43,12 +44,13 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void IsRequired()
         {
-            var data = PropertyBuilder<SomeElement>.Create()
-                            .AddAttribute(0, "s", a => a.Str, a =>
-                            {
-                                a.IsRequired();
-                            })
-                            .Build();
+            var data = ElementBuilder.Create()
+                .Add<SomeElement>()
+                .AddAttribute(0, "s", a => a.Str, a =>
+                {
+                    a.IsRequired();
+                })
+                .Build();
 
             var elementData = Assert.Single(data);
             var validator = Assert.Single(elementData.Validators);

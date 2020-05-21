@@ -73,7 +73,47 @@ namespace DocumentFormat.OpenXml.Framework
         }
     }
 
-    internal class PropertyBuilder<T>
+    internal class ElementBuilder
+    {
+        private readonly List<IElementBuilder> _list = new List<IElementBuilder>();
+
+        private ElementBuilder()
+        {
+        }
+
+        public static ElementBuilder Create() => new ElementBuilder();
+
+        public PropertyBuilder<T> Add<T>()
+        {
+            var builder = new PropertyBuilder<T>();
+            _list.Add(builder);
+            return builder;
+        }
+
+        public ElementProperty<OpenXmlSimpleType>[] Build()
+        {
+            var final = new List<ElementProperty<OpenXmlSimpleType>>();
+
+            foreach (var list in _list)
+            {
+                final.AddRange(list.Build());
+            }
+
+            return final.ToArray();
+        }
+    }
+
+    internal interface IElementBuilder
+    {
+        ElementProperty<OpenXmlSimpleType>[] Build();
+    }
+
+    internal interface IAttributeBuilder
+    {
+        ElementProperty<OpenXmlSimpleType> Build();
+    }
+
+    internal class PropertyBuilder<T> : IElementBuilder
     {
         private List<IAttributeBuilder> _attributes;
 
@@ -99,7 +139,7 @@ namespace DocumentFormat.OpenXml.Framework
             return result;
         }
 
-        public PropertyBuilder<T> AddAttribute<TProperty>(byte nsId, string localName, Expression<Func<T, TProperty>> expression, Action<AttributeBuilder<TProperty>> action)
+        public PropertyBuilder<T> AddAttribute<TProperty>(byte nsId, string localName, Expression<Func<T, TProperty>> expression, Action<AttributeBuilder<TProperty>> action = null)
             where TProperty : OpenXmlSimpleType, new()
         {
             if (_attributes is null)
@@ -122,111 +162,132 @@ namespace DocumentFormat.OpenXml.Framework
                 throw new InvalidOperationException();
             }
         }
+    }
 
-        internal interface IAttributeBuilder
+    internal class AttributeBuilder<TSimpleType> : IAttributeBuilder
+        where TSimpleType : OpenXmlSimpleType, new()
+    {
+        private static IOpenXmlSimpleTypeValidator _defaultValidator = GetDefaultValidator();
+
+        private List<IOpenXmlSimpleTypeValidator> _validators;
+        private bool _isRequired;
+
+        public AttributeBuilder(byte nsId, string name, string propertyName)
         {
-            ElementProperty<OpenXmlSimpleType> Build();
+            Namespace = nsId;
+            Name = name;
+            PropertyName = propertyName;
+            _validators = null;
+            _isRequired = false;
         }
 
-        public class AttributeBuilder<TSimpleType> : IAttributeBuilder
-            where TSimpleType : OpenXmlSimpleType, new()
+        public AttributeBuilder<TSimpleType> AddUnion(Action<AttributeBuilder<TSimpleType>> action, FileFormatVersions version = FileFormatVersions.Office2007)
         {
-            private List<IOpenXmlSimpleTypeValidator> _validators;
-            private bool _isRequired;
+            var union = new AttributeBuilder<TSimpleType>(Namespace, Name, PropertyName);
 
-            public AttributeBuilder(byte nsId, string name, string propertyName)
+            action(union);
+
+            return AddValidator(new UnionValidator(union._validators, 0), version);
+        }
+
+        public AttributeBuilder<TSimpleType> AddValidator(IOpenXmlSimpleTypeValidator validator, FileFormatVersions version = FileFormatVersions.Office2007)
+        {
+            if (_validators is null)
             {
-                Namespace = nsId;
-                Name = name;
+                _validators = new List<IOpenXmlSimpleTypeValidator>();
+            }
+
+            _validators.Add(validator);
+
+            return this;
+        }
+
+        public AttributeBuilder<TSimpleType> InsertValidator(int index, IOpenXmlSimpleTypeValidator validator, FileFormatVersions version = FileFormatVersions.Office2007)
+        {
+            if (_validators is null)
+            {
+                _validators = new List<IOpenXmlSimpleTypeValidator>();
+            }
+
+            _validators.Insert(index, validator);
+
+            return this;
+        }
+
+        public AttributeBuilder<TSimpleType> IsRequired()
+        {
+            _isRequired = true;
+
+            return this;
+        }
+
+        public byte Namespace { get; }
+
+        public string Name { get; }
+
+        public string PropertyName { get; }
+
+        ElementProperty<OpenXmlSimpleType> IAttributeBuilder.Build()
+        {
+            if (_isRequired)
+            {
+                InsertValidator(0, new RequiredValidatorAttribute());
+            }
+
+            AddValidator(_defaultValidator);
+
+            return new AttributeInfo(Namespace, Name, PropertyName, _validators?.ToArray() ?? Cached.Array<IOpenXmlSimpleTypeValidator>());
+        }
+
+        private static IOpenXmlSimpleTypeValidator GetDefaultValidator()
+        {
+            var instance = new TSimpleType();
+
+            if (instance is StringValue)
+            {
+                return StringValidatorAttribute.Instance;
+            }
+            else if (instance is OnOffValue || instance is TrueFalseBlankValue || instance.IsEnum)
+            {
+                return EnumValidatorAttribute.Instance;
+            }
+            else if (instance is System.Collections.IEnumerable)
+            {
+                return ListValidator.Instance;
+            }
+            else
+            {
+                return NumberValidatorAttribute.Instance;
+            }
+        }
+
+        private class AttributeInfo : ElementProperty<OpenXmlSimpleType>
+        {
+            public AttributeInfo(byte ns, string name, string propertyName, IOpenXmlSimpleTypeValidator[] validators)
+            {
                 PropertyName = propertyName;
-                _validators = null;
-                _isRequired = false;
+                NamespaceId = ns;
+                Name = name;
+                Validators = new ValidatorCollection(validators);
             }
 
-            public AttributeBuilder<TSimpleType> AddUnion(Action<AttributeBuilder<TSimpleType>> action, FileFormatVersions version = FileFormatVersions.Office2007)
-            {
-                var union = new AttributeBuilder<TSimpleType>(Namespace, Name, PropertyName);
+            public override string PropertyName { get; }
 
-                action(union);
+            public override int Order => throw new NotImplementedException();
 
-                return AddValidator(new UnionValidator(union._validators, 0), version);
-            }
+            public override string Name { get; }
 
-            public AttributeBuilder<TSimpleType> AddValidator(IOpenXmlSimpleTypeValidator validator, FileFormatVersions version = FileFormatVersions.Office2007)
-            {
-                if (_validators is null)
-                {
-                    _validators = new List<IOpenXmlSimpleTypeValidator>();
-                }
+            public override byte NamespaceId { get; }
 
-                _validators.Add(validator);
+            public override ValidatorCollection Validators { get; }
 
-                return this;
-            }
+            public override Type Type => typeof(TSimpleType);
 
-            public AttributeBuilder<TSimpleType> InsertValidator(int index, IOpenXmlSimpleTypeValidator validator, FileFormatVersions version = FileFormatVersions.Office2007)
-            {
-                if (_validators is null)
-                {
-                    _validators = new List<IOpenXmlSimpleTypeValidator>();
-                }
+            public override OpenXmlSimpleType CreateNew() => new TSimpleType();
 
-                _validators.Insert(index, validator);
+            public override OpenXmlSimpleType GetValue(OpenXmlElement element) => element.GetAttribute(Name);
 
-                return this;
-            }
-
-            public AttributeBuilder<TSimpleType> IsRequired()
-            {
-                _isRequired = true;
-
-                return this;
-            }
-
-            public byte Namespace { get; }
-
-            public string Name { get; }
-
-            public string PropertyName { get; }
-
-            ElementProperty<OpenXmlSimpleType> IAttributeBuilder.Build()
-            {
-                if (_isRequired)
-                {
-                    InsertValidator(0, new RequiredValidatorAttribute());
-                }
-
-                return new AttributeInfo(Namespace, Name, PropertyName, _validators?.ToArray() ?? Cached.Array<IOpenXmlSimpleTypeValidator>());
-            }
-
-            private class AttributeInfo : ElementProperty<OpenXmlSimpleType>
-            {
-                public AttributeInfo(byte ns, string name, string propertyName, IOpenXmlSimpleTypeValidator[] validators)
-                {
-                    PropertyName = propertyName;
-                    NamespaceId = ns;
-                    Name = name;
-                    Validators = new ValidatorCollection(validators);
-                }
-
-                public override string PropertyName { get; }
-
-                public override int Order => throw new NotImplementedException();
-
-                public override string Name { get; }
-
-                public override byte NamespaceId { get; }
-
-                public override ValidatorCollection Validators { get; }
-
-                public override Type Type => typeof(TSimpleType);
-
-                public override OpenXmlSimpleType CreateNew() => new TSimpleType();
-
-                public override OpenXmlSimpleType GetValue(OpenXmlElement element) => element.GetAttribute(Name);
-
-                public override void SetValue(OpenXmlElement element, OpenXmlSimpleType value) => element.SetAttribute(Name, value);
-            }
+            public override void SetValue(OpenXmlElement element, OpenXmlSimpleType value) => element.SetAttribute(Name, value);
         }
     }
 }

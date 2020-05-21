@@ -10,10 +10,6 @@ namespace DocumentFormat.OpenXml.Framework
 {
     internal struct ValidatorCollectionBuilder
     {
-        private static readonly IOpenXmlSimpleTypeValidator StringValidator = new StringValidatorAttribute();
-        private static readonly IOpenXmlSimpleTypeValidator NumberValidator = new NumberValidatorAttribute();
-        private static readonly IOpenXmlSimpleTypeValidator EnumValidator = new EnumValidatorAttribute();
-
         private Dictionary<byte, List<IOpenXmlSimpleTypeValidator>> _union;
         private List<IOpenXmlSimpleTypeValidator> _validators;
 
@@ -57,11 +53,11 @@ namespace DocumentFormat.OpenXml.Framework
             {
                 if (typeof(StringValue).GetTypeInfo().IsAssignableFrom(type.GetTypeInfo()))
                 {
-                    Add(StringValidator);
+                    Add(StringValidatorAttribute.Instance);
                 }
                 else if (typeof(OnOffValue) == type || typeof(TrueFalseBlankValue) == type || IsEnum(type))
                 {
-                    Add(EnumValidator);
+                    Add(EnumValidatorAttribute.Instance);
                 }
                 else if (typeof(IEnumerable).GetTypeInfo().IsAssignableFrom(type.GetTypeInfo()))
                 {
@@ -69,7 +65,7 @@ namespace DocumentFormat.OpenXml.Framework
                 }
                 else
                 {
-                    Add(NumberValidator);
+                    Add(NumberValidatorAttribute.Instance);
                 }
             }
         }

@@ -171,7 +171,7 @@ namespace DocumentFormat.OpenXml
         /// Gets an array of fixed attributes (attributes that are defined in the schema) without forcing any parsing of the element.
         /// If parsing is required, please use <see cref="Attributes"/>
         /// </summary>
-        internal AttributeCollection RawAttributes => ElementData.RawAttributes.WrapElement(this);
+        internal virtual AttributeCollection RawAttributes => AttributeCollection.Empty;
 
         /// <summary>
         /// Gets an array of fixed attributes which will be parsed out if they are not yet parsed. If parsing is not requried, please
@@ -1474,7 +1474,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>true if the attribute is a known attribute.</returns>
         private bool TrySetFixedAttribute(string namespaceUri, string localName, string value, bool strictRelationshipFound)
         {
-            if (ElementData.RawAttributes.Any())
+            if ( RawAttributes.Any())
             {
                 if (strictRelationshipFound)
                 {

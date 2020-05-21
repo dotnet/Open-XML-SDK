@@ -2,25 +2,52 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
 namespace DocumentFormat.OpenXml.Framework
 {
+    internal interface IMetadataBuilder
+    {
+        void BuildAttributes(ElementBuilder builder);
+    }
+
+    internal static class AttributeCollectionBuilder
+    {
+        public static AttributeCollection Create<T>()
+            where T : IMetadataBuilder, new()
+        {
+            var metadata = new T();
+
+            var builder = ElementBuilder.Create();
+
+            metadata.BuildAttributes(builder);
+
+            return new AttributeCollection(builder.Build());
+        }
+    }
+
     internal readonly struct AttributeCollection
     {
-        private readonly ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> _tags;
-        private readonly OpenXmlElement _element;
+        private readonly OpenXmlSimpleType[] _data;
 
-        public AttributeCollection(OpenXmlElement element, ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> tags)
+        public static AttributeCollection Empty => new AttributeCollection(null);
+
+        public AttributeCollection(ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> tags)
         {
-            _tags = tags;
-            _element = element;
+            Raw = tags;
+
+            if (tags.Length == 0)
+            {
+                _data = Array.Empty<OpenXmlSimpleType>();
+            }
+            else
+            {
+                _data = new OpenXmlSimpleType[tags.Length];
+            }
         }
 
-        public bool IsValid => _element != null;
+        public ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> Raw { get; }
 
         public bool Any() => Length > 0;
 
@@ -28,7 +55,7 @@ namespace DocumentFormat.OpenXml.Framework
 
         public PropertyEntry this[string namespaceUri, string tagName] => this[GetIndex(namespaceUri, tagName)];
 
-        public int Length => _tags.Length;
+        public int Length => Raw.Length;
 
         public Enumerator GetEnumerator() => new Enumerator(this);
 
@@ -36,9 +63,9 @@ namespace DocumentFormat.OpenXml.Framework
         {
             if (!string.IsNullOrEmpty(tagName) && NamespaceIdMap.TryGetNamespaceId(namespaceUri, out var nsId))
             {
-                for (var i = 0; i < _tags.Length; i++)
+                for (var i = 0; i < Raw.Length; i++)
                 {
-                    var tag = _tags[i];
+                    var tag = Raw[i];
 
                     if (tag.Name.Equals(tagName, StringComparison.Ordinal) && tag.NamespaceId == nsId)
                     {
@@ -80,11 +107,11 @@ namespace DocumentFormat.OpenXml.Framework
 
             public bool IsNil => _index == -1;
 
-            public ref readonly ElementProperty<OpenXmlSimpleType> Property => ref _collection._tags[_index];
+            public ref readonly ElementProperty<OpenXmlSimpleType> Property => ref _collection.Raw[_index];
 
-            public OpenXmlSimpleType Value => _collection._tags[_index].GetValue(_collection._element);
+            public OpenXmlSimpleType Value => _collection._data[_index];
 
-            public void SetValue(OpenXmlSimpleType value) => _collection._tags[_index].SetValue(_collection._element, value);
+            public void SetValue(OpenXmlSimpleType value) => _collection._data[_index] = value;
 
             public bool HasValue => Value != null;
         }

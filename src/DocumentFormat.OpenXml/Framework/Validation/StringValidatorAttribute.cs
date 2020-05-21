@@ -14,6 +14,8 @@ namespace DocumentFormat.OpenXml.Framework
     [AttributeUsage(AttributeTargets.Property | AttributeTargets.Class, AllowMultiple = true, Inherited = true)]
     internal sealed class StringValidatorAttribute : VersionedValidatorAttribute, INameProvider
     {
+        internal static IOpenXmlSimpleTypeValidator Instance { get; } = new StringValidatorAttribute();
+
         private static readonly XmlQualifiedName _anyUri = new XmlQualifiedName("anyUri", "http://www.w3.org/2001/XMLSchema");
         private static readonly XmlQualifiedName _token = new XmlQualifiedName("token", "http://www.w3.org/2001/XMLSchema");
         private static readonly XmlQualifiedName _id = new XmlQualifiedName("ID", "http://www.w3.org/2001/XMLSchema");
