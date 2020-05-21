@@ -10,6 +10,7 @@ using DocumentFormat.OpenXml.Office2013.Excel;
 using DocumentFormat.OpenXml.Office2013.ExcelAc;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
+using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
@@ -857,6 +858,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             get => GetElement<PivotCacheDefinitionExtensionList>();
             set => SetElement(value);
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(6 /*:refreshedBy*/, 0, 255)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1857,6 +1864,24 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(4 /*:autoFormatId*/, true, 0, true, 16, true),
+            new ReferenceExistConstraint(1 /*:cacheId*/, "/WorkbookPart", typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCache), "DocumentFormat.OpenXml.Spreadsheet.PivotCache", 0 /*:cacheId*/),
+            new AttributeValueRangeConstraint(50 /*:indent*/, true, double.NegativeInfinity, true, 127, true),
+            new AttributeValueRangeConstraint(40 /*:pageWrap*/, true, double.NegativeInfinity, true, 255, true),
+            new AttributeValueLengthConstraint(11 /*:dataCaption*/, 0, 255) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(12 /*:grandTotalCaption*/, 0, 255) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(13 /*:errorCaption*/, 0, 255) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(15 /*:missingCaption*/, 0, 255) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(17 /*:pageStyle*/, 0, 255) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(18 /*:pivotTableStyle*/, 0, 255) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(19 /*:vacatedStyle*/, 0, 255) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(0 /*:name*/, 0, 255) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(20 /*:tag*/, 0, 255) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Location), 1, 1),
@@ -2168,6 +2193,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueConditionToAnother(4 /*:backgroundRefresh*/, 5 /*:firstBackgroundRefresh*/, new string[] { "true" }, new string[] { "true" }),
+            new AttributeValueRangeConstraint(14 /*:connectionId*/, true, 1, true, double.PositiveInfinity, true),
+            new ReferenceExistConstraint(14 /*:connectionId*/, "/WorkbookPart/ConnectionsPart", typeof(DocumentFormat.OpenXml.Spreadsheet.Connection), "DocumentFormat.OpenXml.Spreadsheet.Connection", 0 /*:id*/),
+            new AttributeValueLengthConstraint(0 /*:name*/, 1, 255)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.QueryTableRefresh), 0, 1),
@@ -2275,6 +2309,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "uniqueCount")]
         [Index(1)]
         public UInt32Value UniqueCount { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(1 /*:uniqueCount*/, true, double.NegativeInfinity, true, 2147483647, true),
+            new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 2147483647, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -2464,6 +2505,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "preserveHistory")]
         [Index(11)]
         public UInt32Value PreserveHistory { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(8 /*:version*/, true, 1, true, 2147483647, true),
+            new AttributeValueRangeConstraint(11 /*:preserveHistory*/, true, 0, true, 32768, true),
+            new AttributeValueRangeConstraint(7 /*:revisionId*/, true, double.NegativeInfinity, true, 2147483647, true),
+            new AttributeValueSetConstraint(0 /*:guid*/, false, new string[] { "00000000-0000-0000-0000-000000000000" })
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -2683,6 +2733,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "count")]
         [Index(0)]
         public UInt32Value Count { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 256, true) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -4527,6 +4583,26 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new IndexReferenceConstraint(13 /*:dataDxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0),
+            new IndexReferenceConstraint(15 /*:headerRowBorderDxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0),
+            new IndexReferenceConstraint(12 /*:headerRowDxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0),
+            new IndexReferenceConstraint(16 /*:tableBorderDxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0),
+            new IndexReferenceConstraint(17 /*:totalsRowBorderDxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0),
+            new IndexReferenceConstraint(14 /*:totalsRowDxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0),
+            new ReferenceExistConstraint(21 /*:connectionId*/, "/WorkbookPart/ConnectionsPart", typeof(DocumentFormat.OpenXml.Spreadsheet.Connection), "DocumentFormat.OpenXml.Spreadsheet.Connection", 0 /*:id*/),
+            new AttributeValueSetConstraint(0 /*:id*/, false, new string[] { "0", "" }),
+            new AttributeValueRangeConstraint(0 /*:id*/, true, 1, true, 4294967294, true) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(1 /*:name*/, 0, 255) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(3 /*:comment*/, 0, 255) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(19 /*:dataCellStyle*/, 1, 255) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(18 /*:headerRowCellStyle*/, 1, 255) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(20 /*:totalsRowCellStyle*/, 1, 255) { Application = ApplicationType.Excel },
+            new AttributeValueRangeConstraint(21 /*:connectionId*/, true, double.NegativeInfinity, true, 2147483647, true) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.AutoFilter), 0, 1),
@@ -5497,6 +5573,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(5)]
         public BooleanValue Array { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeMutualExclusive(3, 2) /*:l, :s*/ ,
+            new ReferenceExistConstraint(1 /*:i*/, "/WorkbookPart", typeof(DocumentFormat.OpenXml.Spreadsheet.Sheet), "DocumentFormat.OpenXml.Spreadsheet.Sheet", 1 /*:sheetId*/),
+            new AttributeValueRangeConstraint(1 /*:i*/, true, 1, true, 65534, true) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CalculationCell>(deep);
     }
@@ -5727,6 +5811,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             get => GetElement<CommentProperties>();
             set => SetElement(value);
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new IndexReferenceConstraint(1 /*:authorId*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.Author), "DocumentFormat.OpenXml.Spreadsheet.Author", 0),
+            new UniqueAttributeValueConstraint(2 /*:guid*/, false, null)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -6339,6 +6430,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(2)]
         public StringValue Namespace { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:ID*/, true, null),
+            new AttributeValueLengthConstraint(0 /*:ID*/, 0, 65535) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(1 /*:SchemaRef*/, 0, 65535) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(2 /*:Namespace*/, 0, 65535) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new AnyParticle(0, 1)
@@ -6491,6 +6591,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(3 /*:SchemaID*/, true, null),
+            new AttributeValueLengthConstraint(1 /*:Name*/, 0, 65535),
+            new AttributeValueLengthConstraint(2 /*:RootElement*/, 0, 65535),
+            new AttributeValueRangeConstraint(0 /*:ID*/, true, 1, true, 2147483647, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataBinding), 0, 1)
@@ -6582,6 +6691,20 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "DataBindingLoadMode")]
         [Index(4)]
         public UInt32Value DataBindingLoadMode { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:DataBindingName*/, true, null),
+            new UniqueAttributeValueConstraint(3 /*:FileBindingName*/, true, null),
+            new AttributeValueRangeConstraint(4 /*:DataBindingLoadMode*/, true, 0, true, 4, true),
+            new AttributeAbsentConditionToValue(2 /*:ConnectionID*/, 1 /*:FileBinding*/ , "false"),
+            new AttributeRequiredConditionToValue(2 /*:ConnectionID*/, 1 /*:FileBinding*/ , "true"),
+            new AttributeValueLengthConstraint(0 /*:DataBindingName*/, 0, 65535) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(3 /*:FileBindingName*/, 0, 65535) { Application = ApplicationType.Excel },
+            new AttributeValueRangeConstraint(2 /*:ConnectionID*/, true, double.NegativeInfinity, true, 2147483647, true) { Application = ApplicationType.Excel },
+            new AttributeAbsentConditionToValue(3 /*:FileBindingName*/, 1 /*:FileBinding*/ , "false") { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -6891,6 +7014,20 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(5 /*:name*/, true, null),
+            new AttributeValueRangeConstraint(7 /*:type*/, true, 1, true, 8, true),
+            new UniqueAttributeValueConstraint(0 /*:id*/, true, null),
+            new AttributeValueRangeConstraint(4 /*:interval*/, true, double.NegativeInfinity, true, 32767, true) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(5 /*:name*/, 1, 255) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(6 /*:description*/, 0, 255) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(19 /*:singleSignOnId*/, 0, 255) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(2 /*:odcFile*/, 0, 255) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(1 /*:sourceFile*/, 0, 255) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DatabaseProperties), 0, 1),
@@ -7075,6 +7212,16 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(9)]
         public StringValue Cell { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(0 /*:name*/, 0, 255),
+            new AttributeValueSetConstraint(1 /*:sqlType*/, true, new string[] { "-22", "-20", "-11", "-10", "-9", "-8", "-7", "-6", "-5", "-4", "-3", "-2", "-1", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110", "111", "112", "113" }),
+            new AttributeValueLengthConstraint(8 /*:string*/, 0, 255),
+            new AttributeRequiredConditionToValue(9 /*:cell*/, 2 /*:parameterType*/ , "cell"),
+            new AttributeValueLengthConstraint(4 /*:prompt*/, 0, 65535)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Parameter>(deep);
     }
@@ -7188,6 +7335,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "position")]
         [Index(1)]
         public UInt32Value Position { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(1 /*:position*/, true, 0, true, 2147483647, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextField>(deep);
@@ -7376,6 +7529,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             get => GetElement<FieldGroup>();
             set => SetElement(value);
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:name*/, true, null)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -7701,6 +7860,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(7)]
         public StringValue Id { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeMutualExclusive(5, 4) /*:name, :ref*/ ,
+            new AttributeValueLengthConstraint(6 /*:sheet*/, 1, 31)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RangeSet>(deep);
     }
@@ -7843,6 +8009,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "b")]
         [Index(10)]
         public BooleanValue Bold { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new IndexReferenceConstraint(4 /*:in*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.ServerFormat), "DocumentFormat.OpenXml.Spreadsheet.ServerFormat", 0),
+            new AttributeValueLengthConstraint(2 /*:c*/, 0, 65535) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -8004,6 +8177,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(11)]
         public BooleanValue Bold { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new IndexReferenceConstraint(5 /*:in*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.ServerFormat), "DocumentFormat.OpenXml.Spreadsheet.ServerFormat", 0),
+            new AttributeValueLengthConstraint(3 /*:c*/, 0, 65535) { Application = ApplicationType.Excel },
+            new AttributeValueSetConstraint(0 /*:v*/, false, new string[] { "INF", "-INF", "NaN" }) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0, 0),
@@ -8103,6 +8284,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "cp")]
         [Index(4)]
         public UInt32Value PropertyCount { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(3 /*:c*/, 0, 65535) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -8276,6 +8463,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new IndexReferenceConstraint(5 /*:in*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.ServerFormat), "DocumentFormat.OpenXml.Spreadsheet.ServerFormat", 0),
+            new AttributeValueLengthConstraint(3 /*:c*/, 0, 65535) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0, 1),
@@ -8436,6 +8630,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(11)]
         public BooleanValue Bold { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new IndexReferenceConstraint(5 /*:in*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.ServerFormat), "DocumentFormat.OpenXml.Spreadsheet.ServerFormat", 0),
+            new AttributeValueLengthConstraint(3 /*:c*/, 0, 65535) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0, 0),
@@ -8535,6 +8736,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "cp")]
         [Index(4)]
         public UInt32Value PropertyCount { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(3 /*:c*/, 0, 65535) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -8751,6 +8958,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new IndexReferenceConstraint(0 /*:v*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CacheField), "DocumentFormat.OpenXml.Spreadsheet.CacheField", 0)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MemberPropertiesMap>(deep);
     }
@@ -8953,6 +9166,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(9)]
         public StringValue Weight { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(6 /*:goal*/, true, null),
+            new UniqueAttributeValueConstraint(7 /*:status*/, true, null),
+            new UniqueAttributeValueConstraint(8 /*:trend*/, true, null),
+            new UniqueAttributeValueConstraint(0 /*:uniqueName*/, true, null),
+            new UniqueAttributeValueConstraint(5 /*:value*/, true, null),
+            new UniqueAttributeValueConstraint(9 /*:weight*/, true, null),
+            new AttributeValueLengthConstraint(1 /*:caption*/, 1, 32767) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(2 /*:displayFolder*/, 0, 65535) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(3 /*:measureGroup*/, 0, 65535) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(4 /*:parent*/, 0, 32767) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Kpi>(deep);
     }
@@ -8981,6 +9209,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "x")]
         [Index(0)]
         public Int32Value Index { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new IndexReferenceConstraint(0 /*:x*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CacheField), "DocumentFormat.OpenXml.Spreadsheet.CacheField", 0),
+            new AttributeValueRangeConstraint(0 /*:x*/, true, -1, true, double.PositiveInfinity, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FieldUsage>(deep);
@@ -9094,6 +9329,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:uniqueName*/, true, null)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -9276,6 +9517,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(4 /*:id*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.Groups)),
+            new AttributeValueRangeConstraint(4 /*:id*/, true, 1, true, double.PositiveInfinity, true),
+            new AttributeValueLengthConstraint(3 /*:uniqueParent*/, 0, 65535),
+            new UniqueAttributeValueConstraint(1 /*:uniqueName*/, true, null)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.GroupMembers), 1, 1)
@@ -9385,6 +9635,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "group")]
         [Index(1)]
         public BooleanValue Group { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:uniqueName*/, true, null),
+            new AttributeValueLengthConstraint(0 /*:uniqueName*/, 1, 65535) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GroupMember>(deep);
@@ -9695,6 +9952,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(1)]
         public StringValue Format { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeMutualExclusive(0, 1) /*:culture, :format*/ ,
+            new AttributeValueLengthConstraint(0 /*:culture*/, 0, 31),
+            new AttributeValueLengthConstraint(1 /*:format*/, 0, 65535)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ServerFormat>(deep);
     }
@@ -9739,6 +10004,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "item")]
         [Index(2)]
         public UInt32Value Item { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new IndexReferenceConstraint(0 /*:fld*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CacheField), "DocumentFormat.OpenXml.Spreadsheet.CacheField", 0),
+            new IndexReferenceConstraint(1 /*:hier*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CacheHierarchy), "DocumentFormat.OpenXml.Spreadsheet.CacheHierarchy", 0),
+            new AttributeMutualExclusive(0, 1) /*:fld, :hier*/ { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Tuple>(deep);
@@ -9835,6 +10108,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(4)]
         public BooleanValue QueryFailed { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(2 /*:setDefinition*/, 0, 65535) { Application = ApplicationType.Excel },
+            new AttributeValueRangeConstraint(1 /*:maxRank*/, true, 0, true, 1048576, true) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0, 0),
@@ -9915,6 +10195,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             get => GetElement<Tuples>();
             set => SetElement(value);
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(0 /*:mdx*/, 0, 65535)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -10201,6 +10487,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(11 /*:fieldPosition*/, true, 0, true, 255, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences), 0, 1),
@@ -10330,6 +10622,20 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             get => GetElement<CalculatedMemberExtensionList>();
             set => SetElement(value);
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(0 /*:name*/, 1, 63999),
+            new AttributeAbsentConditionToValue(3 /*:hierarchy*/, 6 /*:set*/ , "1"),
+            new AttributeRequiredConditionToValue(3 /*:hierarchy*/, 6 /*:set*/ , "0"),
+            new AttributeAbsentConditionToValue(4 /*:parent*/, 6 /*:set*/ , "1"),
+            new AttributeAbsentConditionToValue(2 /*:memberName*/, 6 /*:set*/ , "1"),
+            new AttributeRequiredConditionToValue(2 /*:memberName*/, 6 /*:set*/ , "0"),
+            new AttributeValueLengthConstraint(2 /*:memberName*/, 1, 65535) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(3 /*:hierarchy*/, 1, 65535) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(4 /*:parent*/, 1, 65535) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 0, 1)
         {
@@ -10816,6 +11122,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueSetConstraint(1 /*:axis*/, false, new string[] { "axisValues" })
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Items), 0, 1),
@@ -10932,6 +11244,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "e")]
         [Index(10)]
         public BooleanValue DrillAcrossAttributes { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:n*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.PivotField)),
+            new AttributeValueSetConstraint(1 /*:t*/, false, new string[] { "blank", "grand" }),
+            new AttributeRequiredConditionToValue(8 /*:x*/, 1 /*:t*/ , "data") { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Item>(deep);
@@ -11054,6 +11374,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new IndexReferenceConstraint(1 /*:fld*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.PivotField), "DocumentFormat.OpenXml.Spreadsheet.PivotField", 0)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataFieldExtensionList), 0, 1)
@@ -11136,6 +11462,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(2)]
         public UInt32Value Index { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new IndexReferenceConstraint(2 /*:i*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DataField), "DocumentFormat.OpenXml.Spreadsheet.DataField", 0)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0, 0)
@@ -11171,6 +11503,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "x")]
         [Index(0)]
         public Int32Value Index { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:x*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.ColumnFields))
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Field>(deep);
@@ -11266,6 +11604,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new IndexReferenceConstraint(1 /*:dxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -11378,6 +11722,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueConditionToAnother(1 /*:type*/, 0 /*:scope*/, new string[] { "none", "all" }, new string[] { "data", "selection" })
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -11706,6 +12056,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(10 /*:caption*/, 0, 65535)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberProperties), 0, 1),
@@ -11872,6 +12228,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(8)]
         public UInt32Value Field { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new IndexReferenceConstraint(8 /*:field*/, "PivotTableCacheDefinitionPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CacheField), "DocumentFormat.OpenXml.Spreadsheet.CacheField", 0)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MemberProperty>(deep);
     }
@@ -11956,6 +12318,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(3)]
         public StringValue Caption { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(2 /*:uniqueName*/, true, null),
+            new AttributeValueLengthConstraint(3 /*:caption*/, 1, 65535) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(1 /*:name*/, 1, 65535) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(2 /*:uniqueName*/, 1, 32767) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Dimension>(deep);
     }
@@ -11993,6 +12364,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "caption")]
         [Index(1)]
         public StringValue Caption { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(1 /*:caption*/, 1, 65535) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(0 /*:name*/, 1, 65535) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MeasureGroup>(deep);
@@ -12201,6 +12579,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             get => GetElement<PivotFilterExtensionList>();
             set => SetElement(value);
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new IndexReferenceConstraint(0 /*:fld*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.PivotField), "DocumentFormat.OpenXml.Spreadsheet.PivotField", 0),
+            new UniqueAttributeValueConstraint(4 /*:id*/, false, null),
+            new IndexReferenceConstraint(6 /*:iMeasureFld*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.PivotField), "DocumentFormat.OpenXml.Spreadsheet.PivotField", 0),
+            new IndexReferenceConstraint(5 /*:iMeasureHier*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.PivotHierarchy), "DocumentFormat.OpenXml.Spreadsheet.PivotHierarchy", 0)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -12482,6 +12869,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(10 /*:allUniqueName*/, true, null),
+            new UniqueAttributeValueConstraint(9 /*:defaultMemberUniqueName*/, true, null),
+            new UniqueAttributeValueConstraint(0 /*:uniqueName*/, true, null),
+            new AttributeValueLengthConstraint(13 /*:displayFolder*/, 0, 65535) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(14 /*:measureGroup*/, 0, 65535) { Application = ApplicationType.Excel },
+            new AttributeValueRangeConstraint(5 /*:iconSet*/, true, 0, true, 11, true) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FieldsUsage), 0, 1),
@@ -12574,6 +12972,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "groupInterval")]
         [Index(7)]
         public DoubleValue GroupInterval { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLessEqualToAnother(3 /*:startNum*/, 4 /*:endNum*/, false)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RangeProperties>(deep);
@@ -12826,6 +13230,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new IndexReferenceConstraint(0 /*:fld*/, "PivotTableCacheDefinitionPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CacheField), "DocumentFormat.OpenXml.Spreadsheet.CacheField", 0),
+            new UniqueAttributeValueConstraint(3 /*:name*/, true, null)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 0, 1)
         {
@@ -13258,6 +13669,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(0)]
         public StringValue Name { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(0 /*:name*/, 1, 255) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DeletedField>(deep);
     }
@@ -13378,6 +13795,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:id*/, true, null),
+            new UniqueAttributeValueConstraint(1 /*:name*/, true, null),
+            new AttributeValueLengthConstraint(1 /*:name*/, 0, 255),
+            new AttributeValueConditionToAnother(2 /*:dataBound*/, 5 /*:clipped*/, new string[] { "true" }, new string[] { "true" }),
+            new AttributeValueConditionToAnother(2 /*:dataBound*/, 4 /*:fillFormulas*/, new string[] { "false" }, new string[] { "true" }),
+            new AttributeValueConditionToAnother(2 /*:dataBound*/, 3 /*:rowNumbers*/, new string[] { "true" }, new string[] { "true" })
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 0, 1)
         {
@@ -13889,6 +14317,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(0)]
         public DoubleValue Val { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:val*/, true, 1, true, 409.55, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FontSize>(deep);
     }
@@ -13908,6 +14342,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public Color() : base()
         {
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(4 /*:tint*/, true, -1, true, 1, true) { Application = ApplicationType.Excel },
+            new AttributeValueRangeConstraint(1 /*:indexed*/, true, double.NegativeInfinity, true, 255, true) { Application = ApplicationType.Excel },
+            new AttributeValueRangeConstraint(3 /*:theme*/, true, 0, true, 255, true) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Color>(deep);
@@ -13929,6 +14371,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeMutualExclusive(0, 1, 2, 3) /*:auto, :indexed, :rgb, :theme*/ ,
+            new AttributeValueRangeConstraint(4 /*:tint*/, true, -1, true, 1, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TabColor>(deep);
     }
@@ -13949,6 +14398,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(4 /*:tint*/, true, -1, true, 1, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ForegroundColor>(deep);
     }
@@ -13968,6 +14423,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public BackgroundColor() : base()
         {
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(4 /*:tint*/, true, -1, true, 1, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackgroundColor>(deep);
@@ -14054,6 +14515,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(0)]
         public StringValue Val { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(0 /*:val*/, 0, 31)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RunFont>(deep);
     }
@@ -14074,6 +14541,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:val*/, true, 0, true, 5, true) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FontFamily>(deep);
     }
@@ -14093,6 +14566,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public RunPropertyCharSet() : base()
         {
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:val*/, true, 0, true, 255, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RunPropertyCharSet>(deep);
@@ -14416,6 +14895,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLessEqualToAnother(0 /*:sb*/, 1 /*:eb*/, false)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Text), 1, 1)
@@ -14467,6 +14952,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "alignment")]
         [Index(2)]
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PhoneticAlignmentValues> Alignment { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new IndexReferenceConstraint(0 /*:fontId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.Font), "DocumentFormat.OpenXml.Spreadsheet.Font", 0)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PhoneticProperties>(deep);
@@ -14627,6 +15118,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(2 /*:maxSheetId*/, true, double.NegativeInfinity, true, 32767, true) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(3 /*:userName*/, 1, 54) { Application = ApplicationType.Excel },
+            new AttributeValueRangeConstraint(5 /*:minRId*/, true, double.NegativeInfinity, true, 2147483647, true) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetIdMap), 1, 1),
@@ -14759,6 +15258,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(7)]
         public BooleanValue Edge { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(3 /*:sId*/, 0, 32767)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Undo), 0, 0),
@@ -14882,6 +15387,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "sourceSheetId")]
         [Index(6)]
         public UInt32Value SourceSheetId { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(3 /*:sheetId*/, true, double.NegativeInfinity, true, 32767, true),
+            new AttributeValueRangeConstraint(6 /*:sourceSheetId*/, true, double.NegativeInfinity, true, 32767, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
         {
@@ -15047,6 +15559,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(3 /*:sheetId*/, 0, 32767)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -15125,6 +15643,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "sheetPosition")]
         [Index(5)]
         public UInt32Value SheetPosition { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(3 /*:sheetId*/, true, double.NegativeInfinity, true, 32767, true) { Application = ApplicationType.Excel },
+            new AttributeValueRangeConstraint(5 /*:sheetPosition*/, true, double.NegativeInfinity, true, 65533, true) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevisionInsertSheet>(deep);
@@ -15364,6 +15889,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(3 /*:sId*/, true, double.NegativeInfinity, true, 32767, true) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OldCell), 0, 1),
@@ -15504,6 +16035,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:sheetId*/, true, 0, true, 32767, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), 0, 1),
@@ -15605,6 +16142,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "ref")]
         [Index(8)]
         public StringValue Reference { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(1 /*:autoFormatId*/, true, 0, true, 16, true),
+            new AttributeValueRangeConstraint(0 /*:sheetId*/, true, double.NegativeInfinity, true, 32767, true) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevisionAutoFormat>(deep);
@@ -15894,6 +16438,26 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(8 /*:functionGroupId*/, true, 1, true, 14, true),
+            new AttributeValueRangeConstraint(3 /*:localSheetId*/, true, double.NegativeInfinity, true, 32767, true),
+            new AttributeValueLengthConstraint(14 /*:customMenu*/, 0, 32767),
+            new AttributeValueLengthConstraint(15 /*:oldCustomMenu*/, 0, 32767),
+            new AttributeValueLengthConstraint(16 /*:description*/, 0, 32767),
+            new AttributeValueLengthConstraint(17 /*:oldDescription*/, 0, 32767),
+            new AttributeValueLengthConstraint(18 /*:help*/, 0, 32767),
+            new AttributeValueLengthConstraint(19 /*:oldHelp*/, 0, 32767),
+            new AttributeValueLengthConstraint(20 /*:statusBar*/, 0, 32767),
+            new AttributeValueLengthConstraint(21 /*:oldStatusBar*/, 0, 32767),
+            new UniqueAttributeValueConstraint(5 /*:name*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.Revisions)),
+            new AttributeValuePatternConstraint(5 /*:name*/, @"[a-zA-Z_\\][a-zA-Z0-9_.]*"),
+            new AttributeValueLengthConstraint(22 /*:comment*/, 0, 255) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(23 /*:oldComment*/, 0, 255) { Application = ApplicationType.Excel },
+            new AttributeValueRangeConstraint(0 /*:rId*/, true, double.NegativeInfinity, true, 2147483647, true) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Formula), 0, 1),
@@ -16016,6 +16580,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(10)]
         public UInt32Value NewLength { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(8 /*:author*/, 1, 52)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevisionComment>(deep);
     }
@@ -16115,6 +16685,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "sheetId")]
         [Index(3)]
         public UInt32Value SheetId { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(3 /*:sheetId*/, true, 0, true, 32767, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevisionConflict>(deep);
@@ -16277,6 +16853,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(0)]
         public UInt32Value RevisionId { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:rId*/, true, double.NegativeInfinity, true, 2147483647, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Reviewed>(deep);
     }
@@ -16388,6 +16970,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(10)]
         public UInt32Value SheetId { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(10 /*:sId*/, true, double.NegativeInfinity, true, 32767, true),
+            new AttributeValueConditionToAnother(2 /*:ref3D*/, 5 /*:nf*/, new string[] { "false" }, new string[] { "true" }),
+            new AttributeMutualExclusive(8, 9) /*:dn, :r*/ ,
+            new AttributeMutualExclusive(8, 10) /*:dn, :sId*/
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Undo>(deep);
     }
@@ -16440,6 +17031,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public OldCell(string outerXml) : base(outerXml)
         {
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new IndexReferenceConstraint(3 /*:cm*/, "/WorkbookPart/CellMetadataPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CellMetadata), "DocumentFormat.OpenXml.Spreadsheet.CellMetadata", 0),
+            new IndexReferenceConstraint(1 /*:s*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CellStyle), "DocumentFormat.OpenXml.Spreadsheet.CellStyle", 0),
+            new IndexReferenceConstraint(4 /*:vm*/, "/WorkbookPart/CellMetadataPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.ValueMetadata), "DocumentFormat.OpenXml.Spreadsheet.ValueMetadata", 0)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -16503,6 +17102,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public Cell(string outerXml) : base(outerXml)
         {
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(3 /*:cm*/, true, double.NegativeInfinity, true, 2147483647, true),
+            new IndexReferenceConstraint(3 /*:cm*/, "/WorkbookPart/CellMetadataPart", typeof(DocumentFormat.OpenXml.Spreadsheet.CellMetadata), typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataBlock), "DocumentFormat.OpenXml.Spreadsheet.MetadataBlock", 1),
+            new AttributeValueRangeConstraint(4 /*:vm*/, true, double.NegativeInfinity, true, 2147483648, true),
+            new IndexReferenceConstraint(4 /*:vm*/, "/WorkbookPart/CellMetadataPart", typeof(DocumentFormat.OpenXml.Spreadsheet.ValueMetadata), typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataBlock), "DocumentFormat.OpenXml.Spreadsheet.MetadataBlock", 1),
+            new AttributeValueRangeConstraint(1 /*:s*/, true, 0, true, 65490, true),
+            new IndexReferenceConstraint(1 /*:s*/, "/WorkbookPart/WorkbookStylesPart", typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormats), typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormat), "DocumentFormat.OpenXml.Spreadsheet.CellFormat", 0)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -16823,6 +17433,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueSetConstraint(3 /*:cm*/, true, new string[] { "0" }) { Application = ApplicationType.Excel },
+            new AttributeValueSetConstraint(4 /*:vm*/, true, new string[] { "0" }) { Application = ApplicationType.Excel },
+            new AttributeValueSetConstraint(1 /*:s*/, true, new string[] { "0" }) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -17219,6 +17837,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(0)]
         public UInt32Value Val { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 65535, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SheetId>(deep);
     }
@@ -17358,6 +17982,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(1, "space")]
         [Index(12)]
         public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues> Space { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueSetConstraint(11 /*:bx*/, true, new string[] { "false" }),
+            new AttributeRequiredConditionToValue(10 /*:si*/, 0 /*:t*/ , "shared")
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CellFormula>(deep);
@@ -17628,6 +18259,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(12)]
         public DoubleValue DyDescent { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:r*/, true, 1, true, 1048576, true),
+            new AttributeValueRangeConstraint(7 /*:outlineLevel*/, true, 0, true, 7, true),
+            new AttributeValueRangeConstraint(2 /*:s*/, true, 0, true, 65490, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Cell), 0, 0),
@@ -17737,6 +18376,18 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "collapsed")]
         [Index(9)]
         public BooleanValue Collapsed { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(8 /*:outlineLevel*/, true, 0, true, 7, true),
+            new AttributeValueRangeConstraint(0 /*:min*/, true, 1, true, 16384, true),
+            new AttributeValueRangeConstraint(1 /*:max*/, true, 1, true, 16384, true),
+            new AttributeValueRangeConstraint(2 /*:width*/, true, 0, true, 255, true),
+            new AttributeValueRangeConstraint(3 /*:style*/, true, 0, true, 65429, true),
+            new IndexReferenceConstraint(3 /*:style*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormat), "DocumentFormat.OpenXml.Spreadsheet.CellFormat", 0),
+            new AttributeValueLessEqualToAnother(0 /*:min*/, 1 /*:max*/, true) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Column>(deep);
@@ -17937,6 +18588,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "sqref")]
         [Index(3)]
         public ListValue<StringValue> SequenceOfReferences { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(1 /*:activeCell*/, true, double.NegativeInfinity, true, 8191, true) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Selection>(deep);
@@ -18142,6 +18799,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueSetConstraint(6 /*:axis*/, false, new string[] { "axisValues" }),
+            new AttributeValueRangeConstraint(14 /*:previousCol*/, true, double.NegativeInfinity, true, 16383, true) { Application = ApplicationType.Excel },
+            new AttributeValueRangeConstraint(13 /*:previousRow*/, true, double.NegativeInfinity, true, 1048575, true) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotArea), 1, 1)
@@ -18208,6 +18873,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "pt")]
         [Index(4)]
         public BooleanValue PivotTablePageBreak { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(1 /*:min*/, true, double.NegativeInfinity, true, 1048576, true) { Application = ApplicationType.Excel },
+            new AttributeValueRangeConstraint(0 /*:id*/, true, 1, true, 1048576, true) { Application = ApplicationType.Excel },
+            new AttributeValueRangeConstraint(2 /*:max*/, true, 1, true, 1048576, true) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Break>(deep);
@@ -18314,6 +18987,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 1022, true),
+            new AttributeValueRangeConstraint(1 /*:manualBreakCount*/, true, double.NegativeInfinity, true, 1022, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Break), 0, 0)
@@ -18370,6 +19050,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public ColumnBreaks(string outerXml) : base(outerXml)
         {
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 1023, true),
+            new AttributeValueRangeConstraint(1 /*:manualBreakCount*/, true, double.NegativeInfinity, true, 1023, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -18513,6 +19200,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "footer")]
         [Index(5)]
         public DoubleValue Footer { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:left*/, true, 0, true, 49, false),
+            new AttributeValueRangeConstraint(1 /*:right*/, true, 0, true, 49, false),
+            new AttributeValueRangeConstraint(2 /*:top*/, true, 0, true, 49, false),
+            new AttributeValueRangeConstraint(3 /*:bottom*/, true, 0, true, 49, false),
+            new AttributeValueRangeConstraint(4 /*:header*/, true, 0, true, 49, false),
+            new AttributeValueRangeConstraint(5 /*:footer*/, true, 0, true, 49, false)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PageMargins>(deep);
@@ -18732,6 +19430,16 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(19, "id")]
         [Index(16)]
         public StringValue Id { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(3 /*:fitToWidth*/, true, double.NegativeInfinity, true, 32767, true) { Application = ApplicationType.Excel },
+            new AttributeValueRangeConstraint(4 /*:fitToHeight*/, true, double.NegativeInfinity, true, 32767, true) { Application = ApplicationType.Excel },
+            new AttributeValueRangeConstraint(15 /*:copies*/, true, 1, true, 32767, true) { Application = ApplicationType.Excel },
+            new AttributeValueRangeConstraint(13 /*:horizontalDpi*/, true, 1, true, double.PositiveInfinity, true) { Application = ApplicationType.Excel },
+            new AttributeValueRangeConstraint(14 /*:verticalDpi*/, true, 1, true, double.PositiveInfinity, true) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PageSetup>(deep);
@@ -19153,6 +19861,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(12)]
         public BooleanValue EqualAverage { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeRequiredConditionToValue(7 /*:operator*/, 0 /*:type*/ , "cells"),
+            new AttributeRequiredConditionToValue(9 /*:timePeriod*/, 0 /*:type*/ , "timePeriod"),
+            new IndexReferenceConstraint(1 /*:dxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Formula), 0, 3),
@@ -19227,6 +19943,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "display")]
         [Index(4)]
         public StringValue Display { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(2 /*:location*/, 0, 2084),
+            new AttributeValueLengthConstraint(4 /*:display*/, 0, 2084),
+            new AttributeValueLengthConstraint(3 /*:tooltip*/, 0, 255),
+            new RelationshipExistConstraint(1 /*r:id*/)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Hyperlink>(deep);
@@ -19424,6 +20149,16 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(5)]
         public StringValue Comment { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:name*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.Worksheet)),
+            new AttributeValueRangeConstraint(3 /*:count*/, true, 1, true, 32, true) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(0 /*:name*/, 0, 255) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(4 /*:user*/, 1, 54) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(5 /*:comment*/, 0, 255) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.InputCells), 1, 32)
@@ -19518,6 +20253,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(7)]
         public StringValue SecurityDescriptor { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(6 /*:name*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.ProtectedRanges)),
+            new AttributeValueLengthConstraint(6 /*:name*/, 1, 255) { Application = ApplicationType.Word },
+            new AttributeValueRangeConstraint(5 /*:sqref*/, true, 1, true, double.PositiveInfinity, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ProtectedRange>(deep);
     }
@@ -19546,6 +20289,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "r")]
         [Index(0)]
         public StringValue CellReference { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:r*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.CellWatches))
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CellWatch>(deep);
@@ -19658,6 +20407,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(10)]
         public StringValue Id { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(9 /*:copies*/, true, 1, true, 32767, true) { Application = ApplicationType.Excel },
+            new AttributeValueRangeConstraint(7 /*:horizontalDpi*/, true, 1, true, double.PositiveInfinity, true) { Application = ApplicationType.Excel },
+            new AttributeValueRangeConstraint(8 /*:verticalDpi*/, true, 1, true, double.PositiveInfinity, true) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChartSheetPageSetup>(deep);
     }
@@ -19698,6 +20455,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(19, "id")]
         [Index(1)]
         public StringValue Id { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:name*/, false, null)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomProperty>(deep);
@@ -19786,6 +20549,18 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "autoRepublish")]
         [Index(7)]
         public BooleanValue AutoRepublish { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(6 /*:title*/, 0, 255),
+            new AttributeValueLengthConstraint(5 /*:destinationFile*/, 1, 255),
+            new AttributeValueLengthConstraint(1 /*:divId*/, 1, 255),
+            new AttributeValueRangeConstraint(0 /*:id*/, true, 1, true, 2147483647, true),
+            new UniqueAttributeValueConstraint(0 /*:id*/, true, null),
+            new AttributeRequiredConditionToValue(3 /*:sourceRef*/, 2 /*:sourceType*/ , "range"),
+            new AttributeAbsentConditionToNonValue(3 /*:sourceRef*/, 2 /*:sourceType*/ , "range")
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebPublishItem>(deep);
@@ -19915,6 +20690,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new IndexReferenceConstraint(2 /*:workbookViewId*/, "/WorkbookPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.WorkbookView), "DocumentFormat.OpenXml.Spreadsheet.WorkbookView", 0),
+            new AttributeValueRangeConstraint(1 /*:zoomScale*/, true, 10, true, 400, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -20051,6 +20833,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(1 /*:scale*/, true, 10, true, 400, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageMargins), 0, 1),
@@ -20121,6 +20909,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "numFmtId")]
         [Index(4)]
         public UInt32Value NumberFormatId { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(3 /*:val*/, 0, 255) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<InputCells>(deep);
@@ -20214,6 +21008,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             get => GetElement<ControlProperties>();
             set => SetElement(value);
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:shapeId*/, true, 1, true, 67098623, true),
+            new UniqueAttributeValueConstraint(2 /*:name*/, true, null) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(2 /*:name*/, 0, 32) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -20322,6 +21124,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "calculatedColumn")]
         [Index(9)]
         public BooleanValue CalculatedColumn { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:sqref*/, true, double.NegativeInfinity, true, 2147483647, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<IgnoredError>(deep);
@@ -20550,6 +21358,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             get => GetElement<Formula2>();
             set => SetElement(value);
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(12 /*:sqref*/, true, 1, true, 32767, true),
+            new AttributeValueLengthConstraint(8 /*:errorTitle*/, 0, 32),
+            new AttributeValueLengthConstraint(10 /*:promptTitle*/, 0, 32)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -20782,6 +21598,16 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             get => GetElement<Pane>();
             set => SetElement(value);
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(13 /*:colorId*/, true, double.NegativeInfinity, true, 64, true),
+            new AttributeValueRangeConstraint(14 /*:zoomScale*/, true, 10, true, 400, true),
+            new AttributeValueRangeConstraint(15 /*:zoomScaleNormal*/, true, 10, true, 400, true),
+            new AttributeValueRangeConstraint(17 /*:zoomScalePageLayoutView*/, true, 10, true, 400, true),
+            new AttributeValueRangeConstraint(16 /*:zoomScaleSheetLayoutView*/, true, 10, true, 400, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -21154,6 +21980,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(2 /*:colorId*/, true, double.NegativeInfinity, true, 64, true),
+            new AttributeValueSetConstraint(0 /*:guid*/, false, new string[] { "00000000-0000-0000-0000-000000000000" })
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Pane), 0, 1),
@@ -21294,6 +22127,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValuePatternConstraint(0 /*:progId*/, @"[^\d].*"),
+            new AttributeValueLengthConstraint(0 /*:progId*/, 0, 39),
+            new AttributeValueRangeConstraint(5 /*:shapeId*/, true, 1, true, 67098623, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.EmbeddedObjectProperties), 0, 1, version: FileFormatVersions.Office2010)
@@ -21359,6 +22200,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "count")]
         [Index(0)]
         public UInt32Value Count { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 2147483647, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -21426,6 +22273,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(0)]
         public UInt32Value Count { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 2147483647, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), 1, 0)
@@ -21491,6 +22344,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "count")]
         [Index(0)]
         public UInt32Value Count { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 2147483647, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -21569,6 +22428,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(1)]
         public UInt32Value Count { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(1 /*:count*/, true, double.NegativeInfinity, true, 2147483647, true),
+            new UniqueAttributeValueConstraint(0 /*:name*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.Metadata)),
+            new AttributeValueSetConstraint(0 /*:name*/, false, new string[] { "XLMDX" }),
+            new AttributeValueLengthConstraint(0 /*:name*/, 1, 65535)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FutureMetadataBlock), 0, 0),
@@ -21627,6 +22495,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 2147483647, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataBlock), 1, 0)
@@ -21683,6 +22557,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public ValueMetadata(string outerXml) : base(outerXml)
         {
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 2147483647, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -21991,6 +22871,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(27)]
         public BooleanValue CellMeta { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:name*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataTypes)),
+            new AttributeValueLengthConstraint(0 /*:name*/, 1, 65535)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MetadataType>(deep);
     }
@@ -22086,6 +22973,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "v")]
         [Index(1)]
         public UInt32Value Val { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new IndexReferenceConstraint(0 /*:t*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataType), "DocumentFormat.OpenXml.Spreadsheet.MetadataType", 1),
+            new AttributeValueRangeConstraint(0 /*:t*/, true, double.NegativeInfinity, true, 2147483647, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MetadataRecord>(deep);
@@ -22285,6 +23179,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new IndexReferenceConstraint(0 /*:n*/, "/WorkbookPart/CellMetadataPart", typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataStrings), typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), "DocumentFormat.OpenXml.Spreadsheet.CharacterValue", 0),
+            new AttributeValueRangeConstraint(0 /*:n*/, true, double.NegativeInfinity, true, 2147483647, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MdxTuple), 1, 1),
@@ -22428,6 +23329,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(9)]
         public BooleanValue Bold { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(2 /*:si*/, true, double.NegativeInfinity, true, 2147483647, true),
+            new IndexReferenceConstraint(2 /*:si*/, "/WorkbookPart/CellMetadataPart", typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataStrings), typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), "DocumentFormat.OpenXml.Spreadsheet.CharacterValue", 0),
+            new AttributeValueRangeConstraint(0 /*:c*/, true, double.NegativeInfinity, true, 2147483647, true),
+            new AttributeValueRangeConstraint(3 /*:fi*/, true, double.NegativeInfinity, true, 58, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NameIndex), 0, 0)
@@ -22511,6 +23421,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(2)]
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.MdxSetOrderValues> SortingOrder { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new IndexReferenceConstraint(0 /*:ns*/, "/WorkbookPart/CellMetadataPart", typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataStrings), typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), "DocumentFormat.OpenXml.Spreadsheet.CharacterValue", 0),
+            new AttributeValueRangeConstraint(0 /*:ns*/, true, 0, true, 2147483647, true),
+            new AttributeValueRangeConstraint(1 /*:c*/, true, 0, true, 2147483647, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NameIndex), 0, 0)
@@ -22555,6 +23473,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "np")]
         [Index(1)]
         public UInt32Value PropertyNameIndex { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new IndexReferenceConstraint(0 /*:n*/, "/WorkbookPart/CellMetadataPart", typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataStrings), typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), "DocumentFormat.OpenXml.Spreadsheet.CharacterValue", 0),
+            new AttributeValueRangeConstraint(0 /*:n*/, true, double.NegativeInfinity, true, 2147483647, true),
+            new IndexReferenceConstraint(1 /*:np*/, "/WorkbookPart/CellMetadataPart", typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataStrings), typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), "DocumentFormat.OpenXml.Spreadsheet.CharacterValue", 0),
+            new AttributeValueRangeConstraint(1 /*:np*/, true, double.NegativeInfinity, true, 2147483647, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MdxMemberProp>(deep);
@@ -22603,6 +23530,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(2)]
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.MdxKPIPropertyValues> KpiProperty { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new IndexReferenceConstraint(0 /*:n*/, ".", typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataStrings), typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), "DocumentFormat.OpenXml.Spreadsheet.CharacterValue", 0),
+            new AttributeValueRangeConstraint(0 /*:n*/, true, double.NegativeInfinity, true, 2147483647, true),
+            new IndexReferenceConstraint(1 /*:np*/, "/WorkbookPart/CellMetadataPart", typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataStrings), typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), "DocumentFormat.OpenXml.Spreadsheet.CharacterValue", 0),
+            new AttributeValueRangeConstraint(1 /*:np*/, true, double.NegativeInfinity, true, 2147483647, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MdxKpi>(deep);
     }
@@ -22639,6 +23575,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "s")]
         [Index(1)]
         public BooleanValue IsASet { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:x*/, true, 0, true, double.PositiveInfinity, true),
+            new AttributeValueRangeConstraint(0 /*:x*/, true, double.NegativeInfinity, true, 2147483647, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NameIndex>(deep);
@@ -22746,6 +23689,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:id*/, true, 1, true, 4294967294, true),
+            new AttributeValueRangeConstraint(2 /*:connectionId*/, true, double.NegativeInfinity, true, 2147483647, true),
+            new UniqueAttributeValueConstraint(0 /*:id*/, true, null)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.XmlCellProperties), 1, 1),
@@ -22851,6 +23802,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueSetConstraint(0 /*:id*/, true, new string[] { "1" }),
+            new UniqueAttributeValueConstraint(1 /*:uniqueName*/, true, null),
+            new AttributeValueLengthConstraint(1 /*:uniqueName*/, 1, 255) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.XmlProperties), 1, 1),
@@ -22949,6 +23908,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(1 /*:xpath*/, 0, 32000),
+            new AttributeValueRangeConstraint(0 /*:mapId*/, true, 1, true, 2147483647, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -23151,6 +24117,16 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(5)]
         public DoubleValue Bottom { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(4 /*:top*/, true, 0, true, 1, true),
+            new AttributeValueRangeConstraint(5 /*:bottom*/, true, 0, true, 1, true),
+            new AttributeValueRangeConstraint(2 /*:left*/, true, 0, true, 1, true),
+            new AttributeValueRangeConstraint(3 /*:right*/, true, 0, true, 1, true),
+            new AttributeValueRangeConstraint(1 /*:degree*/, true, -1.7E+308, true, 1.7E+308, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.GradientStop), 0, 0)
@@ -23231,6 +24207,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:position*/, true, 0, true, 1, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 1, 1)
@@ -23275,6 +24257,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "formatCode")]
         [Index(1)]
         public StringValue FormatCode { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(1 /*:formatCode*/, 0, 255)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumberingFormat>(deep);
@@ -23375,6 +24363,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "mergeCell")]
         [Index(9)]
         public StringValue MergeCell { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(8 /*:readingOrder*/, true, 0, true, 2, true),
+            new AttributeValueRangeConstraint(4 /*:indent*/, true, double.NegativeInfinity, true, 255, true) { Application = ApplicationType.Excel },
+            new AttributeValueSetConstraint(8 /*:readingOrder*/, true, new string[] { "0", "1", "2" }) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Alignment>(deep);
@@ -24217,6 +25213,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(3)]
         public UInt32Value Count { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(0 /*:name*/, 1, 255) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableStyleElement), 0, 28)
@@ -24365,6 +25367,16 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(0 /*:name*/, 0, 255),
+            new AttributeValueRangeConstraint(2 /*:builtinId*/, true, 0, true, 53, true),
+            new AttributeValueRangeConstraint(3 /*:iLevel*/, true, 0, true, 7, true),
+            new UniqueAttributeValueConstraint(1 /*:xfId*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.CellStyles)),
+            new IndexReferenceConstraint(1 /*:xfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormat), "DocumentFormat.OpenXml.Spreadsheet.CellFormat", 0)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -24571,6 +25583,16 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new IndexReferenceConstraint(3 /*:borderId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.Border), "DocumentFormat.OpenXml.Spreadsheet.Border", 0),
+            new AttributeValueRangeConstraint(3 /*:borderId*/, true, 0, true, double.PositiveInfinity, true),
+            new IndexReferenceConstraint(2 /*:fillId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.Fill), "DocumentFormat.OpenXml.Spreadsheet.Fill", 0),
+            new IndexReferenceConstraint(1 /*:fontId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.Font), "DocumentFormat.OpenXml.Spreadsheet.Font", 0),
+            new IndexReferenceConstraint(4 /*:xfId*/, "/WorkbookPart/WorkbookStylesPart", typeof(DocumentFormat.OpenXml.Spreadsheet.CellStyleFormats), typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormat), "DocumentFormat.OpenXml.Spreadsheet.CellFormat", 0)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Alignment), 0, 1),
@@ -24609,6 +25631,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "val")]
         [Index(0)]
         public StringValue Val { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(0 /*:val*/, 1, 31) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FontName>(deep);
@@ -24714,6 +25742,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "dxfId")]
         [Index(2)]
         public UInt32Value FormatId { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(1 /*:size*/, true, 1, true, 9, true),
+            new IndexReferenceConstraint(2 /*:dxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableStyleElement>(deep);
@@ -24934,6 +25969,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(2)]
         public UInt32Value SheetId { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(2 /*:sheetId*/, true, 0, true, 65533, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExternalDefinedName>(deep);
     }
@@ -25002,6 +26043,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(1)]
         public BooleanValue RefreshError { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:sheetId*/, true, 0, true, 65533, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalRow), 0, 0)
@@ -25068,6 +26115,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "r")]
         [Index(0)]
         public UInt32Value RowIndex { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:r*/, true, double.NegativeInfinity, true, 1048576, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -25164,6 +26217,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             get => GetElement<Xstring>();
             set => SetElement(value);
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueSetConstraint(1 /*:t*/, false, new string[] { "s" }),
+            new IndexReferenceConstraint(2 /*:vm*/, "/WorkbookPart/CellMetadataPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.ValueMetadata), "DocumentFormat.OpenXml.Spreadsheet.ValueMetadata", 0)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -25326,6 +26386,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(0 /*:name*/, 0, 255),
+            new AttributeValueConditionToAnother(0 /*:name*/, 1 /*:ole*/, new string[] { "StdDocumentName" }, new string[] { "true" })
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Values), 0, 1)
@@ -25399,6 +26466,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "cols")]
         [Index(1)]
         public UInt32Value Columns { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(1 /*:cols*/, true, 1, true, 16384, true) { Application = ApplicationType.Excel },
+            new AttributeValueRangeConstraint(0 /*:rows*/, true, 1, true, 1048576, true) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -25744,6 +26818,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(0 /*:ddeService*/, 1, 255),
+            new AttributeValueLengthConstraint(1 /*:ddeTopic*/, 0, 255)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DdeItems), 0, 1)
@@ -25836,6 +26917,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(1 /*:progId*/, 1, 255)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OleItems), 0, 1)
@@ -25870,6 +26957,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "val")]
         [Index(0)]
         public StringValue Val { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(0 /*:val*/, 0, 31)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SheetName>(deep);
@@ -26111,6 +27204,25 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(2 /*:name*/, 0, 255),
+            new AttributeAbsentConditionToValue(4 /*:totalsRowLabel*/, 3 /*:totalsRowFunction*/ , "custom"),
+            new AttributeValueLengthConstraint(9 /*:headerRowCellStyle*/, 1, 255),
+            new AttributeValueLengthConstraint(11 /*:totalsRowCellStyle*/, 1, 255),
+            new AttributeValueRangeConstraint(5 /*:queryTableFieldId*/, true, 1, true, double.PositiveInfinity, true),
+            new AttributeValueRangeConstraint(0 /*:id*/, true, 1, true, double.PositiveInfinity, true),
+            new AttributeValueLengthConstraint(4 /*:totalsRowLabel*/, 0, 32767),
+            new AttributeValueLengthConstraint(10 /*:dataCellStyle*/, 1, 255),
+            new IndexReferenceConstraint(7 /*:dataDxfId*/, "/WorkbookPart/WorkbookStylesPart", typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormats), typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0),
+            new IndexReferenceConstraint(6 /*:headerRowDxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0),
+            new UniqueAttributeValueConstraint(0 /*:id*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.Table)),
+            new UniqueAttributeValueConstraint(2 /*:name*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.Table)),
+            new IndexReferenceConstraint(8 /*:totalsRowDxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0),
+            new AttributeValueLengthConstraint(1 /*:uniqueName*/, 0, 255) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedColumnFormula), 0, 1),
@@ -26333,6 +27445,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(1 /*:xpath*/, 0, 32000),
+            new ReferenceExistConstraint(0 /*:mapId*/, "CustomXmlMappingsPart", typeof(DocumentFormat.OpenXml.Spreadsheet.Map), "DocumentFormat.OpenXml.Spreadsheet.Map", 0 /*:ID*/),
+            new AttributeValueRangeConstraint(0 /*:mapId*/, true, 1, true, 21474836477, true) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -26467,6 +27587,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(0)]
         public StringValue First { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(0 /*:first*/, 1, 255) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Topic), 1, 0)
@@ -26597,6 +27723,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(1)]
         public UInt32Value SheetId { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(1 /*:s*/, true, 1, true, 65534, true) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopicReferences>(deep);
     }
@@ -26637,6 +27769,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(19, "id")]
         [Index(1)]
         public StringValue Id { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:cacheId*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCaches)),
+            new RelationshipExistConstraint(1 /*r:id*/)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotCache>(deep);
@@ -26708,6 +27847,16 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "autoRepublish")]
         [Index(5)]
         public BooleanValue AutoRepublish { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(4 /*:title*/, 0, 255) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(2 /*:sourceObject*/, 0, 255) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(3 /*:destinationFile*/, 1, 255) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(1 /*:divId*/, 1, 255) { Application = ApplicationType.Excel },
+            new AttributeValueRangeConstraint(0 /*:id*/, true, 1, true, 2147483647, true) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebPublishObject>(deep);
@@ -27001,6 +28150,16 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(16 /*:windowWidth*/, true, double.NegativeInfinity, true, 2147483647, true),
+            new AttributeValueRangeConstraint(18 /*:tabRatio*/, true, double.NegativeInfinity, true, 1000, true),
+            new AttributeValueRangeConstraint(19 /*:activeSheetId*/, true, 1, true, 65534, true),
+            new AttributeValueSetConstraint(1 /*:guid*/, false, new string[] { "00000000-0000-0000-0000-000000000000" }) { Application = ApplicationType.Excel },
+            new AttributeValueRangeConstraint(17 /*:windowHeight*/, true, double.NegativeInfinity, true, 2147483647, true) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -27065,6 +28224,18 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(19, "id")]
         [Index(3)]
         public StringValue Id { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValuePatternConstraint(0 /*:name*/, @"[^'*\[\]/\\:?]{1}[^*\[\]/\\:?]*"),
+            new AttributeValueLengthConstraint(0 /*:name*/, 1, 31),
+            new UniqueAttributeValueConstraint(0 /*:name*/, false, null),
+            new UniqueAttributeValueConstraint(1 /*:sheetId*/, true, null),
+            new AttributeValueRangeConstraint(1 /*:sheetId*/, true, 1, true, 65534, true),
+            new AttributeValueLengthConstraint(3 /*r:id*/, 0, 255),
+            new RelationshipExistConstraint(3 /*r:id*/)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Sheet>(deep);
@@ -27234,6 +28405,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(7 /*:windowWidth*/, true, double.NegativeInfinity, true, 2147483647, true),
+            new AttributeValueRangeConstraint(8 /*:windowHeight*/, true, double.NegativeInfinity, true, 2147483647, true),
+            new AttributeValueRangeConstraint(9 /*:tabRatio*/, true, double.NegativeInfinity, true, 1000, true),
+            new AttributeValueRangeConstraint(11 /*:activeTab*/, true, 0, true, 32766, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -27395,6 +28575,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(14)]
         public BooleanValue WorkbookParameter { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(1 /*:comment*/, 0, 255) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(0 /*:name*/, 1, 255) { Application = ApplicationType.Excel },
+            new AttributeValueRangeConstraint(6 /*:localSheetId*/, true, double.NegativeInfinity, true, 32766, true) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefinedName>(deep);
     }
@@ -27423,6 +28611,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "name")]
         [Index(0)]
         public StringValue Name { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(0 /*:name*/, 0, 32) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FunctionGroup>(deep);
@@ -28236,6 +29430,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(4)]
         public BooleanValue ShowColumnStripes { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(0 /*:name*/, 1, 255) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableStyleInfo>(deep);
     }
@@ -28346,6 +29546,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "preferPic")]
         [Index(3)]
         public BooleanValue PreferPicture { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(0 /*:name*/, 0, 255),
+            new AttributeValueLengthConstraint(0 /*:name*/, 1, int.MaxValue)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OleItem>(deep);
@@ -29371,6 +30578,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValuePatternConstraint(1 /*:codeName*/, @"[\p{L}\P{IsBasicLatin}][_\d\p{L}\P{IsBasicLatin}]*"),
+            new AttributeValueLengthConstraint(1 /*:codeName*/, 0, 32)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TabColor), 0, 1)
@@ -29606,6 +30820,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(0)]
         public StringValue Id { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new RelationshipExistConstraint(0 /*r:id*/)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Drawing>(deep);
     }
@@ -29625,6 +30845,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public LegacyDrawing() : base()
         {
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new RelationshipExistConstraint(0 /*r:id*/)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LegacyDrawing>(deep);
@@ -30085,6 +31311,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(2)]
         public BooleanValue ShowValue { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(1 /*:maxLength*/, true, double.NegativeInfinity, true, 100, true) { Application = ApplicationType.Excel },
+            new AttributeValueRangeConstraint(0 /*:minLength*/, true, double.NegativeInfinity, true, 100, true) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject), 2, 2),
@@ -30473,6 +31706,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValuePatternConstraint(6 /*:codeName*/, @"[\p{L}\P{IsBasicLatin}][_\d\p{L}\P{IsBasicLatin}]*")
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TabColor), 0, 1),
@@ -30647,6 +31886,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(55, "dyDescent")]
         [Index(9)]
         public DoubleValue DyDescent { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(8 /*:outlineLevelCol*/, true, 0, true, 7, true),
+            new AttributeValueRangeConstraint(7 /*:outlineLevelRow*/, true, 0, true, 7, true),
+            new AttributeValueRangeConstraint(0 /*:baseColWidth*/, true, double.NegativeInfinity, true, 255, true),
+            new AttributeValueRangeConstraint(1 /*:defaultColWidth*/, true, 0, true, 65535, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SheetFormatProperties>(deep);
@@ -31337,6 +32585,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(1)]
         public ListValue<StringValue> SequenceOfReferences { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(1 /*:sqref*/, 1, int.MaxValue)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRule), 1, 0),
@@ -31850,6 +33104,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(19, "id")]
         [Index(3)]
         public StringValue Id { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(1 /*:name*/, 1, 255),
+            new AttributeValueLengthConstraint(2 /*:sheet*/, 0, 31),
+            new RelationshipExistConstraint(3 /*r:id*/)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WorksheetSource>(deep);
@@ -32379,6 +33641,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(6)]
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DateTimeGroupingValues> DateTimeGrouping { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(2 /*:day*/, true, 1, true, 31, true),
+            new AttributeValueRangeConstraint(3 /*:hour*/, true, 0, true, 23, true),
+            new AttributeValueRangeConstraint(4 /*:minute*/, true, 0, true, 59, true),
+            new AttributeValueRangeConstraint(1 /*:month*/, true, 1, true, 12, true),
+            new AttributeValueRangeConstraint(5 /*:second*/, true, 0, true, 59, true),
+            new AttributeValueRangeConstraint(0 /*:year*/, true, 1000, true, 9999, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DateGroupItem>(deep);
     }
@@ -32677,6 +33950,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "cellColor")]
         [Index(1)]
         public BooleanValue CellColor { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new IndexReferenceConstraint(0 /*:dxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorFilter>(deep);
@@ -32984,6 +34263,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(3)]
         public UInt32Value CommandType { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(3 /*:commandType*/, true, 1, true, 5, true),
+            new AttributeValueLengthConstraint(0 /*:connection*/, 0, 65535) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DatabaseProperties>(deep);
     }
@@ -33075,6 +34361,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "serverFontColor")]
         [Index(8)]
         public BooleanValue ServerFontColor { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(4 /*:rowDrillCount*/, true, 1, true, 1048576, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OlapProperties>(deep);
@@ -33243,6 +34535,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             get => GetElement<Tables>();
             set => SetElement(value);
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(8 /*:url*/, 1, int.MaxValue)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -33442,6 +34740,16 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             get => GetElement<TextFields>();
             set => SetElement(value);
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(7 /*:decimal*/, 1, 255),
+            new AttributeValueLengthConstraint(8 /*:thousands*/, 1, 255),
+            new AttributeValueRangeConstraint(4 /*:firstRow*/, true, double.NegativeInfinity, true, 2147483647, true) { Application = ApplicationType.Excel },
+            new AttributeValueLengthConstraint(5 /*:sourceFile*/, 1, 218) { Application = ApplicationType.Excel },
+            new AttributeRequiredConditionToValue(5 /*:sourceFile*/, 0 /*:prompt*/ , "false") { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -33822,6 +35130,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             get => GetElement<CacheSourceExtensionList>();
             set => SetElement(value);
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new ReferenceExistConstraint(1 /*:connectionId*/, "/WorkbookPart/ConnectionsPart", typeof(DocumentFormat.OpenXml.Spreadsheet.Connection), "DocumentFormat.OpenXml.Spreadsheet.Connection", 0 /*:id*/),
+            new UniqueAttributeValueConstraint(1 /*:connectionId*/, true, null)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 1)
         {
@@ -34803,6 +36118,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "longText")]
         [Index(13)]
         public BooleanValue LongText { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueSetConstraint(9 /*:maxValue*/, false, new string[] { "NaN", "INF", "-INF" }),
+            new AttributeValueSetConstraint(8 /*:minValue*/, false, new string[] { "NaN", "INF", "-INF" }),
+            new AttributeValueLessEqualToAnother(8 /*:minValue*/, 9 /*:maxValue*/, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
         {
@@ -36287,6 +37610,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(5)]
         public BooleanValue ShowLastColumn { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(0 /*:name*/, 0, 255) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotTableStyle>(deep);
     }
@@ -36971,6 +38300,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(5 /*:unboundColumnsLeft*/, true, double.NegativeInfinity, true, 16383, true),
+            new AttributeValueRangeConstraint(6 /*:unboundColumnsRight*/, true, double.NegativeInfinity, true, 16383, true),
+            new AttributeValueRangeConstraint(4 /*:nextId*/, true, double.NegativeInfinity, true, 65535, true),
+            new AttributeValueRangeConstraint(3 /*:minimumVersion*/, true, 0, true, 31, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.QueryTableFields), 1, 1),
@@ -37355,6 +38693,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "count")]
         [Index(3)]
         public UInt32Value Count { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(1 /*:xWindow*/, true, double.NegativeInfinity, true, 65535, true) { Application = ApplicationType.Excel },
+            new AttributeValueRangeConstraint(2 /*:yWindow*/, true, double.NegativeInfinity, true, 65535, true) { Application = ApplicationType.Excel },
+            new AttributeValueRangeConstraint(3 /*:count*/, true, double.NegativeInfinity, true, 65535, true) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -38369,6 +39715,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(2)]
         public StringValue DefaultPivotStyle { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(1 /*:defaultTableStyle*/, 1, 255)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableStyle), 0, 0)
@@ -38660,6 +40012,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [Index(4)]
         public StringValue CodeName { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(0 /*:appName*/, 0, 65535),
+            new AttributeValueLengthConstraint(1 /*:lastEdited*/, 0, 65535),
+            new AttributeValueLengthConstraint(2 /*:lowestEdited*/, 0, 65535),
+            new AttributeValueLengthConstraint(3 /*:rupBuild*/, 0, 65535)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FileVersion>(deep);
     }
@@ -38736,6 +40097,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "spinCount")]
         [Index(6)]
         public UInt32Value SpinCount { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueLengthConstraint(1 /*:userName*/, 1, 54)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FileSharing>(deep);
@@ -39210,6 +40577,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "builtInGroupCount")]
         [Index(0)]
         public UInt32Value BuiltInGroupCount { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:builtInGroupCount*/, true, double.NegativeInfinity, true, 255, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 0)
         {

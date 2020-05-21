@@ -9,6 +9,7 @@ using DocumentFormat.OpenXml.Office2010.Drawing.Charts;
 using DocumentFormat.OpenXml.Office2013.Drawing.Chart;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
+using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
@@ -1945,6 +1946,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Index>(deep);
     }
@@ -1964,6 +1971,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Order() : base()
         {
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Order>(deep);
@@ -1985,6 +1998,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AxisId>(deep);
     }
@@ -2004,6 +2023,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public CrossingAxis() : base()
         {
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CrossingAxis>(deep);
@@ -2025,6 +2050,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PointCount>(deep);
     }
@@ -2044,6 +2075,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public SecondPiePoint() : base()
         {
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SecondPiePoint>(deep);
@@ -2065,6 +2102,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Explosion>(deep);
     }
@@ -2084,6 +2127,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public FormatId() : base()
         {
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormatId>(deep);
@@ -3816,6 +3865,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueSetConstraint(0 /*:val*/, false, new string[] { "INF", "-INF", "NaN" })
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CrossesAt>(deep);
     }
@@ -3916,6 +3971,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueSetConstraint(0 /*:val*/, false, new string[] { "INF", "-INF", "NaN" }),
+            new AttributeValueRangeConstraint(0 /*:val*/, true, 0, true, double.PositiveInfinity, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Forward>(deep);
     }
@@ -3935,6 +3997,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Backward() : base()
         {
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:val*/, true, 0, true, double.PositiveInfinity, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Backward>(deep);
@@ -3996,6 +4064,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueSetConstraint(0 /*:val*/, false, new string[] { "INF", "-INF", "NaN" })
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SplitPosition>(deep);
     }
@@ -4015,6 +4089,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public CustomDisplayUnit() : base()
         {
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueSetConstraint(0 /*:val*/, false, new string[] { "INF", "-INF", "NaN" })
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomDisplayUnit>(deep);
@@ -4370,6 +4450,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public ChartReference() : base()
         {
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new RelationshipExistConstraint(0 /*r:id*/)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChartReference>(deep);
@@ -4875,6 +4961,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             get => GetElement<NumericValue>();
             set => SetElement(value);
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:idx*/, true, double.NegativeInfinity, true, 2147483647, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -9225,6 +9317,17 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         [Index(5)]
         public DoubleValue Footer { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(3 /*:b*/, true, 0, true, 49, false),
+            new AttributeValueRangeConstraint(5 /*:footer*/, true, 0, true, 49, false),
+            new AttributeValueRangeConstraint(4 /*:header*/, true, 0, true, 49, false),
+            new AttributeValueRangeConstraint(0 /*:l*/, true, 0, true, 49, false),
+            new AttributeValueRangeConstraint(1 /*:r*/, true, 0, true, 49, false),
+            new AttributeValueRangeConstraint(2 /*:t*/, true, 0, true, 49, false)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PageMargins>(deep);
     }
@@ -9316,6 +9419,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         [SchemaAttr(0, "copies")]
         [Index(8)]
         public UInt32Value Copies { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(8 /*:copies*/, true, double.NegativeInfinity, true, 2147483647, true),
+            new AttributeValueRangeConstraint(0 /*:paperSize*/, true, double.NegativeInfinity, true, 2147483647, true) { Application = ApplicationType.Excel }
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PageSetup>(deep);
@@ -12785,6 +12895,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             get => GetElement<NumericValue>();
             set => SetElement(value);
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueRangeConstraint(0 /*:idx*/, true, 0, true, 2147483647, true)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -19973,6 +20089,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             get => GetElement<AutoUpdate>();
             set => SetElement(value);
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new RelationshipExistConstraint(0 /*r:id*/)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {

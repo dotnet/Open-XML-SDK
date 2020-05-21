@@ -5,6 +5,7 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
+using DocumentFormat.OpenXml.Validation.Semantic;
 using DocumentFormat.OpenXml.Vml.Office;
 using DocumentFormat.OpenXml.Vml.Presentation;
 using DocumentFormat.OpenXml.Vml.Spreadsheet;
@@ -163,6 +164,12 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "extrusionok")]
         [Index(14)]
         public TrueFalseValue AllowExtrusion { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:id*/, true, null)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Path>(deep);
@@ -570,6 +577,18 @@ namespace DocumentFormat.OpenXml.Vml
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new RelationshipTypeConstraint(25 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"),
+            new AttributeValuePatternConstraint(16 /*:focus*/, @"-?(\d{1,2}|100)%"),
+            new UniqueAttributeValueConstraint(0 /*:id*/, false, null),
+            new AttributeValueRangeConstraint(14 /*:angle*/, true, -32767, true, 32767, true),
+            new AttributeValueRangeConstraint(10 /*:origin*/, true, -32767, true, 32767, true),
+            new AttributeValueSetConstraint(21 /*ovml:title*/, false, new string[] { "slashes", "colons" }),
+            new RelationshipExistConstraint(25 /*r:id*/)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties), 0, 1)
@@ -940,6 +959,16 @@ namespace DocumentFormat.OpenXml.Vml
             set => SetElement(value);
         }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new RelationshipTypeConstraint(26 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"),
+            new UniqueAttributeValueConstraint(0 /*:id*/, false, null),
+            new AttributeValueRangeConstraint(6 /*:miterlimit*/, true, double.NegativeInfinity, true, 32767, true),
+            new AttributeValueRangeConstraint(2 /*:weight*/, true, 0, true, 20116800, true),
+            new RelationshipExistConstraint(26 /*r:id*/)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.LeftStroke), 0, 1),
@@ -1059,6 +1088,12 @@ namespace DocumentFormat.OpenXml.Vml
         [Index(10)]
         public StringValue Matrix { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:id*/, true, null)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shadow>(deep);
     }
@@ -1144,6 +1179,12 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "singleclick")]
         [Index(3)]
         public TrueFalseValue SingleClick { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:id*/, true, null)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -1236,6 +1277,12 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "string")]
         [Index(7)]
         public StringValue String { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:id*/, true, null)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextPath>(deep);
@@ -1426,6 +1473,19 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(19, "href")]
         [Index(18)]
         public StringValue RelHref { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new RelationshipTypeConstraint(18 /*r:href*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"),
+            new RelationshipTypeConstraint(16 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"),
+            new RelationshipTypeConstraint(17 /*r:pict*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"),
+            new RelationshipTypeConstraint(15 /*ovml:relid*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"),
+            new UniqueAttributeValueConstraint(0 /*:id*/, false, null),
+            new AttributeValueRangeConstraint(7 /*:blacklevel*/, true, -0.5, true, 0.5, true),
+            new RelationshipExistConstraint(16 /*r:id*/),
+            new RelationshipExistConstraint(18 /*r:href*/)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ImageData>(deep);
@@ -2079,6 +2139,14 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "equationxml")]
         [Index(55)]
         public StringValue EquationXml { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueSetConstraint(30 /*ovml:dgmlayout*/, true, new string[] { "0", "1", "2", "3" }),
+            new AttributeValueSetConstraint(32 /*ovml:dgmlayoutmru*/, true, new string[] { "0", "1", "2", "3" }),
+            new UniqueAttributeValueConstraint(0 /*:id*/, true, null)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
@@ -2752,6 +2820,14 @@ namespace DocumentFormat.OpenXml.Vml
         [Index(53)]
         public StringValue Master { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueSetConstraint(30 /*ovml:dgmlayout*/, true, new string[] { "0", "1", "2", "3" }),
+            new AttributeValueSetConstraint(32 /*ovml:dgmlayoutmru*/, true, new string[] { "0", "1", "2", "3" }),
+            new UniqueAttributeValueConstraint(0 /*:id*/, true, null)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 0)
@@ -3209,6 +3285,15 @@ namespace DocumentFormat.OpenXml.Vml
         [Index(33)]
         public StringValue TableLimits { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueSetConstraint(31 /*ovml:tableproperties*/, true, new string[] { "1", "2", "3" }),
+            new AttributeValueSetConstraint(26 /*ovml:dgmlayout*/, true, new string[] { "0", "1", "2", "3" }),
+            new AttributeValueSetConstraint(28 /*ovml:dgmlayoutmru*/, true, new string[] { "0", "1", "2", "3" }),
+            new UniqueAttributeValueConstraint(0 /*:id*/, true, null)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Group), 1, 1),
@@ -3364,6 +3449,12 @@ namespace DocumentFormat.OpenXml.Vml
             get => GetElement<Fill>();
             set => SetElement(value);
         }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new UniqueAttributeValueConstraint(0 /*:id*/, true, null)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -3997,6 +4088,17 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "endangle")]
         [Index(52)]
         public DecimalValue EndAngle { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueSetConstraint(19 /*ovml:dgmlayout*/, true, new string[] { "0", "1", "2", "3" }),
+            new AttributeValueSetConstraint(21 /*ovml:dgmlayoutmru*/, true, new string[] { "0", "1", "2", "3" }),
+            new AttributeValueRangeConstraint(10 /*ovml:hrpct*/, true, 0, true, 1000, true),
+            new AttributeValueRangeConstraint(20 /*ovml:dgmnodekind*/, true, 0, true, 6, true),
+            new AttributeValueSetConstraint(29 /*ovml:spt*/, true, new string[] { "19" }),
+            new UniqueAttributeValueConstraint(40 /*:id*/, true, null)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -4681,6 +4783,15 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "to")]
         [Index(55)]
         public StringValue To { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueSetConstraint(30 /*ovml:dgmlayout*/, true, new string[] { "0", "1", "2", "3" }),
+            new AttributeValueSetConstraint(32 /*ovml:dgmlayoutmru*/, true, new string[] { "0", "1", "2", "3" }),
+            new AttributeValueSetConstraint(40 /*ovml:spt*/, true, new string[] { "0" }),
+            new UniqueAttributeValueConstraint(0 /*:id*/, true, null)
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -5406,6 +5517,15 @@ namespace DocumentFormat.OpenXml.Vml
         [Index(60)]
         public Base64BinaryValue Gfxdata { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueSetConstraint(29 /*ovml:dgmlayout*/, true, new string[] { "0", "1", "2", "3" }),
+            new AttributeValueSetConstraint(31 /*ovml:dgmlayoutmru*/, true, new string[] { "0", "1", "2", "3" }),
+            new UniqueAttributeValueConstraint(0 /*:id*/, true, null),
+            new AttributeValueSetConstraint(39 /*ovml:spt*/, true, new string[] { "75" })
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 0)
@@ -6074,6 +6194,13 @@ namespace DocumentFormat.OpenXml.Vml
         [Index(53)]
         public StringValue To { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueSetConstraint(30 /*ovml:dgmlayout*/, true, new string[] { "0", "1", "2", "3" }),
+            new AttributeValueSetConstraint(40 /*ovml:spt*/, true, new string[] { "20" })
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 0)
@@ -6725,6 +6852,15 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "gfxdata")]
         [Index(51)]
         public Base64BinaryValue Gfxdata { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueSetConstraint(30 /*ovml:dgmlayout*/, true, new string[] { "0", "1", "2", "3" }),
+            new AttributeValueSetConstraint(32 /*ovml:dgmlayoutmru*/, true, new string[] { "0", "1", "2", "3" }),
+            new UniqueAttributeValueConstraint(0 /*:id*/, true, null),
+            new AttributeValueSetConstraint(40 /*ovml:spt*/, true, new string[] { "3" })
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
@@ -7388,6 +7524,14 @@ namespace DocumentFormat.OpenXml.Vml
         [Index(52)]
         public StringValue Points { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueSetConstraint(30 /*ovml:dgmlayout*/, true, new string[] { "0", "1", "2", "3" }),
+            new AttributeValueSetConstraint(32 /*ovml:dgmlayoutmru*/, true, new string[] { "0", "1", "2", "3" }),
+            new AttributeValueSetConstraint(40 /*ovml:spt*/, true, new string[] { "0" })
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new CompositeParticle(ParticleType.Group, 1, 1)
@@ -8041,6 +8185,15 @@ namespace DocumentFormat.OpenXml.Vml
         [Index(51)]
         public Base64BinaryValue Gfxdata { get; set; }
 
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueSetConstraint(30 /*ovml:dgmlayout*/, true, new string[] { "0", "1", "2", "3" }),
+            new AttributeValueSetConstraint(32 /*ovml:dgmlayoutmru*/, true, new string[] { "0", "1", "2", "3" }),
+            new UniqueAttributeValueConstraint(0 /*:id*/, true, null),
+            new AttributeValueSetConstraint(40 /*ovml:spt*/, true, new string[] { "1" })
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
             new CompositeParticle(ParticleType.Group, 0, 0)
@@ -8692,6 +8845,15 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "arcsize")]
         [Index(51)]
         public StringValue ArcSize { get; set; }
+
+        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
+            new AttributeValueSetConstraint(29 /*ovml:dgmlayout*/, true, new string[] { "0", "1", "2", "3" }),
+            new AttributeValueSetConstraint(31 /*ovml:dgmlayoutmru*/, true, new string[] { "0", "1", "2", "3" }),
+            new UniqueAttributeValueConstraint(0 /*:id*/, true, null),
+            new AttributeValueSetConstraint(39 /*ovml:spt*/, true, new string[] { "2" })
+        };
+
+        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
