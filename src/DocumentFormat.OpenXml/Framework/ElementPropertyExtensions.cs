@@ -6,5 +6,7 @@ namespace DocumentFormat.OpenXml.Framework
     internal static class ElementPropertyExtensions
     {
         public static ElementPropertyCollection<T> WrapElement<T>(this ReadOnlyArray<ElementProperty<T>> array, OpenXmlElement element) => new ElementPropertyCollection<T>(element, array);
+
+        public static AttributeCollection WrapElement(this ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> array, OpenXmlElement element) => new AttributeCollection(element, array);
     }
 }

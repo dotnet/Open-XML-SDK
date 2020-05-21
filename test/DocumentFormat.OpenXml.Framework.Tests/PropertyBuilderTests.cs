@@ -13,7 +13,6 @@ using Xunit;
 
 namespace DocumentFormat.OpenXml.Framework.Tests
 {
-
     public class PropertyBuilderTests
     {
         [Fact]

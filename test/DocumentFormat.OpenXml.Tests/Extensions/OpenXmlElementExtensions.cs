@@ -109,7 +109,18 @@ namespace DocumentFormat.OpenXml.Tests
         /// </summary>
         /// <param name="e">OpenXmlElement or derived classes that has properties with SchemaAttrAttribute</param>
         /// <returns>IEnumerable<OpenXmlAttribute> for fixed attributes of type of pass-in OpenXmlElement</returns>
-        public static IEnumerable<OpenXmlAttribute> GetFixedAttributes(this OpenXmlElement e) => e?.Attributes;
+        public static IEnumerable<OpenXmlAttribute> GetFixedAttributes(this OpenXmlElement e)
+        {
+            if (e is null)
+            {
+                yield break;
+            }
+
+            foreach (var attribute in e.Attributes)
+            {
+                yield return new OpenXmlAttribute(attribute);
+            }
+        }
 
         /// <summary>
         /// Get XName of pass-in OpenXmlElement.
