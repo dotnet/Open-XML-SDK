@@ -3,6 +3,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Framework.Metadata
 {
@@ -103,6 +104,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             }
         }
 
+        [DebuggerDisplay("{PropertyName,nq}")]
         private class AttributeInfo : ElementProperty<OpenXmlSimpleType>
         {
             public AttributeInfo(byte ns, string name, string propertyName, IOpenXmlSimpleTypeValidator[] validators)
