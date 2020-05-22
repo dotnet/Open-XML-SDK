@@ -134,7 +134,6 @@ namespace DocumentFormat.OpenXml
                 }
 
                 RawOuterXml = outerXml;
-                MakeSureParsed();
             }
         }
 
@@ -450,7 +449,6 @@ namespace DocumentFormat.OpenXml
                 if (!string.IsNullOrEmpty(value))
                 {
                     RawOuterXml = value;
-                    MakeSureParsed();
                 }
                 else
                 {
