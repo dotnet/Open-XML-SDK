@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Validation.Schema;
 
 namespace DocumentFormat.OpenXml.Wordprocessing
@@ -50,9 +51,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// Represents the attribute in schema: w:uri.
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main.
         /// </remark>
-        [SchemaAttr(23, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// Gets or sets the element name.
@@ -61,10 +64,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// Represents the attribute in schema: w:element.
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main.
         /// </remark>
-        [SchemaAttr(23, "element")]
-        [StringValidator(IsNcName = true)]
-        [Index(0)]
-        public StringValue Element { get; set; }
+        public StringValue Element
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// Gets or sets the CustomXmlProperties which represents the element tag in schema: w:customXmlPr.
@@ -73,11 +77,22 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main.
         /// </remark>
         [SchemaAttr(0, "customXmlPr")]
-        [Index(0)]
         public CustomXmlProperties CustomXmlProperties
         {
             get => _constraint.Get<CustomXmlProperties>(this);
             set => _constraint.Set(this, value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+
+            builder.Add<CustomXmlElement>()
+                .AddAttribute(0, "uri", a => a.Uri)
+                .AddAttribute(23, "element", a => a.Element, a =>
+                {
+                    a.AddValidator(new StringValidatorAttribute { IsNcName = true });
+                });
         }
     }
 }
