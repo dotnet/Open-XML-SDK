@@ -9,7 +9,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
     {
         private readonly List<IElementMetadataBuilder> _list = new List<IElementMetadataBuilder>();
 
-        public ElementMetadataBuilder<TElement> Add<TElement>()
+        public ElementMetadataBuilder<TElement> AddElement<TElement>()
             where TElement : OpenXmlElement
         {
             var builder = new ElementMetadataBuilder<TElement>();

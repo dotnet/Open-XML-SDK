@@ -87,7 +87,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
 
-            builder.Add<CustomXmlElement>()
+            builder.AddElement<CustomXmlElement>()
                 .AddAttribute(0, "uri", a => a.Uri)
                 .AddAttribute(23, "element", a => a.Element, a =>
                 {
