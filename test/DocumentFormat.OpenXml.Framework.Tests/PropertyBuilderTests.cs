@@ -45,7 +45,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             var data = builder.Add<SomeElement>()
                 .AddAttribute(0, "s", a => a.Str, a =>
                 {
-                    a.IsRequired();
+                    a.AddValidator(new RequiredValidatorAttribute());
                 })
                 .Build();
 

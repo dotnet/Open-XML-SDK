@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             internal override void ConfigureMetadata(ElementMetadataBuilder builder) => builder.Add<NoValidatorsElement>()
                 .AddAttribute(0, "val", a => a.Val, a =>
                 {
-                    a.IsRequired();
+                    a.AddValidator(new RequiredValidatorAttribute());
                 });
         }
 

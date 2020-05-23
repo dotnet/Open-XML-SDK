@@ -13,7 +13,6 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
         private static IOpenXmlSimpleTypeValidator _defaultValidator = GetDefaultValidator();
 
         private List<IOpenXmlSimpleTypeValidator> _validators;
-        private bool _isRequired;
 
         public AttributeMetadataBuilder(byte nsId, string name, string propertyName)
         {
@@ -21,7 +20,6 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             Name = name;
             PropertyName = propertyName;
             _validators = null;
-            _isRequired = false;
         }
 
         public AttributeMetadataBuilder<TSimpleType> AddUnion(Action<AttributeMetadataBuilder<TSimpleType>> action, FileFormatVersions version = FileFormatVersions.Office2007)
@@ -40,7 +38,14 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                 _validators = new List<IOpenXmlSimpleTypeValidator>();
             }
 
-            _validators.Add(validator);
+            if (validator is RequiredValidatorAttribute)
+            {
+                _validators.Insert(0, validator);
+            }
+            else
+            {
+                _validators.Add(validator);
+            }
 
             return this;
         }
@@ -57,10 +62,8 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             return this;
         }
 
-        public AttributeMetadataBuilder<TSimpleType> IsRequired()
+        public AttributeMetadataBuilder<TSimpleType> MimimumVersion(FileFormatVersions version)
         {
-            _isRequired = true;
-
             return this;
         }
 
@@ -72,11 +75,6 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         ElementProperty<OpenXmlSimpleType> IAttributeMetadataBuilder.Build()
         {
-            if (_isRequired)
-            {
-                InsertValidator(0, new RequiredValidatorAttribute());
-            }
-
             AddValidator(_defaultValidator);
 
             return new AttributeInfo(Namespace, Name, PropertyName, _validators?.ToArray() ?? Cached.Array<IOpenXmlSimpleTypeValidator>());
