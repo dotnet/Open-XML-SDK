@@ -12,14 +12,14 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
     {
         private static IOpenXmlSimpleTypeValidator _defaultValidator = GetDefaultValidator();
 
-        private List<IOpenXmlSimpleTypeValidator> _validators;
+        private readonly List<IOpenXmlSimpleTypeValidator> _validators;
 
         public AttributeMetadataBuilder(byte nsId, string name, string propertyName)
         {
             Namespace = nsId;
             Name = name;
             PropertyName = propertyName;
-            _validators = null;
+            _validators = new List<IOpenXmlSimpleTypeValidator>();
         }
 
         public AttributeMetadataBuilder<TSimpleType> AddUnion(Action<AttributeMetadataBuilder<TSimpleType>> action, FileFormatVersions version = FileFormatVersions.Office2007)
@@ -33,11 +33,6 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public AttributeMetadataBuilder<TSimpleType> AddValidator(IOpenXmlSimpleTypeValidator validator, FileFormatVersions version = FileFormatVersions.Office2007)
         {
-            if (_validators is null)
-            {
-                _validators = new List<IOpenXmlSimpleTypeValidator>();
-            }
-
             if (validator is RequiredValidatorAttribute)
             {
                 _validators.Insert(0, validator);
@@ -52,11 +47,6 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public AttributeMetadataBuilder<TSimpleType> InsertValidator(int index, IOpenXmlSimpleTypeValidator validator, FileFormatVersions version = FileFormatVersions.Office2007)
         {
-            if (_validators is null)
-            {
-                _validators = new List<IOpenXmlSimpleTypeValidator>();
-            }
-
             _validators.Insert(index, validator);
 
             return this;
@@ -88,7 +78,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             {
                 return StringValidatorAttribute.Instance;
             }
-            else if (instance is OnOffValue || instance is TrueFalseBlankValue || instance.IsEnum)
+            else if (instance.IsEnum || instance is OnOffValue || instance is TrueFalseBlankValue)
             {
                 return EnumValidatorAttribute.Instance;
             }
