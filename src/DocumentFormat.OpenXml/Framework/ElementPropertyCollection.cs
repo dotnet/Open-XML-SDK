@@ -14,12 +14,9 @@ namespace DocumentFormat.OpenXml.Framework
 
         public static ReadOnlyArray<ElementProperty<OpenXmlElement>> GetElements(Func<Type, Func<OpenXmlElement>> activatorFactory, Func<Type, SchemaAttrAttribute> elementSchemaFactory, Type type)
         {
-            SchemaIndex GetSchema(PropertyInfo property)
+            SchemaAttrAttribute GetSchema(PropertyInfo property)
             {
-                var index = property.GetCustomAttribute<IndexAttribute>();
-                var schema = elementSchemaFactory(property.PropertyType);
-
-                return new SchemaIndex(schema, index);
+                return elementSchemaFactory(property.PropertyType);
             }
 
             return GetProperties(activatorFactory, type, GetSchema);
@@ -73,7 +70,7 @@ namespace DocumentFormat.OpenXml.Framework
             return array;
         }
 
-        private static ReadOnlyArray<ElementProperty<OpenXmlElement>> GetProperties(Func<Type, Func<OpenXmlElement>> activator, Type type, Func<PropertyInfo, SchemaIndex> getSchema)
+        private static ReadOnlyArray<ElementProperty<OpenXmlElement>> GetProperties(Func<Type, Func<OpenXmlElement>> activator, Type type, Func<PropertyInfo, SchemaAttrAttribute> getSchema)
         {
             return type.GetRuntimeProperties()
                 .Where(property => typeof(OpenXmlElement).GetTypeInfo().IsAssignableFrom(property.PropertyType.GetTypeInfo()))
@@ -81,7 +78,7 @@ namespace DocumentFormat.OpenXml.Framework
                 {
                     var schema = getSchema(property);
 
-                    if (!schema.IsValid)
+                    if (schema is null)
                     {
                         return null;
                     }
@@ -89,12 +86,10 @@ namespace DocumentFormat.OpenXml.Framework
                     return ElementProperty<OpenXmlElement>.Create(
                         schema.NamespaceId,
                         schema.Tag,
-                        schema.Index,
                         new ValidatorCollection(property),
                         new ElementPropertyAccessor<OpenXmlElement>(activator, property));
                 })
                 .Where(tag => tag != null)
-                .OrderBy(tag => tag.Order)
                 .ToArray();
         }
 

@@ -11,18 +11,15 @@ namespace DocumentFormat.OpenXml.Framework
         public static ElementProperty<T> Create(
             byte namespaceId,
             string name,
-            int order,
             ValidatorCollection validators,
             ElementPropertyAccessor<T> accessor)
         {
-            return new AccessorElementProperty(namespaceId, name, order, validators, accessor);
+            return new AccessorElementProperty(namespaceId, name, validators, accessor);
         }
 
         public XmlQualifiedName TypeName => Validators.GetSimpleTypeQualifiedName(Type);
 
         public virtual string PropertyName { get; }
-
-        public abstract int Order { get; }
 
         public abstract string Name { get; }
 
@@ -51,19 +48,15 @@ namespace DocumentFormat.OpenXml.Framework
             public AccessorElementProperty(
                 byte namespaceId,
                 string name,
-                int order,
                 ValidatorCollection validators,
                 ElementPropertyAccessor<T> accessor)
             {
                 _accessor = accessor;
 
-                Order = order;
                 Name = name;
                 NamespaceId = namespaceId;
                 Validators = validators;
             }
-
-            public override int Order { get; }
 
             public override string Name { get; }
 

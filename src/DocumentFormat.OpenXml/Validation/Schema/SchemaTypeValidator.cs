@@ -185,10 +185,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             ValidateEmptyComplexType(validationContext);
 
             var element = (OpenXmlLeafTextElement)validationContext.Stack.Current.Element;
-            var value = element.InnerTextToValue(element.Text);
-            var state = ElementProperty<OpenXmlSimpleType>.Create(element.NamespaceId, element.LocalName, 0, element.ElementData.Info.Validators, new ElementPropertyAccessor<OpenXmlSimpleType>(_ => value, (_, __) => throw new NotImplementedException(), value.GetType()));
+            var state = new LeafAccessor(element);
 
-            SchemaTypeValidator.ValidateValue(validationContext, element.ElementData.Info.Validators, value, state, false);
+            SchemaTypeValidator.ValidateValue(validationContext, element.ElementData.Info.Validators, state.Value, state, false);
         }
 
         /// <summary>
@@ -215,6 +214,36 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     Debug.Assert(false);
                     break;
             }
+        }
+
+        [DebuggerDisplay("{PropertyName,nq}")]
+        private class LeafAccessor : ElementProperty<OpenXmlSimpleType>
+        {
+            private readonly OpenXmlLeafTextElement _element;
+
+            public LeafAccessor(OpenXmlLeafTextElement element)
+            {
+                _element = element;
+                Value = element.InnerTextToValue(element.Text);
+            }
+
+            public OpenXmlSimpleType Value { get; }
+
+            public override string PropertyName => "Value";
+
+            public override string Name => _element.LocalName;
+
+            public override byte NamespaceId => _element.NamespaceId;
+
+            public override ValidatorCollection Validators => _element.ElementData.Info.Validators;
+
+            public override Type Type => Value.GetType();
+
+            public override OpenXmlSimpleType CreateNew() => throw new NotImplementedException();
+
+            public override OpenXmlSimpleType GetValue(OpenXmlElement element) => Value;
+
+            public override void SetValue(OpenXmlElement element, OpenXmlSimpleType value) => throw new NotImplementedException();
         }
     }
 }
