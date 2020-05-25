@@ -4,6 +4,7 @@
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
@@ -76,6 +77,8 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
         public LockedCanvas(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LockedCanvas>();
 
         /// <summary>
         /// <para>Non-Visual Properties for a Group Shape.</para>

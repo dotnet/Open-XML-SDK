@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
 using DocumentFormat.OpenXml.Validation.Schema;
@@ -110,6 +111,8 @@ namespace DocumentFormat.OpenXml.Office.Excel
         public Macrosheet(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Macrosheet>();
 
         /// <summary>
         /// <para>Sheet Properties.</para>
@@ -280,6 +283,8 @@ namespace DocumentFormat.OpenXml.Office.Excel
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WorksheetSortMap>();
+
         /// <summary>
         /// <para>Row Sort Map.</para>
         /// <para>Represents the following element tag in the schema: xne:rowSortMap.</para>
@@ -379,6 +384,8 @@ namespace DocumentFormat.OpenXml.Office.Excel
             return new ListValue<StringValue> { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ReferenceSequence>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ReferenceSequence>(deep);
     }
@@ -411,6 +418,8 @@ namespace DocumentFormat.OpenXml.Office.Excel
         {
             return new StringValue { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Formula>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Formula>(deep);
@@ -467,19 +476,28 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "ref")]
-        [Index(0)]
-        public StringValue Ref { get; set; }
+        public StringValue Ref { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [NumberValidator(MaxInclusive = 536870910L)]
-        [SchemaAttr(0, "count")]
-        [Index(1)]
-        public UInt32Value Count { get; set; }
+        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RowSortMap>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RowSortMap>()
+                           .AddAttribute(0, "ref", a => a.Ref, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "count", a => a.Count, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (536870910L) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -543,19 +561,28 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "ref")]
-        [Index(0)]
-        public StringValue Ref { get; set; }
+        public StringValue Ref { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [NumberValidator(MaxInclusive = 536870910L)]
-        [SchemaAttr(0, "count")]
-        [Index(1)]
-        public UInt32Value Count { get; set; }
+        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColumnSortMap>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ColumnSortMap>()
+                           .AddAttribute(0, "ref", a => a.Ref, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "count", a => a.Count, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (536870910L) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -584,6 +611,8 @@ namespace DocumentFormat.OpenXml.Office.Excel
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RowSortMapItem>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowSortMapItem>(deep);
     }
@@ -603,6 +632,8 @@ namespace DocumentFormat.OpenXml.Office.Excel
         public ColumnSortMapItem() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColumnSortMapItem>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnSortMapItem>(deep);
@@ -626,18 +657,26 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <para>New Value</para>
         /// <para>Represents the following attribute in the schema: newVal</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "newVal")]
-        [Index(0)]
-        public UInt32Value NewVal { get; set; }
+        public UInt32Value NewVal { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Old Value</para>
         /// <para>Represents the following attribute in the schema: oldVal</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "oldVal")]
-        [Index(1)]
-        public UInt32Value OldVal { get; set; }
+        public UInt32Value OldVal { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SortMapItemType>()
+                           .AddAttribute(0, "newVal", a => a.NewVal, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "oldVal", a => a.OldVal, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
     }
 }

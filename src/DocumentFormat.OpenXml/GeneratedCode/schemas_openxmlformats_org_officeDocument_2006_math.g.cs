@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Wordprocessing;
@@ -35,10 +36,18 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Math.ScriptValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Math.ScriptValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.ScriptValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Script>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Script>()
+                           .AddAttribute(21, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Script>(deep);
@@ -67,10 +76,18 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Math.StyleValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Math.StyleValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.StyleValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Style>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Style>()
+                           .AddAttribute(21, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Style>(deep);
@@ -190,6 +207,8 @@ namespace DocumentFormat.OpenXml.Math
         public Run(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Run>();
 
         /// <summary>
         /// <para>Run Properties.</para>
@@ -326,6 +345,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Accent>();
+
         /// <summary>
         /// <para>Accent Properties.</para>
         /// <para>Represents the following element tag in the schema: m:accPr.</para>
@@ -412,6 +433,8 @@ namespace DocumentFormat.OpenXml.Math
         public Bar(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Bar>();
 
         /// <summary>
         /// <para>Bar Properties.</para>
@@ -500,6 +523,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Box>();
+
         /// <summary>
         /// <para>Box Properties.</para>
         /// <para>Represents the following element tag in the schema: m:boxPr.</para>
@@ -586,6 +611,8 @@ namespace DocumentFormat.OpenXml.Math
         public BorderBox(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BorderBox>();
 
         /// <summary>
         /// <para>Border Box Properties.</para>
@@ -674,6 +701,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Delimiter>();
+
         /// <summary>
         /// <para>Delimiter Properties.</para>
         /// <para>Represents the following element tag in the schema: m:dPr.</para>
@@ -747,6 +776,8 @@ namespace DocumentFormat.OpenXml.Math
         public EquationArray(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EquationArray>();
 
         /// <summary>
         /// <para>Equation Array Properties.</para>
@@ -823,6 +854,8 @@ namespace DocumentFormat.OpenXml.Math
         public Fraction(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Fraction>();
 
         /// <summary>
         /// <para>Fraction Properties.</para>
@@ -927,6 +960,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MathFunction>();
+
         /// <summary>
         /// <para>Function Properties.</para>
         /// <para>Represents the following element tag in the schema: m:funcPr.</para>
@@ -1028,6 +1063,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GroupChar>();
+
         /// <summary>
         /// <para>Group-Character Properties.</para>
         /// <para>Represents the following element tag in the schema: m:groupChrPr.</para>
@@ -1116,6 +1153,8 @@ namespace DocumentFormat.OpenXml.Math
         public LimitLower(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LimitLower>();
 
         /// <summary>
         /// <para>Lower Limit Properties.</para>
@@ -1220,6 +1259,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LimitUpper>();
+
         /// <summary>
         /// <para>Upper Limit Properties.</para>
         /// <para>Represents the following element tag in the schema: m:limUppPr.</para>
@@ -1321,6 +1362,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Matrix>();
+
         /// <summary>
         /// <para>Matrix Properties.</para>
         /// <para>Represents the following element tag in the schema: m:mPr.</para>
@@ -1398,6 +1441,8 @@ namespace DocumentFormat.OpenXml.Math
         public Nary(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Nary>();
 
         /// <summary>
         /// <para>n-ary Properties.</para>
@@ -1514,6 +1559,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Phantom>();
+
         /// <summary>
         /// <para>Phantom Properties.</para>
         /// <para>Represents the following element tag in the schema: m:phantPr.</para>
@@ -1602,6 +1649,8 @@ namespace DocumentFormat.OpenXml.Math
         public Radical(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Radical>();
 
         /// <summary>
         /// <para>Radical Properties.</para>
@@ -1707,6 +1756,8 @@ namespace DocumentFormat.OpenXml.Math
         public PreSubSuper(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PreSubSuper>();
 
         /// <summary>
         /// <para>Pre-Sub-Superscript Properties.</para>
@@ -1825,6 +1876,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Subscript>();
+
         /// <summary>
         /// <para>Subscript Properties.</para>
         /// <para>Represents the following element tag in the schema: m:sSubPr.</para>
@@ -1929,6 +1982,8 @@ namespace DocumentFormat.OpenXml.Math
         public SubSuperscript(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SubSuperscript>();
 
         /// <summary>
         /// <para>Sub-Superscript Properties.</para>
@@ -2046,6 +2101,8 @@ namespace DocumentFormat.OpenXml.Math
         public Superscript(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Superscript>();
 
         /// <summary>
         /// <para>Superscript Properties.</para>
@@ -2211,6 +2268,8 @@ namespace DocumentFormat.OpenXml.Math
         public Paragraph(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Paragraph>();
 
         /// <summary>
         /// <para>Office Math Paragraph Properties.</para>
@@ -2483,6 +2542,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OfficeMath>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 0)
@@ -2742,6 +2803,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MathProperties>();
+
         /// <summary>
         /// <para>Math Font.</para>
         /// <para>Represents the following element tag in the schema: m:mathFont.</para>
@@ -2943,6 +3006,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Literal>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Literal>(deep);
     }
@@ -2962,6 +3027,8 @@ namespace DocumentFormat.OpenXml.Math
         public NormalText() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NormalText>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NormalText>(deep);
@@ -2983,6 +3050,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Alignment>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Alignment>(deep);
     }
@@ -3002,6 +3071,8 @@ namespace DocumentFormat.OpenXml.Math
         public OperatorEmulator() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OperatorEmulator>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OperatorEmulator>(deep);
@@ -3023,6 +3094,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoBreak>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoBreak>(deep);
     }
@@ -3042,6 +3115,8 @@ namespace DocumentFormat.OpenXml.Math
         public Differential() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Differential>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Differential>(deep);
@@ -3063,6 +3138,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HideTop>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HideTop>(deep);
     }
@@ -3082,6 +3159,8 @@ namespace DocumentFormat.OpenXml.Math
         public HideBottom() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HideBottom>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HideBottom>(deep);
@@ -3103,6 +3182,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HideLeft>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HideLeft>(deep);
     }
@@ -3122,6 +3203,8 @@ namespace DocumentFormat.OpenXml.Math
         public HideRight() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HideRight>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HideRight>(deep);
@@ -3143,6 +3226,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StrikeHorizontal>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StrikeHorizontal>(deep);
     }
@@ -3162,6 +3247,8 @@ namespace DocumentFormat.OpenXml.Math
         public StrikeVertical() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StrikeVertical>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StrikeVertical>(deep);
@@ -3183,6 +3270,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StrikeBottomLeftToTopRight>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StrikeBottomLeftToTopRight>(deep);
     }
@@ -3202,6 +3291,8 @@ namespace DocumentFormat.OpenXml.Math
         public StrikeTopLeftToBottomRight() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StrikeTopLeftToBottomRight>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StrikeTopLeftToBottomRight>(deep);
@@ -3223,6 +3314,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GrowOperators>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GrowOperators>(deep);
     }
@@ -3242,6 +3335,8 @@ namespace DocumentFormat.OpenXml.Math
         public MaxDistribution() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MaxDistribution>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MaxDistribution>(deep);
@@ -3263,6 +3358,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ObjectDistribution>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ObjectDistribution>(deep);
     }
@@ -3282,6 +3379,8 @@ namespace DocumentFormat.OpenXml.Math
         public HidePlaceholder() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HidePlaceholder>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HidePlaceholder>(deep);
@@ -3303,6 +3402,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HideSubArgument>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HideSubArgument>(deep);
     }
@@ -3322,6 +3423,8 @@ namespace DocumentFormat.OpenXml.Math
         public HideSuperArgument() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HideSuperArgument>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HideSuperArgument>(deep);
@@ -3343,6 +3446,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowPhantom>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowPhantom>(deep);
     }
@@ -3362,6 +3467,8 @@ namespace DocumentFormat.OpenXml.Math
         public ZeroWidth() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ZeroWidth>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ZeroWidth>(deep);
@@ -3383,6 +3490,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ZeroAscent>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ZeroAscent>(deep);
     }
@@ -3402,6 +3511,8 @@ namespace DocumentFormat.OpenXml.Math
         public ZeroDescent() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ZeroDescent>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ZeroDescent>(deep);
@@ -3423,6 +3534,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Transparent>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Transparent>(deep);
     }
@@ -3442,6 +3555,8 @@ namespace DocumentFormat.OpenXml.Math
         public HideDegree() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HideDegree>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HideDegree>(deep);
@@ -3463,6 +3578,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AlignScripts>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AlignScripts>(deep);
     }
@@ -3482,6 +3599,8 @@ namespace DocumentFormat.OpenXml.Math
         public SmallFraction() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SmallFraction>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SmallFraction>(deep);
@@ -3503,6 +3622,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DisplayDefaults>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DisplayDefaults>(deep);
     }
@@ -3522,6 +3643,8 @@ namespace DocumentFormat.OpenXml.Math
         public WrapRight() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WrapRight>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WrapRight>(deep);
@@ -3548,9 +3671,14 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Math.BooleanValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Math.BooleanValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.BooleanValues>>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<OnOffType>()
+                           .AddAttribute(21, "val", a => a.Val);
+        }
     }
 
     /// <summary>
@@ -3576,10 +3704,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [NumberValidator(MinInclusive = 1L, MaxInclusive = 255L)]
-        [SchemaAttr(21, "alnAt")]
-        [Index(0)]
-        public IntegerValue AlignAt { get; set; }
+        public IntegerValue AlignAt { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Index of Operator to Align To</para>
@@ -3588,10 +3713,22 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [NumberValidator(MinInclusive = 1L, MaxInclusive = 255L)]
-        [SchemaAttr(21, "val")]
-        [Index(1)]
-        public IntegerValue Val { get; set; }
+        public IntegerValue Val { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Break>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Break>()
+                           .AddAttribute(21, "alnAt", a => a.AlignAt, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (255L) });
+                           })
+                           .AddAttribute(21, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (255L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Break>(deep);
@@ -3653,6 +3790,8 @@ namespace DocumentFormat.OpenXml.Math
         public RunProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RunProperties>();
 
         /// <summary>
         /// <para>Literal.</para>
@@ -3731,9 +3870,15 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [SchemaAttr(1, "space")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues> Space { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues> Space { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Text>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Text>()
+                           .AddAttribute(1, "space", a => a.Space);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Text>(deep);
@@ -3755,6 +3900,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AccentChar>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AccentChar>(deep);
     }
@@ -3774,6 +3921,8 @@ namespace DocumentFormat.OpenXml.Math
         public BeginChar() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BeginChar>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BeginChar>(deep);
@@ -3795,6 +3944,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SeparatorChar>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SeparatorChar>(deep);
     }
@@ -3814,6 +3965,8 @@ namespace DocumentFormat.OpenXml.Math
         public EndChar() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EndChar>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndChar>(deep);
@@ -3840,11 +3993,18 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 1L)]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<CharType>()
+                           .AddAttribute(21, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (1L) });
+                           });
+        }
     }
 
     /// <summary>
@@ -3901,6 +4061,8 @@ namespace DocumentFormat.OpenXml.Math
         public ControlProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ControlProperties>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -3989,6 +4151,8 @@ namespace DocumentFormat.OpenXml.Math
         public AccentProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AccentProperties>();
 
         /// <summary>
         /// <para>Accent Character.</para>
@@ -4130,6 +4294,8 @@ namespace DocumentFormat.OpenXml.Math
         public Base(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Base>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -4418,6 +4584,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Numerator>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ArgumentProperties), 0, 1),
@@ -4704,6 +4872,8 @@ namespace DocumentFormat.OpenXml.Math
         public Denominator(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Denominator>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -4992,6 +5162,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FunctionName>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ArgumentProperties), 0, 1),
@@ -5278,6 +5450,8 @@ namespace DocumentFormat.OpenXml.Math
         public Limit(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Limit>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -5566,6 +5740,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SubArgument>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ArgumentProperties), 0, 1),
@@ -5853,6 +6029,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SuperArgument>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ArgumentProperties), 0, 1),
@@ -6139,6 +6317,8 @@ namespace DocumentFormat.OpenXml.Math
         public Degree(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Degree>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -6513,6 +6693,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Position>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Position>(deep);
     }
@@ -6532,6 +6714,8 @@ namespace DocumentFormat.OpenXml.Math
         public VerticalJustification() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VerticalJustification>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VerticalJustification>(deep);
@@ -6558,10 +6742,17 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues>>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TopBottomType>()
+                           .AddAttribute(21, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
     }
 
     /// <summary>
@@ -6612,6 +6803,8 @@ namespace DocumentFormat.OpenXml.Math
         public BarProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BarProperties>();
 
         /// <summary>
         /// <para>Position (Bar).</para>
@@ -6707,6 +6900,8 @@ namespace DocumentFormat.OpenXml.Math
         public BoxProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BoxProperties>();
 
         /// <summary>
         /// <para>Operator Emulator.</para>
@@ -6864,6 +7059,8 @@ namespace DocumentFormat.OpenXml.Math
         public BorderBoxProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BorderBoxProperties>();
 
         /// <summary>
         /// <para>Hide Top Edge.</para>
@@ -7024,10 +7221,18 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Shape>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Shape>()
+                           .AddAttribute(21, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shape>(deep);
@@ -7089,6 +7294,8 @@ namespace DocumentFormat.OpenXml.Math
         public DelimiterProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DelimiterProperties>();
 
         /// <summary>
         /// <para>Delimiter Beginning Character.</para>
@@ -7207,10 +7414,18 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BaseJustification>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BaseJustification>()
+                           .AddAttribute(21, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BaseJustification>(deep);
@@ -7232,6 +7447,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RowSpacingRule>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowSpacingRule>(deep);
     }
@@ -7251,6 +7468,8 @@ namespace DocumentFormat.OpenXml.Math
         public ColumnGapRule() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColumnGapRule>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnGapRule>(deep);
@@ -7277,11 +7496,18 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 4L)]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public IntegerValue Val { get; set; }
+        public IntegerValue Val { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SpacingRuleType>()
+                           .AddAttribute(21, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (4L) });
+                           });
+        }
     }
 
     /// <summary>
@@ -7299,6 +7525,8 @@ namespace DocumentFormat.OpenXml.Math
         public RowSpacing() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RowSpacing>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowSpacing>(deep);
@@ -7319,6 +7547,8 @@ namespace DocumentFormat.OpenXml.Math
         public ColumnGap() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColumnGap>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnGap>(deep);
@@ -7345,10 +7575,17 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public UInt16Value Val { get; set; }
+        public UInt16Value Val { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<UnsignedShortType>()
+                           .AddAttribute(21, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
     }
 
     /// <summary>
@@ -7407,6 +7644,8 @@ namespace DocumentFormat.OpenXml.Math
         public EquationArrayProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EquationArrayProperties>();
 
         /// <summary>
         /// <para>Equation Array Base Justification.</para>
@@ -7525,10 +7764,18 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FractionType>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<FractionType>()
+                           .AddAttribute(21, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FractionType>(deep);
@@ -7582,6 +7829,8 @@ namespace DocumentFormat.OpenXml.Math
         public FractionProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FractionProperties>();
 
         /// <summary>
         /// <para>Fraction type.</para>
@@ -7668,6 +7917,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FunctionProperties>();
+
         /// <summary>
         /// <para>ControlProperties.</para>
         /// <para>Represents the following element tag in the schema: m:ctrlPr.</para>
@@ -7744,6 +7995,8 @@ namespace DocumentFormat.OpenXml.Math
         public GroupCharProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GroupCharProperties>();
 
         /// <summary>
         /// <para>Group Character (Grouping Character).</para>
@@ -7858,6 +8111,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LimitLowerProperties>();
+
         /// <summary>
         /// <para>ControlProperties.</para>
         /// <para>Represents the following element tag in the schema: m:ctrlPr.</para>
@@ -7929,6 +8184,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LimitUpperProperties>();
+
         /// <summary>
         /// <para>ControlProperties.</para>
         /// <para>Represents the following element tag in the schema: m:ctrlPr.</para>
@@ -7976,11 +8233,19 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 1L, MaxInclusive = 64L)]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public IntegerValue Val { get; set; }
+        public IntegerValue Val { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MatrixColumnCount>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<MatrixColumnCount>()
+                           .AddAttribute(21, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (64L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MatrixColumnCount>(deep);
@@ -8009,10 +8274,18 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MatrixColumnJustification>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<MatrixColumnJustification>()
+                           .AddAttribute(21, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MatrixColumnJustification>(deep);
@@ -8066,6 +8339,8 @@ namespace DocumentFormat.OpenXml.Math
         public MatrixColumnProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MatrixColumnProperties>();
 
         /// <summary>
         /// <para>Matrix Column Count.</para>
@@ -8152,6 +8427,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MatrixColumn>();
+
         /// <summary>
         /// <para>Matrix Column Properties.</para>
         /// <para>Represents the following element tag in the schema: m:mcPr.</para>
@@ -8192,6 +8469,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColumnSpacing>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnSpacing>(deep);
     }
@@ -8211,6 +8490,8 @@ namespace DocumentFormat.OpenXml.Math
         public LeftMargin() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LeftMargin>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LeftMargin>(deep);
@@ -8232,6 +8513,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RightMargin>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RightMargin>(deep);
     }
@@ -8251,6 +8534,8 @@ namespace DocumentFormat.OpenXml.Math
         public PreSpacing() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PreSpacing>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PreSpacing>(deep);
@@ -8272,6 +8557,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PostSpacing>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PostSpacing>(deep);
     }
@@ -8291,6 +8578,8 @@ namespace DocumentFormat.OpenXml.Math
         public InterSpacing() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<InterSpacing>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<InterSpacing>(deep);
@@ -8312,6 +8601,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<IntraSpacing>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<IntraSpacing>(deep);
     }
@@ -8331,6 +8622,8 @@ namespace DocumentFormat.OpenXml.Math
         public WrapIndent() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WrapIndent>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WrapIndent>(deep);
@@ -8357,11 +8650,18 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MaxInclusive = 31680L)]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public UInt32Value Val { get; set; }
+        public UInt32Value Val { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TwipsMeasureType>()
+                           .AddAttribute(21, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (31680L) });
+                           });
+        }
     }
 
     /// <summary>
@@ -8410,6 +8710,8 @@ namespace DocumentFormat.OpenXml.Math
         public MatrixColumns(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MatrixColumns>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -8484,6 +8786,8 @@ namespace DocumentFormat.OpenXml.Math
         public MatrixProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MatrixProperties>();
 
         /// <summary>
         /// <para>Matrix Base Justification.</para>
@@ -8668,6 +8972,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MatrixRow>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 64)
@@ -8695,6 +9001,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LimitLocation>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LimitLocation>(deep);
     }
@@ -8715,6 +9023,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<IntegralLimitLocation>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<IntegralLimitLocation>(deep);
     }
@@ -8734,6 +9044,8 @@ namespace DocumentFormat.OpenXml.Math
         public NaryLimitLocation() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NaryLimitLocation>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NaryLimitLocation>(deep);
@@ -8760,10 +9072,17 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues>>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<LimitLocationType>()
+                           .AddAttribute(21, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
     }
 
     /// <summary>
@@ -8822,6 +9141,8 @@ namespace DocumentFormat.OpenXml.Math
         public NaryProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NaryProperties>();
 
         /// <summary>
         /// <para>n-ary Operator Character.</para>
@@ -8974,6 +9295,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PhantomProperties>();
+
         /// <summary>
         /// <para>Phantom Show.</para>
         /// <para>Represents the following element tag in the schema: m:show.</para>
@@ -9117,6 +9440,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RadicalProperties>();
+
         /// <summary>
         /// <para>Hide Degree.</para>
         /// <para>Represents the following element tag in the schema: m:degHide.</para>
@@ -9202,6 +9527,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PreSubSuperProperties>();
+
         /// <summary>
         /// <para>ControlProperties.</para>
         /// <para>Represents the following element tag in the schema: m:ctrlPr.</para>
@@ -9272,6 +9599,8 @@ namespace DocumentFormat.OpenXml.Math
         public SubscriptProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SubscriptProperties>();
 
         /// <summary>
         /// <para>ControlProperties.</para>
@@ -9345,6 +9674,8 @@ namespace DocumentFormat.OpenXml.Math
         public SubSuperscriptProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SubSuperscriptProperties>();
 
         /// <summary>
         /// <para>Align Scripts.</para>
@@ -9431,6 +9762,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SuperscriptProperties>();
+
         /// <summary>
         /// <para>ControlProperties.</para>
         /// <para>Represents the following element tag in the schema: m:ctrlPr.</para>
@@ -9478,11 +9811,19 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = -2L, MaxInclusive = 2L)]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public IntegerValue Val { get; set; }
+        public IntegerValue Val { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArgumentSize>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ArgumentSize>()
+                           .AddAttribute(21, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-2L), MaxInclusive = (2L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArgumentSize>(deep);
@@ -9535,6 +9876,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArgumentProperties>();
+
         /// <summary>
         /// <para>Argument Size.</para>
         /// <para>Represents the following element tag in the schema: m:argSz.</para>
@@ -9575,6 +9918,8 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Justification>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Justification>(deep);
     }
@@ -9594,6 +9939,8 @@ namespace DocumentFormat.OpenXml.Math
         public DefaultJustification() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DefaultJustification>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultJustification>(deep);
@@ -9620,10 +9967,17 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Math.JustificationValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Math.JustificationValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.JustificationValues>>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<OfficeMathJustificationType>()
+                           .AddAttribute(21, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
     }
 
     /// <summary>
@@ -9649,11 +10003,19 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 31L)]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MathFont>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<MathFont>()
+                           .AddAttribute(21, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (31L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MathFont>(deep);
@@ -9682,9 +10044,15 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BreakBinary>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BreakBinary>()
+                           .AddAttribute(21, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BreakBinary>(deep);
@@ -9713,11 +10081,19 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator(Version = FileFormatVersions.Office2007)]
-        [RequiredValidator(IsRequired = false, InitialVersion = FileFormatVersions.Office2010)]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BreakBinarySubtraction>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BreakBinarySubtraction>()
+                           .AddAttribute(21, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddValidator(new RequiredValidatorAttribute() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BreakBinarySubtraction>(deep);
@@ -9769,6 +10145,8 @@ namespace DocumentFormat.OpenXml.Math
         public ParagraphProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ParagraphProperties>();
 
         /// <summary>
         /// <para>Justification.</para>

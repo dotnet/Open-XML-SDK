@@ -4,6 +4,7 @@
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
@@ -67,43 +68,49 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Diagram
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public UInt32Value Id { get; set; }
+        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "name")]
-        [Index(1)]
-        public StringValue Name { get; set; }
+        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>descr</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
-        [SchemaAttr(0, "descr")]
-        [Index(2)]
-        public StringValue Description { get; set; }
+        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>hidden</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        [SchemaAttr(0, "hidden")]
-        [Index(3)]
-        public BooleanValue Hidden { get; set; }
+        public BooleanValue Hidden { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr(0, "title")]
-        [Index(4)]
-        public StringValue Title { get; set; }
+        public StringValue Title { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualDrawingProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<NonVisualDrawingProperties>()
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "descr", a => a.Description)
+                           .AddAttribute(0, "hidden", a => a.Hidden)
+                           .AddAttribute(0, "title", a => a.Title);
+        }
 
         /// <summary>
         /// <para>HyperlinkOnClick.</para>
@@ -177,9 +184,15 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Diagram
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public BooleanValue Val { get; set; }
+        public BooleanValue Val { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RecolorImages>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RecolorImages>()
+                           .AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RecolorImages>(deep);

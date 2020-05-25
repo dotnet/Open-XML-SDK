@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
@@ -67,6 +68,8 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         public CoverPageProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CoverPageProperties>();
 
         /// <summary>
         /// <para>PublishDate.</para>
@@ -191,6 +194,8 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
             return new StringValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PublishDate>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PublishDate>(deep);
     }
@@ -223,6 +228,8 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         {
             return new StringValue { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocumentAbstract>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocumentAbstract>(deep);
@@ -257,6 +264,8 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
             return new StringValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CompanyAddress>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CompanyAddress>(deep);
     }
@@ -289,6 +298,8 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         {
             return new StringValue { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CompanyPhoneNumber>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CompanyPhoneNumber>(deep);
@@ -323,6 +334,8 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
             return new StringValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CompanyFaxNumber>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CompanyFaxNumber>(deep);
     }
@@ -355,6 +368,8 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         {
             return new StringValue { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CompanyEmailAddress>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CompanyEmailAddress>(deep);

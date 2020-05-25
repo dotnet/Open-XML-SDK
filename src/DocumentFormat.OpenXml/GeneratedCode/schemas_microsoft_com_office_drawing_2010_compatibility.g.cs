@@ -4,6 +4,7 @@
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
@@ -32,11 +33,19 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.LegacyCompatibility
         /// <para>spid, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: spid</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "spid")]
-        [Index(0)]
-        public StringValue ShapeId { get; set; }
+        public StringValue ShapeId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CompatibilityShape>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<CompatibilityShape>()
+                           .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CompatibilityShape>(deep);

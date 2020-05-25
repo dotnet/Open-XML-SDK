@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
@@ -75,10 +76,18 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>documentID</para>
         /// <para>Represents the following attribute in the schema: documentID</para>
         /// </summary>
-        [StringValidator(IsUri = true)]
-        [SchemaAttr(0, "documentID")]
-        [Index(0)]
-        public StringValue DocumentId { get; set; }
+        public StringValue DocumentId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Ink>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Ink>()
+                           .AddAttribute(0, "documentID", a => a.DocumentId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
         {
@@ -117,33 +126,36 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>source</para>
         /// <para>Represents the following attribute in the schema: source</para>
         /// </summary>
-        [SchemaAttr(0, "source")]
-        [Index(0)]
-        public StringValue Source { get; set; }
+        public StringValue Source { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>target</para>
         /// <para>Represents the following attribute in the schema: target</para>
         /// </summary>
-        [SchemaAttr(0, "target")]
-        [Index(1)]
-        public StringValue Target { get; set; }
+        public StringValue Target { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>column</para>
         /// <para>Represents the following attribute in the schema: column</para>
         /// </summary>
-        [SchemaAttr(0, "column")]
-        [Index(2)]
-        public StringValue Column { get; set; }
+        public StringValue Column { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>variable</para>
         /// <para>Represents the following attribute in the schema: variable</para>
         /// </summary>
-        [SchemaAttr(0, "variable")]
-        [Index(3)]
-        public StringValue Variable { get; set; }
+        public StringValue Variable { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Bind>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Bind>()
+                           .AddAttribute(0, "source", a => a.Source)
+                           .AddAttribute(0, "target", a => a.Target)
+                           .AddAttribute(0, "column", a => a.Column)
+                           .AddAttribute(0, "variable", a => a.Variable);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Bind>(deep);
@@ -185,25 +197,29 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [SchemaAttr(1, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>apply</para>
         /// <para>Represents the following attribute in the schema: apply</para>
         /// </summary>
-        [SchemaAttr(0, "apply")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.InkML.TableApplyValues> Apply { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.InkML.TableApplyValues> Apply { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.TableApplyValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>interpolation</para>
         /// <para>Represents the following attribute in the schema: interpolation</para>
         /// </summary>
-        [SchemaAttr(0, "interpolation")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.InkML.TableInterpolationValues> Interpolation { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.InkML.TableInterpolationValues> Interpolation { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.TableInterpolationValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Table>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Table>()
+                           .AddAttribute(1, "id", a => a.Id)
+                           .AddAttribute(0, "apply", a => a.Apply)
+                           .AddAttribute(0, "interpolation", a => a.Interpolation);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Table>(deep);
@@ -245,9 +261,15 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [SchemaAttr(1, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Matrix>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Matrix>()
+                           .AddAttribute(1, "id", a => a.Id);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Matrix>(deep);
@@ -313,26 +335,32 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [SchemaAttr(1, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr(0, "type")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.InkML.MappingTypeValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.InkML.MappingTypeValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.MappingTypeValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>mappingRef</para>
         /// <para>Represents the following attribute in the schema: mappingRef</para>
         /// </summary>
-        [StringValidator(IsUri = true)]
-        [SchemaAttr(0, "mappingRef")]
-        [Index(2)]
-        public StringValue MappingRef { get; set; }
+        public StringValue MappingRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Mapping>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Mapping>()
+                           .AddAttribute(1, "id", a => a.Id)
+                           .AddAttribute(0, "type", a => a.Type)
+                           .AddAttribute(0, "mappingRef", a => a.MappingRef, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -411,90 +439,105 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [SchemaAttr(1, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [RequiredValidator()]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardChannelNameValues>), UnionId = 0)]
-        [StringValidator(UnionId = 0)]
-        [SchemaAttr(0, "name")]
-        [Index(1)]
-        public StringValue Name { get; set; }
+        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr(0, "type")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.InkML.ChannelDataTypeValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.InkML.ChannelDataTypeValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.ChannelDataTypeValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>default</para>
         /// <para>Represents the following attribute in the schema: default</para>
         /// </summary>
-        [NumberValidator(SimpleType = typeof(DecimalValue), UnionId = 0)]
-        [NumberValidator(SimpleType = typeof(BooleanValue), UnionId = 0)]
-        [SchemaAttr(0, "default")]
-        [Index(3)]
-        public StringValue Default { get; set; }
+        public StringValue Default { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>min</para>
         /// <para>Represents the following attribute in the schema: min</para>
         /// </summary>
-        [SchemaAttr(0, "min")]
-        [Index(4)]
-        public DecimalValue Min { get; set; }
+        public DecimalValue Min { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>max</para>
         /// <para>Represents the following attribute in the schema: max</para>
         /// </summary>
-        [SchemaAttr(0, "max")]
-        [Index(5)]
-        public DecimalValue Max { get; set; }
+        public DecimalValue Max { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>orientation</para>
         /// <para>Represents the following attribute in the schema: orientation</para>
         /// </summary>
-        [SchemaAttr(0, "orientation")]
-        [Index(6)]
-        public EnumValue<DocumentFormat.OpenXml.InkML.ChannelValueOrientationValues> Orientation { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.InkML.ChannelValueOrientationValues> Orientation { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.ChannelValueOrientationValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>respectTo</para>
         /// <para>Represents the following attribute in the schema: respectTo</para>
         /// </summary>
-        [StringValidator(IsUri = true)]
-        [SchemaAttr(0, "respectTo")]
-        [Index(7)]
-        public StringValue RespectTo { get; set; }
+        public StringValue RespectTo { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>units</para>
         /// <para>Represents the following attribute in the schema: units</para>
         /// </summary>
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>), UnionId = 0)]
-        [StringValidator(UnionId = 0)]
-        [SchemaAttr(0, "units")]
-        [Index(8)]
-        public StringValue Units { get; set; }
+        public StringValue Units { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Channel>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Channel>()
+                           .AddAttribute(1, "id", a => a.Id)
+                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardChannelNameValues>)), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+                               });
+                           })
+                           .AddAttribute(0, "type", a => a.Type)
+                           .AddAttribute(0, "default", a => a.Default, aBuilder =>
+                           {
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DecimalValue)), UnionId = (0) });
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(BooleanValue)), UnionId = (0) });
+                               });
+                           })
+                           .AddAttribute(0, "min", a => a.Min)
+                           .AddAttribute(0, "max", a => a.Max)
+                           .AddAttribute(0, "orientation", a => a.Orientation)
+                           .AddAttribute(0, "respectTo", a => a.RespectTo, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+                           })
+                           .AddAttribute(0, "units", a => a.Units, aBuilder =>
+                           {
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+                               });
+                           });
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(8 /*:units*/, true, new string[] { "dev", "in", "cm", "deg", "rad", "s", "lb", "g" }) { Version = FileFormatVersions.Office2010 }
@@ -560,6 +603,8 @@ namespace DocumentFormat.OpenXml.InkML
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<IntermittentChannels>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Channel), 0, 0)
@@ -591,51 +636,71 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>channel</para>
         /// <para>Represents the following attribute in the schema: channel</para>
         /// </summary>
-        [RequiredValidator()]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardChannelNameValues>), UnionId = 0)]
-        [StringValidator(UnionId = 0)]
-        [SchemaAttr(0, "channel")]
-        [Index(0)]
-        public StringValue Channel { get; set; }
+        public StringValue Channel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [RequiredValidator()]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardChannelPropertyNameValues>), UnionId = 0)]
-        [StringValidator(UnionId = 0)]
-        [SchemaAttr(0, "name")]
-        [Index(1)]
-        public StringValue Name { get; set; }
+        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>value</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "value")]
-        [Index(2)]
-        public DecimalValue Value { get; set; }
+        public DecimalValue Value { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>units</para>
         /// <para>Represents the following attribute in the schema: units</para>
         /// </summary>
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>), UnionId = 0)]
-        [StringValidator(UnionId = 0)]
-        [SchemaAttr(0, "units")]
-        [Index(3)]
-        public StringValue Units { get; set; }
+        public StringValue Units { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChannelProperty>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ChannelProperty>()
+                           .AddAttribute(0, "channel", a => a.Channel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardChannelNameValues>)), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+                               });
+                           })
+                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardChannelPropertyNameValues>)), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+                               });
+                           })
+                           .AddAttribute(0, "value", a => a.Value, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "units", a => a.Units, aBuilder =>
+                           {
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+                               });
+                           });
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(3 /*:units*/, true, new string[] { "dev", "in", "cm", "deg", "rad", "s", "lb", "g" }) { Version = FileFormatVersions.Office2010 }
@@ -703,9 +768,15 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [SchemaAttr(1, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TraceFormat>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TraceFormat>()
+                           .AddAttribute(1, "id", a => a.Id);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -739,18 +810,25 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>uniform</para>
         /// <para>Represents the following attribute in the schema: uniform</para>
         /// </summary>
-        [SchemaAttr(0, "uniform")]
-        [Index(0)]
-        public BooleanValue Uniform { get; set; }
+        public BooleanValue Uniform { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>value</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "value")]
-        [Index(1)]
-        public DecimalValue Value { get; set; }
+        public DecimalValue Value { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SampleRate>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SampleRate>()
+                           .AddAttribute(0, "uniform", a => a.Uniform)
+                           .AddAttribute(0, "value", a => a.Value, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SampleRate>(deep);
@@ -776,10 +854,18 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>value</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "value")]
-        [Index(0)]
-        public DecimalValue Value { get; set; }
+        public DecimalValue Value { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Latency>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Latency>()
+                           .AddAttribute(0, "value", a => a.Value, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Latency>(deep);
@@ -805,44 +891,52 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr(0, "size")]
-        [Index(0)]
-        public StringValue Size { get; set; }
+        public StringValue Size { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>height</para>
         /// <para>Represents the following attribute in the schema: height</para>
         /// </summary>
-        [SchemaAttr(0, "height")]
-        [Index(1)]
-        public DecimalValue Height { get; set; }
+        public DecimalValue Height { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>width</para>
         /// <para>Represents the following attribute in the schema: width</para>
         /// </summary>
-        [SchemaAttr(0, "width")]
-        [Index(2)]
-        public DecimalValue Width { get; set; }
+        public DecimalValue Width { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>units</para>
         /// <para>Represents the following attribute in the schema: units</para>
         /// </summary>
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>), UnionId = 0)]
-        [StringValidator(UnionId = 0)]
-        [SchemaAttr(0, "units")]
-        [Index(3)]
-        public StringValue Units { get; set; }
+        public StringValue Units { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ActiveArea>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ActiveArea>()
+                           .AddAttribute(0, "size", a => a.Size)
+                           .AddAttribute(0, "height", a => a.Height)
+                           .AddAttribute(0, "width", a => a.Width)
+                           .AddAttribute(0, "units", a => a.Units, aBuilder =>
+                           {
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+                               });
+                           });
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(3 /*:units*/, true, new string[] { "dev", "in", "cm", "deg", "rad", "s", "lb", "g" }) { Version = FileFormatVersions.Office2010 }
@@ -874,38 +968,51 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "name")]
-        [Index(0)]
-        public StringValue Name { get; set; }
+        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>value</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "value")]
-        [Index(1)]
-        public DecimalValue Value { get; set; }
+        public DecimalValue Value { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>units</para>
         /// <para>Represents the following attribute in the schema: units</para>
         /// </summary>
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>), UnionId = 0)]
-        [StringValidator(UnionId = 0)]
-        [SchemaAttr(0, "units")]
-        [Index(2)]
-        public StringValue Units { get; set; }
+        public StringValue Units { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SourceProperty>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SourceProperty>()
+                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "value", a => a.Value, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "units", a => a.Units, aBuilder =>
+                           {
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+                               });
+                           });
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(2 /*:units*/, true, new string[] { "dev", "in", "cm", "deg", "rad", "s", "lb", "g" }) { Version = FileFormatVersions.Office2010 }
@@ -964,6 +1071,8 @@ namespace DocumentFormat.OpenXml.InkML
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChannelProperties>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.ChannelProperty), 0, 0)
@@ -1008,17 +1117,22 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr(0, "type")]
-        [Index(0)]
-        public StringValue Type { get; set; }
+        public StringValue Type { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>encoding</para>
         /// <para>Represents the following attribute in the schema: encoding</para>
         /// </summary>
-        [SchemaAttr(0, "encoding")]
-        [Index(1)]
-        public StringValue Encoding { get; set; }
+        public StringValue Encoding { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Annotation>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Annotation>()
+                           .AddAttribute(0, "type", a => a.Type)
+                           .AddAttribute(0, "encoding", a => a.Encoding);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Annotation>(deep);
@@ -1075,26 +1189,32 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr(0, "type")]
-        [Index(0)]
-        public StringValue Type { get; set; }
+        public StringValue Type { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>encoding</para>
         /// <para>Represents the following attribute in the schema: encoding</para>
         /// </summary>
-        [SchemaAttr(0, "encoding")]
-        [Index(1)]
-        public StringValue Encoding { get; set; }
+        public StringValue Encoding { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>href</para>
         /// <para>Represents the following attribute in the schema: href</para>
         /// </summary>
-        [StringValidator(IsUri = true)]
-        [SchemaAttr(0, "href")]
-        [Index(2)]
-        public StringValue Href { get; set; }
+        public StringValue Href { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AnnotationXml>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<AnnotationXml>()
+                           .AddAttribute(0, "type", a => a.Type)
+                           .AddAttribute(0, "encoding", a => a.Encoding)
+                           .AddAttribute(0, "href", a => a.Href, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+                           });
+        }
 
         /// <summary>
         /// <para>Emma.</para>
@@ -1173,45 +1293,64 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [RequiredValidator()]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardBrushPropertyNameValues>), UnionId = 0)]
-        [StringValidator(UnionId = 0)]
-        [SchemaAttr(0, "name")]
-        [Index(0)]
-        public StringValue Name { get; set; }
+        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>value</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(SimpleType = typeof(DecimalValue), UnionId = 0)]
-        [NumberValidator(SimpleType = typeof(BooleanValue), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.PenTipShapeValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.RasterOperationValues>), UnionId = 0)]
-        [StringValidator(UnionId = 0)]
-        [SchemaAttr(0, "value")]
-        [Index(1)]
-        public StringValue Value { get; set; }
+        public StringValue Value { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>units</para>
         /// <para>Represents the following attribute in the schema: units</para>
         /// </summary>
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>), UnionId = 0)]
-        [StringValidator(UnionId = 0)]
-        [SchemaAttr(0, "units")]
-        [Index(2)]
-        public StringValue Units { get; set; }
+        public StringValue Units { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BrushProperty>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BrushProperty>()
+                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardBrushPropertyNameValues>)), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+                               });
+                           })
+                           .AddAttribute(0, "value", a => a.Value, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DecimalValue)), UnionId = (0) });
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(BooleanValue)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.PenTipShapeValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.RasterOperationValues>)), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+                               });
+                           })
+                           .AddAttribute(0, "units", a => a.Units, aBuilder =>
+                           {
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>)), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+                               });
+                           });
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(2 /*:units*/, true, new string[] { "dev", "in", "cm", "deg", "rad", "s", "lb", "g" }) { Version = FileFormatVersions.Office2010 }
@@ -1285,18 +1424,25 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [SchemaAttr(1, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>traceFormatRef</para>
         /// <para>Represents the following attribute in the schema: traceFormatRef</para>
         /// </summary>
-        [StringValidator(IsUri = true)]
-        [SchemaAttr(0, "traceFormatRef")]
-        [Index(1)]
-        public StringValue TraceFormatRef { get; set; }
+        public StringValue TraceFormatRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Canvas>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Canvas>()
+                           .AddAttribute(1, "id", a => a.Id)
+                           .AddAttribute(0, "traceFormatRef", a => a.TraceFormatRef, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+                           });
+        }
 
         /// <summary>
         /// <para>TraceFormat.</para>
@@ -1376,17 +1522,22 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [SchemaAttr(1, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>invertible</para>
         /// <para>Represents the following attribute in the schema: invertible</para>
         /// </summary>
-        [SchemaAttr(0, "invertible")]
-        [Index(1)]
-        public BooleanValue Invertible { get; set; }
+        public BooleanValue Invertible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CanvasTransform>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<CanvasTransform>()
+                           .AddAttribute(1, "id", a => a.Id)
+                           .AddAttribute(0, "invertible", a => a.Invertible);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1463,51 +1614,56 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(1, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>manufacturer</para>
         /// <para>Represents the following attribute in the schema: manufacturer</para>
         /// </summary>
-        [SchemaAttr(0, "manufacturer")]
-        [Index(1)]
-        public StringValue Manufacturer { get; set; }
+        public StringValue Manufacturer { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>model</para>
         /// <para>Represents the following attribute in the schema: model</para>
         /// </summary>
-        [SchemaAttr(0, "model")]
-        [Index(2)]
-        public StringValue Model { get; set; }
+        public StringValue Model { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>serialNo</para>
         /// <para>Represents the following attribute in the schema: serialNo</para>
         /// </summary>
-        [SchemaAttr(0, "serialNo")]
-        [Index(3)]
-        public StringValue SerialNo { get; set; }
+        public StringValue SerialNo { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>specificationRef</para>
         /// <para>Represents the following attribute in the schema: specificationRef</para>
         /// </summary>
-        [StringValidator(IsUri = true)]
-        [SchemaAttr(0, "specificationRef")]
-        [Index(4)]
-        public StringValue SpecificationRef { get; set; }
+        public StringValue SpecificationRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr(0, "description")]
-        [Index(5)]
-        public StringValue Description { get; set; }
+        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<InkSource>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<InkSource>()
+                           .AddAttribute(1, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "manufacturer", a => a.Manufacturer)
+                           .AddAttribute(0, "model", a => a.Model)
+                           .AddAttribute(0, "serialNo", a => a.SerialNo)
+                           .AddAttribute(0, "specificationRef", a => a.SpecificationRef, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+                           })
+                           .AddAttribute(0, "description", a => a.Description);
+        }
 
         /// <summary>
         /// <para>TraceFormat.</para>
@@ -1635,18 +1791,25 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [SchemaAttr(1, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>brushRef</para>
         /// <para>Represents the following attribute in the schema: brushRef</para>
         /// </summary>
-        [StringValidator(IsUri = true)]
-        [SchemaAttr(0, "brushRef")]
-        [Index(1)]
-        public StringValue BrushRef { get; set; }
+        public StringValue BrushRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Brush>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Brush>()
+                           .AddAttribute(1, "id", a => a.Id)
+                           .AddAttribute(0, "brushRef", a => a.BrushRef, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1684,43 +1847,49 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(1, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>time</para>
         /// <para>Represents the following attribute in the schema: time</para>
         /// </summary>
-        [SchemaAttr(0, "time")]
-        [Index(1)]
-        public DecimalValue Time { get; set; }
+        public DecimalValue Time { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>timestampRef</para>
         /// <para>Represents the following attribute in the schema: timestampRef</para>
         /// </summary>
-        [StringValidator(IsUri = true)]
-        [SchemaAttr(0, "timestampRef")]
-        [Index(2)]
-        public StringValue TimestampRef { get; set; }
+        public StringValue TimestampRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>timeString</para>
         /// <para>Represents the following attribute in the schema: timeString</para>
         /// </summary>
-        [SchemaAttr(0, "timeString")]
-        [Index(3)]
-        public DateTimeValue TimeString { get; set; }
+        public DateTimeValue TimeString { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>timeOffset</para>
         /// <para>Represents the following attribute in the schema: timeOffset</para>
         /// </summary>
-        [SchemaAttr(0, "timeOffset")]
-        [Index(4)]
-        public DecimalValue TimeOffset { get; set; }
+        public DecimalValue TimeOffset { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Timestamp>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Timestamp>()
+                           .AddAttribute(1, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "time", a => a.Time)
+                           .AddAttribute(0, "timestampRef", a => a.TimestampRef, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+                           })
+                           .AddAttribute(0, "timeString", a => a.TimeString)
+                           .AddAttribute(0, "timeOffset", a => a.TimeOffset);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Timestamp>(deep);
@@ -1762,68 +1931,73 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [SchemaAttr(1, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr(0, "type")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.InkML.TraceTypeValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.InkML.TraceTypeValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.TraceTypeValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>continuation</para>
         /// <para>Represents the following attribute in the schema: continuation</para>
         /// </summary>
-        [SchemaAttr(0, "continuation")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.InkML.TraceContinuationValues> Continuation { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.InkML.TraceContinuationValues> Continuation { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.TraceContinuationValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>priorRef</para>
         /// <para>Represents the following attribute in the schema: priorRef</para>
         /// </summary>
-        [StringValidator(IsUri = true)]
-        [SchemaAttr(0, "priorRef")]
-        [Index(3)]
-        public StringValue PriorRef { get; set; }
+        public StringValue PriorRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>contextRef</para>
         /// <para>Represents the following attribute in the schema: contextRef</para>
         /// </summary>
-        [StringValidator(IsUri = true)]
-        [SchemaAttr(0, "contextRef")]
-        [Index(4)]
-        public StringValue ContextRef { get; set; }
+        public StringValue ContextRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>brushRef</para>
         /// <para>Represents the following attribute in the schema: brushRef</para>
         /// </summary>
-        [StringValidator(IsUri = true)]
-        [SchemaAttr(0, "brushRef")]
-        [Index(5)]
-        public StringValue BrushRef { get; set; }
+        public StringValue BrushRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>duration</para>
         /// <para>Represents the following attribute in the schema: duration</para>
         /// </summary>
-        [SchemaAttr(0, "duration")]
-        [Index(6)]
-        public DecimalValue Duration { get; set; }
+        public DecimalValue Duration { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>timeOffset</para>
         /// <para>Represents the following attribute in the schema: timeOffset</para>
         /// </summary>
-        [SchemaAttr(0, "timeOffset")]
-        [Index(7)]
-        public DecimalValue TimeOffset { get; set; }
+        public DecimalValue TimeOffset { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Trace>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Trace>()
+                           .AddAttribute(1, "id", a => a.Id)
+                           .AddAttribute(0, "type", a => a.Type)
+                           .AddAttribute(0, "continuation", a => a.Continuation)
+                           .AddAttribute(0, "priorRef", a => a.PriorRef, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+                           })
+                           .AddAttribute(0, "contextRef", a => a.ContextRef, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+                           })
+                           .AddAttribute(0, "brushRef", a => a.BrushRef, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+                           })
+                           .AddAttribute(0, "duration", a => a.Duration)
+                           .AddAttribute(0, "timeOffset", a => a.TimeOffset);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Trace>(deep);
@@ -1889,27 +2063,35 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [SchemaAttr(1, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>contextRef</para>
         /// <para>Represents the following attribute in the schema: contextRef</para>
         /// </summary>
-        [StringValidator(IsUri = true)]
-        [SchemaAttr(0, "contextRef")]
-        [Index(1)]
-        public StringValue ContextRef { get; set; }
+        public StringValue ContextRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>brushRef</para>
         /// <para>Represents the following attribute in the schema: brushRef</para>
         /// </summary>
-        [StringValidator(IsUri = true)]
-        [SchemaAttr(0, "brushRef")]
-        [Index(2)]
-        public StringValue BrushRef { get; set; }
+        public StringValue BrushRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TraceGroup>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TraceGroup>()
+                           .AddAttribute(1, "id", a => a.Id)
+                           .AddAttribute(0, "contextRef", a => a.ContextRef, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+                           })
+                           .AddAttribute(0, "brushRef", a => a.BrushRef, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
         {
@@ -1983,43 +2165,49 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [SchemaAttr(1, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>contextRef</para>
         /// <para>Represents the following attribute in the schema: contextRef</para>
         /// </summary>
-        [StringValidator(IsUri = true)]
-        [SchemaAttr(0, "contextRef")]
-        [Index(1)]
-        public StringValue ContextRef { get; set; }
+        public StringValue ContextRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>traceDataRef</para>
         /// <para>Represents the following attribute in the schema: traceDataRef</para>
         /// </summary>
-        [StringValidator(IsUri = true)]
-        [SchemaAttr(0, "traceDataRef")]
-        [Index(2)]
-        public StringValue TraceDataRef { get; set; }
+        public StringValue TraceDataRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>from</para>
         /// <para>Represents the following attribute in the schema: from</para>
         /// </summary>
-        [SchemaAttr(0, "from")]
-        [Index(3)]
-        public StringValue From { get; set; }
+        public StringValue From { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>to</para>
         /// <para>Represents the following attribute in the schema: to</para>
         /// </summary>
-        [SchemaAttr(0, "to")]
-        [Index(4)]
-        public StringValue To { get; set; }
+        public StringValue To { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TraceView>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TraceView>()
+                           .AddAttribute(1, "id", a => a.Id)
+                           .AddAttribute(0, "contextRef", a => a.ContextRef, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+                           })
+                           .AddAttribute(0, "traceDataRef", a => a.TraceDataRef, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+                           })
+                           .AddAttribute(0, "from", a => a.From)
+                           .AddAttribute(0, "to", a => a.To);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
         {
@@ -2098,72 +2286,85 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [SchemaAttr(1, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>contextRef</para>
         /// <para>Represents the following attribute in the schema: contextRef</para>
         /// </summary>
-        [StringValidator(IsUri = true)]
-        [SchemaAttr(0, "contextRef")]
-        [Index(1)]
-        public StringValue ContextRef { get; set; }
+        public StringValue ContextRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>canvasRef</para>
         /// <para>Represents the following attribute in the schema: canvasRef</para>
         /// </summary>
-        [StringValidator(IsUri = true)]
-        [SchemaAttr(0, "canvasRef")]
-        [Index(2)]
-        public StringValue CanvasRef { get; set; }
+        public StringValue CanvasRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>canvasTransformRef</para>
         /// <para>Represents the following attribute in the schema: canvasTransformRef</para>
         /// </summary>
-        [StringValidator(IsUri = true)]
-        [SchemaAttr(0, "canvasTransformRef")]
-        [Index(3)]
-        public StringValue CanvasTransformRef { get; set; }
+        public StringValue CanvasTransformRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>traceFormatRef</para>
         /// <para>Represents the following attribute in the schema: traceFormatRef</para>
         /// </summary>
-        [StringValidator(IsUri = true)]
-        [SchemaAttr(0, "traceFormatRef")]
-        [Index(4)]
-        public StringValue TraceFromatRef { get; set; }
+        public StringValue TraceFromatRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>inkSourceRef</para>
         /// <para>Represents the following attribute in the schema: inkSourceRef</para>
         /// </summary>
-        [StringValidator(IsUri = true)]
-        [SchemaAttr(0, "inkSourceRef")]
-        [Index(5)]
-        public StringValue InkSourceRef { get; set; }
+        public StringValue InkSourceRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>brushRef</para>
         /// <para>Represents the following attribute in the schema: brushRef</para>
         /// </summary>
-        [StringValidator(IsUri = true)]
-        [SchemaAttr(0, "brushRef")]
-        [Index(6)]
-        public StringValue BrushRef { get; set; }
+        public StringValue BrushRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>timestampRef</para>
         /// <para>Represents the following attribute in the schema: timestampRef</para>
         /// </summary>
-        [StringValidator(IsUri = true)]
-        [SchemaAttr(0, "timestampRef")]
-        [Index(7)]
-        public StringValue TimestampRef { get; set; }
+        public StringValue TimestampRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Context>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Context>()
+                           .AddAttribute(1, "id", a => a.Id)
+                           .AddAttribute(0, "contextRef", a => a.ContextRef, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+                           })
+                           .AddAttribute(0, "canvasRef", a => a.CanvasRef, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+                           })
+                           .AddAttribute(0, "canvasTransformRef", a => a.CanvasTransformRef, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+                           })
+                           .AddAttribute(0, "traceFormatRef", a => a.TraceFromatRef, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+                           })
+                           .AddAttribute(0, "inkSourceRef", a => a.InkSourceRef, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+                           })
+                           .AddAttribute(0, "brushRef", a => a.BrushRef, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+                           })
+                           .AddAttribute(0, "timestampRef", a => a.TimestampRef, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+                           });
+        }
 
         /// <summary>
         /// <para>Canvas.</para>
@@ -2325,6 +2526,8 @@ namespace DocumentFormat.OpenXml.InkML
         public Definitions(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Definitions>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
         {

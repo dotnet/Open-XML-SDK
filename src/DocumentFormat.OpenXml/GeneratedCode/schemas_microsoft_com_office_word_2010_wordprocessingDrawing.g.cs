@@ -4,6 +4,7 @@
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
@@ -42,6 +43,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
             return new Int32Value { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PercentagePositionHeightOffset>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PercentagePositionHeightOffset>(deep);
     }
@@ -75,6 +78,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         {
             return new Int32Value { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PercentagePositionVerticalOffset>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PercentagePositionVerticalOffset>(deep);
@@ -131,11 +136,19 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         /// <para>relativeFrom, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: relativeFrom</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "relativeFrom")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues> ObjectId { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues> ObjectId { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RelativeWidth>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RelativeWidth>()
+                           .AddAttribute(0, "relativeFrom", a => a.ObjectId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         /// <summary>
         /// <para>PercentageWidth.</para>
@@ -212,11 +225,19 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         /// <para>relativeFrom, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: relativeFrom</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "relativeFrom")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues> RelativeFrom { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues> RelativeFrom { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RelativeHeight>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RelativeHeight>()
+                           .AddAttribute(0, "relativeFrom", a => a.RelativeFrom, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         /// <summary>
         /// <para>PercentageHeight.</para>
@@ -272,6 +293,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
             return new Int32Value { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PercentageWidth>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PercentageWidth>(deep);
     }
@@ -305,6 +328,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         {
             return new Int32Value { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PercentageHeight>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PercentageHeight>(deep);

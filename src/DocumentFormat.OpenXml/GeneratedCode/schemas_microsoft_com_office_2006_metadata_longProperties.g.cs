@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
@@ -58,6 +59,8 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LongProperties>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.LongProperties.LongProperty), 0, 0)
@@ -102,9 +105,15 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr(0, "name")]
-        [Index(0)]
-        public StringValue Name { get; set; }
+        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LongProperty>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<LongProperty>()
+                           .AddAttribute(0, "name", a => a.Name);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LongProperty>(deep);

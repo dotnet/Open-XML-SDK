@@ -5,6 +5,7 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Drawing.Spreadsheet;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Office2010.Excel;
 using DocumentFormat.OpenXml.Office2010.ExcelAc;
 using DocumentFormat.OpenXml.Packaging;
@@ -67,37 +68,48 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>minRev, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: minRev</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "minRev")]
-        [Index(0)]
-        public UInt64Value MinRev { get; set; }
+        public UInt64Value MinRev { get => GetAttribute<UInt64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>maxRev, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: maxRev</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "maxRev")]
-        [Index(1)]
-        public UInt64Value MaxRev { get; set; }
+        public UInt64Value MaxRev { get => GetAttribute<UInt64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>docId, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: docId</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "docId")]
-        [Index(2)]
-        public StringValue DocId { get; set; }
+        public StringValue DocId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>endpointId, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: endpointId</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "endpointId")]
-        [Index(3)]
-        public StringValue EndpointId { get; set; }
+        public StringValue EndpointId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevExHeaders>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RevExHeaders>()
+                           .AddAttribute(0, "minRev", a => a.MinRev, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "maxRev", a => a.MaxRev, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "docId", a => a.DocId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "endpointId", a => a.EndpointId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -183,6 +195,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevExStream>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExFuture), 0, 0, version: FileFormatVersions.Office2016),
@@ -265,6 +279,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         public DifferentialFormatType(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DifferentialFormatType>();
 
         /// <summary>
         /// <para>Font Properties.</para>
@@ -394,19 +410,28 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>revIDLastSave, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: revIDLastSave</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "revIDLastSave")]
-        [Index(0)]
-        public UInt64Value RevIDLastSave { get; set; }
+        public UInt64Value RevIDLastSave { get => GetAttribute<UInt64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>documentId, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: documentId</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "documentId")]
-        [Index(1)]
-        public StringValue DocumentId { get; set; }
+        public StringValue DocumentId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevisionPtr>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RevisionPtr>()
+                           .AddAttribute(0, "revIDLastSave", a => a.RevIDLastSave, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "documentId", a => a.DocumentId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevisionPtr>(deep);
@@ -468,6 +493,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         public StateBasedObject(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StateBasedObject>();
 
         /// <summary>
         /// <para>Represents an external link to another workbook..</para>
@@ -586,35 +613,42 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>minRev, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: minRev</para>
         /// </summary>
-        [SchemaAttr(0, "minRev")]
-        [Index(1)]
-        public UInt64Value MinRev { get; set; }
+        public UInt64Value MinRev { get => GetAttribute<UInt64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>maxRev, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: maxRev</para>
         /// </summary>
-        [SchemaAttr(0, "maxRev")]
-        [Index(2)]
-        public UInt64Value MaxRev { get; set; }
+        public UInt64Value MaxRev { get => GetAttribute<UInt64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>time, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: time</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "time")]
-        [Index(3)]
-        public DateTimeValue Time { get; set; }
+        public DateTimeValue Time { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevExHeader>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RevExHeader>()
+                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "minRev", a => a.MinRev)
+                           .AddAttribute(0, "maxRev", a => a.MaxRev)
+                           .AddAttribute(0, "time", a => a.Time, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevExHeader>(deep);
@@ -671,55 +705,64 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>rev, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "rev")]
-        [Index(0)]
-        public UInt64Value Rev { get; set; }
+        public UInt64Value Rev { get => GetAttribute<UInt64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>uid, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "uid")]
-        [Index(1)]
-        public StringValue Uid { get; set; }
+        public StringValue Uid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>sh, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: sh</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "sh")]
-        [Index(2)]
-        public StringValue Sh { get; set; }
+        public StringValue Sh { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>uidp, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uidp</para>
         /// </summary>
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "uidp")]
-        [Index(3)]
-        public StringValue Uidp { get; set; }
+        public StringValue Uidp { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>ctx, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: ctx</para>
         /// </summary>
-        [SchemaAttr(0, "ctx")]
-        [Index(4)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>sti, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: sti</para>
         /// </summary>
-        [SchemaAttr(0, "sti")]
-        [Index(5)]
-        public BooleanValue Sti { get; set; }
+        public BooleanValue Sti { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevExFuture>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RevExFuture>()
+                           .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "ctx", a => a.Ctx)
+                           .AddAttribute(0, "sti", a => a.Sti);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 1)
         {
@@ -752,47 +795,57 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>rev, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "rev")]
-        [Index(0)]
-        public UInt64Value Rev { get; set; }
+        public UInt64Value Rev { get => GetAttribute<UInt64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>uid, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "uid")]
-        [Index(1)]
-        public StringValue Uid { get; set; }
+        public StringValue Uid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>sh, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: sh</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "sh")]
-        [Index(2)]
-        public StringValue Sh { get; set; }
+        public StringValue Sh { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>uidp, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uidp</para>
         /// </summary>
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "uidp")]
-        [Index(3)]
-        public StringValue Uidp { get; set; }
+        public StringValue Uidp { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>ctx, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: ctx</para>
         /// </summary>
-        [SchemaAttr(0, "ctx")]
-        [Index(4)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevExUnsupported>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RevExUnsupported>()
+                           .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "ctx", a => a.Ctx);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevExUnsupported>(deep);
@@ -818,47 +871,57 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>rev, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "rev")]
-        [Index(0)]
-        public UInt64Value Rev { get; set; }
+        public UInt64Value Rev { get => GetAttribute<UInt64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>uid, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "uid")]
-        [Index(1)]
-        public StringValue Uid { get; set; }
+        public StringValue Uid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>sh, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: sh</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "sh")]
-        [Index(2)]
-        public StringValue Sh { get; set; }
+        public StringValue Sh { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>uidp, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uidp</para>
         /// </summary>
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "uidp")]
-        [Index(3)]
-        public StringValue Uidp { get; set; }
+        public StringValue Uidp { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>ctx, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: ctx</para>
         /// </summary>
-        [SchemaAttr(0, "ctx")]
-        [Index(4)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevExTrimmed>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RevExTrimmed>()
+                           .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "ctx", a => a.Ctx);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevExTrimmed>(deep);
@@ -884,73 +947,84 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>rev, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "rev")]
-        [Index(0)]
-        public UInt64Value Rev { get; set; }
+        public UInt64Value Rev { get => GetAttribute<UInt64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>uid, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "uid")]
-        [Index(1)]
-        public StringValue Uid { get; set; }
+        public StringValue Uid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>sh, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: sh</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "sh")]
-        [Index(2)]
-        public StringValue Sh { get; set; }
+        public StringValue Sh { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>uidp, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uidp</para>
         /// </summary>
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "uidp")]
-        [Index(3)]
-        public StringValue Uidp { get; set; }
+        public StringValue Uidp { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>ctx, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: ctx</para>
         /// </summary>
-        [SchemaAttr(0, "ctx")]
-        [Index(4)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>eol, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: eol</para>
         /// </summary>
-        [SchemaAttr(0, "eol")]
-        [Index(5)]
-        public BooleanValue Eol { get; set; }
+        public BooleanValue Eol { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>ref, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "ref")]
-        [Index(6)]
-        public StringValue Ref { get; set; }
+        public StringValue Ref { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>action, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: action</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "action")]
-        [Index(7)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RwColAction> Action { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RwColAction> Action { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RwColAction>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevExRowColumn>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RevExRowColumn>()
+                           .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "ctx", a => a.Ctx)
+                           .AddAttribute(0, "eol", a => a.Eol)
+                           .AddAttribute(0, "ref", a => a.Ref, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "action", a => a.Action, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevExRowColumn>(deep);
@@ -976,74 +1050,87 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>rev, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "rev")]
-        [Index(0)]
-        public UInt64Value Rev { get; set; }
+        public UInt64Value Rev { get => GetAttribute<UInt64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>uid, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "uid")]
-        [Index(1)]
-        public StringValue Uid { get; set; }
+        public StringValue Uid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>sh, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: sh</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "sh")]
-        [Index(2)]
-        public StringValue Sh { get; set; }
+        public StringValue Sh { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>uidp, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uidp</para>
         /// </summary>
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "uidp")]
-        [Index(3)]
-        public StringValue Uidp { get; set; }
+        public StringValue Uidp { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>ctx, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: ctx</para>
         /// </summary>
-        [SchemaAttr(0, "ctx")]
-        [Index(4)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>src, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: src</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "src")]
-        [Index(5)]
-        public StringValue Src { get; set; }
+        public StringValue Src { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>dst, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: dst</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "dst")]
-        [Index(6)]
-        public StringValue Dst { get; set; }
+        public StringValue Dst { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>srcSh, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: srcSh</para>
         /// </summary>
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "srcSh")]
-        [Index(7)]
-        public StringValue SrcSh { get; set; }
+        public StringValue SrcSh { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevExMove>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RevExMove>()
+                           .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "ctx", a => a.Ctx)
+                           .AddAttribute(0, "src", a => a.Src, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "dst", a => a.Dst, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "srcSh", a => a.SrcSh, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevExMove>(deep);
@@ -1102,89 +1189,98 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>listUid, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: listUid</para>
         /// </summary>
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "listUid")]
-        [Index(0)]
-        public StringValue ListUid { get; set; }
+        public StringValue ListUid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>rev, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "rev")]
-        [Index(1)]
-        public UInt64Value Rev { get; set; }
+        public UInt64Value Rev { get => GetAttribute<UInt64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>uid, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "uid")]
-        [Index(2)]
-        public StringValue Uid { get; set; }
+        public StringValue Uid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>sh, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: sh</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "sh")]
-        [Index(3)]
-        public StringValue Sh { get; set; }
+        public StringValue Sh { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>uidp, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uidp</para>
         /// </summary>
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "uidp")]
-        [Index(4)]
-        public StringValue Uidp { get; set; }
+        public StringValue Uidp { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>ctx, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: ctx</para>
         /// </summary>
-        [SchemaAttr(0, "ctx")]
-        [Index(5)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>r, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "r")]
-        [Index(6)]
-        public StringValue R { get; set; }
+        public StringValue R { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>t, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        [SchemaAttr(0, "t")]
-        [Index(7)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillType> T { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillType> T { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillType>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>x, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: x</para>
         /// </summary>
-        [SchemaAttr(0, "x")]
-        [Index(8)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillTypeExt> X { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillTypeExt> X { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillTypeExt>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>w, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: w</para>
         /// </summary>
-        [SchemaAttr(0, "w")]
-        [Index(9)]
-        public UInt32Value W { get; set; }
+        public UInt32Value W { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevExChangeCell>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RevExChangeCell>()
+                           .AddAttribute(0, "listUid", a => a.ListUid, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "ctx", a => a.Ctx)
+                           .AddAttribute(0, "r", a => a.R, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "t", a => a.T)
+                           .AddAttribute(0, "x", a => a.X)
+                           .AddAttribute(0, "w", a => a.W);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1251,161 +1347,161 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>rev, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "rev")]
-        [Index(0)]
-        public UInt64Value Rev { get; set; }
+        public UInt64Value Rev { get => GetAttribute<UInt64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>uid, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "uid")]
-        [Index(1)]
-        public StringValue Uid { get; set; }
+        public StringValue Uid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>sh, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: sh</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "sh")]
-        [Index(2)]
-        public StringValue Sh { get; set; }
+        public StringValue Sh { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>uidp, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uidp</para>
         /// </summary>
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "uidp")]
-        [Index(3)]
-        public StringValue Uidp { get; set; }
+        public StringValue Uidp { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>ctx, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: ctx</para>
         /// </summary>
-        [SchemaAttr(0, "ctx")]
-        [Index(4)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>numFmtId, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: numFmtId</para>
         /// </summary>
-        [SchemaAttr(0, "numFmtId")]
-        [Index(5)]
-        public UInt32Value NumFmtId { get; set; }
+        public UInt32Value NumFmtId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>xfDxf, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: xfDxf</para>
         /// </summary>
-        [SchemaAttr(0, "xfDxf")]
-        [Index(6)]
-        public BooleanValue XfDxf { get; set; }
+        public BooleanValue XfDxf { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>style, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
-        [SchemaAttr(0, "style")]
-        [Index(7)]
-        public BooleanValue Style { get; set; }
+        public BooleanValue Style { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>sqref, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: sqref</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "sqref")]
-        [Index(8)]
-        public ListValue<StringValue> Sqref { get; set; }
+        public ListValue<StringValue> Sqref { get => GetAttribute<ListValue<StringValue>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>start, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: start</para>
         /// </summary>
-        [SchemaAttr(0, "start")]
-        [Index(9)]
-        public UInt32Value Start { get; set; }
+        public UInt32Value Start { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>length, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: length</para>
         /// </summary>
-        [SchemaAttr(0, "length")]
-        [Index(10)]
-        public UInt32Value Length { get; set; }
+        public UInt32Value Length { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>styleUid, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: styleUid</para>
         /// </summary>
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "styleUid")]
-        [Index(11)]
-        public StringValue StyleUid { get; set; }
+        public StringValue StyleUid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>fBlankCell, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: fBlankCell</para>
         /// </summary>
-        [SchemaAttr(0, "fBlankCell")]
-        [Index(12)]
-        public BooleanValue FBlankCell { get; set; }
+        public BooleanValue FBlankCell { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>applyNumberFormat, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: applyNumberFormat</para>
         /// </summary>
-        [SchemaAttr(0, "applyNumberFormat")]
-        [Index(13)]
-        public BooleanValue ApplyNumberFormat { get; set; }
+        public BooleanValue ApplyNumberFormat { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>applyFont, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: applyFont</para>
         /// </summary>
-        [SchemaAttr(0, "applyFont")]
-        [Index(14)]
-        public BooleanValue ApplyFont { get; set; }
+        public BooleanValue ApplyFont { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>applyFill, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: applyFill</para>
         /// </summary>
-        [SchemaAttr(0, "applyFill")]
-        [Index(15)]
-        public BooleanValue ApplyFill { get; set; }
+        public BooleanValue ApplyFill { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>applyBorder, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: applyBorder</para>
         /// </summary>
-        [SchemaAttr(0, "applyBorder")]
-        [Index(16)]
-        public BooleanValue ApplyBorder { get; set; }
+        public BooleanValue ApplyBorder { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>applyAlignment, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: applyAlignment</para>
         /// </summary>
-        [SchemaAttr(0, "applyAlignment")]
-        [Index(17)]
-        public BooleanValue ApplyAlignment { get; set; }
+        public BooleanValue ApplyAlignment { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>applyProtection, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: applyProtection</para>
         /// </summary>
-        [SchemaAttr(0, "applyProtection")]
-        [Index(18)]
-        public BooleanValue ApplyProtection { get; set; }
+        public BooleanValue ApplyProtection { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevExFormatting>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RevExFormatting>()
+                           .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "ctx", a => a.Ctx)
+                           .AddAttribute(0, "numFmtId", a => a.NumFmtId)
+                           .AddAttribute(0, "xfDxf", a => a.XfDxf)
+                           .AddAttribute(0, "style", a => a.Style)
+                           .AddAttribute(0, "sqref", a => a.Sqref, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "start", a => a.Start)
+                           .AddAttribute(0, "length", a => a.Length)
+                           .AddAttribute(0, "styleUid", a => a.StyleUid, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "fBlankCell", a => a.FBlankCell)
+                           .AddAttribute(0, "applyNumberFormat", a => a.ApplyNumberFormat)
+                           .AddAttribute(0, "applyFont", a => a.ApplyFont)
+                           .AddAttribute(0, "applyFill", a => a.ApplyFill)
+                           .AddAttribute(0, "applyBorder", a => a.ApplyBorder)
+                           .AddAttribute(0, "applyAlignment", a => a.ApplyAlignment)
+                           .AddAttribute(0, "applyProtection", a => a.ApplyProtection);
+        }
 
         /// <summary>
         /// <para>DifferentialFormatType.</para>
@@ -1498,136 +1594,137 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>rev, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "rev")]
-        [Index(0)]
-        public UInt64Value Rev { get; set; }
+        public UInt64Value Rev { get => GetAttribute<UInt64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>uid, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "uid")]
-        [Index(1)]
-        public StringValue Uid { get; set; }
+        public StringValue Uid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>sh, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: sh</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "sh")]
-        [Index(2)]
-        public StringValue Sh { get; set; }
+        public StringValue Sh { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>uidp, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uidp</para>
         /// </summary>
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "uidp")]
-        [Index(3)]
-        public StringValue Uidp { get; set; }
+        public StringValue Uidp { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>ctx, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: ctx</para>
         /// </summary>
-        [SchemaAttr(0, "ctx")]
-        [Index(4)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>customView, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: customView</para>
         /// </summary>
-        [SchemaAttr(0, "customView")]
-        [Index(5)]
-        public BooleanValue CustomView { get; set; }
+        public BooleanValue CustomView { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>name, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "name")]
-        [Index(6)]
-        public StringValue Name { get; set; }
+        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>function, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: function</para>
         /// </summary>
-        [SchemaAttr(0, "function")]
-        [Index(7)]
-        public BooleanValue Function { get; set; }
+        public BooleanValue Function { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>functionGroupId, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: functionGroupId</para>
         /// </summary>
-        [SchemaAttr(0, "functionGroupId")]
-        [Index(8)]
-        public ByteValue FunctionGroupId { get; set; }
+        public ByteValue FunctionGroupId { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>shortcutKey, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: shortcutKey</para>
         /// </summary>
-        [SchemaAttr(0, "shortcutKey")]
-        [Index(9)]
-        public ByteValue ShortcutKey { get; set; }
+        public ByteValue ShortcutKey { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>hidden, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        [SchemaAttr(0, "hidden")]
-        [Index(10)]
-        public BooleanValue Hidden { get; set; }
+        public BooleanValue Hidden { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>customMenu, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: customMenu</para>
         /// </summary>
-        [SchemaAttr(0, "customMenu")]
-        [Index(11)]
-        public StringValue CustomMenu { get; set; }
+        public StringValue CustomMenu { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>description, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr(0, "description")]
-        [Index(12)]
-        public StringValue Description { get; set; }
+        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>help, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: help</para>
         /// </summary>
-        [SchemaAttr(0, "help")]
-        [Index(13)]
-        public StringValue Help { get; set; }
+        public StringValue Help { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>statusBar, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: statusBar</para>
         /// </summary>
-        [SchemaAttr(0, "statusBar")]
-        [Index(14)]
-        public StringValue StatusBar { get; set; }
+        public StringValue StatusBar { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>comment, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: comment</para>
         /// </summary>
-        [SchemaAttr(0, "comment")]
-        [Index(15)]
-        public StringValue Comment { get; set; }
+        public StringValue Comment { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevExDefinedName>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RevExDefinedName>()
+                           .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "ctx", a => a.Ctx)
+                           .AddAttribute(0, "customView", a => a.CustomView)
+                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "function", a => a.Function)
+                           .AddAttribute(0, "functionGroupId", a => a.FunctionGroupId)
+                           .AddAttribute(0, "shortcutKey", a => a.ShortcutKey)
+                           .AddAttribute(0, "hidden", a => a.Hidden)
+                           .AddAttribute(0, "customMenu", a => a.CustomMenu)
+                           .AddAttribute(0, "description", a => a.Description)
+                           .AddAttribute(0, "help", a => a.Help)
+                           .AddAttribute(0, "statusBar", a => a.StatusBar)
+                           .AddAttribute(0, "comment", a => a.Comment);
+        }
 
         /// <summary>
         /// <para>FormulaFormula.</para>
@@ -1718,47 +1815,57 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>rev, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "rev")]
-        [Index(0)]
-        public UInt64Value Rev { get; set; }
+        public UInt64Value Rev { get => GetAttribute<UInt64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>uid, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "uid")]
-        [Index(1)]
-        public StringValue Uid { get; set; }
+        public StringValue Uid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>sh, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: sh</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "sh")]
-        [Index(2)]
-        public StringValue Sh { get; set; }
+        public StringValue Sh { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>uidp, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uidp</para>
         /// </summary>
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "uidp")]
-        [Index(3)]
-        public StringValue Uidp { get; set; }
+        public StringValue Uidp { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>ctx, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: ctx</para>
         /// </summary>
-        [SchemaAttr(0, "ctx")]
-        [Index(4)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevExDelObj>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RevExDelObj>()
+                           .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "ctx", a => a.Ctx);
+        }
 
         /// <summary>
         /// <para>StateBasedHeader.</para>
@@ -1839,47 +1946,57 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>rev, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "rev")]
-        [Index(0)]
-        public UInt64Value Rev { get; set; }
+        public UInt64Value Rev { get => GetAttribute<UInt64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>uid, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "uid")]
-        [Index(1)]
-        public StringValue Uid { get; set; }
+        public StringValue Uid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>sh, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: sh</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "sh")]
-        [Index(2)]
-        public StringValue Sh { get; set; }
+        public StringValue Sh { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>uidp, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uidp</para>
         /// </summary>
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "uidp")]
-        [Index(3)]
-        public StringValue Uidp { get; set; }
+        public StringValue Uidp { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>ctx, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: ctx</para>
         /// </summary>
-        [SchemaAttr(0, "ctx")]
-        [Index(4)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevExChgObj>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RevExChgObj>()
+                           .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "ctx", a => a.Ctx);
+        }
 
         /// <summary>
         /// <para>StateBasedHeader.</para>
@@ -1930,80 +2047,88 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>rev, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "rev")]
-        [Index(0)]
-        public UInt64Value Rev { get; set; }
+        public UInt64Value Rev { get => GetAttribute<UInt64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>uid, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "uid")]
-        [Index(1)]
-        public StringValue Uid { get; set; }
+        public StringValue Uid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>sh, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: sh</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "sh")]
-        [Index(2)]
-        public StringValue Sh { get; set; }
+        public StringValue Sh { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>uidp, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uidp</para>
         /// </summary>
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "uidp")]
-        [Index(3)]
-        public StringValue Uidp { get; set; }
+        public StringValue Uidp { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>ctx, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: ctx</para>
         /// </summary>
-        [SchemaAttr(0, "ctx")]
-        [Index(4)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>op, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: op</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "op")]
-        [Index(5)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.SheetOp> Op { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.SheetOp> Op { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.SheetOp>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>name, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr(0, "name")]
-        [Index(6)]
-        public StringValue Name { get; set; }
+        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idOrig, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: idOrig</para>
         /// </summary>
-        [SchemaAttr(0, "idOrig")]
-        [Index(7)]
-        public UInt32Value IdOrig { get; set; }
+        public UInt32Value IdOrig { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idNew, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: idNew</para>
         /// </summary>
-        [SchemaAttr(0, "idNew")]
-        [Index(8)]
-        public UInt32Value IdNew { get; set; }
+        public UInt32Value IdNew { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevExSheetOp>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RevExSheetOp>()
+                           .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "ctx", a => a.Ctx)
+                           .AddAttribute(0, "op", a => a.Op, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "name", a => a.Name)
+                           .AddAttribute(0, "idOrig", a => a.IdOrig)
+                           .AddAttribute(0, "idNew", a => a.IdNew);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevExSheetOp>(deep);
@@ -2029,113 +2154,119 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>rev, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "rev")]
-        [Index(0)]
-        public UInt64Value Rev { get; set; }
+        public UInt64Value Rev { get => GetAttribute<UInt64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>uid, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "uid")]
-        [Index(1)]
-        public StringValue Uid { get; set; }
+        public StringValue Uid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>sh, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: sh</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "sh")]
-        [Index(2)]
-        public StringValue Sh { get; set; }
+        public StringValue Sh { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>uidp, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uidp</para>
         /// </summary>
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "uidp")]
-        [Index(3)]
-        public StringValue Uidp { get; set; }
+        public StringValue Uidp { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>ctx, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: ctx</para>
         /// </summary>
-        [SchemaAttr(0, "ctx")]
-        [Index(4)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Data, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: Data</para>
         /// </summary>
-        [SchemaAttr(0, "Data")]
-        [Index(5)]
-        public BooleanValue Data { get; set; }
+        public BooleanValue Data { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Formatting, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: Formatting</para>
         /// </summary>
-        [SchemaAttr(0, "Formatting")]
-        [Index(6)]
-        public BooleanValue Formatting { get; set; }
+        public BooleanValue Formatting { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>RangeBased, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: RangeBased</para>
         /// </summary>
-        [SchemaAttr(0, "RangeBased")]
-        [Index(7)]
-        public BooleanValue RangeBased { get; set; }
+        public BooleanValue RangeBased { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Fake, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: Fake</para>
         /// </summary>
-        [SchemaAttr(0, "Fake")]
-        [Index(8)]
-        public BooleanValue Fake { get; set; }
+        public BooleanValue Fake { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>ref, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "ref")]
-        [Index(9)]
-        public StringValue Ref { get; set; }
+        public StringValue Ref { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Headers, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: Headers</para>
         /// </summary>
-        [SchemaAttr(0, "Headers")]
-        [Index(10)]
-        public BooleanValue Headers { get; set; }
+        public BooleanValue Headers { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>InsDelHeaders, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: InsDelHeaders</para>
         /// </summary>
-        [SchemaAttr(0, "InsDelHeaders")]
-        [Index(11)]
-        public BooleanValue InsDelHeaders { get; set; }
+        public BooleanValue InsDelHeaders { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>rId, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: rId</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "rId")]
-        [Index(12)]
-        public UInt32Value RId { get; set; }
+        public UInt32Value RId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevisionList>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RevisionList>()
+                           .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "ctx", a => a.Ctx)
+                           .AddAttribute(0, "Data", a => a.Data)
+                           .AddAttribute(0, "Formatting", a => a.Formatting)
+                           .AddAttribute(0, "RangeBased", a => a.RangeBased)
+                           .AddAttribute(0, "Fake", a => a.Fake)
+                           .AddAttribute(0, "ref", a => a.Ref, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "Headers", a => a.Headers)
+                           .AddAttribute(0, "InsDelHeaders", a => a.InsDelHeaders)
+                           .AddAttribute(0, "rId", a => a.RId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevisionList>(deep);
@@ -2161,66 +2292,78 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>rev, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "rev")]
-        [Index(0)]
-        public UInt64Value Rev { get; set; }
+        public UInt64Value Rev { get => GetAttribute<UInt64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>uid, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "uid")]
-        [Index(1)]
-        public StringValue Uid { get; set; }
+        public StringValue Uid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>sh, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: sh</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "sh")]
-        [Index(2)]
-        public StringValue Sh { get; set; }
+        public StringValue Sh { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>uidp, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uidp</para>
         /// </summary>
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "uidp")]
-        [Index(3)]
-        public StringValue Uidp { get; set; }
+        public StringValue Uidp { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>ctx, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: ctx</para>
         /// </summary>
-        [SchemaAttr(0, "ctx")]
-        [Index(4)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>refAdded, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: refAdded</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "refAdded")]
-        [Index(5)]
-        public StringValue RefAdded { get; set; }
+        public StringValue RefAdded { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>listGuid, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: listGuid</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "listGuid")]
-        [Index(6)]
-        public StringValue ListGuid { get; set; }
+        public StringValue ListGuid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevListAutoExpandRw>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RevListAutoExpandRw>()
+                           .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "ctx", a => a.Ctx)
+                           .AddAttribute(0, "refAdded", a => a.RefAdded, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "listGuid", a => a.ListGuid, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevListAutoExpandRw>(deep);
@@ -2301,47 +2444,57 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>rev, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "rev")]
-        [Index(0)]
-        public UInt64Value Rev { get; set; }
+        public UInt64Value Rev { get => GetAttribute<UInt64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>uid, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "uid")]
-        [Index(1)]
-        public StringValue Uid { get; set; }
+        public StringValue Uid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>sh, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: sh</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "sh")]
-        [Index(2)]
-        public StringValue Sh { get; set; }
+        public StringValue Sh { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>uidp, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uidp</para>
         /// </summary>
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "uidp")]
-        [Index(3)]
-        public StringValue Uidp { get; set; }
+        public StringValue Uidp { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>ctx, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: ctx</para>
         /// </summary>
-        [SchemaAttr(0, "ctx")]
-        [Index(4)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevGroup>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RevGroup>()
+                           .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "ctx", a => a.Ctx);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
@@ -2381,6 +2534,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         public RevExTest() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevExTest>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevExTest>(deep);
@@ -2441,33 +2596,36 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>t, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        [SchemaAttr(0, "t")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues> T { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues> T { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>nop, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: nop</para>
         /// </summary>
-        [SchemaAttr(0, "nop")]
-        [Index(1)]
-        public BooleanValue Nop { get; set; }
+        public BooleanValue Nop { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>tick, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: tick</para>
         /// </summary>
-        [SchemaAttr(0, "tick")]
-        [Index(2)]
-        public BooleanValue Tick { get; set; }
+        public BooleanValue Tick { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>rep, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: rep</para>
         /// </summary>
-        [SchemaAttr(0, "rep")]
-        [Index(3)]
-        public UInt32Value Rep { get; set; }
+        public UInt32Value Rep { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevCell>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RevCell>()
+                           .AddAttribute(0, "t", a => a.T)
+                           .AddAttribute(0, "nop", a => a.Nop)
+                           .AddAttribute(0, "tick", a => a.Tick)
+                           .AddAttribute(0, "rep", a => a.Rep);
+        }
 
         /// <summary>
         /// <para>FFormula.</para>
@@ -2572,34 +2730,39 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>r, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "r")]
-        [Index(0)]
-        public StringValue R { get; set; }
+        public StringValue R { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>t, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        [SchemaAttr(0, "t")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillType> T { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillType> T { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillType>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>x, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: x</para>
         /// </summary>
-        [SchemaAttr(0, "x")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillTypeExt> X { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillTypeExt> X { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillTypeExt>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>w, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: w</para>
         /// </summary>
-        [SchemaAttr(0, "w")]
-        [Index(3)]
-        public UInt32Value W { get; set; }
+        public UInt32Value W { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChangeCellSubEdit>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ChangeCellSubEdit>()
+                           .AddAttribute(0, "r", a => a.R, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "t", a => a.T)
+                           .AddAttribute(0, "x", a => a.X)
+                           .AddAttribute(0, "w", a => a.W);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -2659,6 +2822,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 1)
@@ -2705,6 +2870,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             return new StringValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FormulaFormula>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaFormula>(deep);
     }
@@ -2737,6 +2904,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         {
             return new StringValue { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FFormula>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FFormula>(deep);
@@ -2793,44 +2962,50 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uid, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "uid")]
-        [Index(0)]
-        public StringValue Uid { get; set; }
+        public StringValue Uid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>eft, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: eft</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "eft")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FeatureType> Eft { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FeatureType> Eft { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FeatureType>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>eftx, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: eftx</para>
         /// </summary>
-        [SchemaAttr(0, "eftx")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.ExtFeatureType> Eftx { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.ExtFeatureType> Eftx { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.ExtFeatureType>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>seft, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: seft</para>
         /// </summary>
-        [SchemaAttr(0, "seft")]
-        [Index(3)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.SubFeatureType> Seft { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.SubFeatureType> Seft { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.SubFeatureType>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>seftx, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: seftx</para>
         /// </summary>
-        [SchemaAttr(0, "seftx")]
-        [Index(4)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.ExtSubFeatureType> Seftx { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.ExtSubFeatureType> Seftx { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.ExtSubFeatureType>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StateBasedHeader>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<StateBasedHeader>()
+                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "eft", a => a.Eft, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "eftx", a => a.Eftx)
+                           .AddAttribute(0, "seft", a => a.Seft)
+                           .AddAttribute(0, "seftx", a => a.Seftx);
+        }
 
         /// <summary>
         /// <para>RefMap.</para>
@@ -2879,10 +3054,18 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevisionStateLink>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RevisionStateLink>()
+                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevisionStateLink>(deep);
@@ -2942,6 +3125,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         public RevisionState(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevisionState>();
 
         /// <summary>
         /// <para>RowColVisualOps.</para>
@@ -3078,6 +3263,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RefMap>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RefCell), 1, 1, version: FileFormatVersions.Office2016),
@@ -3113,35 +3300,42 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>action, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: action</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "action")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOp> Action { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOp> Action { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOp>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>isRow, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: isRow</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "isRow")]
-        [Index(1)]
-        public BooleanValue IsRow { get; set; }
+        public BooleanValue IsRow { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>size, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr(0, "size")]
-        [Index(2)]
-        public UInt32Value Size { get; set; }
+        public UInt32Value Size { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>userSized, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: userSized</para>
         /// </summary>
-        [SchemaAttr(0, "userSized")]
-        [Index(3)]
-        public BooleanValue UserSized { get; set; }
+        public BooleanValue UserSized { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RowColVisualOps>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RowColVisualOps>()
+                           .AddAttribute(0, "action", a => a.Action, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "isRow", a => a.IsRow, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "size", a => a.Size)
+                           .AddAttribute(0, "userSized", a => a.UserSized);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowColVisualOps>(deep);
@@ -3167,10 +3361,18 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>hide, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: hide</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "hide")]
-        [Index(0)]
-        public BooleanValue Hide { get; set; }
+        public BooleanValue Hide { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HideUnhideSheet>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<HideUnhideSheet>()
+                           .AddAttribute(0, "hide", a => a.Hide, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HideUnhideSheet>(deep);
@@ -3196,19 +3398,28 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>showGridLines, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: showGridLines</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "showGridLines")]
-        [Index(0)]
-        public BooleanValue ShowGridLines { get; set; }
+        public BooleanValue ShowGridLines { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showRowCol, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: showRowCol</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "showRowCol")]
-        [Index(1)]
-        public BooleanValue ShowRowCol { get; set; }
+        public BooleanValue ShowRowCol { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowGridlinesHeadings>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ShowGridlinesHeadings>()
+                           .AddAttribute(0, "showGridLines", a => a.ShowGridLines, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "showRowCol", a => a.ShowRowCol, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowGridlinesHeadings>(deep);
@@ -3234,10 +3445,18 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>sheetViewUid, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: sheetViewUid</para>
         /// </summary>
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "sheetViewUid")]
-        [Index(0)]
-        public StringValue SheetViewUid { get; set; }
+        public StringValue SheetViewUid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FreezePanes>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<FreezePanes>()
+                           .AddAttribute(0, "sheetViewUid", a => a.SheetViewUid, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FreezePanes>(deep);
@@ -3294,10 +3513,18 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>isRow, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: isRow</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "isRow")]
-        [Index(0)]
-        public BooleanValue IsRow { get; set; }
+        public BooleanValue IsRow { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Outlines>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Outlines>()
+                           .AddAttribute(0, "isRow", a => a.IsRow, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -3330,19 +3557,28 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>isCollapsed, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: isCollapsed</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "isCollapsed")]
-        [Index(0)]
-        public BooleanValue IsCollapsed { get; set; }
+        public BooleanValue IsCollapsed { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>level, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: level</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "level")]
-        [Index(1)]
-        public ByteValue Level { get; set; }
+        public ByteValue Level { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Outline>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Outline>()
+                           .AddAttribute(0, "isCollapsed", a => a.IsCollapsed, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "level", a => a.Level, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Outline>(deep);
@@ -3376,6 +3612,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         {
             return new StringValue { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Xstring>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Xstring>(deep);
@@ -3434,6 +3672,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RstType>();
+
         /// <summary>
         /// <para>Text.</para>
         /// <para>Represents the following element tag in the schema: x:t.</para>
@@ -3481,62 +3721,72 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>n, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: n</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "n")]
-        [Index(0)]
-        public StringValue N { get; set; }
+        public StringValue N { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>ajt, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: ajt</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "ajt")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType> Ajt { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType> Ajt { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>ajtx, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: ajtx</para>
         /// </summary>
-        [SchemaAttr(0, "ajtx")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt> Ajtx { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt> Ajtx { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>homeRef, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: homeRef</para>
         /// </summary>
-        [SchemaAttr(0, "homeRef")]
-        [Index(3)]
-        public BooleanValue HomeRef { get; set; }
+        public BooleanValue HomeRef { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>r, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "r")]
-        [Index(4)]
-        public ListValue<StringValue> R { get; set; }
+        public ListValue<StringValue> R { get => GetAttribute<ListValue<StringValue>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>uid, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "uid")]
-        [Index(5)]
-        public StringValue Uid { get; set; }
+        public StringValue Uid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>uidLast, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uidLast</para>
         /// </summary>
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "uidLast")]
-        [Index(6)]
-        public StringValue UidLast { get; set; }
+        public StringValue UidLast { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RefCell>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RefCell>()
+                           .AddAttribute(0, "n", a => a.N, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "ajt", a => a.Ajt, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "ajtx", a => a.Ajtx)
+                           .AddAttribute(0, "homeRef", a => a.HomeRef)
+                           .AddAttribute(0, "r", a => a.R, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "uidLast", a => a.UidLast, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RefCell>(deep);
@@ -3562,45 +3812,53 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>n, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: n</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "n")]
-        [Index(0)]
-        public StringValue N { get; set; }
+        public StringValue N { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>ajt, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: ajt</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "ajt")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType> Ajt { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType> Ajt { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>ajtx, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: ajtx</para>
         /// </summary>
-        [SchemaAttr(0, "ajtx")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt> Ajtx { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt> Ajtx { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>homeRef, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: homeRef</para>
         /// </summary>
-        [SchemaAttr(0, "homeRef")]
-        [Index(3)]
-        public BooleanValue HomeRef { get; set; }
+        public BooleanValue HomeRef { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>uid, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "uid")]
-        [Index(4)]
-        public StringValue Uid { get; set; }
+        public StringValue Uid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SheetXluid>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SheetXluid>()
+                           .AddAttribute(0, "n", a => a.N, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "ajt", a => a.Ajt, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "ajtx", a => a.Ajtx)
+                           .AddAttribute(0, "homeRef", a => a.HomeRef)
+                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SheetXluid>(deep);
@@ -3626,124 +3884,139 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>n, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: n</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "n")]
-        [Index(0)]
-        public StringValue N { get; set; }
+        public StringValue N { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>ajt, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: ajt</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "ajt")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType> Ajt { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType> Ajt { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>ajtx, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: ajtx</para>
         /// </summary>
-        [SchemaAttr(0, "ajtx")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt> Ajtx { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt> Ajtx { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>homeRef, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: homeRef</para>
         /// </summary>
-        [SchemaAttr(0, "homeRef")]
-        [Index(3)]
-        public BooleanValue HomeRef { get; set; }
+        public BooleanValue HomeRef { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>r, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        [SchemaAttr(0, "r")]
-        [Index(4)]
-        public StringValue R { get; set; }
+        public StringValue R { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>fromRowOff, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: fromRowOff</para>
         /// </summary>
-        [NumberValidator(MinInclusive = -27273042329600L, MaxInclusive = 27273042316900L)]
-        [SchemaAttr(0, "fromRowOff")]
-        [Index(5)]
-        public Int64Value FromRowOff { get; set; }
+        public Int64Value FromRowOff { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>fromColOff, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: fromColOff</para>
         /// </summary>
-        [NumberValidator(MinInclusive = -27273042329600L, MaxInclusive = 27273042316900L)]
-        [SchemaAttr(0, "fromColOff")]
-        [Index(6)]
-        public Int64Value FromColOff { get; set; }
+        public Int64Value FromColOff { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>toRowOff, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: toRowOff</para>
         /// </summary>
-        [NumberValidator(MinInclusive = -27273042329600L, MaxInclusive = 27273042316900L)]
-        [SchemaAttr(0, "toRowOff")]
-        [Index(7)]
-        public Int64Value ToRowOff { get; set; }
+        public Int64Value ToRowOff { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>toColOff, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: toColOff</para>
         /// </summary>
-        [NumberValidator(MinInclusive = -27273042329600L, MaxInclusive = 27273042316900L)]
-        [SchemaAttr(0, "toColOff")]
-        [Index(8)]
-        public Int64Value ToColOff { get; set; }
+        public Int64Value ToColOff { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>cx, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: cx</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 2147483647L)]
-        [SchemaAttr(0, "cx")]
-        [Index(9)]
-        public Int64Value Cx { get; set; }
+        public Int64Value Cx { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>cy, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: cy</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 2147483647L)]
-        [SchemaAttr(0, "cy")]
-        [Index(10)]
-        public Int64Value Cy { get; set; }
+        public Int64Value Cy { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>x, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: x</para>
         /// </summary>
-        [NumberValidator(MinInclusive = -27273042329600L, MaxInclusive = 27273042316900L)]
-        [SchemaAttr(0, "x")]
-        [Index(11)]
-        public Int64Value X { get; set; }
+        public Int64Value X { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>y, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: y</para>
         /// </summary>
-        [NumberValidator(MinInclusive = -27273042329600L, MaxInclusive = 27273042316900L)]
-        [SchemaAttr(0, "y")]
-        [Index(12)]
-        public Int64Value Y { get; set; }
+        public Int64Value Y { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>oat, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: oat</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "oat")]
-        [Index(13)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.OartAnchorType> Oat { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.OartAnchorType> Oat { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.OartAnchorType>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RefOartAnchor>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RefOartAnchor>()
+                           .AddAttribute(0, "n", a => a.N, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "ajt", a => a.Ajt, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "ajtx", a => a.Ajtx)
+                           .AddAttribute(0, "homeRef", a => a.HomeRef)
+                           .AddAttribute(0, "r", a => a.R)
+                           .AddAttribute(0, "fromRowOff", a => a.FromRowOff, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                           })
+                           .AddAttribute(0, "fromColOff", a => a.FromColOff, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                           })
+                           .AddAttribute(0, "toRowOff", a => a.ToRowOff, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                           })
+                           .AddAttribute(0, "toColOff", a => a.ToColOff, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                           })
+                           .AddAttribute(0, "cx", a => a.Cx, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+                           })
+                           .AddAttribute(0, "cy", a => a.Cy, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+                           })
+                           .AddAttribute(0, "x", a => a.X, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                           })
+                           .AddAttribute(0, "y", a => a.Y, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                           })
+                           .AddAttribute(0, "oat", a => a.Oat, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RefOartAnchor>(deep);
@@ -3764,6 +4037,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         public RefFuture() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RefFuture>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RefFuture>(deep);
@@ -3789,35 +4064,42 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>n, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: n</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "n")]
-        [Index(0)]
-        public StringValue N { get; set; }
+        public StringValue N { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>ajt, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: ajt</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "ajt")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType> Ajt { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType> Ajt { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>ajtx, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: ajtx</para>
         /// </summary>
-        [SchemaAttr(0, "ajtx")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt> Ajtx { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt> Ajtx { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>homeRef, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: homeRef</para>
         /// </summary>
-        [SchemaAttr(0, "homeRef")]
-        [Index(3)]
-        public BooleanValue HomeRef { get; set; }
+        public BooleanValue HomeRef { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RefTest>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RefTest>()
+                           .AddAttribute(0, "n", a => a.N, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "ajt", a => a.Ajt, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "ajtx", a => a.Ajtx)
+                           .AddAttribute(0, "homeRef", a => a.HomeRef);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RefTest>(deep);
@@ -3878,106 +4160,102 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr(0, "type")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>errorStyle</para>
         /// <para>Represents the following attribute in the schema: errorStyle</para>
         /// </summary>
-        [SchemaAttr(0, "errorStyle")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues> ErrorStyle { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues> ErrorStyle { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>imeMode</para>
         /// <para>Represents the following attribute in the schema: imeMode</para>
         /// </summary>
-        [SchemaAttr(0, "imeMode")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues> ImeMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues> ImeMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>operator</para>
         /// <para>Represents the following attribute in the schema: operator</para>
         /// </summary>
-        [SchemaAttr(0, "operator")]
-        [Index(3)]
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues> Operator { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues> Operator { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>allowBlank</para>
         /// <para>Represents the following attribute in the schema: allowBlank</para>
         /// </summary>
-        [SchemaAttr(0, "allowBlank")]
-        [Index(4)]
-        public BooleanValue AllowBlank { get; set; }
+        public BooleanValue AllowBlank { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showDropDown</para>
         /// <para>Represents the following attribute in the schema: showDropDown</para>
         /// </summary>
-        [SchemaAttr(0, "showDropDown")]
-        [Index(5)]
-        public BooleanValue ShowDropDown { get; set; }
+        public BooleanValue ShowDropDown { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showInputMessage</para>
         /// <para>Represents the following attribute in the schema: showInputMessage</para>
         /// </summary>
-        [SchemaAttr(0, "showInputMessage")]
-        [Index(6)]
-        public BooleanValue ShowInputMessage { get; set; }
+        public BooleanValue ShowInputMessage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showErrorMessage</para>
         /// <para>Represents the following attribute in the schema: showErrorMessage</para>
         /// </summary>
-        [SchemaAttr(0, "showErrorMessage")]
-        [Index(7)]
-        public BooleanValue ShowErrorMessage { get; set; }
+        public BooleanValue ShowErrorMessage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>errorTitle</para>
         /// <para>Represents the following attribute in the schema: errorTitle</para>
         /// </summary>
-        [SchemaAttr(0, "errorTitle")]
-        [Index(8)]
-        public StringValue ErrorTitle { get; set; }
+        public StringValue ErrorTitle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>error</para>
         /// <para>Represents the following attribute in the schema: error</para>
         /// </summary>
-        [SchemaAttr(0, "error")]
-        [Index(9)]
-        public StringValue Error { get; set; }
+        public StringValue Error { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>promptTitle</para>
         /// <para>Represents the following attribute in the schema: promptTitle</para>
         /// </summary>
-        [SchemaAttr(0, "promptTitle")]
-        [Index(10)]
-        public StringValue PromptTitle { get; set; }
+        public StringValue PromptTitle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>prompt</para>
         /// <para>Represents the following attribute in the schema: prompt</para>
         /// </summary>
-        [SchemaAttr(0, "prompt")]
-        [Index(11)]
-        public StringValue Prompt { get; set; }
+        public StringValue Prompt { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>sqref</para>
         /// <para>Represents the following attribute in the schema: sqref</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "sqref")]
-        [Index(12)]
-        public ListValue<StringValue> SequenceOfReferences { get; set; }
+        public ListValue<StringValue> SequenceOfReferences { get => GetAttribute<ListValue<StringValue>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataValidation>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<DataValidation>()
+                           .AddAttribute(0, "type", a => a.Type)
+                           .AddAttribute(0, "errorStyle", a => a.ErrorStyle)
+                           .AddAttribute(0, "imeMode", a => a.ImeMode)
+                           .AddAttribute(0, "operator", a => a.Operator)
+                           .AddAttribute(0, "allowBlank", a => a.AllowBlank)
+                           .AddAttribute(0, "showDropDown", a => a.ShowDropDown)
+                           .AddAttribute(0, "showInputMessage", a => a.ShowInputMessage)
+                           .AddAttribute(0, "showErrorMessage", a => a.ShowErrorMessage)
+                           .AddAttribute(0, "errorTitle", a => a.ErrorTitle)
+                           .AddAttribute(0, "error", a => a.Error)
+                           .AddAttribute(0, "promptTitle", a => a.PromptTitle)
+                           .AddAttribute(0, "prompt", a => a.Prompt)
+                           .AddAttribute(0, "sqref", a => a.SequenceOfReferences, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <summary>
         /// <para>List.</para>
@@ -4051,10 +4329,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "ref")]
-        [Index(0)]
-        public StringValue Reference { get; set; }
+        public StringValue Reference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Relationship Id</para>
@@ -4063,33 +4338,40 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr(19, "id")]
-        [Index(1)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Location</para>
         /// <para>Represents the following attribute in the schema: location</para>
         /// </summary>
-        [SchemaAttr(0, "location")]
-        [Index(2)]
-        public StringValue Location { get; set; }
+        public StringValue Location { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Tool Tip</para>
         /// <para>Represents the following attribute in the schema: tooltip</para>
         /// </summary>
-        [SchemaAttr(0, "tooltip")]
-        [Index(3)]
-        public StringValue Tooltip { get; set; }
+        public StringValue Tooltip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Display String</para>
         /// <para>Represents the following attribute in the schema: display</para>
         /// </summary>
-        [SchemaAttr(0, "display")]
-        [Index(4)]
-        public StringValue Display { get; set; }
+        public StringValue Display { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Hyperlink>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Hyperlink>()
+                           .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(19, "id", a => a.Id)
+                           .AddAttribute(0, "location", a => a.Location)
+                           .AddAttribute(0, "tooltip", a => a.Tooltip)
+                           .AddAttribute(0, "display", a => a.Display);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Hyperlink>(deep);
@@ -4164,137 +4446,127 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>manualMax, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: manualMax</para>
         /// </summary>
-        [SchemaAttr(0, "manualMax")]
-        [Index(0)]
-        public DoubleValue ManualMax { get; set; }
+        public DoubleValue ManualMax { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>manualMin, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: manualMin</para>
         /// </summary>
-        [SchemaAttr(0, "manualMin")]
-        [Index(1)]
-        public DoubleValue ManualMin { get; set; }
+        public DoubleValue ManualMin { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>lineWeight, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: lineWeight</para>
         /// </summary>
-        [SchemaAttr(0, "lineWeight")]
-        [Index(2)]
-        public DoubleValue LineWeight { get; set; }
+        public DoubleValue LineWeight { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>type, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr(0, "type")]
-        [Index(3)]
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineTypeValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineTypeValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineTypeValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>dateAxis, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: dateAxis</para>
         /// </summary>
-        [SchemaAttr(0, "dateAxis")]
-        [Index(4)]
-        public BooleanValue DateAxis { get; set; }
+        public BooleanValue DateAxis { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>displayEmptyCellsAs, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: displayEmptyCellsAs</para>
         /// </summary>
-        [SchemaAttr(0, "displayEmptyCellsAs")]
-        [Index(5)]
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DisplayBlanksAsValues> DisplayEmptyCellsAs { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DisplayBlanksAsValues> DisplayEmptyCellsAs { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DisplayBlanksAsValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>markers, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: markers</para>
         /// </summary>
-        [SchemaAttr(0, "markers")]
-        [Index(6)]
-        public BooleanValue Markers { get; set; }
+        public BooleanValue Markers { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>high, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: high</para>
         /// </summary>
-        [SchemaAttr(0, "high")]
-        [Index(7)]
-        public BooleanValue High { get; set; }
+        public BooleanValue High { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>low, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: low</para>
         /// </summary>
-        [SchemaAttr(0, "low")]
-        [Index(8)]
-        public BooleanValue Low { get; set; }
+        public BooleanValue Low { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>first, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: first</para>
         /// </summary>
-        [SchemaAttr(0, "first")]
-        [Index(9)]
-        public BooleanValue First { get; set; }
+        public BooleanValue First { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>last, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: last</para>
         /// </summary>
-        [SchemaAttr(0, "last")]
-        [Index(10)]
-        public BooleanValue Last { get; set; }
+        public BooleanValue Last { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>negative, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: negative</para>
         /// </summary>
-        [SchemaAttr(0, "negative")]
-        [Index(11)]
-        public BooleanValue Negative { get; set; }
+        public BooleanValue Negative { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>displayXAxis, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: displayXAxis</para>
         /// </summary>
-        [SchemaAttr(0, "displayXAxis")]
-        [Index(12)]
-        public BooleanValue DisplayXAxis { get; set; }
+        public BooleanValue DisplayXAxis { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>displayHidden, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: displayHidden</para>
         /// </summary>
-        [SchemaAttr(0, "displayHidden")]
-        [Index(13)]
-        public BooleanValue DisplayHidden { get; set; }
+        public BooleanValue DisplayHidden { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>minAxisType, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: minAxisType</para>
         /// </summary>
-        [SchemaAttr(0, "minAxisType")]
-        [Index(14)]
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues> MinAxisType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues> MinAxisType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>maxAxisType, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: maxAxisType</para>
         /// </summary>
-        [SchemaAttr(0, "maxAxisType")]
-        [Index(15)]
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues> MaxAxisType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues> MaxAxisType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>rightToLeft, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: rightToLeft</para>
         /// </summary>
-        [SchemaAttr(0, "rightToLeft")]
-        [Index(16)]
-        public BooleanValue RightToLeft { get; set; }
+        public BooleanValue RightToLeft { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SparklineGroup>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SparklineGroup>()
+                           .AddAttribute(0, "manualMax", a => a.ManualMax)
+                           .AddAttribute(0, "manualMin", a => a.ManualMin)
+                           .AddAttribute(0, "lineWeight", a => a.LineWeight)
+                           .AddAttribute(0, "type", a => a.Type)
+                           .AddAttribute(0, "dateAxis", a => a.DateAxis)
+                           .AddAttribute(0, "displayEmptyCellsAs", a => a.DisplayEmptyCellsAs)
+                           .AddAttribute(0, "markers", a => a.Markers)
+                           .AddAttribute(0, "high", a => a.High)
+                           .AddAttribute(0, "low", a => a.Low)
+                           .AddAttribute(0, "first", a => a.First)
+                           .AddAttribute(0, "last", a => a.Last)
+                           .AddAttribute(0, "negative", a => a.Negative)
+                           .AddAttribute(0, "displayXAxis", a => a.DisplayXAxis)
+                           .AddAttribute(0, "displayHidden", a => a.DisplayHidden)
+                           .AddAttribute(0, "minAxisType", a => a.MinAxisType)
+                           .AddAttribute(0, "maxAxisType", a => a.MaxAxisType)
+                           .AddAttribute(0, "rightToLeft", a => a.RightToLeft);
+        }
 
         /// <summary>
         /// <para>SeriesColor.</para>
@@ -4497,6 +4769,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Comments>();
+
         /// <summary>
         /// <para>Authors.</para>
         /// <para>Represents the following element tag in the schema: x:authors.</para>
@@ -4604,9 +4878,15 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Cell or Range Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        [SchemaAttr(0, "ref")]
-        [Index(0)]
-        public StringValue Reference { get; set; }
+        public StringValue Reference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutoFilter>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<AutoFilter>()
+                           .AddAttribute(0, "ref", a => a.Reference);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -4704,548 +4984,493 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "name")]
-        [Index(0)]
-        public StringValue Name { get; set; }
+        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>cacheId</para>
         /// <para>Represents the following attribute in the schema: cacheId</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "cacheId")]
-        [Index(1)]
-        public UInt32Value CacheId { get; set; }
+        public UInt32Value CacheId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>dataOnRows</para>
         /// <para>Represents the following attribute in the schema: dataOnRows</para>
         /// </summary>
-        [SchemaAttr(0, "dataOnRows")]
-        [Index(2)]
-        public BooleanValue DataOnRows { get; set; }
+        public BooleanValue DataOnRows { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>dataPosition</para>
         /// <para>Represents the following attribute in the schema: dataPosition</para>
         /// </summary>
-        [SchemaAttr(0, "dataPosition")]
-        [Index(3)]
-        public UInt32Value DataPosition { get; set; }
+        public UInt32Value DataPosition { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Auto Format Id</para>
         /// <para>Represents the following attribute in the schema: autoFormatId</para>
         /// </summary>
-        [SchemaAttr(0, "autoFormatId")]
-        [Index(4)]
-        public UInt32Value AutoFormatId { get; set; }
+        public UInt32Value AutoFormatId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Apply Number Formats</para>
         /// <para>Represents the following attribute in the schema: applyNumberFormats</para>
         /// </summary>
-        [SchemaAttr(0, "applyNumberFormats")]
-        [Index(5)]
-        public BooleanValue ApplyNumberFormats { get; set; }
+        public BooleanValue ApplyNumberFormats { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Apply Border Formats</para>
         /// <para>Represents the following attribute in the schema: applyBorderFormats</para>
         /// </summary>
-        [SchemaAttr(0, "applyBorderFormats")]
-        [Index(6)]
-        public BooleanValue ApplyBorderFormats { get; set; }
+        public BooleanValue ApplyBorderFormats { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Apply Font Formats</para>
         /// <para>Represents the following attribute in the schema: applyFontFormats</para>
         /// </summary>
-        [SchemaAttr(0, "applyFontFormats")]
-        [Index(7)]
-        public BooleanValue ApplyFontFormats { get; set; }
+        public BooleanValue ApplyFontFormats { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Apply Pattern Formats</para>
         /// <para>Represents the following attribute in the schema: applyPatternFormats</para>
         /// </summary>
-        [SchemaAttr(0, "applyPatternFormats")]
-        [Index(8)]
-        public BooleanValue ApplyPatternFormats { get; set; }
+        public BooleanValue ApplyPatternFormats { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Apply Alignment Formats</para>
         /// <para>Represents the following attribute in the schema: applyAlignmentFormats</para>
         /// </summary>
-        [SchemaAttr(0, "applyAlignmentFormats")]
-        [Index(9)]
-        public BooleanValue ApplyAlignmentFormats { get; set; }
+        public BooleanValue ApplyAlignmentFormats { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Apply Width / Height Formats</para>
         /// <para>Represents the following attribute in the schema: applyWidthHeightFormats</para>
         /// </summary>
-        [SchemaAttr(0, "applyWidthHeightFormats")]
-        [Index(10)]
-        public BooleanValue ApplyWidthHeightFormats { get; set; }
+        public BooleanValue ApplyWidthHeightFormats { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>dataCaption</para>
         /// <para>Represents the following attribute in the schema: dataCaption</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "dataCaption")]
-        [Index(11)]
-        public StringValue DataCaption { get; set; }
+        public StringValue DataCaption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>grandTotalCaption</para>
         /// <para>Represents the following attribute in the schema: grandTotalCaption</para>
         /// </summary>
-        [SchemaAttr(0, "grandTotalCaption")]
-        [Index(12)]
-        public StringValue GrandTotalCaption { get; set; }
+        public StringValue GrandTotalCaption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>errorCaption</para>
         /// <para>Represents the following attribute in the schema: errorCaption</para>
         /// </summary>
-        [SchemaAttr(0, "errorCaption")]
-        [Index(13)]
-        public StringValue ErrorCaption { get; set; }
+        public StringValue ErrorCaption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showError</para>
         /// <para>Represents the following attribute in the schema: showError</para>
         /// </summary>
-        [SchemaAttr(0, "showError")]
-        [Index(14)]
-        public BooleanValue ShowError { get; set; }
+        public BooleanValue ShowError { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>missingCaption</para>
         /// <para>Represents the following attribute in the schema: missingCaption</para>
         /// </summary>
-        [SchemaAttr(0, "missingCaption")]
-        [Index(15)]
-        public StringValue MissingCaption { get; set; }
+        public StringValue MissingCaption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showMissing</para>
         /// <para>Represents the following attribute in the schema: showMissing</para>
         /// </summary>
-        [SchemaAttr(0, "showMissing")]
-        [Index(16)]
-        public BooleanValue ShowMissing { get; set; }
+        public BooleanValue ShowMissing { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>pageStyle</para>
         /// <para>Represents the following attribute in the schema: pageStyle</para>
         /// </summary>
-        [SchemaAttr(0, "pageStyle")]
-        [Index(17)]
-        public StringValue PageStyle { get; set; }
+        public StringValue PageStyle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>pivotTableStyle</para>
         /// <para>Represents the following attribute in the schema: pivotTableStyle</para>
         /// </summary>
-        [SchemaAttr(0, "pivotTableStyle")]
-        [Index(18)]
-        public StringValue PivotTableStyleName { get; set; }
+        public StringValue PivotTableStyleName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>vacatedStyle</para>
         /// <para>Represents the following attribute in the schema: vacatedStyle</para>
         /// </summary>
-        [SchemaAttr(0, "vacatedStyle")]
-        [Index(19)]
-        public StringValue VacatedStyle { get; set; }
+        public StringValue VacatedStyle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr(0, "tag")]
-        [Index(20)]
-        public StringValue Tag { get; set; }
+        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>updatedVersion</para>
         /// <para>Represents the following attribute in the schema: updatedVersion</para>
         /// </summary>
-        [SchemaAttr(0, "updatedVersion")]
-        [Index(21)]
-        public ByteValue UpdatedVersion { get; set; }
+        public ByteValue UpdatedVersion { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>minRefreshableVersion</para>
         /// <para>Represents the following attribute in the schema: minRefreshableVersion</para>
         /// </summary>
-        [SchemaAttr(0, "minRefreshableVersion")]
-        [Index(22)]
-        public ByteValue MinRefreshableVersion { get; set; }
+        public ByteValue MinRefreshableVersion { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>asteriskTotals</para>
         /// <para>Represents the following attribute in the schema: asteriskTotals</para>
         /// </summary>
-        [SchemaAttr(0, "asteriskTotals")]
-        [Index(23)]
-        public BooleanValue AsteriskTotals { get; set; }
+        public BooleanValue AsteriskTotals { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showItems</para>
         /// <para>Represents the following attribute in the schema: showItems</para>
         /// </summary>
-        [SchemaAttr(0, "showItems")]
-        [Index(24)]
-        public BooleanValue ShowItems { get; set; }
+        public BooleanValue ShowItems { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>editData</para>
         /// <para>Represents the following attribute in the schema: editData</para>
         /// </summary>
-        [SchemaAttr(0, "editData")]
-        [Index(25)]
-        public BooleanValue EditData { get; set; }
+        public BooleanValue EditData { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>disableFieldList</para>
         /// <para>Represents the following attribute in the schema: disableFieldList</para>
         /// </summary>
-        [SchemaAttr(0, "disableFieldList")]
-        [Index(26)]
-        public BooleanValue DisableFieldList { get; set; }
+        public BooleanValue DisableFieldList { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showCalcMbrs</para>
         /// <para>Represents the following attribute in the schema: showCalcMbrs</para>
         /// </summary>
-        [SchemaAttr(0, "showCalcMbrs")]
-        [Index(27)]
-        public BooleanValue ShowCalculatedMembers { get; set; }
+        public BooleanValue ShowCalculatedMembers { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>visualTotals</para>
         /// <para>Represents the following attribute in the schema: visualTotals</para>
         /// </summary>
-        [SchemaAttr(0, "visualTotals")]
-        [Index(28)]
-        public BooleanValue VisualTotals { get; set; }
+        public BooleanValue VisualTotals { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showMultipleLabel</para>
         /// <para>Represents the following attribute in the schema: showMultipleLabel</para>
         /// </summary>
-        [SchemaAttr(0, "showMultipleLabel")]
-        [Index(29)]
-        public BooleanValue ShowMultipleLabel { get; set; }
+        public BooleanValue ShowMultipleLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showDataDropDown</para>
         /// <para>Represents the following attribute in the schema: showDataDropDown</para>
         /// </summary>
-        [SchemaAttr(0, "showDataDropDown")]
-        [Index(30)]
-        public BooleanValue ShowDataDropDown { get; set; }
+        public BooleanValue ShowDataDropDown { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showDrill</para>
         /// <para>Represents the following attribute in the schema: showDrill</para>
         /// </summary>
-        [SchemaAttr(0, "showDrill")]
-        [Index(31)]
-        public BooleanValue ShowDrill { get; set; }
+        public BooleanValue ShowDrill { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>printDrill</para>
         /// <para>Represents the following attribute in the schema: printDrill</para>
         /// </summary>
-        [SchemaAttr(0, "printDrill")]
-        [Index(32)]
-        public BooleanValue PrintDrill { get; set; }
+        public BooleanValue PrintDrill { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showMemberPropertyTips</para>
         /// <para>Represents the following attribute in the schema: showMemberPropertyTips</para>
         /// </summary>
-        [SchemaAttr(0, "showMemberPropertyTips")]
-        [Index(33)]
-        public BooleanValue ShowMemberPropertyTips { get; set; }
+        public BooleanValue ShowMemberPropertyTips { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showDataTips</para>
         /// <para>Represents the following attribute in the schema: showDataTips</para>
         /// </summary>
-        [SchemaAttr(0, "showDataTips")]
-        [Index(34)]
-        public BooleanValue ShowDataTips { get; set; }
+        public BooleanValue ShowDataTips { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>enableWizard</para>
         /// <para>Represents the following attribute in the schema: enableWizard</para>
         /// </summary>
-        [SchemaAttr(0, "enableWizard")]
-        [Index(35)]
-        public BooleanValue EnableWizard { get; set; }
+        public BooleanValue EnableWizard { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>enableDrill</para>
         /// <para>Represents the following attribute in the schema: enableDrill</para>
         /// </summary>
-        [SchemaAttr(0, "enableDrill")]
-        [Index(36)]
-        public BooleanValue EnableDrill { get; set; }
+        public BooleanValue EnableDrill { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>enableFieldProperties</para>
         /// <para>Represents the following attribute in the schema: enableFieldProperties</para>
         /// </summary>
-        [SchemaAttr(0, "enableFieldProperties")]
-        [Index(37)]
-        public BooleanValue EnableFieldProperties { get; set; }
+        public BooleanValue EnableFieldProperties { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>preserveFormatting</para>
         /// <para>Represents the following attribute in the schema: preserveFormatting</para>
         /// </summary>
-        [SchemaAttr(0, "preserveFormatting")]
-        [Index(38)]
-        public BooleanValue PreserveFormatting { get; set; }
+        public BooleanValue PreserveFormatting { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>useAutoFormatting</para>
         /// <para>Represents the following attribute in the schema: useAutoFormatting</para>
         /// </summary>
-        [SchemaAttr(0, "useAutoFormatting")]
-        [Index(39)]
-        public BooleanValue UseAutoFormatting { get; set; }
+        public BooleanValue UseAutoFormatting { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>pageWrap</para>
         /// <para>Represents the following attribute in the schema: pageWrap</para>
         /// </summary>
-        [SchemaAttr(0, "pageWrap")]
-        [Index(40)]
-        public UInt32Value PageWrap { get; set; }
+        public UInt32Value PageWrap { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>pageOverThenDown</para>
         /// <para>Represents the following attribute in the schema: pageOverThenDown</para>
         /// </summary>
-        [SchemaAttr(0, "pageOverThenDown")]
-        [Index(41)]
-        public BooleanValue PageOverThenDown { get; set; }
+        public BooleanValue PageOverThenDown { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>subtotalHiddenItems</para>
         /// <para>Represents the following attribute in the schema: subtotalHiddenItems</para>
         /// </summary>
-        [SchemaAttr(0, "subtotalHiddenItems")]
-        [Index(42)]
-        public BooleanValue SubtotalHiddenItems { get; set; }
+        public BooleanValue SubtotalHiddenItems { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>rowGrandTotals</para>
         /// <para>Represents the following attribute in the schema: rowGrandTotals</para>
         /// </summary>
-        [SchemaAttr(0, "rowGrandTotals")]
-        [Index(43)]
-        public BooleanValue RowGrandTotals { get; set; }
+        public BooleanValue RowGrandTotals { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>colGrandTotals</para>
         /// <para>Represents the following attribute in the schema: colGrandTotals</para>
         /// </summary>
-        [SchemaAttr(0, "colGrandTotals")]
-        [Index(44)]
-        public BooleanValue ColumnGrandTotals { get; set; }
+        public BooleanValue ColumnGrandTotals { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>fieldPrintTitles</para>
         /// <para>Represents the following attribute in the schema: fieldPrintTitles</para>
         /// </summary>
-        [SchemaAttr(0, "fieldPrintTitles")]
-        [Index(45)]
-        public BooleanValue FieldPrintTitles { get; set; }
+        public BooleanValue FieldPrintTitles { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>itemPrintTitles</para>
         /// <para>Represents the following attribute in the schema: itemPrintTitles</para>
         /// </summary>
-        [SchemaAttr(0, "itemPrintTitles")]
-        [Index(46)]
-        public BooleanValue ItemPrintTitles { get; set; }
+        public BooleanValue ItemPrintTitles { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>mergeItem</para>
         /// <para>Represents the following attribute in the schema: mergeItem</para>
         /// </summary>
-        [SchemaAttr(0, "mergeItem")]
-        [Index(47)]
-        public BooleanValue MergeItem { get; set; }
+        public BooleanValue MergeItem { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showDropZones</para>
         /// <para>Represents the following attribute in the schema: showDropZones</para>
         /// </summary>
-        [SchemaAttr(0, "showDropZones")]
-        [Index(48)]
-        public BooleanValue ShowDropZones { get; set; }
+        public BooleanValue ShowDropZones { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>createdVersion</para>
         /// <para>Represents the following attribute in the schema: createdVersion</para>
         /// </summary>
-        [SchemaAttr(0, "createdVersion")]
-        [Index(49)]
-        public ByteValue CreatedVersion { get; set; }
+        public ByteValue CreatedVersion { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>indent</para>
         /// <para>Represents the following attribute in the schema: indent</para>
         /// </summary>
-        [SchemaAttr(0, "indent")]
-        [Index(50)]
-        public UInt32Value Indent { get; set; }
+        public UInt32Value Indent { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showEmptyRow</para>
         /// <para>Represents the following attribute in the schema: showEmptyRow</para>
         /// </summary>
-        [SchemaAttr(0, "showEmptyRow")]
-        [Index(51)]
-        public BooleanValue ShowEmptyRow { get; set; }
+        public BooleanValue ShowEmptyRow { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showEmptyCol</para>
         /// <para>Represents the following attribute in the schema: showEmptyCol</para>
         /// </summary>
-        [SchemaAttr(0, "showEmptyCol")]
-        [Index(52)]
-        public BooleanValue ShowEmptyColumn { get; set; }
+        public BooleanValue ShowEmptyColumn { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showHeaders</para>
         /// <para>Represents the following attribute in the schema: showHeaders</para>
         /// </summary>
-        [SchemaAttr(0, "showHeaders")]
-        [Index(53)]
-        public BooleanValue ShowHeaders { get; set; }
+        public BooleanValue ShowHeaders { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>compact</para>
         /// <para>Represents the following attribute in the schema: compact</para>
         /// </summary>
-        [SchemaAttr(0, "compact")]
-        [Index(54)]
-        public BooleanValue Compact { get; set; }
+        public BooleanValue Compact { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>outline</para>
         /// <para>Represents the following attribute in the schema: outline</para>
         /// </summary>
-        [SchemaAttr(0, "outline")]
-        [Index(55)]
-        public BooleanValue Outline { get; set; }
+        public BooleanValue Outline { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>outlineData</para>
         /// <para>Represents the following attribute in the schema: outlineData</para>
         /// </summary>
-        [SchemaAttr(0, "outlineData")]
-        [Index(56)]
-        public BooleanValue OutlineData { get; set; }
+        public BooleanValue OutlineData { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>compactData</para>
         /// <para>Represents the following attribute in the schema: compactData</para>
         /// </summary>
-        [SchemaAttr(0, "compactData")]
-        [Index(57)]
-        public BooleanValue CompactData { get; set; }
+        public BooleanValue CompactData { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>published</para>
         /// <para>Represents the following attribute in the schema: published</para>
         /// </summary>
-        [SchemaAttr(0, "published")]
-        [Index(58)]
-        public BooleanValue Published { get; set; }
+        public BooleanValue Published { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>gridDropZones</para>
         /// <para>Represents the following attribute in the schema: gridDropZones</para>
         /// </summary>
-        [SchemaAttr(0, "gridDropZones")]
-        [Index(59)]
-        public BooleanValue GridDropZones { get; set; }
+        public BooleanValue GridDropZones { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>immersive</para>
         /// <para>Represents the following attribute in the schema: immersive</para>
         /// </summary>
-        [SchemaAttr(0, "immersive")]
-        [Index(60)]
-        public BooleanValue StopImmersiveUi { get; set; }
+        public BooleanValue StopImmersiveUi { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>multipleFieldFilters</para>
         /// <para>Represents the following attribute in the schema: multipleFieldFilters</para>
         /// </summary>
-        [SchemaAttr(0, "multipleFieldFilters")]
-        [Index(61)]
-        public BooleanValue MultipleFieldFilters { get; set; }
+        public BooleanValue MultipleFieldFilters { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>chartFormat</para>
         /// <para>Represents the following attribute in the schema: chartFormat</para>
         /// </summary>
-        [SchemaAttr(0, "chartFormat")]
-        [Index(62)]
-        public UInt32Value ChartFormat { get; set; }
+        public UInt32Value ChartFormat { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>rowHeaderCaption</para>
         /// <para>Represents the following attribute in the schema: rowHeaderCaption</para>
         /// </summary>
-        [SchemaAttr(0, "rowHeaderCaption")]
-        [Index(63)]
-        public StringValue RowHeaderCaption { get; set; }
+        public StringValue RowHeaderCaption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>colHeaderCaption</para>
         /// <para>Represents the following attribute in the schema: colHeaderCaption</para>
         /// </summary>
-        [SchemaAttr(0, "colHeaderCaption")]
-        [Index(64)]
-        public StringValue ColumnHeaderCaption { get; set; }
+        public StringValue ColumnHeaderCaption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>fieldListSortAscending</para>
         /// <para>Represents the following attribute in the schema: fieldListSortAscending</para>
         /// </summary>
-        [SchemaAttr(0, "fieldListSortAscending")]
-        [Index(65)]
-        public BooleanValue FieldListSortAscending { get; set; }
+        public BooleanValue FieldListSortAscending { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>mdxSubqueries</para>
         /// <para>Represents the following attribute in the schema: mdxSubqueries</para>
         /// </summary>
-        [SchemaAttr(0, "mdxSubqueries")]
-        [Index(66)]
-        public BooleanValue MdxSubqueries { get; set; }
+        public BooleanValue MdxSubqueries { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>customListSort</para>
         /// <para>Represents the following attribute in the schema: customListSort</para>
         /// </summary>
-        [SchemaAttr(0, "customListSort")]
-        [Index(67)]
-        public BooleanValue CustomListSort { get; set; }
+        public BooleanValue CustomListSort { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<pivotTableDefinition>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<pivotTableDefinition>()
+                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "cacheId", a => a.CacheId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "dataOnRows", a => a.DataOnRows)
+                           .AddAttribute(0, "dataPosition", a => a.DataPosition)
+                           .AddAttribute(0, "autoFormatId", a => a.AutoFormatId)
+                           .AddAttribute(0, "applyNumberFormats", a => a.ApplyNumberFormats)
+                           .AddAttribute(0, "applyBorderFormats", a => a.ApplyBorderFormats)
+                           .AddAttribute(0, "applyFontFormats", a => a.ApplyFontFormats)
+                           .AddAttribute(0, "applyPatternFormats", a => a.ApplyPatternFormats)
+                           .AddAttribute(0, "applyAlignmentFormats", a => a.ApplyAlignmentFormats)
+                           .AddAttribute(0, "applyWidthHeightFormats", a => a.ApplyWidthHeightFormats)
+                           .AddAttribute(0, "dataCaption", a => a.DataCaption, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "grandTotalCaption", a => a.GrandTotalCaption)
+                           .AddAttribute(0, "errorCaption", a => a.ErrorCaption)
+                           .AddAttribute(0, "showError", a => a.ShowError)
+                           .AddAttribute(0, "missingCaption", a => a.MissingCaption)
+                           .AddAttribute(0, "showMissing", a => a.ShowMissing)
+                           .AddAttribute(0, "pageStyle", a => a.PageStyle)
+                           .AddAttribute(0, "pivotTableStyle", a => a.PivotTableStyleName)
+                           .AddAttribute(0, "vacatedStyle", a => a.VacatedStyle)
+                           .AddAttribute(0, "tag", a => a.Tag)
+                           .AddAttribute(0, "updatedVersion", a => a.UpdatedVersion)
+                           .AddAttribute(0, "minRefreshableVersion", a => a.MinRefreshableVersion)
+                           .AddAttribute(0, "asteriskTotals", a => a.AsteriskTotals)
+                           .AddAttribute(0, "showItems", a => a.ShowItems)
+                           .AddAttribute(0, "editData", a => a.EditData)
+                           .AddAttribute(0, "disableFieldList", a => a.DisableFieldList)
+                           .AddAttribute(0, "showCalcMbrs", a => a.ShowCalculatedMembers)
+                           .AddAttribute(0, "visualTotals", a => a.VisualTotals)
+                           .AddAttribute(0, "showMultipleLabel", a => a.ShowMultipleLabel)
+                           .AddAttribute(0, "showDataDropDown", a => a.ShowDataDropDown)
+                           .AddAttribute(0, "showDrill", a => a.ShowDrill)
+                           .AddAttribute(0, "printDrill", a => a.PrintDrill)
+                           .AddAttribute(0, "showMemberPropertyTips", a => a.ShowMemberPropertyTips)
+                           .AddAttribute(0, "showDataTips", a => a.ShowDataTips)
+                           .AddAttribute(0, "enableWizard", a => a.EnableWizard)
+                           .AddAttribute(0, "enableDrill", a => a.EnableDrill)
+                           .AddAttribute(0, "enableFieldProperties", a => a.EnableFieldProperties)
+                           .AddAttribute(0, "preserveFormatting", a => a.PreserveFormatting)
+                           .AddAttribute(0, "useAutoFormatting", a => a.UseAutoFormatting)
+                           .AddAttribute(0, "pageWrap", a => a.PageWrap)
+                           .AddAttribute(0, "pageOverThenDown", a => a.PageOverThenDown)
+                           .AddAttribute(0, "subtotalHiddenItems", a => a.SubtotalHiddenItems)
+                           .AddAttribute(0, "rowGrandTotals", a => a.RowGrandTotals)
+                           .AddAttribute(0, "colGrandTotals", a => a.ColumnGrandTotals)
+                           .AddAttribute(0, "fieldPrintTitles", a => a.FieldPrintTitles)
+                           .AddAttribute(0, "itemPrintTitles", a => a.ItemPrintTitles)
+                           .AddAttribute(0, "mergeItem", a => a.MergeItem)
+                           .AddAttribute(0, "showDropZones", a => a.ShowDropZones)
+                           .AddAttribute(0, "createdVersion", a => a.CreatedVersion)
+                           .AddAttribute(0, "indent", a => a.Indent)
+                           .AddAttribute(0, "showEmptyRow", a => a.ShowEmptyRow)
+                           .AddAttribute(0, "showEmptyCol", a => a.ShowEmptyColumn)
+                           .AddAttribute(0, "showHeaders", a => a.ShowHeaders)
+                           .AddAttribute(0, "compact", a => a.Compact)
+                           .AddAttribute(0, "outline", a => a.Outline)
+                           .AddAttribute(0, "outlineData", a => a.OutlineData)
+                           .AddAttribute(0, "compactData", a => a.CompactData)
+                           .AddAttribute(0, "published", a => a.Published)
+                           .AddAttribute(0, "gridDropZones", a => a.GridDropZones)
+                           .AddAttribute(0, "immersive", a => a.StopImmersiveUi)
+                           .AddAttribute(0, "multipleFieldFilters", a => a.MultipleFieldFilters)
+                           .AddAttribute(0, "chartFormat", a => a.ChartFormat)
+                           .AddAttribute(0, "rowHeaderCaption", a => a.RowHeaderCaption)
+                           .AddAttribute(0, "colHeaderCaption", a => a.ColumnHeaderCaption)
+                           .AddAttribute(0, "fieldListSortAscending", a => a.FieldListSortAscending)
+                           .AddAttribute(0, "mdxSubqueries", a => a.MdxSubqueries)
+                           .AddAttribute(0, "customListSort", a => a.CustomListSort);
+        }
 
         /// <summary>
         /// <para>Location.</para>

@@ -5,6 +5,7 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.CustomXmlSchemaReferences;
 using DocumentFormat.OpenXml.Drawing.Wordprocessing;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Math;
 using DocumentFormat.OpenXml.Office2010.Word;
 using DocumentFormat.OpenXml.Office2013.Word;
@@ -35,6 +36,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CellInsertion>();
+
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(2 /*w:id*/, true, null)
         };
@@ -60,6 +63,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public CellDeletion() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CellDeletion>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(2 /*w:id*/, true, null)
@@ -87,6 +92,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlInsRangeStart>();
+
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(2 /*w:id*/, true, null)
         };
@@ -112,6 +119,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public CustomXmlDelRangeStart() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlDelRangeStart>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(2 /*w:id*/, false, null)
@@ -139,6 +148,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlMoveFromRangeStart>();
+
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(2 /*w:id*/, true, null)
         };
@@ -164,6 +175,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public CustomXmlMoveToRangeStart() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlMoveToRangeStart>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(2 /*w:id*/, true, null)
@@ -191,6 +204,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Inserted>();
+
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(2 /*w:id*/, true, null)
         };
@@ -216,6 +231,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Deleted() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Deleted>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(2 /*w:id*/, true, null)
@@ -243,6 +260,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MoveFrom>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MoveFrom>(deep);
     }
@@ -262,6 +281,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public MoveTo() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MoveTo>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MoveTo>(deep);
@@ -288,11 +309,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 255L)]
-        [SchemaAttr(23, "author")]
-        [Index(0)]
-        public StringValue Author { get; set; }
+        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>date</para>
@@ -301,9 +318,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "date")]
-        [Index(1)]
-        public DateTimeValue Date { get; set; }
+        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -312,12 +327,28 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [NumberValidator(MaxInclusive = -2L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [SchemaAttr(23, "id")]
-        [Index(2)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TrackChangeType>()
+                           .AddAttribute(23, "author", a => a.Author, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+                           })
+                           .AddAttribute(23, "date", a => a.Date)
+                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                                   union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                               });
+                           });
+        }
     }
 
     /// <summary>
@@ -343,9 +374,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "vMerge")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues> VerticalMerge { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues> VerticalMerge { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>vMergeOrig</para>
@@ -354,9 +383,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "vMergeOrig")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues> VerticalMergeOriginal { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues> VerticalMergeOriginal { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>author</para>
@@ -365,11 +392,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 255L)]
-        [SchemaAttr(23, "author")]
-        [Index(2)]
-        public StringValue Author { get; set; }
+        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>date</para>
@@ -378,9 +401,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "date")]
-        [Index(3)]
-        public DateTimeValue Date { get; set; }
+        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -389,12 +410,31 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [NumberValidator(MaxInclusive = -2L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [SchemaAttr(23, "id")]
-        [Index(4)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CellMerge>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<CellMerge>()
+                           .AddAttribute(23, "vMerge", a => a.VerticalMerge)
+                           .AddAttribute(23, "vMergeOrig", a => a.VerticalMergeOriginal)
+                           .AddAttribute(23, "author", a => a.Author, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+                           })
+                           .AddAttribute(23, "date", a => a.Date)
+                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                                   union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                               });
+                           });
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(4 /*w:id*/, true, null)
@@ -429,11 +469,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 40L)]
-        [SchemaAttr(23, "name")]
-        [Index(0)]
-        public StringValue Name { get; set; }
+        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>colFirst</para>
@@ -442,9 +478,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "colFirst")]
-        [Index(1)]
-        public Int32Value ColumnFirst { get; set; }
+        public Int32Value ColumnFirst { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>colLast</para>
@@ -453,9 +487,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "colLast")]
-        [Index(2)]
-        public Int32Value ColumnLast { get; set; }
+        public Int32Value ColumnLast { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>displacedByCustomXml</para>
@@ -464,9 +496,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "displacedByCustomXml")]
-        [Index(3)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues> DisplacedByCustomXml { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues> DisplacedByCustomXml { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -475,12 +505,31 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [NumberValidator(MaxInclusive = -2L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [SchemaAttr(23, "id")]
-        [Index(4)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BookmarkStart>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BookmarkStart>()
+                           .AddAttribute(23, "name", a => a.Name, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (40L) });
+                           })
+                           .AddAttribute(23, "colFirst", a => a.ColumnFirst)
+                           .AddAttribute(23, "colLast", a => a.ColumnLast)
+                           .AddAttribute(23, "displacedByCustomXml", a => a.DisplacedByCustomXml)
+                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                                   union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                               });
+                           });
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(4 /*w:id*/, true, null)
@@ -508,6 +557,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BookmarkEnd>();
+
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(1 /*w:id*/, true, null)
         };
@@ -533,6 +584,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public CommentRangeStart() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CommentRangeStart>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(1 /*w:id*/, true, null),
@@ -561,6 +614,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CommentRangeEnd>();
+
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(1 /*w:id*/, true, null),
             new ReferenceExistConstraint(1 /*w:id*/, "WordprocessingCommentsPart", typeof(DocumentFormat.OpenXml.Wordprocessing.Comment), "DocumentFormat.OpenXml.Wordprocessing.Comment", 3 /*w:id*/)
@@ -588,6 +643,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MoveFromRangeEnd>();
+
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(1 /*w:id*/, true, null)
         };
@@ -613,6 +670,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public MoveToRangeEnd() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MoveToRangeEnd>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(1 /*w:id*/, true, null)
@@ -645,9 +704,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "displacedByCustomXml")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues> DisplacedByCustomXml { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues> DisplacedByCustomXml { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -656,12 +713,23 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [NumberValidator(MaxInclusive = -2L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [SchemaAttr(23, "id")]
-        [Index(1)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<MarkupRangeType>()
+                           .AddAttribute(23, "displacedByCustomXml", a => a.DisplacedByCustomXml)
+                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                                   union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                               });
+                           });
+        }
     }
 
     /// <summary>
@@ -679,6 +747,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public MoveFromRangeStart() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MoveFromRangeStart>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(6 /*w:id*/, true, null)
@@ -705,6 +775,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public MoveToRangeStart() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MoveToRangeStart>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(6 /*w:id*/, false, null)
@@ -737,10 +809,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "author")]
-        [Index(0)]
-        public StringValue Author { get; set; }
+        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>date</para>
@@ -749,10 +818,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "date")]
-        [Index(1)]
-        public DateTimeValue Date { get; set; }
+        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>name</para>
@@ -761,11 +827,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 40L)]
-        [SchemaAttr(23, "name")]
-        [Index(2)]
-        public StringValue Name { get; set; }
+        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>colFirst</para>
@@ -774,9 +836,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "colFirst")]
-        [Index(3)]
-        public Int32Value ColumnFirst { get; set; }
+        public Int32Value ColumnFirst { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>colLast</para>
@@ -785,9 +845,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "colLast")]
-        [Index(4)]
-        public Int32Value ColumnLast { get; set; }
+        public Int32Value ColumnLast { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>displacedByCustomXml</para>
@@ -796,9 +854,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "displacedByCustomXml")]
-        [Index(5)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues> DisplacedByCustomXml { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues> DisplacedByCustomXml { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -807,12 +863,38 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [NumberValidator(MaxInclusive = -2L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [SchemaAttr(23, "id")]
-        [Index(6)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<MoveBookmarkType>()
+                           .AddAttribute(23, "author", a => a.Author, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(23, "date", a => a.Date, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(23, "name", a => a.Name, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (40L) });
+                           })
+                           .AddAttribute(23, "colFirst", a => a.ColumnFirst)
+                           .AddAttribute(23, "colLast", a => a.ColumnLast)
+                           .AddAttribute(23, "displacedByCustomXml", a => a.DisplacedByCustomXml)
+                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                                   union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                               });
+                           });
+        }
     }
 
     /// <summary>
@@ -830,6 +912,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public CustomXmlInsRangeEnd() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlInsRangeEnd>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*w:id*/, true, null)
@@ -857,6 +941,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlDelRangeEnd>();
+
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*w:id*/, false, null)
         };
@@ -882,6 +968,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public CustomXmlMoveFromRangeEnd() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlMoveFromRangeEnd>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*w:id*/, true, null)
@@ -909,6 +997,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlMoveToRangeEnd>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomXmlMoveToRangeEnd>(deep);
     }
@@ -928,6 +1018,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public CommentReference() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CommentReference>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*w:id*/, true, null),
@@ -961,12 +1053,22 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [NumberValidator(MaxInclusive = -2L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [SchemaAttr(23, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<MarkupType>()
+                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                                   union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                               });
+                           });
+        }
     }
 
     /// <summary>
@@ -984,6 +1086,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ParagraphStyleId() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ParagraphStyleId>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueLengthConstraint(0 /*w:val*/, 0, 253) { Application = ApplicationType.Word }
@@ -1011,6 +1115,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DateFormat>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DateFormat>(deep);
     }
@@ -1030,6 +1136,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DocPartGallery() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocPartGallery>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocPartGallery>(deep);
@@ -1051,6 +1159,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocPartCategory>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocPartCategory>(deep);
     }
@@ -1070,6 +1180,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DocPartReference() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocPartReference>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocPartReference>(deep);
@@ -1091,6 +1203,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlPlaceholder>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomXmlPlaceholder>(deep);
     }
@@ -1110,6 +1224,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TableCaption() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableCaption>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableCaption>(deep);
@@ -1131,6 +1247,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableDescription>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableDescription>(deep);
     }
@@ -1150,6 +1268,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Name() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Name>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValuePatternConstraint(0 /*w:val*/, @"[^,]*") { Application = ApplicationType.Word }
@@ -1177,6 +1297,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MappedName>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MappedName>(deep);
     }
@@ -1196,6 +1318,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public UdlConnectionString() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UdlConnectionString>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UdlConnectionString>(deep);
@@ -1217,6 +1341,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataSourceTableName>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataSourceTableName>(deep);
     }
@@ -1236,6 +1362,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ConnectString() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConnectString>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConnectString>(deep);
@@ -1257,6 +1385,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Query>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Query>(deep);
     }
@@ -1276,6 +1406,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public AddressFieldName() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AddressFieldName>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AddressFieldName>(deep);
@@ -1297,6 +1429,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MailSubject>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MailSubject>(deep);
     }
@@ -1316,6 +1450,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public FrameSize() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FrameSize>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FrameSize>(deep);
@@ -1337,6 +1473,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StyleId>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleId>(deep);
     }
@@ -1356,6 +1494,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Description() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Description>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Description>(deep);
@@ -1377,6 +1517,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtAlias>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtAlias>(deep);
     }
@@ -1396,6 +1538,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Tag() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Tag>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Tag>(deep);
@@ -1417,6 +1561,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AttachedSchema>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AttachedSchema>(deep);
     }
@@ -1436,6 +1582,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DecimalSymbol() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DecimalSymbol>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValuePatternConstraint(0 /*w:val*/, @".{1}")
@@ -1463,6 +1611,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ListSeparator>();
+
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValuePatternConstraint(0 /*w:val*/, @".{1}")
         };
@@ -1489,6 +1639,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WebPageEncoding>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebPageEncoding>(deep);
     }
@@ -1508,6 +1660,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public AltName() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AltName>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AltName>(deep);
@@ -1534,10 +1688,17 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<StringType>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
     }
 
     /// <summary>
@@ -1555,6 +1716,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public KeepNext() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<KeepNext>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<KeepNext>(deep);
@@ -1576,6 +1739,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<KeepLines>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<KeepLines>(deep);
     }
@@ -1595,6 +1760,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public PageBreakBefore() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PageBreakBefore>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PageBreakBefore>(deep);
@@ -1616,6 +1783,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WidowControl>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WidowControl>(deep);
     }
@@ -1635,6 +1804,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SuppressLineNumbers() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SuppressLineNumbers>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SuppressLineNumbers>(deep);
@@ -1656,6 +1827,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SuppressAutoHyphens>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SuppressAutoHyphens>(deep);
     }
@@ -1675,6 +1848,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Kinsoku() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Kinsoku>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Kinsoku>(deep);
@@ -1696,6 +1871,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WordWrap>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WordWrap>(deep);
     }
@@ -1715,6 +1892,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public OverflowPunctuation() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OverflowPunctuation>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OverflowPunctuation>(deep);
@@ -1736,6 +1915,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TopLinePunctuation>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopLinePunctuation>(deep);
     }
@@ -1755,6 +1936,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public AutoSpaceDE() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutoSpaceDE>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoSpaceDE>(deep);
@@ -1776,6 +1959,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutoSpaceDN>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoSpaceDN>(deep);
     }
@@ -1795,6 +1980,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public BiDi() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BiDi>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BiDi>(deep);
@@ -1816,6 +2003,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AdjustRightIndent>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AdjustRightIndent>(deep);
     }
@@ -1835,6 +2024,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SnapToGrid() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SnapToGrid>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SnapToGrid>(deep);
@@ -1856,6 +2047,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ContextualSpacing>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ContextualSpacing>(deep);
     }
@@ -1875,6 +2068,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public MirrorIndents() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MirrorIndents>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MirrorIndents>(deep);
@@ -1896,6 +2091,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SuppressOverlap>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SuppressOverlap>(deep);
     }
@@ -1915,6 +2112,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Bold() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Bold>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Bold>(deep);
@@ -1936,6 +2135,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BoldComplexScript>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BoldComplexScript>(deep);
     }
@@ -1955,6 +2156,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Italic() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Italic>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Italic>(deep);
@@ -1976,6 +2179,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ItalicComplexScript>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ItalicComplexScript>(deep);
     }
@@ -1995,6 +2200,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Caps() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Caps>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Caps>(deep);
@@ -2016,6 +2223,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SmallCaps>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SmallCaps>(deep);
     }
@@ -2035,6 +2244,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Strike() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Strike>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Strike>(deep);
@@ -2056,6 +2267,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoubleStrike>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoubleStrike>(deep);
     }
@@ -2075,6 +2288,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Outline() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Outline>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Outline>(deep);
@@ -2096,6 +2311,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Shadow>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shadow>(deep);
     }
@@ -2115,6 +2332,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Emboss() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Emboss>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Emboss>(deep);
@@ -2136,6 +2355,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Imprint>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Imprint>(deep);
     }
@@ -2155,6 +2376,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public NoProof() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoProof>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoProof>(deep);
@@ -2176,6 +2399,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Vanish>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Vanish>(deep);
     }
@@ -2195,6 +2420,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public WebHidden() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WebHidden>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebHidden>(deep);
@@ -2216,6 +2443,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RightToLeftText>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RightToLeftText>(deep);
     }
@@ -2235,6 +2464,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ComplexScript() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ComplexScript>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ComplexScript>(deep);
@@ -2256,6 +2487,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SpecVanish>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SpecVanish>(deep);
     }
@@ -2275,6 +2508,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public OfficeMath() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OfficeMath>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OfficeMath>(deep);
@@ -2296,6 +2531,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Hidden>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Hidden>(deep);
     }
@@ -2315,6 +2552,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public FormProtection() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FormProtection>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormProtection>(deep);
@@ -2336,6 +2575,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoEndnote>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoEndnote>(deep);
     }
@@ -2355,6 +2596,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TitlePage() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TitlePage>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TitlePage>(deep);
@@ -2376,6 +2619,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GutterOnRight>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GutterOnRight>(deep);
     }
@@ -2395,6 +2640,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Enabled() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Enabled>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Enabled>(deep);
@@ -2416,6 +2663,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CalculateOnExit>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CalculateOnExit>(deep);
     }
@@ -2435,6 +2684,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public AutomaticallySizeFormField() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutomaticallySizeFormField>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutomaticallySizeFormField>(deep);
@@ -2456,6 +2707,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DefaultCheckBoxFormFieldState>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultCheckBoxFormFieldState>(deep);
     }
@@ -2475,6 +2728,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Checked() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Checked>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Checked>(deep);
@@ -2496,6 +2751,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MatchSource>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MatchSource>(deep);
     }
@@ -2515,6 +2772,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Dirty() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Dirty>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Dirty>(deep);
@@ -2536,6 +2795,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocPartUnique>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocPartUnique>(deep);
     }
@@ -2555,6 +2816,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Active() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Active>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Active>(deep);
@@ -2576,6 +2839,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DynamicAddress>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DynamicAddress>(deep);
     }
@@ -2595,6 +2860,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public FirstRowHeader() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FirstRowHeader>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstRowHeader>(deep);
@@ -2616,6 +2883,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LinkToQuery>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LinkToQuery>(deep);
     }
@@ -2635,6 +2904,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DoNotSuppressBlankLines() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotSuppressBlankLines>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotSuppressBlankLines>(deep);
@@ -2656,6 +2927,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MailAsAttachment>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MailAsAttachment>(deep);
     }
@@ -2675,6 +2948,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ViewMergedData() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ViewMergedData>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ViewMergedData>(deep);
@@ -2696,6 +2971,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<IsLegalNumberingStyle>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<IsLegalNumberingStyle>(deep);
     }
@@ -2715,6 +2992,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public BlockQuote() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BlockQuote>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BlockQuote>(deep);
@@ -2736,6 +3015,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BodyDiv>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BodyDiv>(deep);
     }
@@ -2755,6 +3036,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public UseSingleBorderForContiguousCells() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UseSingleBorderForContiguousCells>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UseSingleBorderForContiguousCells>(deep);
@@ -2776,6 +3059,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WordPerfectJustification>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WordPerfectJustification>(deep);
     }
@@ -2795,6 +3080,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public NoTabHangIndent() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoTabHangIndent>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoTabHangIndent>(deep);
@@ -2816,6 +3103,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoLeading>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoLeading>(deep);
     }
@@ -2835,6 +3124,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SpaceForUnderline() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SpaceForUnderline>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SpaceForUnderline>(deep);
@@ -2856,6 +3147,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoColumnBalance>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoColumnBalance>(deep);
     }
@@ -2875,6 +3168,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public BalanceSingleByteDoubleByteWidth() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BalanceSingleByteDoubleByteWidth>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BalanceSingleByteDoubleByteWidth>(deep);
@@ -2896,6 +3191,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoExtraLineSpacing>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoExtraLineSpacing>(deep);
     }
@@ -2915,6 +3212,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DoNotLeaveBackslashAlone() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotLeaveBackslashAlone>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotLeaveBackslashAlone>(deep);
@@ -2936,6 +3235,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UnderlineTrailingSpaces>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UnderlineTrailingSpaces>(deep);
     }
@@ -2955,6 +3256,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DoNotExpandShiftReturn() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotExpandShiftReturn>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotExpandShiftReturn>(deep);
@@ -2976,6 +3279,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SpacingInWholePoints>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SpacingInWholePoints>(deep);
     }
@@ -2995,6 +3300,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public LineWrapLikeWord6() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LineWrapLikeWord6>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LineWrapLikeWord6>(deep);
@@ -3016,6 +3323,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PrintBodyTextBeforeHeader>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PrintBodyTextBeforeHeader>(deep);
     }
@@ -3035,6 +3344,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public PrintColorBlackWhite() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PrintColorBlackWhite>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PrintColorBlackWhite>(deep);
@@ -3056,6 +3367,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WordPerfectSpaceWidth>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WordPerfectSpaceWidth>(deep);
     }
@@ -3075,6 +3388,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ShowBreaksInFrames() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowBreaksInFrames>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowBreaksInFrames>(deep);
@@ -3096,6 +3411,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SubFontBySize>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SubFontBySize>(deep);
     }
@@ -3115,6 +3432,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SuppressBottomSpacing() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SuppressBottomSpacing>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SuppressBottomSpacing>(deep);
@@ -3136,6 +3455,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SuppressTopSpacing>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SuppressTopSpacing>(deep);
     }
@@ -3155,6 +3476,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SuppressSpacingAtTopOfPage() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SuppressSpacingAtTopOfPage>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SuppressSpacingAtTopOfPage>(deep);
@@ -3176,6 +3499,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SuppressTopSpacingWordPerfect>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SuppressTopSpacingWordPerfect>(deep);
     }
@@ -3195,6 +3520,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SuppressSpacingBeforeAfterPageBreak() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SuppressSpacingBeforeAfterPageBreak>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SuppressSpacingBeforeAfterPageBreak>(deep);
@@ -3216,6 +3543,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SwapBordersFacingPages>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SwapBordersFacingPages>(deep);
     }
@@ -3235,6 +3564,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ConvertMailMergeEscape() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConvertMailMergeEscape>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConvertMailMergeEscape>(deep);
@@ -3256,6 +3587,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TruncateFontHeightsLikeWordPerfect>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TruncateFontHeightsLikeWordPerfect>(deep);
     }
@@ -3275,6 +3608,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public MacWordSmallCaps() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MacWordSmallCaps>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MacWordSmallCaps>(deep);
@@ -3296,6 +3631,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UsePrinterMetrics>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UsePrinterMetrics>(deep);
     }
@@ -3315,6 +3652,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DoNotSuppressParagraphBorders() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotSuppressParagraphBorders>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotSuppressParagraphBorders>(deep);
@@ -3336,6 +3675,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WrapTrailSpaces>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WrapTrailSpaces>(deep);
     }
@@ -3355,6 +3696,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public FootnoteLayoutLikeWord8() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FootnoteLayoutLikeWord8>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FootnoteLayoutLikeWord8>(deep);
@@ -3376,6 +3719,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapeLayoutLikeWord8>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShapeLayoutLikeWord8>(deep);
     }
@@ -3395,6 +3740,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public AlignTablesRowByRow() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AlignTablesRowByRow>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AlignTablesRowByRow>(deep);
@@ -3416,6 +3763,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ForgetLastTabAlignment>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ForgetLastTabAlignment>(deep);
     }
@@ -3435,6 +3784,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public AdjustLineHeightInTable() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AdjustLineHeightInTable>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AdjustLineHeightInTable>(deep);
@@ -3456,6 +3807,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutoSpaceLikeWord95>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoSpaceLikeWord95>(deep);
     }
@@ -3475,6 +3828,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public NoSpaceRaiseLower() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoSpaceRaiseLower>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoSpaceRaiseLower>(deep);
@@ -3496,6 +3851,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotUseHTMLParagraphAutoSpacing>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotUseHTMLParagraphAutoSpacing>(deep);
     }
@@ -3515,6 +3872,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public LayoutRawTableWidth() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LayoutRawTableWidth>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LayoutRawTableWidth>(deep);
@@ -3536,6 +3895,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LayoutTableRowsApart>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LayoutTableRowsApart>(deep);
     }
@@ -3555,6 +3916,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public UseWord97LineBreakRules() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UseWord97LineBreakRules>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UseWord97LineBreakRules>(deep);
@@ -3576,6 +3939,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotBreakWrappedTables>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotBreakWrappedTables>(deep);
     }
@@ -3595,6 +3960,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DoNotSnapToGridInCell() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotSnapToGridInCell>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotSnapToGridInCell>(deep);
@@ -3616,6 +3983,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SelectFieldWithFirstOrLastChar>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SelectFieldWithFirstOrLastChar>(deep);
     }
@@ -3635,6 +4004,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ApplyBreakingRules() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ApplyBreakingRules>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ApplyBreakingRules>(deep);
@@ -3656,6 +4027,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotWrapTextWithPunctuation>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotWrapTextWithPunctuation>(deep);
     }
@@ -3675,6 +4048,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DoNotUseEastAsianBreakRules() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotUseEastAsianBreakRules>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotUseEastAsianBreakRules>(deep);
@@ -3696,6 +4071,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UseWord2002TableStyleRules>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UseWord2002TableStyleRules>(deep);
     }
@@ -3715,6 +4092,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public GrowAutofit() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GrowAutofit>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GrowAutofit>(deep);
@@ -3736,6 +4115,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UseFarEastLayout>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UseFarEastLayout>(deep);
     }
@@ -3755,6 +4136,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public UseNormalStyleForList() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UseNormalStyleForList>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UseNormalStyleForList>(deep);
@@ -3776,6 +4159,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotUseIndentAsNumberingTabStop>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotUseIndentAsNumberingTabStop>(deep);
     }
@@ -3795,6 +4180,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public UseAltKinsokuLineBreakRules() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UseAltKinsokuLineBreakRules>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UseAltKinsokuLineBreakRules>(deep);
@@ -3816,6 +4203,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AllowSpaceOfSameStyleInTable>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AllowSpaceOfSameStyleInTable>(deep);
     }
@@ -3835,6 +4224,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DoNotSuppressIndentation() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotSuppressIndentation>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotSuppressIndentation>(deep);
@@ -3856,6 +4247,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotAutofitConstrainedTables>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotAutofitConstrainedTables>(deep);
     }
@@ -3875,6 +4268,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public AutofitToFirstFixedWidthCell() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutofitToFirstFixedWidthCell>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutofitToFirstFixedWidthCell>(deep);
@@ -3896,6 +4291,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UnderlineTabInNumberingList>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UnderlineTabInNumberingList>(deep);
     }
@@ -3915,6 +4312,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DisplayHangulFixedWidth() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DisplayHangulFixedWidth>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DisplayHangulFixedWidth>(deep);
@@ -3936,6 +4335,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SplitPageBreakAndParagraphMark>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SplitPageBreakAndParagraphMark>(deep);
     }
@@ -3955,6 +4356,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DoNotVerticallyAlignCellWithShape() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotVerticallyAlignCellWithShape>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotVerticallyAlignCellWithShape>(deep);
@@ -3976,6 +4379,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotBreakConstrainedForcedTable>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotBreakConstrainedForcedTable>(deep);
     }
@@ -3995,6 +4400,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DoNotVerticallyAlignInTextBox() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotVerticallyAlignInTextBox>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotVerticallyAlignInTextBox>(deep);
@@ -4016,6 +4423,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UseAnsiKerningPairs>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UseAnsiKerningPairs>(deep);
     }
@@ -4035,6 +4444,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public CachedColumnBalance() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CachedColumnBalance>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CachedColumnBalance>(deep);
@@ -4056,6 +4467,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowingPlaceholder>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowingPlaceholder>(deep);
     }
@@ -4075,6 +4488,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TemporarySdt() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TemporarySdt>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TemporarySdt>(deep);
@@ -4096,6 +4511,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RemovePersonalInformation>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RemovePersonalInformation>(deep);
     }
@@ -4115,6 +4532,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public RemoveDateAndTime() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RemoveDateAndTime>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RemoveDateAndTime>(deep);
@@ -4136,6 +4555,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotDisplayPageBoundaries>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotDisplayPageBoundaries>(deep);
     }
@@ -4155,6 +4576,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DisplayBackgroundShape() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DisplayBackgroundShape>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DisplayBackgroundShape>(deep);
@@ -4176,6 +4599,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PrintPostScriptOverText>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PrintPostScriptOverText>(deep);
     }
@@ -4195,6 +4620,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public PrintFractionalCharacterWidth() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PrintFractionalCharacterWidth>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PrintFractionalCharacterWidth>(deep);
@@ -4216,6 +4643,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PrintFormsData>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PrintFormsData>(deep);
     }
@@ -4235,6 +4664,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public EmbedTrueTypeFonts() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EmbedTrueTypeFonts>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EmbedTrueTypeFonts>(deep);
@@ -4256,6 +4687,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EmbedSystemFonts>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EmbedSystemFonts>(deep);
     }
@@ -4275,6 +4708,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SaveSubsetFonts() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SaveSubsetFonts>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SaveSubsetFonts>(deep);
@@ -4296,6 +4731,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SaveFormsData>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SaveFormsData>(deep);
     }
@@ -4315,6 +4752,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public MirrorMargins() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MirrorMargins>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MirrorMargins>(deep);
@@ -4336,6 +4775,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AlignBorderAndEdges>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AlignBorderAndEdges>(deep);
     }
@@ -4355,6 +4796,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public BordersDoNotSurroundHeader() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BordersDoNotSurroundHeader>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BordersDoNotSurroundHeader>(deep);
@@ -4376,6 +4819,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BordersDoNotSurroundFooter>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BordersDoNotSurroundFooter>(deep);
     }
@@ -4395,6 +4840,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public GutterAtTop() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GutterAtTop>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GutterAtTop>(deep);
@@ -4416,6 +4863,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HideSpellingErrors>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HideSpellingErrors>(deep);
     }
@@ -4435,6 +4884,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public HideGrammaticalErrors() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HideGrammaticalErrors>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HideGrammaticalErrors>(deep);
@@ -4456,6 +4907,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FormsDesign>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormsDesign>(deep);
     }
@@ -4475,6 +4928,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public LinkStyles() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LinkStyles>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LinkStyles>(deep);
@@ -4496,6 +4951,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TrackRevisions>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TrackRevisions>(deep);
     }
@@ -4515,6 +4972,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DoNotTrackMoves() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotTrackMoves>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotTrackMoves>(deep);
@@ -4536,6 +4995,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotTrackFormatting>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotTrackFormatting>(deep);
     }
@@ -4555,6 +5016,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public AutoFormatOverride() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutoFormatOverride>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoFormatOverride>(deep);
@@ -4576,6 +5039,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StyleLockThemesPart>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleLockThemesPart>(deep);
     }
@@ -4595,6 +5060,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public StyleLockStylesPart() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StyleLockStylesPart>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleLockStylesPart>(deep);
@@ -4616,6 +5083,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutoHyphenation>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoHyphenation>(deep);
     }
@@ -4635,6 +5104,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DoNotHyphenateCaps() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotHyphenateCaps>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotHyphenateCaps>(deep);
@@ -4656,6 +5127,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowEnvelope>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowEnvelope>(deep);
     }
@@ -4675,6 +5148,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public EvenAndOddHeaders() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EvenAndOddHeaders>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EvenAndOddHeaders>(deep);
@@ -4696,6 +5171,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BookFoldReversePrinting>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BookFoldReversePrinting>(deep);
     }
@@ -4715,6 +5192,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public BookFoldPrinting() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BookFoldPrinting>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BookFoldPrinting>(deep);
@@ -4736,6 +5215,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotUseMarginsForDrawingGridOrigin>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotUseMarginsForDrawingGridOrigin>(deep);
     }
@@ -4755,6 +5236,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DoNotShadeFormData() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotShadeFormData>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotShadeFormData>(deep);
@@ -4776,6 +5259,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoPunctuationKerning>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoPunctuationKerning>(deep);
     }
@@ -4795,6 +5280,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public PrintTwoOnOne() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PrintTwoOnOne>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PrintTwoOnOne>(deep);
@@ -4816,6 +5303,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StrictFirstAndLastChars>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StrictFirstAndLastChars>(deep);
     }
@@ -4835,6 +5324,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SavePreviewPicture() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SavePreviewPicture>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SavePreviewPicture>(deep);
@@ -4856,6 +5347,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotValidateAgainstSchema>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotValidateAgainstSchema>(deep);
     }
@@ -4875,6 +5368,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SaveInvalidXml() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SaveInvalidXml>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SaveInvalidXml>(deep);
@@ -4896,6 +5391,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<IgnoreMixedContent>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<IgnoreMixedContent>(deep);
     }
@@ -4915,6 +5412,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public AlwaysShowPlaceholderText() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AlwaysShowPlaceholderText>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AlwaysShowPlaceholderText>(deep);
@@ -4936,6 +5435,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotDemarcateInvalidXml>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotDemarcateInvalidXml>(deep);
     }
@@ -4955,6 +5456,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SaveXmlDataOnly() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SaveXmlDataOnly>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SaveXmlDataOnly>(deep);
@@ -4976,6 +5479,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UseXsltWhenSaving>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UseXsltWhenSaving>(deep);
     }
@@ -4995,6 +5500,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ShowXmlTags() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowXmlTags>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowXmlTags>(deep);
@@ -5016,6 +5523,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AlwaysMergeEmptyNamespace>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AlwaysMergeEmptyNamespace>(deep);
     }
@@ -5035,6 +5544,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public UpdateFieldsOnOpen() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UpdateFieldsOnOpen>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UpdateFieldsOnOpen>(deep);
@@ -5056,6 +5567,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UICompatibleWith97To2003>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UICompatibleWith97To2003>(deep);
     }
@@ -5075,6 +5588,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DoNotIncludeSubdocsInStats() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotIncludeSubdocsInStats>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotIncludeSubdocsInStats>(deep);
@@ -5096,6 +5611,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotAutoCompressPictures>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotAutoCompressPictures>(deep);
     }
@@ -5115,6 +5632,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public OptimizeForBrowser() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OptimizeForBrowser>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OptimizeForBrowser>(deep);
@@ -5136,6 +5655,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RelyOnVML>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RelyOnVML>(deep);
     }
@@ -5155,6 +5676,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public AllowPNG() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AllowPNG>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AllowPNG>(deep);
@@ -5176,6 +5699,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotRelyOnCSS>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotRelyOnCSS>(deep);
     }
@@ -5195,6 +5720,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DoNotSaveAsSingleFile() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotSaveAsSingleFile>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotSaveAsSingleFile>(deep);
@@ -5216,6 +5743,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotOrganizeInFolder>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotOrganizeInFolder>(deep);
     }
@@ -5236,6 +5765,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotUseLongFileNames>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotUseLongFileNames>(deep);
     }
@@ -5255,6 +5786,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public NotTrueType() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NotTrueType>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NotTrueType>(deep);
@@ -5281,9 +5814,14 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public OnOffValue Val { get; set; }
+        public OnOffValue Val { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<OnOffType>()
+                           .AddAttribute(23, "val", a => a.Val);
+        }
     }
 
     /// <summary>
@@ -5309,9 +5847,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "dropCap")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DropCapLocationValues> DropCap { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DropCapLocationValues> DropCap { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DropCapLocationValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Drop Cap Vertical Height in Lines</para>
@@ -5320,10 +5856,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(MinInclusive = 1L, MaxInclusive = 10L)]
-        [SchemaAttr(23, "lines")]
-        [Index(1)]
-        public Int32Value Lines { get; set; }
+        public Int32Value Lines { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Frame Width</para>
@@ -5332,12 +5865,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007)]
-        [NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [StringValidator(Pattern = "[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [SchemaAttr(23, "w")]
-        [Index(2)]
-        public StringValue Width { get; set; }
+        public StringValue Width { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Frame Height</para>
@@ -5346,10 +5874,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(MaxInclusive = 31680L)]
-        [SchemaAttr(23, "h")]
-        [Index(3)]
-        public UInt32Value Height { get; set; }
+        public UInt32Value Height { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Vertical Frame Padding</para>
@@ -5358,12 +5883,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007)]
-        [NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [StringValidator(Pattern = "[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [SchemaAttr(23, "vSpace")]
-        [Index(4)]
-        public StringValue VerticalSpace { get; set; }
+        public StringValue VerticalSpace { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Horizontal Frame Padding</para>
@@ -5372,12 +5892,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007)]
-        [NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [StringValidator(Pattern = "[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [SchemaAttr(23, "hSpace")]
-        [Index(5)]
-        public StringValue HorizontalSpace { get; set; }
+        public StringValue HorizontalSpace { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Text Wrapping Around Frame</para>
@@ -5386,9 +5901,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "wrap")]
-        [Index(6)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextWrappingValues> Wrap { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextWrappingValues> Wrap { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextWrappingValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Frame Horizontal Positioning Base</para>
@@ -5397,9 +5910,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "hAnchor")]
-        [Index(7)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues> HorizontalPosition { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues> HorizontalPosition { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Frame Vertical Positioning Base</para>
@@ -5408,9 +5919,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "vAnchor")]
-        [Index(8)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues> VerticalPosition { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues> VerticalPosition { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Absolute Horizontal Position</para>
@@ -5419,12 +5928,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2007)]
-        [NumberValidator(SimpleType = typeof(IntegerValue), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [StringValidator(Pattern = "-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [SchemaAttr(23, "x")]
-        [Index(9)]
-        public StringValue X { get; set; }
+        public StringValue X { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Relative Horizontal Position</para>
@@ -5433,9 +5937,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "xAlign")]
-        [Index(10)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues> XAlign { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues> XAlign { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Absolute Vertical Position</para>
@@ -5444,12 +5946,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2007)]
-        [NumberValidator(SimpleType = typeof(IntegerValue), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [StringValidator(Pattern = "-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [SchemaAttr(23, "y")]
-        [Index(11)]
-        public StringValue Y { get; set; }
+        public StringValue Y { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Relative Vertical Position</para>
@@ -5458,9 +5955,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "yAlign")]
-        [Index(12)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues> YAlign { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues> YAlign { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Frame Height Type</para>
@@ -5469,9 +5964,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "hRule")]
-        [Index(13)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues> HeightType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues> HeightType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Lock Frame Anchor to Paragraph</para>
@@ -5480,9 +5973,75 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "anchorLock")]
-        [Index(14)]
-        public OnOffValue AnchorLock { get; set; }
+        public OnOffValue AnchorLock { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FrameProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<FrameProperties>()
+                           .AddAttribute(23, "dropCap", a => a.DropCap)
+                           .AddAttribute(23, "lines", a => a.Lines, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (10L) });
+                           })
+                           .AddAttribute(23, "w", a => a.Width, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                               });
+                           })
+                           .AddAttribute(23, "h", a => a.Height, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (31680L) });
+                           })
+                           .AddAttribute(23, "vSpace", a => a.VerticalSpace, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                               });
+                           })
+                           .AddAttribute(23, "hSpace", a => a.HorizontalSpace, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                               });
+                           })
+                           .AddAttribute(23, "wrap", a => a.Wrap)
+                           .AddAttribute(23, "hAnchor", a => a.HorizontalPosition)
+                           .AddAttribute(23, "vAnchor", a => a.VerticalPosition)
+                           .AddAttribute(23, "x", a => a.X, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(IntegerValue)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                               });
+                           })
+                           .AddAttribute(23, "xAlign", a => a.XAlign)
+                           .AddAttribute(23, "y", a => a.Y, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(IntegerValue)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                               });
+                           })
+                           .AddAttribute(23, "yAlign", a => a.YAlign)
+                           .AddAttribute(23, "hRule", a => a.HeightType)
+                           .AddAttribute(23, "anchorLock", a => a.AnchorLock);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FrameProperties>(deep);
@@ -5540,6 +6099,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public NumberingProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberingProperties>();
 
         /// <summary>
         /// <para>Numbering Level Reference.</para>
@@ -5664,6 +6225,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ParagraphBorders>();
+
         /// <summary>
         /// <para>Paragraph Border Above Identical Paragraphs.</para>
         /// <para>Represents the following element tag in the schema: w:top.</para>
@@ -5781,10 +6344,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ShadingPatternValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ShadingPatternValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ShadingPatternValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Shading Pattern Color</para>
@@ -5793,11 +6353,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>), UnionId = 0)]
-        [StringValidator(SimpleType = typeof(HexBinaryValue), Length = 3L, UnionId = 0)]
-        [SchemaAttr(23, "color")]
-        [Index(1)]
-        public StringValue Color { get; set; }
+        public StringValue Color { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Shading Pattern Theme Color</para>
@@ -5806,9 +6362,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "themeColor")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Shading Pattern Theme Color Tint</para>
@@ -5817,10 +6371,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Pattern = "[0-9a-fA-F]*", MinLength = 1L, MaxLength = 2L)]
-        [SchemaAttr(23, "themeTint")]
-        [Index(3)]
-        public StringValue ThemeTint { get; set; }
+        public StringValue ThemeTint { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Shading Pattern Theme Color Shade</para>
@@ -5829,10 +6380,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Pattern = "[0-9a-fA-F]*", MinLength = 1L, MaxLength = 2L)]
-        [SchemaAttr(23, "themeShade")]
-        [Index(4)]
-        public StringValue ThemeShade { get; set; }
+        public StringValue ThemeShade { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Shading Background Color</para>
@@ -5841,11 +6389,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>), UnionId = 0)]
-        [StringValidator(SimpleType = typeof(HexBinaryValue), Length = 3L, UnionId = 0)]
-        [SchemaAttr(23, "fill")]
-        [Index(5)]
-        public StringValue Fill { get; set; }
+        public StringValue Fill { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Shading Background Theme Color</para>
@@ -5854,9 +6398,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "themeFill")]
-        [Index(6)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeFill { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeFill { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Shading Background Theme Color Tint</para>
@@ -5865,10 +6407,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Pattern = "[0-9a-fA-F]*", MinLength = 1L, MaxLength = 2L)]
-        [SchemaAttr(23, "themeFillTint")]
-        [Index(7)]
-        public StringValue ThemeFillTint { get; set; }
+        public StringValue ThemeFillTint { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Shading Background Theme Color Shade</para>
@@ -5877,10 +6416,52 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Pattern = "[0-9a-fA-F]*", MinLength = 1L, MaxLength = 2L)]
-        [SchemaAttr(23, "themeFillShade")]
-        [Index(8)]
-        public StringValue ThemeFillShade { get; set; }
+        public StringValue ThemeFillShade { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Shading>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Shading>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(23, "color", a => a.Color, aBuilder =>
+                           {
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>)), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { SimpleType = (typeof(HexBinaryValue)), Length = (3L), UnionId = (0) });
+                               });
+                           })
+                           .AddAttribute(23, "themeColor", a => a.ThemeColor)
+                           .AddAttribute(23, "themeTint", a => a.ThemeTint, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
+                           })
+                           .AddAttribute(23, "themeShade", a => a.ThemeShade, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
+                           })
+                           .AddAttribute(23, "fill", a => a.Fill, aBuilder =>
+                           {
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>)), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { SimpleType = (typeof(HexBinaryValue)), Length = (3L), UnionId = (0) });
+                               });
+                           })
+                           .AddAttribute(23, "themeFill", a => a.ThemeFill)
+                           .AddAttribute(23, "themeFillTint", a => a.ThemeFillTint, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
+                           })
+                           .AddAttribute(23, "themeFillShade", a => a.ThemeFillShade, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shading>(deep);
@@ -5933,6 +6514,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Tabs>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TabStop), 1, 0)
@@ -5967,12 +6550,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007)]
-        [NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [StringValidator(Pattern = "[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [SchemaAttr(23, "before")]
-        [Index(0)]
-        public StringValue Before { get; set; }
+        public StringValue Before { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Spacing Above Paragraph IN Line Units</para>
@@ -5981,9 +6559,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "beforeLines")]
-        [Index(1)]
-        public Int32Value BeforeLines { get; set; }
+        public Int32Value BeforeLines { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Automatically Determine Spacing Above Paragraph</para>
@@ -5992,9 +6568,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "beforeAutospacing")]
-        [Index(2)]
-        public OnOffValue BeforeAutoSpacing { get; set; }
+        public OnOffValue BeforeAutoSpacing { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Spacing Below Paragraph</para>
@@ -6003,12 +6577,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007)]
-        [NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [StringValidator(Pattern = "[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [SchemaAttr(23, "after")]
-        [Index(3)]
-        public StringValue After { get; set; }
+        public StringValue After { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Spacing Below Paragraph in Line Units</para>
@@ -6017,9 +6586,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "afterLines")]
-        [Index(4)]
-        public Int32Value AfterLines { get; set; }
+        public Int32Value AfterLines { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Automatically Determine Spacing Below Paragraph</para>
@@ -6028,9 +6595,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "afterAutospacing")]
-        [Index(5)]
-        public OnOffValue AfterAutoSpacing { get; set; }
+        public OnOffValue AfterAutoSpacing { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Spacing Between Lines in Paragraph</para>
@@ -6039,12 +6604,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2007)]
-        [NumberValidator(SimpleType = typeof(IntegerValue), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [StringValidator(Pattern = "-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [SchemaAttr(23, "line")]
-        [Index(6)]
-        public StringValue Line { get; set; }
+        public StringValue Line { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Type of Spacing Between Lines</para>
@@ -6053,9 +6613,46 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "lineRule")]
-        [Index(7)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineSpacingRuleValues> LineRule { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineSpacingRuleValues> LineRule { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineSpacingRuleValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SpacingBetweenLines>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SpacingBetweenLines>()
+                           .AddAttribute(23, "before", a => a.Before, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                               });
+                           })
+                           .AddAttribute(23, "beforeLines", a => a.BeforeLines)
+                           .AddAttribute(23, "beforeAutospacing", a => a.BeforeAutoSpacing)
+                           .AddAttribute(23, "after", a => a.After, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                               });
+                           })
+                           .AddAttribute(23, "afterLines", a => a.AfterLines)
+                           .AddAttribute(23, "afterAutospacing", a => a.AfterAutoSpacing)
+                           .AddAttribute(23, "line", a => a.Line, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(IntegerValue)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                               });
+                           })
+                           .AddAttribute(23, "lineRule", a => a.LineRule);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SpacingBetweenLines>(deep);
@@ -6084,12 +6681,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2007)]
-        [NumberValidator(SimpleType = typeof(IntegerValue), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [StringValidator(Pattern = "-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [SchemaAttr(23, "left")]
-        [Index(0)]
-        public StringValue Left { get; set; }
+        public StringValue Left { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>start, this property is only available in Office2010, Office2013, Office2016</para>
@@ -6098,13 +6690,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2007)]
-        [NumberValidator(SimpleType = typeof(IntegerValue), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [StringValidator(Pattern = "-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [SchemaAttr(23, "start")]
-        [Index(1)]
-        public StringValue Start { get; set; }
+        public StringValue Start { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Left Indentation in Character Units</para>
@@ -6113,9 +6699,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "leftChars")]
-        [Index(2)]
-        public Int32Value LeftChars { get; set; }
+        public Int32Value LeftChars { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>startChars, this property is only available in Office2010, Office2013, Office2016</para>
@@ -6124,10 +6708,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "startChars")]
-        [Index(3)]
-        public Int32Value StartCharacters { get; set; }
+        public Int32Value StartCharacters { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Right Indentation</para>
@@ -6136,12 +6717,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2007)]
-        [NumberValidator(SimpleType = typeof(IntegerValue), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [StringValidator(Pattern = "-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [SchemaAttr(23, "right")]
-        [Index(4)]
-        public StringValue Right { get; set; }
+        public StringValue Right { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>end, this property is only available in Office2010, Office2013, Office2016</para>
@@ -6150,13 +6726,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2007)]
-        [NumberValidator(SimpleType = typeof(IntegerValue), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [StringValidator(Pattern = "-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [SchemaAttr(23, "end")]
-        [Index(5)]
-        public StringValue End { get; set; }
+        public StringValue End { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Right Indentation in Character Units</para>
@@ -6165,9 +6735,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "rightChars")]
-        [Index(6)]
-        public Int32Value RightChars { get; set; }
+        public Int32Value RightChars { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>endChars, this property is only available in Office2010, Office2013, Office2016</para>
@@ -6176,10 +6744,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "endChars")]
-        [Index(7)]
-        public Int32Value EndCharacters { get; set; }
+        public Int32Value EndCharacters { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Indentation Removed from First Line</para>
@@ -6188,12 +6753,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007)]
-        [NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [StringValidator(Pattern = "[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [SchemaAttr(23, "hanging")]
-        [Index(8)]
-        public StringValue Hanging { get; set; }
+        public StringValue Hanging { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Indentation Removed From First Line in Character Units</para>
@@ -6202,9 +6762,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "hangingChars")]
-        [Index(9)]
-        public Int32Value HangingChars { get; set; }
+        public Int32Value HangingChars { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Additional First Line Indentation</para>
@@ -6213,12 +6771,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007)]
-        [NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [StringValidator(Pattern = "[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [SchemaAttr(23, "firstLine")]
-        [Index(10)]
-        public StringValue FirstLine { get; set; }
+        public StringValue FirstLine { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Additional First Line Indentation in Character Units</para>
@@ -6227,9 +6780,82 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "firstLineChars")]
-        [Index(11)]
-        public Int32Value FirstLineChars { get; set; }
+        public Int32Value FirstLineChars { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Indentation>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Indentation>()
+                           .AddAttribute(23, "left", a => a.Left, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(IntegerValue)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                               });
+                           })
+                           .AddAttribute(23, "start", a => a.Start, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(IntegerValue)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                               });
+                           })
+                           .AddAttribute(23, "leftChars", a => a.LeftChars)
+                           .AddAttribute(23, "startChars", a => a.StartCharacters, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "right", a => a.Right, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(IntegerValue)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                               });
+                           })
+                           .AddAttribute(23, "end", a => a.End, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(IntegerValue)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                               });
+                           })
+                           .AddAttribute(23, "rightChars", a => a.RightChars)
+                           .AddAttribute(23, "endChars", a => a.EndCharacters, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "hanging", a => a.Hanging, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                               });
+                           })
+                           .AddAttribute(23, "hangingChars", a => a.HangingChars)
+                           .AddAttribute(23, "firstLine", a => a.FirstLine, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                               });
+                           })
+                           .AddAttribute(23, "firstLineChars", a => a.FirstLineChars);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Indentation>(deep);
@@ -6258,10 +6884,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.JustificationValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.JustificationValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.JustificationValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Justification>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Justification>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Justification>(deep);
@@ -6290,10 +6924,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextDirectionValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextDirectionValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextDirectionValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextDirection>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TextDirection>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextDirection>(deep);
@@ -6322,10 +6964,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextAlignment>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TextAlignment>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextAlignment>(deep);
@@ -6354,10 +7004,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrapValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrapValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrapValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextBoxTightWrap>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TextBoxTightWrap>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextBoxTightWrap>(deep);
@@ -6378,6 +7036,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public OutlineLevel() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OutlineLevel>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*w:val*/, true, 0, true, 9, true)
@@ -6405,6 +7065,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GridSpan>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GridSpan>(deep);
     }
@@ -6424,6 +7086,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public GridBefore() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GridBefore>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GridBefore>(deep);
@@ -6445,6 +7109,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GridAfter>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GridAfter>(deep);
     }
@@ -6464,6 +7130,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DropDownListSelection() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DropDownListSelection>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropDownListSelection>(deep);
@@ -6485,6 +7153,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ActiveRecord>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ActiveRecord>(deep);
     }
@@ -6504,6 +7174,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public CheckErrors() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CheckErrors>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CheckErrors>(deep);
@@ -6525,6 +7197,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LevelRestart>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LevelRestart>(deep);
     }
@@ -6544,6 +7218,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public LevelPictureBulletId() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LevelPictureBulletId>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LevelPictureBulletId>(deep);
@@ -6565,6 +7241,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StartOverrideNumberingValue>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StartOverrideNumberingValue>(deep);
     }
@@ -6584,6 +7262,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public NumberingIdMacAtCleanup() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberingIdMacAtCleanup>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumberingIdMacAtCleanup>(deep);
@@ -6605,6 +7285,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtId>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtId>(deep);
     }
@@ -6624,6 +7306,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public PixelsPerInch() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PixelsPerInch>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PixelsPerInch>(deep);
@@ -6650,10 +7334,17 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public Int32Value Val { get; set; }
+        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<DecimalNumberType>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
     }
 
     /// <summary>
@@ -6710,11 +7401,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 255L)]
-        [SchemaAttr(23, "author")]
-        [Index(0)]
-        public StringValue Author { get; set; }
+        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>date</para>
@@ -6723,9 +7410,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "date")]
-        [Index(1)]
-        public DateTimeValue Date { get; set; }
+        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -6734,12 +7419,29 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [NumberValidator(MaxInclusive = -2L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [SchemaAttr(23, "id")]
-        [Index(2)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ParagraphPropertiesChange>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ParagraphPropertiesChange>()
+                           .AddAttribute(23, "author", a => a.Author, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+                           })
+                           .AddAttribute(23, "date", a => a.Date)
+                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                                   union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                               });
+                           });
+        }
 
         /// <summary>
         /// <para>Previous Paragraph Properties.</para>
@@ -6790,6 +7492,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HeaderReference>();
+
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipTypeConstraint(1 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/header"),
             new RelationshipExistConstraint(1 /*r:id*/)
@@ -6816,6 +7520,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public FooterReference() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FooterReference>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipTypeConstraint(1 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer"),
@@ -6849,10 +7555,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "type")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeaderFooterValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeaderFooterValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeaderFooterValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Relationship to Part</para>
@@ -6861,10 +7564,21 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(1)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<HeaderFooterReferenceType>()
+                           .AddAttribute(23, "type", a => a.Type, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
     }
 
     /// <summary>
@@ -6890,9 +7604,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "type")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Restart Location For Text Wrapping Break</para>
@@ -6901,9 +7613,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "clear")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakTextRestartLocationValues> Clear { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakTextRestartLocationValues> Clear { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakTextRestartLocationValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Break>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Break>()
+                           .AddAttribute(23, "type", a => a.Type)
+                           .AddAttribute(23, "clear", a => a.Clear);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Break>(deep);
@@ -6938,6 +7657,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             return new StringValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Text>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Text>(deep);
     }
@@ -6970,6 +7691,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             return new StringValue { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DeletedText>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DeletedText>(deep);
@@ -7004,6 +7727,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             return new StringValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FieldCode>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FieldCode>(deep);
     }
@@ -7036,6 +7761,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             return new StringValue { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DeletedFieldCode>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DeletedFieldCode>(deep);
@@ -7075,9 +7802,14 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [SchemaAttr(1, "space")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues> Space { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues> Space { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TextType>()
+                           .AddAttribute(1, "space", a => a.Space);
+        }
     }
 
     /// <summary>
@@ -7095,6 +7827,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public NoBreakHyphen() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoBreakHyphen>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoBreakHyphen>(deep);
@@ -7116,6 +7850,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SoftHyphen>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SoftHyphen>(deep);
     }
@@ -7135,6 +7871,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DayShort() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DayShort>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DayShort>(deep);
@@ -7156,6 +7894,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MonthShort>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MonthShort>(deep);
     }
@@ -7175,6 +7915,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public YearShort() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<YearShort>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<YearShort>(deep);
@@ -7196,6 +7938,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DayLong>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DayLong>(deep);
     }
@@ -7215,6 +7959,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public MonthLong() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MonthLong>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MonthLong>(deep);
@@ -7236,6 +7982,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<YearLong>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<YearLong>(deep);
     }
@@ -7255,6 +8003,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public AnnotationReferenceMark() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AnnotationReferenceMark>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AnnotationReferenceMark>(deep);
@@ -7276,6 +8026,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FootnoteReferenceMark>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FootnoteReferenceMark>(deep);
     }
@@ -7295,6 +8047,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public EndnoteReferenceMark() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EndnoteReferenceMark>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndnoteReferenceMark>(deep);
@@ -7316,6 +8070,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SeparatorMark>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SeparatorMark>(deep);
     }
@@ -7335,6 +8091,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ContinuationSeparatorMark() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ContinuationSeparatorMark>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ContinuationSeparatorMark>(deep);
@@ -7356,6 +8114,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PageNumber>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PageNumber>(deep);
     }
@@ -7375,6 +8135,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public CarriageReturn() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CarriageReturn>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CarriageReturn>(deep);
@@ -7396,6 +8158,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TabChar>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TabChar>(deep);
     }
@@ -7415,6 +8179,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public LastRenderedPageBreak() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LastRenderedPageBreak>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LastRenderedPageBreak>(deep);
@@ -7436,6 +8202,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentEquation>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtContentEquation>(deep);
     }
@@ -7455,6 +8223,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SdtContentPicture() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentPicture>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtContentPicture>(deep);
@@ -7476,6 +8246,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentRichText>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtContentRichText>(deep);
     }
@@ -7495,6 +8267,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SdtContentCitation() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentCitation>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtContentCitation>(deep);
@@ -7516,6 +8290,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentGroup>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtContentGroup>(deep);
     }
@@ -7536,6 +8312,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentBibliography>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtContentBibliography>(deep);
     }
@@ -7555,6 +8333,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ForceUpgrade() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ForceUpgrade>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ForceUpgrade>(deep);
@@ -7598,10 +8378,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(MaxLength = 31L)]
-        [SchemaAttr(23, "font")]
-        [Index(0)]
-        public StringValue Font { get; set; }
+        public StringValue Font { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Symbol Character Code</para>
@@ -7610,10 +8387,22 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Length = 2L)]
-        [SchemaAttr(23, "char")]
-        [Index(1)]
-        public HexBinaryValue Char { get; set; }
+        public HexBinaryValue Char { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SymbolChar>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SymbolChar>()
+                           .AddAttribute(23, "font", a => a.Font, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (31L) });
+                           })
+                           .AddAttribute(23, "char", a => a.Char, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SymbolChar>(deep);
@@ -7703,9 +8492,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "dxaOrig")]
-        [Index(0)]
-        public StringValue DxaOriginal { get; set; }
+        public StringValue DxaOriginal { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>dyaOrig</para>
@@ -7714,9 +8501,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "dyaOrig")]
-        [Index(1)]
-        public StringValue DyaOriginal { get; set; }
+        public StringValue DyaOriginal { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>anchorId, this property is only available in Office2010, Office2013, Office2016</para>
@@ -7725,11 +8510,21 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(52, "anchorId")]
-        [Index(2)]
-        public HexBinaryValue AnchorId { get; set; }
+        public HexBinaryValue AnchorId { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EmbeddedObject>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<EmbeddedObject>()
+                           .AddAttribute(23, "dxaOrig", a => a.DxaOriginal)
+                           .AddAttribute(23, "dyaOrig", a => a.DyaOriginal)
+                           .AddAttribute(52, "anchorId", a => a.AnchorId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -7852,11 +8647,19 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(52, "anchorId")]
-        [Index(0)]
-        public HexBinaryValue AnchorId { get; set; }
+        public HexBinaryValue AnchorId { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Picture>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Picture>()
+                           .AddAttribute(52, "anchorId", a => a.AnchorId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -7952,10 +8755,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "fldCharType")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FieldCharValues> FieldCharType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FieldCharValues> FieldCharType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FieldCharValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Field Should Not Be Recalculated</para>
@@ -7964,9 +8764,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "fldLock")]
-        [Index(1)]
-        public OnOffValue FieldLock { get; set; }
+        public OnOffValue FieldLock { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Field Result Invalidated</para>
@@ -7975,9 +8773,20 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "dirty")]
-        [Index(2)]
-        public OnOffValue Dirty { get; set; }
+        public OnOffValue Dirty { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FieldChar>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<FieldChar>()
+                           .AddAttribute(23, "fldCharType", a => a.FieldCharType, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(23, "fldLock", a => a.FieldLock)
+                           .AddAttribute(23, "dirty", a => a.Dirty);
+        }
 
         /// <summary>
         /// <para>Custom Field Data.</para>
@@ -8082,6 +8891,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Ruby>();
+
         /// <summary>
         /// <para>Phonetic Guide Properties.</para>
         /// <para>Represents the following element tag in the schema: w:rubyPr.</para>
@@ -8150,6 +8961,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FootnoteReference>();
+
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new ReferenceExistConstraint(1 /*w:id*/, "FootnotesPart", typeof(DocumentFormat.OpenXml.Wordprocessing.Footnote), "DocumentFormat.OpenXml.Wordprocessing.Footnote", 1 /*w:id*/)
         };
@@ -8176,6 +8989,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EndnoteReference>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndnoteReference>(deep);
     }
@@ -8201,9 +9016,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "customMarkFollows")]
-        [Index(0)]
-        public OnOffValue CustomMarkFollows { get; set; }
+        public OnOffValue CustomMarkFollows { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Footnote/Endnote ID Reference</para>
@@ -8212,11 +9025,19 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = -2147483648L, MaxInclusive = 32767L)]
-        [SchemaAttr(23, "id")]
-        [Index(1)]
-        public IntegerValue Id { get; set; }
+        public IntegerValue Id { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<FootnoteEndnoteReferenceType>()
+                           .AddAttribute(23, "customMarkFollows", a => a.CustomMarkFollows)
+                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-2147483648L), MaxInclusive = (32767L) });
+                           });
+        }
     }
 
     /// <summary>
@@ -8267,6 +9088,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Drawing(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Drawing>();
 
         /// <summary>
         /// <para>Drawing Element Anchor.</para>
@@ -8329,10 +9152,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "alignment")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabAlignmentValues> Alignment { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabAlignmentValues> Alignment { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabAlignmentValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Positional Tab Base</para>
@@ -8341,10 +9161,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "relativeTo")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabPositioningBaseValues> RelativeTo { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabPositioningBaseValues> RelativeTo { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabPositioningBaseValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Tab Leader Character</para>
@@ -8353,10 +9170,26 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "leader")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabLeaderCharValues> Leader { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabLeaderCharValues> Leader { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabLeaderCharValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PositionalTab>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<PositionalTab>()
+                           .AddAttribute(23, "alignment", a => a.Alignment, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(23, "relativeTo", a => a.RelativeTo, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(23, "leader", a => a.Leader, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PositionalTab>(deep);
@@ -8378,6 +9211,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RunStyle>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RunStyle>(deep);
     }
@@ -8397,6 +9232,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TableStyle() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableStyle>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableStyle>(deep);
@@ -8418,6 +9255,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ParagraphStyleIdInLevel>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ParagraphStyleIdInLevel>(deep);
     }
@@ -8437,6 +9276,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public AbstractNumDefinitionName() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AbstractNumDefinitionName>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AbstractNumDefinitionName>(deep);
@@ -8458,6 +9299,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StyleLink>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleLink>(deep);
     }
@@ -8477,6 +9320,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public NumberingStyleLink() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberingStyleLink>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumberingStyleLink>(deep);
@@ -8498,6 +9343,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Aliases>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Aliases>(deep);
     }
@@ -8517,6 +9364,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public BasedOn() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BasedOn>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BasedOn>(deep);
@@ -8538,6 +9387,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NextParagraphStyle>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NextParagraphStyle>(deep);
     }
@@ -8557,6 +9408,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public LinkedStyle() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LinkedStyle>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LinkedStyle>(deep);
@@ -8578,6 +9431,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ClickAndTypeStyle>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ClickAndTypeStyle>(deep);
     }
@@ -8597,6 +9452,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DefaultTableStyle() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DefaultTableStyle>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultTableStyle>(deep);
@@ -8623,11 +9480,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 253L)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<String253Type>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (253L) });
+                           });
+        }
     }
 
     /// <summary>
@@ -8653,9 +9517,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "hint")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontTypeHintValues> Hint { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontTypeHintValues> Hint { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontTypeHintValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>ASCII Font</para>
@@ -8664,10 +9526,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(MaxLength = 31L)]
-        [SchemaAttr(23, "ascii")]
-        [Index(1)]
-        public StringValue Ascii { get; set; }
+        public StringValue Ascii { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>High ANSI Font</para>
@@ -8676,10 +9535,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(MaxLength = 31L)]
-        [SchemaAttr(23, "hAnsi")]
-        [Index(2)]
-        public StringValue HighAnsi { get; set; }
+        public StringValue HighAnsi { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>East Asian Font</para>
@@ -8688,10 +9544,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(MaxLength = 31L)]
-        [SchemaAttr(23, "eastAsia")]
-        [Index(3)]
-        public StringValue EastAsia { get; set; }
+        public StringValue EastAsia { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Complex Script Font</para>
@@ -8700,10 +9553,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(MaxLength = 31L)]
-        [SchemaAttr(23, "cs")]
-        [Index(4)]
-        public StringValue ComplexScript { get; set; }
+        public StringValue ComplexScript { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>ASCII Theme Font</para>
@@ -8712,9 +9562,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "asciiTheme")]
-        [Index(5)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues> AsciiTheme { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues> AsciiTheme { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>High ANSI Theme Font</para>
@@ -8723,9 +9571,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "hAnsiTheme")]
-        [Index(6)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues> HighAnsiTheme { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues> HighAnsiTheme { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>East Asian Theme Font</para>
@@ -8734,9 +9580,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "eastAsiaTheme")]
-        [Index(7)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues> EastAsiaTheme { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues> EastAsiaTheme { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Complex Script Theme Font</para>
@@ -8745,9 +9589,35 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "cstheme")]
-        [Index(8)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues> ComplexScriptTheme { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues> ComplexScriptTheme { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RunFonts>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RunFonts>()
+                           .AddAttribute(23, "hint", a => a.Hint)
+                           .AddAttribute(23, "ascii", a => a.Ascii, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (31L) });
+                           })
+                           .AddAttribute(23, "hAnsi", a => a.HighAnsi, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (31L) });
+                           })
+                           .AddAttribute(23, "eastAsia", a => a.EastAsia, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (31L) });
+                           })
+                           .AddAttribute(23, "cs", a => a.ComplexScript, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (31L) });
+                           })
+                           .AddAttribute(23, "asciiTheme", a => a.AsciiTheme)
+                           .AddAttribute(23, "hAnsiTheme", a => a.HighAnsiTheme)
+                           .AddAttribute(23, "eastAsiaTheme", a => a.EastAsiaTheme)
+                           .AddAttribute(23, "cstheme", a => a.ComplexScriptTheme);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RunFonts>(deep);
@@ -8776,12 +9646,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>), UnionId = 0)]
-        [StringValidator(SimpleType = typeof(HexBinaryValue), Length = 3L, UnionId = 0)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Run Content Theme Color</para>
@@ -8790,9 +9655,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "themeColor")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Run Content Theme Color Tint</para>
@@ -8801,10 +9664,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Pattern = "[0-9a-fA-F]*", MinLength = 1L, MaxLength = 2L)]
-        [SchemaAttr(23, "themeTint")]
-        [Index(2)]
-        public StringValue ThemeTint { get; set; }
+        public StringValue ThemeTint { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Run Content Theme Color Shade</para>
@@ -8813,10 +9673,32 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Pattern = "[0-9a-fA-F]*", MinLength = 1L, MaxLength = 2L)]
-        [SchemaAttr(23, "themeShade")]
-        [Index(3)]
-        public StringValue ThemeShade { get; set; }
+        public StringValue ThemeShade { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Color>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Color>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>)), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { SimpleType = (typeof(HexBinaryValue)), Length = (3L), UnionId = (0) });
+                               });
+                           })
+                           .AddAttribute(23, "themeColor", a => a.ThemeColor)
+                           .AddAttribute(23, "themeTint", a => a.ThemeTint, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
+                           })
+                           .AddAttribute(23, "themeShade", a => a.ThemeShade, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Color>(deep);
@@ -8845,11 +9727,19 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = -31680L, MaxInclusive = 31680L)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public Int32Value Val { get; set; }
+        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Spacing>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Spacing>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-31680L), MaxInclusive = (31680L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Spacing>(deep);
@@ -8878,10 +9768,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(MinInclusive = 1L, MaxInclusive = 600L)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public IntegerValue Val { get; set; }
+        public IntegerValue Val { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CharacterScale>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<CharacterScale>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (600L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CharacterScale>(deep);
@@ -8910,11 +9808,19 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 3277L)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public UInt32Value Val { get; set; }
+        public UInt32Value Val { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Kern>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Kern>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (3277L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Kern>(deep);
@@ -8943,13 +9849,24 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2007)]
-        [NumberValidator(SimpleType = typeof(IntegerValue), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [StringValidator(Pattern = "-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Position>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Position>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(IntegerValue)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                               });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Position>(deep);
@@ -8971,6 +9888,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FontSize>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FontSize>(deep);
     }
@@ -8990,6 +9909,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public FontSizeComplexScript() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FontSizeComplexScript>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FontSizeComplexScript>(deep);
@@ -9011,6 +9932,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FormFieldSize>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormFieldSize>(deep);
     }
@@ -9031,6 +9954,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PhoneticGuideTextFontSize>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PhoneticGuideTextFontSize>(deep);
     }
@@ -9050,6 +9975,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public PhoneticGuideBaseTextSize() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PhoneticGuideBaseTextSize>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PhoneticGuideBaseTextSize>(deep);
@@ -9076,13 +10003,23 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 2L, MaxInclusive = 3277L, SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007)]
-        [NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [StringValidator(Pattern = "[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<HpsMeasureType>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L), MaxInclusive = (3277L), SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                               });
+                           });
+        }
     }
 
     /// <summary>
@@ -9108,10 +10045,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HighlightColorValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HighlightColorValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HighlightColorValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Highlight>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Highlight>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Highlight>(deep);
@@ -9140,9 +10085,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.UnderlineValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.UnderlineValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.UnderlineValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Underline Color</para>
@@ -9151,11 +10094,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>), UnionId = 0)]
-        [StringValidator(SimpleType = typeof(HexBinaryValue), Length = 3L, UnionId = 0)]
-        [SchemaAttr(23, "color")]
-        [Index(1)]
-        public StringValue Color { get; set; }
+        public StringValue Color { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Underline Theme Color</para>
@@ -9164,9 +10103,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "themeColor")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Underline Theme Color Tint</para>
@@ -9175,10 +10112,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Pattern = "[0-9a-fA-F]*", MinLength = 1L, MaxLength = 2L)]
-        [SchemaAttr(23, "themeTint")]
-        [Index(3)]
-        public StringValue ThemeTint { get; set; }
+        public StringValue ThemeTint { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Underline Theme Color Shade</para>
@@ -9187,10 +10121,32 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Pattern = "[0-9a-fA-F]*", MinLength = 1L, MaxLength = 2L)]
-        [SchemaAttr(23, "themeShade")]
-        [Index(4)]
-        public StringValue ThemeShade { get; set; }
+        public StringValue ThemeShade { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Underline>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Underline>()
+                           .AddAttribute(23, "val", a => a.Val)
+                           .AddAttribute(23, "color", a => a.Color, aBuilder =>
+                           {
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>)), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { SimpleType = (typeof(HexBinaryValue)), Length = (3L), UnionId = (0) });
+                               });
+                           })
+                           .AddAttribute(23, "themeColor", a => a.ThemeColor)
+                           .AddAttribute(23, "themeTint", a => a.ThemeTint, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
+                           })
+                           .AddAttribute(23, "themeShade", a => a.ThemeShade, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Underline>(deep);
@@ -9219,10 +10175,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextEffectValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextEffectValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextEffectValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextEffect>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TextEffect>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextEffect>(deep);
@@ -9244,6 +10208,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Border>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Border>(deep);
     }
@@ -9263,6 +10229,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TopBorder() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TopBorder>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopBorder>(deep);
@@ -9284,6 +10252,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LeftBorder>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LeftBorder>(deep);
     }
@@ -9303,6 +10273,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public BottomBorder() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BottomBorder>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BottomBorder>(deep);
@@ -9324,6 +10296,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RightBorder>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RightBorder>(deep);
     }
@@ -9343,6 +10317,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public BetweenBorder() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BetweenBorder>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BetweenBorder>(deep);
@@ -9364,6 +10340,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BarBorder>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BarBorder>(deep);
     }
@@ -9383,6 +10361,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public StartBorder() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StartBorder>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StartBorder>(deep);
@@ -9404,6 +10384,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EndBorder>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndBorder>(deep);
     }
@@ -9423,6 +10405,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public InsideHorizontalBorder() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<InsideHorizontalBorder>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<InsideHorizontalBorder>(deep);
@@ -9444,6 +10428,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<InsideVerticalBorder>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<InsideVerticalBorder>(deep);
     }
@@ -9464,6 +10450,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TopLeftToBottomRightCellBorder>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopLeftToBottomRightCellBorder>(deep);
     }
@@ -9483,6 +10471,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TopRightToBottomLeftCellBorder() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TopRightToBottomLeftCellBorder>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopRightToBottomLeftCellBorder>(deep);
@@ -9509,10 +10499,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.BorderValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.BorderValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.BorderValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Border Color</para>
@@ -9521,11 +10508,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>), UnionId = 0)]
-        [StringValidator(SimpleType = typeof(HexBinaryValue), Length = 3L, UnionId = 0)]
-        [SchemaAttr(23, "color")]
-        [Index(1)]
-        public StringValue Color { get; set; }
+        public StringValue Color { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Border Theme Color</para>
@@ -9534,9 +10517,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "themeColor")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Border Theme Color Tint</para>
@@ -9545,10 +10526,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Pattern = "[0-9a-fA-F]*", MinLength = 1L, MaxLength = 2L)]
-        [SchemaAttr(23, "themeTint")]
-        [Index(3)]
-        public StringValue ThemeTint { get; set; }
+        public StringValue ThemeTint { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Border Theme Color Shade</para>
@@ -9557,10 +10535,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Pattern = "[0-9a-fA-F]*", MinLength = 1L, MaxLength = 2L)]
-        [SchemaAttr(23, "themeShade")]
-        [Index(4)]
-        public StringValue ThemeShade { get; set; }
+        public StringValue ThemeShade { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Border Width</para>
@@ -9569,9 +10544,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "sz")]
-        [Index(5)]
-        public UInt32Value Size { get; set; }
+        public UInt32Value Size { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Border Spacing Measurement</para>
@@ -9580,10 +10553,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 31L)]
-        [SchemaAttr(23, "space")]
-        [Index(6)]
-        public UInt32Value Space { get; set; }
+        public UInt32Value Space { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Border Shadow</para>
@@ -9592,9 +10562,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "shadow")]
-        [Index(7)]
-        public OnOffValue Shadow { get; set; }
+        public OnOffValue Shadow { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Create Frame Effect</para>
@@ -9603,9 +10571,41 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "frame")]
-        [Index(8)]
-        public OnOffValue Frame { get; set; }
+        public OnOffValue Frame { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BorderType>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(23, "color", a => a.Color, aBuilder =>
+                           {
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>)), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { SimpleType = (typeof(HexBinaryValue)), Length = (3L), UnionId = (0) });
+                               });
+                           })
+                           .AddAttribute(23, "themeColor", a => a.ThemeColor)
+                           .AddAttribute(23, "themeTint", a => a.ThemeTint, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
+                           })
+                           .AddAttribute(23, "themeShade", a => a.ThemeShade, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
+                           })
+                           .AddAttribute(23, "sz", a => a.Size)
+                           .AddAttribute(23, "space", a => a.Space, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (31L) });
+                           })
+                           .AddAttribute(23, "shadow", a => a.Shadow)
+                           .AddAttribute(23, "frame", a => a.Frame);
+        }
     }
 
     /// <summary>
@@ -9631,11 +10631,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MaxInclusive = 31680L)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public UInt32Value Val { get; set; }
+        public UInt32Value Val { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Fit Text Run ID</para>
@@ -9644,9 +10640,20 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "id")]
-        [Index(1)]
-        public Int32Value Id { get; set; }
+        public Int32Value Id { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FitText>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<FitText>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (31680L) });
+                           })
+                           .AddAttribute(23, "id", a => a.Id);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FitText>(deep);
@@ -9675,10 +10682,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalPositionValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalPositionValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalPositionValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VerticalTextAlignment>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<VerticalTextAlignment>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VerticalTextAlignment>(deep);
@@ -9707,10 +10722,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.EmphasisMarkValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.EmphasisMarkValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.EmphasisMarkValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Emphasis>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Emphasis>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Emphasis>(deep);
@@ -9732,6 +10755,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Languages>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Languages>(deep);
     }
@@ -9751,6 +10776,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ThemeFontLanguages() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ThemeFontLanguages>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ThemeFontLanguages>(deep);
@@ -9777,10 +10804,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(MaxLength = 84L)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>East Asian Language</para>
@@ -9789,10 +10813,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(MaxLength = 84L)]
-        [SchemaAttr(23, "eastAsia")]
-        [Index(1)]
-        public StringValue EastAsia { get; set; }
+        public StringValue EastAsia { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Complex Script Language</para>
@@ -9801,10 +10822,25 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(MaxLength = 84L)]
-        [SchemaAttr(23, "bidi")]
-        [Index(2)]
-        public StringValue Bidi { get; set; }
+        public StringValue Bidi { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<LanguageType>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (84L) });
+                           })
+                           .AddAttribute(23, "eastAsia", a => a.EastAsia, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (84L) });
+                           })
+                           .AddAttribute(23, "bidi", a => a.Bidi, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (84L) });
+                           });
+        }
     }
 
     /// <summary>
@@ -9830,9 +10866,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "id")]
-        [Index(0)]
-        public Int32Value Id { get; set; }
+        public Int32Value Id { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Two Lines in One</para>
@@ -9841,9 +10875,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "combine")]
-        [Index(1)]
-        public OnOffValue Combine { get; set; }
+        public OnOffValue Combine { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Display Brackets Around Two Lines in One</para>
@@ -9852,9 +10884,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "combineBrackets")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CombineBracketValues> CombineBrackets { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CombineBracketValues> CombineBrackets { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CombineBracketValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Horizontal in Vertical (Rotate Text)</para>
@@ -9863,9 +10893,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "vert")]
-        [Index(3)]
-        public OnOffValue Vertical { get; set; }
+        public OnOffValue Vertical { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Compress Rotated Text to Line Height</para>
@@ -9874,9 +10902,19 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "vertCompress")]
-        [Index(4)]
-        public OnOffValue VerticalCompress { get; set; }
+        public OnOffValue VerticalCompress { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EastAsianLayout>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<EastAsianLayout>()
+                           .AddAttribute(23, "id", a => a.Id)
+                           .AddAttribute(23, "combine", a => a.Combine)
+                           .AddAttribute(23, "combineBrackets", a => a.CombineBrackets)
+                           .AddAttribute(23, "vert", a => a.Vertical)
+                           .AddAttribute(23, "vertCompress", a => a.VerticalCompress);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EastAsianLayout>(deep);
@@ -9936,11 +10974,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 255L)]
-        [SchemaAttr(23, "author")]
-        [Index(0)]
-        public StringValue Author { get; set; }
+        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>date</para>
@@ -9949,9 +10983,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "date")]
-        [Index(1)]
-        public DateTimeValue Date { get; set; }
+        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -9960,12 +10992,29 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [NumberValidator(MaxInclusive = -2L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [SchemaAttr(23, "id")]
-        [Index(2)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RunPropertiesChange>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RunPropertiesChange>()
+                           .AddAttribute(23, "author", a => a.Author, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+                           })
+                           .AddAttribute(23, "date", a => a.Date)
+                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                                   union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                               });
+                           });
+        }
 
         /// <summary>
         /// <para>Previous Run Properties.</para>
@@ -10146,6 +11195,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public RunProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RunProperties>();
 
         /// <summary>
         /// <para>RunStyle.</para>
@@ -10993,11 +12044,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 255L)]
-        [SchemaAttr(23, "author")]
-        [Index(0)]
-        public StringValue Author { get; set; }
+        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>date</para>
@@ -11006,9 +12053,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "date")]
-        [Index(1)]
-        public DateTimeValue Date { get; set; }
+        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -11017,12 +12062,29 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [NumberValidator(MaxInclusive = -2L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [SchemaAttr(23, "id")]
-        [Index(2)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<InsertedMathControl>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<InsertedMathControl>()
+                           .AddAttribute(23, "author", a => a.Author, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+                           })
+                           .AddAttribute(23, "date", a => a.Date)
+                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                                   union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                               });
+                           });
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(2 /*w:id*/, true, null)
@@ -11111,11 +12173,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 255L)]
-        [SchemaAttr(23, "author")]
-        [Index(0)]
-        public StringValue Author { get; set; }
+        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>date</para>
@@ -11124,9 +12182,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "date")]
-        [Index(1)]
-        public DateTimeValue Date { get; set; }
+        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -11135,12 +12191,29 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [NumberValidator(MaxInclusive = -2L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [SchemaAttr(23, "id")]
-        [Index(2)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DeletedMathControl>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<DeletedMathControl>()
+                           .AddAttribute(23, "author", a => a.Author, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+                           })
+                           .AddAttribute(23, "date", a => a.Date)
+                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                                   union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                               });
+                           });
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(2 /*w:id*/, true, null)
@@ -11215,6 +12288,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public MoveFromMathControl(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MoveFromMathControl>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -11297,6 +12372,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public MoveToMathControl(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MoveToMathControl>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -11388,11 +12465,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 255L)]
-        [SchemaAttr(23, "author")]
-        [Index(0)]
-        public StringValue Author { get; set; }
+        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>date</para>
@@ -11401,9 +12474,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "date")]
-        [Index(1)]
-        public DateTimeValue Date { get; set; }
+        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -11412,12 +12483,28 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [NumberValidator(MaxInclusive = -2L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [SchemaAttr(23, "id")]
-        [Index(2)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<MathControlMoveType>()
+                           .AddAttribute(23, "author", a => a.Author, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+                           })
+                           .AddAttribute(23, "date", a => a.Date)
+                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                                   union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                               });
+                           });
+        }
     }
 
     /// <summary>
@@ -11580,6 +12667,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public CustomXmlRuby(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlRuby>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -11883,10 +12972,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "instr")]
-        [Index(0)]
-        public StringValue Instruction { get; set; }
+        public StringValue Instruction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>fldLock</para>
@@ -11895,9 +12981,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "fldLock")]
-        [Index(1)]
-        public OnOffValue FieldLock { get; set; }
+        public OnOffValue FieldLock { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>dirty</para>
@@ -11906,9 +12990,20 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "dirty")]
-        [Index(2)]
-        public OnOffValue Dirty { get; set; }
+        public OnOffValue Dirty { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SimpleFieldRuby>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SimpleFieldRuby>()
+                           .AddAttribute(23, "instr", a => a.Instruction, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(23, "fldLock", a => a.FieldLock)
+                           .AddAttribute(23, "dirty", a => a.Dirty);
+        }
 
         /// <summary>
         /// <para>FieldData.</para>
@@ -12223,10 +13318,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(MaxLength = 255L)]
-        [SchemaAttr(23, "tgtFrame")]
-        [Index(0)]
-        public StringValue TargetFrame { get; set; }
+        public StringValue TargetFrame { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>tooltip</para>
@@ -12235,10 +13327,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(MaxLength = 260L)]
-        [SchemaAttr(23, "tooltip")]
-        [Index(1)]
-        public StringValue Tooltip { get; set; }
+        public StringValue Tooltip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>docLocation</para>
@@ -12247,10 +13336,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(MaxLength = 255L)]
-        [SchemaAttr(23, "docLocation")]
-        [Index(2)]
-        public StringValue DocLocation { get; set; }
+        public StringValue DocLocation { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>history</para>
@@ -12259,9 +13345,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "history")]
-        [Index(3)]
-        public OnOffValue History { get; set; }
+        public OnOffValue History { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>anchor</para>
@@ -12270,10 +13354,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(MaxLength = 255L)]
-        [SchemaAttr(23, "anchor")]
-        [Index(4)]
-        public StringValue Anchor { get; set; }
+        public StringValue Anchor { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>id</para>
@@ -12282,9 +13363,32 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr(19, "id")]
-        [Index(5)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HyperlinkRuby>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<HyperlinkRuby>()
+                           .AddAttribute(23, "tgtFrame", a => a.TargetFrame, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+                           })
+                           .AddAttribute(23, "tooltip", a => a.Tooltip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (260L) });
+                           })
+                           .AddAttribute(23, "docLocation", a => a.DocLocation, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+                           })
+                           .AddAttribute(23, "history", a => a.History)
+                           .AddAttribute(23, "anchor", a => a.Anchor, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+                           })
+                           .AddAttribute(19, "id", a => a.Id);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipExistConstraint(5 /*r:id*/)
@@ -12540,10 +13644,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(23, "rsidRPr")]
-        [Index(0)]
-        public HexBinaryValue RsidRunProperties { get; set; }
+        public HexBinaryValue RsidRunProperties { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Revision Identifier for Run Deletion</para>
@@ -12552,10 +13653,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(23, "rsidDel")]
-        [Index(1)]
-        public HexBinaryValue RsidRunDeletion { get; set; }
+        public HexBinaryValue RsidRunDeletion { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Revision Identifier for Run</para>
@@ -12564,10 +13662,26 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(23, "rsidR")]
-        [Index(2)]
-        public HexBinaryValue RsidRunAddition { get; set; }
+        public HexBinaryValue RsidRunAddition { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Run>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Run>()
+                           .AddAttribute(23, "rsidRPr", a => a.RsidRunProperties, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           })
+                           .AddAttribute(23, "rsidDel", a => a.RsidRunDeletion, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           })
+                           .AddAttribute(23, "rsidR", a => a.RsidRunAddition, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           });
+        }
 
         /// <summary>
         /// <para>Run Properties.</para>
@@ -12728,6 +13842,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtRunRuby>();
+
         /// <summary>
         /// <para>SdtContentRunRuby.</para>
         /// <para>Represents the following element tag in the schema: w:sdtContent.</para>
@@ -12815,10 +13931,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "type")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingErrorValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingErrorValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingErrorValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ProofError>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ProofError>()
+                           .AddAttribute(23, "type", a => a.Type, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ProofError>(deep);
@@ -12847,9 +13971,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "edGrp")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.RangePermissionEditingGroupValues> EditorGroup { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.RangePermissionEditingGroupValues> EditorGroup { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.RangePermissionEditingGroupValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>ed</para>
@@ -12858,9 +13980,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "ed")]
-        [Index(1)]
-        public StringValue Ed { get; set; }
+        public StringValue Ed { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>colFirst</para>
@@ -12869,10 +13989,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(MinInclusive = 0L)]
-        [SchemaAttr(23, "colFirst")]
-        [Index(2)]
-        public Int32Value ColumnFirst { get; set; }
+        public Int32Value ColumnFirst { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>colLast</para>
@@ -12881,10 +13998,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(MinInclusive = 0L)]
-        [SchemaAttr(23, "colLast")]
-        [Index(3)]
-        public Int32Value ColumnLast { get; set; }
+        public Int32Value ColumnLast { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Annotation ID</para>
@@ -12893,10 +14007,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "id")]
-        [Index(4)]
-        public Int32Value Id { get; set; }
+        public Int32Value Id { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Annotation Displaced By Custom XML Markup</para>
@@ -12905,9 +14016,29 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "displacedByCustomXml")]
-        [Index(5)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues> DisplacedByCustomXml { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues> DisplacedByCustomXml { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PermStart>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<PermStart>()
+                           .AddAttribute(23, "edGrp", a => a.EditorGroup)
+                           .AddAttribute(23, "ed", a => a.Ed)
+                           .AddAttribute(23, "colFirst", a => a.ColumnFirst, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+                           })
+                           .AddAttribute(23, "colLast", a => a.ColumnLast, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+                           })
+                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(23, "displacedByCustomXml", a => a.DisplacedByCustomXml);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(4 /*w:id*/, true, null)
@@ -12942,10 +14073,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "id")]
-        [Index(0)]
-        public Int32Value Id { get; set; }
+        public Int32Value Id { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Annotation Displaced By Custom XML Markup</para>
@@ -12954,9 +14082,19 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "displacedByCustomXml")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues> DisplacedByCustomXml { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues> DisplacedByCustomXml { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PermEnd>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<PermEnd>()
+                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(23, "displacedByCustomXml", a => a.DisplacedByCustomXml);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*w:id*/, true, null)
@@ -13068,6 +14206,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public InsertedRun(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<InsertedRun>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(2 /*w:id*/, true, null)
@@ -13323,6 +14463,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DeletedRun>();
+
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(2 /*w:id*/, true, null)
         };
@@ -13577,6 +14719,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MoveFromRun>();
+
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(2 /*w:id*/, true, null)
         };
@@ -13830,6 +14974,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public MoveToRun(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MoveToRun>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(2 /*w:id*/, true, null)
@@ -14146,11 +15292,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 255L)]
-        [SchemaAttr(23, "author")]
-        [Index(0)]
-        public StringValue Author { get; set; }
+        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>date</para>
@@ -14159,9 +15301,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "date")]
-        [Index(1)]
-        public DateTimeValue Date { get; set; }
+        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -14170,12 +15310,28 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [NumberValidator(MaxInclusive = -2L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [SchemaAttr(23, "id")]
-        [Index(2)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RunTrackChangeType>()
+                           .AddAttribute(23, "author", a => a.Author, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+                           })
+                           .AddAttribute(23, "date", a => a.Date)
+                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                                   union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                               });
+                           });
+        }
     }
 
     /// <summary>
@@ -14201,10 +15357,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ContentPart>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ContentPart>()
+                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ContentPart>(deep);
@@ -14300,6 +15464,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SdtRun(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtRun>();
 
         /// <summary>
         /// <para>Inline-Level Structured Document Tag Content.</para>
@@ -14479,6 +15645,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public CustomXmlBlock(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlBlock>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -14663,6 +15831,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SdtBlock(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtBlock>();
 
         /// <summary>
         /// <para>Block-Level Structured Document Tag Content.</para>
@@ -14902,10 +16072,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(23, "rsidRPr")]
-        [Index(0)]
-        public HexBinaryValue RsidParagraphMarkRevision { get; set; }
+        public HexBinaryValue RsidParagraphMarkRevision { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Revision Identifier for Paragraph</para>
@@ -14914,10 +16081,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(23, "rsidR")]
-        [Index(1)]
-        public HexBinaryValue RsidParagraphAddition { get; set; }
+        public HexBinaryValue RsidParagraphAddition { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Revision Identifier for Paragraph Deletion</para>
@@ -14926,10 +16090,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(23, "rsidDel")]
-        [Index(2)]
-        public HexBinaryValue RsidParagraphDeletion { get; set; }
+        public HexBinaryValue RsidParagraphDeletion { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Revision Identifier for Paragraph Properties</para>
@@ -14938,10 +16099,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(23, "rsidP")]
-        [Index(3)]
-        public HexBinaryValue RsidParagraphProperties { get; set; }
+        public HexBinaryValue RsidParagraphProperties { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Default Revision Identifier for Runs</para>
@@ -14950,10 +16108,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(23, "rsidRDefault")]
-        [Index(4)]
-        public HexBinaryValue RsidRunAdditionDefault { get; set; }
+        public HexBinaryValue RsidRunAdditionDefault { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>paraId, this property is only available in Office2010, Office2013, Office2016</para>
@@ -14962,11 +16117,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(52, "paraId")]
-        [Index(5)]
-        public HexBinaryValue ParagraphId { get; set; }
+        public HexBinaryValue ParagraphId { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>textId, this property is only available in Office2010, Office2013, Office2016</para>
@@ -14975,11 +16126,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(52, "textId")]
-        [Index(6)]
-        public HexBinaryValue TextId { get; set; }
+        public HexBinaryValue TextId { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>noSpellErr, this property is only available in Office2010, Office2013, Office2016</para>
@@ -14988,10 +16135,48 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(52, "noSpellErr")]
-        [Index(7)]
-        public OnOffValue NoSpellError { get; set; }
+        public OnOffValue NoSpellError { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Paragraph>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Paragraph>()
+                           .AddAttribute(23, "rsidRPr", a => a.RsidParagraphMarkRevision, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           })
+                           .AddAttribute(23, "rsidR", a => a.RsidParagraphAddition, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           })
+                           .AddAttribute(23, "rsidDel", a => a.RsidParagraphDeletion, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           })
+                           .AddAttribute(23, "rsidP", a => a.RsidParagraphProperties, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           })
+                           .AddAttribute(23, "rsidRDefault", a => a.RsidRunAdditionDefault, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           })
+                           .AddAttribute(52, "paraId", a => a.ParagraphId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           })
+                           .AddAttribute(52, "textId", a => a.TextId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           })
+                           .AddAttribute(52, "noSpellErr", a => a.NoSpellError, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           });
+        }
 
         /// <summary>
         /// <para>Paragraph Properties.</para>
@@ -15289,6 +16474,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Table>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 0)
@@ -15536,10 +16723,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(23, "rsidRPr")]
-        [Index(0)]
-        public HexBinaryValue RsidTableRowMarkRevision { get; set; }
+        public HexBinaryValue RsidTableRowMarkRevision { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Revision Identifier for Table Row</para>
@@ -15548,10 +16732,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(23, "rsidR")]
-        [Index(1)]
-        public HexBinaryValue RsidTableRowAddition { get; set; }
+        public HexBinaryValue RsidTableRowAddition { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Revision Identifier for Table Row Deletion</para>
@@ -15560,10 +16741,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(23, "rsidDel")]
-        [Index(2)]
-        public HexBinaryValue RsidTableRowDeletion { get; set; }
+        public HexBinaryValue RsidTableRowDeletion { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Revision Identifier for Table Row Properties</para>
@@ -15572,10 +16750,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(23, "rsidTr")]
-        [Index(3)]
-        public HexBinaryValue RsidTableRowProperties { get; set; }
+        public HexBinaryValue RsidTableRowProperties { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>paraId, this property is only available in Office2010, Office2013, Office2016</para>
@@ -15584,11 +16759,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(52, "paraId")]
-        [Index(4)]
-        public HexBinaryValue ParagraphId { get; set; }
+        public HexBinaryValue ParagraphId { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>textId, this property is only available in Office2010, Office2013, Office2016</para>
@@ -15597,11 +16768,40 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(52, "textId")]
-        [Index(5)]
-        public HexBinaryValue TextId { get; set; }
+        public HexBinaryValue TextId { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableRow>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TableRow>()
+                           .AddAttribute(23, "rsidRPr", a => a.RsidTableRowMarkRevision, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           })
+                           .AddAttribute(23, "rsidR", a => a.RsidTableRowAddition, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           })
+                           .AddAttribute(23, "rsidDel", a => a.RsidTableRowDeletion, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           })
+                           .AddAttribute(23, "rsidTr", a => a.RsidTableRowProperties, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           })
+                           .AddAttribute(52, "paraId", a => a.ParagraphId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           })
+                           .AddAttribute(52, "textId", a => a.TextId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           });
+        }
 
         /// <summary>
         /// <para>Table-Level Property Exceptions.</para>
@@ -15836,6 +17036,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlRow>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties), 0, 1),
@@ -16012,6 +17214,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SdtRow(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtRow>();
 
         /// <summary>
         /// <para>Row-Level Structured Document Tag Content.</para>
@@ -16193,6 +17397,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TableCell(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableCell>();
 
         /// <summary>
         /// <para>Table Cell Properties.</para>
@@ -16432,6 +17638,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlCell>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties), 0, 1),
@@ -16608,6 +17816,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SdtCell(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtCell>();
 
         /// <summary>
         /// <para>Cell-Level Structured Document Tag Content.</para>
@@ -16839,6 +18049,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public CustomXmlRun(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlRun>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -17175,10 +18387,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "instr")]
-        [Index(0)]
-        public StringValue Instruction { get; set; }
+        public StringValue Instruction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Field Should Not Be Recalculated</para>
@@ -17187,9 +18396,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "fldLock")]
-        [Index(1)]
-        public OnOffValue FieldLock { get; set; }
+        public OnOffValue FieldLock { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Field Result Invalidated</para>
@@ -17198,9 +18405,20 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "dirty")]
-        [Index(2)]
-        public OnOffValue Dirty { get; set; }
+        public OnOffValue Dirty { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SimpleField>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SimpleField>()
+                           .AddAttribute(23, "instr", a => a.Instruction, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(23, "fldLock", a => a.FieldLock)
+                           .AddAttribute(23, "dirty", a => a.Dirty);
+        }
 
         /// <summary>
         /// <para>Custom Field Data.</para>
@@ -17548,10 +18766,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(MaxLength = 255L)]
-        [SchemaAttr(23, "tgtFrame")]
-        [Index(0)]
-        public StringValue TargetFrame { get; set; }
+        public StringValue TargetFrame { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Associated String</para>
@@ -17560,10 +18775,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(MaxLength = 260L)]
-        [SchemaAttr(23, "tooltip")]
-        [Index(1)]
-        public StringValue Tooltip { get; set; }
+        public StringValue Tooltip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Location in Target Document</para>
@@ -17572,10 +18784,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(MaxLength = 255L)]
-        [SchemaAttr(23, "docLocation")]
-        [Index(2)]
-        public StringValue DocLocation { get; set; }
+        public StringValue DocLocation { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Add To Viewed Hyperlinks</para>
@@ -17584,9 +18793,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "history")]
-        [Index(3)]
-        public OnOffValue History { get; set; }
+        public OnOffValue History { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Hyperlink Anchor</para>
@@ -17595,10 +18802,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(MaxLength = 255L)]
-        [SchemaAttr(23, "anchor")]
-        [Index(4)]
-        public StringValue Anchor { get; set; }
+        public StringValue Anchor { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Hyperlink Target</para>
@@ -17607,9 +18811,32 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr(19, "id")]
-        [Index(5)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Hyperlink>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Hyperlink>()
+                           .AddAttribute(23, "tgtFrame", a => a.TargetFrame, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+                           })
+                           .AddAttribute(23, "tooltip", a => a.Tooltip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (260L) });
+                           })
+                           .AddAttribute(23, "docLocation", a => a.DocLocation, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+                           })
+                           .AddAttribute(23, "history", a => a.History)
+                           .AddAttribute(23, "anchor", a => a.Anchor, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+                           })
+                           .AddAttribute(19, "id", a => a.Id);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipExistConstraint(5 /*r:id*/)
@@ -17946,9 +19173,15 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BidirectionalOverride>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BidirectionalOverride>()
+                           .AddAttribute(23, "val", a => a.Val);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
         {
@@ -18279,9 +19512,15 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BidirectionalEmbedding>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BidirectionalEmbedding>()
+                           .AddAttribute(23, "val", a => a.Val);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
         {
@@ -18456,6 +19695,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SubDocumentReference>();
+
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipTypeConstraint(0 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/subDocument")
         };
@@ -18481,6 +19722,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public PrinterSettingsReference() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PrinterSettingsReference>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipTypeConstraint(0 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings")
@@ -18508,6 +19751,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SourceReference>();
+
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipTypeConstraint(0 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/mailMergeSource")
         };
@@ -18533,6 +19778,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public RecipientDataReference() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RecipientDataReference>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipTypeConstraint(0 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/recipientData")
@@ -18560,6 +19807,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataSourceReference>();
+
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipTypeConstraint(0 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/mailMergeSource")
         };
@@ -18586,6 +19835,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HeaderSource>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HeaderSource>(deep);
     }
@@ -18605,6 +19856,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SourceFileReference() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SourceFileReference>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipTypeConstraint(0 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/frame")
@@ -18632,6 +19885,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MovieReference>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MovieReference>(deep);
     }
@@ -18651,6 +19906,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public AttachedTemplate() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AttachedTemplate>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipTypeConstraint(0 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/attachedTemplate"),
@@ -18684,10 +19941,17 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RelationshipType>()
+                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
     }
 
     /// <summary>
@@ -18713,13 +19977,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator(Version = FileFormatVersions.Office2007)]
-        [RequiredValidator(IsRequired = false, Version = FileFormatVersions.Office2010)]
-        [RequiredValidator(InitialVersion = FileFormatVersions.Office2013)]
-        [StringValidator(Pattern = "[01]*", Length = 12L)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>firstRow, this property is only available in Office2010, Office2013, Office2016</para>
@@ -18728,10 +19986,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "firstRow")]
-        [Index(1)]
-        public OnOffValue FirstRow { get; set; }
+        public OnOffValue FirstRow { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>lastRow, this property is only available in Office2010, Office2013, Office2016</para>
@@ -18740,10 +19995,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "lastRow")]
-        [Index(2)]
-        public OnOffValue LastRow { get; set; }
+        public OnOffValue LastRow { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>firstColumn, this property is only available in Office2010, Office2013, Office2016</para>
@@ -18752,10 +20004,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "firstColumn")]
-        [Index(3)]
-        public OnOffValue FirstColumn { get; set; }
+        public OnOffValue FirstColumn { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>lastColumn, this property is only available in Office2010, Office2013, Office2016</para>
@@ -18764,10 +20013,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "lastColumn")]
-        [Index(4)]
-        public OnOffValue LastColumn { get; set; }
+        public OnOffValue LastColumn { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>oddVBand, this property is only available in Office2010, Office2013, Office2016</para>
@@ -18776,10 +20022,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "oddVBand")]
-        [Index(5)]
-        public OnOffValue OddVerticalBand { get; set; }
+        public OnOffValue OddVerticalBand { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>evenVBand, this property is only available in Office2010, Office2013, Office2016</para>
@@ -18788,10 +20031,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "evenVBand")]
-        [Index(6)]
-        public OnOffValue EvenVerticalBand { get; set; }
+        public OnOffValue EvenVerticalBand { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>oddHBand, this property is only available in Office2010, Office2013, Office2016</para>
@@ -18800,10 +20040,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "oddHBand")]
-        [Index(7)]
-        public OnOffValue OddHorizontalBand { get; set; }
+        public OnOffValue OddHorizontalBand { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>evenHBand, this property is only available in Office2010, Office2013, Office2016</para>
@@ -18812,10 +20049,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "evenHBand")]
-        [Index(8)]
-        public OnOffValue EvenHorizontalBand { get; set; }
+        public OnOffValue EvenHorizontalBand { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>firstRowFirstColumn, this property is only available in Office2010, Office2013, Office2016</para>
@@ -18824,10 +20058,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "firstRowFirstColumn")]
-        [Index(9)]
-        public OnOffValue FirstRowFirstColumn { get; set; }
+        public OnOffValue FirstRowFirstColumn { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>firstRowLastColumn, this property is only available in Office2010, Office2013, Office2016</para>
@@ -18836,10 +20067,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "firstRowLastColumn")]
-        [Index(10)]
-        public OnOffValue FirstRowLastColumn { get; set; }
+        public OnOffValue FirstRowLastColumn { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>lastRowFirstColumn, this property is only available in Office2010, Office2013, Office2016</para>
@@ -18848,10 +20076,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "lastRowFirstColumn")]
-        [Index(11)]
-        public OnOffValue LastRowFirstColumn { get; set; }
+        public OnOffValue LastRowFirstColumn { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>lastRowLastColumn, this property is only available in Office2010, Office2013, Office2016</para>
@@ -18860,10 +20085,69 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "lastRowLastColumn")]
-        [Index(12)]
-        public OnOffValue LastRowLastColumn { get; set; }
+        public OnOffValue LastRowLastColumn { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConditionalFormatStyle>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ConditionalFormatStyle>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddValidator(new RequiredValidatorAttribute() { IsRequired = (false), Version = (FileFormatVersions.Office2010) });
+                               aBuilder.AddValidator(new RequiredValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2013) });
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("[01]*"), Length = (12L) });
+                           })
+                           .AddAttribute(23, "firstRow", a => a.FirstRow, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "lastRow", a => a.LastRow, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "firstColumn", a => a.FirstColumn, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "lastColumn", a => a.LastColumn, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "oddVBand", a => a.OddVerticalBand, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "evenVBand", a => a.EvenVerticalBand, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "oddHBand", a => a.OddHorizontalBand, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "evenHBand", a => a.EvenHorizontalBand, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "firstRowFirstColumn", a => a.FirstRowFirstColumn, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "firstRowLastColumn", a => a.FirstRowLastColumn, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "lastRowFirstColumn", a => a.LastRowFirstColumn, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "lastRowLastColumn", a => a.LastRowLastColumn, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConditionalFormatStyle>(deep);
@@ -18885,6 +20169,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableCellWidth>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableCellWidth>(deep);
     }
@@ -18904,6 +20190,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public WidthBeforeTableRow() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WidthBeforeTableRow>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WidthBeforeTableRow>(deep);
@@ -18925,6 +20213,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WidthAfterTableRow>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WidthAfterTableRow>(deep);
     }
@@ -18944,6 +20234,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TableCellSpacing() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableCellSpacing>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableCellSpacing>(deep);
@@ -18965,6 +20257,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableWidth>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableWidth>(deep);
     }
@@ -18984,6 +20278,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TopMargin() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TopMargin>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopMargin>(deep);
@@ -19005,6 +20301,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StartMargin>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StartMargin>(deep);
     }
@@ -19024,6 +20322,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public BottomMargin() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BottomMargin>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeCannotOmitConstraint(1 /*w:type*/) { Application = ApplicationType.Word },
@@ -19052,6 +20352,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EndMargin>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndMargin>(deep);
     }
@@ -19072,6 +20374,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LeftMargin>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LeftMargin>(deep);
     }
@@ -19091,6 +20395,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public RightMargin() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RightMargin>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RightMargin>(deep);
@@ -19117,14 +20423,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2007)]
-        [StringValidator(Pattern = "-?[0-9]+(\\.[0-9]+)?%", Version = FileFormatVersions.Office2010, UnionId = 0)]
-        [NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2010, UnionId = 0)]
-        [StringValidator(Pattern = "-?[0-9]+(\\.[0-9]+)?%", InitialVersion = FileFormatVersions.Office2013, UnionId = 1)]
-        [NumberValidator(SimpleType = typeof(Int32Value), InitialVersion = FileFormatVersions.Office2013, UnionId = 1)]
-        [SchemaAttr(23, "w")]
-        [Index(0)]
-        public StringValue Width { get; set; }
+        public StringValue Width { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Table Width Type</para>
@@ -19133,9 +20432,28 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "type")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues>>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TableWidthType>()
+                           .AddAttribute(23, "w", a => a.Width, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?%"), Version = (FileFormatVersions.Office2010), UnionId = (0) });
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), Version = (FileFormatVersions.Office2010), UnionId = (0) });
+                               });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?%"), InitialVersion = (FileFormatVersions.Office2013), UnionId = (1) });
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), InitialVersion = (FileFormatVersions.Office2013), UnionId = (1) });
+                               });
+                           })
+                           .AddAttribute(23, "type", a => a.Type);
+        }
     }
 
     /// <summary>
@@ -19161,9 +20479,15 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HorizontalMerge>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<HorizontalMerge>()
+                           .AddAttribute(23, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HorizontalMerge>(deep);
@@ -19192,9 +20516,15 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VerticalMerge>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<VerticalMerge>()
+                           .AddAttribute(23, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VerticalMerge>(deep);
@@ -19264,6 +20594,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TableCellBorders(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableCellBorders>();
 
         /// <summary>
         /// <para>Table Cell Top Border.</para>
@@ -19431,6 +20763,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoWrap>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoWrap>(deep);
     }
@@ -19450,6 +20784,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TableCellFitText() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableCellFitText>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableCellFitText>(deep);
@@ -19471,6 +20807,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HideMark>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HideMark>(deep);
     }
@@ -19490,6 +20828,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public CantSplit() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CantSplit>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CantSplit>(deep);
@@ -19511,6 +20851,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableHeader>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableHeader>(deep);
     }
@@ -19530,6 +20872,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public BiDiVisual() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BiDiVisual>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BiDiVisual>(deep);
@@ -19551,6 +20895,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoResizeAllowed>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoResizeAllowed>(deep);
     }
@@ -19570,6 +20916,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public LinkedToFile() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LinkedToFile>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LinkedToFile>(deep);
@@ -19591,6 +20939,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoBorder>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoBorder>(deep);
     }
@@ -19610,6 +20960,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public FlatBorders() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FlatBorders>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FlatBorders>(deep);
@@ -19631,6 +20983,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutoRedefine>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoRedefine>(deep);
     }
@@ -19650,6 +21004,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public StyleHidden() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StyleHidden>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleHidden>(deep);
@@ -19671,6 +21027,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SemiHidden>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SemiHidden>(deep);
     }
@@ -19690,6 +21048,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public UnhideWhenUsed() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UnhideWhenUsed>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UnhideWhenUsed>(deep);
@@ -19711,6 +21071,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PrimaryStyle>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PrimaryStyle>(deep);
     }
@@ -19730,6 +21092,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Locked() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Locked>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Locked>(deep);
@@ -19751,6 +21115,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Personal>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Personal>(deep);
     }
@@ -19771,6 +21137,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PersonalCompose>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PersonalCompose>(deep);
     }
@@ -19790,6 +21158,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public PersonalReply() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PersonalReply>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PersonalReply>(deep);
@@ -19816,9 +21186,14 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.OnOffOnlyValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.OnOffOnlyValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.OnOffOnlyValues>>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<OnOffOnlyType>()
+                           .AddAttribute(23, "val", a => a.Val);
+        }
     }
 
     /// <summary>
@@ -19877,6 +21252,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TableCellMargin(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableCellMargin>();
 
         /// <summary>
         /// <para>Table Cell Top Margin Exception.</para>
@@ -19995,10 +21372,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableVerticalAlignmentValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableVerticalAlignmentValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableVerticalAlignmentValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableCellVerticalAlignment>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TableCellVerticalAlignment>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableCellVerticalAlignment>(deep);
@@ -20027,12 +21412,23 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 1L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [NumberValidator(MaxInclusive = -1L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DivId>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<DivId>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                                   union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-1L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                               });
+                           });
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(0 /*w:val*/, false, new string[] { "0" }) { Application = ApplicationType.Word }
@@ -20067,10 +21463,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(MaxInclusive = 31680L)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public UInt32Value Val { get; set; }
+        public UInt32Value Val { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Table Row Height Type</para>
@@ -20079,9 +21472,19 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "hRule")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues> HeightType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues> HeightType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableRowHeight>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TableRowHeight>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (31680L) });
+                           })
+                           .AddAttribute(23, "hRule", a => a.HeightType);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableRowHeight>(deep);
@@ -20110,10 +21513,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableRowAlignmentValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableRowAlignmentValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableRowAlignmentValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableJustification>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TableJustification>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableJustification>(deep);
@@ -20142,10 +21553,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(MinInclusive = 0L)]
-        [SchemaAttr(23, "leftFromText")]
-        [Index(0)]
-        public Int16Value LeftFromText { get; set; }
+        public Int16Value LeftFromText { get => GetAttribute<Int16Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>(Distance From Right of Table to Text</para>
@@ -20154,10 +21562,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(MinInclusive = 0L)]
-        [SchemaAttr(23, "rightFromText")]
-        [Index(1)]
-        public Int16Value RightFromText { get; set; }
+        public Int16Value RightFromText { get => GetAttribute<Int16Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Distance From Top of Table to Text</para>
@@ -20166,10 +21571,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(MinInclusive = 0L)]
-        [SchemaAttr(23, "topFromText")]
-        [Index(2)]
-        public Int16Value TopFromText { get; set; }
+        public Int16Value TopFromText { get => GetAttribute<Int16Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Distance From Bottom of Table to Text</para>
@@ -20178,10 +21580,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(MinInclusive = 0L)]
-        [SchemaAttr(23, "bottomFromText")]
-        [Index(3)]
-        public Int16Value BottomFromText { get; set; }
+        public Int16Value BottomFromText { get => GetAttribute<Int16Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Table Vertical Anchor</para>
@@ -20190,9 +21589,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "vertAnchor")]
-        [Index(4)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues> VerticalAnchor { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues> VerticalAnchor { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Table Horizontal Anchor</para>
@@ -20201,9 +21598,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "horzAnchor")]
-        [Index(5)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues> HorizontalAnchor { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues> HorizontalAnchor { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Relative Horizontal Alignment From Anchor</para>
@@ -20212,9 +21607,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "tblpXSpec")]
-        [Index(6)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues> TablePositionXAlignment { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues> TablePositionXAlignment { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Absolute Horizontal Distance From Anchor</para>
@@ -20223,10 +21616,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(MinInclusive = -31680L, MaxInclusive = 31680L)]
-        [SchemaAttr(23, "tblpX")]
-        [Index(7)]
-        public Int32Value TablePositionX { get; set; }
+        public Int32Value TablePositionX { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Relative Vertical Alignment from Anchor</para>
@@ -20235,9 +21625,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "tblpYSpec")]
-        [Index(8)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues> TablePositionYAlignment { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues> TablePositionYAlignment { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Absolute Vertical Distance From Anchor</para>
@@ -20246,10 +21634,42 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(MinInclusive = -31680L, MaxInclusive = 31680L)]
-        [SchemaAttr(23, "tblpY")]
-        [Index(9)]
-        public Int32Value TablePositionY { get; set; }
+        public Int32Value TablePositionY { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TablePositionProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TablePositionProperties>()
+                           .AddAttribute(23, "leftFromText", a => a.LeftFromText, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+                           })
+                           .AddAttribute(23, "rightFromText", a => a.RightFromText, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+                           })
+                           .AddAttribute(23, "topFromText", a => a.TopFromText, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+                           })
+                           .AddAttribute(23, "bottomFromText", a => a.BottomFromText, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+                           })
+                           .AddAttribute(23, "vertAnchor", a => a.VerticalAnchor)
+                           .AddAttribute(23, "horzAnchor", a => a.HorizontalAnchor)
+                           .AddAttribute(23, "tblpXSpec", a => a.TablePositionXAlignment)
+                           .AddAttribute(23, "tblpX", a => a.TablePositionX, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-31680L), MaxInclusive = (31680L) });
+                           })
+                           .AddAttribute(23, "tblpYSpec", a => a.TablePositionYAlignment)
+                           .AddAttribute(23, "tblpY", a => a.TablePositionY, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-31680L), MaxInclusive = (31680L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TablePositionProperties>(deep);
@@ -20278,10 +21698,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableOverlapValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableOverlapValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableOverlapValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableOverlap>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TableOverlap>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableOverlap>(deep);
@@ -20303,6 +21731,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableStyleRowBandSize>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableStyleRowBandSize>(deep);
     }
@@ -20322,6 +21752,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TableStyleColumnBandSize() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableStyleColumnBandSize>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableStyleColumnBandSize>(deep);
@@ -20348,11 +21780,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 3L)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public Int32Value Val { get; set; }
+        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<UnsignedDecimalNumberMax3Type>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (3L) });
+                           });
+        }
     }
 
     /// <summary>
@@ -20378,9 +21817,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "w")]
-        [Index(0)]
-        public Int32Value Width { get; set; }
+        public Int32Value Width { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>type</para>
@@ -20389,9 +21826,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "type")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableIndentation>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TableIndentation>()
+                           .AddAttribute(23, "w", a => a.Width)
+                           .AddAttribute(23, "type", a => a.Type);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableIndentation>(deep);
@@ -20457,6 +21901,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TableBorders(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableBorders>();
 
         /// <summary>
         /// <para>Table Top Border.</para>
@@ -20603,9 +22049,15 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "type")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableLayoutValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableLayoutValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableLayoutValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableLayout>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TableLayout>()
+                           .AddAttribute(23, "type", a => a.Type);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableLayout>(deep);
@@ -20667,6 +22119,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TableCellMarginDefault(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableCellMarginDefault>();
 
         /// <summary>
         /// <para>Table Cell Top Margin Default.</para>
@@ -20785,10 +22239,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public UInt16Value Val { get; set; }
+        public UInt16Value Val { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberingStart>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<NumberingStart>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumberingStart>(deep);
@@ -20817,10 +22279,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.RestartNumberValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.RestartNumberValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.RestartNumberValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberingRestart>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<NumberingRestart>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumberingRestart>(deep);
@@ -20880,9 +22350,15 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr(19, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AltChunk>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<AltChunk>()
+                           .AddAttribute(19, "id", a => a.Id);
+        }
 
         /// <summary>
         /// <para>External Content Import Properties.</para>
@@ -20938,10 +22414,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Length = 2L)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public HexBinaryValue Val { get; set; }
+        public HexBinaryValue Val { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>firstRow, this property is only available in Office2010, Office2013, Office2016</para>
@@ -20950,10 +22423,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "firstRow")]
-        [Index(1)]
-        public OnOffValue FirstRow { get; set; }
+        public OnOffValue FirstRow { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>lastRow, this property is only available in Office2010, Office2013, Office2016</para>
@@ -20962,10 +22432,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "lastRow")]
-        [Index(2)]
-        public OnOffValue LastRow { get; set; }
+        public OnOffValue LastRow { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>firstColumn, this property is only available in Office2010, Office2013, Office2016</para>
@@ -20974,10 +22441,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "firstColumn")]
-        [Index(3)]
-        public OnOffValue FirstColumn { get; set; }
+        public OnOffValue FirstColumn { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>lastColumn, this property is only available in Office2010, Office2013, Office2016</para>
@@ -20986,10 +22450,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "lastColumn")]
-        [Index(4)]
-        public OnOffValue LastColumn { get; set; }
+        public OnOffValue LastColumn { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>noHBand, this property is only available in Office2010, Office2013, Office2016</para>
@@ -20998,10 +22459,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "noHBand")]
-        [Index(5)]
-        public OnOffValue NoHorizontalBand { get; set; }
+        public OnOffValue NoHorizontalBand { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>noVBand, this property is only available in Office2010, Office2013, Office2016</para>
@@ -21010,10 +22468,42 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "noVBand")]
-        [Index(6)]
-        public OnOffValue NoVerticalBand { get; set; }
+        public OnOffValue NoVerticalBand { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableLook>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TableLook>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
+                           })
+                           .AddAttribute(23, "firstRow", a => a.FirstRow, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "lastRow", a => a.LastRow, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "firstColumn", a => a.FirstColumn, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "lastColumn", a => a.LastColumn, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "noHBand", a => a.NoHorizontalBand, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "noVBand", a => a.NoVerticalBand, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableLook>(deep);
@@ -21071,6 +22561,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public FootnoteProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FootnoteProperties>();
 
         /// <summary>
         /// <para>Footnote Placement.</para>
@@ -21197,6 +22689,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EndnoteProperties>();
+
         /// <summary>
         /// <para>Endnote Placement.</para>
         /// <para>Represents the following element tag in the schema: w:pos.</para>
@@ -21292,10 +22786,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.SectionMarkValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.SectionMarkValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.SectionMarkValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SectionType>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SectionType>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SectionType>(deep);
@@ -21324,10 +22826,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(MaxInclusive = 31680L)]
-        [SchemaAttr(23, "w")]
-        [Index(0)]
-        public UInt32Value Width { get; set; }
+        public UInt32Value Width { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Page Height</para>
@@ -21336,10 +22835,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(MaxInclusive = 31680L)]
-        [SchemaAttr(23, "h")]
-        [Index(1)]
-        public UInt32Value Height { get; set; }
+        public UInt32Value Height { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Page Orientation</para>
@@ -21348,9 +22844,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "orient")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageOrientationValues> Orient { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageOrientationValues> Orient { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageOrientationValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Printer Paper Code</para>
@@ -21359,9 +22853,24 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "code")]
-        [Index(3)]
-        public UInt16Value Code { get; set; }
+        public UInt16Value Code { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PageSize>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<PageSize>()
+                           .AddAttribute(23, "w", a => a.Width, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (31680L) });
+                           })
+                           .AddAttribute(23, "h", a => a.Height, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (31680L) });
+                           })
+                           .AddAttribute(23, "orient", a => a.Orient)
+                           .AddAttribute(23, "code", a => a.Code);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PageSize>(deep);
@@ -21390,10 +22899,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(MinInclusive = -31680L, MaxInclusive = 31680L)]
-        [SchemaAttr(23, "top")]
-        [Index(0)]
-        public Int32Value Top { get; set; }
+        public Int32Value Top { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Right Margin Spacing</para>
@@ -21402,10 +22908,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(MaxInclusive = 31680L)]
-        [SchemaAttr(23, "right")]
-        [Index(1)]
-        public UInt32Value Right { get; set; }
+        public UInt32Value Right { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Page Bottom Spacing</para>
@@ -21414,10 +22917,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(MinInclusive = -31680L, MaxInclusive = 31680L)]
-        [SchemaAttr(23, "bottom")]
-        [Index(2)]
-        public Int32Value Bottom { get; set; }
+        public Int32Value Bottom { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Left Margin Spacing</para>
@@ -21426,10 +22926,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(MaxInclusive = 31680L)]
-        [SchemaAttr(23, "left")]
-        [Index(3)]
-        public UInt32Value Left { get; set; }
+        public UInt32Value Left { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Spacing to Top of Header</para>
@@ -21438,10 +22935,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(MaxInclusive = 31680L)]
-        [SchemaAttr(23, "header")]
-        [Index(4)]
-        public UInt32Value Header { get; set; }
+        public UInt32Value Header { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Spacing to Bottom of Footer</para>
@@ -21450,10 +22944,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(MaxInclusive = 31680L)]
-        [SchemaAttr(23, "footer")]
-        [Index(5)]
-        public UInt32Value Footer { get; set; }
+        public UInt32Value Footer { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Page Gutter Spacing</para>
@@ -21462,10 +22953,42 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(MaxInclusive = 31680L)]
-        [SchemaAttr(23, "gutter")]
-        [Index(6)]
-        public UInt32Value Gutter { get; set; }
+        public UInt32Value Gutter { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PageMargin>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<PageMargin>()
+                           .AddAttribute(23, "top", a => a.Top, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-31680L), MaxInclusive = (31680L) });
+                           })
+                           .AddAttribute(23, "right", a => a.Right, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (31680L) });
+                           })
+                           .AddAttribute(23, "bottom", a => a.Bottom, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-31680L), MaxInclusive = (31680L) });
+                           })
+                           .AddAttribute(23, "left", a => a.Left, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (31680L) });
+                           })
+                           .AddAttribute(23, "header", a => a.Header, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (31680L) });
+                           })
+                           .AddAttribute(23, "footer", a => a.Footer, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (31680L) });
+                           })
+                           .AddAttribute(23, "gutter", a => a.Gutter, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (31680L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PageMargin>(deep);
@@ -21494,9 +23017,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "first")]
-        [Index(0)]
-        public UInt16Value First { get; set; }
+        public UInt16Value First { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Non-First Page Printer Tray Code</para>
@@ -21505,9 +23026,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "other")]
-        [Index(1)]
-        public UInt16Value Other { get; set; }
+        public UInt16Value Other { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PaperSource>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<PaperSource>()
+                           .AddAttribute(23, "first", a => a.First)
+                           .AddAttribute(23, "other", a => a.Other);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PaperSource>(deep);
@@ -21573,9 +23101,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "zOrder")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderZOrderValues> ZOrder { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderZOrderValues> ZOrder { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderZOrderValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Pages to Display Page Borders</para>
@@ -21584,9 +23110,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "display")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderDisplayValues> Display { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderDisplayValues> Display { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderDisplayValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Page Border Positioning</para>
@@ -21595,9 +23119,17 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "offsetFrom")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderOffsetValues> OffsetFrom { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderOffsetValues> OffsetFrom { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderOffsetValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PageBorders>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<PageBorders>()
+                           .AddAttribute(23, "zOrder", a => a.ZOrder)
+                           .AddAttribute(23, "display", a => a.Display)
+                           .AddAttribute(23, "offsetFrom", a => a.OffsetFrom);
+        }
 
         /// <summary>
         /// <para>Top Border.</para>
@@ -21688,10 +23220,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(MinInclusive = 1L, MaxInclusive = 100L)]
-        [SchemaAttr(23, "countBy")]
-        [Index(0)]
-        public Int16Value CountBy { get; set; }
+        public Int16Value CountBy { get => GetAttribute<Int16Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Line Numbering Starting Value</para>
@@ -21700,10 +23229,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(MinInclusive = 0L)]
-        [SchemaAttr(23, "start")]
-        [Index(1)]
-        public Int16Value Start { get; set; }
+        public Int16Value Start { get => GetAttribute<Int16Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Distance Between Text and Line Numbering</para>
@@ -21712,12 +23238,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007)]
-        [NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [StringValidator(Pattern = "[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [SchemaAttr(23, "distance")]
-        [Index(2)]
-        public StringValue Distance { get; set; }
+        public StringValue Distance { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Line Numbering Restart Setting</para>
@@ -21726,9 +23247,32 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "restart")]
-        [Index(3)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineNumberRestartValues> Restart { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineNumberRestartValues> Restart { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineNumberRestartValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LineNumberType>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<LineNumberType>()
+                           .AddAttribute(23, "countBy", a => a.CountBy, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (100L) });
+                           })
+                           .AddAttribute(23, "start", a => a.Start, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+                           })
+                           .AddAttribute(23, "distance", a => a.Distance, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                               });
+                           })
+                           .AddAttribute(23, "restart", a => a.Restart);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LineNumberType>(deep);
@@ -21757,9 +23301,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "fmt")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues> Format { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues> Format { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Starting Page Number</para>
@@ -21768,10 +23310,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(MinInclusive = 0L)]
-        [SchemaAttr(23, "start")]
-        [Index(1)]
-        public Int32Value Start { get; set; }
+        public Int32Value Start { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Chapter Heading Style</para>
@@ -21780,9 +23319,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "chapStyle")]
-        [Index(2)]
-        public ByteValue ChapterStyle { get; set; }
+        public ByteValue ChapterStyle { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Chapter Separator Character</para>
@@ -21791,9 +23328,21 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "chapSep")]
-        [Index(3)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues> ChapterSeparator { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues> ChapterSeparator { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PageNumberType>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<PageNumberType>()
+                           .AddAttribute(23, "fmt", a => a.Format)
+                           .AddAttribute(23, "start", a => a.Start, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+                           })
+                           .AddAttribute(23, "chapStyle", a => a.ChapterStyle)
+                           .AddAttribute(23, "chapSep", a => a.ChapterSeparator);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PageNumberType>(deep);
@@ -21853,9 +23402,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "equalWidth")]
-        [Index(0)]
-        public OnOffValue EqualWidth { get; set; }
+        public OnOffValue EqualWidth { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Spacing Between Equal Width Columns</para>
@@ -21864,12 +23411,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007)]
-        [NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [StringValidator(Pattern = "[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [SchemaAttr(23, "space")]
-        [Index(1)]
-        public StringValue Space { get; set; }
+        public StringValue Space { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Number of Equal Width Columns</para>
@@ -21878,10 +23420,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(MinInclusive = 1L, MaxInclusive = 45L)]
-        [SchemaAttr(23, "num")]
-        [Index(2)]
-        public Int16Value ColumnCount { get; set; }
+        public Int16Value ColumnCount { get => GetAttribute<Int16Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Draw Line Between Columns</para>
@@ -21890,9 +23429,29 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "sep")]
-        [Index(3)]
-        public OnOffValue Separator { get; set; }
+        public OnOffValue Separator { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Columns>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Columns>()
+                           .AddAttribute(23, "equalWidth", a => a.EqualWidth)
+                           .AddAttribute(23, "space", a => a.Space, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                               });
+                           })
+                           .AddAttribute(23, "num", a => a.ColumnCount, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (45L) });
+                           })
+                           .AddAttribute(23, "sep", a => a.Separator);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 0, 1)
         {
@@ -21928,10 +23487,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalJustificationValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalJustificationValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalJustificationValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VerticalTextAlignmentOnPage>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<VerticalTextAlignmentOnPage>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VerticalTextAlignmentOnPage>(deep);
@@ -21960,9 +23527,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "type")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocGridValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocGridValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocGridValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Document Grid Line Pitch</para>
@@ -21971,9 +23536,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "linePitch")]
-        [Index(1)]
-        public Int32Value LinePitch { get; set; }
+        public Int32Value LinePitch { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Document Grid Character Pitch</para>
@@ -21982,9 +23545,17 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "charSpace")]
-        [Index(2)]
-        public Int32Value CharacterSpace { get; set; }
+        public Int32Value CharacterSpace { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocGrid>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<DocGrid>()
+                           .AddAttribute(23, "type", a => a.Type)
+                           .AddAttribute(23, "linePitch", a => a.LinePitch)
+                           .AddAttribute(23, "charSpace", a => a.CharacterSpace);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocGrid>(deep);
@@ -22036,6 +23607,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Recipients(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Recipients>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -22162,6 +23735,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TextBoxContent(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextBoxContent>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 1, 0)
         {
@@ -22318,6 +23893,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Comments>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Comment), 0, 0)
@@ -22407,6 +23984,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Footnotes>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Footnote), 0, 1)
@@ -22495,6 +24074,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Endnotes(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Endnotes>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 0)
         {
@@ -22652,6 +24233,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Header(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Header>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 1, 0)
         {
@@ -22906,6 +24489,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Footer(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Footer>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 1, 0)
         {
@@ -23411,6 +24996,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Settings>();
+
         /// <summary>
         /// <para>Write Protection.</para>
         /// <para>Represents the following element tag in the schema: w:writeProtection.</para>
@@ -23897,6 +25484,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WebSettings>();
+
         /// <summary>
         /// <para>Frameset.</para>
         /// <para>Represents the following element tag in the schema: w:frameset.</para>
@@ -24153,6 +25742,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Fonts>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Font), 0, 0)
@@ -24247,6 +25838,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Numbering(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Numbering>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -24344,6 +25937,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Styles>();
+
         /// <summary>
         /// <para>Document Default Paragraph and Run Properties.</para>
         /// <para>Represents the following element tag in the schema: w:docDefaults.</para>
@@ -24439,9 +26034,15 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "conformance")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentConformance> Conformance { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentConformance> Conformance { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentConformance>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Document>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Document>()
+                           .AddAttribute(23, "conformance", a => a.Conformance);
+        }
 
         /// <summary>
         /// <para>Document Background.</para>
@@ -24566,6 +26167,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public GlossaryDocument(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GlossaryDocument>();
 
         /// <summary>
         /// <para>Document Background.</para>
@@ -24704,6 +26307,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public PreviousTablePropertyExceptions(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PreviousTablePropertyExceptions>();
 
         /// <summary>
         /// <para>Preferred Table Width Exception.</para>
@@ -24917,6 +26522,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public PreviousTableCellProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PreviousTableCellProperties>();
 
         /// <summary>
         /// <para>ConditionalFormatStyle.</para>
@@ -25230,6 +26837,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PreviousTableRowProperties>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
             new CompositeParticle(ParticleType.Group, 0, 0)
@@ -25338,6 +26947,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public PreviousTableProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PreviousTableProperties>();
 
         /// <summary>
         /// <para>TableStyle.</para>
@@ -25687,10 +27298,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(23, "rsidRPr")]
-        [Index(0)]
-        public HexBinaryValue RsidRPr { get; set; }
+        public HexBinaryValue RsidRPr { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Section Deletion Revision ID</para>
@@ -25699,10 +27307,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(23, "rsidDel")]
-        [Index(1)]
-        public HexBinaryValue RsidDel { get; set; }
+        public HexBinaryValue RsidDel { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Section Addition Revision ID</para>
@@ -25711,10 +27316,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(23, "rsidR")]
-        [Index(2)]
-        public HexBinaryValue RsidR { get; set; }
+        public HexBinaryValue RsidR { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Section Properties Revision ID</para>
@@ -25723,10 +27325,30 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(23, "rsidSect")]
-        [Index(3)]
-        public HexBinaryValue RsidSect { get; set; }
+        public HexBinaryValue RsidSect { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PreviousSectionProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<PreviousSectionProperties>()
+                           .AddAttribute(23, "rsidRPr", a => a.RsidRPr, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           })
+                           .AddAttribute(23, "rsidDel", a => a.RsidDel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           })
+                           .AddAttribute(23, "rsidR", a => a.RsidR, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           })
+                           .AddAttribute(23, "rsidSect", a => a.RsidSect, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           });
+        }
 
         /// <summary>
         /// <para>FootnoteProperties.</para>
@@ -26134,6 +27756,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ParagraphPropertiesExtended(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ParagraphPropertiesExtended>();
 
         /// <summary>
         /// <para>ParagraphStyleId.</para>
@@ -26770,6 +28394,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PreviousRunProperties>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 0)
@@ -27043,6 +28669,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PreviousParagraphMarkRunProperties>();
+
         /// <summary>
         /// <para>Inserted Paragraph.</para>
         /// <para>Represents the following element tag in the schema: w:ins.</para>
@@ -27257,11 +28885,19 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 255L)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public Int32Value Val { get; set; }
+        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberingLevelReference>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<NumberingLevelReference>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (255L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumberingLevelReference>(deep);
@@ -27283,6 +28919,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberingId>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumberingId>(deep);
     }
@@ -27303,6 +28941,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StartNumberingValue>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StartNumberingValue>(deep);
     }
@@ -27322,6 +28962,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public AbstractNumId() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AbstractNumId>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AbstractNumId>(deep);
@@ -27348,11 +28990,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public Int32Value Val { get; set; }
+        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<NonNegativeDecimalNumberType>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+                           });
+        }
     }
 
     /// <summary>
@@ -27378,9 +29027,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "original")]
-        [Index(0)]
-        public StringValue Original { get; set; }
+        public StringValue Original { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>author</para>
@@ -27389,11 +29036,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 255L)]
-        [SchemaAttr(23, "author")]
-        [Index(1)]
-        public StringValue Author { get; set; }
+        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>date</para>
@@ -27402,9 +29045,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "date")]
-        [Index(2)]
-        public DateTimeValue Date { get; set; }
+        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -27413,12 +29054,30 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [NumberValidator(MaxInclusive = -2L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [SchemaAttr(23, "id")]
-        [Index(3)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberingChange>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<NumberingChange>()
+                           .AddAttribute(23, "original", a => a.Original)
+                           .AddAttribute(23, "author", a => a.Author, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+                           })
+                           .AddAttribute(23, "date", a => a.Date)
+                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                                   union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                               });
+                           });
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(3 /*w:id*/, true, null),
@@ -27454,10 +29113,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Tab Leader Character</para>
@@ -27466,9 +29122,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "leader")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopLeaderCharValues> Leader { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopLeaderCharValues> Leader { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopLeaderCharValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Tab Stop Position</para>
@@ -27477,11 +29131,24 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = -31680L, MaxInclusive = 31680L)]
-        [SchemaAttr(23, "pos")]
-        [Index(2)]
-        public Int32Value Position { get; set; }
+        public Int32Value Position { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TabStop>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TabStop>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(23, "leader", a => a.Leader)
+                           .AddAttribute(23, "pos", a => a.Position, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-31680L), MaxInclusive = (31680L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TabStop>(deep);
@@ -27647,6 +29314,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ParagraphMarkRunProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ParagraphMarkRunProperties>();
 
         /// <summary>
         /// <para>Inserted Paragraph.</para>
@@ -27938,10 +29607,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(23, "rsidRPr")]
-        [Index(0)]
-        public HexBinaryValue RsidRPr { get; set; }
+        public HexBinaryValue RsidRPr { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Section Deletion Revision ID</para>
@@ -27950,10 +29616,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(23, "rsidDel")]
-        [Index(1)]
-        public HexBinaryValue RsidDel { get; set; }
+        public HexBinaryValue RsidDel { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Section Addition Revision ID</para>
@@ -27962,10 +29625,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(23, "rsidR")]
-        [Index(2)]
-        public HexBinaryValue RsidR { get; set; }
+        public HexBinaryValue RsidR { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Section Properties Revision ID</para>
@@ -27974,10 +29634,30 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(23, "rsidSect")]
-        [Index(3)]
-        public HexBinaryValue RsidSect { get; set; }
+        public HexBinaryValue RsidSect { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SectionProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SectionProperties>()
+                           .AddAttribute(23, "rsidRPr", a => a.RsidRPr, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           })
+                           .AddAttribute(23, "rsidDel", a => a.RsidDel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           })
+                           .AddAttribute(23, "rsidR", a => a.RsidR, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           })
+                           .AddAttribute(23, "rsidSect", a => a.RsidSect, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -28053,6 +29733,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             return new Base64BinaryValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FieldData>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FieldData>(deep);
     }
@@ -28122,6 +29804,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FormFieldData>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.FormFieldName), 1, 1),
@@ -28168,10 +29852,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(MaxLength = 20L)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FormFieldName>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<FormFieldName>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (20L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormFieldName>(deep);
@@ -28193,6 +29885,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EntryMacro>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EntryMacro>(deep);
     }
@@ -28212,6 +29906,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ExitMacro() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ExitMacro>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExitMacro>(deep);
@@ -28238,11 +29934,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 33L)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<MacroNameType>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (33L) });
+                           });
+        }
     }
 
     /// <summary>
@@ -28268,9 +29971,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "type")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Help Text Value</para>
@@ -28279,10 +29980,19 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(MaxLength = 255L)]
-        [SchemaAttr(23, "val")]
-        [Index(1)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HelpText>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<HelpText>()
+                           .AddAttribute(23, "type", a => a.Type)
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HelpText>(deep);
@@ -28311,9 +30021,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "type")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Status Text Value</para>
@@ -28322,11 +30030,20 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(MaxLength = 138L, Version = FileFormatVersions.Office2007)]
-        [StringValidator(MaxLength = 140L, InitialVersion = FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "val")]
-        [Index(1)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StatusText>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<StatusText>()
+                           .AddAttribute(23, "type", a => a.Type)
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (138L), Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (140L), InitialVersion = (FileFormatVersions.Office2010) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StatusText>(deep);
@@ -28384,6 +30101,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public CheckBox(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CheckBox>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -28452,6 +30171,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DropDownListFormField(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DropDownListFormField>();
 
         /// <summary>
         /// <para>Drop-Down List Selection.</para>
@@ -28545,6 +30266,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextInput>();
+
         /// <summary>
         /// <para>Text Box Form Field Type.</para>
         /// <para>Represents the following element tag in the schema: w:type.</para>
@@ -28634,11 +30357,19 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 24L)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public Int32Value Val { get; set; }
+        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DefaultDropDownListItemIndex>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<DefaultDropDownListItemIndex>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (24L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultDropDownListItemIndex>(deep);
@@ -28660,6 +30391,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ListEntryFormField>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ListEntryFormField>(deep);
     }
@@ -28680,6 +30413,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DefaultTextBoxFormFieldString>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultTextBoxFormFieldString>(deep);
     }
@@ -28699,6 +30434,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public FrameName() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FrameName>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FrameName>(deep);
@@ -28725,11 +30462,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 255L)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<String255Type>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+                           });
+        }
     }
 
     /// <summary>
@@ -28755,10 +30499,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxFormFieldValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxFormFieldValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxFormFieldValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextBoxFormFieldType>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TextBoxFormFieldType>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextBoxFormFieldType>(deep);
@@ -28787,11 +30539,19 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 1L)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public Int16Value Val { get; set; }
+        public Int16Value Val { get => GetAttribute<Int16Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MaxLength>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<MaxLength>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MaxLength>(deep);
@@ -28820,11 +30580,19 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 64L)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Format>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Format>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (64L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Format>(deep);
@@ -28853,12 +30621,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007)]
-        [NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [StringValidator(Pattern = "[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [SchemaAttr(23, "w")]
-        [Index(0)]
-        public StringValue Width { get; set; }
+        public StringValue Width { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Space Before Following Column</para>
@@ -28867,12 +30630,32 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007)]
-        [NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [StringValidator(Pattern = "[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [SchemaAttr(23, "space")]
-        [Index(1)]
-        public StringValue Space { get; set; }
+        public StringValue Space { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Column>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Column>()
+                           .AddAttribute(23, "w", a => a.Width, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                               });
+                           })
+                           .AddAttribute(23, "space", a => a.Space, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                               });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Column>(deep);
@@ -28932,11 +30715,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 255L)]
-        [SchemaAttr(23, "author")]
-        [Index(0)]
-        public StringValue Author { get; set; }
+        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>date</para>
@@ -28945,9 +30724,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "date")]
-        [Index(1)]
-        public DateTimeValue Date { get; set; }
+        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -28956,12 +30733,29 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [NumberValidator(MaxInclusive = -2L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [SchemaAttr(23, "id")]
-        [Index(2)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SectionPropertiesChange>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SectionPropertiesChange>()
+                           .AddAttribute(23, "author", a => a.Author, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+                           })
+                           .AddAttribute(23, "date", a => a.Date)
+                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                                   union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                               });
+                           });
+        }
 
         /// <summary>
         /// <para>Previous Section Properties.</para>
@@ -29050,11 +30844,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 255L)]
-        [SchemaAttr(23, "author")]
-        [Index(0)]
-        public StringValue Author { get; set; }
+        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>date</para>
@@ -29063,9 +30853,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "date")]
-        [Index(1)]
-        public DateTimeValue Date { get; set; }
+        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -29074,12 +30862,29 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [NumberValidator(MaxInclusive = -2L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [SchemaAttr(23, "id")]
-        [Index(2)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ParagraphMarkRunPropertiesChange>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ParagraphMarkRunPropertiesChange>()
+                           .AddAttribute(23, "author", a => a.Author, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+                           })
+                           .AddAttribute(23, "date", a => a.Date)
+                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                                   union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                               });
+                           });
+        }
 
         /// <summary>
         /// <para>Previous Run Properties for the Paragraph Mark.</para>
@@ -29161,6 +30966,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AltChunkProperties>();
+
         /// <summary>
         /// <para>Keep Source Formatting on Import.</para>
         /// <para>Represents the following element tag in the schema: w:matchSrc.</para>
@@ -29208,10 +31015,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.RubyAlignValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.RubyAlignValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.RubyAlignValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RubyAlign>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RubyAlign>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RubyAlign>(deep);
@@ -29240,10 +31055,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public Int16Value Val { get; set; }
+        public Int16Value Val { get => GetAttribute<Int16Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PhoneticGuideRaise>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<PhoneticGuideRaise>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PhoneticGuideRaise>(deep);
@@ -29272,11 +31095,19 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 84L)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LanguageId>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<LanguageId>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (84L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LanguageId>(deep);
@@ -29338,6 +31169,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public RubyProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RubyProperties>();
 
         /// <summary>
         /// <para>Phonetic Guide Text Alignment.</para>
@@ -29534,6 +31367,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public RubyContent(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RubyContent>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
         {
@@ -29766,6 +31601,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public RubyBase(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RubyBase>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
         {
@@ -30078,9 +31915,15 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DateFormatValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DateFormatValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DateFormatValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtDateMappingType>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SdtDateMappingType>()
+                           .AddAttribute(23, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtDateMappingType>(deep);
@@ -30109,9 +31952,15 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CalendarValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CalendarValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CalendarValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Calendar>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Calendar>()
+                           .AddAttribute(23, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Calendar>(deep);
@@ -30140,9 +31989,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "displayText")]
-        [Index(0)]
-        public StringValue DisplayText { get; set; }
+        public StringValue DisplayText { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>List Entry Value</para>
@@ -30151,9 +31998,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "value")]
-        [Index(1)]
-        public StringValue Value { get; set; }
+        public StringValue Value { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ListItem>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ListItem>()
+                           .AddAttribute(23, "displayText", a => a.DisplayText)
+                           .AddAttribute(23, "value", a => a.Value);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ListItem>(deep);
@@ -30264,6 +32118,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtProperties>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.RunProperties), 0, 1),
@@ -30356,6 +32212,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SdtEndCharProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtEndCharProperties>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
@@ -30480,6 +32338,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SdtContentBlock(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentBlock>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
         {
@@ -30734,6 +32594,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SdtContentRun(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentRun>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
         {
@@ -31061,6 +32923,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentRunRuby>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
         {
             new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -31302,6 +33166,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentCell>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
         {
             new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -31495,6 +33361,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentRow>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
         {
             new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -31626,6 +33494,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlProperties>();
+
         /// <summary>
         /// <para>Custom XML Element Placeholder Text.</para>
         /// <para>Represents the following element tag in the schema: w:placeholder.</para>
@@ -31674,9 +33544,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>name</para>
@@ -31685,11 +33553,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, IsNcName = true, MaxLength = 255L)]
-        [SchemaAttr(23, "name")]
-        [Index(1)]
-        public StringValue Name { get; set; }
+        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>val</para>
@@ -31698,10 +33562,24 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(2)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlAttribute>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<CustomXmlAttribute>()
+                           .AddAttribute(23, "uri", a => a.Uri)
+                           .AddAttribute(23, "name", a => a.Name, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MaxLength = (255L) });
+                           })
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomXmlAttribute>(deep);
@@ -31730,12 +33608,23 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007)]
-        [NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [StringValidator(Pattern = "[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [SchemaAttr(23, "w")]
-        [Index(0)]
-        public StringValue Width { get; set; }
+        public StringValue Width { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GridColumn>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<GridColumn>()
+                           .AddAttribute(23, "w", a => a.Width, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                               });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GridColumn>(deep);
@@ -31795,12 +33684,23 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [NumberValidator(MaxInclusive = -2L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [SchemaAttr(23, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableGridChange>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TableGridChange>()
+                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                                   union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                               });
+                           });
+        }
 
         /// <summary>
         /// <para>Previous Table Grid.</para>
@@ -31890,11 +33790,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 255L)]
-        [SchemaAttr(23, "author")]
-        [Index(0)]
-        public StringValue Author { get; set; }
+        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>date</para>
@@ -31903,9 +33799,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "date")]
-        [Index(1)]
-        public DateTimeValue Date { get; set; }
+        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -31914,12 +33808,29 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [NumberValidator(MaxInclusive = -2L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [SchemaAttr(23, "id")]
-        [Index(2)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableCellPropertiesChange>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TableCellPropertiesChange>()
+                           .AddAttribute(23, "author", a => a.Author, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+                           })
+                           .AddAttribute(23, "date", a => a.Date)
+                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                                   union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                               });
+                           });
+        }
 
         /// <summary>
         /// <para>Previous Table Cell Properties.</para>
@@ -32032,6 +33943,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TableCellProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableCellProperties>();
 
         /// <summary>
         /// <para>ConditionalFormatStyle.</para>
@@ -32337,11 +34250,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 255L)]
-        [SchemaAttr(23, "author")]
-        [Index(0)]
-        public StringValue Author { get; set; }
+        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>date</para>
@@ -32350,9 +34259,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "date")]
-        [Index(1)]
-        public DateTimeValue Date { get; set; }
+        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -32361,12 +34268,29 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [NumberValidator(MaxInclusive = -2L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [SchemaAttr(23, "id")]
-        [Index(2)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TablePropertiesChange>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TablePropertiesChange>()
+                           .AddAttribute(23, "author", a => a.Author, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+                           })
+                           .AddAttribute(23, "date", a => a.Date)
+                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                                   union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                               });
+                           });
+        }
 
         /// <summary>
         /// <para>Previous Table Properties.</para>
@@ -32455,11 +34379,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 255L)]
-        [SchemaAttr(23, "author")]
-        [Index(0)]
-        public StringValue Author { get; set; }
+        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>date</para>
@@ -32468,9 +34388,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "date")]
-        [Index(1)]
-        public DateTimeValue Date { get; set; }
+        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -32479,12 +34397,29 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [NumberValidator(MaxInclusive = -2L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [SchemaAttr(23, "id")]
-        [Index(2)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TablePropertyExceptionsChange>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TablePropertyExceptionsChange>()
+                           .AddAttribute(23, "author", a => a.Author, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+                           })
+                           .AddAttribute(23, "date", a => a.Date)
+                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                                   union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                               });
+                           });
+        }
 
         /// <summary>
         /// <para>Previous Table-Level Property Exceptions.</para>
@@ -32595,6 +34530,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TableProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableProperties>();
 
         /// <summary>
         /// <para>TableStyle.</para>
@@ -32921,6 +34858,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableGrid>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -32962,10 +34901,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnotePositionValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnotePositionValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnotePositionValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FootnotePosition>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<FootnotePosition>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FootnotePosition>(deep);
@@ -32994,10 +34941,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>format, this property is only available in Office2010, Office2013, Office2016</para>
@@ -33006,10 +34950,22 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "format")]
-        [Index(1)]
-        public StringValue Format { get; set; }
+        public StringValue Format { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberingFormat>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<NumberingFormat>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(23, "format", a => a.Format, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumberingFormat>(deep);
@@ -33038,10 +34994,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.EndnotePositionValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.EndnotePositionValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.EndnotePositionValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EndnotePosition>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<EndnotePosition>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndnotePosition>(deep);
@@ -33062,6 +35026,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public FootnoteSpecialReference() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FootnoteSpecialReference>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*w:id*/, true, null),
@@ -33089,6 +35055,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public EndnoteSpecialReference() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EndnoteSpecialReference>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*w:id*/, true, null),
@@ -33122,11 +35090,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = -2147483648L, MaxInclusive = 32767L)]
-        [SchemaAttr(23, "id")]
-        [Index(0)]
-        public IntegerValue Id { get; set; }
+        public IntegerValue Id { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<FootnoteEndnoteSeparatorReferenceType>()
+                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-2147483648L), MaxInclusive = (32767L) });
+                           });
+        }
     }
 
     /// <summary>
@@ -33144,6 +35119,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ColumnIndex() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColumnIndex>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnIndex>(deep);
@@ -33164,6 +35141,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ColumnDelimiter() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColumnDelimiter>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnDelimiter>(deep);
@@ -33190,10 +35169,17 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public UInt32Value Val { get; set; }
+        public UInt32Value Val { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<UnsignedDecimalNumberType>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
     }
 
     /// <summary>
@@ -33219,10 +35205,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public Base64BinaryValue Val { get; set; }
+        public Base64BinaryValue Val { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UniqueTag>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<UniqueTag>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UniqueTag>(deep);
@@ -33278,6 +35272,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public RecipientData(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RecipientData>();
 
         /// <summary>
         /// <para>Record Is Included in Mail Merge.</para>
@@ -33354,10 +35350,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeOdsoFieldValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeOdsoFieldValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeOdsoFieldValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MailMergeFieldType>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<MailMergeFieldType>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MailMergeFieldType>(deep);
@@ -33386,10 +35390,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeSourceValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeSourceValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeSourceValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MailMergeSource>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<MailMergeSource>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MailMergeSource>(deep);
@@ -33451,6 +35463,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public FieldMapData(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FieldMapData>();
 
         /// <summary>
         /// <para>Merge Field Mapping.</para>
@@ -33569,10 +35583,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDocumentValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDocumentValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDocumentValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MainDocumentType>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<MainDocumentType>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MainDocumentType>(deep);
@@ -33601,10 +35623,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDataValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDataValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDataValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataType>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<DataType>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataType>(deep);
@@ -33633,10 +35663,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDestinationValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDestinationValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDestinationValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Destination>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Destination>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Destination>(deep);
@@ -33702,6 +35740,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DataSourceObject(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataSourceObject>();
 
         /// <summary>
         /// <para>UDL Connection String.</para>
@@ -33822,11 +35862,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MinLength = 1L, MaxLength = 255L)]
-        [SchemaAttr(23, "name")]
-        [Index(0)]
-        public StringValue Name { get; set; }
+        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Document Variable Value</para>
@@ -33835,11 +35871,24 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MinLength = 0L, MaxLength = 65280L)]
-        [SchemaAttr(23, "val")]
-        [Index(1)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocumentVariable>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<DocumentVariable>()
+                           .AddAttribute(23, "name", a => a.Name, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (255L) });
+                           })
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (65280L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocumentVariable>(deep);
@@ -33861,6 +35910,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RsidRoot>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RsidRoot>(deep);
     }
@@ -33880,6 +35931,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Rsid() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Rsid>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Rsid>(deep);
@@ -33901,6 +35954,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Nsid>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Nsid>(deep);
     }
@@ -33920,6 +35975,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TemplateCode() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TemplateCode>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TemplateCode>(deep);
@@ -33946,11 +36003,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public HexBinaryValue Val { get; set; }
+        public HexBinaryValue Val { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<LongHexNumberType>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           });
+        }
     }
 
     /// <summary>
@@ -34065,6 +36129,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public RunPropertiesBaseStyle(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RunPropertiesBaseStyle>();
 
         /// <summary>
         /// <para>RunFonts.</para>
@@ -34681,6 +36747,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ParagraphPropertiesBaseStyle>();
+
         /// <summary>
         /// <para>KeepNext.</para>
         /// <para>Represents the following element tag in the schema: w:keepNext.</para>
@@ -35164,6 +37232,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RunPropertiesDefault>();
+
         /// <summary>
         /// <para>Run Properties.</para>
         /// <para>Represents the following element tag in the schema: w:rPr.</para>
@@ -35235,6 +37305,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ParagraphPropertiesDefault>();
+
         /// <summary>
         /// <para>Paragraph Properties.</para>
         /// <para>Represents the following element tag in the schema: w:pPr.</para>
@@ -35275,6 +37347,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MarginWidth>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MarginWidth>(deep);
     }
@@ -35294,6 +37368,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public MarginHeight() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MarginHeight>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MarginHeight>(deep);
@@ -35320,10 +37396,17 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public UInt32Value Val { get; set; }
+        public UInt32Value Val { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<PixelsMeasureType>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
     }
 
     /// <summary>
@@ -35349,10 +37432,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameScrollbarVisibilityValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameScrollbarVisibilityValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameScrollbarVisibilityValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ScrollbarVisibility>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ScrollbarVisibility>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScrollbarVisibility>(deep);
@@ -35374,6 +37465,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Width>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Width>(deep);
     }
@@ -35393,6 +37486,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public HyphenationZone() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HyphenationZone>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyphenationZone>(deep);
@@ -35414,6 +37509,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DrawingGridHorizontalSpacing>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DrawingGridHorizontalSpacing>(deep);
     }
@@ -35433,6 +37530,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DrawingGridVerticalSpacing() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DrawingGridVerticalSpacing>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DrawingGridVerticalSpacing>(deep);
@@ -35454,6 +37553,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DrawingGridHorizontalOrigin>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DrawingGridHorizontalOrigin>(deep);
     }
@@ -35473,6 +37574,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DrawingGridVerticalOrigin() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DrawingGridVerticalOrigin>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DrawingGridVerticalOrigin>(deep);
@@ -35499,13 +37602,23 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007)]
-        [NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [StringValidator(Pattern = "[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TwipsMeasureType>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                               });
+                           });
+        }
     }
 
     /// <summary>
@@ -35560,6 +37673,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public FramesetSplitbar(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FramesetSplitbar>();
 
         /// <summary>
         /// <para>Frameset Splitter Width.</para>
@@ -35650,10 +37765,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameLayoutValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameLayoutValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameLayoutValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FrameLayout>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<FrameLayout>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FrameLayout>(deep);
@@ -35713,6 +37836,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Frameset(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Frameset>();
 
         /// <summary>
         /// <para>Nested Frameset Size.</para>
@@ -35834,6 +37959,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Frame(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Frame>();
 
         /// <summary>
         /// <para>Frame Size.</para>
@@ -35980,10 +38107,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelSuffixValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelSuffixValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelSuffixValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LevelSuffix>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<LevelSuffix>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LevelSuffix>(deep);
@@ -36012,9 +38147,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Level Text Is Null Character</para>
@@ -36023,9 +38156,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "null")]
-        [Index(1)]
-        public OnOffValue Null { get; set; }
+        public OnOffValue Null { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LevelText>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<LevelText>()
+                           .AddAttribute(23, "val", a => a.Val)
+                           .AddAttribute(23, "null", a => a.Null);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LevelText>(deep);
@@ -36054,9 +38194,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "legacy")]
-        [Index(0)]
-        public OnOffValue Legacy { get; set; }
+        public OnOffValue Legacy { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Legacy Spacing</para>
@@ -36065,12 +38203,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007)]
-        [NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [StringValidator(Pattern = "[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [SchemaAttr(23, "legacySpace")]
-        [Index(1)]
-        public StringValue LegacySpace { get; set; }
+        public StringValue LegacySpace { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Legacy Indent</para>
@@ -36079,12 +38212,33 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2007)]
-        [NumberValidator(SimpleType = typeof(IntegerValue), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [StringValidator(Pattern = "-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [SchemaAttr(23, "legacyIndent")]
-        [Index(2)]
-        public StringValue LegacyIndent { get; set; }
+        public StringValue LegacyIndent { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LegacyNumbering>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<LegacyNumbering>()
+                           .AddAttribute(23, "legacy", a => a.Legacy)
+                           .AddAttribute(23, "legacySpace", a => a.LegacySpace, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                               });
+                           })
+                           .AddAttribute(23, "legacyIndent", a => a.LegacyIndent, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(IntegerValue)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                               });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LegacyNumbering>(deep);
@@ -36113,10 +38267,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelJustificationValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelJustificationValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelJustificationValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LevelJustification>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<LevelJustification>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LevelJustification>(deep);
@@ -36228,6 +38390,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public PreviousParagraphProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PreviousParagraphProperties>();
 
         /// <summary>
         /// <para>ParagraphStyleId.</para>
@@ -36802,6 +38966,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberingSymbolRunProperties>();
+
         /// <summary>
         /// <para>RunFonts.</para>
         /// <para>Represents the following element tag in the schema: w:rFonts.</para>
@@ -37363,10 +39529,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MultiLevelValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MultiLevelValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MultiLevelValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MultiLevelType>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<MultiLevelType>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MultiLevelType>(deep);
@@ -37448,10 +39622,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "ilvl")]
-        [Index(0)]
-        public Int32Value LevelIndex { get; set; }
+        public Int32Value LevelIndex { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Template Code</para>
@@ -37460,10 +39631,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(23, "tplc")]
-        [Index(1)]
-        public HexBinaryValue TemplateCode { get; set; }
+        public HexBinaryValue TemplateCode { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Tentative Numbering</para>
@@ -37472,9 +39640,23 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "tentative")]
-        [Index(2)]
-        public OnOffValue Tentative { get; set; }
+        public OnOffValue Tentative { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Level>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Level>()
+                           .AddAttribute(23, "ilvl", a => a.LevelIndex, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(23, "tplc", a => a.TemplateCode, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           })
+                           .AddAttribute(23, "tentative", a => a.Tentative);
+        }
 
         /// <summary>
         /// <para>Starting Value.</para>
@@ -37710,10 +39892,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "ilvl")]
-        [Index(0)]
-        public Int32Value LevelIndex { get; set; }
+        public Int32Value LevelIndex { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LevelOverride>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<LevelOverride>()
+                           .AddAttribute(23, "ilvl", a => a.LevelIndex, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <summary>
         /// <para>Numbering Level Starting Value Override.</para>
@@ -37809,10 +39999,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "numPicBulletId")]
-        [Index(0)]
-        public Int32Value NumberingPictureBulletId { get; set; }
+        public Int32Value NumberingPictureBulletId { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberingPictureBullet>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<NumberingPictureBullet>()
+                           .AddAttribute(23, "numPicBulletId", a => a.NumberingPictureBulletId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <summary>
         /// <para>PictureBulletBase.</para>
@@ -37927,11 +40125,19 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L)]
-        [SchemaAttr(23, "abstractNumId")]
-        [Index(0)]
-        public Int32Value AbstractNumberId { get; set; }
+        public Int32Value AbstractNumberId { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AbstractNum>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<AbstractNum>()
+                           .AddAttribute(23, "abstractNumId", a => a.AbstractNumberId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+                           });
+        }
 
         /// <summary>
         /// <para>Abstract Numbering Definition Identifier.</para>
@@ -38090,10 +40296,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "numId")]
-        [Index(0)]
-        public Int32Value NumberID { get; set; }
+        public Int32Value NumberID { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberingInstance>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<NumberingInstance>()
+                           .AddAttribute(23, "numId", a => a.NumberID, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <summary>
         /// <para>Abstract Numbering Definition Reference.</para>
@@ -38232,6 +40446,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public StyleParagraphProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StyleParagraphProperties>();
 
         /// <summary>
         /// <para>KeepNext.</para>
@@ -38752,6 +40968,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableStyleConditionalFormattingTableProperties>();
+
         /// <summary>
         /// <para>TableJustification.</para>
         /// <para>Represents the following element tag in the schema: w:jc.</para>
@@ -38913,6 +41131,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableStyleConditionalFormattingTableRowProperties>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
             new CompositeParticle(ParticleType.Group, 0, 0)
@@ -38988,6 +41208,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TableStyleConditionalFormattingTableCellProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableStyleConditionalFormattingTableCellProperties>();
 
         /// <summary>
         /// <para>TableCellBorders.</para>
@@ -39110,11 +41332,19 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(Pattern = "[^,]*")]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StyleName>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<StyleName>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("[^,]*") });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleName>(deep);
@@ -39143,11 +41373,19 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 99L)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public Int32Value Val { get; set; }
+        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UIPriority>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<UIPriority>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (99L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UIPriority>(deep);
@@ -39267,6 +41505,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public StyleRunProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StyleRunProperties>();
 
         /// <summary>
         /// <para>RunFonts.</para>
@@ -39865,6 +42105,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StyleTableProperties>();
+
         /// <summary>
         /// <para>TableStyleRowBandSize.</para>
         /// <para>Represents the following element tag in the schema: w:tblStyleRowBandSize.</para>
@@ -40058,6 +42300,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StyleTableCellProperties>();
+
         /// <summary>
         /// <para>Shading.</para>
         /// <para>Represents the following element tag in the schema: w:shd.</para>
@@ -40198,10 +42442,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "type")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableStyleOverrideValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableStyleOverrideValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableStyleOverrideValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableStyleProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TableStyleProperties>()
+                           .AddAttribute(23, "type", a => a.Type, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <summary>
         /// <para>Table Style Conditional Formatting Paragraph Properties.</para>
@@ -40306,10 +42558,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "name")]
-        [Index(0)]
-        public StringValue Name { get; set; }
+        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Latent Style Locking Setting</para>
@@ -40318,9 +42567,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "locked")]
-        [Index(1)]
-        public OnOffValue Locked { get; set; }
+        public OnOffValue Locked { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Override default sorting order</para>
@@ -40329,10 +42576,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 99L)]
-        [SchemaAttr(23, "uiPriority")]
-        [Index(2)]
-        public Int32Value UiPriority { get; set; }
+        public Int32Value UiPriority { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Semi hidden text override</para>
@@ -40341,9 +42585,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "semiHidden")]
-        [Index(3)]
-        public OnOffValue SemiHidden { get; set; }
+        public OnOffValue SemiHidden { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Unhide when used</para>
@@ -40352,9 +42594,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "unhideWhenUsed")]
-        [Index(4)]
-        public OnOffValue UnhideWhenUsed { get; set; }
+        public OnOffValue UnhideWhenUsed { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Latent Style Primary Style Setting</para>
@@ -40363,9 +42603,26 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "qFormat")]
-        [Index(5)]
-        public OnOffValue PrimaryStyle { get; set; }
+        public OnOffValue PrimaryStyle { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LatentStyleExceptionInfo>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<LatentStyleExceptionInfo>()
+                           .AddAttribute(23, "name", a => a.Name, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(23, "locked", a => a.Locked)
+                           .AddAttribute(23, "uiPriority", a => a.UiPriority, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (99L) });
+                           })
+                           .AddAttribute(23, "semiHidden", a => a.SemiHidden)
+                           .AddAttribute(23, "unhideWhenUsed", a => a.UnhideWhenUsed)
+                           .AddAttribute(23, "qFormat", a => a.PrimaryStyle);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LatentStyleExceptionInfo>(deep);
@@ -40419,6 +42676,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DocDefaults(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocDefaults>();
 
         /// <summary>
         /// <para>Default Run Properties.</para>
@@ -40512,9 +42771,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "defLockedState")]
-        [Index(0)]
-        public OnOffValue DefaultLockedState { get; set; }
+        public OnOffValue DefaultLockedState { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Default User Interface Priority Setting</para>
@@ -40523,10 +42780,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 99L)]
-        [SchemaAttr(23, "defUIPriority")]
-        [Index(1)]
-        public Int32Value DefaultUiPriority { get; set; }
+        public Int32Value DefaultUiPriority { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Default Semi-Hidden Setting</para>
@@ -40535,9 +42789,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "defSemiHidden")]
-        [Index(2)]
-        public OnOffValue DefaultSemiHidden { get; set; }
+        public OnOffValue DefaultSemiHidden { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Default Hidden Until Used Setting</para>
@@ -40546,9 +42798,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "defUnhideWhenUsed")]
-        [Index(3)]
-        public OnOffValue DefaultUnhideWhenUsed { get; set; }
+        public OnOffValue DefaultUnhideWhenUsed { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Default Primary Style Setting</para>
@@ -40557,9 +42807,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "defQFormat")]
-        [Index(4)]
-        public OnOffValue DefaultPrimaryStyle { get; set; }
+        public OnOffValue DefaultPrimaryStyle { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Latent Style Count</para>
@@ -40568,9 +42816,23 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "count")]
-        [Index(5)]
-        public Int32Value Count { get; set; }
+        public Int32Value Count { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LatentStyles>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<LatentStyles>()
+                           .AddAttribute(23, "defLockedState", a => a.DefaultLockedState)
+                           .AddAttribute(23, "defUIPriority", a => a.DefaultUiPriority, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (99L) });
+                           })
+                           .AddAttribute(23, "defSemiHidden", a => a.DefaultSemiHidden)
+                           .AddAttribute(23, "defUnhideWhenUsed", a => a.DefaultUnhideWhenUsed)
+                           .AddAttribute(23, "defQFormat", a => a.DefaultPrimaryStyle)
+                           .AddAttribute(23, "count", a => a.Count);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -40679,9 +42941,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "type")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.StyleValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.StyleValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.StyleValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Style ID</para>
@@ -40690,10 +42950,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(MaxLength = 253L)]
-        [SchemaAttr(23, "styleId")]
-        [Index(1)]
-        public StringValue StyleId { get; set; }
+        public StringValue StyleId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Default Style</para>
@@ -40702,9 +42959,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "default")]
-        [Index(2)]
-        public OnOffValue Default { get; set; }
+        public OnOffValue Default { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>User-Defined Style</para>
@@ -40713,9 +42968,21 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "customStyle")]
-        [Index(3)]
-        public OnOffValue CustomStyle { get; set; }
+        public OnOffValue CustomStyle { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Style>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Style>()
+                           .AddAttribute(23, "type", a => a.Type)
+                           .AddAttribute(23, "styleId", a => a.StyleId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (253L) });
+                           })
+                           .AddAttribute(23, "default", a => a.Default)
+                           .AddAttribute(23, "customStyle", a => a.CustomStyle);
+        }
 
         /// <summary>
         /// <para>Primary Style Name.</para>
@@ -41102,10 +43369,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "name")]
-        [Index(0)]
-        public StringValue Name { get; set; }
+        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Font>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Font>()
+                           .AddAttribute(23, "name", a => a.Name, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <summary>
         /// <para>AltName.</para>
@@ -41287,6 +43562,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LeftMarginDiv>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LeftMarginDiv>(deep);
     }
@@ -41306,6 +43583,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public RightMarginDiv() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RightMarginDiv>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RightMarginDiv>(deep);
@@ -41327,6 +43606,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TopMarginDiv>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopMarginDiv>(deep);
     }
@@ -41346,6 +43627,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public BottomMarginDiv() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BottomMarginDiv>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BottomMarginDiv>(deep);
@@ -41372,13 +43655,23 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2007)]
-        [NumberValidator(SimpleType = typeof(IntegerValue), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [StringValidator(Pattern = "-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SignedTwipsMeasureType>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(IntegerValue)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                               });
+                           });
+        }
     }
 
     /// <summary>
@@ -41433,6 +43726,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DivBorder(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DivBorder>();
 
         /// <summary>
         /// <para>Top Border for HTML div.</para>
@@ -41546,6 +43841,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DivsChild>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Div), 1, 1)
@@ -41602,6 +43899,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Divs(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Divs>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 0)
         {
@@ -41728,12 +44027,23 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 1L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [NumberValidator(MaxInclusive = -1L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [SchemaAttr(23, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Div>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Div>()
+                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                                   union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-1L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                               });
+                           });
+        }
 
         /// <summary>
         /// <para>Data for HTML blockquote Element.</para>
@@ -41926,10 +44236,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(MaxLength = 9L)]
-        [SchemaAttr(23, "initials")]
-        [Index(0)]
-        public StringValue Initials { get; set; }
+        public StringValue Initials { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>author</para>
@@ -41938,11 +44245,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 255L)]
-        [SchemaAttr(23, "author")]
-        [Index(1)]
-        public StringValue Author { get; set; }
+        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>date</para>
@@ -41951,9 +44254,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "date")]
-        [Index(2)]
-        public DateTimeValue Date { get; set; }
+        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -41962,12 +44263,33 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [NumberValidator(MaxInclusive = -2L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [SchemaAttr(23, "id")]
-        [Index(3)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Comment>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Comment>()
+                           .AddAttribute(23, "initials", a => a.Initials, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (9L) });
+                           })
+                           .AddAttribute(23, "author", a => a.Author, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+                           })
+                           .AddAttribute(23, "date", a => a.Date)
+                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                                   union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                               });
+                           });
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(3 /*w:id*/, true, null)
@@ -42127,6 +44449,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Footnote(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Footnote>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(1 /*w:id*/, true, null)
@@ -42324,6 +44648,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Endnote(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Endnote>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(1 /*w:id*/, true, null)
@@ -42562,9 +44888,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "type")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnoteEndnoteValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnoteEndnoteValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnoteEndnoteValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Footnote/Endnote ID</para>
@@ -42573,11 +44897,19 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = -2147483648L, MaxInclusive = 32767L)]
-        [SchemaAttr(23, "id")]
-        [Index(1)]
-        public IntegerValue Id { get; set; }
+        public IntegerValue Id { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<FootnoteEndnoteType>()
+                           .AddAttribute(23, "type", a => a.Type)
+                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-2147483648L), MaxInclusive = (32767L) });
+                           });
+        }
     }
 
     /// <summary>
@@ -42603,10 +44935,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartBehaviorValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartBehaviorValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartBehaviorValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Behavior>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Behavior>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Behavior>(deep);
@@ -42635,10 +44975,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocPartType>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<DocPartType>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocPartType>(deep);
@@ -42667,10 +45015,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartGalleryValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartGalleryValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartGalleryValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Gallery>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Gallery>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Gallery>(deep);
@@ -42699,11 +45055,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 255L)]
-        [SchemaAttr(23, "name")]
-        [Index(0)]
-        public StringValue Name { get; set; }
+        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Caption Used for Automatic Captioning</para>
@@ -42712,11 +45064,24 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 255L)]
-        [SchemaAttr(23, "caption")]
-        [Index(1)]
-        public StringValue Caption { get; set; }
+        public StringValue Caption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutoCaption>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<AutoCaption>()
+                           .AddAttribute(23, "name", a => a.Name, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+                           })
+                           .AddAttribute(23, "caption", a => a.Caption, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+                           });
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*w:name*/, true, null)
@@ -42751,11 +45116,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 255L)]
-        [SchemaAttr(23, "name")]
-        [Index(0)]
-        public StringValue Name { get; set; }
+        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Automatic Caption Placement</para>
@@ -42764,9 +45125,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "pos")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CaptionPositionValues> Position { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CaptionPositionValues> Position { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CaptionPositionValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Include Chapter Number in Field for Caption</para>
@@ -42775,9 +45134,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "chapNum")]
-        [Index(2)]
-        public OnOffValue ChapterNumber { get; set; }
+        public OnOffValue ChapterNumber { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Style for Chapter Headings</para>
@@ -42786,9 +45143,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "heading")]
-        [Index(3)]
-        public Int32Value Heading { get; set; }
+        public Int32Value Heading { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Do Not Include Name In Caption</para>
@@ -42797,9 +45152,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "noLabel")]
-        [Index(4)]
-        public OnOffValue NoLabel { get; set; }
+        public OnOffValue NoLabel { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Caption Numbering Format</para>
@@ -42808,9 +45161,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "numFmt")]
-        [Index(5)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues> NumberFormat { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues> NumberFormat { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Chapter Number/Item Index Separator</para>
@@ -42819,9 +45170,25 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "sep")]
-        [Index(6)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues> Separator { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues> Separator { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Caption>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Caption>()
+                           .AddAttribute(23, "name", a => a.Name, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+                           })
+                           .AddAttribute(23, "pos", a => a.Position)
+                           .AddAttribute(23, "chapNum", a => a.ChapterNumber)
+                           .AddAttribute(23, "heading", a => a.Heading)
+                           .AddAttribute(23, "noLabel", a => a.NoLabel)
+                           .AddAttribute(23, "numFmt", a => a.NumberFormat)
+                           .AddAttribute(23, "sep", a => a.Separator);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Caption>(deep);
@@ -42873,6 +45240,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public AutoCaptions(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutoCaptions>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -42939,11 +45308,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>), UnionId = 0)]
-        [StringValidator(SimpleType = typeof(HexBinaryValue), Length = 3L, UnionId = 0)]
-        [SchemaAttr(23, "color")]
-        [Index(0)]
-        public StringValue Color { get; set; }
+        public StringValue Color { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>themeColor</para>
@@ -42952,9 +45317,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "themeColor")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>themeTint</para>
@@ -42963,10 +45326,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Pattern = "[0-9a-fA-F]*", MinLength = 1L, MaxLength = 2L)]
-        [SchemaAttr(23, "themeTint")]
-        [Index(2)]
-        public StringValue ThemeTint { get; set; }
+        public StringValue ThemeTint { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>themeShade</para>
@@ -42975,10 +45335,31 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Pattern = "[0-9a-fA-F]*", MinLength = 1L, MaxLength = 2L)]
-        [SchemaAttr(23, "themeShade")]
-        [Index(3)]
-        public StringValue ThemeShade { get; set; }
+        public StringValue ThemeShade { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocumentBackground>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<DocumentBackground>()
+                           .AddAttribute(23, "color", a => a.Color, aBuilder =>
+                           {
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>)), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { SimpleType = (typeof(HexBinaryValue)), Length = (3L), UnionId = (0) });
+                               });
+                           })
+                           .AddAttribute(23, "themeColor", a => a.ThemeColor)
+                           .AddAttribute(23, "themeTint", a => a.ThemeTint, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
+                           })
+                           .AddAttribute(23, "themeShade", a => a.ThemeShade, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
+                           });
+        }
 
         /// <summary>
         /// <para>Background.</para>
@@ -43051,6 +45432,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocParts>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPart), 0, 0, version: FileFormatVersions.Office2007),
@@ -43086,10 +45469,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Built-In Entry</para>
@@ -43098,9 +45478,19 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "decorated")]
-        [Index(1)]
-        public OnOffValue Decorated { get; set; }
+        public OnOffValue Decorated { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocPartName>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<DocPartName>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(23, "decorated", a => a.Decorated);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocPartName>(deep);
@@ -43154,6 +45544,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Category(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Category>();
 
         /// <summary>
         /// <para>Category Associated With Entry.</para>
@@ -43247,9 +45639,15 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "all")]
-        [Index(0)]
-        public OnOffValue All { get; set; }
+        public OnOffValue All { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocPartTypes>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<DocPartTypes>()
+                           .AddAttribute(23, "all", a => a.All);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -43309,6 +45707,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Behaviors>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Behavior), 1, 0)
@@ -43343,10 +45743,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocPartId>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<DocPartId>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           });
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*w:val*/, false, null)
@@ -43416,6 +45824,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DocPartProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocPartProperties>();
 
         /// <summary>
         /// <para>Entry Name.</para>
@@ -43605,6 +46015,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DocPartBody(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocPartBody>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -43798,6 +46210,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Body(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Body>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -44076,6 +46490,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocPart>();
+
         /// <summary>
         /// <para>Glossary Document Entry Properties.</para>
         /// <para>Represents the following element tag in the schema: w:docPartPr.</para>
@@ -44137,10 +46553,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "name")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CompatSettingNameValues> Name { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CompatSettingNameValues> Name { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CompatSettingNameValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>uri</para>
@@ -44149,10 +46562,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "uri")]
-        [Index(1)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>val</para>
@@ -44161,10 +46571,26 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(2)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CompatibilitySetting>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<CompatibilitySetting>()
+                           .AddAttribute(23, "name", a => a.Name, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(23, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueConditionToAnother(2 /*w:val*/, 0 /*w:name*/, new string[] { "11", "12", "14", "15" }, new string[] { "compatibilityMode" }) { Version = FileFormatVersions.Office2010 }
@@ -44192,6 +46618,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableCellLeftMargin>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableCellLeftMargin>(deep);
     }
@@ -44211,6 +46639,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TableCellRightMargin() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableCellRightMargin>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableCellRightMargin>(deep);
@@ -44237,11 +46667,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L)]
-        [SchemaAttr(23, "w")]
-        [Index(0)]
-        public Int16Value Width { get; set; }
+        public Int16Value Width { get => GetAttribute<Int16Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>type</para>
@@ -44250,10 +46676,22 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "type")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthValues>>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TableWidthDxaNilType>()
+                           .AddAttribute(23, "w", a => a.Width, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+                           })
+                           .AddAttribute(23, "type", a => a.Type, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
     }
 
     /// <summary>
@@ -44320,6 +46758,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TablePropertyExceptions(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TablePropertyExceptions>();
 
         /// <summary>
         /// <para>Preferred Table Width Exception.</para>
@@ -44556,6 +46996,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableRowProperties>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Choice, 1, 0)
@@ -44661,11 +47103,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 255L)]
-        [SchemaAttr(23, "author")]
-        [Index(0)]
-        public StringValue Author { get; set; }
+        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>date</para>
@@ -44674,9 +47112,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "date")]
-        [Index(1)]
-        public DateTimeValue Date { get; set; }
+        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -44685,12 +47121,29 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [NumberValidator(MaxInclusive = -2L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [SchemaAttr(23, "id")]
-        [Index(2)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableRowPropertiesChange>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TableRowPropertiesChange>()
+                           .AddAttribute(23, "author", a => a.Author, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+                           })
+                           .AddAttribute(23, "date", a => a.Date)
+                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                                   union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                               });
+                           });
+        }
 
         /// <summary>
         /// <para>Previous Table Row Properties.</para>
@@ -44841,6 +47294,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ParagraphProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ParagraphProperties>();
 
         /// <summary>
         /// <para>ParagraphStyleId.</para>
@@ -45409,9 +47864,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "name")]
-        [Index(0)]
-        public StringValue Name { get; set; }
+        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Associated VML Data Reference</para>
@@ -45420,10 +47873,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(MaxLength = 254L)]
-        [SchemaAttr(23, "shapeid")]
-        [Index(1)]
-        public StringValue ShapeId { get; set; }
+        public StringValue ShapeId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Embedded Control Properties Relationship Reference</para>
@@ -45432,9 +47882,20 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr(19, "id")]
-        [Index(2)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Control>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Control>()
+                           .AddAttribute(23, "name", a => a.Name)
+                           .AddAttribute(23, "shapeid", a => a.ShapeId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (254L) });
+                           })
+                           .AddAttribute(19, "id", a => a.Id);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipTypeConstraint(2 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control"),
@@ -45494,6 +47955,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PreviousTableGrid>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.GridColumn), 0, 0)
@@ -45528,9 +47991,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "drawAspect")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect> drawAspect { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect> drawAspect { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>id</para>
@@ -45539,10 +48000,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(1)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>progId</para>
@@ -45551,9 +48009,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "progId")]
-        [Index(2)]
-        public StringValue ProgId { get; set; }
+        public StringValue ProgId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>shapeId</para>
@@ -45562,9 +48018,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "shapeId")]
-        [Index(3)]
-        public StringValue ShapeId { get; set; }
+        public StringValue ShapeId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>fieldCodes</para>
@@ -45573,9 +48027,22 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "fieldCodes")]
-        [Index(4)]
-        public StringValue FieldCodes { get; set; }
+        public StringValue FieldCodes { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ObjectEmbed>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ObjectEmbed>()
+                           .AddAttribute(23, "drawAspect", a => a.drawAspect)
+                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(23, "progId", a => a.ProgId)
+                           .AddAttribute(23, "shapeId", a => a.ShapeId)
+                           .AddAttribute(23, "fieldCodes", a => a.FieldCodes);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ObjectEmbed>(deep);
@@ -45604,10 +48071,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "updateMode")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectUpdateMode> UpdateMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectUpdateMode> UpdateMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectUpdateMode>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>lockedField</para>
@@ -45616,9 +48080,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "lockedField")]
-        [Index(1)]
-        public OnOffValue LockedField { get; set; }
+        public OnOffValue LockedField { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>drawAspect</para>
@@ -45627,9 +48089,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "drawAspect")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect> drawAspect { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect> drawAspect { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>id</para>
@@ -45638,10 +48098,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(3)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>progId</para>
@@ -45650,9 +48107,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "progId")]
-        [Index(4)]
-        public StringValue ProgId { get; set; }
+        public StringValue ProgId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>shapeId</para>
@@ -45661,9 +48116,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "shapeId")]
-        [Index(5)]
-        public StringValue ShapeId { get; set; }
+        public StringValue ShapeId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>fieldCodes</para>
@@ -45672,9 +48125,27 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "fieldCodes")]
-        [Index(6)]
-        public StringValue FieldCodes { get; set; }
+        public StringValue FieldCodes { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ObjectLink>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ObjectLink>()
+                           .AddAttribute(23, "updateMode", a => a.UpdateMode, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(23, "lockedField", a => a.LockedField)
+                           .AddAttribute(23, "drawAspect", a => a.drawAspect)
+                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(23, "progId", a => a.ProgId)
+                           .AddAttribute(23, "shapeId", a => a.ShapeId)
+                           .AddAttribute(23, "fieldCodes", a => a.FieldCodes);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ObjectLink>(deep);
@@ -45703,9 +48174,15 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LockingValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LockingValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LockingValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Lock>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Lock>()
+                           .AddAttribute(23, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Lock>(deep);
@@ -45758,6 +48235,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtPlaceholder>();
+
         /// <summary>
         /// <para>Document Part Reference.</para>
         /// <para>Represents the following element tag in the schema: w:docPart.</para>
@@ -45805,9 +48284,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "prefixMappings")]
-        [Index(0)]
-        public StringValue PrefixMappings { get; set; }
+        public StringValue PrefixMappings { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>XPath</para>
@@ -45816,10 +48293,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "xpath")]
-        [Index(1)]
-        public StringValue XPath { get; set; }
+        public StringValue XPath { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Custom XML Data Storage ID</para>
@@ -45828,10 +48302,23 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "storeItemID")]
-        [Index(2)]
-        public StringValue StoreItemId { get; set; }
+        public StringValue StoreItemId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataBinding>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<DataBinding>()
+                           .AddAttribute(23, "prefixMappings", a => a.PrefixMappings)
+                           .AddAttribute(23, "xpath", a => a.XPath, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(23, "storeItemID", a => a.StoreItemId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataBinding>(deep);
@@ -45891,9 +48378,15 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "lastValue")]
-        [Index(0)]
-        public StringValue LastValue { get; set; }
+        public StringValue LastValue { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentComboBox>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SdtContentComboBox>()
+                           .AddAttribute(23, "lastValue", a => a.LastValue);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -45966,9 +48459,15 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "fullDate")]
-        [Index(0)]
-        public DateTimeValue FullDate { get; set; }
+        public DateTimeValue FullDate { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentDate>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SdtContentDate>()
+                           .AddAttribute(23, "fullDate", a => a.FullDate);
+        }
 
         /// <summary>
         /// <para>Date Display Mask.</para>
@@ -46084,6 +48583,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentDocPartObject>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPartGallery), 0, 1),
@@ -46144,6 +48645,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SdtContentDocPartList(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentDocPartList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -46301,9 +48804,15 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "lastValue")]
-        [Index(0)]
-        public StringValue LastValue { get; set; }
+        public StringValue LastValue { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentDropDownList>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SdtContentDropDownList>()
+                           .AddAttribute(23, "lastValue", a => a.LastValue);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -46339,9 +48848,15 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "multiLine")]
-        [Index(0)]
-        public OnOffValue MultiLine { get; set; }
+        public OnOffValue MultiLine { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentText>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SdtContentText>()
+                           .AddAttribute(23, "multiLine", a => a.MultiLine);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtContentText>(deep);
@@ -46370,9 +48885,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "recommended")]
-        [Index(0)]
-        public OnOffValue Recommended { get; set; }
+        public OnOffValue Recommended { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Cryptographic Provider Type</para>
@@ -46381,9 +48894,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "cryptProviderType")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues> CryptographicProviderType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues> CryptographicProviderType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Cryptographic Algorithm Class</para>
@@ -46392,9 +48903,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "cryptAlgorithmClass")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues> CryptographicAlgorithmClass { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues> CryptographicAlgorithmClass { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Cryptographic Algorithm Type</para>
@@ -46403,9 +48912,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "cryptAlgorithmType")]
-        [Index(3)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues> CryptographicAlgorithmType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues> CryptographicAlgorithmType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Cryptographic Hashing Algorithm</para>
@@ -46414,9 +48921,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "cryptAlgorithmSid")]
-        [Index(4)]
-        public Int32Value CryptographicAlgorithmSid { get; set; }
+        public Int32Value CryptographicAlgorithmSid { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Iterations to Run Hashing Algorithm</para>
@@ -46425,10 +48930,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(MaxInclusive = 5000000L)]
-        [SchemaAttr(23, "cryptSpinCount")]
-        [Index(5)]
-        public UInt32Value CryptographicSpinCount { get; set; }
+        public UInt32Value CryptographicSpinCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Cryptographic Provider</para>
@@ -46437,9 +48939,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "cryptProvider")]
-        [Index(6)]
-        public StringValue CryptographicProvider { get; set; }
+        public StringValue CryptographicProvider { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Cryptographic Algorithm Extensibility</para>
@@ -46448,10 +48948,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(23, "algIdExt")]
-        [Index(7)]
-        public HexBinaryValue AlgorithmIdExtensibility { get; set; }
+        public HexBinaryValue AlgorithmIdExtensibility { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Algorithm Extensibility Source</para>
@@ -46460,9 +48957,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "algIdExtSource")]
-        [Index(8)]
-        public StringValue AlgorithmIdExtensibilitySource { get; set; }
+        public StringValue AlgorithmIdExtensibilitySource { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Cryptographic Provider Type Extensibility</para>
@@ -46471,10 +48966,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(23, "cryptProviderTypeExt")]
-        [Index(9)]
-        public HexBinaryValue CryptographicProviderTypeExtensibility { get; set; }
+        public HexBinaryValue CryptographicProviderTypeExtensibility { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Provider Type Extensibility Source</para>
@@ -46483,9 +48975,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "cryptProviderTypeExtSource")]
-        [Index(10)]
-        public StringValue CryptographicProviderTypeExtSource { get; set; }
+        public StringValue CryptographicProviderTypeExtSource { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Password Hash</para>
@@ -46494,9 +48984,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "hash")]
-        [Index(11)]
-        public Base64BinaryValue Hash { get; set; }
+        public Base64BinaryValue Hash { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Salt for Password Verifier</para>
@@ -46505,9 +48993,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "salt")]
-        [Index(12)]
-        public Base64BinaryValue Salt { get; set; }
+        public Base64BinaryValue Salt { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>algorithmName, this property is only available in Office2010, Office2013, Office2016</para>
@@ -46516,10 +49002,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "algorithmName")]
-        [Index(13)]
-        public StringValue AlgorithmName { get; set; }
+        public StringValue AlgorithmName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>hashValue, this property is only available in Office2010, Office2013, Office2016</para>
@@ -46528,10 +49011,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "hashValue")]
-        [Index(14)]
-        public Base64BinaryValue HashValue { get; set; }
+        public Base64BinaryValue HashValue { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>saltValue, this property is only available in Office2010, Office2013, Office2016</para>
@@ -46540,10 +49020,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "saltValue")]
-        [Index(15)]
-        public Base64BinaryValue SaltValue { get; set; }
+        public Base64BinaryValue SaltValue { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>spinCount, this property is only available in Office2010, Office2013, Office2016</para>
@@ -46552,10 +49029,52 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "spinCount")]
-        [Index(16)]
-        public Int32Value SpinCount { get; set; }
+        public Int32Value SpinCount { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WriteProtection>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<WriteProtection>()
+                           .AddAttribute(23, "recommended", a => a.Recommended)
+                           .AddAttribute(23, "cryptProviderType", a => a.CryptographicProviderType)
+                           .AddAttribute(23, "cryptAlgorithmClass", a => a.CryptographicAlgorithmClass)
+                           .AddAttribute(23, "cryptAlgorithmType", a => a.CryptographicAlgorithmType)
+                           .AddAttribute(23, "cryptAlgorithmSid", a => a.CryptographicAlgorithmSid)
+                           .AddAttribute(23, "cryptSpinCount", a => a.CryptographicSpinCount, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (5000000L) });
+                           })
+                           .AddAttribute(23, "cryptProvider", a => a.CryptographicProvider)
+                           .AddAttribute(23, "algIdExt", a => a.AlgorithmIdExtensibility, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           })
+                           .AddAttribute(23, "algIdExtSource", a => a.AlgorithmIdExtensibilitySource)
+                           .AddAttribute(23, "cryptProviderTypeExt", a => a.CryptographicProviderTypeExtensibility, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           })
+                           .AddAttribute(23, "cryptProviderTypeExtSource", a => a.CryptographicProviderTypeExtSource)
+                           .AddAttribute(23, "hash", a => a.Hash)
+                           .AddAttribute(23, "salt", a => a.Salt)
+                           .AddAttribute(23, "algorithmName", a => a.AlgorithmName, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "hashValue", a => a.HashValue, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "saltValue", a => a.SaltValue, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "spinCount", a => a.SpinCount, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WriteProtection>(deep);
@@ -46584,10 +49103,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ViewValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ViewValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ViewValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<View>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<View>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<View>(deep);
@@ -46616,9 +49143,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PresetZoomValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PresetZoomValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PresetZoomValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Zoom Percentage</para>
@@ -46627,14 +49152,29 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2007)]
-        [StringValidator(Pattern = "-?[0-9]+(\\.[0-9]+)?%", Version = FileFormatVersions.Office2010, UnionId = 0)]
-        [NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2010, UnionId = 0)]
-        [StringValidator(Pattern = "-?[0-9]+(\\.[0-9]+)?%", InitialVersion = FileFormatVersions.Office2013, UnionId = 1)]
-        [NumberValidator(SimpleType = typeof(Int32Value), InitialVersion = FileFormatVersions.Office2013, UnionId = 1)]
-        [SchemaAttr(23, "percent")]
-        [Index(1)]
-        public StringValue Percent { get; set; }
+        public StringValue Percent { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Zoom>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Zoom>()
+                           .AddAttribute(23, "val", a => a.Val)
+                           .AddAttribute(23, "percent", a => a.Percent, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?%"), Version = (FileFormatVersions.Office2010), UnionId = (0) });
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), Version = (FileFormatVersions.Office2010), UnionId = (0) });
+                               });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?%"), InitialVersion = (FileFormatVersions.Office2013), UnionId = (1) });
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), InitialVersion = (FileFormatVersions.Office2013), UnionId = (1) });
+                               });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Zoom>(deep);
@@ -46663,11 +49203,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 84L)]
-        [SchemaAttr(23, "lang")]
-        [Index(0)]
-        public StringValue Language { get; set; }
+        public StringValue Language { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Grammatical Engine ID</para>
@@ -46676,10 +49212,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "vendorID")]
-        [Index(1)]
-        public UInt16Value VendorID { get; set; }
+        public UInt16Value VendorID { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Grammatical Check Engine Version</para>
@@ -46688,11 +49221,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L)]
-        [SchemaAttr(23, "dllVersion")]
-        [Index(2)]
-        public Int32Value DllVersion { get; set; }
+        public Int32Value DllVersion { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Natural Language Grammar Check</para>
@@ -46701,9 +49230,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "nlCheck")]
-        [Index(3)]
-        public OnOffValue NaturalLanguageGrammarCheck { get; set; }
+        public OnOffValue NaturalLanguageGrammarCheck { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Check Stylistic Rules With Grammar</para>
@@ -46712,10 +49239,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "checkStyle")]
-        [Index(4)]
-        public OnOffValue CheckStyle { get; set; }
+        public OnOffValue CheckStyle { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Application Name</para>
@@ -46724,10 +49248,37 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "appName")]
-        [Index(5)]
-        public StringValue ApplicationName { get; set; }
+        public StringValue ApplicationName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ActiveWritingStyle>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ActiveWritingStyle>()
+                           .AddAttribute(23, "lang", a => a.Language, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (84L) });
+                           })
+                           .AddAttribute(23, "vendorID", a => a.VendorID, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(23, "dllVersion", a => a.DllVersion, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+                           })
+                           .AddAttribute(23, "nlCheck", a => a.NaturalLanguageGrammarCheck)
+                           .AddAttribute(23, "checkStyle", a => a.CheckStyle, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(23, "appName", a => a.ApplicationName, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ActiveWritingStyle>(deep);
@@ -46756,9 +49307,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "spelling")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues> Spelling { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues> Spelling { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Grammatical Checking State</para>
@@ -46767,9 +49316,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "grammar")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues> Grammar { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues> Grammar { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ProofState>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ProofState>()
+                           .AddAttribute(23, "spelling", a => a.Spelling)
+                           .AddAttribute(23, "grammar", a => a.Grammar);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ProofState>(deep);
@@ -46798,10 +49354,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Length = 2L)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public HexBinaryValue Val { get; set; }
+        public HexBinaryValue Val { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>allStyles, this property is only available in Office2010, Office2013, Office2016</para>
@@ -46810,10 +49363,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "allStyles")]
-        [Index(1)]
-        public OnOffValue AllStyles { get; set; }
+        public OnOffValue AllStyles { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>customStyles, this property is only available in Office2010, Office2013, Office2016</para>
@@ -46822,10 +49372,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "customStyles")]
-        [Index(2)]
-        public OnOffValue CustomStyles { get; set; }
+        public OnOffValue CustomStyles { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>latentStyles, this property is only available in Office2010, Office2013, Office2016</para>
@@ -46834,10 +49381,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "latentStyles")]
-        [Index(3)]
-        public OnOffValue LatentStyles { get; set; }
+        public OnOffValue LatentStyles { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>stylesInUse, this property is only available in Office2010, Office2013, Office2016</para>
@@ -46846,10 +49390,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "stylesInUse")]
-        [Index(4)]
-        public OnOffValue StylesInUse { get; set; }
+        public OnOffValue StylesInUse { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>headingStyles, this property is only available in Office2010, Office2013, Office2016</para>
@@ -46858,10 +49399,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "headingStyles")]
-        [Index(5)]
-        public OnOffValue HeadingStyles { get; set; }
+        public OnOffValue HeadingStyles { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>numberingStyles, this property is only available in Office2010, Office2013, Office2016</para>
@@ -46870,10 +49408,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "numberingStyles")]
-        [Index(6)]
-        public OnOffValue NumberingStyles { get; set; }
+        public OnOffValue NumberingStyles { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>tableStyles, this property is only available in Office2010, Office2013, Office2016</para>
@@ -46882,10 +49417,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "tableStyles")]
-        [Index(7)]
-        public OnOffValue TableStyles { get; set; }
+        public OnOffValue TableStyles { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>directFormattingOnRuns, this property is only available in Office2010, Office2013, Office2016</para>
@@ -46894,10 +49426,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "directFormattingOnRuns")]
-        [Index(8)]
-        public OnOffValue DirectFormattingOnRuns { get; set; }
+        public OnOffValue DirectFormattingOnRuns { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>directFormattingOnParagraphs, this property is only available in Office2010, Office2013, Office2016</para>
@@ -46906,10 +49435,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "directFormattingOnParagraphs")]
-        [Index(9)]
-        public OnOffValue DirectFormattingOnParagraphs { get; set; }
+        public OnOffValue DirectFormattingOnParagraphs { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>directFormattingOnNumbering, this property is only available in Office2010, Office2013, Office2016</para>
@@ -46918,10 +49444,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "directFormattingOnNumbering")]
-        [Index(10)]
-        public OnOffValue DirectFormattingOnNumbering { get; set; }
+        public OnOffValue DirectFormattingOnNumbering { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>directFormattingOnTables, this property is only available in Office2010, Office2013, Office2016</para>
@@ -46930,10 +49453,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "directFormattingOnTables")]
-        [Index(11)]
-        public OnOffValue DirectFormattingOnTables { get; set; }
+        public OnOffValue DirectFormattingOnTables { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>clearFormatting, this property is only available in Office2010, Office2013, Office2016</para>
@@ -46942,10 +49462,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "clearFormatting")]
-        [Index(12)]
-        public OnOffValue ClearFormatting { get; set; }
+        public OnOffValue ClearFormatting { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>top3HeadingStyles, this property is only available in Office2010, Office2013, Office2016</para>
@@ -46954,10 +49471,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "top3HeadingStyles")]
-        [Index(13)]
-        public OnOffValue Top3HeadingStyles { get; set; }
+        public OnOffValue Top3HeadingStyles { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>visibleStyles, this property is only available in Office2010, Office2013, Office2016</para>
@@ -46966,10 +49480,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "visibleStyles")]
-        [Index(14)]
-        public OnOffValue VisibleStyles { get; set; }
+        public OnOffValue VisibleStyles { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>alternateStyleNames, this property is only available in Office2010, Office2013, Office2016</para>
@@ -46978,10 +49489,78 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "alternateStyleNames")]
-        [Index(15)]
-        public OnOffValue AlternateStyleNames { get; set; }
+        public OnOffValue AlternateStyleNames { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StylePaneFormatFilter>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<StylePaneFormatFilter>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
+                           })
+                           .AddAttribute(23, "allStyles", a => a.AllStyles, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "customStyles", a => a.CustomStyles, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "latentStyles", a => a.LatentStyles, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "stylesInUse", a => a.StylesInUse, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "headingStyles", a => a.HeadingStyles, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "numberingStyles", a => a.NumberingStyles, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "tableStyles", a => a.TableStyles, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "directFormattingOnRuns", a => a.DirectFormattingOnRuns, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "directFormattingOnParagraphs", a => a.DirectFormattingOnParagraphs, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "directFormattingOnNumbering", a => a.DirectFormattingOnNumbering, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "directFormattingOnTables", a => a.DirectFormattingOnTables, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "clearFormatting", a => a.ClearFormatting, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "top3HeadingStyles", a => a.Top3HeadingStyles, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "visibleStyles", a => a.VisibleStyles, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "alternateStyleNames", a => a.AlternateStyleNames, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           });
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(0 /*w:val*/, false, new string[] { "0x0040", "0x0080", "0x0800" }) { Application = ApplicationType.Word }
@@ -47016,12 +49595,20 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(SimpleType = typeof(HexBinaryValue), Length = 2L, Version = FileFormatVersions.Office2007)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Wordprocessing.StylePaneSortMethodsValues>), InitialVersion = FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StylePaneSortMethods>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<StylePaneSortMethods>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { SimpleType = (typeof(HexBinaryValue)), Length = (2L), Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Wordprocessing.StylePaneSortMethodsValues>)), InitialVersion = (FileFormatVersions.Office2010) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StylePaneSortMethods>(deep);
@@ -47050,10 +49637,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentTypeValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentTypeValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentTypeValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocumentType>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<DocumentType>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocumentType>(deep);
@@ -47135,6 +49730,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public MailMerge(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MailMerge>();
 
         /// <summary>
         /// <para>Source Document Type.</para>
@@ -47393,9 +49990,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "markup")]
-        [Index(0)]
-        public OnOffValue Markup { get; set; }
+        public OnOffValue Markup { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Display Comments</para>
@@ -47404,9 +49999,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "comments")]
-        [Index(1)]
-        public OnOffValue Comments { get; set; }
+        public OnOffValue Comments { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Display Content Revisions</para>
@@ -47415,9 +50008,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "insDel")]
-        [Index(2)]
-        public OnOffValue DisplayRevision { get; set; }
+        public OnOffValue DisplayRevision { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Display Formatting Revisions</para>
@@ -47426,9 +50017,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "formatting")]
-        [Index(3)]
-        public OnOffValue Formatting { get; set; }
+        public OnOffValue Formatting { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Display Ink Annotations</para>
@@ -47437,9 +50026,19 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "inkAnnotations")]
-        [Index(4)]
-        public OnOffValue InkAnnotations { get; set; }
+        public OnOffValue InkAnnotations { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevisionView>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RevisionView>()
+                           .AddAttribute(23, "markup", a => a.Markup)
+                           .AddAttribute(23, "comments", a => a.Comments)
+                           .AddAttribute(23, "insDel", a => a.DisplayRevision)
+                           .AddAttribute(23, "formatting", a => a.Formatting)
+                           .AddAttribute(23, "inkAnnotations", a => a.InkAnnotations);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevisionView>(deep);
@@ -47468,9 +50067,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "edit")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentProtectionValues> Edit { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentProtectionValues> Edit { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentProtectionValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Only Allow Formatting With Unlocked Styles</para>
@@ -47479,9 +50076,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "formatting")]
-        [Index(1)]
-        public OnOffValue Formatting { get; set; }
+        public OnOffValue Formatting { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Enforce Document Protection Settings</para>
@@ -47490,9 +50085,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "enforcement")]
-        [Index(2)]
-        public OnOffValue Enforcement { get; set; }
+        public OnOffValue Enforcement { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Cryptographic Provider Type</para>
@@ -47501,9 +50094,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "cryptProviderType")]
-        [Index(3)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues> CryptographicProviderType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues> CryptographicProviderType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Cryptographic Algorithm Class</para>
@@ -47512,9 +50103,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "cryptAlgorithmClass")]
-        [Index(4)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues> CryptographicAlgorithmClass { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues> CryptographicAlgorithmClass { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Cryptographic Algorithm Type</para>
@@ -47523,9 +50112,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "cryptAlgorithmType")]
-        [Index(5)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues> CryptographicAlgorithmType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues> CryptographicAlgorithmType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Cryptographic Hashing Algorithm</para>
@@ -47534,9 +50121,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "cryptAlgorithmSid")]
-        [Index(6)]
-        public Int32Value CryptographicAlgorithmSid { get; set; }
+        public Int32Value CryptographicAlgorithmSid { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Iterations to Run Hashing Algorithm</para>
@@ -47545,10 +50130,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [NumberValidator(MaxInclusive = 5000000L)]
-        [SchemaAttr(23, "cryptSpinCount")]
-        [Index(7)]
-        public UInt32Value CryptographicSpinCount { get; set; }
+        public UInt32Value CryptographicSpinCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Cryptographic Provider</para>
@@ -47557,9 +50139,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "cryptProvider")]
-        [Index(8)]
-        public StringValue CryptographicProvider { get; set; }
+        public StringValue CryptographicProvider { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Cryptographic Algorithm Extensibility</para>
@@ -47568,10 +50148,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(23, "algIdExt")]
-        [Index(9)]
-        public HexBinaryValue AlgorithmIdExtensibility { get; set; }
+        public HexBinaryValue AlgorithmIdExtensibility { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Algorithm Extensibility Source</para>
@@ -47580,9 +50157,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "algIdExtSource")]
-        [Index(10)]
-        public StringValue AlgorithmIdExtensibilitySource { get; set; }
+        public StringValue AlgorithmIdExtensibilitySource { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Cryptographic Provider Type Extensibility</para>
@@ -47591,10 +50166,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(23, "cryptProviderTypeExt")]
-        [Index(11)]
-        public HexBinaryValue CryptographicProviderTypeExtensibility { get; set; }
+        public HexBinaryValue CryptographicProviderTypeExtensibility { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Provider Type Extensibility Source</para>
@@ -47603,9 +50175,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "cryptProviderTypeExtSource")]
-        [Index(12)]
-        public StringValue CryptographicProviderTypeExtSource { get; set; }
+        public StringValue CryptographicProviderTypeExtSource { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Password Hash</para>
@@ -47614,9 +50184,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "hash")]
-        [Index(13)]
-        public Base64BinaryValue Hash { get; set; }
+        public Base64BinaryValue Hash { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Salt for Password Verifier</para>
@@ -47625,9 +50193,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "salt")]
-        [Index(14)]
-        public Base64BinaryValue Salt { get; set; }
+        public Base64BinaryValue Salt { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>algorithmName, this property is only available in Office2010, Office2013, Office2016</para>
@@ -47636,10 +50202,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "algorithmName")]
-        [Index(15)]
-        public StringValue AlgorithmName { get; set; }
+        public StringValue AlgorithmName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>hashValue, this property is only available in Office2010, Office2013, Office2016</para>
@@ -47648,10 +50211,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "hashValue")]
-        [Index(16)]
-        public Base64BinaryValue HashValue { get; set; }
+        public Base64BinaryValue HashValue { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>saltValue, this property is only available in Office2010, Office2013, Office2016</para>
@@ -47660,10 +50220,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "saltValue")]
-        [Index(17)]
-        public Base64BinaryValue SaltValue { get; set; }
+        public Base64BinaryValue SaltValue { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>spinCount, this property is only available in Office2010, Office2013, Office2016</para>
@@ -47672,10 +50229,54 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(23, "spinCount")]
-        [Index(18)]
-        public Int32Value SpinCount { get; set; }
+        public Int32Value SpinCount { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocumentProtection>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<DocumentProtection>()
+                           .AddAttribute(23, "edit", a => a.Edit)
+                           .AddAttribute(23, "formatting", a => a.Formatting)
+                           .AddAttribute(23, "enforcement", a => a.Enforcement)
+                           .AddAttribute(23, "cryptProviderType", a => a.CryptographicProviderType)
+                           .AddAttribute(23, "cryptAlgorithmClass", a => a.CryptographicAlgorithmClass)
+                           .AddAttribute(23, "cryptAlgorithmType", a => a.CryptographicAlgorithmType)
+                           .AddAttribute(23, "cryptAlgorithmSid", a => a.CryptographicAlgorithmSid)
+                           .AddAttribute(23, "cryptSpinCount", a => a.CryptographicSpinCount, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (5000000L) });
+                           })
+                           .AddAttribute(23, "cryptProvider", a => a.CryptographicProvider)
+                           .AddAttribute(23, "algIdExt", a => a.AlgorithmIdExtensibility, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           })
+                           .AddAttribute(23, "algIdExtSource", a => a.AlgorithmIdExtensibilitySource)
+                           .AddAttribute(23, "cryptProviderTypeExt", a => a.CryptographicProviderTypeExtensibility, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           })
+                           .AddAttribute(23, "cryptProviderTypeExtSource", a => a.CryptographicProviderTypeExtSource)
+                           .AddAttribute(23, "hash", a => a.Hash)
+                           .AddAttribute(23, "salt", a => a.Salt)
+                           .AddAttribute(23, "algorithmName", a => a.AlgorithmName, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "hashValue", a => a.HashValue, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "saltValue", a => a.SaltValue, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(23, "spinCount", a => a.SpinCount, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           });
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(6 /*w:cryptAlgorithmSid*/, true, new string[] { "1", "2", "3", "4", "12", "13", "14" })
@@ -47703,6 +50304,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DefaultTabStop>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultTabStop>(deep);
     }
@@ -47722,6 +50325,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public BookFoldPrintingSheets() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BookFoldPrintingSheets>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BookFoldPrintingSheets>(deep);
@@ -47748,11 +50353,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public Int16Value Val { get; set; }
+        public Int16Value Val { get => GetAttribute<Int16Value>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<NonNegativeShortType>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+                           });
+        }
     }
 
     /// <summary>
@@ -47778,10 +50390,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public UInt16Value Val { get; set; }
+        public UInt16Value Val { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConsecutiveHyphenLimit>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ConsecutiveHyphenLimit>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConsecutiveHyphenLimit>(deep);
@@ -47810,11 +50430,19 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100L)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public Int32Value Val { get; set; }
+        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SummaryLength>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SummaryLength>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SummaryLength>(deep);
@@ -47836,6 +50464,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DisplayHorizontalDrawingGrid>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DisplayHorizontalDrawingGrid>(deep);
     }
@@ -47855,6 +50485,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DisplayVerticalDrawingGrid() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DisplayVerticalDrawingGrid>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DisplayVerticalDrawingGrid>(deep);
@@ -47881,11 +50513,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 127L)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public Int32Value Val { get; set; }
+        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<UnsignedInt7Type>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (127L) });
+                           });
+        }
     }
 
     /// <summary>
@@ -47911,10 +50550,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CharacterSpacingValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CharacterSpacingValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CharacterSpacingValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CharacterSpacingControl>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<CharacterSpacingControl>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CharacterSpacingControl>(deep);
@@ -47943,11 +50590,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 84L)]
-        [SchemaAttr(23, "lang")]
-        [Index(0)]
-        public StringValue Language { get; set; }
+        public StringValue Language { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>val</para>
@@ -47956,11 +50599,24 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 50L)]
-        [SchemaAttr(23, "val")]
-        [Index(1)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoLineBreaksAfterKinsoku>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<NoLineBreaksAfterKinsoku>()
+                           .AddAttribute(23, "lang", a => a.Language, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (84L) });
+                           })
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (50L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoLineBreaksAfterKinsoku>(deep);
@@ -47989,11 +50645,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 84L)]
-        [SchemaAttr(23, "lang")]
-        [Index(0)]
-        public StringValue Language { get; set; }
+        public StringValue Language { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>val</para>
@@ -48002,11 +50654,24 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 100L)]
-        [SchemaAttr(23, "val")]
-        [Index(1)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoLineBreaksBeforeKinsoku>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<NoLineBreaksBeforeKinsoku>()
+                           .AddAttribute(23, "lang", a => a.Language, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (84L) });
+                           })
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (100L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoLineBreaksBeforeKinsoku>(deep);
@@ -48035,9 +50700,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr(19, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Local Identifier for XSL Transform</para>
@@ -48046,9 +50709,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "solutionID")]
-        [Index(1)]
-        public StringValue SolutionId { get; set; }
+        public StringValue SolutionId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SaveThroughXslt>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SaveThroughXslt>()
+                           .AddAttribute(19, "id", a => a.Id)
+                           .AddAttribute(23, "solutionID", a => a.SolutionId);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipTypeConstraint(0 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/transform")
@@ -48106,6 +50776,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public HeaderShapeDefaults(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HeaderShapeDefaults>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
         {
@@ -48165,6 +50837,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ShapeDefaults(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapeDefaults>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
         {
@@ -48280,6 +50954,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public FootnoteDocumentWideProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FootnoteDocumentWideProperties>();
 
         /// <summary>
         /// <para>Footnote Placement.</para>
@@ -48414,6 +51090,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public EndnoteDocumentWideProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EndnoteDocumentWideProperties>();
 
         /// <summary>
         /// <para>Endnote Placement.</para>
@@ -48670,6 +51348,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Compatibility(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Compatibility>();
 
         /// <summary>
         /// <para>Use Simplified Rules For Table Border Conflicts.</para>
@@ -49639,6 +52319,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocumentVariables>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocumentVariable), 0, 0)
@@ -49699,6 +52381,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Rsids>();
+
         /// <summary>
         /// <para>Original Document Revision Save ID.</para>
         /// <para>Represents the following element tag in the schema: w:rsidRoot.</para>
@@ -49747,9 +52431,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "bg1")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Background1 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Background1 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Text 1 Theme Color Mapping</para>
@@ -49758,9 +52440,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "t1")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Text1 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Text1 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Background 2 Theme Color Mapping</para>
@@ -49769,9 +52449,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "bg2")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Background2 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Background2 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Text 2 Theme Color Mapping</para>
@@ -49780,9 +52458,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "t2")]
-        [Index(3)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Text2 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Text2 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Accent 1 Theme Color Mapping</para>
@@ -49791,9 +52467,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "accent1")]
-        [Index(4)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent1 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent1 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Accent 2 Theme Color Mapping</para>
@@ -49802,9 +52476,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "accent2")]
-        [Index(5)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent2 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent2 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Accent3 Theme Color Mapping</para>
@@ -49813,9 +52485,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "accent3")]
-        [Index(6)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent3 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent3 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Accent4 Theme Color Mapping</para>
@@ -49824,9 +52494,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "accent4")]
-        [Index(7)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent4 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent4 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Accent5 Theme Color Mapping</para>
@@ -49835,9 +52503,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "accent5")]
-        [Index(8)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent5 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent5 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Accent6 Theme Color Mapping</para>
@@ -49846,9 +52512,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "accent6")]
-        [Index(9)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent6 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent6 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Hyperlink Theme Color Mapping</para>
@@ -49857,9 +52521,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "hyperlink")]
-        [Index(10)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Hyperlink { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Hyperlink { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Followed Hyperlink Theme Color Mapping</para>
@@ -49868,9 +52530,26 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "followedHyperlink")]
-        [Index(11)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> FollowedHyperlink { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> FollowedHyperlink { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColorSchemeMapping>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ColorSchemeMapping>()
+                           .AddAttribute(23, "bg1", a => a.Background1)
+                           .AddAttribute(23, "t1", a => a.Text1)
+                           .AddAttribute(23, "bg2", a => a.Background2)
+                           .AddAttribute(23, "t2", a => a.Text2)
+                           .AddAttribute(23, "accent1", a => a.Accent1)
+                           .AddAttribute(23, "accent2", a => a.Accent2)
+                           .AddAttribute(23, "accent3", a => a.Accent3)
+                           .AddAttribute(23, "accent4", a => a.Accent4)
+                           .AddAttribute(23, "accent5", a => a.Accent5)
+                           .AddAttribute(23, "accent6", a => a.Accent6)
+                           .AddAttribute(23, "hyperlink", a => a.Hyperlink)
+                           .AddAttribute(23, "followedHyperlink", a => a.FollowedHyperlink);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorSchemeMapping>(deep);
@@ -49925,6 +52604,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Captions>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Caption), 1, 0),
@@ -49960,9 +52641,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "actualPg")]
-        [Index(0)]
-        public OnOffValue UseActualPages { get; set; }
+        public OnOffValue UseActualPages { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Virtual Page Width</para>
@@ -49971,10 +52650,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "w")]
-        [Index(1)]
-        public UInt32Value Width { get; set; }
+        public UInt32Value Width { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Virtual Page Height</para>
@@ -49983,10 +52659,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "h")]
-        [Index(2)]
-        public UInt32Value Height { get; set; }
+        public UInt32Value Height { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Font Size Scaling</para>
@@ -49995,15 +52668,38 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2007)]
-        [StringValidator(Pattern = "-?[0-9]+(\\.[0-9]+)?%", Version = FileFormatVersions.Office2010, UnionId = 0)]
-        [NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2010, UnionId = 0)]
-        [StringValidator(Pattern = "-?[0-9]+(\\.[0-9]+)?%", InitialVersion = FileFormatVersions.Office2013, UnionId = 1)]
-        [NumberValidator(SimpleType = typeof(Int32Value), InitialVersion = FileFormatVersions.Office2013, UnionId = 1)]
-        [SchemaAttr(23, "fontSz")]
-        [Index(3)]
-        public StringValue FontSize { get; set; }
+        public StringValue FontSize { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ReadModeInkLockDown>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ReadModeInkLockDown>()
+                           .AddAttribute(23, "actualPg", a => a.UseActualPages)
+                           .AddAttribute(23, "w", a => a.Width, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(23, "h", a => a.Height, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(23, "fontSz", a => a.FontSize, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?%"), Version = (FileFormatVersions.Office2010), UnionId = (0) });
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), Version = (FileFormatVersions.Office2010), UnionId = (0) });
+                               });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?%"), InitialVersion = (FileFormatVersions.Office2013), UnionId = (1) });
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), InitialVersion = (FileFormatVersions.Office2013), UnionId = (1) });
+                               });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ReadModeInkLockDown>(deep);
@@ -50032,10 +52728,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TargetScreenSizeValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TargetScreenSizeValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TargetScreenSizeValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TargetScreenSize>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TargetScreenSize>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TargetScreenSize>(deep);
@@ -50104,6 +52808,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PictureBulletBase>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new CompositeParticle(ParticleType.Group, 1, 1)
@@ -50152,11 +52858,19 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(Length = 10L)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public HexBinaryValue Val { get; set; }
+        public HexBinaryValue Val { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Panose1Number>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Panose1Number>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (10L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Panose1Number>(deep);
@@ -50185,10 +52899,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Pattern = "[0-9a-fA-F]*", MinLength = 1L, MaxLength = 2L)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>characterSet</para>
@@ -50197,9 +52908,19 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "characterSet")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.StrictCharacterSet> StrictCharacterSet { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.StrictCharacterSet> StrictCharacterSet { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.StrictCharacterSet>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FontCharSet>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<FontCharSet>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
+                           })
+                           .AddAttribute(23, "characterSet", a => a.StrictCharacterSet);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FontCharSet>(deep);
@@ -50228,10 +52949,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontFamilyValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontFamilyValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontFamilyValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FontFamily>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<FontFamily>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FontFamily>(deep);
@@ -50260,10 +52989,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontPitchValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontPitchValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontPitchValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Pitch>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Pitch>()
+                           .AddAttribute(23, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Pitch>(deep);
@@ -50292,11 +53029,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(23, "usb0")]
-        [Index(0)]
-        public HexBinaryValue UnicodeSignature0 { get; set; }
+        public HexBinaryValue UnicodeSignature0 { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Second 32 Bits of Unicode Subset Bitfield</para>
@@ -50305,11 +53038,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(23, "usb1")]
-        [Index(1)]
-        public HexBinaryValue UnicodeSignature1 { get; set; }
+        public HexBinaryValue UnicodeSignature1 { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Third 32 Bits of Unicode Subset Bitfield</para>
@@ -50318,11 +53047,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(23, "usb2")]
-        [Index(2)]
-        public HexBinaryValue UnicodeSignature2 { get; set; }
+        public HexBinaryValue UnicodeSignature2 { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Fourth 32 Bits of Unicode Subset Bitfield</para>
@@ -50331,11 +53056,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(23, "usb3")]
-        [Index(3)]
-        public HexBinaryValue UnicodeSignature3 { get; set; }
+        public HexBinaryValue UnicodeSignature3 { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Lower 32 Bits of Code Page Bit Field</para>
@@ -50344,11 +53065,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(23, "csb0")]
-        [Index(4)]
-        public HexBinaryValue CodePageSignature0 { get; set; }
+        public HexBinaryValue CodePageSignature0 { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Upper 32 Bits of Code Page Bit Field</para>
@@ -50357,11 +53074,44 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(23, "csb1")]
-        [Index(5)]
-        public HexBinaryValue CodePageSignature1 { get; set; }
+        public HexBinaryValue CodePageSignature1 { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FontSignature>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<FontSignature>()
+                           .AddAttribute(23, "usb0", a => a.UnicodeSignature0, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           })
+                           .AddAttribute(23, "usb1", a => a.UnicodeSignature1, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           })
+                           .AddAttribute(23, "usb2", a => a.UnicodeSignature2, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           })
+                           .AddAttribute(23, "usb3", a => a.UnicodeSignature3, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           })
+                           .AddAttribute(23, "csb0", a => a.CodePageSignature0, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           })
+                           .AddAttribute(23, "csb1", a => a.CodePageSignature1, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                           });
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValuePatternConstraint(4 /*w:csb0*/, @"[0-9a-fA-F]{8}") { Version = FileFormatVersions.Office2010 },
@@ -50390,6 +53140,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EmbedRegularFont>();
+
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipTypeConstraint(2 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font"),
             new RelationshipExistConstraint(2 /*r:id*/)
@@ -50417,6 +53169,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EmbedBoldFont>();
+
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipTypeConstraint(2 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font")
         };
@@ -50443,6 +53197,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EmbedItalicFont>();
+
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipTypeConstraint(2 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font")
         };
@@ -50468,6 +53224,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public EmbedBoldItalicFont() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EmbedBoldItalicFont>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipTypeConstraint(2 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font")
@@ -50500,10 +53258,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(23, "fontKey")]
-        [Index(0)]
-        public StringValue FontKey { get; set; }
+        public StringValue FontKey { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>subsetted</para>
@@ -50512,9 +53267,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "subsetted")]
-        [Index(1)]
-        public OnOffValue Subsetted { get; set; }
+        public OnOffValue Subsetted { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Relationship to Part</para>
@@ -50523,10 +53276,22 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(2)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<FontRelationshipType>()
+                           .AddAttribute(23, "fontKey", a => a.FontKey, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(23, "subsetted", a => a.Subsetted)
+                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
     }
 
     /// <summary>

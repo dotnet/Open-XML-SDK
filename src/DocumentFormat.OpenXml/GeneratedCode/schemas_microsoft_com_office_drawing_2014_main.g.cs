@@ -4,6 +4,7 @@
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
@@ -32,10 +33,18 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
         /// <para>id, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CreationId>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<CreationId>()
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CreationId>(deep);
@@ -61,10 +70,18 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
         /// <para>pred, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: pred</para>
         /// </summary>
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "pred")]
-        [Index(0)]
-        public StringValue Pred { get; set; }
+        public StringValue Pred { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PredecessorDrawingElementReference>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<PredecessorDrawingElementReference>()
+                           .AddAttribute(0, "pred", a => a.Pred, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PredecessorDrawingElementReference>(deep);
@@ -90,19 +107,28 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
         /// <para>st, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: st</para>
         /// </summary>
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "st")]
-        [Index(0)]
-        public StringValue St { get; set; }
+        public StringValue St { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>end, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: end</para>
         /// </summary>
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "end")]
-        [Index(1)]
-        public StringValue End { get; set; }
+        public StringValue End { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConnectableReferences>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ConnectableReferences>()
+                           .AddAttribute(0, "st", a => a.St, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "end", a => a.End, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConnectableReferences>(deep);
@@ -124,6 +150,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RowIdIdentifier>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowIdIdentifier>(deep);
     }
@@ -143,6 +171,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
         public ColIdIdentifier() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColIdIdentifier>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColIdIdentifier>(deep);
@@ -166,9 +196,16 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
         /// <para>val, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public UInt32Value Val { get; set; }
+        public UInt32Value Val { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<OpenXmlIdentifierElement>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
     }
 }

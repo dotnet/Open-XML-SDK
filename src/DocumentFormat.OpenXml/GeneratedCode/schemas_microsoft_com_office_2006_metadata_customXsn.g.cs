@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
@@ -63,6 +64,8 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         public CustomXsn(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXsn>();
 
         /// <summary>
         /// <para>XsnLocation.</para>
@@ -159,6 +162,8 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
             return new StringValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<XsnLocation>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<XsnLocation>(deep);
     }
@@ -191,6 +196,8 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         {
             return new StringValue { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CachedView>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CachedView>(deep);
@@ -225,6 +232,8 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
             return new StringValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OpenByDefault>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OpenByDefault>(deep);
     }
@@ -257,6 +266,8 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         {
             return new StringValue { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Scope>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Scope>(deep);

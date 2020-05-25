@@ -6,6 +6,7 @@ using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Drawing.ChartDrawing;
 using DocumentFormat.OpenXml.Drawing.Charts;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
@@ -68,6 +69,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         public PivotOptions(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotOptions>();
 
         /// <summary>
         /// <para>DropZoneFilter.</para>
@@ -198,6 +201,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SketchOptions>();
+
         /// <summary>
         /// <para>InSketchMode.</para>
         /// <para>Represents the following element tag in the schema: c14:inSketchMode.</para>
@@ -283,6 +288,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<InvertSolidFillFormat>();
+
         /// <summary>
         /// <para>ShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c14:spPr.</para>
@@ -327,11 +334,19 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 101L, MaxInclusive = 148L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public ByteValue Val { get; set; }
+        public ByteValue Val { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Style>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Style>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (101L), MaxInclusive = (148L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Style>(deep);
@@ -416,10 +431,18 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "bwMode")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapeProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ShapeProperties>()
+                           .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         /// <summary>
         /// <para>2D Transform for Individual Objects.</para>
@@ -493,6 +516,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DropZoneFilter>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropZoneFilter>(deep);
     }
@@ -512,6 +537,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         public DropZoneCategories() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DropZoneCategories>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropZoneCategories>(deep);
@@ -533,6 +560,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DropZoneData>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropZoneData>(deep);
     }
@@ -552,6 +581,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         public DropZoneSeries() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DropZoneSeries>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropZoneSeries>(deep);
@@ -573,6 +604,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DropZonesVisible>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropZonesVisible>(deep);
     }
@@ -592,6 +625,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         public InSketchMode() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<InSketchMode>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<InSketchMode>(deep);
@@ -615,9 +650,14 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public BooleanValue Val { get; set; }
+        public BooleanValue Val { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BooleanFalseType>()
+                           .AddAttribute(0, "val", a => a.Val);
+        }
     }
 
     /// <summary>
@@ -640,9 +680,15 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public BooleanValue Val { get; set; }
+        public BooleanValue Val { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowSketchButton>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ShowSketchButton>()
+                           .AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowSketchButton>(deep);

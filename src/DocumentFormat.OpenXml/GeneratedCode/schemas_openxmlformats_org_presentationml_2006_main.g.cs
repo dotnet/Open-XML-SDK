@@ -4,6 +4,7 @@
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Office2010.Drawing;
 using DocumentFormat.OpenXml.Office2010.PowerPoint;
 using DocumentFormat.OpenXml.Office2013.PowerPoint;
@@ -32,6 +33,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlideAll>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideAll>(deep);
     }
@@ -51,6 +54,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public PresenterSlideMode() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PresenterSlideMode>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PresenterSlideMode>(deep);
@@ -72,6 +77,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EndSoundAction>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndSoundAction>(deep);
     }
@@ -91,6 +98,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public BuildAsOne() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BuildAsOne>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BuildAsOne>(deep);
@@ -112,6 +121,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlideTarget>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideTarget>(deep);
     }
@@ -131,6 +142,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public BackgroundAnimation() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BackgroundAnimation>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackgroundAnimation>(deep);
@@ -152,6 +165,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CircleTransition>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CircleTransition>(deep);
     }
@@ -171,6 +186,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public DissolveTransition() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DissolveTransition>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DissolveTransition>(deep);
@@ -192,6 +209,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DiamondTransition>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DiamondTransition>(deep);
     }
@@ -211,6 +230,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public NewsflashTransition() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NewsflashTransition>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NewsflashTransition>(deep);
@@ -232,6 +253,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PlusTransition>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PlusTransition>(deep);
     }
@@ -252,6 +275,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RandomTransition>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RandomTransition>(deep);
     }
@@ -271,6 +296,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public WedgeTransition() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WedgeTransition>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WedgeTransition>(deep);
@@ -307,6 +334,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlideRange>();
+
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueLessEqualToAnother(0 /*:st*/, 1 /*:end*/, true)
         };
@@ -333,6 +362,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CharRange>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CharRange>(deep);
     }
@@ -352,6 +383,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public ParagraphIndexRange() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ParagraphIndexRange>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ParagraphIndexRange>(deep);
@@ -375,19 +408,27 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Start</para>
         /// <para>Represents the following attribute in the schema: st</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "st")]
-        [Index(0)]
-        public UInt32Value Start { get; set; }
+        public UInt32Value Start { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>End</para>
         /// <para>Represents the following attribute in the schema: end</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "end")]
-        [Index(1)]
-        public UInt32Value End { get; set; }
+        public UInt32Value End { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<IndexRangeType>()
+                           .AddAttribute(0, "st", a => a.Start, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "end", a => a.End, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
     }
 
     /// <summary>
@@ -410,10 +451,18 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Custom Show Identifier</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public UInt32Value Id { get; set; }
+        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomShowReference>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<CustomShowReference>()
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*:id*/, false, null) { Application = ApplicationType.PowerPoint }
@@ -469,11 +518,19 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Extension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Extension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -506,9 +563,15 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Show Scroll Bar in Window</para>
         /// <para>Represents the following attribute in the schema: showScrollbar</para>
         /// </summary>
-        [SchemaAttr(0, "showScrollbar")]
-        [Index(0)]
-        public BooleanValue ShowScrollbar { get; set; }
+        public BooleanValue ShowScrollbar { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BrowseSlideMode>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BrowseSlideMode>()
+                           .AddAttribute(0, "showScrollbar", a => a.ShowScrollbar);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BrowseSlideMode>(deep);
@@ -534,9 +597,15 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Restart Show</para>
         /// <para>Represents the following attribute in the schema: restart</para>
         /// </summary>
-        [SchemaAttr(0, "restart")]
-        [Index(0)]
-        public UInt32Value Restart { get; set; }
+        public UInt32Value Restart { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<KioskSlideMode>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<KioskSlideMode>()
+                           .AddAttribute(0, "restart", a => a.Restart);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<KioskSlideMode>(deep);
@@ -593,121 +662,140 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Background 1</para>
         /// <para>Represents the following attribute in the schema: bg1</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "bg1")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Background1 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Background1 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Text 1</para>
         /// <para>Represents the following attribute in the schema: tx1</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "tx1")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Text1 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Text1 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Background 2</para>
         /// <para>Represents the following attribute in the schema: bg2</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "bg2")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Background2 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Background2 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Text 2</para>
         /// <para>Represents the following attribute in the schema: tx2</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "tx2")]
-        [Index(3)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Text2 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Text2 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Accent 1</para>
         /// <para>Represents the following attribute in the schema: accent1</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "accent1")]
-        [Index(4)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent1 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent1 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Accent 2</para>
         /// <para>Represents the following attribute in the schema: accent2</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "accent2")]
-        [Index(5)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent2 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent2 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Accent 3</para>
         /// <para>Represents the following attribute in the schema: accent3</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "accent3")]
-        [Index(6)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent3 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent3 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Accent 4</para>
         /// <para>Represents the following attribute in the schema: accent4</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "accent4")]
-        [Index(7)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent4 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent4 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Accent 5</para>
         /// <para>Represents the following attribute in the schema: accent5</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "accent5")]
-        [Index(8)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent5 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent5 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Accent 6</para>
         /// <para>Represents the following attribute in the schema: accent6</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "accent6")]
-        [Index(9)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent6 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent6 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Hyperlink</para>
         /// <para>Represents the following attribute in the schema: hlink</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "hlink")]
-        [Index(10)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Hyperlink { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Hyperlink { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Followed Hyperlink</para>
         /// <para>Represents the following attribute in the schema: folHlink</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "folHlink")]
-        [Index(11)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> FollowedHyperlink { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> FollowedHyperlink { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColorMap>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ColorMap>()
+                           .AddAttribute(0, "bg1", a => a.Background1, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "tx1", a => a.Text1, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "bg2", a => a.Background2, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "tx2", a => a.Text2, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "accent1", a => a.Accent1, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "accent2", a => a.Accent2, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "accent3", a => a.Accent3, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "accent4", a => a.Accent4, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "accent5", a => a.Accent5, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "accent6", a => a.Accent6, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "hlink", a => a.Hyperlink, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "folHlink", a => a.FollowedHyperlink, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         /// <summary>
         /// <para>ExtensionList.</para>
@@ -781,6 +869,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public ColorMapOverride(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColorMapOverride>();
 
         /// <summary>
         /// <para>Master Color Mapping.</para>
@@ -888,9 +978,15 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Shade to Title</para>
         /// <para>Represents the following attribute in the schema: shadeToTitle</para>
         /// </summary>
-        [SchemaAttr(0, "shadeToTitle")]
-        [Index(0)]
-        public BooleanValue ShadeToTitle { get; set; }
+        public BooleanValue ShadeToTitle { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BackgroundProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BackgroundProperties>()
+                           .AddAttribute(0, "shadeToTitle", a => a.ShadeToTitle);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -983,10 +1079,18 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Style Matrix Index</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "idx")]
-        [Index(0)]
-        public UInt32Value Index { get; set; }
+        public UInt32Value Index { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BackgroundStyleReference>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BackgroundStyleReference>()
+                           .AddAttribute(0, "idx", a => a.Index, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <summary>
         /// <para>RGB Color Model - Percentage Variant.</para>
@@ -1135,6 +1239,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CommentAuthorList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommentAuthor), 0, 0)
@@ -1223,6 +1329,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public CommentList(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CommentList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1321,26 +1429,19 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>spid</para>
         /// <para>Represents the following attribute in the schema: spid</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "spid")]
-        [Index(0)]
-        public StringValue ShapeId { get; set; }
+        public StringValue ShapeId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr(0, "name")]
-        [Index(1)]
-        public StringValue Name { get; set; }
+        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showAsIcon</para>
         /// <para>Represents the following attribute in the schema: showAsIcon</para>
         /// </summary>
-        [SchemaAttr(0, "showAsIcon")]
-        [Index(2)]
-        public BooleanValue ShowAsIcon { get; set; }
+        public BooleanValue ShowAsIcon { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>id</para>
@@ -1349,35 +1450,48 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr(19, "id")]
-        [Index(3)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>imgW</para>
         /// <para>Represents the following attribute in the schema: imgW</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L)]
-        [SchemaAttr(0, "imgW")]
-        [Index(4)]
-        public Int32Value ImageWidth { get; set; }
+        public Int32Value ImageWidth { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>imgH</para>
         /// <para>Represents the following attribute in the schema: imgH</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L)]
-        [SchemaAttr(0, "imgH")]
-        [Index(5)]
-        public Int32Value ImageHeight { get; set; }
+        public Int32Value ImageHeight { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>progId</para>
         /// <para>Represents the following attribute in the schema: progId</para>
         /// </summary>
-        [SchemaAttr(0, "progId")]
-        [Index(6)]
-        public StringValue ProgId { get; set; }
+        public StringValue ProgId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OleObject>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<OleObject>()
+                           .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "name", a => a.Name)
+                           .AddAttribute(0, "showAsIcon", a => a.ShowAsIcon)
+                           .AddAttribute(19, "id", a => a.Id)
+                           .AddAttribute(0, "imgW", a => a.ImageWidth, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+                           })
+                           .AddAttribute(0, "imgH", a => a.ImageHeight, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+                           })
+                           .AddAttribute(0, "progId", a => a.ProgId);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipExistConstraint(3 /*r:id*/)
@@ -1478,98 +1592,95 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>serverZoom</para>
         /// <para>Represents the following attribute in the schema: serverZoom</para>
         /// </summary>
-        [SchemaAttr(0, "serverZoom")]
-        [Index(0)]
-        public Int32Value ServerZoom { get; set; }
+        public Int32Value ServerZoom { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>firstSlideNum</para>
         /// <para>Represents the following attribute in the schema: firstSlideNum</para>
         /// </summary>
-        [SchemaAttr(0, "firstSlideNum")]
-        [Index(1)]
-        public Int32Value FirstSlideNum { get; set; }
+        public Int32Value FirstSlideNum { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showSpecialPlsOnTitleSld</para>
         /// <para>Represents the following attribute in the schema: showSpecialPlsOnTitleSld</para>
         /// </summary>
-        [SchemaAttr(0, "showSpecialPlsOnTitleSld")]
-        [Index(2)]
-        public BooleanValue ShowSpecialPlaceholderOnTitleSlide { get; set; }
+        public BooleanValue ShowSpecialPlaceholderOnTitleSlide { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>rtl</para>
         /// <para>Represents the following attribute in the schema: rtl</para>
         /// </summary>
-        [SchemaAttr(0, "rtl")]
-        [Index(3)]
-        public BooleanValue RightToLeft { get; set; }
+        public BooleanValue RightToLeft { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>removePersonalInfoOnSave</para>
         /// <para>Represents the following attribute in the schema: removePersonalInfoOnSave</para>
         /// </summary>
-        [SchemaAttr(0, "removePersonalInfoOnSave")]
-        [Index(4)]
-        public BooleanValue RemovePersonalInfoOnSave { get; set; }
+        public BooleanValue RemovePersonalInfoOnSave { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>compatMode</para>
         /// <para>Represents the following attribute in the schema: compatMode</para>
         /// </summary>
-        [SchemaAttr(0, "compatMode")]
-        [Index(5)]
-        public BooleanValue CompatibilityMode { get; set; }
+        public BooleanValue CompatibilityMode { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>strictFirstAndLastChars</para>
         /// <para>Represents the following attribute in the schema: strictFirstAndLastChars</para>
         /// </summary>
-        [SchemaAttr(0, "strictFirstAndLastChars")]
-        [Index(6)]
-        public BooleanValue StrictFirstAndLastChars { get; set; }
+        public BooleanValue StrictFirstAndLastChars { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>embedTrueTypeFonts</para>
         /// <para>Represents the following attribute in the schema: embedTrueTypeFonts</para>
         /// </summary>
-        [SchemaAttr(0, "embedTrueTypeFonts")]
-        [Index(7)]
-        public BooleanValue EmbedTrueTypeFonts { get; set; }
+        public BooleanValue EmbedTrueTypeFonts { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>saveSubsetFonts</para>
         /// <para>Represents the following attribute in the schema: saveSubsetFonts</para>
         /// </summary>
-        [SchemaAttr(0, "saveSubsetFonts")]
-        [Index(8)]
-        public BooleanValue SaveSubsetFonts { get; set; }
+        public BooleanValue SaveSubsetFonts { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>autoCompressPictures</para>
         /// <para>Represents the following attribute in the schema: autoCompressPictures</para>
         /// </summary>
-        [SchemaAttr(0, "autoCompressPictures")]
-        [Index(9)]
-        public BooleanValue AutoCompressPictures { get; set; }
+        public BooleanValue AutoCompressPictures { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>bookmarkIdSeed</para>
         /// <para>Represents the following attribute in the schema: bookmarkIdSeed</para>
         /// </summary>
-        [NumberValidator(MaxExclusive = 2147483648L, MinInclusive = 1L)]
-        [SchemaAttr(0, "bookmarkIdSeed")]
-        [Index(10)]
-        public UInt32Value BookmarkIdSeed { get; set; }
+        public UInt32Value BookmarkIdSeed { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>conformance</para>
         /// <para>Represents the following attribute in the schema: conformance</para>
         /// </summary>
-        [SchemaAttr(0, "conformance")]
-        [Index(11)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.ConformanceClassValues> Conformance { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.ConformanceClassValues> Conformance { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.ConformanceClassValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Presentation>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Presentation>()
+                           .AddAttribute(0, "serverZoom", a => a.ServerZoom)
+                           .AddAttribute(0, "firstSlideNum", a => a.FirstSlideNum)
+                           .AddAttribute(0, "showSpecialPlsOnTitleSld", a => a.ShowSpecialPlaceholderOnTitleSlide)
+                           .AddAttribute(0, "rtl", a => a.RightToLeft)
+                           .AddAttribute(0, "removePersonalInfoOnSave", a => a.RemovePersonalInfoOnSave)
+                           .AddAttribute(0, "compatMode", a => a.CompatibilityMode)
+                           .AddAttribute(0, "strictFirstAndLastChars", a => a.StrictFirstAndLastChars)
+                           .AddAttribute(0, "embedTrueTypeFonts", a => a.EmbedTrueTypeFonts)
+                           .AddAttribute(0, "saveSubsetFonts", a => a.SaveSubsetFonts)
+                           .AddAttribute(0, "autoCompressPictures", a => a.AutoCompressPictures)
+                           .AddAttribute(0, "bookmarkIdSeed", a => a.BookmarkIdSeed, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (2147483648L), MinInclusive = (1L) });
+                           })
+                           .AddAttribute(0, "conformance", a => a.Conformance);
+        }
 
         /// <summary>
         /// <para>SlideMasterIdList.</para>
@@ -1871,6 +1982,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PresentationProperties>();
+
         /// <summary>
         /// <para>HTML Publishing Properties.</para>
         /// <para>Represents the following element tag in the schema: p:htmlPubPr.</para>
@@ -2055,25 +2168,29 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Show Master Shapes</para>
         /// <para>Represents the following attribute in the schema: showMasterSp</para>
         /// </summary>
-        [SchemaAttr(0, "showMasterSp")]
-        [Index(0)]
-        public BooleanValue ShowMasterShapes { get; set; }
+        public BooleanValue ShowMasterShapes { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Show Master Placeholder Animations</para>
         /// <para>Represents the following attribute in the schema: showMasterPhAnim</para>
         /// </summary>
-        [SchemaAttr(0, "showMasterPhAnim")]
-        [Index(1)]
-        public BooleanValue ShowMasterPlaceholderAnimations { get; set; }
+        public BooleanValue ShowMasterPlaceholderAnimations { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Show Slide in Slide Show</para>
         /// <para>Represents the following attribute in the schema: show</para>
         /// </summary>
-        [SchemaAttr(0, "show")]
-        [Index(2)]
-        public BooleanValue Show { get; set; }
+        public BooleanValue Show { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Slide>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Slide>()
+                           .AddAttribute(0, "showMasterSp", a => a.ShowMasterShapes)
+                           .AddAttribute(0, "showMasterPhAnim", a => a.ShowMasterPlaceholderAnimations)
+                           .AddAttribute(0, "show", a => a.Show);
+        }
 
         /// <summary>
         /// <para>Common slide data for slides.</para>
@@ -2253,50 +2370,53 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Show Master Shapes</para>
         /// <para>Represents the following attribute in the schema: showMasterSp</para>
         /// </summary>
-        [SchemaAttr(0, "showMasterSp")]
-        [Index(0)]
-        public BooleanValue ShowMasterShapes { get; set; }
+        public BooleanValue ShowMasterShapes { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Show Master Placeholder Animations</para>
         /// <para>Represents the following attribute in the schema: showMasterPhAnim</para>
         /// </summary>
-        [SchemaAttr(0, "showMasterPhAnim")]
-        [Index(1)]
-        public BooleanValue ShowMasterPlaceholderAnimations { get; set; }
+        public BooleanValue ShowMasterPlaceholderAnimations { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>matchingName</para>
         /// <para>Represents the following attribute in the schema: matchingName</para>
         /// </summary>
-        [SchemaAttr(0, "matchingName")]
-        [Index(2)]
-        public StringValue MatchingName { get; set; }
+        public StringValue MatchingName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "type")]
-        [Index(3)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.SlideLayoutValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.SlideLayoutValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.SlideLayoutValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>preserve</para>
         /// <para>Represents the following attribute in the schema: preserve</para>
         /// </summary>
-        [SchemaAttr(0, "preserve")]
-        [Index(4)]
-        public BooleanValue Preserve { get; set; }
+        public BooleanValue Preserve { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>userDrawn</para>
         /// <para>Represents the following attribute in the schema: userDrawn</para>
         /// </summary>
-        [SchemaAttr(0, "userDrawn")]
-        [Index(5)]
-        public BooleanValue UserDrawn { get; set; }
+        public BooleanValue UserDrawn { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlideLayout>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SlideLayout>()
+                           .AddAttribute(0, "showMasterSp", a => a.ShowMasterShapes)
+                           .AddAttribute(0, "showMasterPhAnim", a => a.ShowMasterPlaceholderAnimations)
+                           .AddAttribute(0, "matchingName", a => a.MatchingName)
+                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "preserve", a => a.Preserve)
+                           .AddAttribute(0, "userDrawn", a => a.UserDrawn);
+        }
 
         /// <summary>
         /// <para>CommonSlideData.</para>
@@ -2494,9 +2614,15 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>preserve</para>
         /// <para>Represents the following attribute in the schema: preserve</para>
         /// </summary>
-        [SchemaAttr(0, "preserve")]
-        [Index(0)]
-        public BooleanValue Preserve { get; set; }
+        public BooleanValue Preserve { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlideMaster>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SlideMaster>()
+                           .AddAttribute(0, "preserve", a => a.Preserve);
+        }
 
         /// <summary>
         /// <para>CommonSlideData.</para>
@@ -2710,6 +2836,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HandoutMaster>();
+
         /// <summary>
         /// <para>CommonSlideData.</para>
         /// <para>Represents the following element tag in the schema: p:cSld.</para>
@@ -2867,6 +2995,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public NotesMaster(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NotesMaster>();
 
         /// <summary>
         /// <para>CommonSlideData.</para>
@@ -3040,17 +3170,22 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Show Master Shapes</para>
         /// <para>Represents the following attribute in the schema: showMasterSp</para>
         /// </summary>
-        [SchemaAttr(0, "showMasterSp")]
-        [Index(0)]
-        public BooleanValue ShowMasterShapes { get; set; }
+        public BooleanValue ShowMasterShapes { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Show Master Placeholder Animations</para>
         /// <para>Represents the following attribute in the schema: showMasterPhAnim</para>
         /// </summary>
-        [SchemaAttr(0, "showMasterPhAnim")]
-        [Index(1)]
-        public BooleanValue ShowMasterPlaceholderAnimations { get; set; }
+        public BooleanValue ShowMasterPlaceholderAnimations { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NotesSlide>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<NotesSlide>()
+                           .AddAttribute(0, "showMasterSp", a => a.ShowMasterShapes)
+                           .AddAttribute(0, "showMasterPhAnim", a => a.ShowMasterPlaceholderAnimations);
+        }
 
         /// <summary>
         /// <para>Common slide data for notes slides.</para>
@@ -3192,28 +3327,38 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Server's Slide File ID</para>
         /// <para>Represents the following attribute in the schema: serverSldId</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "serverSldId")]
-        [Index(0)]
-        public StringValue ServerSlideId { get; set; }
+        public StringValue ServerSlideId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Server's Slide File's modification date/time</para>
         /// <para>Represents the following attribute in the schema: serverSldModifiedTime</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "serverSldModifiedTime")]
-        [Index(1)]
-        public DateTimeValue ServerSlideModifiedTime { get; set; }
+        public DateTimeValue ServerSlideModifiedTime { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Client Slide Insertion date/time</para>
         /// <para>Represents the following attribute in the schema: clientInsertedTime</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "clientInsertedTime")]
-        [Index(2)]
-        public DateTimeValue ClientInsertedTime { get; set; }
+        public DateTimeValue ClientInsertedTime { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlideSyncProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SlideSyncProperties>()
+                           .AddAttribute(0, "serverSldId", a => a.ServerSlideId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "serverSldModifiedTime", a => a.ServerSlideModifiedTime, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "clientInsertedTime", a => a.ClientInsertedTime, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <summary>
         /// <para>ExtensionList.</para>
@@ -3316,6 +3461,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public TagList(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TagList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -3424,18 +3571,25 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Last View</para>
         /// <para>Represents the following attribute in the schema: lastView</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "lastView")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.ViewValues> LastView { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.ViewValues> LastView { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.ViewValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Show Comments</para>
         /// <para>Represents the following attribute in the schema: showComments</para>
         /// </summary>
-        [SchemaAttr(0, "showComments")]
-        [Index(1)]
-        public BooleanValue ShowComments { get; set; }
+        public BooleanValue ShowComments { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ViewProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ViewProperties>()
+                           .AddAttribute(0, "lastView", a => a.LastView, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "showComments", a => a.ShowComments);
+        }
 
         /// <summary>
         /// <para>Normal View Properties.</para>
@@ -3648,10 +3802,7 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <remark>
         /// xmlns:p14=http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(49, "bwMode")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BwMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BwMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>id</para>
@@ -3660,10 +3811,22 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(1)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ContentPart>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ContentPart>()
+                           .AddAttribute(49, "bwMode", a => a.BwMode, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <summary>
         /// <para>NonVisualContentPartProperties.</para>
@@ -3739,6 +3902,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Sound>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Sound>(deep);
     }
@@ -3758,6 +3923,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public SoundTarget() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SoundTarget>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SoundTarget>(deep);
@@ -3784,26 +3951,31 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "embed")]
-        [Index(0)]
-        public StringValue Embed { get; set; }
+        public StringValue Embed { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Sound Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr(0, "name")]
-        [Index(1)]
-        public StringValue Name { get; set; }
+        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Recognized Built-In Sound</para>
         /// <para>Represents the following attribute in the schema: builtIn</para>
         /// </summary>
-        [SchemaAttr(0, "builtIn")]
-        [Index(2)]
-        public BooleanValue BuiltIn { get; set; }
+        public BooleanValue BuiltIn { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<EmbeddedWavAudioFileType>()
+                           .AddAttribute(19, "embed", a => a.Embed, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "name", a => a.Name)
+                           .AddAttribute(0, "builtIn", a => a.BuiltIn);
+        }
     }
 
     /// <summary>
@@ -3857,9 +4029,15 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Loop Sound</para>
         /// <para>Represents the following attribute in the schema: loop</para>
         /// </summary>
-        [SchemaAttr(0, "loop")]
-        [Index(0)]
-        public BooleanValue Loop { get; set; }
+        public BooleanValue Loop { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StartSoundAction>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<StartSoundAction>()
+                           .AddAttribute(0, "loop", a => a.Loop);
+        }
 
         /// <summary>
         /// <para>Sound.</para>
@@ -3905,14 +4083,28 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Time</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007, UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>), Version = FileFormatVersions.Office2007, UnionId = 0)]
-        [StringValidator(InitialVersion = FileFormatVersions.Office2010, UnionId = 1)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>), InitialVersion = FileFormatVersions.Office2010, UnionId = 1)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TimeAbsolute>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TimeAbsolute>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2007), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>)), Version = (FileFormatVersions.Office2007), UnionId = (0) });
+                               });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new StringValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (1) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (1) });
+                               });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TimeAbsolute>(deep);
@@ -3938,11 +4130,19 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public Int32Value Val { get; set; }
+        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TimePercentage>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TimePercentage>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+                           });
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483625, true) { Application = ApplicationType.PowerPoint }
@@ -4008,6 +4208,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public TargetElement(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TargetElement>();
 
         /// <summary>
         /// <para>Slide Target.</para>
@@ -4109,10 +4311,18 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public UInt32Value Val { get; set; }
+        public UInt32Value Val { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TimeNode>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TimeNode>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TimeNode>(deep);
@@ -4138,11 +4348,19 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TriggerRuntimeNodeValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.TriggerRuntimeNodeValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TriggerRuntimeNodeValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RuntimeNodeTrigger>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RuntimeNodeTrigger>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RuntimeNodeTrigger>(deep);
@@ -4195,6 +4413,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public Condition(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Condition>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 1)
         {
@@ -4256,6 +4476,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public EndSync(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EndSync>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 1)
         {
@@ -4323,22 +4545,36 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Trigger Event</para>
         /// <para>Represents the following attribute in the schema: evt</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "evt")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TriggerEventValues> Event { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.TriggerEventValues> Event { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TriggerEventValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Trigger Delay</para>
         /// <para>Represents the following attribute in the schema: delay</para>
         /// </summary>
-        [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007, UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>), Version = FileFormatVersions.Office2007, UnionId = 0)]
-        [StringValidator(InitialVersion = FileFormatVersions.Office2010, UnionId = 1)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>), InitialVersion = FileFormatVersions.Office2010, UnionId = 1)]
-        [SchemaAttr(0, "delay")]
-        [Index(1)]
-        public StringValue Delay { get; set; }
+        public StringValue Delay { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TimeListConditionalType>()
+                           .AddAttribute(0, "evt", a => a.Event, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "delay", a => a.Delay, aBuilder =>
+                           {
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2007), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>)), Version = (FileFormatVersions.Office2007), UnionId = (0) });
+                               });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new StringValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (1) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (1) });
+                               });
+                           });
+        }
 
         /// <summary>
         /// <para>Target Element Trigger Choice.</para>
@@ -4427,6 +4663,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ParallelTimeNode>();
+
         /// <summary>
         /// <para>Parallel TimeNode.</para>
         /// <para>Represents the following element tag in the schema: p:cTn.</para>
@@ -4506,27 +4744,35 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Concurrent</para>
         /// <para>Represents the following attribute in the schema: concurrent</para>
         /// </summary>
-        [SchemaAttr(0, "concurrent")]
-        [Index(0)]
-        public BooleanValue Concurrent { get; set; }
+        public BooleanValue Concurrent { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Previous Action</para>
         /// <para>Represents the following attribute in the schema: prevAc</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "prevAc")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.PreviousActionValues> PreviousAction { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.PreviousActionValues> PreviousAction { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.PreviousActionValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Next Action</para>
         /// <para>Represents the following attribute in the schema: nextAc</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "nextAc")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.NextActionValues> NextAction { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.NextActionValues> NextAction { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.NextActionValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SequenceTimeNode>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SequenceTimeNode>()
+                           .AddAttribute(0, "concurrent", a => a.Concurrent)
+                           .AddAttribute(0, "prevAc", a => a.PreviousAction, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "nextAc", a => a.NextAction, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         /// <summary>
         /// <para>Common TimeNode Properties.</para>
@@ -4627,6 +4873,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ExclusiveTimeNode>();
+
         /// <summary>
         /// <para>Common TimeNode Properties.</para>
         /// <para>Represents the following element tag in the schema: p:cTn.</para>
@@ -4704,43 +4952,31 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>by</para>
         /// <para>Represents the following attribute in the schema: by</para>
         /// </summary>
-        [SchemaAttr(0, "by")]
-        [Index(0)]
-        public StringValue By { get; set; }
+        public StringValue By { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>from</para>
         /// <para>Represents the following attribute in the schema: from</para>
         /// </summary>
-        [SchemaAttr(0, "from")]
-        [Index(1)]
-        public StringValue From { get; set; }
+        public StringValue From { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>to</para>
         /// <para>Represents the following attribute in the schema: to</para>
         /// </summary>
-        [SchemaAttr(0, "to")]
-        [Index(2)]
-        public StringValue To { get; set; }
+        public StringValue To { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>calcmode</para>
         /// <para>Represents the following attribute in the schema: calcmode</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "calcmode")]
-        [Index(3)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.AnimateBehaviorCalculateModeValues> CalculationMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.AnimateBehaviorCalculateModeValues> CalculationMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.AnimateBehaviorCalculateModeValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>valueType</para>
         /// <para>Represents the following attribute in the schema: valueType</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "valueType")]
-        [Index(4)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.AnimateBehaviorValues> ValueType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.AnimateBehaviorValues> ValueType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.AnimateBehaviorValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>bounceEnd, this property is only available in Office2010, Office2013, Office2016</para>
@@ -4749,11 +4985,30 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <remark>
         /// xmlns:p14=http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(49, "bounceEnd")]
-        [Index(5)]
-        public Int32Value BounceEnd { get; set; }
+        public Int32Value BounceEnd { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Animate>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Animate>()
+                           .AddAttribute(0, "by", a => a.By)
+                           .AddAttribute(0, "from", a => a.From)
+                           .AddAttribute(0, "to", a => a.To)
+                           .AddAttribute(0, "calcmode", a => a.CalculationMode, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "valueType", a => a.ValueType, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(49, "bounceEnd", a => a.BounceEnd, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           });
+        }
 
         /// <summary>
         /// <para>CommonBehavior.</para>
@@ -4850,19 +5105,28 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Color Space</para>
         /// <para>Represents the following attribute in the schema: clrSpc</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "clrSpc")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.AnimateColorSpaceValues> ColorSpace { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.AnimateColorSpaceValues> ColorSpace { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.AnimateColorSpaceValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Direction</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "dir")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.AnimateColorDirectionValues> Direction { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.AnimateColorDirectionValues> Direction { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.AnimateColorDirectionValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AnimateColor>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<AnimateColor>()
+                           .AddAttribute(0, "clrSpc", a => a.ColorSpace, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "dir", a => a.Direction, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         /// <summary>
         /// <para>CommonBehavior.</para>
@@ -4983,26 +5247,32 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Transition</para>
         /// <para>Represents the following attribute in the schema: transition</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "transition")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.AnimateEffectTransitionValues> Transition { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.AnimateEffectTransitionValues> Transition { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.AnimateEffectTransitionValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Filter</para>
         /// <para>Represents the following attribute in the schema: filter</para>
         /// </summary>
-        [SchemaAttr(0, "filter")]
-        [Index(1)]
-        public StringValue Filter { get; set; }
+        public StringValue Filter { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Property List</para>
         /// <para>Represents the following attribute in the schema: prLst</para>
         /// </summary>
-        [SchemaAttr(0, "prLst")]
-        [Index(2)]
-        public StringValue PropertyList { get; set; }
+        public StringValue PropertyList { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AnimateEffect>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<AnimateEffect>()
+                           .AddAttribute(0, "transition", a => a.Transition, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "filter", a => a.Filter)
+                           .AddAttribute(0, "prLst", a => a.PropertyList);
+        }
 
         /// <summary>
         /// <para>CommonBehavior.</para>
@@ -5101,43 +5371,31 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>origin</para>
         /// <para>Represents the following attribute in the schema: origin</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "origin")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.AnimateMotionBehaviorOriginValues> Origin { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.AnimateMotionBehaviorOriginValues> Origin { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.AnimateMotionBehaviorOriginValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>path</para>
         /// <para>Represents the following attribute in the schema: path</para>
         /// </summary>
-        [SchemaAttr(0, "path")]
-        [Index(1)]
-        public StringValue Path { get; set; }
+        public StringValue Path { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>pathEditMode</para>
         /// <para>Represents the following attribute in the schema: pathEditMode</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "pathEditMode")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.AnimateMotionPathEditModeValues> PathEditMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.AnimateMotionPathEditModeValues> PathEditMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.AnimateMotionPathEditModeValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>rAng</para>
         /// <para>Represents the following attribute in the schema: rAng</para>
         /// </summary>
-        [SchemaAttr(0, "rAng")]
-        [Index(3)]
-        public Int32Value RelativeAngle { get; set; }
+        public Int32Value RelativeAngle { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>ptsTypes</para>
         /// <para>Represents the following attribute in the schema: ptsTypes</para>
         /// </summary>
-        [SchemaAttr(0, "ptsTypes")]
-        [Index(4)]
-        public StringValue PointTypes { get; set; }
+        public StringValue PointTypes { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>bounceEnd, this property is only available in Office2010, Office2013, Office2016</para>
@@ -5146,11 +5404,30 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <remark>
         /// xmlns:p14=http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(49, "bounceEnd")]
-        [Index(5)]
-        public Int32Value BounceEnd { get; set; }
+        public Int32Value BounceEnd { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AnimateMotion>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<AnimateMotion>()
+                           .AddAttribute(0, "origin", a => a.Origin, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "path", a => a.Path)
+                           .AddAttribute(0, "pathEditMode", a => a.PathEditMode, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "rAng", a => a.RelativeAngle)
+                           .AddAttribute(0, "ptsTypes", a => a.PointTypes)
+                           .AddAttribute(49, "bounceEnd", a => a.BounceEnd, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           });
+        }
 
         /// <summary>
         /// <para>CommonBehavior.</para>
@@ -5289,25 +5566,19 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>by</para>
         /// <para>Represents the following attribute in the schema: by</para>
         /// </summary>
-        [SchemaAttr(0, "by")]
-        [Index(0)]
-        public Int32Value By { get; set; }
+        public Int32Value By { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>from</para>
         /// <para>Represents the following attribute in the schema: from</para>
         /// </summary>
-        [SchemaAttr(0, "from")]
-        [Index(1)]
-        public Int32Value From { get; set; }
+        public Int32Value From { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>to</para>
         /// <para>Represents the following attribute in the schema: to</para>
         /// </summary>
-        [SchemaAttr(0, "to")]
-        [Index(2)]
-        public Int32Value To { get; set; }
+        public Int32Value To { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>bounceEnd, this property is only available in Office2010, Office2013, Office2016</para>
@@ -5316,11 +5587,22 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <remark>
         /// xmlns:p14=http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(49, "bounceEnd")]
-        [Index(3)]
-        public Int32Value BounceEnd { get; set; }
+        public Int32Value BounceEnd { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AnimateRotation>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<AnimateRotation>()
+                           .AddAttribute(0, "by", a => a.By)
+                           .AddAttribute(0, "from", a => a.From)
+                           .AddAttribute(0, "to", a => a.To)
+                           .AddAttribute(49, "bounceEnd", a => a.BounceEnd, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           });
+        }
 
         /// <summary>
         /// <para>CommonBehavior.</para>
@@ -5411,9 +5693,7 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>zoomContents</para>
         /// <para>Represents the following attribute in the schema: zoomContents</para>
         /// </summary>
-        [SchemaAttr(0, "zoomContents")]
-        [Index(0)]
-        public BooleanValue ZoomContents { get; set; }
+        public BooleanValue ZoomContents { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>bounceEnd, this property is only available in Office2010, Office2013, Office2016</para>
@@ -5422,11 +5702,20 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <remark>
         /// xmlns:p14=http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(49, "bounceEnd")]
-        [Index(1)]
-        public Int32Value BounceEnd { get; set; }
+        public Int32Value BounceEnd { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AnimateScale>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<AnimateScale>()
+                           .AddAttribute(0, "zoomContents", a => a.ZoomContents)
+                           .AddAttribute(49, "bounceEnd", a => a.BounceEnd, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           });
+        }
 
         /// <summary>
         /// <para>CommonBehavior.</para>
@@ -5545,18 +5834,25 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Command Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "type")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.CommandValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.CommandValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.CommandValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Command</para>
         /// <para>Represents the following attribute in the schema: cmd</para>
         /// </summary>
-        [SchemaAttr(0, "cmd")]
-        [Index(1)]
-        public StringValue CommandName { get; set; }
+        public StringValue CommandName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Command>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Command>()
+                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "cmd", a => a.CommandName);
+        }
 
         /// <summary>
         /// <para>CommonBehavior.</para>
@@ -5630,6 +5926,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public SetBehavior(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SetBehavior>();
 
         /// <summary>
         /// <para>Common Behavior.</para>
@@ -5720,9 +6018,15 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Is Narration</para>
         /// <para>Represents the following attribute in the schema: isNarration</para>
         /// </summary>
-        [SchemaAttr(0, "isNarration")]
-        [Index(0)]
-        public BooleanValue IsNarration { get; set; }
+        public BooleanValue IsNarration { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Audio>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Audio>()
+                           .AddAttribute(0, "isNarration", a => a.IsNarration);
+        }
 
         /// <summary>
         /// <para>Common Media Node Properties.</para>
@@ -5799,9 +6103,15 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Full Screen</para>
         /// <para>Represents the following attribute in the schema: fullScrn</para>
         /// </summary>
-        [SchemaAttr(0, "fullScrn")]
-        [Index(0)]
-        public BooleanValue FullScreen { get; set; }
+        public BooleanValue FullScreen { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Video>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Video>()
+                           .AddAttribute(0, "fullScrn", a => a.FullScreen);
+        }
 
         /// <summary>
         /// <para>Common Media Node Properties.</para>
@@ -5888,193 +6198,139 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public UInt32Value Id { get; set; }
+        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>presetID</para>
         /// <para>Represents the following attribute in the schema: presetID</para>
         /// </summary>
-        [SchemaAttr(0, "presetID")]
-        [Index(1)]
-        public Int32Value PresetId { get; set; }
+        public Int32Value PresetId { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>presetClass</para>
         /// <para>Represents the following attribute in the schema: presetClass</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "presetClass")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TimeNodePresetClassValues> PresetClass { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.TimeNodePresetClassValues> PresetClass { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TimeNodePresetClassValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>presetSubtype</para>
         /// <para>Represents the following attribute in the schema: presetSubtype</para>
         /// </summary>
-        [SchemaAttr(0, "presetSubtype")]
-        [Index(3)]
-        public Int32Value PresetSubtype { get; set; }
+        public Int32Value PresetSubtype { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>dur</para>
         /// <para>Represents the following attribute in the schema: dur</para>
         /// </summary>
-        [SchemaAttr(0, "dur")]
-        [Index(4)]
-        public StringValue Duration { get; set; }
+        public StringValue Duration { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>repeatCount</para>
         /// <para>Represents the following attribute in the schema: repeatCount</para>
         /// </summary>
-        [SchemaAttr(0, "repeatCount")]
-        [Index(5)]
-        public StringValue RepeatCount { get; set; }
+        public StringValue RepeatCount { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>repeatDur</para>
         /// <para>Represents the following attribute in the schema: repeatDur</para>
         /// </summary>
-        [SchemaAttr(0, "repeatDur")]
-        [Index(6)]
-        public StringValue RepeatDuration { get; set; }
+        public StringValue RepeatDuration { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>spd</para>
         /// <para>Represents the following attribute in the schema: spd</para>
         /// </summary>
-        [SchemaAttr(0, "spd")]
-        [Index(7)]
-        public Int32Value Speed { get; set; }
+        public Int32Value Speed { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>accel</para>
         /// <para>Represents the following attribute in the schema: accel</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "accel")]
-        [Index(8)]
-        public Int32Value Acceleration { get; set; }
+        public Int32Value Acceleration { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>decel</para>
         /// <para>Represents the following attribute in the schema: decel</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "decel")]
-        [Index(9)]
-        public Int32Value Deceleration { get; set; }
+        public Int32Value Deceleration { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>autoRev</para>
         /// <para>Represents the following attribute in the schema: autoRev</para>
         /// </summary>
-        [SchemaAttr(0, "autoRev")]
-        [Index(10)]
-        public BooleanValue AutoReverse { get; set; }
+        public BooleanValue AutoReverse { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>restart</para>
         /// <para>Represents the following attribute in the schema: restart</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "restart")]
-        [Index(11)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TimeNodeRestartValues> Restart { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.TimeNodeRestartValues> Restart { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TimeNodeRestartValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>fill</para>
         /// <para>Represents the following attribute in the schema: fill</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "fill")]
-        [Index(12)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TimeNodeFillValues> Fill { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.TimeNodeFillValues> Fill { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TimeNodeFillValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>syncBehavior</para>
         /// <para>Represents the following attribute in the schema: syncBehavior</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "syncBehavior")]
-        [Index(13)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TimeNodeSyncValues> SyncBehavior { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.TimeNodeSyncValues> SyncBehavior { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TimeNodeSyncValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>tmFilter</para>
         /// <para>Represents the following attribute in the schema: tmFilter</para>
         /// </summary>
-        [SchemaAttr(0, "tmFilter")]
-        [Index(14)]
-        public StringValue TimeFilter { get; set; }
+        public StringValue TimeFilter { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>evtFilter</para>
         /// <para>Represents the following attribute in the schema: evtFilter</para>
         /// </summary>
-        [SchemaAttr(0, "evtFilter")]
-        [Index(15)]
-        public StringValue EventFilter { get; set; }
+        public StringValue EventFilter { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>display</para>
         /// <para>Represents the following attribute in the schema: display</para>
         /// </summary>
-        [SchemaAttr(0, "display")]
-        [Index(16)]
-        public BooleanValue Display { get; set; }
+        public BooleanValue Display { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>masterRel</para>
         /// <para>Represents the following attribute in the schema: masterRel</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "masterRel")]
-        [Index(17)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TimeNodeMasterRelationValues> MasterRelation { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.TimeNodeMasterRelationValues> MasterRelation { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TimeNodeMasterRelationValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>bldLvl</para>
         /// <para>Represents the following attribute in the schema: bldLvl</para>
         /// </summary>
-        [SchemaAttr(0, "bldLvl")]
-        [Index(18)]
-        public Int32Value BuildLevel { get; set; }
+        public Int32Value BuildLevel { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>grpId</para>
         /// <para>Represents the following attribute in the schema: grpId</para>
         /// </summary>
-        [SchemaAttr(0, "grpId")]
-        [Index(19)]
-        public UInt32Value GroupId { get; set; }
+        public UInt32Value GroupId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>afterEffect</para>
         /// <para>Represents the following attribute in the schema: afterEffect</para>
         /// </summary>
-        [SchemaAttr(0, "afterEffect")]
-        [Index(20)]
-        public BooleanValue AfterEffect { get; set; }
+        public BooleanValue AfterEffect { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>nodeType</para>
         /// <para>Represents the following attribute in the schema: nodeType</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "nodeType")]
-        [Index(21)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TimeNodeValues> NodeType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.TimeNodeValues> NodeType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TimeNodeValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>nodePh</para>
         /// <para>Represents the following attribute in the schema: nodePh</para>
         /// </summary>
-        [SchemaAttr(0, "nodePh")]
-        [Index(22)]
-        public BooleanValue NodePlaceholder { get; set; }
+        public BooleanValue NodePlaceholder { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>presetBounceEnd, this property is only available in Office2010, Office2013, Office2016</para>
@@ -6083,11 +6339,66 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <remark>
         /// xmlns:p14=http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(49, "presetBounceEnd")]
-        [Index(23)]
-        public Int32Value PresetBounceEnd { get; set; }
+        public Int32Value PresetBounceEnd { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CommonTimeNode>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<CommonTimeNode>()
+                           .AddAttribute(0, "id", a => a.Id)
+                           .AddAttribute(0, "presetID", a => a.PresetId)
+                           .AddAttribute(0, "presetClass", a => a.PresetClass, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "presetSubtype", a => a.PresetSubtype)
+                           .AddAttribute(0, "dur", a => a.Duration)
+                           .AddAttribute(0, "repeatCount", a => a.RepeatCount)
+                           .AddAttribute(0, "repeatDur", a => a.RepeatDuration)
+                           .AddAttribute(0, "spd", a => a.Speed)
+                           .AddAttribute(0, "accel", a => a.Acceleration, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "decel", a => a.Deceleration, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "autoRev", a => a.AutoReverse)
+                           .AddAttribute(0, "restart", a => a.Restart, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "fill", a => a.Fill, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "syncBehavior", a => a.SyncBehavior, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "tmFilter", a => a.TimeFilter)
+                           .AddAttribute(0, "evtFilter", a => a.EventFilter)
+                           .AddAttribute(0, "display", a => a.Display)
+                           .AddAttribute(0, "masterRel", a => a.MasterRelation, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "bldLvl", a => a.BuildLevel)
+                           .AddAttribute(0, "grpId", a => a.GroupId)
+                           .AddAttribute(0, "afterEffect", a => a.AfterEffect)
+                           .AddAttribute(0, "nodeType", a => a.NodeType, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "nodePh", a => a.NodePlaceholder)
+                           .AddAttribute(49, "presetBounceEnd", a => a.PresetBounceEnd, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           });
+        }
 
         /// <summary>
         /// <para>StartConditionList.</para>
@@ -6235,6 +6546,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PreviousConditionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Condition), 1, 0)
@@ -6291,6 +6604,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public NextConditionList(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NextConditionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -6349,6 +6664,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StartConditionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Condition), 1, 0)
@@ -6405,6 +6722,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public EndConditionList(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EndConditionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -6492,6 +6811,8 @@ namespace DocumentFormat.OpenXml.Presentation
             return new StringValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AttributeName>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AttributeName>(deep);
     }
@@ -6524,6 +6845,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             return new StringValue { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Text>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Text>(deep);
@@ -6576,6 +6899,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AttributeNameList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AttributeName), 1, 0)
@@ -6607,10 +6932,18 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public BooleanValue Val { get; set; }
+        public BooleanValue Val { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BooleanVariantValue>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BooleanVariantValue>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BooleanVariantValue>(deep);
@@ -6636,10 +6969,18 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public Int32Value Val { get; set; }
+        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<IntegerVariantValue>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<IntegerVariantValue>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<IntegerVariantValue>(deep);
@@ -6665,10 +7006,18 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public SingleValue Val { get; set; }
+        public SingleValue Val { get => GetAttribute<SingleValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FloatVariantValue>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<FloatVariantValue>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FloatVariantValue>(deep);
@@ -6694,10 +7043,18 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StringVariantValue>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<StringVariantValue>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StringVariantValue>(deep);
@@ -6753,6 +7110,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public ColorValue(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColorValue>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -6826,6 +7185,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public PenColor(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PenColor>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -7034,19 +7395,29 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Time</para>
         /// <para>Represents the following attribute in the schema: tm</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>), UnionId = 0)]
-        [SchemaAttr(0, "tm")]
-        [Index(0)]
-        public StringValue Time { get; set; }
+        public StringValue Time { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Formula</para>
         /// <para>Represents the following attribute in the schema: fmla</para>
         /// </summary>
-        [SchemaAttr(0, "fmla")]
-        [Index(1)]
-        public StringValue Fomula { get; set; }
+        public StringValue Fomula { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TimeAnimateValue>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TimeAnimateValue>()
+                           .AddAttribute(0, "tm", a => a.Time, aBuilder =>
+                           {
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>)), UnionId = (0) });
+                               });
+                           })
+                           .AddAttribute(0, "fmla", a => a.Fomula);
+        }
 
         /// <summary>
         /// <para>Value.</para>
@@ -7092,31 +7463,41 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Red</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = -100000L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "r")]
-        [Index(0)]
-        public Int32Value Red { get; set; }
+        public Int32Value Red { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Green</para>
         /// <para>Represents the following attribute in the schema: g</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = -100000L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "g")]
-        [Index(1)]
-        public Int32Value Green { get; set; }
+        public Int32Value Green { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Blue</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = -100000L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "b")]
-        [Index(2)]
-        public Int32Value Blue { get; set; }
+        public Int32Value Blue { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RgbColor>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RgbColor>()
+                           .AddAttribute(0, "r", a => a.Red, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "g", a => a.Green, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "b", a => a.Blue, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RgbColor>(deep);
@@ -7142,30 +7523,40 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Hue</para>
         /// <para>Represents the following attribute in the schema: h</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "h")]
-        [Index(0)]
-        public Int32Value Hue { get; set; }
+        public Int32Value Hue { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Saturation</para>
         /// <para>Represents the following attribute in the schema: s</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = -100000L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "s")]
-        [Index(1)]
-        public Int32Value Saturation { get; set; }
+        public Int32Value Saturation { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Lightness</para>
         /// <para>Represents the following attribute in the schema: l</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = -100000L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "l")]
-        [Index(2)]
-        public Int32Value Lightness { get; set; }
+        public Int32Value Lightness { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HslColor>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<HslColor>()
+                           .AddAttribute(0, "h", a => a.Hue, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "s", a => a.Saturation, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "l", a => a.Lightness, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HslColor>(deep);
@@ -7226,69 +7617,76 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Additive</para>
         /// <para>Represents the following attribute in the schema: additive</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "additive")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.BehaviorAdditiveValues> Additive { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.BehaviorAdditiveValues> Additive { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.BehaviorAdditiveValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Accumulate</para>
         /// <para>Represents the following attribute in the schema: accumulate</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "accumulate")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.BehaviorAccumulateValues> Accumulate { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.BehaviorAccumulateValues> Accumulate { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.BehaviorAccumulateValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Transform Type</para>
         /// <para>Represents the following attribute in the schema: xfrmType</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "xfrmType")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.BehaviorTransformValues> TransformType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.BehaviorTransformValues> TransformType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.BehaviorTransformValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>From</para>
         /// <para>Represents the following attribute in the schema: from</para>
         /// </summary>
-        [SchemaAttr(0, "from")]
-        [Index(3)]
-        public StringValue From { get; set; }
+        public StringValue From { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>To</para>
         /// <para>Represents the following attribute in the schema: to</para>
         /// </summary>
-        [SchemaAttr(0, "to")]
-        [Index(4)]
-        public StringValue To { get; set; }
+        public StringValue To { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>By</para>
         /// <para>Represents the following attribute in the schema: by</para>
         /// </summary>
-        [SchemaAttr(0, "by")]
-        [Index(5)]
-        public StringValue By { get; set; }
+        public StringValue By { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Runtime Context</para>
         /// <para>Represents the following attribute in the schema: rctx</para>
         /// </summary>
-        [SchemaAttr(0, "rctx")]
-        [Index(6)]
-        public StringValue RuntimeContext { get; set; }
+        public StringValue RuntimeContext { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Override</para>
         /// <para>Represents the following attribute in the schema: override</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "override")]
-        [Index(7)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.BehaviorOverrideValues> Override { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.BehaviorOverrideValues> Override { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.BehaviorOverrideValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CommonBehavior>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<CommonBehavior>()
+                           .AddAttribute(0, "additive", a => a.Additive, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "accumulate", a => a.Accumulate, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "xfrmType", a => a.TransformType, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "from", a => a.From)
+                           .AddAttribute(0, "to", a => a.To)
+                           .AddAttribute(0, "by", a => a.By)
+                           .AddAttribute(0, "rctx", a => a.RuntimeContext)
+                           .AddAttribute(0, "override", a => a.Override, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         /// <summary>
         /// <para>CommonTimeNode.</para>
@@ -7389,6 +7787,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Progress>();
+
         /// <summary>
         /// <para>Float Value.</para>
         /// <para>Represents the following element tag in the schema: p:fltVal.</para>
@@ -7463,6 +7863,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ToVariantValue>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BooleanVariantValue), 1, 1),
@@ -7527,6 +7929,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public VariantValue(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VariantValue>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -7715,34 +8119,39 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Volume</para>
         /// <para>Represents the following attribute in the schema: vol</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "vol")]
-        [Index(0)]
-        public Int32Value Volume { get; set; }
+        public Int32Value Volume { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Mute</para>
         /// <para>Represents the following attribute in the schema: mute</para>
         /// </summary>
-        [SchemaAttr(0, "mute")]
-        [Index(1)]
-        public BooleanValue Mute { get; set; }
+        public BooleanValue Mute { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Number of Slides</para>
         /// <para>Represents the following attribute in the schema: numSld</para>
         /// </summary>
-        [SchemaAttr(0, "numSld")]
-        [Index(2)]
-        public UInt32Value SlideCount { get; set; }
+        public UInt32Value SlideCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Show When Stopped</para>
         /// <para>Represents the following attribute in the schema: showWhenStopped</para>
         /// </summary>
-        [SchemaAttr(0, "showWhenStopped")]
-        [Index(3)]
-        public BooleanValue ShowWhenStopped { get; set; }
+        public BooleanValue ShowWhenStopped { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CommonMediaNode>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<CommonMediaNode>()
+                           .AddAttribute(0, "vol", a => a.Volume, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "mute", a => a.Mute)
+                           .AddAttribute(0, "numSld", a => a.SlideCount)
+                           .AddAttribute(0, "showWhenStopped", a => a.ShowWhenStopped);
+        }
 
         /// <summary>
         /// <para>Common Time Node Properties.</para>
@@ -7829,6 +8238,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TimeNodeList>();
+
         /// <summary>
         /// <para>ParallelTimeNode.</para>
         /// <para>Represents the following element tag in the schema: p:par.</para>
@@ -7904,9 +8315,15 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Level</para>
         /// <para>Represents the following attribute in the schema: lvl</para>
         /// </summary>
-        [SchemaAttr(0, "lvl")]
-        [Index(0)]
-        public UInt32Value Level { get; set; }
+        public UInt32Value Level { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Template>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Template>()
+                           .AddAttribute(0, "lvl", a => a.Level);
+        }
 
         /// <summary>
         /// <para>Time Node List.</para>
@@ -7986,6 +8403,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TemplateList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Template), 0, 9)
@@ -8045,6 +8464,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public BuildSubElement(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BuildSubElement>();
 
         /// <summary>
         /// <para>Build Diagram.</para>
@@ -8135,83 +8556,95 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Shape ID</para>
         /// <para>Represents the following attribute in the schema: spid</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(Version = FileFormatVersions.Office2007)]
-        [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2010)]
-        [NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2013)]
-        [SchemaAttr(0, "spid")]
-        [Index(0)]
-        public StringValue ShapeId { get; set; }
+        public StringValue ShapeId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Group ID</para>
         /// <para>Represents the following attribute in the schema: grpId</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "grpId")]
-        [Index(1)]
-        public UInt32Value GroupId { get; set; }
+        public UInt32Value GroupId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Expand UI</para>
         /// <para>Represents the following attribute in the schema: uiExpand</para>
         /// </summary>
-        [SchemaAttr(0, "uiExpand")]
-        [Index(2)]
-        public BooleanValue UiExpand { get; set; }
+        public BooleanValue UiExpand { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Build Types</para>
         /// <para>Represents the following attribute in the schema: build</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "build")]
-        [Index(3)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.ParagraphBuildValues> Build { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.ParagraphBuildValues> Build { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.ParagraphBuildValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Build Level</para>
         /// <para>Represents the following attribute in the schema: bldLvl</para>
         /// </summary>
-        [SchemaAttr(0, "bldLvl")]
-        [Index(4)]
-        public UInt32Value BuildLevel { get; set; }
+        public UInt32Value BuildLevel { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Animate Background</para>
         /// <para>Represents the following attribute in the schema: animBg</para>
         /// </summary>
-        [SchemaAttr(0, "animBg")]
-        [Index(5)]
-        public BooleanValue AnimateBackground { get; set; }
+        public BooleanValue AnimateBackground { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Auto Update Animation Background</para>
         /// <para>Represents the following attribute in the schema: autoUpdateAnimBg</para>
         /// </summary>
-        [SchemaAttr(0, "autoUpdateAnimBg")]
-        [Index(6)]
-        public BooleanValue AutoAnimateBackground { get; set; }
+        public BooleanValue AutoAnimateBackground { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Reverse</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        [SchemaAttr(0, "rev")]
-        [Index(7)]
-        public BooleanValue Reverse { get; set; }
+        public BooleanValue Reverse { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Auto Advance Time</para>
         /// <para>Represents the following attribute in the schema: advAuto</para>
         /// </summary>
-        [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007, UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>), Version = FileFormatVersions.Office2007, UnionId = 0)]
-        [StringValidator(InitialVersion = FileFormatVersions.Office2010, UnionId = 1)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>), InitialVersion = FileFormatVersions.Office2010, UnionId = 1)]
-        [SchemaAttr(0, "advAuto")]
-        [Index(8)]
-        public StringValue AutoAdvance { get; set; }
+        public StringValue AutoAdvance { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BuildParagraph>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BuildParagraph>()
+                           .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2010) });
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2013) });
+                           })
+                           .AddAttribute(0, "grpId", a => a.GroupId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "uiExpand", a => a.UiExpand)
+                           .AddAttribute(0, "build", a => a.Build, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "bldLvl", a => a.BuildLevel)
+                           .AddAttribute(0, "animBg", a => a.AnimateBackground)
+                           .AddAttribute(0, "autoUpdateAnimBg", a => a.AutoAnimateBackground)
+                           .AddAttribute(0, "rev", a => a.Reverse)
+                           .AddAttribute(0, "advAuto", a => a.AutoAdvance, aBuilder =>
+                           {
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2007), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>)), Version = (FileFormatVersions.Office2007), UnionId = (0) });
+                               });
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new StringValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (1) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (1) });
+                               });
+                           });
+        }
 
         /// <summary>
         /// <para>Template effects.</para>
@@ -8263,39 +8696,48 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Shape ID</para>
         /// <para>Represents the following attribute in the schema: spid</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(Version = FileFormatVersions.Office2007)]
-        [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2010)]
-        [NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2013)]
-        [SchemaAttr(0, "spid")]
-        [Index(0)]
-        public StringValue ShapeId { get; set; }
+        public StringValue ShapeId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Group ID</para>
         /// <para>Represents the following attribute in the schema: grpId</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "grpId")]
-        [Index(1)]
-        public UInt32Value GroupId { get; set; }
+        public UInt32Value GroupId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Expand UI</para>
         /// <para>Represents the following attribute in the schema: uiExpand</para>
         /// </summary>
-        [SchemaAttr(0, "uiExpand")]
-        [Index(2)]
-        public BooleanValue UiExpand { get; set; }
+        public BooleanValue UiExpand { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Diagram Build Types</para>
         /// <para>Represents the following attribute in the schema: bld</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "bld")]
-        [Index(3)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.DiagramBuildValues> Build { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.DiagramBuildValues> Build { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.DiagramBuildValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BuildDiagram>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BuildDiagram>()
+                           .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2010) });
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2013) });
+                           })
+                           .AddAttribute(0, "grpId", a => a.GroupId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "uiExpand", a => a.UiExpand)
+                           .AddAttribute(0, "bld", a => a.Build, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new ReferenceExistConstraint(1 /*:grpId*/, ".", typeof(DocumentFormat.OpenXml.Presentation.CommonTimeNode), "DocumentFormat.OpenXml.Presentation.CommonTimeNode", 19 /*:grpId*/) { Application = ApplicationType.PowerPoint },
@@ -8328,47 +8770,55 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Shape ID</para>
         /// <para>Represents the following attribute in the schema: spid</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(Version = FileFormatVersions.Office2007)]
-        [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2010)]
-        [NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2013)]
-        [SchemaAttr(0, "spid")]
-        [Index(0)]
-        public StringValue ShapeId { get; set; }
+        public StringValue ShapeId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Group ID</para>
         /// <para>Represents the following attribute in the schema: grpId</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "grpId")]
-        [Index(1)]
-        public UInt32Value GroupId { get; set; }
+        public UInt32Value GroupId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Expand UI</para>
         /// <para>Represents the following attribute in the schema: uiExpand</para>
         /// </summary>
-        [SchemaAttr(0, "uiExpand")]
-        [Index(2)]
-        public BooleanValue UiExpand { get; set; }
+        public BooleanValue UiExpand { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Build</para>
         /// <para>Represents the following attribute in the schema: bld</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "bld")]
-        [Index(3)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.OleChartBuildValues> Build { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.OleChartBuildValues> Build { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.OleChartBuildValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Animate Background</para>
         /// <para>Represents the following attribute in the schema: animBg</para>
         /// </summary>
-        [SchemaAttr(0, "animBg")]
-        [Index(4)]
-        public BooleanValue AnimateBackground { get; set; }
+        public BooleanValue AnimateBackground { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BuildOleChart>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BuildOleChart>()
+                           .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2010) });
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2013) });
+                           })
+                           .AddAttribute(0, "grpId", a => a.GroupId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "uiExpand", a => a.UiExpand)
+                           .AddAttribute(0, "bld", a => a.Build, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "animBg", a => a.AnimateBackground);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new ReferenceExistConstraint(0 /*:spid*/, ".", typeof(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties), "DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties", 0 /*:id*/) { Application = ApplicationType.PowerPoint },
@@ -8434,30 +8884,38 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Shape ID</para>
         /// <para>Represents the following attribute in the schema: spid</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(Version = FileFormatVersions.Office2007)]
-        [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2010)]
-        [NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2013)]
-        [SchemaAttr(0, "spid")]
-        [Index(0)]
-        public StringValue ShapeId { get; set; }
+        public StringValue ShapeId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Group ID</para>
         /// <para>Represents the following attribute in the schema: grpId</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "grpId")]
-        [Index(1)]
-        public UInt32Value GroupId { get; set; }
+        public UInt32Value GroupId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Expand UI</para>
         /// <para>Represents the following attribute in the schema: uiExpand</para>
         /// </summary>
-        [SchemaAttr(0, "uiExpand")]
-        [Index(2)]
-        public BooleanValue UiExpand { get; set; }
+        public BooleanValue UiExpand { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BuildGraphics>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BuildGraphics>()
+                           .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2010) });
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2013) });
+                           })
+                           .AddAttribute(0, "grpId", a => a.GroupId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "uiExpand", a => a.UiExpand);
+        }
 
         /// <summary>
         /// <para>Build As One.</para>
@@ -8557,6 +9015,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BuildList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BuildParagraph), 1, 1),
@@ -8622,9 +9082,15 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Modify</para>
         /// <para>Represents the following attribute in the schema: mod</para>
         /// </summary>
-        [SchemaAttr(0, "mod")]
-        [Index(0)]
-        public BooleanValue Modify { get; set; }
+        public BooleanValue Modify { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ExtensionListWithModification>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ExtensionListWithModification>()
+                           .AddAttribute(0, "mod", a => a.Modify);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -8691,6 +9157,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public ByColor(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ByColor>();
 
         /// <summary>
         /// <para>RGB.</para>
@@ -8781,6 +9249,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FromColor>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1, version: FileFormatVersions.Office2010),
@@ -8847,6 +9317,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public ToColor(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ToColor>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -9021,10 +9493,18 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlideListEntry>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SlideListEntry>()
+                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipExistConstraint(0 /*r:id*/)
@@ -9059,10 +9539,18 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomerData>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<CustomerData>()
+                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomerData>(deep);
@@ -9091,10 +9579,18 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomerDataTags>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<CustomerDataTags>()
+                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomerDataTags>(deep);
@@ -9151,46 +9647,58 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public UInt32Value Id { get; set; }
+        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "name")]
-        [Index(1)]
-        public StringValue Name { get; set; }
+        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>initials</para>
         /// <para>Represents the following attribute in the schema: initials</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "initials")]
-        [Index(2)]
-        public StringValue Initials { get; set; }
+        public StringValue Initials { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>lastIdx</para>
         /// <para>Represents the following attribute in the schema: lastIdx</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "lastIdx")]
-        [Index(3)]
-        public UInt32Value LastIndex { get; set; }
+        public UInt32Value LastIndex { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>clrIdx</para>
         /// <para>Represents the following attribute in the schema: clrIdx</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "clrIdx")]
-        [Index(4)]
-        public UInt32Value ColorIndex { get; set; }
+        public UInt32Value ColorIndex { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CommentAuthor>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<CommentAuthor>()
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "initials", a => a.Initials, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "lastIdx", a => a.LastIndex, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "clrIdx", a => a.ColorIndex, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <summary>
         /// <para>CommentAuthorExtensionList.</para>
@@ -9279,27 +9787,35 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>authorId</para>
         /// <para>Represents the following attribute in the schema: authorId</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "authorId")]
-        [Index(0)]
-        public UInt32Value AuthorId { get; set; }
+        public UInt32Value AuthorId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>dt</para>
         /// <para>Represents the following attribute in the schema: dt</para>
         /// </summary>
-        [SchemaAttr(0, "dt")]
-        [Index(1)]
-        public DateTimeValue DateTime { get; set; }
+        public DateTimeValue DateTime { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idx</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "idx")]
-        [Index(2)]
-        public UInt32Value Index { get; set; }
+        public UInt32Value Index { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Comment>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Comment>()
+                           .AddAttribute(0, "authorId", a => a.AuthorId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "dt", a => a.DateTime)
+                           .AddAttribute(0, "idx", a => a.Index, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <summary>
         /// <para>Position.</para>
@@ -9400,6 +9916,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 1)
@@ -9470,26 +9988,19 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>spid</para>
         /// <para>Represents the following attribute in the schema: spid</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "spid")]
-        [Index(0)]
-        public StringValue ShapeId { get; set; }
+        public StringValue ShapeId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr(0, "name")]
-        [Index(1)]
-        public StringValue Name { get; set; }
+        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showAsIcon</para>
         /// <para>Represents the following attribute in the schema: showAsIcon</para>
         /// </summary>
-        [SchemaAttr(0, "showAsIcon")]
-        [Index(2)]
-        public BooleanValue ShowAsIcon { get; set; }
+        public BooleanValue ShowAsIcon { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>id</para>
@@ -9498,27 +10009,41 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr(19, "id")]
-        [Index(3)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>imgW</para>
         /// <para>Represents the following attribute in the schema: imgW</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L)]
-        [SchemaAttr(0, "imgW")]
-        [Index(4)]
-        public Int32Value ImageWidth { get; set; }
+        public Int32Value ImageWidth { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>imgH</para>
         /// <para>Represents the following attribute in the schema: imgH</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L)]
-        [SchemaAttr(0, "imgH")]
-        [Index(5)]
-        public Int32Value ImageHeight { get; set; }
+        public Int32Value ImageHeight { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Control>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Control>()
+                           .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "name", a => a.Name)
+                           .AddAttribute(0, "showAsIcon", a => a.ShowAsIcon)
+                           .AddAttribute(19, "id", a => a.Id)
+                           .AddAttribute(0, "imgW", a => a.ImageWidth, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+                           })
+                           .AddAttribute(0, "imgH", a => a.ImageHeight, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+                           });
+        }
 
         /// <summary>
         /// <para>ExtensionList.</para>
@@ -9609,11 +10134,7 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Slide Identifier</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MaxExclusive = 2147483648L, MinInclusive = 256L)]
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public UInt32Value Id { get; set; }
+        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Relationship Identifier</para>
@@ -9622,10 +10143,23 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(1)]
-        public StringValue RelationshipId { get; set; }
+        public StringValue RelationshipId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlideId>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SlideId>()
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (2147483648L), MinInclusive = (256L) });
+                           })
+                           .AddAttribute(19, "id", a => a.RelationshipId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <summary>
         /// <para>ExtensionList.</para>
@@ -9709,10 +10243,7 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Slide Master Identifier</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 2147483648L)]
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public UInt32Value Id { get; set; }
+        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Relationship Identifier</para>
@@ -9721,10 +10252,22 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(1)]
-        public StringValue RelationshipId { get; set; }
+        public StringValue RelationshipId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlideMasterId>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SlideMasterId>()
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2147483648L) });
+                           })
+                           .AddAttribute(19, "id", a => a.RelationshipId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <summary>
         /// <para>ExtensionList.</para>
@@ -9811,10 +10354,18 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NotesMasterId>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<NotesMasterId>()
+                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <summary>
         /// <para>ExtensionList.</para>
@@ -9900,10 +10451,18 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HandoutMasterId>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<HandoutMasterId>()
+                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <summary>
         /// <para>ExtensionList.</para>
@@ -9955,34 +10514,39 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Text Typeface</para>
         /// <para>Represents the following attribute in the schema: typeface</para>
         /// </summary>
-        [SchemaAttr(0, "typeface")]
-        [Index(0)]
-        public StringValue Typeface { get; set; }
+        public StringValue Typeface { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Panose Setting</para>
         /// <para>Represents the following attribute in the schema: panose</para>
         /// </summary>
-        [StringValidator(Length = 10L)]
-        [SchemaAttr(0, "panose")]
-        [Index(1)]
-        public HexBinaryValue Panose { get; set; }
+        public HexBinaryValue Panose { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Similar Font Family</para>
         /// <para>Represents the following attribute in the schema: pitchFamily</para>
         /// </summary>
-        [SchemaAttr(0, "pitchFamily")]
-        [Index(2)]
-        public SByteValue PitchFamily { get; set; }
+        public SByteValue PitchFamily { get => GetAttribute<SByteValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Similar Character Set</para>
         /// <para>Represents the following attribute in the schema: charset</para>
         /// </summary>
-        [SchemaAttr(0, "charset")]
-        [Index(3)]
-        public SByteValue CharacterSet { get; set; }
+        public SByteValue CharacterSet { get => GetAttribute<SByteValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Font>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Font>()
+                           .AddAttribute(0, "typeface", a => a.Typeface)
+                           .AddAttribute(0, "panose", a => a.Panose, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (10L) });
+                           })
+                           .AddAttribute(0, "pitchFamily", a => a.PitchFamily)
+                           .AddAttribute(0, "charset", a => a.CharacterSet);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Font>(deep);
@@ -10004,6 +10568,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RegularFont>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RegularFont>(deep);
     }
@@ -10023,6 +10589,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public BoldFont() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BoldFont>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BoldFont>(deep);
@@ -10044,6 +10612,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ItalicFont>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ItalicFont>(deep);
     }
@@ -10063,6 +10633,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public BoldItalicFont() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BoldItalicFont>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BoldItalicFont>(deep);
@@ -10089,10 +10661,17 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<EmbeddedFontDataIdType>()
+                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
     }
 
     /// <summary>
@@ -10149,6 +10728,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public EmbeddedFont(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EmbeddedFont>();
 
         /// <summary>
         /// <para>Embedded Font Name.</para>
@@ -10277,6 +10858,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlideList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideListEntry), 0, 0)
@@ -10341,19 +10924,28 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Custom Show Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "name")]
-        [Index(0)]
-        public StringValue Name { get; set; }
+        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Custom Show ID</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "id")]
-        [Index(1)]
-        public UInt32Value Id { get; set; }
+        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomShow>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<CustomShow>()
+                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <summary>
         /// <para>List of Presentation Slides.</para>
@@ -10448,43 +11040,49 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public UInt32Value Id { get; set; }
+        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "name")]
-        [Index(1)]
-        public StringValue Name { get; set; }
+        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>descr</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
-        [SchemaAttr(0, "descr")]
-        [Index(2)]
-        public StringValue Description { get; set; }
+        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>hidden</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        [SchemaAttr(0, "hidden")]
-        [Index(3)]
-        public BooleanValue Hidden { get; set; }
+        public BooleanValue Hidden { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr(0, "title")]
-        [Index(4)]
-        public StringValue Title { get; set; }
+        public StringValue Title { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualDrawingProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<NonVisualDrawingProperties>()
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "descr", a => a.Description)
+                           .AddAttribute(0, "hidden", a => a.Hidden)
+                           .AddAttribute(0, "title", a => a.Title);
+        }
 
         /// <summary>
         /// <para>HyperlinkOnClick.</para>
@@ -10591,9 +11189,15 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Text Box</para>
         /// <para>Represents the following attribute in the schema: txBox</para>
         /// </summary>
-        [SchemaAttr(0, "txBox")]
-        [Index(0)]
-        public BooleanValue TextBox { get; set; }
+        public BooleanValue TextBox { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualShapeDrawingProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<NonVisualShapeDrawingProperties>()
+                           .AddAttribute(0, "txBox", a => a.TextBox);
+        }
 
         /// <summary>
         /// <para>Shape Locks.</para>
@@ -10698,17 +11302,22 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Is a Photo Album</para>
         /// <para>Represents the following attribute in the schema: isPhoto</para>
         /// </summary>
-        [SchemaAttr(0, "isPhoto")]
-        [Index(0)]
-        public BooleanValue IsPhoto { get; set; }
+        public BooleanValue IsPhoto { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Is User Drawn</para>
         /// <para>Represents the following attribute in the schema: userDrawn</para>
         /// </summary>
-        [SchemaAttr(0, "userDrawn")]
-        [Index(1)]
-        public BooleanValue UserDrawn { get; set; }
+        public BooleanValue UserDrawn { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ApplicationNonVisualDrawingProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ApplicationNonVisualDrawingProperties>()
+                           .AddAttribute(0, "isPhoto", a => a.IsPhoto)
+                           .AddAttribute(0, "userDrawn", a => a.UserDrawn);
+        }
 
         /// <summary>
         /// <para>Placeholder Shape.</para>
@@ -10797,6 +11406,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public NonVisualShapeProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualShapeProperties>();
 
         /// <summary>
         /// <para>Non-Visual Drawing Properties.</para>
@@ -10929,10 +11540,18 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "bwMode")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapeProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ShapeProperties>()
+                           .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         /// <summary>
         /// <para>2D Transform for Individual Objects.</para>
@@ -11042,6 +11661,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public ShapeStyle(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapeStyle>();
 
         /// <summary>
         /// <para>LineReference.</para>
@@ -11160,6 +11781,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextBody>();
+
         /// <summary>
         /// <para>Body Properties.</para>
         /// <para>Represents the following element tag in the schema: a:bodyPr.</para>
@@ -11251,6 +11874,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public NonVisualConnectorShapeDrawingProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualConnectorShapeDrawingProperties>();
 
         /// <summary>
         /// <para>Connection Shape Locks.</para>
@@ -11369,6 +11994,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualConnectionShapeProperties>();
+
         /// <summary>
         /// <para>Non-Visual Drawing Properties.</para>
         /// <para>Represents the following element tag in the schema: p:cNvPr.</para>
@@ -11474,9 +12101,15 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>preferRelativeResize</para>
         /// <para>Represents the following attribute in the schema: preferRelativeResize</para>
         /// </summary>
-        [SchemaAttr(0, "preferRelativeResize")]
-        [Index(0)]
-        public BooleanValue PreferRelativeResize { get; set; }
+        public BooleanValue PreferRelativeResize { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualPictureDrawingProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<NonVisualPictureDrawingProperties>()
+                           .AddAttribute(0, "preferRelativeResize", a => a.PreferRelativeResize);
+        }
 
         /// <summary>
         /// <para>PictureLocks.</para>
@@ -11566,6 +12199,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public NonVisualPictureProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualPictureProperties>();
 
         /// <summary>
         /// <para>NonVisualDrawingProperties.</para>
@@ -11676,17 +12311,22 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>DPI Setting</para>
         /// <para>Represents the following attribute in the schema: dpi</para>
         /// </summary>
-        [SchemaAttr(0, "dpi")]
-        [Index(0)]
-        public UInt32Value Dpi { get; set; }
+        public UInt32Value Dpi { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Rotate With Shape</para>
         /// <para>Represents the following attribute in the schema: rotWithShape</para>
         /// </summary>
-        [SchemaAttr(0, "rotWithShape")]
-        [Index(1)]
-        public BooleanValue RotateWithShape { get; set; }
+        public BooleanValue RotateWithShape { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BlipFill>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BlipFill>()
+                           .AddAttribute(0, "dpi", a => a.Dpi)
+                           .AddAttribute(0, "rotWithShape", a => a.RotateWithShape);
+        }
 
         /// <summary>
         /// <para>Blip.</para>
@@ -11783,6 +12423,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualGraphicFrameDrawingProperties>();
+
         /// <summary>
         /// <para>Graphic Frame Locks.</para>
         /// <para>Represents the following element tag in the schema: a:graphicFrameLocks.</para>
@@ -11871,6 +12513,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public NonVisualGraphicFrameProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualGraphicFrameProperties>();
 
         /// <summary>
         /// <para>Non-Visual Drawing Properties.</para>
@@ -11977,25 +12621,29 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
-        [SchemaAttr(0, "rot")]
-        [Index(0)]
-        public Int32Value Rotation { get; set; }
+        public Int32Value Rotation { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Horizontal Flip</para>
         /// <para>Represents the following attribute in the schema: flipH</para>
         /// </summary>
-        [SchemaAttr(0, "flipH")]
-        [Index(1)]
-        public BooleanValue HorizontalFlip { get; set; }
+        public BooleanValue HorizontalFlip { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Vertical Flip</para>
         /// <para>Represents the following attribute in the schema: flipV</para>
         /// </summary>
-        [SchemaAttr(0, "flipV")]
-        [Index(2)]
-        public BooleanValue VerticalFlip { get; set; }
+        public BooleanValue VerticalFlip { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Transform>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Transform>()
+                           .AddAttribute(0, "rot", a => a.Rotation)
+                           .AddAttribute(0, "flipH", a => a.HorizontalFlip)
+                           .AddAttribute(0, "flipV", a => a.VerticalFlip);
+        }
 
         /// <summary>
         /// <para>Offset.</para>
@@ -12083,6 +12731,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public NonVisualGroupShapeDrawingProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualGroupShapeDrawingProperties>();
 
         /// <summary>
         /// <para>GroupShapeLocks.</para>
@@ -12178,6 +12828,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TitleStyle>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties), 0, 1),
@@ -12254,6 +12906,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public BodyStyle(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BodyStyle>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -12332,6 +12986,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OtherStyle>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties), 0, 1),
@@ -12409,6 +13065,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DefaultTextStyle>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties), 0, 1),
@@ -12485,6 +13143,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public NotesStyle(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NotesStyle>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -12767,10 +13427,7 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ID Tag</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 2147483648L)]
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public UInt32Value Id { get; set; }
+        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>ID Tag</para>
@@ -12779,10 +13436,22 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(1)]
-        public StringValue RelationshipId { get; set; }
+        public StringValue RelationshipId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlideLayoutId>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SlideLayoutId>()
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2147483648L) });
+                           })
+                           .AddAttribute(19, "id", a => a.RelationshipId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <summary>
         /// <para>ExtensionList.</para>
@@ -12874,9 +13543,15 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr(0, "name")]
-        [Index(0)]
-        public StringValue Name { get; set; }
+        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CommonSlideData>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<CommonSlideData>()
+                           .AddAttribute(0, "name", a => a.Name);
+        }
 
         /// <summary>
         /// <para>Slide Background.</para>
@@ -12978,19 +13653,28 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "name")]
-        [Index(0)]
-        public StringValue Name { get; set; }
+        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(1)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Tag>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Tag>()
+                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*:name*/, false, typeof(DocumentFormat.OpenXml.Presentation.TagList)) { Application = ApplicationType.PowerPoint }
@@ -13018,6 +13702,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RestoredLeft>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RestoredLeft>(deep);
     }
@@ -13037,6 +13723,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public RestoredTop() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RestoredTop>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RestoredTop>(deep);
@@ -13060,19 +13748,25 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Normal View Dimension Size</para>
         /// <para>Represents the following attribute in the schema: sz</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "sz")]
-        [Index(0)]
-        public Int32Value Size { get; set; }
+        public Int32Value Size { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Auto Adjust Normal View</para>
         /// <para>Represents the following attribute in the schema: autoAdjust</para>
         /// </summary>
-        [SchemaAttr(0, "autoAdjust")]
-        [Index(1)]
-        public BooleanValue AutoAdjust { get; set; }
+        public BooleanValue AutoAdjust { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<NormalViewPortionType>()
+                           .AddAttribute(0, "sz", a => a.Size, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "autoAdjust", a => a.AutoAdjust);
+        }
     }
 
     /// <summary>
@@ -13123,6 +13817,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public ScaleFactor(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ScaleFactor>();
 
         /// <summary>
         /// <para>Horizontal Ratio.</para>
@@ -13178,6 +13874,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Origin>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Origin>(deep);
     }
@@ -13197,6 +13895,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public Position() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Position>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Position>(deep);
@@ -13220,21 +13920,29 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>X-Axis Coordinate</para>
         /// <para>Represents the following attribute in the schema: x</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = -27273042329600L, MaxInclusive = 27273042316900L)]
-        [SchemaAttr(0, "x")]
-        [Index(0)]
-        public Int64Value X { get; set; }
+        public Int64Value X { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Y-Axis Coordinate</para>
         /// <para>Represents the following attribute in the schema: y</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = -27273042329600L, MaxInclusive = 27273042316900L)]
-        [SchemaAttr(0, "y")]
-        [Index(1)]
-        public Int64Value Y { get; set; }
+        public Int64Value Y { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Point2DType>()
+                           .AddAttribute(0, "x", a => a.X, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                           })
+                           .AddAttribute(0, "y", a => a.Y, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                           });
+        }
     }
 
     /// <summary>
@@ -13290,9 +13998,15 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Variable Scale</para>
         /// <para>Represents the following attribute in the schema: varScale</para>
         /// </summary>
-        [SchemaAttr(0, "varScale")]
-        [Index(0)]
-        public BooleanValue VariableScale { get; set; }
+        public BooleanValue VariableScale { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CommonViewProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<CommonViewProperties>()
+                           .AddAttribute(0, "varScale", a => a.VariableScale);
+        }
 
         /// <summary>
         /// <para>View Scale.</para>
@@ -13355,18 +14069,25 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Collapsed</para>
         /// <para>Represents the following attribute in the schema: collapse</para>
         /// </summary>
-        [SchemaAttr(0, "collapse")]
-        [Index(1)]
-        public BooleanValue Collapse { get; set; }
+        public BooleanValue Collapse { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OutlineViewSlideListEntry>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<OutlineViewSlideListEntry>()
+                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "collapse", a => a.Collapse);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OutlineViewSlideListEntry>(deep);
@@ -13419,6 +14140,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OutlineViewSlideList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.OutlineViewSlideListEntry), 0, 0)
@@ -13450,18 +14173,25 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Guide Orientation</para>
         /// <para>Represents the following attribute in the schema: orient</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "orient")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues> Orientation { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues> Orientation { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Guide Position</para>
         /// <para>Represents the following attribute in the schema: pos</para>
         /// </summary>
-        [SchemaAttr(0, "pos")]
-        [Index(1)]
-        public Int32Value Position { get; set; }
+        public Int32Value Position { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Guide>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Guide>()
+                           .AddAttribute(0, "orient", a => a.Orientation, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "pos", a => a.Position);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Guide>(deep);
@@ -13513,6 +14243,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public GuideList(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GuideList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 0, 1)
         {
@@ -13578,25 +14310,29 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Snap Objects to Grid</para>
         /// <para>Represents the following attribute in the schema: snapToGrid</para>
         /// </summary>
-        [SchemaAttr(0, "snapToGrid")]
-        [Index(0)]
-        public BooleanValue SnapToGrid { get; set; }
+        public BooleanValue SnapToGrid { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Snap Objects to Objects</para>
         /// <para>Represents the following attribute in the schema: snapToObjects</para>
         /// </summary>
-        [SchemaAttr(0, "snapToObjects")]
-        [Index(1)]
-        public BooleanValue SnapToObjects { get; set; }
+        public BooleanValue SnapToObjects { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Show Guides in View</para>
         /// <para>Represents the following attribute in the schema: showGuides</para>
         /// </summary>
-        [SchemaAttr(0, "showGuides")]
-        [Index(2)]
-        public BooleanValue ShowGuides { get; set; }
+        public BooleanValue ShowGuides { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CommonSlideViewProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<CommonSlideViewProperties>()
+                           .AddAttribute(0, "snapToGrid", a => a.SnapToGrid)
+                           .AddAttribute(0, "snapToObjects", a => a.SnapToObjects)
+                           .AddAttribute(0, "showGuides", a => a.ShowGuides);
+        }
 
         /// <summary>
         /// <para>Base properties for Slide View.</para>
@@ -13691,43 +14427,49 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Show Outline Icons in Normal View</para>
         /// <para>Represents the following attribute in the schema: showOutlineIcons</para>
         /// </summary>
-        [SchemaAttr(0, "showOutlineIcons")]
-        [Index(0)]
-        public BooleanValue ShowOutlineIcons { get; set; }
+        public BooleanValue ShowOutlineIcons { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Snap Vertical Splitter</para>
         /// <para>Represents the following attribute in the schema: snapVertSplitter</para>
         /// </summary>
-        [SchemaAttr(0, "snapVertSplitter")]
-        [Index(1)]
-        public BooleanValue SnapVerticalSplitter { get; set; }
+        public BooleanValue SnapVerticalSplitter { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>State of the Vertical Splitter Bar</para>
         /// <para>Represents the following attribute in the schema: vertBarState</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "vertBarState")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.SplitterBarStateValues> VerticalBarState { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.SplitterBarStateValues> VerticalBarState { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.SplitterBarStateValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>State of the Horizontal Splitter Bar</para>
         /// <para>Represents the following attribute in the schema: horzBarState</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "horzBarState")]
-        [Index(3)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.SplitterBarStateValues> HorizontalBarState { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.SplitterBarStateValues> HorizontalBarState { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.SplitterBarStateValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Prefer Single View</para>
         /// <para>Represents the following attribute in the schema: preferSingleView</para>
         /// </summary>
-        [SchemaAttr(0, "preferSingleView")]
-        [Index(4)]
-        public BooleanValue PreferSingleView { get; set; }
+        public BooleanValue PreferSingleView { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NormalViewProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<NormalViewProperties>()
+                           .AddAttribute(0, "showOutlineIcons", a => a.ShowOutlineIcons)
+                           .AddAttribute(0, "snapVertSplitter", a => a.SnapVerticalSplitter)
+                           .AddAttribute(0, "vertBarState", a => a.VerticalBarState, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "horzBarState", a => a.HorizontalBarState, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "preferSingleView", a => a.PreferSingleView);
+        }
 
         /// <summary>
         /// <para>Normal View Restored Left Properties.</para>
@@ -13830,6 +14572,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlideViewProperties>();
+
         /// <summary>
         /// <para>CommonSlideViewProperties.</para>
         /// <para>Represents the following element tag in the schema: p:cSldViewPr.</para>
@@ -13918,6 +14662,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public OutlineViewProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OutlineViewProperties>();
 
         /// <summary>
         /// <para>Common View Properties.</para>
@@ -14020,6 +14766,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NotesTextViewProperties>();
+
         /// <summary>
         /// <para>Base properties for Notes View.</para>
         /// <para>Represents the following element tag in the schema: p:cViewPr.</para>
@@ -14111,9 +14859,15 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Show Formatting</para>
         /// <para>Represents the following attribute in the schema: showFormatting</para>
         /// </summary>
-        [SchemaAttr(0, "showFormatting")]
-        [Index(0)]
-        public BooleanValue ShowFormatting { get; set; }
+        public BooleanValue ShowFormatting { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SorterViewProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SorterViewProperties>()
+                           .AddAttribute(0, "showFormatting", a => a.ShowFormatting);
+        }
 
         /// <summary>
         /// <para>Base properties for Slide Sorter View.</para>
@@ -14202,6 +14956,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NotesViewProperties>();
+
         /// <summary>
         /// <para>Common Slide View Properties.</para>
         /// <para>Represents the following element tag in the schema: p:cSldViewPr.</para>
@@ -14256,6 +15012,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GridSpacing>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GridSpacing>(deep);
     }
@@ -14275,6 +15033,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public NotesSize() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NotesSize>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NotesSize>(deep);
@@ -14298,21 +15058,29 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Extent Length</para>
         /// <para>Represents the following attribute in the schema: cx</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 2147483647L)]
-        [SchemaAttr(0, "cx")]
-        [Index(0)]
-        public Int64Value Cx { get; set; }
+        public Int64Value Cx { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Extent Width</para>
         /// <para>Represents the following attribute in the schema: cy</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 2147483647L)]
-        [SchemaAttr(0, "cy")]
-        [Index(1)]
-        public Int64Value Cy { get; set; }
+        public Int64Value Cy { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<PositiveSize2DType>()
+                           .AddAttribute(0, "cx", a => a.Cx, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+                           })
+                           .AddAttribute(0, "cy", a => a.Cy, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+                           });
+        }
     }
 
     /// <summary>
@@ -14368,11 +15136,19 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlideExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SlideExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14438,11 +15214,19 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CommonSlideDataExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<CommonSlideDataExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14511,11 +15295,19 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowPropertiesExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ShowPropertiesExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14585,6 +15377,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public Picture(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Picture>();
 
         /// <summary>
         /// <para>Non-Visual Properties for a Picture.</para>
@@ -14717,10 +15511,18 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Color Scheme Properties for OLE Object</para>
         /// <para>Represents the following attribute in the schema: followColorScheme</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "followColorScheme")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.OleObjectFollowColorSchemeValues> FollowColorScheme { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.OleObjectFollowColorSchemeValues> FollowColorScheme { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.OleObjectFollowColorSchemeValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OleObjectEmbed>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<OleObjectEmbed>()
+                           .AddAttribute(0, "followColorScheme", a => a.FollowColorScheme, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         /// <summary>
         /// <para>ExtensionList.</para>
@@ -14797,9 +15599,15 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Update Linked OLE Objects Automatically</para>
         /// <para>Represents the following attribute in the schema: updateAutomatic</para>
         /// </summary>
-        [SchemaAttr(0, "updateAutomatic")]
-        [Index(0)]
-        public BooleanValue AutoUpdate { get; set; }
+        public BooleanValue AutoUpdate { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OleObjectLink>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<OleObjectLink>()
+                           .AddAttribute(0, "updateAutomatic", a => a.AutoUpdate);
+        }
 
         /// <summary>
         /// <para>ExtensionList.</para>
@@ -14960,10 +15768,7 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>spd</para>
         /// <para>Represents the following attribute in the schema: spd</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "spd")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSpeedValues> Speed { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSpeedValues> Speed { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSpeedValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>dur, this property is only available in Office2010, Office2013, Office2016</para>
@@ -14972,29 +15777,41 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <remark>
         /// xmlns:p14=http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(49, "dur")]
-        [Index(1)]
-        public StringValue Duration { get; set; }
+        public StringValue Duration { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Specifies whether a mouse click will advance the slide.</para>
         /// <para>Represents the following attribute in the schema: advClick</para>
         /// </summary>
-        [SchemaAttr(0, "advClick")]
-        [Index(2)]
-        public BooleanValue AdvanceOnClick { get; set; }
+        public BooleanValue AdvanceOnClick { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>advTm</para>
         /// <para>Represents the following attribute in the schema: advTm</para>
         /// </summary>
-        [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007)]
-        [StringValidator(Version = FileFormatVersions.Office2010)]
-        [StringValidator(InitialVersion = FileFormatVersions.Office2013)]
-        [SchemaAttr(0, "advTm")]
-        [Index(3)]
-        public StringValue AdvanceAfterTime { get; set; }
+        public StringValue AdvanceAfterTime { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Transition>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Transition>()
+                           .AddAttribute(0, "spd", a => a.Speed, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(49, "dur", a => a.Duration, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(0, "advClick", a => a.AdvanceOnClick)
+                           .AddAttribute(0, "advTm", a => a.AdvanceAfterTime, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Version = (FileFormatVersions.Office2010) });
+                               aBuilder.AddValidator(new StringValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2013) });
+                           });
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(3 /*:advTm*/, true, 0, true, 2147483647, true) { Application = ApplicationType.PowerPoint }
@@ -15109,6 +15926,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Timing>();
+
         /// <summary>
         /// <para>TimeNodeList.</para>
         /// <para>Represents the following element tag in the schema: p:tnLst.</para>
@@ -15208,6 +16027,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlideExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideExtension), 0, 0)
@@ -15272,10 +16093,18 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "bwMode")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Background>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Background>()
+                           .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         /// <summary>
         /// <para>Background Properties.</para>
@@ -15375,6 +16204,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapeTree>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeProperties), 1, 1),
@@ -15450,6 +16281,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public GroupShape(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GroupShape>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -15610,6 +16443,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomerDataList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 0, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomerData), 0, 0),
@@ -15669,6 +16504,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ControlList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Control), 0, 0)
@@ -15726,6 +16563,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public CommonSlideDataExtensionList(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CommonSlideDataExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -15788,6 +16627,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public NonVisualGroupShapeProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualGroupShapeProperties>();
 
         /// <summary>
         /// <para>Non-visual Drawing Properties.</para>
@@ -15912,10 +16753,18 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "bwMode")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GroupShapeProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<GroupShapeProperties>()
+                           .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         /// <summary>
         /// <para>2D Transform for Grouped Objects.</para>
@@ -16022,9 +16871,15 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Use Background Fill</para>
         /// <para>Represents the following attribute in the schema: useBgFill</para>
         /// </summary>
-        [SchemaAttr(0, "useBgFill")]
-        [Index(0)]
-        public BooleanValue UseBackgroundFill { get; set; }
+        public BooleanValue UseBackgroundFill { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Shape>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Shape>()
+                           .AddAttribute(0, "useBgFill", a => a.UseBackgroundFill);
+        }
 
         /// <summary>
         /// <para>Non-Visual Properties for a Shape.</para>
@@ -16159,6 +17014,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GraphicFrame>();
+
         /// <summary>
         /// <para>Non-Visual Properties for a Graphic Frame.</para>
         /// <para>Represents the following element tag in the schema: p:nvGraphicFramePr.</para>
@@ -16278,6 +17135,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConnectionShape>();
+
         /// <summary>
         /// <para>Non-Visual Properties for a Connection Shape.</para>
         /// <para>Represents the following element tag in the schema: p:nvCxnSpPr.</para>
@@ -16391,6 +17250,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowPropertiesExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShowPropertiesExtension), 0, 0)
@@ -16461,13 +17322,21 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Shape ID</para>
         /// <para>Represents the following attribute in the schema: spid</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(Version = FileFormatVersions.Office2007)]
-        [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2010)]
-        [NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2013)]
-        [SchemaAttr(0, "spid")]
-        [Index(0)]
-        public StringValue ShapeId { get; set; }
+        public StringValue ShapeId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapeTarget>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ShapeTarget>()
+                           .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2010) });
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2013) });
+                           });
+        }
 
         /// <summary>
         /// <para>Background.</para>
@@ -16565,6 +17434,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<InkTarget>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<InkTarget>(deep);
     }
@@ -16584,6 +17455,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public SubShape() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SubShape>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SubShape>(deep);
@@ -16607,11 +17480,18 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Shape ID</para>
         /// <para>Represents the following attribute in the schema: spid</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "spid")]
-        [Index(0)]
-        public StringValue ShapeId { get; set; }
+        public StringValue ShapeId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TimeListSubShapeIdType>()
+                           .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
     }
 
     /// <summary>
@@ -16665,11 +17545,19 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CommentAuthorExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<CommentAuthorExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -16734,11 +17622,19 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CommentExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<CommentExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -16803,11 +17699,19 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlideLayoutExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SlideLayoutExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -16872,11 +17776,19 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlideMasterExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SlideMasterExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -16941,11 +17853,19 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HandoutMasterExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<HandoutMasterExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -17010,11 +17930,19 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NotesMasterExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<NotesMasterExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -17079,44 +18007,52 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Placeholder Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "type")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.PlaceholderValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.PlaceholderValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.PlaceholderValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Placeholder Orientation</para>
         /// <para>Represents the following attribute in the schema: orient</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "orient")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues> Orientation { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues> Orientation { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Placeholder Size</para>
         /// <para>Represents the following attribute in the schema: sz</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "sz")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.PlaceholderSizeValues> Size { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.PlaceholderSizeValues> Size { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.PlaceholderSizeValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Placeholder Index</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        [SchemaAttr(0, "idx")]
-        [Index(3)]
-        public UInt32Value Index { get; set; }
+        public UInt32Value Index { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Placeholder has custom prompt</para>
         /// <para>Represents the following attribute in the schema: hasCustomPrompt</para>
         /// </summary>
-        [SchemaAttr(0, "hasCustomPrompt")]
-        [Index(4)]
-        public BooleanValue HasCustomPrompt { get; set; }
+        public BooleanValue HasCustomPrompt { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PlaceholderShape>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<PlaceholderShape>()
+                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "orient", a => a.Orientation, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "sz", a => a.Size, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "idx", a => a.Index)
+                           .AddAttribute(0, "hasCustomPrompt", a => a.HasCustomPrompt);
+        }
 
         /// <summary>
         /// <para>ExtensionListWithModification.</para>
@@ -17189,6 +18125,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ApplicationNonVisualDrawingPropertiesExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtension), 0, 0)
@@ -17253,11 +18191,19 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ApplicationNonVisualDrawingPropertiesExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ApplicationNonVisualDrawingPropertiesExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -17325,18 +18271,25 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Iterate Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "type")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.IterateValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.IterateValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.IterateValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Backwards</para>
         /// <para>Represents the following attribute in the schema: backwards</para>
         /// </summary>
-        [SchemaAttr(0, "backwards")]
-        [Index(1)]
-        public BooleanValue Backwards { get; set; }
+        public BooleanValue Backwards { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Iterate>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Iterate>()
+                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "backwards", a => a.Backwards);
+        }
 
         /// <summary>
         /// <para>Time Absolute.</para>
@@ -17434,6 +18387,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChildTimeNodeList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ParallelTimeNode), 1, 1),
@@ -17514,6 +18469,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public SubTimeNodeList(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SubTimeNodeList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
@@ -17655,6 +18612,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TimeAnimateValueList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimeAnimateValue), 0, 0)
@@ -17682,6 +18641,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ByPosition>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ByPosition>(deep);
     }
@@ -17701,6 +18662,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public FromPosition() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FromPosition>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FromPosition>(deep);
@@ -17722,6 +18685,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ToPosition>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ToPosition>(deep);
     }
@@ -17741,6 +18706,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public RotationCenter() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RotationCenter>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RotationCenter>(deep);
@@ -17764,19 +18731,27 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>X coordinate</para>
         /// <para>Represents the following attribute in the schema: x</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "x")]
-        [Index(0)]
-        public Int32Value X { get; set; }
+        public Int32Value X { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Y coordinate</para>
         /// <para>Represents the following attribute in the schema: y</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "y")]
-        [Index(1)]
-        public Int32Value Y { get; set; }
+        public Int32Value Y { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TimeListType>()
+                           .AddAttribute(0, "x", a => a.X, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "y", a => a.Y, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
     }
 
     /// <summary>
@@ -17825,6 +18800,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public CommentAuthorExtensionList(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CommentAuthorExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -17884,6 +18861,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CommentExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommentExtension), 0, 0)
@@ -17942,6 +18921,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlideMasterIdList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideMasterId), 0, 0)
@@ -17999,6 +18980,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public NotesMasterIdList(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NotesMasterIdList>();
 
         /// <summary>
         /// <para>Notes Master ID.</para>
@@ -18071,6 +19054,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HandoutMasterIdList>();
+
         /// <summary>
         /// <para>Handout Master ID.</para>
         /// <para>Represents the following element tag in the schema: p:handoutMasterId.</para>
@@ -18142,6 +19127,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlideIdList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideId), 0, 0)
@@ -18173,30 +19160,40 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Extent Length</para>
         /// <para>Represents the following attribute in the schema: cx</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 914400L, MaxInclusive = 51206400L)]
-        [SchemaAttr(0, "cx")]
-        [Index(0)]
-        public Int32Value Cx { get; set; }
+        public Int32Value Cx { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Extent Width</para>
         /// <para>Represents the following attribute in the schema: cy</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 914400L, MaxInclusive = 51206400L)]
-        [SchemaAttr(0, "cy")]
-        [Index(1)]
-        public Int32Value Cy { get; set; }
+        public Int32Value Cy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Type of Size</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "type")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.SlideSizeValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.SlideSizeValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.SlideSizeValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlideSize>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SlideSize>()
+                           .AddAttribute(0, "cx", a => a.Cx, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (914400L), MaxInclusive = (51206400L) });
+                           })
+                           .AddAttribute(0, "cy", a => a.Cy, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (914400L), MaxInclusive = (51206400L) });
+                           })
+                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideSize>(deep);
@@ -18248,6 +19245,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public EmbeddedFontList(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EmbeddedFontList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -18306,6 +19305,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public CustomShowList(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomShowList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -18369,35 +19370,42 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Black and White</para>
         /// <para>Represents the following attribute in the schema: bw</para>
         /// </summary>
-        [SchemaAttr(0, "bw")]
-        [Index(0)]
-        public BooleanValue BlackWhite { get; set; }
+        public BooleanValue BlackWhite { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Show/Hide Captions</para>
         /// <para>Represents the following attribute in the schema: showCaptions</para>
         /// </summary>
-        [SchemaAttr(0, "showCaptions")]
-        [Index(1)]
-        public BooleanValue ShowCaptions { get; set; }
+        public BooleanValue ShowCaptions { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Photo Album Layout</para>
         /// <para>Represents the following attribute in the schema: layout</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "layout")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.PhotoAlbumLayoutValues> Layout { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.PhotoAlbumLayoutValues> Layout { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.PhotoAlbumLayoutValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Frame Type</para>
         /// <para>Represents the following attribute in the schema: frame</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "frame")]
-        [Index(3)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.PhotoAlbumFrameShapeValues> Frame { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.PhotoAlbumFrameShapeValues> Frame { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.PhotoAlbumFrameShapeValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PhotoAlbum>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<PhotoAlbum>()
+                           .AddAttribute(0, "bw", a => a.BlackWhite)
+                           .AddAttribute(0, "showCaptions", a => a.ShowCaptions)
+                           .AddAttribute(0, "layout", a => a.Layout, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "frame", a => a.Frame, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         /// <summary>
         /// <para>ExtensionList.</para>
@@ -18443,27 +19451,35 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Language</para>
         /// <para>Represents the following attribute in the schema: lang</para>
         /// </summary>
-        [SchemaAttr(0, "lang")]
-        [Index(0)]
-        public StringValue Language { get; set; }
+        public StringValue Language { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Invalid Kinsoku Start Characters</para>
         /// <para>Represents the following attribute in the schema: invalStChars</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "invalStChars")]
-        [Index(1)]
-        public StringValue InvalidStartChars { get; set; }
+        public StringValue InvalidStartChars { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Invalid Kinsoku End Characters</para>
         /// <para>Represents the following attribute in the schema: invalEndChars</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "invalEndChars")]
-        [Index(2)]
-        public StringValue InvalidEndChars { get; set; }
+        public StringValue InvalidEndChars { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Kinsoku>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Kinsoku>()
+                           .AddAttribute(0, "lang", a => a.Language)
+                           .AddAttribute(0, "invalStChars", a => a.InvalidStartChars, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "invalEndChars", a => a.InvalidEndChars, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Kinsoku>(deep);
@@ -18489,147 +19505,160 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Cryptographic Provider Type</para>
         /// <para>Represents the following attribute in the schema: cryptProviderType</para>
         /// </summary>
-        [RequiredValidator(Version = FileFormatVersions.Office2007)]
-        [RequiredValidator(IsRequired = false, InitialVersion = FileFormatVersions.Office2010)]
-        [SchemaAttr(0, "cryptProviderType")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.CryptProviderValues> CryptographicProviderType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.CryptProviderValues> CryptographicProviderType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.CryptProviderValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Cryptographic Algorithm Class</para>
         /// <para>Represents the following attribute in the schema: cryptAlgorithmClass</para>
         /// </summary>
-        [RequiredValidator(Version = FileFormatVersions.Office2007)]
-        [RequiredValidator(IsRequired = false, InitialVersion = FileFormatVersions.Office2010)]
-        [SchemaAttr(0, "cryptAlgorithmClass")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.CryptAlgorithmClassValues> CryptographicAlgorithmClass { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.CryptAlgorithmClassValues> CryptographicAlgorithmClass { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.CryptAlgorithmClassValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Cryptographic Algorithm Type</para>
         /// <para>Represents the following attribute in the schema: cryptAlgorithmType</para>
         /// </summary>
-        [RequiredValidator(Version = FileFormatVersions.Office2007)]
-        [RequiredValidator(IsRequired = false, InitialVersion = FileFormatVersions.Office2010)]
-        [SchemaAttr(0, "cryptAlgorithmType")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.CryptAlgorithmValues> CryptographicAlgorithmType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.CryptAlgorithmValues> CryptographicAlgorithmType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.CryptAlgorithmValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Cryptographic Hashing Algorithm</para>
         /// <para>Represents the following attribute in the schema: cryptAlgorithmSid</para>
         /// </summary>
-        [RequiredValidator(Version = FileFormatVersions.Office2007)]
-        [RequiredValidator(IsRequired = false, InitialVersion = FileFormatVersions.Office2010)]
-        [SchemaAttr(0, "cryptAlgorithmSid")]
-        [Index(3)]
-        public UInt32Value CryptographicAlgorithmSid { get; set; }
+        public UInt32Value CryptographicAlgorithmSid { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Iterations to Run Hashing Algorithm</para>
         /// <para>Represents the following attribute in the schema: spinCount</para>
         /// </summary>
-        [RequiredValidator(Version = FileFormatVersions.Office2007)]
-        [RequiredValidator(IsRequired = false, InitialVersion = FileFormatVersions.Office2010)]
-        [SchemaAttr(0, "spinCount")]
-        [Index(4)]
-        public UInt32Value SpinCount { get; set; }
+        public UInt32Value SpinCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Salt for Password Verifier</para>
         /// <para>Represents the following attribute in the schema: saltData</para>
         /// </summary>
-        [RequiredValidator(Version = FileFormatVersions.Office2007)]
-        [RequiredValidator(IsRequired = false, InitialVersion = FileFormatVersions.Office2010)]
-        [SchemaAttr(0, "saltData")]
-        [Index(5)]
-        public Base64BinaryValue SaltData { get; set; }
+        public Base64BinaryValue SaltData { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Password Hash</para>
         /// <para>Represents the following attribute in the schema: hashData</para>
         /// </summary>
-        [RequiredValidator(Version = FileFormatVersions.Office2007)]
-        [RequiredValidator(IsRequired = false, InitialVersion = FileFormatVersions.Office2010)]
-        [SchemaAttr(0, "hashData")]
-        [Index(6)]
-        public StringValue HashData { get; set; }
+        public StringValue HashData { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Cryptographic Provider</para>
         /// <para>Represents the following attribute in the schema: cryptProvider</para>
         /// </summary>
-        [SchemaAttr(0, "cryptProvider")]
-        [Index(7)]
-        public StringValue CryptographicProvider { get; set; }
+        public StringValue CryptographicProvider { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Cryptographic Algorithm Extensibility</para>
         /// <para>Represents the following attribute in the schema: algIdExt</para>
         /// </summary>
-        [SchemaAttr(0, "algIdExt")]
-        [Index(8)]
-        public UInt32Value ExtendedCryptographicAlgorithm { get; set; }
+        public UInt32Value ExtendedCryptographicAlgorithm { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Algorithm Extensibility Source</para>
         /// <para>Represents the following attribute in the schema: algIdExtSource</para>
         /// </summary>
-        [SchemaAttr(0, "algIdExtSource")]
-        [Index(9)]
-        public StringValue ExtendedCryptographicAlgorithmSource { get; set; }
+        public StringValue ExtendedCryptographicAlgorithmSource { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Cryptographic Provider Type Extensibility</para>
         /// <para>Represents the following attribute in the schema: cryptProviderTypeExt</para>
         /// </summary>
-        [SchemaAttr(0, "cryptProviderTypeExt")]
-        [Index(10)]
-        public UInt32Value CryptographicProviderTypeExtensibility { get; set; }
+        public UInt32Value CryptographicProviderTypeExtensibility { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Provider Type Extensibility Source</para>
         /// <para>Represents the following attribute in the schema: cryptProviderTypeExtSource</para>
         /// </summary>
-        [SchemaAttr(0, "cryptProviderTypeExtSource")]
-        [Index(11)]
-        public StringValue CryptographicProviderTypeExtensibilitySource { get; set; }
+        public StringValue CryptographicProviderTypeExtensibilitySource { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>algorithmName, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: algorithmName</para>
         /// </summary>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(0, "algorithmName")]
-        [Index(12)]
-        public StringValue AlgorithmName { get; set; }
+        public StringValue AlgorithmName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>hashValue, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: hashValue</para>
         /// </summary>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(0, "hashValue")]
-        [Index(13)]
-        public Base64BinaryValue HashValue { get; set; }
+        public Base64BinaryValue HashValue { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>saltValue, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: saltValue</para>
         /// </summary>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(0, "saltValue")]
-        [Index(14)]
-        public Base64BinaryValue SaltValue { get; set; }
+        public Base64BinaryValue SaltValue { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>spinValue, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: spinValue</para>
         /// </summary>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(0, "spinValue")]
-        [Index(15)]
-        public UInt32Value SpinValue { get; set; }
+        public UInt32Value SpinValue { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ModificationVerifier>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ModificationVerifier>()
+                           .AddAttribute(0, "cryptProviderType", a => a.CryptographicProviderType, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddValidator(new RequiredValidatorAttribute() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
+                           })
+                           .AddAttribute(0, "cryptAlgorithmClass", a => a.CryptographicAlgorithmClass, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddValidator(new RequiredValidatorAttribute() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
+                           })
+                           .AddAttribute(0, "cryptAlgorithmType", a => a.CryptographicAlgorithmType, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddValidator(new RequiredValidatorAttribute() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
+                           })
+                           .AddAttribute(0, "cryptAlgorithmSid", a => a.CryptographicAlgorithmSid, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddValidator(new RequiredValidatorAttribute() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
+                           })
+                           .AddAttribute(0, "spinCount", a => a.SpinCount, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddValidator(new RequiredValidatorAttribute() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
+                           })
+                           .AddAttribute(0, "saltData", a => a.SaltData, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddValidator(new RequiredValidatorAttribute() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
+                           })
+                           .AddAttribute(0, "hashData", a => a.HashData, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+                               aBuilder.AddValidator(new RequiredValidatorAttribute() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
+                           })
+                           .AddAttribute(0, "cryptProvider", a => a.CryptographicProvider)
+                           .AddAttribute(0, "algIdExt", a => a.ExtendedCryptographicAlgorithm)
+                           .AddAttribute(0, "algIdExtSource", a => a.ExtendedCryptographicAlgorithmSource)
+                           .AddAttribute(0, "cryptProviderTypeExt", a => a.CryptographicProviderTypeExtensibility)
+                           .AddAttribute(0, "cryptProviderTypeExtSource", a => a.CryptographicProviderTypeExtensibilitySource)
+                           .AddAttribute(0, "algorithmName", a => a.AlgorithmName, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(0, "hashValue", a => a.HashValue, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(0, "saltValue", a => a.SaltValue, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(0, "spinValue", a => a.SpinValue, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           });
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(3 /*:cryptAlgorithmSid*/, true, new string[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14" }) { Application = ApplicationType.Word | ApplicationType.Excel },
@@ -18690,6 +19719,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public PresentationExtensionList(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PresentationExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -18759,11 +19790,19 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PresentationExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<PresentationExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -18837,18 +19876,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Show Speaker Notes</para>
         /// <para>Represents the following attribute in the schema: showSpeakerNotes</para>
         /// </summary>
-        [SchemaAttr(0, "showSpeakerNotes")]
-        [Index(0)]
-        public BooleanValue ShowSpeakerNotes { get; set; }
+        public BooleanValue ShowSpeakerNotes { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Browser Support Target</para>
         /// <para>Represents the following attribute in the schema: pubBrowser</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "pubBrowser")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.HtmlPublishWebBrowserSupportValues> TargetBrowser { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.HtmlPublishWebBrowserSupportValues> TargetBrowser { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.HtmlPublishWebBrowserSupportValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Publish Path</para>
@@ -18857,10 +19891,23 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(2)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HtmlPublishProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<HtmlPublishProperties>()
+                           .AddAttribute(0, "showSpeakerNotes", a => a.ShowSpeakerNotes)
+                           .AddAttribute(0, "pubBrowser", a => a.TargetBrowser, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -18933,75 +19980,77 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Show animation in HTML output</para>
         /// <para>Represents the following attribute in the schema: showAnimation</para>
         /// </summary>
-        [SchemaAttr(0, "showAnimation")]
-        [Index(0)]
-        public BooleanValue ShowAnimation { get; set; }
+        public BooleanValue ShowAnimation { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Resize graphics in HTML output</para>
         /// <para>Represents the following attribute in the schema: resizeGraphics</para>
         /// </summary>
-        [SchemaAttr(0, "resizeGraphics")]
-        [Index(1)]
-        public BooleanValue ResizeGraphics { get; set; }
+        public BooleanValue ResizeGraphics { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Allow PNG in HTML output</para>
         /// <para>Represents the following attribute in the schema: allowPng</para>
         /// </summary>
-        [SchemaAttr(0, "allowPng")]
-        [Index(2)]
-        public BooleanValue AllowPng { get; set; }
+        public BooleanValue AllowPng { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Rely on VML for HTML output</para>
         /// <para>Represents the following attribute in the schema: relyOnVml</para>
         /// </summary>
-        [SchemaAttr(0, "relyOnVml")]
-        [Index(3)]
-        public BooleanValue RelyOnVml { get; set; }
+        public BooleanValue RelyOnVml { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Organize HTML output in folders</para>
         /// <para>Represents the following attribute in the schema: organizeInFolders</para>
         /// </summary>
-        [SchemaAttr(0, "organizeInFolders")]
-        [Index(4)]
-        public BooleanValue OrganizeInFolders { get; set; }
+        public BooleanValue OrganizeInFolders { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Use long file names in HTML output</para>
         /// <para>Represents the following attribute in the schema: useLongFilenames</para>
         /// </summary>
-        [SchemaAttr(0, "useLongFilenames")]
-        [Index(5)]
-        public BooleanValue UseLongFilenames { get; set; }
+        public BooleanValue UseLongFilenames { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Image size for HTML output</para>
         /// <para>Represents the following attribute in the schema: imgSz</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "imgSz")]
-        [Index(6)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.WebScreenSizeValues> ImageSize { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.WebScreenSizeValues> ImageSize { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.WebScreenSizeValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Encoding for HTML output</para>
         /// <para>Represents the following attribute in the schema: encoding</para>
         /// </summary>
-        [SchemaAttr(0, "encoding")]
-        [Index(7)]
-        public StringValue Encoding { get; set; }
+        public StringValue Encoding { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Slide Navigation Colors for HTML output</para>
         /// <para>Represents the following attribute in the schema: clr</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "clr")]
-        [Index(8)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.WebColorValues> Color { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.WebColorValues> Color { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.WebColorValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WebProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<WebProperties>()
+                           .AddAttribute(0, "showAnimation", a => a.ShowAnimation)
+                           .AddAttribute(0, "resizeGraphics", a => a.ResizeGraphics)
+                           .AddAttribute(0, "allowPng", a => a.AllowPng)
+                           .AddAttribute(0, "relyOnVml", a => a.RelyOnVml)
+                           .AddAttribute(0, "organizeInFolders", a => a.OrganizeInFolders)
+                           .AddAttribute(0, "useLongFilenames", a => a.UseLongFilenames)
+                           .AddAttribute(0, "imgSz", a => a.ImageSize, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "encoding", a => a.Encoding)
+                           .AddAttribute(0, "clr", a => a.Color, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         /// <summary>
         /// <para>ExtensionList.</para>
@@ -19078,43 +20127,49 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Print Output</para>
         /// <para>Represents the following attribute in the schema: prnWhat</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "prnWhat")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.PrintOutputValues> PrintWhat { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.PrintOutputValues> PrintWhat { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.PrintOutputValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Print Color Mode</para>
         /// <para>Represents the following attribute in the schema: clrMode</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "clrMode")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.PrintColorModeValues> ColorMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.PrintColorModeValues> ColorMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.PrintColorModeValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Print Hidden Slides</para>
         /// <para>Represents the following attribute in the schema: hiddenSlides</para>
         /// </summary>
-        [SchemaAttr(0, "hiddenSlides")]
-        [Index(2)]
-        public BooleanValue HiddenSlides { get; set; }
+        public BooleanValue HiddenSlides { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Scale to Fit Paper when printing</para>
         /// <para>Represents the following attribute in the schema: scaleToFitPaper</para>
         /// </summary>
-        [SchemaAttr(0, "scaleToFitPaper")]
-        [Index(3)]
-        public BooleanValue ScaleToFitPaper { get; set; }
+        public BooleanValue ScaleToFitPaper { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Frame slides when printing</para>
         /// <para>Represents the following attribute in the schema: frameSlides</para>
         /// </summary>
-        [SchemaAttr(0, "frameSlides")]
-        [Index(4)]
-        public BooleanValue FrameSlides { get; set; }
+        public BooleanValue FrameSlides { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PrintingProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<PrintingProperties>()
+                           .AddAttribute(0, "prnWhat", a => a.PrintWhat, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "clrMode", a => a.ColorMode, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "hiddenSlides", a => a.HiddenSlides)
+                           .AddAttribute(0, "scaleToFitPaper", a => a.ScaleToFitPaper)
+                           .AddAttribute(0, "frameSlides", a => a.FrameSlides);
+        }
 
         /// <summary>
         /// <para>ExtensionList.</para>
@@ -19205,33 +20260,36 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Loop Slide Show</para>
         /// <para>Represents the following attribute in the schema: loop</para>
         /// </summary>
-        [SchemaAttr(0, "loop")]
-        [Index(0)]
-        public BooleanValue Loop { get; set; }
+        public BooleanValue Loop { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Show Narration in Slide Show</para>
         /// <para>Represents the following attribute in the schema: showNarration</para>
         /// </summary>
-        [SchemaAttr(0, "showNarration")]
-        [Index(1)]
-        public BooleanValue ShowNarration { get; set; }
+        public BooleanValue ShowNarration { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Show Animation in Slide Show</para>
         /// <para>Represents the following attribute in the schema: showAnimation</para>
         /// </summary>
-        [SchemaAttr(0, "showAnimation")]
-        [Index(2)]
-        public BooleanValue ShowAnimation { get; set; }
+        public BooleanValue ShowAnimation { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Use Timings in Slide Show</para>
         /// <para>Represents the following attribute in the schema: useTimings</para>
         /// </summary>
-        [SchemaAttr(0, "useTimings")]
-        [Index(3)]
-        public BooleanValue UseTimings { get; set; }
+        public BooleanValue UseTimings { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ShowProperties>()
+                           .AddAttribute(0, "loop", a => a.Loop)
+                           .AddAttribute(0, "showNarration", a => a.ShowNarration)
+                           .AddAttribute(0, "showAnimation", a => a.ShowAnimation)
+                           .AddAttribute(0, "useTimings", a => a.UseTimings);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 0, 1)
         {
@@ -19320,6 +20378,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColorMostRecentlyUsed>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1, requireFilter: true)
         {
             new CompositeParticle(ParticleType.Group, 0, 10, version: FileFormatVersions.Office2007)
@@ -19401,6 +20461,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PresentationPropertiesExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PresentationPropertiesExtension), 0, 0)
@@ -19469,11 +20531,19 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PresentationPropertiesExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<PresentationPropertiesExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -19541,33 +20611,36 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Slide Number Placeholder</para>
         /// <para>Represents the following attribute in the schema: sldNum</para>
         /// </summary>
-        [SchemaAttr(0, "sldNum")]
-        [Index(0)]
-        public BooleanValue SlideNumber { get; set; }
+        public BooleanValue SlideNumber { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Header Placeholder</para>
         /// <para>Represents the following attribute in the schema: hdr</para>
         /// </summary>
-        [SchemaAttr(0, "hdr")]
-        [Index(1)]
-        public BooleanValue Header { get; set; }
+        public BooleanValue Header { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Footer Placeholder</para>
         /// <para>Represents the following attribute in the schema: ftr</para>
         /// </summary>
-        [SchemaAttr(0, "ftr")]
-        [Index(2)]
-        public BooleanValue Footer { get; set; }
+        public BooleanValue Footer { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Date/Time Placeholder</para>
         /// <para>Represents the following attribute in the schema: dt</para>
         /// </summary>
-        [SchemaAttr(0, "dt")]
-        [Index(3)]
-        public BooleanValue DateTime { get; set; }
+        public BooleanValue DateTime { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HeaderFooter>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<HeaderFooter>()
+                           .AddAttribute(0, "sldNum", a => a.SlideNumber)
+                           .AddAttribute(0, "hdr", a => a.Header)
+                           .AddAttribute(0, "ftr", a => a.Footer)
+                           .AddAttribute(0, "dt", a => a.DateTime);
+        }
 
         /// <summary>
         /// <para>ExtensionListWithModification.</para>
@@ -19640,6 +20713,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlideLayoutExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideLayoutExtension), 0, 0)
@@ -19697,6 +20772,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public SlideLayoutIdList(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlideLayoutIdList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -19761,6 +20838,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public TextStyles(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextStyles>();
 
         /// <summary>
         /// <para>Slide Master Title Text Style.</para>
@@ -19875,6 +20954,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlideMasterExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideMasterExtension), 0, 0)
@@ -19932,6 +21013,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public HandoutMasterExtensionList(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HandoutMasterExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -19991,6 +21074,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NotesMasterExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NotesMasterExtension), 0, 0)
@@ -20022,19 +21107,26 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "type")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.ChartSubElementValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.ChartSubElementValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.ChartSubElementValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Level</para>
         /// <para>Represents the following attribute in the schema: lvl</para>
         /// </summary>
-        [SchemaAttr(0, "lvl")]
-        [Index(1)]
-        public UInt32Value Level { get; set; }
+        public UInt32Value Level { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OleChartElement>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<OleChartElement>()
+                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "lvl", a => a.Level);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OleChartElement>(deep);
@@ -20088,6 +21180,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public TextElement(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextElement>();
 
         /// <summary>
         /// <para>Character Range.</para>
@@ -20176,6 +21270,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GraphicElement>();
+
         /// <summary>
         /// <para>Diagram to Animate.</para>
         /// <para>Represents the following element tag in the schema: a:dgm.</para>
@@ -20230,6 +21326,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BlindsTransition>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BlindsTransition>(deep);
     }
@@ -20249,6 +21347,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public CheckerTransition() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CheckerTransition>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CheckerTransition>(deep);
@@ -20270,6 +21370,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CombTransition>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CombTransition>(deep);
     }
@@ -20289,6 +21391,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public RandomBarTransition() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RandomBarTransition>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RandomBarTransition>(deep);
@@ -20312,10 +21416,17 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Transition Direction</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "dir")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues> Direction { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues> Direction { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues>>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<OrientationTransitionType>()
+                           .AddAttribute(0, "dir", a => a.Direction, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
     }
 
     /// <summary>
@@ -20333,6 +21444,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public CoverTransition() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CoverTransition>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CoverTransition>(deep);
@@ -20353,6 +21466,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public PullTransition() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PullTransition>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PullTransition>(deep);
@@ -20376,11 +21491,21 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Direction</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Presentation.TransitionCornerDirectionValues>), UnionId = 0)]
-        [SchemaAttr(0, "dir")]
-        [Index(0)]
-        public StringValue Direction { get; set; }
+        public StringValue Direction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<EightDirectionTransitionType>()
+                           .AddAttribute(0, "dir", a => a.Direction, aBuilder =>
+                           {
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>)), UnionId = (0) });
+                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Presentation.TransitionCornerDirectionValues>)), UnionId = (0) });
+                               });
+                           });
+        }
     }
 
     /// <summary>
@@ -20398,6 +21523,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public CutTransition() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CutTransition>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CutTransition>(deep);
@@ -20418,6 +21545,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public FadeTransition() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FadeTransition>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FadeTransition>(deep);
@@ -20441,9 +21570,14 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Transition Through Black</para>
         /// <para>Represents the following attribute in the schema: thruBlk</para>
         /// </summary>
-        [SchemaAttr(0, "thruBlk")]
-        [Index(0)]
-        public BooleanValue ThroughBlack { get; set; }
+        public BooleanValue ThroughBlack { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<OptionalBlackTransitionType>()
+                           .AddAttribute(0, "thruBlk", a => a.ThroughBlack);
+        }
     }
 
     /// <summary>
@@ -20461,6 +21595,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public PushTransition() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PushTransition>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PushTransition>(deep);
@@ -20481,6 +21617,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public WipeTransition() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WipeTransition>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WipeTransition>(deep);
@@ -20504,10 +21642,17 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Direction</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "dir")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues> Direction { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues> Direction { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SideDirectionTransitionType>()
+                           .AddAttribute(0, "dir", a => a.Direction, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
     }
 
     /// <summary>
@@ -20530,19 +21675,28 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Orientation</para>
         /// <para>Represents the following attribute in the schema: orient</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "orient")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues> Orientation { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues> Orientation { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Direction</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "dir")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues> Direction { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues> Direction { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SplitTransition>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SplitTransition>()
+                           .AddAttribute(0, "orient", a => a.Orientation, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "dir", a => a.Direction, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SplitTransition>(deep);
@@ -20568,10 +21722,18 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Direction</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "dir")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionCornerDirectionValues> Direction { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionCornerDirectionValues> Direction { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionCornerDirectionValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StripsTransition>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<StripsTransition>()
+                           .AddAttribute(0, "dir", a => a.Direction, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StripsTransition>(deep);
@@ -20597,9 +21759,15 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Spokes</para>
         /// <para>Represents the following attribute in the schema: spokes</para>
         /// </summary>
-        [SchemaAttr(0, "spokes")]
-        [Index(0)]
-        public UInt32Value Spokes { get; set; }
+        public UInt32Value Spokes { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WheelTransition>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<WheelTransition>()
+                           .AddAttribute(0, "spokes", a => a.Spokes);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WheelTransition>(deep);
@@ -20625,10 +21793,18 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Direction</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "dir")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues> Direction { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues> Direction { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ZoomTransition>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ZoomTransition>()
+                           .AddAttribute(0, "dir", a => a.Direction, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ZoomTransition>(deep);
@@ -20682,6 +21858,8 @@ namespace DocumentFormat.OpenXml.Presentation
         public SoundAction(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SoundAction>();
 
         /// <summary>
         /// <para>Start Sound Action.</para>

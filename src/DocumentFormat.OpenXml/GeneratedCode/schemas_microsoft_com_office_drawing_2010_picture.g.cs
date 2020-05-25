@@ -4,6 +4,7 @@
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
@@ -64,6 +65,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
         public ShapeStyle(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapeStyle>();
 
         /// <summary>
         /// <para>LineReference.</para>
@@ -177,6 +180,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
         public OfficeArtExtensionList(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OfficeArtExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {

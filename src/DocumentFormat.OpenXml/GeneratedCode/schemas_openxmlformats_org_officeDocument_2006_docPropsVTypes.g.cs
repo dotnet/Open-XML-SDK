@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
@@ -126,6 +127,8 @@ namespace DocumentFormat.OpenXml.VariantTypes
         public Variant(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Variant>();
 
         /// <summary>
         /// <para>Variant.</para>
@@ -718,19 +721,28 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <para>Vector Base Type</para>
         /// <para>Represents the following attribute in the schema: baseType</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "baseType")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.VariantTypes.VectorBaseValues> BaseType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.VariantTypes.VectorBaseValues> BaseType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.VariantTypes.VectorBaseValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Vector Size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "size")]
-        [Index(1)]
-        public UInt32Value Size { get; set; }
+        public UInt32Value Size { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTVector>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<VTVector>()
+                           .AddAttribute(0, "baseType", a => a.BaseType, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "size", a => a.Size, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
@@ -846,28 +858,38 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <para>Array Lower Bounds Attribute</para>
         /// <para>Represents the following attribute in the schema: lBound</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "lBound")]
-        [Index(0)]
-        public Int32Value LowerBounds { get; set; }
+        public Int32Value LowerBounds { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Array Upper Bounds Attribute</para>
         /// <para>Represents the following attribute in the schema: uBound</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "uBound")]
-        [Index(1)]
-        public Int32Value UpperBounds { get; set; }
+        public Int32Value UpperBounds { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Array Base Type</para>
         /// <para>Represents the following attribute in the schema: baseType</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "baseType")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.VariantTypes.ArrayBaseValues> BaseType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.VariantTypes.ArrayBaseValues> BaseType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.VariantTypes.ArrayBaseValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTArray>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<VTArray>()
+                           .AddAttribute(0, "lBound", a => a.LowerBounds, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "uBound", a => a.UpperBounds, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "baseType", a => a.BaseType, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
@@ -926,6 +948,8 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new Base64BinaryValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTBlob>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTBlob>(deep);
     }
@@ -959,6 +983,8 @@ namespace DocumentFormat.OpenXml.VariantTypes
         {
             return new Base64BinaryValue { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTOBlob>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTOBlob>(deep);
@@ -994,6 +1020,8 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new Base64BinaryValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTStreamData>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTStreamData>(deep);
     }
@@ -1027,6 +1055,8 @@ namespace DocumentFormat.OpenXml.VariantTypes
         {
             return new Base64BinaryValue { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTOStreamData>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTOStreamData>(deep);
@@ -1062,6 +1092,8 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new Base64BinaryValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTStorage>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTStorage>(deep);
     }
@@ -1096,6 +1128,8 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new Base64BinaryValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTOStorage>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTOStorage>(deep);
     }
@@ -1116,6 +1150,8 @@ namespace DocumentFormat.OpenXml.VariantTypes
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTEmpty>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTEmpty>(deep);
     }
@@ -1135,6 +1171,8 @@ namespace DocumentFormat.OpenXml.VariantTypes
         public VTNull() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTNull>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTNull>(deep);
@@ -1170,6 +1208,8 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new SByteValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTByte>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTByte>(deep);
     }
@@ -1203,6 +1243,8 @@ namespace DocumentFormat.OpenXml.VariantTypes
         {
             return new Int16Value { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTShort>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTShort>(deep);
@@ -1238,6 +1280,8 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new Int32Value { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTInt32>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTInt32>(deep);
     }
@@ -1271,6 +1315,8 @@ namespace DocumentFormat.OpenXml.VariantTypes
         {
             return new Int32Value { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTInteger>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTInteger>(deep);
@@ -1306,6 +1352,8 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new Int64Value { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTInt64>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTInt64>(deep);
     }
@@ -1339,6 +1387,8 @@ namespace DocumentFormat.OpenXml.VariantTypes
         {
             return new ByteValue { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTUnsignedByte>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTUnsignedByte>(deep);
@@ -1374,6 +1424,8 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new UInt16Value { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTUnsignedShort>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTUnsignedShort>(deep);
     }
@@ -1407,6 +1459,8 @@ namespace DocumentFormat.OpenXml.VariantTypes
         {
             return new UInt32Value { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTUnsignedInt32>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTUnsignedInt32>(deep);
@@ -1442,6 +1496,8 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new UInt32Value { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTUnsignedInteger>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTUnsignedInteger>(deep);
     }
@@ -1475,6 +1531,8 @@ namespace DocumentFormat.OpenXml.VariantTypes
         {
             return new UInt64Value { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTUnsignedInt64>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTUnsignedInt64>(deep);
@@ -1510,6 +1568,8 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new SingleValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTFloat>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTFloat>(deep);
     }
@@ -1543,6 +1603,8 @@ namespace DocumentFormat.OpenXml.VariantTypes
         {
             return new DoubleValue { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTDouble>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTDouble>(deep);
@@ -1578,6 +1640,8 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new DecimalValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTDecimal>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTDecimal>(deep);
     }
@@ -1610,6 +1674,8 @@ namespace DocumentFormat.OpenXml.VariantTypes
         {
             return new StringValue { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTLPSTR>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTLPSTR>(deep);
@@ -1644,6 +1710,8 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new StringValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTLPWSTR>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTLPWSTR>(deep);
     }
@@ -1676,6 +1744,8 @@ namespace DocumentFormat.OpenXml.VariantTypes
         {
             return new StringValue { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTBString>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTBString>(deep);
@@ -1711,6 +1781,8 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new DateTimeValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTDate>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTDate>(deep);
     }
@@ -1744,6 +1816,8 @@ namespace DocumentFormat.OpenXml.VariantTypes
         {
             return new DateTimeValue { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTFileTime>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTFileTime>(deep);
@@ -1779,6 +1853,8 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new BooleanValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTBool>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTBool>(deep);
     }
@@ -1813,6 +1889,8 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new StringValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTCurrency>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTCurrency>(deep);
     }
@@ -1846,6 +1924,8 @@ namespace DocumentFormat.OpenXml.VariantTypes
         {
             return new StringValue { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTError>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTError>(deep);
@@ -1884,11 +1964,19 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <para>VSTREAM Version Attribute</para>
         /// <para>Represents the following attribute in the schema: version</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(Pattern = "\\s*\\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\\}\\s*")]
-        [SchemaAttr(0, "version")]
-        [Index(0)]
-        public StringValue Version { get; set; }
+        public StringValue Version { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTVStreamData>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<VTVStreamData>()
+                           .AddAttribute(0, "version", a => a.Version, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\\}\\s*") });
+                           });
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*:version*/, true, null)
@@ -1930,6 +2018,8 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new StringValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTClassId>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTClassId>(deep);
     }
@@ -1967,19 +2057,28 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <para>Format Attribute</para>
         /// <para>Represents the following attribute in the schema: format</para>
         /// </summary>
-        [NumberValidator(MinInclusive = -3L)]
-        [SchemaAttr(0, "format")]
-        [Index(0)]
-        public Int32Value Format { get; set; }
+        public Int32Value Format { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "size")]
-        [Index(1)]
-        public UInt32Value Size { get; set; }
+        public UInt32Value Size { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VTClipboardData>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<VTClipboardData>()
+                           .AddAttribute(0, "format", a => a.Format, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-3L) });
+                           })
+                           .AddAttribute(0, "size", a => a.Size, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTClipboardData>(deep);

@@ -4,6 +4,7 @@
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
@@ -64,30 +65,40 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         /// <para>name, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "name")]
-        [Index(0)]
-        public StringValue Name { get; set; }
+        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>id, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "id")]
-        [Index(1)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>vid, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: vid</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "vid")]
-        [Index(2)]
-        public StringValue Vid { get; set; }
+        public StringValue Vid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ThemeFamily>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ThemeFamily>()
+                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "vid", a => a.Vid, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           });
+        }
 
         /// <summary>
         /// <para>OfficeArtExtensionList.</para>
@@ -166,6 +177,8 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OfficeArtExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 1, 1)
@@ -234,40 +247,25 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         /// <para>name, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "name")]
-        [Index(0)]
-        public StringValue Name { get; set; }
+        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>vid, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: vid</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "vid")]
-        [Index(1)]
-        public StringValue Vid { get; set; }
+        public StringValue Vid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>cx, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: cx</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = -27273042329600L, MaxInclusive = 27273042316900L)]
-        [SchemaAttr(0, "cx")]
-        [Index(2)]
-        public Int64Value X { get; set; }
+        public Int64Value X { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>cy, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: cy</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = -27273042329600L, MaxInclusive = 27273042316900L)]
-        [SchemaAttr(0, "cy")]
-        [Index(3)]
-        public Int64Value Y { get; set; }
+        public Int64Value Y { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>id, this property is only available in Office2013, Office2016</para>
@@ -276,10 +274,37 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(4)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ThemeVariant>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ThemeVariant>()
+                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "vid", a => a.Vid, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           })
+                           .AddAttribute(0, "cx", a => a.X, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                           })
+                           .AddAttribute(0, "cy", a => a.Y, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                           })
+                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <summary>
         /// <para>OfficeArtExtensionList.</para>
@@ -351,6 +376,8 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         public ThemeVariantList(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ThemeVariantList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {

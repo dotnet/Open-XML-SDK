@@ -4,6 +4,7 @@
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
@@ -32,25 +33,29 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
         /// <para>embeddedHtml, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: embeddedHtml</para>
         /// </summary>
-        [SchemaAttr(0, "embeddedHtml")]
-        [Index(0)]
-        public StringValue EmbeddedHtml { get; set; }
+        public StringValue EmbeddedHtml { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>h, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: h</para>
         /// </summary>
-        [SchemaAttr(0, "h")]
-        [Index(1)]
-        public UInt32Value Height { get; set; }
+        public UInt32Value Height { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>w, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: w</para>
         /// </summary>
-        [SchemaAttr(0, "w")]
-        [Index(2)]
-        public UInt32Value Width { get; set; }
+        public UInt32Value Width { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WebVideoProperty>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<WebVideoProperty>()
+                           .AddAttribute(0, "embeddedHtml", a => a.EmbeddedHtml)
+                           .AddAttribute(0, "h", a => a.Height)
+                           .AddAttribute(0, "w", a => a.Width);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebVideoProperty>(deep);

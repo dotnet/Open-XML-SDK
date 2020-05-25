@@ -4,6 +4,7 @@
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
@@ -33,17 +34,22 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>cellRange, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: cellRange</para>
         /// </summary>
-        [SchemaAttr(0, "cellRange")]
-        [Index(0)]
-        public StringValue CellRange { get; set; }
+        public StringValue CellRange { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>spid, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: spid</para>
         /// </summary>
-        [SchemaAttr(0, "spid")]
-        [Index(1)]
-        public StringValue ShapeId { get; set; }
+        public StringValue ShapeId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CameraTool>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<CameraTool>()
+                           .AddAttribute(0, "cellRange", a => a.CellRange)
+                           .AddAttribute(0, "spid", a => a.ShapeId);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValuePatternConstraint(1 /*:spid*/, @"_x0000_s(102[5-9]|10[3-9][0-9]|1[1-9][0-9]{2}|[1-9][0-9]{3,7}|1[0-9]{8}|2[0-5][0-9]{7}|26[0-7][0-9]{6}|268[0-3][0-9]{5}|2684[0-2][0-9]{4}|26843[0-4][0-9]{3}|268435[0-3][0-9]{2}|2684354[0-4][0-9]|26843545[0-6])") { Version = FileFormatVersions.Office2010 }
@@ -75,9 +81,15 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>spid, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: spid</para>
         /// </summary>
-        [SchemaAttr(0, "spid")]
-        [Index(0)]
-        public StringValue ShapeId { get; set; }
+        public StringValue ShapeId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CompatExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<CompatExtension>()
+                           .AddAttribute(0, "spid", a => a.ShapeId);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValuePatternConstraint(0 /*:spid*/, @"_x0000_s(102[5-9]|10[3-9][0-9]|1[1-9][0-9]{2}|[1-9][0-9]{3,7}|1[0-9]{8}|2[0-5][0-9]{7}|26[0-7][0-9]{6}|268[0-3][0-9]{5}|2684[0-2][0-9]{4}|26843[0-4][0-9]{3}|268435[0-3][0-9]{2}|2684354[0-4][0-9]|26843545[0-6])") { Version = FileFormatVersions.Office2010 }
@@ -109,10 +121,18 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public BooleanValue Val { get; set; }
+        public BooleanValue Val { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<IsCanvas>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<IsCanvas>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<IsCanvas>(deep);
@@ -173,10 +193,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>bwMode, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "bwMode")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
@@ -185,10 +202,22 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(1)]
-        public StringValue RelationshipId { get; set; }
+        public StringValue RelationshipId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GvmlContentPart>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<GvmlContentPart>()
+                           .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(19, "id", a => a.RelationshipId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <summary>
         /// <para>NonVisualContentPartProperties.</para>
@@ -262,9 +291,15 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public BooleanValue Val { get; set; }
+        public BooleanValue Val { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShadowObscured>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ShadowObscured>()
+                           .AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShadowObscured>(deep);
@@ -326,6 +361,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         public HiddenFillProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HiddenFillProperties>();
 
         /// <summary>
         /// <para>NoFill.</para>
@@ -500,37 +537,48 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Line Width</para>
         /// <para>Represents the following attribute in the schema: w</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 20116800L)]
-        [SchemaAttr(0, "w")]
-        [Index(0)]
-        public Int32Value Width { get; set; }
+        public Int32Value Width { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Line Ending Cap Type</para>
         /// <para>Represents the following attribute in the schema: cap</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "cap")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.LineCapValues> CapType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.LineCapValues> CapType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.LineCapValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Compound Line Type</para>
         /// <para>Represents the following attribute in the schema: cmpd</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "cmpd")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.CompoundLineValues> CompoundLineType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.CompoundLineValues> CompoundLineType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.CompoundLineValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Stroke Alignment</para>
         /// <para>Represents the following attribute in the schema: algn</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "algn")]
-        [Index(3)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.PenAlignmentValues> Alignment { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.PenAlignmentValues> Alignment { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PenAlignmentValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HiddenLineProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<HiddenLineProperties>()
+                           .AddAttribute(0, "w", a => a.Width, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (20116800L) });
+                           })
+                           .AddAttribute(0, "cap", a => a.CapType, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "cmpd", a => a.CompoundLineType, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "algn", a => a.Alignment, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -620,6 +668,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         public HiddenEffectsProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HiddenEffectsProperties>();
 
         /// <summary>
         /// <para>Effect Container.</para>
@@ -717,6 +767,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         public HiddenScene3D(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HiddenScene3D>();
 
         /// <summary>
         /// <para>Camera.</para>
@@ -843,37 +895,48 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Shape Depth</para>
         /// <para>Represents the following attribute in the schema: z</para>
         /// </summary>
-        [NumberValidator(MinInclusive = -27273042329600L, MaxInclusive = 27273042316900L)]
-        [SchemaAttr(0, "z")]
-        [Index(0)]
-        public Int64Value Z { get; set; }
+        public Int64Value Z { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Extrusion Height</para>
         /// <para>Represents the following attribute in the schema: extrusionH</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 2147483647L)]
-        [SchemaAttr(0, "extrusionH")]
-        [Index(1)]
-        public Int64Value ExtrusionHeight { get; set; }
+        public Int64Value ExtrusionHeight { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Contour Width</para>
         /// <para>Represents the following attribute in the schema: contourW</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 2147483647L)]
-        [SchemaAttr(0, "contourW")]
-        [Index(2)]
-        public Int64Value ContourWidth { get; set; }
+        public Int64Value ContourWidth { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Preset Material Type</para>
         /// <para>Represents the following attribute in the schema: prstMaterial</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "prstMaterial")]
-        [Index(3)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues> PresetMaterial { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues> PresetMaterial { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HiddenShape3D>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<HiddenShape3D>()
+                           .AddAttribute(0, "z", a => a.Z, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                           })
+                           .AddAttribute(0, "extrusionH", a => a.ExtrusionHeight, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+                           })
+                           .AddAttribute(0, "contourW", a => a.ContourWidth, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+                           })
+                           .AddAttribute(0, "prstMaterial", a => a.PresetMaterial, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         /// <summary>
         /// <para>Top Bevel.</para>
@@ -1002,6 +1065,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ImageProperties>();
+
         /// <summary>
         /// <para>ImageLayer.</para>
         /// <para>Represents the following element tag in the schema: a14:imgLayer.</para>
@@ -1046,9 +1111,15 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public BooleanValue Val { get; set; }
+        public BooleanValue Val { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UseLocalDpi>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<UseLocalDpi>()
+                           .AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UseLocalDpi>(deep);
@@ -1069,6 +1140,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         public TextMath() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextMath>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextMath>(deep);
@@ -1120,6 +1193,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         public OfficeArtExtensionList(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OfficeArtExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1189,81 +1264,78 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Disallow Shape Grouping</para>
         /// <para>Represents the following attribute in the schema: noGrp</para>
         /// </summary>
-        [SchemaAttr(0, "noGrp")]
-        [Index(0)]
-        public BooleanValue NoGrouping { get; set; }
+        public BooleanValue NoGrouping { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Disallow Shape Selection</para>
         /// <para>Represents the following attribute in the schema: noSelect</para>
         /// </summary>
-        [SchemaAttr(0, "noSelect")]
-        [Index(1)]
-        public BooleanValue NoSelection { get; set; }
+        public BooleanValue NoSelection { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Disallow Shape Rotation</para>
         /// <para>Represents the following attribute in the schema: noRot</para>
         /// </summary>
-        [SchemaAttr(0, "noRot")]
-        [Index(2)]
-        public BooleanValue NoRotation { get; set; }
+        public BooleanValue NoRotation { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Disallow Aspect Ratio Change</para>
         /// <para>Represents the following attribute in the schema: noChangeAspect</para>
         /// </summary>
-        [SchemaAttr(0, "noChangeAspect")]
-        [Index(3)]
-        public BooleanValue NoChangeAspect { get; set; }
+        public BooleanValue NoChangeAspect { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Disallow Shape Movement</para>
         /// <para>Represents the following attribute in the schema: noMove</para>
         /// </summary>
-        [SchemaAttr(0, "noMove")]
-        [Index(4)]
-        public BooleanValue NoMove { get; set; }
+        public BooleanValue NoMove { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Disallow Shape Resize</para>
         /// <para>Represents the following attribute in the schema: noResize</para>
         /// </summary>
-        [SchemaAttr(0, "noResize")]
-        [Index(5)]
-        public BooleanValue NoResize { get; set; }
+        public BooleanValue NoResize { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Disallow Shape Point Editing</para>
         /// <para>Represents the following attribute in the schema: noEditPoints</para>
         /// </summary>
-        [SchemaAttr(0, "noEditPoints")]
-        [Index(6)]
-        public BooleanValue NoEditPoints { get; set; }
+        public BooleanValue NoEditPoints { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Disallow Showing Adjust Handles</para>
         /// <para>Represents the following attribute in the schema: noAdjustHandles</para>
         /// </summary>
-        [SchemaAttr(0, "noAdjustHandles")]
-        [Index(7)]
-        public BooleanValue NoAdjustHandles { get; set; }
+        public BooleanValue NoAdjustHandles { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Disallow Arrowhead Changes</para>
         /// <para>Represents the following attribute in the schema: noChangeArrowheads</para>
         /// </summary>
-        [SchemaAttr(0, "noChangeArrowheads")]
-        [Index(8)]
-        public BooleanValue NoChangeArrowheads { get; set; }
+        public BooleanValue NoChangeArrowheads { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Disallow Shape Type Change</para>
         /// <para>Represents the following attribute in the schema: noChangeShapeType</para>
         /// </summary>
-        [SchemaAttr(0, "noChangeShapeType")]
-        [Index(9)]
-        public BooleanValue NoChangeShapeType { get; set; }
+        public BooleanValue NoChangeShapeType { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ContentPartLocks>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ContentPartLocks>()
+                           .AddAttribute(0, "noGrp", a => a.NoGrouping)
+                           .AddAttribute(0, "noSelect", a => a.NoSelection)
+                           .AddAttribute(0, "noRot", a => a.NoRotation)
+                           .AddAttribute(0, "noChangeAspect", a => a.NoChangeAspect)
+                           .AddAttribute(0, "noMove", a => a.NoMove)
+                           .AddAttribute(0, "noResize", a => a.NoResize)
+                           .AddAttribute(0, "noEditPoints", a => a.NoEditPoints)
+                           .AddAttribute(0, "noAdjustHandles", a => a.NoAdjustHandles)
+                           .AddAttribute(0, "noChangeArrowheads", a => a.NoChangeArrowheads)
+                           .AddAttribute(0, "noChangeShapeType", a => a.NoChangeShapeType);
+        }
 
         /// <summary>
         /// <para>OfficeArtExtensionList.</para>
@@ -1309,41 +1381,52 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>x1, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: x1</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "x1")]
-        [Index(0)]
-        public Int32Value FirstXCoordinate { get; set; }
+        public Int32Value FirstXCoordinate { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>y1, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: y1</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "y1")]
-        [Index(1)]
-        public Int32Value FirstYCoordinate { get; set; }
+        public Int32Value FirstYCoordinate { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>x2, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: x2</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "x2")]
-        [Index(2)]
-        public Int32Value SecondXCoordinate { get; set; }
+        public Int32Value SecondXCoordinate { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>y2, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: y2</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "y2")]
-        [Index(3)]
-        public Int32Value SecondYCoordinate { get; set; }
+        public Int32Value SecondYCoordinate { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ForegroundMark>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ForegroundMark>()
+                           .AddAttribute(0, "x1", a => a.FirstXCoordinate, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "y1", a => a.FirstYCoordinate, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "x2", a => a.SecondXCoordinate, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "y2", a => a.SecondYCoordinate, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ForegroundMark>(deep);
@@ -1369,41 +1452,52 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>x1, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: x1</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "x1")]
-        [Index(0)]
-        public Int32Value FirstXCoordinate { get; set; }
+        public Int32Value FirstXCoordinate { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>y1, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: y1</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "y1")]
-        [Index(1)]
-        public Int32Value FirstYCoordinate { get; set; }
+        public Int32Value FirstYCoordinate { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>x2, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: x2</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "x2")]
-        [Index(2)]
-        public Int32Value SecondXCoordinate { get; set; }
+        public Int32Value SecondXCoordinate { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>y2, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: y2</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "y2")]
-        [Index(3)]
-        public Int32Value SecondYCoordinate { get; set; }
+        public Int32Value SecondYCoordinate { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BackgroundMark>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BackgroundMark>()
+                           .AddAttribute(0, "x1", a => a.FirstXCoordinate, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "y1", a => a.FirstYCoordinate, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "x2", a => a.SecondXCoordinate, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "y2", a => a.SecondYCoordinate, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackgroundMark>(deep);
@@ -1429,10 +1523,18 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>radius, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: radius</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100L)]
-        [SchemaAttr(0, "radius")]
-        [Index(0)]
-        public Int32Value Radius { get; set; }
+        public Int32Value Radius { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticBlur>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ArtisticBlur>()
+                           .AddAttribute(0, "radius", a => a.Radius, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticBlur>(deep);
@@ -1458,19 +1560,28 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>crackSpacing, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: crackSpacing</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100L)]
-        [SchemaAttr(0, "crackSpacing")]
-        [Index(1)]
-        public Int32Value CrackSpacing { get; set; }
+        public Int32Value CrackSpacing { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticCement>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ArtisticCement>()
+                           .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "crackSpacing", a => a.CrackSpacing, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticCement>(deep);
@@ -1496,19 +1607,28 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>pressure, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: pressure</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 4L)]
-        [SchemaAttr(0, "pressure")]
-        [Index(1)]
-        public Int32Value Pressure { get; set; }
+        public Int32Value Pressure { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticChalkSketch>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ArtisticChalkSketch>()
+                           .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "pressure", a => a.Pressure, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (4L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticChalkSketch>(deep);
@@ -1534,19 +1654,28 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>pressure, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: pressure</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100L)]
-        [SchemaAttr(0, "pressure")]
-        [Index(1)]
-        public Int32Value Pressure { get; set; }
+        public Int32Value Pressure { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticCrisscrossEtching>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ArtisticCrisscrossEtching>()
+                           .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "pressure", a => a.Pressure, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticCrisscrossEtching>(deep);
@@ -1572,19 +1701,28 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>numberOfShades, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: numberOfShades</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 6L)]
-        [SchemaAttr(0, "numberOfShades")]
-        [Index(1)]
-        public Int32Value NumberOfShades { get; set; }
+        public Int32Value NumberOfShades { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticCutout>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ArtisticCutout>()
+                           .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "numberOfShades", a => a.NumberOfShades, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (6L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticCutout>(deep);
@@ -1610,19 +1748,28 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>grainSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: grainSize</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100L)]
-        [SchemaAttr(0, "grainSize")]
-        [Index(1)]
-        public Int32Value GrainSize { get; set; }
+        public Int32Value GrainSize { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticFilmGrain>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ArtisticFilmGrain>()
+                           .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "grainSize", a => a.GrainSize, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticFilmGrain>(deep);
@@ -1648,19 +1795,28 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>scaling, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: scaling</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100L)]
-        [SchemaAttr(0, "scaling")]
-        [Index(1)]
-        public Int32Value Scaling { get; set; }
+        public Int32Value Scaling { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticGlass>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ArtisticGlass>()
+                           .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "scaling", a => a.Scaling, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticGlass>(deep);
@@ -1686,19 +1842,28 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>intensity, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: intensity</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 10L)]
-        [SchemaAttr(0, "intensity")]
-        [Index(1)]
-        public Int32Value Intensity { get; set; }
+        public Int32Value Intensity { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticGlowDiffused>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ArtisticGlowDiffused>()
+                           .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "intensity", a => a.Intensity, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticGlowDiffused>(deep);
@@ -1724,19 +1889,28 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>smoothness, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: smoothness</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 10L)]
-        [SchemaAttr(0, "smoothness")]
-        [Index(1)]
-        public Int32Value Smoothness { get; set; }
+        public Int32Value Smoothness { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticGlowEdges>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ArtisticGlowEdges>()
+                           .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "smoothness", a => a.Smoothness, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticGlowEdges>(deep);
@@ -1762,19 +1936,28 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>gridSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: gridSize</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 10L)]
-        [SchemaAttr(0, "gridSize")]
-        [Index(1)]
-        public Int32Value GridSize { get; set; }
+        public Int32Value GridSize { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticLightScreen>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ArtisticLightScreen>()
+                           .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "gridSize", a => a.GridSize, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticLightScreen>(deep);
@@ -1800,19 +1983,28 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>pencilSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: pencilSize</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100L)]
-        [SchemaAttr(0, "pencilSize")]
-        [Index(1)]
-        public Int32Value PencilSize { get; set; }
+        public Int32Value PencilSize { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticLineDrawing>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ArtisticLineDrawing>()
+                           .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "pencilSize", a => a.PencilSize, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticLineDrawing>(deep);
@@ -1838,19 +2030,28 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>size, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100L)]
-        [SchemaAttr(0, "size")]
-        [Index(1)]
-        public Int32Value Size { get; set; }
+        public Int32Value Size { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticMarker>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ArtisticMarker>()
+                           .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "size", a => a.Size, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticMarker>(deep);
@@ -1876,19 +2077,28 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>pressure, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: pressure</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100L)]
-        [SchemaAttr(0, "pressure")]
-        [Index(1)]
-        public Int32Value Pressure { get; set; }
+        public Int32Value Pressure { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticMosaicBubbles>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ArtisticMosaicBubbles>()
+                           .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "pressure", a => a.Pressure, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticMosaicBubbles>(deep);
@@ -1914,19 +2124,28 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>intensity, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: intensity</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 10L)]
-        [SchemaAttr(0, "intensity")]
-        [Index(1)]
-        public Int32Value Intensity { get; set; }
+        public Int32Value Intensity { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticPaintStrokes>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ArtisticPaintStrokes>()
+                           .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "intensity", a => a.Intensity, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticPaintStrokes>(deep);
@@ -1952,19 +2171,28 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>brushSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: brushSize</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 10L)]
-        [SchemaAttr(0, "brushSize")]
-        [Index(1)]
-        public Int32Value BrushSize { get; set; }
+        public Int32Value BrushSize { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticPaintBrush>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ArtisticPaintBrush>()
+                           .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "brushSize", a => a.BrushSize, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticPaintBrush>(deep);
@@ -1990,19 +2218,28 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>scaling, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: scaling</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100L)]
-        [SchemaAttr(0, "scaling")]
-        [Index(1)]
-        public Int32Value BrushSize { get; set; }
+        public Int32Value BrushSize { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticPastelsSmooth>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ArtisticPastelsSmooth>()
+                           .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "scaling", a => a.BrushSize, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticPastelsSmooth>(deep);
@@ -2028,19 +2265,28 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>pencilSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: pencilSize</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100L)]
-        [SchemaAttr(0, "pencilSize")]
-        [Index(1)]
-        public Int32Value BrushSize { get; set; }
+        public Int32Value BrushSize { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticPencilGrayscale>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ArtisticPencilGrayscale>()
+                           .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "pencilSize", a => a.BrushSize, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticPencilGrayscale>(deep);
@@ -2066,19 +2312,28 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>pressure, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: pressure</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100L)]
-        [SchemaAttr(0, "pressure")]
-        [Index(1)]
-        public Int32Value Pressure { get; set; }
+        public Int32Value Pressure { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticPencilSketch>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ArtisticPencilSketch>()
+                           .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "pressure", a => a.Pressure, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticPencilSketch>(deep);
@@ -2104,19 +2359,28 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>detail, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: detail</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 10L)]
-        [SchemaAttr(0, "detail")]
-        [Index(1)]
-        public Int32Value Detail { get; set; }
+        public Int32Value Detail { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticPhotocopy>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ArtisticPhotocopy>()
+                           .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "detail", a => a.Detail, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticPhotocopy>(deep);
@@ -2142,19 +2406,28 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>smoothness, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: smoothness</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 10L)]
-        [SchemaAttr(0, "smoothness")]
-        [Index(1)]
-        public Int32Value Smoothness { get; set; }
+        public Int32Value Smoothness { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticPlasticWrap>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ArtisticPlasticWrap>()
+                           .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "smoothness", a => a.Smoothness, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticPlasticWrap>(deep);
@@ -2180,19 +2453,28 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>scaling, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: scaling</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100L)]
-        [SchemaAttr(0, "scaling")]
-        [Index(1)]
-        public Int32Value Scaling { get; set; }
+        public Int32Value Scaling { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticTexturizer>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ArtisticTexturizer>()
+                           .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "scaling", a => a.Scaling, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticTexturizer>(deep);
@@ -2218,19 +2500,28 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>brushSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: brushSize</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 10L)]
-        [SchemaAttr(0, "brushSize")]
-        [Index(1)]
-        public Int32Value BrushSize { get; set; }
+        public Int32Value BrushSize { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticWatercolorSponge>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ArtisticWatercolorSponge>()
+                           .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "brushSize", a => a.BrushSize, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticWatercolorSponge>(deep);
@@ -2289,41 +2580,52 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>t, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "t")]
-        [Index(0)]
-        public Int32Value MarqueeTop { get; set; }
+        public Int32Value MarqueeTop { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>b, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "b")]
-        [Index(1)]
-        public Int32Value MarqueeBottom { get; set; }
+        public Int32Value MarqueeBottom { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>l, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: l</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "l")]
-        [Index(2)]
-        public Int32Value MarqueeLeft { get; set; }
+        public Int32Value MarqueeLeft { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>r, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "r")]
-        [Index(3)]
-        public Int32Value MarqueeRight { get; set; }
+        public Int32Value MarqueeRight { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BackgroundRemoval>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BackgroundRemoval>()
+                           .AddAttribute(0, "t", a => a.MarqueeTop, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "b", a => a.MarqueeBottom, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "l", a => a.MarqueeLeft, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "r", a => a.MarqueeRight, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -2357,19 +2659,28 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>bright, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: bright</para>
         /// </summary>
-        [NumberValidator(MinInclusive = -100000L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "bright")]
-        [Index(0)]
-        public Int32Value Bright { get; set; }
+        public Int32Value Bright { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>contrast, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: contrast</para>
         /// </summary>
-        [NumberValidator(MinInclusive = -100000L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "contrast")]
-        [Index(1)]
-        public Int32Value Contrast { get; set; }
+        public Int32Value Contrast { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BrightnessContrast>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BrightnessContrast>()
+                           .AddAttribute(0, "bright", a => a.Bright, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
+                           })
+                           .AddAttribute(0, "contrast", a => a.Contrast, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BrightnessContrast>(deep);
@@ -2395,10 +2706,18 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>colorTemp, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: colorTemp</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 1500L, MaxInclusive = 11500L)]
-        [SchemaAttr(0, "colorTemp")]
-        [Index(0)]
-        public Int32Value ColorTemperatureValue { get; set; }
+        public Int32Value ColorTemperatureValue { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColorTemperature>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ColorTemperature>()
+                           .AddAttribute(0, "colorTemp", a => a.ColorTemperatureValue, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1500L), MaxInclusive = (11500L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorTemperature>(deep);
@@ -2424,10 +2743,18 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>sat, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sat</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 400000L)]
-        [SchemaAttr(0, "sat")]
-        [Index(0)]
-        public Int32Value SaturationAmount { get; set; }
+        public Int32Value SaturationAmount { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Saturation>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Saturation>()
+                           .AddAttribute(0, "sat", a => a.SaturationAmount, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (400000L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Saturation>(deep);
@@ -2453,10 +2780,18 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>amount, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: amount</para>
         /// </summary>
-        [NumberValidator(MinInclusive = -100000L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "amount")]
-        [Index(0)]
-        public Int32Value Amount { get; set; }
+        public Int32Value Amount { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SharpenSoften>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SharpenSoften>()
+                           .AddAttribute(0, "amount", a => a.Amount, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SharpenSoften>(deep);
@@ -2565,9 +2900,15 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr(0, "visible")]
-        [Index(0)]
-        public BooleanValue Visible { get; set; }
+        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ImageEffect>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ImageEffect>()
+                           .AddAttribute(0, "visible", a => a.Visible);
+        }
 
         /// <summary>
         /// <para>ArtisticBlur.</para>
@@ -3011,9 +3352,15 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr(19, "embed")]
-        [Index(0)]
-        public StringValue Embed { get; set; }
+        public StringValue Embed { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ImageLayer>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ImageLayer>()
+                           .AddAttribute(19, "embed", a => a.Embed);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -3081,43 +3428,49 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public UInt32Value Id { get; set; }
+        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "name")]
-        [Index(1)]
-        public StringValue Name { get; set; }
+        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>descr</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
-        [SchemaAttr(0, "descr")]
-        [Index(2)]
-        public StringValue Description { get; set; }
+        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>hidden</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        [SchemaAttr(0, "hidden")]
-        [Index(3)]
-        public BooleanValue Hidden { get; set; }
+        public BooleanValue Hidden { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr(0, "title")]
-        [Index(4)]
-        public StringValue Title { get; set; }
+        public StringValue Title { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualDrawingProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<NonVisualDrawingProperties>()
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "descr", a => a.Description)
+                           .AddAttribute(0, "hidden", a => a.Hidden)
+                           .AddAttribute(0, "title", a => a.Title);
+        }
 
         /// <summary>
         /// <para>HyperlinkOnClick.</para>
@@ -3224,9 +3577,15 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>isComment, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: isComment</para>
         /// </summary>
-        [SchemaAttr(0, "isComment")]
-        [Index(0)]
-        public BooleanValue IsComment { get; set; }
+        public BooleanValue IsComment { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualInkContentPartProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<NonVisualInkContentPartProperties>()
+                           .AddAttribute(0, "isComment", a => a.IsComment);
+        }
 
         /// <summary>
         /// <para>ContentPartLocks.</para>
@@ -3314,6 +3673,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         public NonVisualContentPartProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualContentPartProperties>();
 
         /// <summary>
         /// <para>NonVisualDrawingProperties.</para>
@@ -3406,25 +3767,29 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
-        [SchemaAttr(0, "rot")]
-        [Index(0)]
-        public Int32Value Rotation { get; set; }
+        public Int32Value Rotation { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Horizontal Flip</para>
         /// <para>Represents the following attribute in the schema: flipH</para>
         /// </summary>
-        [SchemaAttr(0, "flipH")]
-        [Index(1)]
-        public BooleanValue HorizontalFlip { get; set; }
+        public BooleanValue HorizontalFlip { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Vertical Flip</para>
         /// <para>Represents the following attribute in the schema: flipV</para>
         /// </summary>
-        [SchemaAttr(0, "flipV")]
-        [Index(2)]
-        public BooleanValue VerticalFlip { get; set; }
+        public BooleanValue VerticalFlip { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Transform2D>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Transform2D>()
+                           .AddAttribute(0, "rot", a => a.Rotation)
+                           .AddAttribute(0, "flipH", a => a.HorizontalFlip)
+                           .AddAttribute(0, "flipV", a => a.VerticalFlip);
+        }
 
         /// <summary>
         /// <para>Offset.</para>

@@ -4,6 +4,7 @@
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Wordprocessing;
@@ -80,9 +81,15 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>normalEastAsianFlow, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: normalEastAsianFlow</para>
         /// </summary>
-        [SchemaAttr(0, "normalEastAsianFlow")]
-        [Index(0)]
-        public BooleanValue NormalEastAsianFlow { get; set; }
+        public BooleanValue NormalEastAsianFlow { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WordprocessingShape>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<WordprocessingShape>()
+                           .AddAttribute(0, "normalEastAsianFlow", a => a.NormalEastAsianFlow);
+        }
 
         /// <summary>
         /// <para>NonVisualDrawingProperties.</para>
@@ -169,6 +176,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OfficeArtExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 1, 1)
@@ -241,43 +250,49 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public UInt32Value Id { get; set; }
+        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "name")]
-        [Index(1)]
-        public StringValue Name { get; set; }
+        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>descr</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
-        [SchemaAttr(0, "descr")]
-        [Index(2)]
-        public StringValue Description { get; set; }
+        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>hidden</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        [SchemaAttr(0, "hidden")]
-        [Index(3)]
-        public BooleanValue Hidden { get; set; }
+        public BooleanValue Hidden { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr(0, "title")]
-        [Index(4)]
-        public StringValue Title { get; set; }
+        public StringValue Title { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualDrawingProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<NonVisualDrawingProperties>()
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "descr", a => a.Description)
+                           .AddAttribute(0, "hidden", a => a.Hidden)
+                           .AddAttribute(0, "title", a => a.Title);
+        }
 
         /// <summary>
         /// <para>HyperlinkOnClick.</para>
@@ -384,9 +399,15 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>Text Box</para>
         /// <para>Represents the following attribute in the schema: txBox</para>
         /// </summary>
-        [SchemaAttr(0, "txBox")]
-        [Index(0)]
-        public BooleanValue TextBox { get; set; }
+        public BooleanValue TextBox { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualDrawingShapeProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<NonVisualDrawingShapeProperties>()
+                           .AddAttribute(0, "txBox", a => a.TextBox);
+        }
 
         /// <summary>
         /// <para>Shape Locks.</para>
@@ -478,6 +499,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         public NonVisualConnectorProperties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualConnectorProperties>();
 
         /// <summary>
         /// <para>Connection Shape Locks.</para>
@@ -624,10 +647,18 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "bwMode")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapeProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ShapeProperties>()
+                           .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         /// <summary>
         /// <para>2D Transform for Individual Objects.</para>
@@ -737,6 +768,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         public ShapeStyle(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapeStyle>();
 
         /// <summary>
         /// <para>LineReference.</para>
@@ -857,9 +890,15 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public UInt16Value Id { get; set; }
+        public UInt16Value Id { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextBoxInfo2>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TextBoxInfo2>()
+                           .AddAttribute(0, "id", a => a.Id);
+        }
 
         /// <summary>
         /// <para>TextBoxContent.</para>
@@ -950,19 +989,28 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public UInt16Value Id { get; set; }
+        public UInt16Value Id { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>seq, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: seq</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "seq")]
-        [Index(1)]
-        public UInt16Value Sequence { get; set; }
+        public UInt16Value Sequence { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LinkedTextBox>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<LinkedTextBox>()
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "seq", a => a.Sequence, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <summary>
         /// <para>OfficeArtExtensionList.</para>
@@ -1053,160 +1101,162 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
-        [SchemaAttr(0, "rot")]
-        [Index(0)]
-        public Int32Value Rotation { get; set; }
+        public Int32Value Rotation { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Paragraph Spacing</para>
         /// <para>Represents the following attribute in the schema: spcFirstLastPara</para>
         /// </summary>
-        [SchemaAttr(0, "spcFirstLastPara")]
-        [Index(1)]
-        public BooleanValue UseParagraphSpacing { get; set; }
+        public BooleanValue UseParagraphSpacing { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Text Vertical Overflow</para>
         /// <para>Represents the following attribute in the schema: vertOverflow</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "vertOverflow")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues> VerticalOverflow { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues> VerticalOverflow { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Text Horizontal Overflow</para>
         /// <para>Represents the following attribute in the schema: horzOverflow</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "horzOverflow")]
-        [Index(3)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues> HorizontalOverflow { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues> HorizontalOverflow { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Vertical Text</para>
         /// <para>Represents the following attribute in the schema: vert</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "vert")]
-        [Index(4)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues> Vertical { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues> Vertical { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Text Wrapping Type</para>
         /// <para>Represents the following attribute in the schema: wrap</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "wrap")]
-        [Index(5)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues> Wrap { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues> Wrap { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Left Inset</para>
         /// <para>Represents the following attribute in the schema: lIns</para>
         /// </summary>
-        [SchemaAttr(0, "lIns")]
-        [Index(6)]
-        public Int32Value LeftInset { get; set; }
+        public Int32Value LeftInset { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Top Inset</para>
         /// <para>Represents the following attribute in the schema: tIns</para>
         /// </summary>
-        [SchemaAttr(0, "tIns")]
-        [Index(7)]
-        public Int32Value TopInset { get; set; }
+        public Int32Value TopInset { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Right Inset</para>
         /// <para>Represents the following attribute in the schema: rIns</para>
         /// </summary>
-        [SchemaAttr(0, "rIns")]
-        [Index(8)]
-        public Int32Value RightInset { get; set; }
+        public Int32Value RightInset { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Bottom Inset</para>
         /// <para>Represents the following attribute in the schema: bIns</para>
         /// </summary>
-        [SchemaAttr(0, "bIns")]
-        [Index(9)]
-        public Int32Value BottomInset { get; set; }
+        public Int32Value BottomInset { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Number of Columns</para>
         /// <para>Represents the following attribute in the schema: numCol</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 1L, MaxInclusive = 16L)]
-        [SchemaAttr(0, "numCol")]
-        [Index(10)]
-        public Int32Value ColumnCount { get; set; }
+        public Int32Value ColumnCount { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Space Between Columns</para>
         /// <para>Represents the following attribute in the schema: spcCol</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L)]
-        [SchemaAttr(0, "spcCol")]
-        [Index(11)]
-        public Int32Value ColumnSpacing { get; set; }
+        public Int32Value ColumnSpacing { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Columns Right-To-Left</para>
         /// <para>Represents the following attribute in the schema: rtlCol</para>
         /// </summary>
-        [SchemaAttr(0, "rtlCol")]
-        [Index(12)]
-        public BooleanValue RightToLeftColumns { get; set; }
+        public BooleanValue RightToLeftColumns { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>From WordArt</para>
         /// <para>Represents the following attribute in the schema: fromWordArt</para>
         /// </summary>
-        [SchemaAttr(0, "fromWordArt")]
-        [Index(13)]
-        public BooleanValue FromWordArt { get; set; }
+        public BooleanValue FromWordArt { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Anchor</para>
         /// <para>Represents the following attribute in the schema: anchor</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "anchor")]
-        [Index(14)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues> Anchor { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues> Anchor { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Anchor Center</para>
         /// <para>Represents the following attribute in the schema: anchorCtr</para>
         /// </summary>
-        [SchemaAttr(0, "anchorCtr")]
-        [Index(15)]
-        public BooleanValue AnchorCenter { get; set; }
+        public BooleanValue AnchorCenter { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Force Anti-Alias</para>
         /// <para>Represents the following attribute in the schema: forceAA</para>
         /// </summary>
-        [SchemaAttr(0, "forceAA")]
-        [Index(16)]
-        public BooleanValue ForceAntiAlias { get; set; }
+        public BooleanValue ForceAntiAlias { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Text Upright</para>
         /// <para>Represents the following attribute in the schema: upright</para>
         /// </summary>
-        [SchemaAttr(0, "upright")]
-        [Index(17)]
-        public BooleanValue UpRight { get; set; }
+        public BooleanValue UpRight { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Compatible Line Spacing</para>
         /// <para>Represents the following attribute in the schema: compatLnSpc</para>
         /// </summary>
-        [SchemaAttr(0, "compatLnSpc")]
-        [Index(18)]
-        public BooleanValue CompatibleLineSpacing { get; set; }
+        public BooleanValue CompatibleLineSpacing { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextBodyProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TextBodyProperties>()
+                           .AddAttribute(0, "rot", a => a.Rotation)
+                           .AddAttribute(0, "spcFirstLastPara", a => a.UseParagraphSpacing)
+                           .AddAttribute(0, "vertOverflow", a => a.VerticalOverflow, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "horzOverflow", a => a.HorizontalOverflow, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "vert", a => a.Vertical, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "wrap", a => a.Wrap, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "lIns", a => a.LeftInset)
+                           .AddAttribute(0, "tIns", a => a.TopInset)
+                           .AddAttribute(0, "rIns", a => a.RightInset)
+                           .AddAttribute(0, "bIns", a => a.BottomInset)
+                           .AddAttribute(0, "numCol", a => a.ColumnCount, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (16L) });
+                           })
+                           .AddAttribute(0, "spcCol", a => a.ColumnSpacing, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+                           })
+                           .AddAttribute(0, "rtlCol", a => a.RightToLeftColumns)
+                           .AddAttribute(0, "fromWordArt", a => a.FromWordArt)
+                           .AddAttribute(0, "anchor", a => a.Anchor, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "anchorCtr", a => a.AnchorCenter)
+                           .AddAttribute(0, "forceAA", a => a.ForceAntiAlias)
+                           .AddAttribute(0, "upright", a => a.UpRight)
+                           .AddAttribute(0, "compatLnSpc", a => a.CompatibleLineSpacing);
+        }
 
         /// <summary>
         /// <para>Preset Text Shape.</para>

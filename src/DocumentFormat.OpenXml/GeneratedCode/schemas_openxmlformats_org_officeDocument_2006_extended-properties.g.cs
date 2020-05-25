@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.VariantTypes;
@@ -110,6 +111,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         public Properties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Properties>();
 
         /// <summary>
         /// <para>Name of Document Template.</para>
@@ -559,6 +562,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new StringValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Template>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Template>(deep);
     }
@@ -591,6 +596,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             return new StringValue { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Manager>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Manager>(deep);
@@ -625,6 +632,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new StringValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Company>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Company>(deep);
     }
@@ -657,6 +666,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             return new StringValue { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PresentationFormat>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PresentationFormat>(deep);
@@ -691,6 +702,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new StringValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HyperlinkBase>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyperlinkBase>(deep);
     }
@@ -724,6 +737,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new StringValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Application>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Application>(deep);
     }
@@ -756,6 +771,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             return new StringValue { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ApplicationVersion>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ApplicationVersion>(deep);
@@ -791,6 +808,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new Int32Value { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Pages>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Pages>(deep);
     }
@@ -824,6 +843,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             return new Int32Value { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Words>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Words>(deep);
@@ -859,6 +880,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new Int32Value { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Characters>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Characters>(deep);
     }
@@ -892,6 +915,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             return new Int32Value { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Lines>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Lines>(deep);
@@ -927,6 +952,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new Int32Value { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Paragraphs>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Paragraphs>(deep);
     }
@@ -960,6 +987,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             return new Int32Value { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Slides>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Slides>(deep);
@@ -995,6 +1024,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new Int32Value { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Notes>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Notes>(deep);
     }
@@ -1028,6 +1059,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             return new Int32Value { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TotalTime>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TotalTime>(deep);
@@ -1063,6 +1096,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new Int32Value { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HiddenSlides>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HiddenSlides>(deep);
     }
@@ -1096,6 +1131,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             return new Int32Value { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MultimediaClips>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MultimediaClips>(deep);
@@ -1131,6 +1168,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new Int32Value { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CharactersWithSpaces>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CharactersWithSpaces>(deep);
     }
@@ -1164,6 +1203,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             return new Int32Value { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocumentSecurity>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocumentSecurity>(deep);
@@ -1199,6 +1240,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new BooleanValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ScaleCrop>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScaleCrop>(deep);
     }
@@ -1232,6 +1275,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             return new BooleanValue { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LinksUpToDate>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LinksUpToDate>(deep);
@@ -1267,6 +1312,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new BooleanValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SharedDocument>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SharedDocument>(deep);
     }
@@ -1300,6 +1347,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             return new BooleanValue { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HyperlinksChanged>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyperlinksChanged>(deep);
@@ -1350,6 +1399,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         public HeadingPairs(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HeadingPairs>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1407,6 +1458,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         public HyperlinkList(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HyperlinkList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1525,6 +1578,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TitlesOfParts>();
+
         /// <summary>
         /// <para>Vector.</para>
         /// <para>Represents the following element tag in the schema: vt:vector.</para>
@@ -1595,6 +1650,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         public DigitalSignature(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DigitalSignature>();
 
         /// <summary>
         /// <para>Binary Blob.</para>

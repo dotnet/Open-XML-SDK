@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
@@ -58,6 +59,8 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AdditionalCharacteristicsInfo>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.AdditionalCharacteristics.Characteristic), 0, 0)
@@ -89,37 +92,48 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
         /// <para>Name of Characteristic</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "name")]
-        [Index(0)]
-        public StringValue Name { get; set; }
+        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Relationship of Value to Name</para>
         /// <para>Represents the following attribute in the schema: relation</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "relation")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.AdditionalCharacteristics.RelationValues> Relation { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.AdditionalCharacteristics.RelationValues> Relation { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.AdditionalCharacteristics.RelationValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Characteristic Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(2)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Characteristic Grammar</para>
         /// <para>Represents the following attribute in the schema: vocabulary</para>
         /// </summary>
-        [StringValidator(IsUri = true)]
-        [SchemaAttr(0, "vocabulary")]
-        [Index(3)]
-        public StringValue Vocabulary { get; set; }
+        public StringValue Vocabulary { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Characteristic>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Characteristic>()
+                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "relation", a => a.Relation, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "vocabulary", a => a.Vocabulary, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Characteristic>(deep);

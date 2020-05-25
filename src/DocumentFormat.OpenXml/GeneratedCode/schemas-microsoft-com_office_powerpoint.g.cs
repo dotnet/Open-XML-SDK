@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
@@ -26,6 +27,8 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
         public InkAnnotationFlag() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<InkAnnotationFlag>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<InkAnnotationFlag>(deep);
@@ -51,9 +54,15 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
         /// <para>Text Reference</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextData>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TextData>()
+                           .AddAttribute(0, "id", a => a.Id);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextData>(deep);

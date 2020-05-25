@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Office.MetaAttributes;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
@@ -59,9 +60,7 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         /// <remark>
         /// xmlns:ct=http://schemas.microsoft.com/office/2006/metadata/contentType
         /// </remark>
-        [SchemaAttr(38, "_")]
-        [Index(0)]
-        public StringValue UnderScore { get; set; }
+        public StringValue UnderScore { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>_</para>
@@ -70,9 +69,7 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         /// <remark>
         /// xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
         /// </remark>
-        [SchemaAttr(41, "_")]
-        [Index(1)]
-        public StringValue ReservedAttributeString { get; set; }
+        public StringValue ReservedAttributeString { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>contentTypeName</para>
@@ -81,9 +78,7 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         /// <remark>
         /// xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
         /// </remark>
-        [SchemaAttr(41, "contentTypeName")]
-        [Index(2)]
-        public StringValue ContentTypeName { get; set; }
+        public StringValue ContentTypeName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>contentTypeID</para>
@@ -92,10 +87,7 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         /// <remark>
         /// xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
         /// </remark>
-        [StringValidator(Pattern = "0x([0-9A-Fa-f][1-9A-Fa-f]|[1-9A-Fa-f][0-9A-Fa-f]|00[0-9A-Fa-f]{32})*", MinLength = 2L, MaxLength = 1026L)]
-        [SchemaAttr(41, "contentTypeID")]
-        [Index(3)]
-        public StringValue ContentTypeID { get; set; }
+        public StringValue ContentTypeID { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>contentTypeVersion</para>
@@ -104,10 +96,7 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         /// <remark>
         /// xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
         /// </remark>
-        [NumberValidator(MinInclusive = 0L)]
-        [SchemaAttr(41, "contentTypeVersion")]
-        [Index(4)]
-        public Int32Value ContentTypeVersion { get; set; }
+        public Int32Value ContentTypeVersion { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>contentTypeDescription</para>
@@ -116,9 +105,7 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         /// <remark>
         /// xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
         /// </remark>
-        [SchemaAttr(41, "contentTypeDescription")]
-        [Index(5)]
-        public StringValue ContentTypeDescription { get; set; }
+        public StringValue ContentTypeDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>contentTypeScope</para>
@@ -127,9 +114,7 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         /// <remark>
         /// xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
         /// </remark>
-        [SchemaAttr(41, "contentTypeScope")]
-        [Index(6)]
-        public StringValue ContentTypeScope { get; set; }
+        public StringValue ContentTypeScope { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>versionID</para>
@@ -138,9 +123,28 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         /// <remark>
         /// xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
         /// </remark>
-        [SchemaAttr(41, "versionID")]
-        [Index(7)]
-        public StringValue VersionID { get; set; }
+        public StringValue VersionID { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ContentTypeSchema>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ContentTypeSchema>()
+                           .AddAttribute(38, "_", a => a.UnderScore)
+                           .AddAttribute(41, "_", a => a.ReservedAttributeString)
+                           .AddAttribute(41, "contentTypeName", a => a.ContentTypeName)
+                           .AddAttribute(41, "contentTypeID", a => a.ContentTypeID, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("0x([0-9A-Fa-f][1-9A-Fa-f]|[1-9A-Fa-f][0-9A-Fa-f]|00[0-9A-Fa-f]{32})*"), MinLength = (2L), MaxLength = (1026L) });
+                           })
+                           .AddAttribute(41, "contentTypeVersion", a => a.ContentTypeVersion, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+                           })
+                           .AddAttribute(41, "contentTypeDescription", a => a.ContentTypeDescription)
+                           .AddAttribute(41, "contentTypeScope", a => a.ContentTypeScope)
+                           .AddAttribute(41, "versionID", a => a.VersionID);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {

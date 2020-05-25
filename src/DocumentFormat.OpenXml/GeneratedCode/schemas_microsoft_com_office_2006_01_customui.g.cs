@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
@@ -31,231 +32,256 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idQ")]
-        [Index(0)]
-        public StringValue IdQ { get; set; }
+        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idMso")]
-        [Index(1)]
-        public StringValue IdMso { get; set; }
+        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "tag")]
-        [Index(2)]
-        public StringValue Tag { get; set; }
+        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "image")]
-        [Index(3)]
-        public StringValue Image { get; set; }
+        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "imageMso")]
-        [Index(4)]
-        public StringValue ImageMso { get; set; }
+        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getImage")]
-        [Index(5)]
-        public StringValue GetImage { get; set; }
+        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "screentip")]
-        [Index(6)]
-        public StringValue Screentip { get; set; }
+        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getScreentip")]
-        [Index(7)]
-        public StringValue GetScreentip { get; set; }
+        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "supertip")]
-        [Index(8)]
-        public StringValue Supertip { get; set; }
+        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSupertip")]
-        [Index(9)]
-        public StringValue GetSupertip { get; set; }
+        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr(0, "enabled")]
-        [Index(10)]
-        public BooleanValue Enabled { get; set; }
+        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getEnabled")]
-        [Index(11)]
-        public StringValue GetEnabled { get; set; }
+        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "label")]
-        [Index(12)]
-        public StringValue Label { get; set; }
+        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getLabel")]
-        [Index(13)]
-        public StringValue GetLabel { get; set; }
+        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterMso")]
-        [Index(14)]
-        public StringValue InsertAfterMso { get; set; }
+        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeMso")]
-        [Index(15)]
-        public StringValue InsertBeforeMso { get; set; }
+        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterQ")]
-        [Index(16)]
-        public StringValue InsertAfterQ { get; set; }
+        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeQ")]
-        [Index(17)]
-        public StringValue InsertBeforeQ { get; set; }
+        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr(0, "visible")]
-        [Index(18)]
-        public BooleanValue Visible { get; set; }
+        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getVisible")]
-        [Index(19)]
-        public StringValue GetVisible { get; set; }
+        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [StringValidator(IsToken = true, MinLength = 1L, MaxLength = 3L)]
-        [SchemaAttr(0, "keytip")]
-        [Index(20)]
-        public StringValue Keytip { get; set; }
+        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getKeytip")]
-        [Index(21)]
-        public StringValue GetKeytip { get; set; }
+        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr(0, "showLabel")]
-        [Index(22)]
-        public BooleanValue ShowLabel { get; set; }
+        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowLabel")]
-        [Index(23)]
-        public StringValue GetShowLabel { get; set; }
+        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr(0, "showImage")]
-        [Index(24)]
-        public BooleanValue ShowImage { get; set; }
+        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowImage")]
-        [Index(25)]
-        public StringValue GetShowImage { get; set; }
+        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UnsizedControlClone>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<UnsizedControlClone>()
+                           .AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "enabled", a => a.Enabled)
+                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "visible", a => a.Visible)
+                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                           })
+                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
+                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showImage", a => a.ShowImage)
+                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UnsizedControlClone>(deep);
@@ -281,267 +307,296 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "onAction")]
-        [Index(0)]
-        public StringValue OnAction { get; set; }
+        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr(0, "enabled")]
-        [Index(1)]
-        public BooleanValue Enabled { get; set; }
+        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getEnabled")]
-        [Index(2)]
-        public StringValue GetEnabled { get; set; }
+        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 4096L)]
-        [SchemaAttr(0, "description")]
-        [Index(3)]
-        public StringValue Description { get; set; }
+        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getDescription")]
-        [Index(4)]
-        public StringValue GetDescription { get; set; }
+        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "image")]
-        [Index(5)]
-        public StringValue Image { get; set; }
+        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "imageMso")]
-        [Index(6)]
-        public StringValue ImageMso { get; set; }
+        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getImage")]
-        [Index(7)]
-        public StringValue GetImage { get; set; }
+        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "id")]
-        [Index(8)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idQ")]
-        [Index(9)]
-        public StringValue IdQ { get; set; }
+        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idMso")]
-        [Index(10)]
-        public StringValue IdMso { get; set; }
+        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "tag")]
-        [Index(11)]
-        public StringValue Tag { get; set; }
+        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "screentip")]
-        [Index(12)]
-        public StringValue Screentip { get; set; }
+        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getScreentip")]
-        [Index(13)]
-        public StringValue GetScreentip { get; set; }
+        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "supertip")]
-        [Index(14)]
-        public StringValue Supertip { get; set; }
+        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSupertip")]
-        [Index(15)]
-        public StringValue GetSupertip { get; set; }
+        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "label")]
-        [Index(16)]
-        public StringValue Label { get; set; }
+        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getLabel")]
-        [Index(17)]
-        public StringValue GetLabel { get; set; }
+        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterMso")]
-        [Index(18)]
-        public StringValue InsertAfterMso { get; set; }
+        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeMso")]
-        [Index(19)]
-        public StringValue InsertBeforeMso { get; set; }
+        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterQ")]
-        [Index(20)]
-        public StringValue InsertAfterQ { get; set; }
+        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeQ")]
-        [Index(21)]
-        public StringValue InsertBeforeQ { get; set; }
+        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr(0, "visible")]
-        [Index(22)]
-        public BooleanValue Visible { get; set; }
+        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getVisible")]
-        [Index(23)]
-        public StringValue GetVisible { get; set; }
+        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [StringValidator(IsToken = true, MinLength = 1L, MaxLength = 3L)]
-        [SchemaAttr(0, "keytip")]
-        [Index(24)]
-        public StringValue Keytip { get; set; }
+        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getKeytip")]
-        [Index(25)]
-        public StringValue GetKeytip { get; set; }
+        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr(0, "showLabel")]
-        [Index(26)]
-        public BooleanValue ShowLabel { get; set; }
+        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowLabel")]
-        [Index(27)]
-        public StringValue GetShowLabel { get; set; }
+        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr(0, "showImage")]
-        [Index(28)]
-        public BooleanValue ShowImage { get; set; }
+        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowImage")]
-        [Index(29)]
-        public StringValue GetShowImage { get; set; }
+        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UnsizedButton>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<UnsizedButton>()
+                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "enabled", a => a.Enabled)
+                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+                           })
+                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "visible", a => a.Visible)
+                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                           })
+                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
+                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showImage", a => a.ShowImage)
+                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UnsizedButton>(deep);
@@ -567,215 +622,242 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getPressed</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getPressed")]
-        [Index(0)]
-        public StringValue GetPressed { get; set; }
+        public StringValue GetPressed { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "onAction")]
-        [Index(1)]
-        public StringValue OnAction { get; set; }
+        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr(0, "enabled")]
-        [Index(2)]
-        public BooleanValue Enabled { get; set; }
+        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getEnabled")]
-        [Index(3)]
-        public StringValue GetEnabled { get; set; }
+        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 4096L)]
-        [SchemaAttr(0, "description")]
-        [Index(4)]
-        public StringValue Description { get; set; }
+        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getDescription")]
-        [Index(5)]
-        public StringValue GetDescription { get; set; }
+        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "id")]
-        [Index(6)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idQ")]
-        [Index(7)]
-        public StringValue IdQ { get; set; }
+        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idMso")]
-        [Index(8)]
-        public StringValue IdMso { get; set; }
+        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "tag")]
-        [Index(9)]
-        public StringValue Tag { get; set; }
+        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "screentip")]
-        [Index(10)]
-        public StringValue Screentip { get; set; }
+        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getScreentip")]
-        [Index(11)]
-        public StringValue GetScreentip { get; set; }
+        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "supertip")]
-        [Index(12)]
-        public StringValue Supertip { get; set; }
+        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSupertip")]
-        [Index(13)]
-        public StringValue GetSupertip { get; set; }
+        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "label")]
-        [Index(14)]
-        public StringValue Label { get; set; }
+        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getLabel")]
-        [Index(15)]
-        public StringValue GetLabel { get; set; }
+        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterMso")]
-        [Index(16)]
-        public StringValue InsertAfterMso { get; set; }
+        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeMso")]
-        [Index(17)]
-        public StringValue InsertBeforeMso { get; set; }
+        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterQ")]
-        [Index(18)]
-        public StringValue InsertAfterQ { get; set; }
+        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeQ")]
-        [Index(19)]
-        public StringValue InsertBeforeQ { get; set; }
+        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr(0, "visible")]
-        [Index(20)]
-        public BooleanValue Visible { get; set; }
+        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getVisible")]
-        [Index(21)]
-        public StringValue GetVisible { get; set; }
+        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [StringValidator(IsToken = true, MinLength = 1L, MaxLength = 3L)]
-        [SchemaAttr(0, "keytip")]
-        [Index(22)]
-        public StringValue Keytip { get; set; }
+        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getKeytip")]
-        [Index(23)]
-        public StringValue GetKeytip { get; set; }
+        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CheckBox>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<CheckBox>()
+                           .AddAttribute(0, "getPressed", a => a.GetPressed, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "enabled", a => a.Enabled)
+                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+                           })
+                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "visible", a => a.Visible)
+                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                           })
+                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CheckBox>(deep);
@@ -834,426 +916,467 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 4096L)]
-        [SchemaAttr(0, "description")]
-        [Index(0)]
-        public StringValue Description { get; set; }
+        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getDescription")]
-        [Index(1)]
-        public StringValue GetDescription { get; set; }
+        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>invalidateContentOnDrop</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
-        [SchemaAttr(0, "invalidateContentOnDrop")]
-        [Index(2)]
-        public BooleanValue InvalidateContentOnDrop { get; set; }
+        public BooleanValue InvalidateContentOnDrop { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>columns</para>
         /// <para>Represents the following attribute in the schema: columns</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 1L, MaxInclusive = 1024L, IsPositive = true)]
-        [SchemaAttr(0, "columns")]
-        [Index(3)]
-        public IntegerValue Columns { get; set; }
+        public IntegerValue Columns { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>rows</para>
         /// <para>Represents the following attribute in the schema: rows</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 1L, MaxInclusive = 1024L, IsPositive = true)]
-        [SchemaAttr(0, "rows")]
-        [Index(4)]
-        public IntegerValue Rows { get; set; }
+        public IntegerValue Rows { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>itemWidth</para>
         /// <para>Represents the following attribute in the schema: itemWidth</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 1L, MaxInclusive = 4096L, IsPositive = true)]
-        [SchemaAttr(0, "itemWidth")]
-        [Index(5)]
-        public IntegerValue ItemWidth { get; set; }
+        public IntegerValue ItemWidth { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>itemHeight</para>
         /// <para>Represents the following attribute in the schema: itemHeight</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 1L, MaxInclusive = 4096L, IsPositive = true)]
-        [SchemaAttr(0, "itemHeight")]
-        [Index(6)]
-        public IntegerValue ItemHeight { get; set; }
+        public IntegerValue ItemHeight { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getItemWidth</para>
         /// <para>Represents the following attribute in the schema: getItemWidth</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getItemWidth")]
-        [Index(7)]
-        public StringValue GetItemWidth { get; set; }
+        public StringValue GetItemWidth { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getItemHeight</para>
         /// <para>Represents the following attribute in the schema: getItemHeight</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getItemHeight")]
-        [Index(8)]
-        public StringValue GetItemHeight { get; set; }
+        public StringValue GetItemHeight { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showItemLabel</para>
         /// <para>Represents the following attribute in the schema: showItemLabel</para>
         /// </summary>
-        [SchemaAttr(0, "showItemLabel")]
-        [Index(9)]
-        public BooleanValue ShowItemLabel { get; set; }
+        public BooleanValue ShowItemLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "onAction")]
-        [Index(10)]
-        public StringValue OnAction { get; set; }
+        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr(0, "enabled")]
-        [Index(11)]
-        public BooleanValue Enabled { get; set; }
+        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getEnabled")]
-        [Index(12)]
-        public StringValue GetEnabled { get; set; }
+        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "image")]
-        [Index(13)]
-        public StringValue Image { get; set; }
+        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "imageMso")]
-        [Index(14)]
-        public StringValue ImageMso { get; set; }
+        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getImage")]
-        [Index(15)]
-        public StringValue GetImage { get; set; }
+        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showItemImage</para>
         /// <para>Represents the following attribute in the schema: showItemImage</para>
         /// </summary>
-        [SchemaAttr(0, "showItemImage")]
-        [Index(16)]
-        public BooleanValue ShowItemImage { get; set; }
+        public BooleanValue ShowItemImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getItemCount</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getItemCount")]
-        [Index(17)]
-        public StringValue GetItemCount { get; set; }
+        public StringValue GetItemCount { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getItemLabel</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getItemLabel")]
-        [Index(18)]
-        public StringValue GetItemLabel { get; set; }
+        public StringValue GetItemLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getItemScreentip</para>
         /// <para>Represents the following attribute in the schema: getItemScreentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getItemScreentip")]
-        [Index(19)]
-        public StringValue GetItemScreentip { get; set; }
+        public StringValue GetItemScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getItemSupertip</para>
         /// <para>Represents the following attribute in the schema: getItemSupertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getItemSupertip")]
-        [Index(20)]
-        public StringValue GetItemSupertip { get; set; }
+        public StringValue GetItemSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getItemImage</para>
         /// <para>Represents the following attribute in the schema: getItemImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getItemImage")]
-        [Index(21)]
-        public StringValue GetItemImage { get; set; }
+        public StringValue GetItemImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getItemID</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getItemID")]
-        [Index(22)]
-        public StringValue GetItemID { get; set; }
+        public StringValue GetItemID { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>sizeString</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "sizeString")]
-        [Index(23)]
-        public StringValue SizeString { get; set; }
+        public StringValue SizeString { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSelectedItemID</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemID</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSelectedItemID")]
-        [Index(24)]
-        public StringValue GetSelectedItemID { get; set; }
+        public StringValue GetSelectedItemID { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSelectedItemIndex</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemIndex</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSelectedItemIndex")]
-        [Index(25)]
-        public StringValue GetSelectedItemIndex { get; set; }
+        public StringValue GetSelectedItemIndex { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "id")]
-        [Index(26)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idQ")]
-        [Index(27)]
-        public StringValue IdQ { get; set; }
+        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idMso")]
-        [Index(28)]
-        public StringValue IdMso { get; set; }
+        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "tag")]
-        [Index(29)]
-        public StringValue Tag { get; set; }
+        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "screentip")]
-        [Index(30)]
-        public StringValue Screentip { get; set; }
+        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getScreentip")]
-        [Index(31)]
-        public StringValue GetScreentip { get; set; }
+        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "supertip")]
-        [Index(32)]
-        public StringValue Supertip { get; set; }
+        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSupertip")]
-        [Index(33)]
-        public StringValue GetSupertip { get; set; }
+        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "label")]
-        [Index(34)]
-        public StringValue Label { get; set; }
+        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getLabel")]
-        [Index(35)]
-        public StringValue GetLabel { get; set; }
+        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterMso")]
-        [Index(36)]
-        public StringValue InsertAfterMso { get; set; }
+        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeMso")]
-        [Index(37)]
-        public StringValue InsertBeforeMso { get; set; }
+        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterQ")]
-        [Index(38)]
-        public StringValue InsertAfterQ { get; set; }
+        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeQ")]
-        [Index(39)]
-        public StringValue InsertBeforeQ { get; set; }
+        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr(0, "visible")]
-        [Index(40)]
-        public BooleanValue Visible { get; set; }
+        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getVisible")]
-        [Index(41)]
-        public StringValue GetVisible { get; set; }
+        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [StringValidator(IsToken = true, MinLength = 1L, MaxLength = 3L)]
-        [SchemaAttr(0, "keytip")]
-        [Index(42)]
-        public StringValue Keytip { get; set; }
+        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getKeytip")]
-        [Index(43)]
-        public StringValue GetKeytip { get; set; }
+        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr(0, "showLabel")]
-        [Index(44)]
-        public BooleanValue ShowLabel { get; set; }
+        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowLabel")]
-        [Index(45)]
-        public StringValue GetShowLabel { get; set; }
+        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr(0, "showImage")]
-        [Index(46)]
-        public BooleanValue ShowImage { get; set; }
+        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowImage")]
-        [Index(47)]
-        public StringValue GetShowImage { get; set; }
+        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UnsizedGallery>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<UnsizedGallery>()
+                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+                           })
+                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "invalidateContentOnDrop", a => a.InvalidateContentOnDrop)
+                           .AddAttribute(0, "columns", a => a.Columns, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (1024L), IsPositive = (true) });
+                           })
+                           .AddAttribute(0, "rows", a => a.Rows, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (1024L), IsPositive = (true) });
+                           })
+                           .AddAttribute(0, "itemWidth", a => a.ItemWidth, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (4096L), IsPositive = (true) });
+                           })
+                           .AddAttribute(0, "itemHeight", a => a.ItemHeight, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (4096L), IsPositive = (true) });
+                           })
+                           .AddAttribute(0, "getItemWidth", a => a.GetItemWidth, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getItemHeight", a => a.GetItemHeight, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showItemLabel", a => a.ShowItemLabel)
+                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "enabled", a => a.Enabled)
+                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showItemImage", a => a.ShowItemImage)
+                           .AddAttribute(0, "getItemCount", a => a.GetItemCount, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getItemLabel", a => a.GetItemLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getItemScreentip", a => a.GetItemScreentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getItemSupertip", a => a.GetItemSupertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getItemImage", a => a.GetItemImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getItemID", a => a.GetItemID, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "sizeString", a => a.SizeString, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getSelectedItemID", a => a.GetSelectedItemID, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getSelectedItemIndex", a => a.GetSelectedItemIndex, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "visible", a => a.Visible)
+                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                           })
+                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
+                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showImage", a => a.ShowImage)
+                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1293,276 +1416,306 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getPressed</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getPressed")]
-        [Index(0)]
-        public StringValue GetPressed { get; set; }
+        public StringValue GetPressed { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "onAction")]
-        [Index(1)]
-        public StringValue OnAction { get; set; }
+        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr(0, "enabled")]
-        [Index(2)]
-        public BooleanValue Enabled { get; set; }
+        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getEnabled")]
-        [Index(3)]
-        public StringValue GetEnabled { get; set; }
+        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 4096L)]
-        [SchemaAttr(0, "description")]
-        [Index(4)]
-        public StringValue Description { get; set; }
+        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getDescription")]
-        [Index(5)]
-        public StringValue GetDescription { get; set; }
+        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "image")]
-        [Index(6)]
-        public StringValue Image { get; set; }
+        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "imageMso")]
-        [Index(7)]
-        public StringValue ImageMso { get; set; }
+        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getImage")]
-        [Index(8)]
-        public StringValue GetImage { get; set; }
+        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "id")]
-        [Index(9)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idQ")]
-        [Index(10)]
-        public StringValue IdQ { get; set; }
+        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idMso")]
-        [Index(11)]
-        public StringValue IdMso { get; set; }
+        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "tag")]
-        [Index(12)]
-        public StringValue Tag { get; set; }
+        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "screentip")]
-        [Index(13)]
-        public StringValue Screentip { get; set; }
+        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getScreentip")]
-        [Index(14)]
-        public StringValue GetScreentip { get; set; }
+        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "supertip")]
-        [Index(15)]
-        public StringValue Supertip { get; set; }
+        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSupertip")]
-        [Index(16)]
-        public StringValue GetSupertip { get; set; }
+        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "label")]
-        [Index(17)]
-        public StringValue Label { get; set; }
+        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getLabel")]
-        [Index(18)]
-        public StringValue GetLabel { get; set; }
+        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterMso")]
-        [Index(19)]
-        public StringValue InsertAfterMso { get; set; }
+        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeMso")]
-        [Index(20)]
-        public StringValue InsertBeforeMso { get; set; }
+        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterQ")]
-        [Index(21)]
-        public StringValue InsertAfterQ { get; set; }
+        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeQ")]
-        [Index(22)]
-        public StringValue InsertBeforeQ { get; set; }
+        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr(0, "visible")]
-        [Index(23)]
-        public BooleanValue Visible { get; set; }
+        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getVisible")]
-        [Index(24)]
-        public StringValue GetVisible { get; set; }
+        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [StringValidator(IsToken = true, MinLength = 1L, MaxLength = 3L)]
-        [SchemaAttr(0, "keytip")]
-        [Index(25)]
-        public StringValue Keytip { get; set; }
+        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getKeytip")]
-        [Index(26)]
-        public StringValue GetKeytip { get; set; }
+        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr(0, "showLabel")]
-        [Index(27)]
-        public BooleanValue ShowLabel { get; set; }
+        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowLabel")]
-        [Index(28)]
-        public StringValue GetShowLabel { get; set; }
+        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr(0, "showImage")]
-        [Index(29)]
-        public BooleanValue ShowImage { get; set; }
+        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowImage")]
-        [Index(30)]
-        public StringValue GetShowImage { get; set; }
+        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UnsizedToggleButton>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<UnsizedToggleButton>()
+                           .AddAttribute(0, "getPressed", a => a.GetPressed, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "enabled", a => a.Enabled)
+                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+                           })
+                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "visible", a => a.Visible)
+                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                           })
+                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
+                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showImage", a => a.ShowImage)
+                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UnsizedToggleButton>(deep);
@@ -1588,73 +1741,88 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idQ")]
-        [Index(1)]
-        public StringValue IdQ { get; set; }
+        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterMso")]
-        [Index(2)]
-        public StringValue InsertAfterMso { get; set; }
+        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeMso")]
-        [Index(3)]
-        public StringValue InsertBeforeMso { get; set; }
+        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterQ")]
-        [Index(4)]
-        public StringValue InsertAfterQ { get; set; }
+        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeQ")]
-        [Index(5)]
-        public StringValue InsertBeforeQ { get; set; }
+        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "title")]
-        [Index(6)]
-        public StringValue Title { get; set; }
+        public StringValue Title { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getTitle</para>
         /// <para>Represents the following attribute in the schema: getTitle</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getTitle")]
-        [Index(7)]
-        public StringValue GetTitle { get; set; }
+        public StringValue GetTitle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MenuSeparator>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<MenuSeparator>()
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "title", a => a.Title, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getTitle", a => a.GetTitle, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MenuSeparator>(deep);
@@ -1715,142 +1883,159 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr(0, "enabled")]
-        [Index(0)]
-        public BooleanValue Enabled { get; set; }
+        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getEnabled")]
-        [Index(1)]
-        public StringValue GetEnabled { get; set; }
+        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "id")]
-        [Index(2)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idQ")]
-        [Index(3)]
-        public StringValue IdQ { get; set; }
+        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idMso")]
-        [Index(4)]
-        public StringValue IdMso { get; set; }
+        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "tag")]
-        [Index(5)]
-        public StringValue Tag { get; set; }
+        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterMso")]
-        [Index(6)]
-        public StringValue InsertAfterMso { get; set; }
+        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeMso")]
-        [Index(7)]
-        public StringValue InsertBeforeMso { get; set; }
+        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterQ")]
-        [Index(8)]
-        public StringValue InsertAfterQ { get; set; }
+        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeQ")]
-        [Index(9)]
-        public StringValue InsertBeforeQ { get; set; }
+        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr(0, "visible")]
-        [Index(10)]
-        public BooleanValue Visible { get; set; }
+        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getVisible")]
-        [Index(11)]
-        public StringValue GetVisible { get; set; }
+        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [StringValidator(IsToken = true, MinLength = 1L, MaxLength = 3L)]
-        [SchemaAttr(0, "keytip")]
-        [Index(12)]
-        public StringValue Keytip { get; set; }
+        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getKeytip")]
-        [Index(13)]
-        public StringValue GetKeytip { get; set; }
+        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr(0, "showLabel")]
-        [Index(14)]
-        public BooleanValue ShowLabel { get; set; }
+        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowLabel")]
-        [Index(15)]
-        public StringValue GetShowLabel { get; set; }
+        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UnsizedSplitButton>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<UnsizedSplitButton>()
+                           .AddAttribute(0, "enabled", a => a.Enabled)
+                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "visible", a => a.Visible)
+                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                           })
+                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
+                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1938,266 +2123,293 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>itemSize</para>
         /// <para>Represents the following attribute in the schema: itemSize</para>
         /// </summary>
-        [SchemaAttr(0, "itemSize")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues> ItemSize { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues> ItemSize { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 4096L)]
-        [SchemaAttr(0, "description")]
-        [Index(1)]
-        public StringValue Description { get; set; }
+        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getDescription")]
-        [Index(2)]
-        public StringValue GetDescription { get; set; }
+        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "id")]
-        [Index(3)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idQ")]
-        [Index(4)]
-        public StringValue IdQ { get; set; }
+        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idMso")]
-        [Index(5)]
-        public StringValue IdMso { get; set; }
+        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "tag")]
-        [Index(6)]
-        public StringValue Tag { get; set; }
+        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "image")]
-        [Index(7)]
-        public StringValue Image { get; set; }
+        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "imageMso")]
-        [Index(8)]
-        public StringValue ImageMso { get; set; }
+        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getImage")]
-        [Index(9)]
-        public StringValue GetImage { get; set; }
+        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "screentip")]
-        [Index(10)]
-        public StringValue Screentip { get; set; }
+        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getScreentip")]
-        [Index(11)]
-        public StringValue GetScreentip { get; set; }
+        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "supertip")]
-        [Index(12)]
-        public StringValue Supertip { get; set; }
+        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSupertip")]
-        [Index(13)]
-        public StringValue GetSupertip { get; set; }
+        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr(0, "enabled")]
-        [Index(14)]
-        public BooleanValue Enabled { get; set; }
+        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getEnabled")]
-        [Index(15)]
-        public StringValue GetEnabled { get; set; }
+        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "label")]
-        [Index(16)]
-        public StringValue Label { get; set; }
+        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getLabel")]
-        [Index(17)]
-        public StringValue GetLabel { get; set; }
+        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterMso")]
-        [Index(18)]
-        public StringValue InsertAfterMso { get; set; }
+        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeMso")]
-        [Index(19)]
-        public StringValue InsertBeforeMso { get; set; }
+        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterQ")]
-        [Index(20)]
-        public StringValue InsertAfterQ { get; set; }
+        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeQ")]
-        [Index(21)]
-        public StringValue InsertBeforeQ { get; set; }
+        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr(0, "visible")]
-        [Index(22)]
-        public BooleanValue Visible { get; set; }
+        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getVisible")]
-        [Index(23)]
-        public StringValue GetVisible { get; set; }
+        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [StringValidator(IsToken = true, MinLength = 1L, MaxLength = 3L)]
-        [SchemaAttr(0, "keytip")]
-        [Index(24)]
-        public StringValue Keytip { get; set; }
+        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getKeytip")]
-        [Index(25)]
-        public StringValue GetKeytip { get; set; }
+        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr(0, "showLabel")]
-        [Index(26)]
-        public BooleanValue ShowLabel { get; set; }
+        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowLabel")]
-        [Index(27)]
-        public StringValue GetShowLabel { get; set; }
+        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr(0, "showImage")]
-        [Index(28)]
-        public BooleanValue ShowImage { get; set; }
+        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowImage")]
-        [Index(29)]
-        public StringValue GetShowImage { get; set; }
+        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UnsizedMenu>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<UnsizedMenu>()
+                           .AddAttribute(0, "itemSize", a => a.ItemSize)
+                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+                           })
+                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "enabled", a => a.Enabled)
+                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "visible", a => a.Visible)
+                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                           })
+                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
+                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showImage", a => a.ShowImage)
+                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -2256,276 +2468,304 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 4096L)]
-        [SchemaAttr(0, "description")]
-        [Index(0)]
-        public StringValue Description { get; set; }
+        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getDescription")]
-        [Index(1)]
-        public StringValue GetDescription { get; set; }
+        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "id")]
-        [Index(2)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idQ")]
-        [Index(3)]
-        public StringValue IdQ { get; set; }
+        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idMso")]
-        [Index(4)]
-        public StringValue IdMso { get; set; }
+        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "tag")]
-        [Index(5)]
-        public StringValue Tag { get; set; }
+        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getContent</para>
         /// <para>Represents the following attribute in the schema: getContent</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getContent")]
-        [Index(6)]
-        public StringValue GetContent { get; set; }
+        public StringValue GetContent { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>invalidateContentOnDrop</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
-        [SchemaAttr(0, "invalidateContentOnDrop")]
-        [Index(7)]
-        public BooleanValue InvalidateContentOnDrop { get; set; }
+        public BooleanValue InvalidateContentOnDrop { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "image")]
-        [Index(8)]
-        public StringValue Image { get; set; }
+        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "imageMso")]
-        [Index(9)]
-        public StringValue ImageMso { get; set; }
+        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getImage")]
-        [Index(10)]
-        public StringValue GetImage { get; set; }
+        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "screentip")]
-        [Index(11)]
-        public StringValue Screentip { get; set; }
+        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getScreentip")]
-        [Index(12)]
-        public StringValue GetScreentip { get; set; }
+        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "supertip")]
-        [Index(13)]
-        public StringValue Supertip { get; set; }
+        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSupertip")]
-        [Index(14)]
-        public StringValue GetSupertip { get; set; }
+        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr(0, "enabled")]
-        [Index(15)]
-        public BooleanValue Enabled { get; set; }
+        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getEnabled")]
-        [Index(16)]
-        public StringValue GetEnabled { get; set; }
+        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "label")]
-        [Index(17)]
-        public StringValue Label { get; set; }
+        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getLabel")]
-        [Index(18)]
-        public StringValue GetLabel { get; set; }
+        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterMso")]
-        [Index(19)]
-        public StringValue InsertAfterMso { get; set; }
+        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeMso")]
-        [Index(20)]
-        public StringValue InsertBeforeMso { get; set; }
+        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterQ")]
-        [Index(21)]
-        public StringValue InsertAfterQ { get; set; }
+        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeQ")]
-        [Index(22)]
-        public StringValue InsertBeforeQ { get; set; }
+        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr(0, "visible")]
-        [Index(23)]
-        public BooleanValue Visible { get; set; }
+        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getVisible")]
-        [Index(24)]
-        public StringValue GetVisible { get; set; }
+        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [StringValidator(IsToken = true, MinLength = 1L, MaxLength = 3L)]
-        [SchemaAttr(0, "keytip")]
-        [Index(25)]
-        public StringValue Keytip { get; set; }
+        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getKeytip")]
-        [Index(26)]
-        public StringValue GetKeytip { get; set; }
+        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr(0, "showLabel")]
-        [Index(27)]
-        public BooleanValue ShowLabel { get; set; }
+        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowLabel")]
-        [Index(28)]
-        public StringValue GetShowLabel { get; set; }
+        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr(0, "showImage")]
-        [Index(29)]
-        public BooleanValue ShowImage { get; set; }
+        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowImage")]
-        [Index(30)]
-        public StringValue GetShowImage { get; set; }
+        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UnsizedDynamicMenu>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<UnsizedDynamicMenu>()
+                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+                           })
+                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getContent", a => a.GetContent, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "invalidateContentOnDrop", a => a.InvalidateContentOnDrop)
+                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "enabled", a => a.Enabled)
+                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "visible", a => a.Visible)
+                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                           })
+                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
+                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showImage", a => a.ShowImage)
+                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UnsizedDynamicMenu>(deep);
@@ -2586,142 +2826,159 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr(0, "enabled")]
-        [Index(0)]
-        public BooleanValue Enabled { get; set; }
+        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getEnabled")]
-        [Index(1)]
-        public StringValue GetEnabled { get; set; }
+        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "id")]
-        [Index(2)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idQ")]
-        [Index(3)]
-        public StringValue IdQ { get; set; }
+        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idMso")]
-        [Index(4)]
-        public StringValue IdMso { get; set; }
+        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "tag")]
-        [Index(5)]
-        public StringValue Tag { get; set; }
+        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterMso")]
-        [Index(6)]
-        public StringValue InsertAfterMso { get; set; }
+        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeMso")]
-        [Index(7)]
-        public StringValue InsertBeforeMso { get; set; }
+        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterQ")]
-        [Index(8)]
-        public StringValue InsertAfterQ { get; set; }
+        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeQ")]
-        [Index(9)]
-        public StringValue InsertBeforeQ { get; set; }
+        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr(0, "visible")]
-        [Index(10)]
-        public BooleanValue Visible { get; set; }
+        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getVisible")]
-        [Index(11)]
-        public StringValue GetVisible { get; set; }
+        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [StringValidator(IsToken = true, MinLength = 1L, MaxLength = 3L)]
-        [SchemaAttr(0, "keytip")]
-        [Index(12)]
-        public StringValue Keytip { get; set; }
+        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getKeytip")]
-        [Index(13)]
-        public StringValue GetKeytip { get; set; }
+        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr(0, "showLabel")]
-        [Index(14)]
-        public BooleanValue ShowLabel { get; set; }
+        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowLabel")]
-        [Index(15)]
-        public StringValue GetShowLabel { get; set; }
+        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SplitButtonWithTitle>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SplitButtonWithTitle>()
+                           .AddAttribute(0, "enabled", a => a.Enabled)
+                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "visible", a => a.Visible)
+                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                           })
+                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
+                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -2809,266 +3066,293 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idQ")]
-        [Index(1)]
-        public StringValue IdQ { get; set; }
+        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idMso")]
-        [Index(2)]
-        public StringValue IdMso { get; set; }
+        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "tag")]
-        [Index(3)]
-        public StringValue Tag { get; set; }
+        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>itemSize</para>
         /// <para>Represents the following attribute in the schema: itemSize</para>
         /// </summary>
-        [SchemaAttr(0, "itemSize")]
-        [Index(4)]
-        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues> ItemSize { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues> ItemSize { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "title")]
-        [Index(5)]
-        public StringValue Title { get; set; }
+        public StringValue Title { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getTitle</para>
         /// <para>Represents the following attribute in the schema: getTitle</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getTitle")]
-        [Index(6)]
-        public StringValue GetTitle { get; set; }
+        public StringValue GetTitle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "image")]
-        [Index(7)]
-        public StringValue Image { get; set; }
+        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "imageMso")]
-        [Index(8)]
-        public StringValue ImageMso { get; set; }
+        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getImage")]
-        [Index(9)]
-        public StringValue GetImage { get; set; }
+        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "screentip")]
-        [Index(10)]
-        public StringValue Screentip { get; set; }
+        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getScreentip")]
-        [Index(11)]
-        public StringValue GetScreentip { get; set; }
+        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "supertip")]
-        [Index(12)]
-        public StringValue Supertip { get; set; }
+        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSupertip")]
-        [Index(13)]
-        public StringValue GetSupertip { get; set; }
+        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr(0, "enabled")]
-        [Index(14)]
-        public BooleanValue Enabled { get; set; }
+        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getEnabled")]
-        [Index(15)]
-        public StringValue GetEnabled { get; set; }
+        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "label")]
-        [Index(16)]
-        public StringValue Label { get; set; }
+        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getLabel")]
-        [Index(17)]
-        public StringValue GetLabel { get; set; }
+        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterMso")]
-        [Index(18)]
-        public StringValue InsertAfterMso { get; set; }
+        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeMso")]
-        [Index(19)]
-        public StringValue InsertBeforeMso { get; set; }
+        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterQ")]
-        [Index(20)]
-        public StringValue InsertAfterQ { get; set; }
+        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeQ")]
-        [Index(21)]
-        public StringValue InsertBeforeQ { get; set; }
+        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr(0, "visible")]
-        [Index(22)]
-        public BooleanValue Visible { get; set; }
+        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getVisible")]
-        [Index(23)]
-        public StringValue GetVisible { get; set; }
+        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [StringValidator(IsToken = true, MinLength = 1L, MaxLength = 3L)]
-        [SchemaAttr(0, "keytip")]
-        [Index(24)]
-        public StringValue Keytip { get; set; }
+        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getKeytip")]
-        [Index(25)]
-        public StringValue GetKeytip { get; set; }
+        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr(0, "showLabel")]
-        [Index(26)]
-        public BooleanValue ShowLabel { get; set; }
+        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowLabel")]
-        [Index(27)]
-        public StringValue GetShowLabel { get; set; }
+        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr(0, "showImage")]
-        [Index(28)]
-        public BooleanValue ShowImage { get; set; }
+        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowImage")]
-        [Index(29)]
-        public StringValue GetShowImage { get; set; }
+        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MenuWithTitle>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<MenuWithTitle>()
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "itemSize", a => a.ItemSize)
+                           .AddAttribute(0, "title", a => a.Title, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getTitle", a => a.GetTitle, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "enabled", a => a.Enabled)
+                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "visible", a => a.Visible)
+                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                           })
+                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
+                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showImage", a => a.ShowImage)
+                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -3127,266 +3411,293 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr(0, "size")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSize</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSize")]
-        [Index(1)]
-        public StringValue GetSize { get; set; }
+        public StringValue GetSize { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr(0, "enabled")]
-        [Index(2)]
-        public BooleanValue Enabled { get; set; }
+        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getEnabled")]
-        [Index(3)]
-        public StringValue GetEnabled { get; set; }
+        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 4096L)]
-        [SchemaAttr(0, "description")]
-        [Index(4)]
-        public StringValue Description { get; set; }
+        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getDescription")]
-        [Index(5)]
-        public StringValue GetDescription { get; set; }
+        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "image")]
-        [Index(6)]
-        public StringValue Image { get; set; }
+        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "imageMso")]
-        [Index(7)]
-        public StringValue ImageMso { get; set; }
+        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getImage")]
-        [Index(8)]
-        public StringValue GetImage { get; set; }
+        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idQ")]
-        [Index(9)]
-        public StringValue IdQ { get; set; }
+        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idMso")]
-        [Index(10)]
-        public StringValue IdMso { get; set; }
+        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "tag")]
-        [Index(11)]
-        public StringValue Tag { get; set; }
+        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "screentip")]
-        [Index(12)]
-        public StringValue Screentip { get; set; }
+        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getScreentip")]
-        [Index(13)]
-        public StringValue GetScreentip { get; set; }
+        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "supertip")]
-        [Index(14)]
-        public StringValue Supertip { get; set; }
+        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSupertip")]
-        [Index(15)]
-        public StringValue GetSupertip { get; set; }
+        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "label")]
-        [Index(16)]
-        public StringValue Label { get; set; }
+        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getLabel")]
-        [Index(17)]
-        public StringValue GetLabel { get; set; }
+        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterMso")]
-        [Index(18)]
-        public StringValue InsertAfterMso { get; set; }
+        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeMso")]
-        [Index(19)]
-        public StringValue InsertBeforeMso { get; set; }
+        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterQ")]
-        [Index(20)]
-        public StringValue InsertAfterQ { get; set; }
+        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeQ")]
-        [Index(21)]
-        public StringValue InsertBeforeQ { get; set; }
+        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr(0, "visible")]
-        [Index(22)]
-        public BooleanValue Visible { get; set; }
+        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getVisible")]
-        [Index(23)]
-        public StringValue GetVisible { get; set; }
+        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [StringValidator(IsToken = true, MinLength = 1L, MaxLength = 3L)]
-        [SchemaAttr(0, "keytip")]
-        [Index(24)]
-        public StringValue Keytip { get; set; }
+        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getKeytip")]
-        [Index(25)]
-        public StringValue GetKeytip { get; set; }
+        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr(0, "showLabel")]
-        [Index(26)]
-        public BooleanValue ShowLabel { get; set; }
+        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowLabel")]
-        [Index(27)]
-        public StringValue GetShowLabel { get; set; }
+        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr(0, "showImage")]
-        [Index(28)]
-        public BooleanValue ShowImage { get; set; }
+        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowImage")]
-        [Index(29)]
-        public StringValue GetShowImage { get; set; }
+        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ControlClone>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ControlClone>()
+                           .AddAttribute(0, "size", a => a.Size)
+                           .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "enabled", a => a.Enabled)
+                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+                           })
+                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "visible", a => a.Visible)
+                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                           })
+                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
+                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showImage", a => a.ShowImage)
+                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ControlClone>(deep);
@@ -3412,178 +3723,199 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idQ")]
-        [Index(1)]
-        public StringValue IdQ { get; set; }
+        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idMso")]
-        [Index(2)]
-        public StringValue IdMso { get; set; }
+        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "tag")]
-        [Index(3)]
-        public StringValue Tag { get; set; }
+        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "screentip")]
-        [Index(4)]
-        public StringValue Screentip { get; set; }
+        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getScreentip")]
-        [Index(5)]
-        public StringValue GetScreentip { get; set; }
+        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "supertip")]
-        [Index(6)]
-        public StringValue Supertip { get; set; }
+        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSupertip")]
-        [Index(7)]
-        public StringValue GetSupertip { get; set; }
+        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr(0, "enabled")]
-        [Index(8)]
-        public BooleanValue Enabled { get; set; }
+        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getEnabled")]
-        [Index(9)]
-        public StringValue GetEnabled { get; set; }
+        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "label")]
-        [Index(10)]
-        public StringValue Label { get; set; }
+        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getLabel")]
-        [Index(11)]
-        public StringValue GetLabel { get; set; }
+        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterMso")]
-        [Index(12)]
-        public StringValue InsertAfterMso { get; set; }
+        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeMso")]
-        [Index(13)]
-        public StringValue InsertBeforeMso { get; set; }
+        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterQ")]
-        [Index(14)]
-        public StringValue InsertAfterQ { get; set; }
+        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeQ")]
-        [Index(15)]
-        public StringValue InsertBeforeQ { get; set; }
+        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr(0, "visible")]
-        [Index(16)]
-        public BooleanValue Visible { get; set; }
+        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getVisible")]
-        [Index(17)]
-        public StringValue GetVisible { get; set; }
+        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr(0, "showLabel")]
-        [Index(18)]
-        public BooleanValue ShowLabel { get; set; }
+        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowLabel")]
-        [Index(19)]
-        public StringValue GetShowLabel { get; set; }
+        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextLabel>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TextLabel>()
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "enabled", a => a.Enabled)
+                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "visible", a => a.Visible)
+                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
+                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextLabel>(deep);
@@ -3609,284 +3941,313 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr(0, "size")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSize</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSize")]
-        [Index(1)]
-        public StringValue GetSize { get; set; }
+        public StringValue GetSize { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "onAction")]
-        [Index(2)]
-        public StringValue OnAction { get; set; }
+        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr(0, "enabled")]
-        [Index(3)]
-        public BooleanValue Enabled { get; set; }
+        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getEnabled")]
-        [Index(4)]
-        public StringValue GetEnabled { get; set; }
+        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 4096L)]
-        [SchemaAttr(0, "description")]
-        [Index(5)]
-        public StringValue Description { get; set; }
+        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getDescription")]
-        [Index(6)]
-        public StringValue GetDescription { get; set; }
+        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "image")]
-        [Index(7)]
-        public StringValue Image { get; set; }
+        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "imageMso")]
-        [Index(8)]
-        public StringValue ImageMso { get; set; }
+        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getImage")]
-        [Index(9)]
-        public StringValue GetImage { get; set; }
+        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "id")]
-        [Index(10)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idQ")]
-        [Index(11)]
-        public StringValue IdQ { get; set; }
+        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idMso")]
-        [Index(12)]
-        public StringValue IdMso { get; set; }
+        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "tag")]
-        [Index(13)]
-        public StringValue Tag { get; set; }
+        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "screentip")]
-        [Index(14)]
-        public StringValue Screentip { get; set; }
+        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getScreentip")]
-        [Index(15)]
-        public StringValue GetScreentip { get; set; }
+        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "supertip")]
-        [Index(16)]
-        public StringValue Supertip { get; set; }
+        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSupertip")]
-        [Index(17)]
-        public StringValue GetSupertip { get; set; }
+        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "label")]
-        [Index(18)]
-        public StringValue Label { get; set; }
+        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getLabel")]
-        [Index(19)]
-        public StringValue GetLabel { get; set; }
+        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterMso")]
-        [Index(20)]
-        public StringValue InsertAfterMso { get; set; }
+        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeMso")]
-        [Index(21)]
-        public StringValue InsertBeforeMso { get; set; }
+        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterQ")]
-        [Index(22)]
-        public StringValue InsertAfterQ { get; set; }
+        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeQ")]
-        [Index(23)]
-        public StringValue InsertBeforeQ { get; set; }
+        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr(0, "visible")]
-        [Index(24)]
-        public BooleanValue Visible { get; set; }
+        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getVisible")]
-        [Index(25)]
-        public StringValue GetVisible { get; set; }
+        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [StringValidator(IsToken = true, MinLength = 1L, MaxLength = 3L)]
-        [SchemaAttr(0, "keytip")]
-        [Index(26)]
-        public StringValue Keytip { get; set; }
+        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getKeytip")]
-        [Index(27)]
-        public StringValue GetKeytip { get; set; }
+        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr(0, "showLabel")]
-        [Index(28)]
-        public BooleanValue ShowLabel { get; set; }
+        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowLabel")]
-        [Index(29)]
-        public StringValue GetShowLabel { get; set; }
+        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr(0, "showImage")]
-        [Index(30)]
-        public BooleanValue ShowImage { get; set; }
+        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowImage")]
-        [Index(31)]
-        public StringValue GetShowImage { get; set; }
+        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Button>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Button>()
+                           .AddAttribute(0, "size", a => a.Size)
+                           .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "enabled", a => a.Enabled)
+                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+                           })
+                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "visible", a => a.Visible)
+                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                           })
+                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
+                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showImage", a => a.ShowImage)
+                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Button>(deep);
@@ -3912,293 +4273,323 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr(0, "size")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSize</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSize")]
-        [Index(1)]
-        public StringValue GetSize { get; set; }
+        public StringValue GetSize { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getPressed</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getPressed")]
-        [Index(2)]
-        public StringValue GetPressed { get; set; }
+        public StringValue GetPressed { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "onAction")]
-        [Index(3)]
-        public StringValue OnAction { get; set; }
+        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr(0, "enabled")]
-        [Index(4)]
-        public BooleanValue Enabled { get; set; }
+        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getEnabled")]
-        [Index(5)]
-        public StringValue GetEnabled { get; set; }
+        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 4096L)]
-        [SchemaAttr(0, "description")]
-        [Index(6)]
-        public StringValue Description { get; set; }
+        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getDescription")]
-        [Index(7)]
-        public StringValue GetDescription { get; set; }
+        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "image")]
-        [Index(8)]
-        public StringValue Image { get; set; }
+        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "imageMso")]
-        [Index(9)]
-        public StringValue ImageMso { get; set; }
+        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getImage")]
-        [Index(10)]
-        public StringValue GetImage { get; set; }
+        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "id")]
-        [Index(11)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idQ")]
-        [Index(12)]
-        public StringValue IdQ { get; set; }
+        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idMso")]
-        [Index(13)]
-        public StringValue IdMso { get; set; }
+        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "tag")]
-        [Index(14)]
-        public StringValue Tag { get; set; }
+        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "screentip")]
-        [Index(15)]
-        public StringValue Screentip { get; set; }
+        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getScreentip")]
-        [Index(16)]
-        public StringValue GetScreentip { get; set; }
+        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "supertip")]
-        [Index(17)]
-        public StringValue Supertip { get; set; }
+        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSupertip")]
-        [Index(18)]
-        public StringValue GetSupertip { get; set; }
+        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "label")]
-        [Index(19)]
-        public StringValue Label { get; set; }
+        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getLabel")]
-        [Index(20)]
-        public StringValue GetLabel { get; set; }
+        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterMso")]
-        [Index(21)]
-        public StringValue InsertAfterMso { get; set; }
+        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeMso")]
-        [Index(22)]
-        public StringValue InsertBeforeMso { get; set; }
+        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterQ")]
-        [Index(23)]
-        public StringValue InsertAfterQ { get; set; }
+        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeQ")]
-        [Index(24)]
-        public StringValue InsertBeforeQ { get; set; }
+        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr(0, "visible")]
-        [Index(25)]
-        public BooleanValue Visible { get; set; }
+        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getVisible")]
-        [Index(26)]
-        public StringValue GetVisible { get; set; }
+        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [StringValidator(IsToken = true, MinLength = 1L, MaxLength = 3L)]
-        [SchemaAttr(0, "keytip")]
-        [Index(27)]
-        public StringValue Keytip { get; set; }
+        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getKeytip")]
-        [Index(28)]
-        public StringValue GetKeytip { get; set; }
+        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr(0, "showLabel")]
-        [Index(29)]
-        public BooleanValue ShowLabel { get; set; }
+        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowLabel")]
-        [Index(30)]
-        public StringValue GetShowLabel { get; set; }
+        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr(0, "showImage")]
-        [Index(31)]
-        public BooleanValue ShowImage { get; set; }
+        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowImage")]
-        [Index(32)]
-        public StringValue GetShowImage { get; set; }
+        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ToggleButton>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ToggleButton>()
+                           .AddAttribute(0, "size", a => a.Size)
+                           .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getPressed", a => a.GetPressed, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "enabled", a => a.Enabled)
+                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+                           })
+                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "visible", a => a.Visible)
+                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                           })
+                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
+                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showImage", a => a.ShowImage)
+                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ToggleButton>(deep);
@@ -4224,276 +4615,306 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr(0, "enabled")]
-        [Index(0)]
-        public BooleanValue Enabled { get; set; }
+        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getEnabled")]
-        [Index(1)]
-        public StringValue GetEnabled { get; set; }
+        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "image")]
-        [Index(2)]
-        public StringValue Image { get; set; }
+        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "imageMso")]
-        [Index(3)]
-        public StringValue ImageMso { get; set; }
+        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getImage")]
-        [Index(4)]
-        public StringValue GetImage { get; set; }
+        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>maxLength</para>
         /// <para>Represents the following attribute in the schema: maxLength</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 1L, MaxInclusive = 1024L, IsPositive = true)]
-        [SchemaAttr(0, "maxLength")]
-        [Index(5)]
-        public IntegerValue MaxLength { get; set; }
+        public IntegerValue MaxLength { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getText</para>
         /// <para>Represents the following attribute in the schema: getText</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getText")]
-        [Index(6)]
-        public StringValue GetText { get; set; }
+        public StringValue GetText { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>onChange</para>
         /// <para>Represents the following attribute in the schema: onChange</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "onChange")]
-        [Index(7)]
-        public StringValue OnChange { get; set; }
+        public StringValue OnChange { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>sizeString</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "sizeString")]
-        [Index(8)]
-        public StringValue SizeString { get; set; }
+        public StringValue SizeString { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "id")]
-        [Index(9)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idQ")]
-        [Index(10)]
-        public StringValue IdQ { get; set; }
+        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idMso")]
-        [Index(11)]
-        public StringValue IdMso { get; set; }
+        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "tag")]
-        [Index(12)]
-        public StringValue Tag { get; set; }
+        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "screentip")]
-        [Index(13)]
-        public StringValue Screentip { get; set; }
+        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getScreentip")]
-        [Index(14)]
-        public StringValue GetScreentip { get; set; }
+        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "supertip")]
-        [Index(15)]
-        public StringValue Supertip { get; set; }
+        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSupertip")]
-        [Index(16)]
-        public StringValue GetSupertip { get; set; }
+        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "label")]
-        [Index(17)]
-        public StringValue Label { get; set; }
+        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getLabel")]
-        [Index(18)]
-        public StringValue GetLabel { get; set; }
+        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterMso")]
-        [Index(19)]
-        public StringValue InsertAfterMso { get; set; }
+        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeMso")]
-        [Index(20)]
-        public StringValue InsertBeforeMso { get; set; }
+        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterQ")]
-        [Index(21)]
-        public StringValue InsertAfterQ { get; set; }
+        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeQ")]
-        [Index(22)]
-        public StringValue InsertBeforeQ { get; set; }
+        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr(0, "visible")]
-        [Index(23)]
-        public BooleanValue Visible { get; set; }
+        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getVisible")]
-        [Index(24)]
-        public StringValue GetVisible { get; set; }
+        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [StringValidator(IsToken = true, MinLength = 1L, MaxLength = 3L)]
-        [SchemaAttr(0, "keytip")]
-        [Index(25)]
-        public StringValue Keytip { get; set; }
+        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getKeytip")]
-        [Index(26)]
-        public StringValue GetKeytip { get; set; }
+        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr(0, "showLabel")]
-        [Index(27)]
-        public BooleanValue ShowLabel { get; set; }
+        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowLabel")]
-        [Index(28)]
-        public StringValue GetShowLabel { get; set; }
+        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr(0, "showImage")]
-        [Index(29)]
-        public BooleanValue ShowImage { get; set; }
+        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowImage")]
-        [Index(30)]
-        public StringValue GetShowImage { get; set; }
+        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EditBox>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<EditBox>()
+                           .AddAttribute(0, "enabled", a => a.Enabled)
+                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "maxLength", a => a.MaxLength, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (1024L), IsPositive = (true) });
+                           })
+                           .AddAttribute(0, "getText", a => a.GetText, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "onChange", a => a.OnChange, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "sizeString", a => a.SizeString, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "visible", a => a.Visible)
+                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                           })
+                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
+                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showImage", a => a.ShowImage)
+                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EditBox>(deep);
@@ -4550,346 +4971,380 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showItemImage</para>
         /// <para>Represents the following attribute in the schema: showItemImage</para>
         /// </summary>
-        [SchemaAttr(0, "showItemImage")]
-        [Index(0)]
-        public BooleanValue ShowItemImage { get; set; }
+        public BooleanValue ShowItemImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getItemCount</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getItemCount")]
-        [Index(1)]
-        public StringValue GetItemCount { get; set; }
+        public StringValue GetItemCount { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getItemLabel</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getItemLabel")]
-        [Index(2)]
-        public StringValue GetItemLabel { get; set; }
+        public StringValue GetItemLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getItemScreentip</para>
         /// <para>Represents the following attribute in the schema: getItemScreentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getItemScreentip")]
-        [Index(3)]
-        public StringValue GetItemScreentip { get; set; }
+        public StringValue GetItemScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getItemSupertip</para>
         /// <para>Represents the following attribute in the schema: getItemSupertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getItemSupertip")]
-        [Index(4)]
-        public StringValue GetItemSupertip { get; set; }
+        public StringValue GetItemSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getItemImage</para>
         /// <para>Represents the following attribute in the schema: getItemImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getItemImage")]
-        [Index(5)]
-        public StringValue GetItemImage { get; set; }
+        public StringValue GetItemImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getItemID</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getItemID")]
-        [Index(6)]
-        public StringValue GetItemID { get; set; }
+        public StringValue GetItemID { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>sizeString</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "sizeString")]
-        [Index(7)]
-        public StringValue SizeString { get; set; }
+        public StringValue SizeString { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>invalidateContentOnDrop</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
-        [SchemaAttr(0, "invalidateContentOnDrop")]
-        [Index(8)]
-        public BooleanValue InvalidateContentOnDrop { get; set; }
+        public BooleanValue InvalidateContentOnDrop { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr(0, "enabled")]
-        [Index(9)]
-        public BooleanValue Enabled { get; set; }
+        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getEnabled")]
-        [Index(10)]
-        public StringValue GetEnabled { get; set; }
+        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "image")]
-        [Index(11)]
-        public StringValue Image { get; set; }
+        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "imageMso")]
-        [Index(12)]
-        public StringValue ImageMso { get; set; }
+        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getImage")]
-        [Index(13)]
-        public StringValue GetImage { get; set; }
+        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>maxLength</para>
         /// <para>Represents the following attribute in the schema: maxLength</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 1L, MaxInclusive = 1024L, IsPositive = true)]
-        [SchemaAttr(0, "maxLength")]
-        [Index(14)]
-        public IntegerValue MaxLength { get; set; }
+        public IntegerValue MaxLength { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getText</para>
         /// <para>Represents the following attribute in the schema: getText</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getText")]
-        [Index(15)]
-        public StringValue GetText { get; set; }
+        public StringValue GetText { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>onChange</para>
         /// <para>Represents the following attribute in the schema: onChange</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "onChange")]
-        [Index(16)]
-        public StringValue OnChange { get; set; }
+        public StringValue OnChange { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "id")]
-        [Index(17)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idQ")]
-        [Index(18)]
-        public StringValue IdQ { get; set; }
+        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idMso")]
-        [Index(19)]
-        public StringValue IdMso { get; set; }
+        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "tag")]
-        [Index(20)]
-        public StringValue Tag { get; set; }
+        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "screentip")]
-        [Index(21)]
-        public StringValue Screentip { get; set; }
+        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getScreentip")]
-        [Index(22)]
-        public StringValue GetScreentip { get; set; }
+        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "supertip")]
-        [Index(23)]
-        public StringValue Supertip { get; set; }
+        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSupertip")]
-        [Index(24)]
-        public StringValue GetSupertip { get; set; }
+        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "label")]
-        [Index(25)]
-        public StringValue Label { get; set; }
+        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getLabel")]
-        [Index(26)]
-        public StringValue GetLabel { get; set; }
+        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterMso")]
-        [Index(27)]
-        public StringValue InsertAfterMso { get; set; }
+        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeMso")]
-        [Index(28)]
-        public StringValue InsertBeforeMso { get; set; }
+        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterQ")]
-        [Index(29)]
-        public StringValue InsertAfterQ { get; set; }
+        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeQ")]
-        [Index(30)]
-        public StringValue InsertBeforeQ { get; set; }
+        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr(0, "visible")]
-        [Index(31)]
-        public BooleanValue Visible { get; set; }
+        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getVisible")]
-        [Index(32)]
-        public StringValue GetVisible { get; set; }
+        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [StringValidator(IsToken = true, MinLength = 1L, MaxLength = 3L)]
-        [SchemaAttr(0, "keytip")]
-        [Index(33)]
-        public StringValue Keytip { get; set; }
+        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getKeytip")]
-        [Index(34)]
-        public StringValue GetKeytip { get; set; }
+        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr(0, "showLabel")]
-        [Index(35)]
-        public BooleanValue ShowLabel { get; set; }
+        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowLabel")]
-        [Index(36)]
-        public StringValue GetShowLabel { get; set; }
+        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr(0, "showImage")]
-        [Index(37)]
-        public BooleanValue ShowImage { get; set; }
+        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowImage")]
-        [Index(38)]
-        public StringValue GetShowImage { get; set; }
+        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ComboBox>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ComboBox>()
+                           .AddAttribute(0, "showItemImage", a => a.ShowItemImage)
+                           .AddAttribute(0, "getItemCount", a => a.GetItemCount, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getItemLabel", a => a.GetItemLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getItemScreentip", a => a.GetItemScreentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getItemSupertip", a => a.GetItemSupertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getItemImage", a => a.GetItemImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getItemID", a => a.GetItemID, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "sizeString", a => a.SizeString, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "invalidateContentOnDrop", a => a.InvalidateContentOnDrop)
+                           .AddAttribute(0, "enabled", a => a.Enabled)
+                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "maxLength", a => a.MaxLength, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (1024L), IsPositive = (true) });
+                           })
+                           .AddAttribute(0, "getText", a => a.GetText, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "onChange", a => a.OnChange, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "visible", a => a.Visible)
+                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                           })
+                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
+                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showImage", a => a.ShowImage)
+                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -4958,346 +5413,380 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "onAction")]
-        [Index(0)]
-        public StringValue OnAction { get; set; }
+        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr(0, "enabled")]
-        [Index(1)]
-        public BooleanValue Enabled { get; set; }
+        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getEnabled")]
-        [Index(2)]
-        public StringValue GetEnabled { get; set; }
+        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "image")]
-        [Index(3)]
-        public StringValue Image { get; set; }
+        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "imageMso")]
-        [Index(4)]
-        public StringValue ImageMso { get; set; }
+        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getImage")]
-        [Index(5)]
-        public StringValue GetImage { get; set; }
+        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showItemImage</para>
         /// <para>Represents the following attribute in the schema: showItemImage</para>
         /// </summary>
-        [SchemaAttr(0, "showItemImage")]
-        [Index(6)]
-        public BooleanValue ShowItemImage { get; set; }
+        public BooleanValue ShowItemImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getItemCount</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getItemCount")]
-        [Index(7)]
-        public StringValue GetItemCount { get; set; }
+        public StringValue GetItemCount { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getItemLabel</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getItemLabel")]
-        [Index(8)]
-        public StringValue GetItemLabel { get; set; }
+        public StringValue GetItemLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getItemScreentip</para>
         /// <para>Represents the following attribute in the schema: getItemScreentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getItemScreentip")]
-        [Index(9)]
-        public StringValue GetItemScreentip { get; set; }
+        public StringValue GetItemScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getItemSupertip</para>
         /// <para>Represents the following attribute in the schema: getItemSupertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getItemSupertip")]
-        [Index(10)]
-        public StringValue GetItemSupertip { get; set; }
+        public StringValue GetItemSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getItemImage</para>
         /// <para>Represents the following attribute in the schema: getItemImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getItemImage")]
-        [Index(11)]
-        public StringValue GetItemImage { get; set; }
+        public StringValue GetItemImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getItemID</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getItemID")]
-        [Index(12)]
-        public StringValue GetItemID { get; set; }
+        public StringValue GetItemID { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>sizeString</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "sizeString")]
-        [Index(13)]
-        public StringValue SizeString { get; set; }
+        public StringValue SizeString { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSelectedItemID</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemID</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSelectedItemID")]
-        [Index(14)]
-        public StringValue GetSelectedItemID { get; set; }
+        public StringValue GetSelectedItemID { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSelectedItemIndex</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemIndex</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSelectedItemIndex")]
-        [Index(15)]
-        public StringValue GetSelectedItemIndex { get; set; }
+        public StringValue GetSelectedItemIndex { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showItemLabel</para>
         /// <para>Represents the following attribute in the schema: showItemLabel</para>
         /// </summary>
-        [SchemaAttr(0, "showItemLabel")]
-        [Index(16)]
-        public BooleanValue ShowItemLabel { get; set; }
+        public BooleanValue ShowItemLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "id")]
-        [Index(17)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idQ")]
-        [Index(18)]
-        public StringValue IdQ { get; set; }
+        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idMso")]
-        [Index(19)]
-        public StringValue IdMso { get; set; }
+        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "tag")]
-        [Index(20)]
-        public StringValue Tag { get; set; }
+        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "screentip")]
-        [Index(21)]
-        public StringValue Screentip { get; set; }
+        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getScreentip")]
-        [Index(22)]
-        public StringValue GetScreentip { get; set; }
+        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "supertip")]
-        [Index(23)]
-        public StringValue Supertip { get; set; }
+        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSupertip")]
-        [Index(24)]
-        public StringValue GetSupertip { get; set; }
+        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "label")]
-        [Index(25)]
-        public StringValue Label { get; set; }
+        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getLabel")]
-        [Index(26)]
-        public StringValue GetLabel { get; set; }
+        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterMso")]
-        [Index(27)]
-        public StringValue InsertAfterMso { get; set; }
+        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeMso")]
-        [Index(28)]
-        public StringValue InsertBeforeMso { get; set; }
+        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterQ")]
-        [Index(29)]
-        public StringValue InsertAfterQ { get; set; }
+        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeQ")]
-        [Index(30)]
-        public StringValue InsertBeforeQ { get; set; }
+        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr(0, "visible")]
-        [Index(31)]
-        public BooleanValue Visible { get; set; }
+        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getVisible")]
-        [Index(32)]
-        public StringValue GetVisible { get; set; }
+        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [StringValidator(IsToken = true, MinLength = 1L, MaxLength = 3L)]
-        [SchemaAttr(0, "keytip")]
-        [Index(33)]
-        public StringValue Keytip { get; set; }
+        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getKeytip")]
-        [Index(34)]
-        public StringValue GetKeytip { get; set; }
+        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr(0, "showLabel")]
-        [Index(35)]
-        public BooleanValue ShowLabel { get; set; }
+        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowLabel")]
-        [Index(36)]
-        public StringValue GetShowLabel { get; set; }
+        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr(0, "showImage")]
-        [Index(37)]
-        public BooleanValue ShowImage { get; set; }
+        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowImage")]
-        [Index(38)]
-        public StringValue GetShowImage { get; set; }
+        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DropDown>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<DropDown>()
+                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "enabled", a => a.Enabled)
+                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showItemImage", a => a.ShowItemImage)
+                           .AddAttribute(0, "getItemCount", a => a.GetItemCount, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getItemLabel", a => a.GetItemLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getItemScreentip", a => a.GetItemScreentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getItemSupertip", a => a.GetItemSupertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getItemImage", a => a.GetItemImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getItemID", a => a.GetItemID, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "sizeString", a => a.SizeString, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getSelectedItemID", a => a.GetSelectedItemID, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getSelectedItemIndex", a => a.GetSelectedItemIndex, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showItemLabel", a => a.ShowItemLabel)
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "visible", a => a.Visible)
+                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                           })
+                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
+                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showImage", a => a.ShowImage)
+                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -5367,443 +5856,484 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr(0, "size")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSize</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSize")]
-        [Index(1)]
-        public StringValue GetSize { get; set; }
+        public StringValue GetSize { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 4096L)]
-        [SchemaAttr(0, "description")]
-        [Index(2)]
-        public StringValue Description { get; set; }
+        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getDescription")]
-        [Index(3)]
-        public StringValue GetDescription { get; set; }
+        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>invalidateContentOnDrop</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
-        [SchemaAttr(0, "invalidateContentOnDrop")]
-        [Index(4)]
-        public BooleanValue InvalidateContentOnDrop { get; set; }
+        public BooleanValue InvalidateContentOnDrop { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>columns</para>
         /// <para>Represents the following attribute in the schema: columns</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 1L, MaxInclusive = 1024L, IsPositive = true)]
-        [SchemaAttr(0, "columns")]
-        [Index(5)]
-        public IntegerValue Columns { get; set; }
+        public IntegerValue Columns { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>rows</para>
         /// <para>Represents the following attribute in the schema: rows</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 1L, MaxInclusive = 1024L, IsPositive = true)]
-        [SchemaAttr(0, "rows")]
-        [Index(6)]
-        public IntegerValue Rows { get; set; }
+        public IntegerValue Rows { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>itemWidth</para>
         /// <para>Represents the following attribute in the schema: itemWidth</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 1L, MaxInclusive = 4096L, IsPositive = true)]
-        [SchemaAttr(0, "itemWidth")]
-        [Index(7)]
-        public IntegerValue ItemWidth { get; set; }
+        public IntegerValue ItemWidth { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>itemHeight</para>
         /// <para>Represents the following attribute in the schema: itemHeight</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 1L, MaxInclusive = 4096L, IsPositive = true)]
-        [SchemaAttr(0, "itemHeight")]
-        [Index(8)]
-        public IntegerValue ItemHeight { get; set; }
+        public IntegerValue ItemHeight { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getItemWidth</para>
         /// <para>Represents the following attribute in the schema: getItemWidth</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getItemWidth")]
-        [Index(9)]
-        public StringValue GetItemWidth { get; set; }
+        public StringValue GetItemWidth { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getItemHeight</para>
         /// <para>Represents the following attribute in the schema: getItemHeight</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getItemHeight")]
-        [Index(10)]
-        public StringValue GetItemHeight { get; set; }
+        public StringValue GetItemHeight { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showItemLabel</para>
         /// <para>Represents the following attribute in the schema: showItemLabel</para>
         /// </summary>
-        [SchemaAttr(0, "showItemLabel")]
-        [Index(11)]
-        public BooleanValue ShowItemLabel { get; set; }
+        public BooleanValue ShowItemLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "onAction")]
-        [Index(12)]
-        public StringValue OnAction { get; set; }
+        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr(0, "enabled")]
-        [Index(13)]
-        public BooleanValue Enabled { get; set; }
+        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getEnabled")]
-        [Index(14)]
-        public StringValue GetEnabled { get; set; }
+        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "image")]
-        [Index(15)]
-        public StringValue Image { get; set; }
+        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "imageMso")]
-        [Index(16)]
-        public StringValue ImageMso { get; set; }
+        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getImage")]
-        [Index(17)]
-        public StringValue GetImage { get; set; }
+        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showItemImage</para>
         /// <para>Represents the following attribute in the schema: showItemImage</para>
         /// </summary>
-        [SchemaAttr(0, "showItemImage")]
-        [Index(18)]
-        public BooleanValue ShowItemImage { get; set; }
+        public BooleanValue ShowItemImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getItemCount</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getItemCount")]
-        [Index(19)]
-        public StringValue GetItemCount { get; set; }
+        public StringValue GetItemCount { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getItemLabel</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getItemLabel")]
-        [Index(20)]
-        public StringValue GetItemLabel { get; set; }
+        public StringValue GetItemLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getItemScreentip</para>
         /// <para>Represents the following attribute in the schema: getItemScreentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getItemScreentip")]
-        [Index(21)]
-        public StringValue GetItemScreentip { get; set; }
+        public StringValue GetItemScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getItemSupertip</para>
         /// <para>Represents the following attribute in the schema: getItemSupertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getItemSupertip")]
-        [Index(22)]
-        public StringValue GetItemSupertip { get; set; }
+        public StringValue GetItemSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getItemImage</para>
         /// <para>Represents the following attribute in the schema: getItemImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getItemImage")]
-        [Index(23)]
-        public StringValue GetItemImage { get; set; }
+        public StringValue GetItemImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getItemID</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getItemID")]
-        [Index(24)]
-        public StringValue GetItemID { get; set; }
+        public StringValue GetItemID { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>sizeString</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "sizeString")]
-        [Index(25)]
-        public StringValue SizeString { get; set; }
+        public StringValue SizeString { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSelectedItemID</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemID</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSelectedItemID")]
-        [Index(26)]
-        public StringValue GetSelectedItemID { get; set; }
+        public StringValue GetSelectedItemID { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSelectedItemIndex</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemIndex</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSelectedItemIndex")]
-        [Index(27)]
-        public StringValue GetSelectedItemIndex { get; set; }
+        public StringValue GetSelectedItemIndex { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "id")]
-        [Index(28)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idQ")]
-        [Index(29)]
-        public StringValue IdQ { get; set; }
+        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idMso")]
-        [Index(30)]
-        public StringValue IdMso { get; set; }
+        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "tag")]
-        [Index(31)]
-        public StringValue Tag { get; set; }
+        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "screentip")]
-        [Index(32)]
-        public StringValue Screentip { get; set; }
+        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getScreentip")]
-        [Index(33)]
-        public StringValue GetScreentip { get; set; }
+        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "supertip")]
-        [Index(34)]
-        public StringValue Supertip { get; set; }
+        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSupertip")]
-        [Index(35)]
-        public StringValue GetSupertip { get; set; }
+        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "label")]
-        [Index(36)]
-        public StringValue Label { get; set; }
+        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getLabel")]
-        [Index(37)]
-        public StringValue GetLabel { get; set; }
+        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterMso")]
-        [Index(38)]
-        public StringValue InsertAfterMso { get; set; }
+        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeMso")]
-        [Index(39)]
-        public StringValue InsertBeforeMso { get; set; }
+        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterQ")]
-        [Index(40)]
-        public StringValue InsertAfterQ { get; set; }
+        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeQ")]
-        [Index(41)]
-        public StringValue InsertBeforeQ { get; set; }
+        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr(0, "visible")]
-        [Index(42)]
-        public BooleanValue Visible { get; set; }
+        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getVisible")]
-        [Index(43)]
-        public StringValue GetVisible { get; set; }
+        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [StringValidator(IsToken = true, MinLength = 1L, MaxLength = 3L)]
-        [SchemaAttr(0, "keytip")]
-        [Index(44)]
-        public StringValue Keytip { get; set; }
+        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getKeytip")]
-        [Index(45)]
-        public StringValue GetKeytip { get; set; }
+        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr(0, "showLabel")]
-        [Index(46)]
-        public BooleanValue ShowLabel { get; set; }
+        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowLabel")]
-        [Index(47)]
-        public StringValue GetShowLabel { get; set; }
+        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr(0, "showImage")]
-        [Index(48)]
-        public BooleanValue ShowImage { get; set; }
+        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowImage")]
-        [Index(49)]
-        public StringValue GetShowImage { get; set; }
+        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Gallery>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Gallery>()
+                           .AddAttribute(0, "size", a => a.Size)
+                           .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+                           })
+                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "invalidateContentOnDrop", a => a.InvalidateContentOnDrop)
+                           .AddAttribute(0, "columns", a => a.Columns, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (1024L), IsPositive = (true) });
+                           })
+                           .AddAttribute(0, "rows", a => a.Rows, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (1024L), IsPositive = (true) });
+                           })
+                           .AddAttribute(0, "itemWidth", a => a.ItemWidth, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (4096L), IsPositive = (true) });
+                           })
+                           .AddAttribute(0, "itemHeight", a => a.ItemHeight, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (4096L), IsPositive = (true) });
+                           })
+                           .AddAttribute(0, "getItemWidth", a => a.GetItemWidth, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getItemHeight", a => a.GetItemHeight, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showItemLabel", a => a.ShowItemLabel)
+                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "enabled", a => a.Enabled)
+                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showItemImage", a => a.ShowItemImage)
+                           .AddAttribute(0, "getItemCount", a => a.GetItemCount, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getItemLabel", a => a.GetItemLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getItemScreentip", a => a.GetItemScreentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getItemSupertip", a => a.GetItemSupertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getItemImage", a => a.GetItemImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getItemID", a => a.GetItemID, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "sizeString", a => a.SizeString, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getSelectedItemID", a => a.GetSelectedItemID, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getSelectedItemIndex", a => a.GetSelectedItemIndex, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "visible", a => a.Visible)
+                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                           })
+                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
+                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showImage", a => a.ShowImage)
+                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -5893,283 +6423,310 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr(0, "size")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSize</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSize")]
-        [Index(1)]
-        public StringValue GetSize { get; set; }
+        public StringValue GetSize { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>itemSize</para>
         /// <para>Represents the following attribute in the schema: itemSize</para>
         /// </summary>
-        [SchemaAttr(0, "itemSize")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues> ItemSize { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues> ItemSize { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 4096L)]
-        [SchemaAttr(0, "description")]
-        [Index(3)]
-        public StringValue Description { get; set; }
+        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getDescription")]
-        [Index(4)]
-        public StringValue GetDescription { get; set; }
+        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "id")]
-        [Index(5)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idQ")]
-        [Index(6)]
-        public StringValue IdQ { get; set; }
+        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idMso")]
-        [Index(7)]
-        public StringValue IdMso { get; set; }
+        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "tag")]
-        [Index(8)]
-        public StringValue Tag { get; set; }
+        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "image")]
-        [Index(9)]
-        public StringValue Image { get; set; }
+        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "imageMso")]
-        [Index(10)]
-        public StringValue ImageMso { get; set; }
+        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getImage")]
-        [Index(11)]
-        public StringValue GetImage { get; set; }
+        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "screentip")]
-        [Index(12)]
-        public StringValue Screentip { get; set; }
+        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getScreentip")]
-        [Index(13)]
-        public StringValue GetScreentip { get; set; }
+        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "supertip")]
-        [Index(14)]
-        public StringValue Supertip { get; set; }
+        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSupertip")]
-        [Index(15)]
-        public StringValue GetSupertip { get; set; }
+        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr(0, "enabled")]
-        [Index(16)]
-        public BooleanValue Enabled { get; set; }
+        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getEnabled")]
-        [Index(17)]
-        public StringValue GetEnabled { get; set; }
+        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "label")]
-        [Index(18)]
-        public StringValue Label { get; set; }
+        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getLabel")]
-        [Index(19)]
-        public StringValue GetLabel { get; set; }
+        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterMso")]
-        [Index(20)]
-        public StringValue InsertAfterMso { get; set; }
+        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeMso")]
-        [Index(21)]
-        public StringValue InsertBeforeMso { get; set; }
+        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterQ")]
-        [Index(22)]
-        public StringValue InsertAfterQ { get; set; }
+        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeQ")]
-        [Index(23)]
-        public StringValue InsertBeforeQ { get; set; }
+        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr(0, "visible")]
-        [Index(24)]
-        public BooleanValue Visible { get; set; }
+        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getVisible")]
-        [Index(25)]
-        public StringValue GetVisible { get; set; }
+        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [StringValidator(IsToken = true, MinLength = 1L, MaxLength = 3L)]
-        [SchemaAttr(0, "keytip")]
-        [Index(26)]
-        public StringValue Keytip { get; set; }
+        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getKeytip")]
-        [Index(27)]
-        public StringValue GetKeytip { get; set; }
+        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr(0, "showLabel")]
-        [Index(28)]
-        public BooleanValue ShowLabel { get; set; }
+        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowLabel")]
-        [Index(29)]
-        public StringValue GetShowLabel { get; set; }
+        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr(0, "showImage")]
-        [Index(30)]
-        public BooleanValue ShowImage { get; set; }
+        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowImage")]
-        [Index(31)]
-        public StringValue GetShowImage { get; set; }
+        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Menu>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Menu>()
+                           .AddAttribute(0, "size", a => a.Size)
+                           .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "itemSize", a => a.ItemSize)
+                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+                           })
+                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "enabled", a => a.Enabled)
+                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "visible", a => a.Visible)
+                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                           })
+                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
+                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showImage", a => a.ShowImage)
+                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -6231,293 +6788,321 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr(0, "size")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSize</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSize")]
-        [Index(1)]
-        public StringValue GetSize { get; set; }
+        public StringValue GetSize { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 4096L)]
-        [SchemaAttr(0, "description")]
-        [Index(2)]
-        public StringValue Description { get; set; }
+        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getDescription")]
-        [Index(3)]
-        public StringValue GetDescription { get; set; }
+        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "id")]
-        [Index(4)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idQ")]
-        [Index(5)]
-        public StringValue IdQ { get; set; }
+        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idMso")]
-        [Index(6)]
-        public StringValue IdMso { get; set; }
+        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "tag")]
-        [Index(7)]
-        public StringValue Tag { get; set; }
+        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getContent</para>
         /// <para>Represents the following attribute in the schema: getContent</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getContent")]
-        [Index(8)]
-        public StringValue GetContent { get; set; }
+        public StringValue GetContent { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>invalidateContentOnDrop</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
-        [SchemaAttr(0, "invalidateContentOnDrop")]
-        [Index(9)]
-        public BooleanValue InvalidateContentOnDrop { get; set; }
+        public BooleanValue InvalidateContentOnDrop { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "image")]
-        [Index(10)]
-        public StringValue Image { get; set; }
+        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "imageMso")]
-        [Index(11)]
-        public StringValue ImageMso { get; set; }
+        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getImage")]
-        [Index(12)]
-        public StringValue GetImage { get; set; }
+        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "screentip")]
-        [Index(13)]
-        public StringValue Screentip { get; set; }
+        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getScreentip")]
-        [Index(14)]
-        public StringValue GetScreentip { get; set; }
+        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "supertip")]
-        [Index(15)]
-        public StringValue Supertip { get; set; }
+        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSupertip")]
-        [Index(16)]
-        public StringValue GetSupertip { get; set; }
+        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr(0, "enabled")]
-        [Index(17)]
-        public BooleanValue Enabled { get; set; }
+        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getEnabled")]
-        [Index(18)]
-        public StringValue GetEnabled { get; set; }
+        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "label")]
-        [Index(19)]
-        public StringValue Label { get; set; }
+        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getLabel")]
-        [Index(20)]
-        public StringValue GetLabel { get; set; }
+        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterMso")]
-        [Index(21)]
-        public StringValue InsertAfterMso { get; set; }
+        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeMso")]
-        [Index(22)]
-        public StringValue InsertBeforeMso { get; set; }
+        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterQ")]
-        [Index(23)]
-        public StringValue InsertAfterQ { get; set; }
+        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeQ")]
-        [Index(24)]
-        public StringValue InsertBeforeQ { get; set; }
+        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr(0, "visible")]
-        [Index(25)]
-        public BooleanValue Visible { get; set; }
+        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getVisible")]
-        [Index(26)]
-        public StringValue GetVisible { get; set; }
+        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [StringValidator(IsToken = true, MinLength = 1L, MaxLength = 3L)]
-        [SchemaAttr(0, "keytip")]
-        [Index(27)]
-        public StringValue Keytip { get; set; }
+        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getKeytip")]
-        [Index(28)]
-        public StringValue GetKeytip { get; set; }
+        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr(0, "showLabel")]
-        [Index(29)]
-        public BooleanValue ShowLabel { get; set; }
+        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowLabel")]
-        [Index(30)]
-        public StringValue GetShowLabel { get; set; }
+        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr(0, "showImage")]
-        [Index(31)]
-        public BooleanValue ShowImage { get; set; }
+        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowImage")]
-        [Index(32)]
-        public StringValue GetShowImage { get; set; }
+        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DynamicMenu>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<DynamicMenu>()
+                           .AddAttribute(0, "size", a => a.Size)
+                           .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+                           })
+                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getContent", a => a.GetContent, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "invalidateContentOnDrop", a => a.InvalidateContentOnDrop)
+                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "enabled", a => a.Enabled)
+                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "visible", a => a.Visible)
+                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                           })
+                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
+                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showImage", a => a.ShowImage)
+                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DynamicMenu>(deep);
@@ -6578,159 +7163,176 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr(0, "size")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSize</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSize")]
-        [Index(1)]
-        public StringValue GetSize { get; set; }
+        public StringValue GetSize { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr(0, "enabled")]
-        [Index(2)]
-        public BooleanValue Enabled { get; set; }
+        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getEnabled")]
-        [Index(3)]
-        public StringValue GetEnabled { get; set; }
+        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "id")]
-        [Index(4)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idQ")]
-        [Index(5)]
-        public StringValue IdQ { get; set; }
+        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idMso")]
-        [Index(6)]
-        public StringValue IdMso { get; set; }
+        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "tag")]
-        [Index(7)]
-        public StringValue Tag { get; set; }
+        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterMso")]
-        [Index(8)]
-        public StringValue InsertAfterMso { get; set; }
+        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeMso")]
-        [Index(9)]
-        public StringValue InsertBeforeMso { get; set; }
+        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterQ")]
-        [Index(10)]
-        public StringValue InsertAfterQ { get; set; }
+        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeQ")]
-        [Index(11)]
-        public StringValue InsertBeforeQ { get; set; }
+        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr(0, "visible")]
-        [Index(12)]
-        public BooleanValue Visible { get; set; }
+        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getVisible")]
-        [Index(13)]
-        public StringValue GetVisible { get; set; }
+        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [StringValidator(IsToken = true, MinLength = 1L, MaxLength = 3L)]
-        [SchemaAttr(0, "keytip")]
-        [Index(14)]
-        public StringValue Keytip { get; set; }
+        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getKeytip")]
-        [Index(15)]
-        public StringValue GetKeytip { get; set; }
+        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr(0, "showLabel")]
-        [Index(16)]
-        public BooleanValue ShowLabel { get; set; }
+        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowLabel")]
-        [Index(17)]
-        public StringValue GetShowLabel { get; set; }
+        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SplitButton>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SplitButton>()
+                           .AddAttribute(0, "size", a => a.Size)
+                           .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "enabled", a => a.Enabled)
+                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "visible", a => a.Visible)
+                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                           })
+                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
+                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -6831,80 +7433,92 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idQ")]
-        [Index(1)]
-        public StringValue IdQ { get; set; }
+        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr(0, "visible")]
-        [Index(2)]
-        public BooleanValue Visible { get; set; }
+        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getVisible")]
-        [Index(3)]
-        public StringValue GetVisible { get; set; }
+        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterMso")]
-        [Index(4)]
-        public StringValue InsertAfterMso { get; set; }
+        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeMso")]
-        [Index(5)]
-        public StringValue InsertBeforeMso { get; set; }
+        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterQ")]
-        [Index(6)]
-        public StringValue InsertAfterQ { get; set; }
+        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeQ")]
-        [Index(7)]
-        public StringValue InsertBeforeQ { get; set; }
+        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>boxStyle</para>
         /// <para>Represents the following attribute in the schema: boxStyle</para>
         /// </summary>
-        [SchemaAttr(0, "boxStyle")]
-        [Index(8)]
-        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.BoxStyleValues> BoxStyle { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.BoxStyleValues> BoxStyle { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.BoxStyleValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Box>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Box>()
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "visible", a => a.Visible)
+                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "boxStyle", a => a.BoxStyle);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 1000)
         {
@@ -6996,72 +7610,85 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idQ")]
-        [Index(1)]
-        public StringValue IdQ { get; set; }
+        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr(0, "visible")]
-        [Index(2)]
-        public BooleanValue Visible { get; set; }
+        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getVisible")]
-        [Index(3)]
-        public StringValue GetVisible { get; set; }
+        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterMso")]
-        [Index(4)]
-        public StringValue InsertAfterMso { get; set; }
+        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeMso")]
-        [Index(5)]
-        public StringValue InsertBeforeMso { get; set; }
+        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterQ")]
-        [Index(6)]
-        public StringValue InsertAfterQ { get; set; }
+        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeQ")]
-        [Index(7)]
-        public StringValue InsertBeforeQ { get; set; }
+        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ButtonGroup>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ButtonGroup>()
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "visible", a => a.Visible)
+                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -7150,27 +7777,35 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "title")]
-        [Index(0)]
-        public StringValue Title { get; set; }
+        public StringValue Title { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getTitle</para>
         /// <para>Represents the following attribute in the schema: getTitle</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getTitle")]
-        [Index(1)]
-        public StringValue GetTitle { get; set; }
+        public StringValue GetTitle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>itemSize</para>
         /// <para>Represents the following attribute in the schema: itemSize</para>
         /// </summary>
-        [SchemaAttr(0, "itemSize")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues> ItemSize { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues> ItemSize { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MenuRoot>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<MenuRoot>()
+                           .AddAttribute(0, "title", a => a.Title, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getTitle", a => a.GetTitle, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "itemSize", a => a.ItemSize);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -7259,19 +7894,28 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>onLoad</para>
         /// <para>Represents the following attribute in the schema: onLoad</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "onLoad")]
-        [Index(0)]
-        public StringValue OnLoad { get; set; }
+        public StringValue OnLoad { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>loadImage</para>
         /// <para>Represents the following attribute in the schema: loadImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "loadImage")]
-        [Index(1)]
-        public StringValue LoadImage { get; set; }
+        public StringValue LoadImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomUI>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<CustomUI>()
+                           .AddAttribute(0, "onLoad", a => a.OnLoad, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "loadImage", a => a.LoadImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         /// <summary>
         /// <para>RepurposedCommands.</para>
@@ -7331,55 +7975,68 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "label")]
-        [Index(1)]
-        public StringValue Label { get; set; }
+        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "image")]
-        [Index(2)]
-        public StringValue Image { get; set; }
+        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "imageMso")]
-        [Index(3)]
-        public StringValue ImageMso { get; set; }
+        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "screentip")]
-        [Index(4)]
-        public StringValue Screentip { get; set; }
+        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "supertip")]
-        [Index(5)]
-        public StringValue Supertip { get; set; }
+        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Item>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Item>()
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Item>(deep);
@@ -7405,250 +8062,279 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "onAction")]
-        [Index(0)]
-        public StringValue OnAction { get; set; }
+        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr(0, "enabled")]
-        [Index(1)]
-        public BooleanValue Enabled { get; set; }
+        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getEnabled")]
-        [Index(2)]
-        public StringValue GetEnabled { get; set; }
+        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 4096L)]
-        [SchemaAttr(0, "description")]
-        [Index(3)]
-        public StringValue Description { get; set; }
+        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getDescription")]
-        [Index(4)]
-        public StringValue GetDescription { get; set; }
+        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "image")]
-        [Index(5)]
-        public StringValue Image { get; set; }
+        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "imageMso")]
-        [Index(6)]
-        public StringValue ImageMso { get; set; }
+        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getImage")]
-        [Index(7)]
-        public StringValue GetImage { get; set; }
+        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "id")]
-        [Index(8)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idQ")]
-        [Index(9)]
-        public StringValue IdQ { get; set; }
+        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idMso")]
-        [Index(10)]
-        public StringValue IdMso { get; set; }
+        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "tag")]
-        [Index(11)]
-        public StringValue Tag { get; set; }
+        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "screentip")]
-        [Index(12)]
-        public StringValue Screentip { get; set; }
+        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getScreentip")]
-        [Index(13)]
-        public StringValue GetScreentip { get; set; }
+        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "supertip")]
-        [Index(14)]
-        public StringValue Supertip { get; set; }
+        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSupertip")]
-        [Index(15)]
-        public StringValue GetSupertip { get; set; }
+        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "label")]
-        [Index(16)]
-        public StringValue Label { get; set; }
+        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getLabel")]
-        [Index(17)]
-        public StringValue GetLabel { get; set; }
+        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterMso")]
-        [Index(18)]
-        public StringValue InsertAfterMso { get; set; }
+        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeMso")]
-        [Index(19)]
-        public StringValue InsertBeforeMso { get; set; }
+        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterQ")]
-        [Index(20)]
-        public StringValue InsertAfterQ { get; set; }
+        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeQ")]
-        [Index(21)]
-        public StringValue InsertBeforeQ { get; set; }
+        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [StringValidator(IsToken = true, MinLength = 1L, MaxLength = 3L)]
-        [SchemaAttr(0, "keytip")]
-        [Index(22)]
-        public StringValue Keytip { get; set; }
+        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getKeytip")]
-        [Index(23)]
-        public StringValue GetKeytip { get; set; }
+        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr(0, "showLabel")]
-        [Index(24)]
-        public BooleanValue ShowLabel { get; set; }
+        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowLabel")]
-        [Index(25)]
-        public StringValue GetShowLabel { get; set; }
+        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr(0, "showImage")]
-        [Index(26)]
-        public BooleanValue ShowImage { get; set; }
+        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowImage")]
-        [Index(27)]
-        public StringValue GetShowImage { get; set; }
+        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VisibleButton>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<VisibleButton>()
+                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "enabled", a => a.Enabled)
+                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+                           })
+                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                           })
+                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
+                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showImage", a => a.ShowImage)
+                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VisibleButton>(deep);
@@ -7674,259 +8360,289 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getPressed</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getPressed")]
-        [Index(0)]
-        public StringValue GetPressed { get; set; }
+        public StringValue GetPressed { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "onAction")]
-        [Index(1)]
-        public StringValue OnAction { get; set; }
+        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr(0, "enabled")]
-        [Index(2)]
-        public BooleanValue Enabled { get; set; }
+        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getEnabled")]
-        [Index(3)]
-        public StringValue GetEnabled { get; set; }
+        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 4096L)]
-        [SchemaAttr(0, "description")]
-        [Index(4)]
-        public StringValue Description { get; set; }
+        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getDescription")]
-        [Index(5)]
-        public StringValue GetDescription { get; set; }
+        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "image")]
-        [Index(6)]
-        public StringValue Image { get; set; }
+        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "imageMso")]
-        [Index(7)]
-        public StringValue ImageMso { get; set; }
+        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getImage")]
-        [Index(8)]
-        public StringValue GetImage { get; set; }
+        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "id")]
-        [Index(9)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idQ")]
-        [Index(10)]
-        public StringValue IdQ { get; set; }
+        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idMso")]
-        [Index(11)]
-        public StringValue IdMso { get; set; }
+        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "tag")]
-        [Index(12)]
-        public StringValue Tag { get; set; }
+        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "screentip")]
-        [Index(13)]
-        public StringValue Screentip { get; set; }
+        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getScreentip")]
-        [Index(14)]
-        public StringValue GetScreentip { get; set; }
+        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "supertip")]
-        [Index(15)]
-        public StringValue Supertip { get; set; }
+        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSupertip")]
-        [Index(16)]
-        public StringValue GetSupertip { get; set; }
+        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "label")]
-        [Index(17)]
-        public StringValue Label { get; set; }
+        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getLabel")]
-        [Index(18)]
-        public StringValue GetLabel { get; set; }
+        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterMso")]
-        [Index(19)]
-        public StringValue InsertAfterMso { get; set; }
+        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeMso")]
-        [Index(20)]
-        public StringValue InsertBeforeMso { get; set; }
+        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterQ")]
-        [Index(21)]
-        public StringValue InsertAfterQ { get; set; }
+        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeQ")]
-        [Index(22)]
-        public StringValue InsertBeforeQ { get; set; }
+        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [StringValidator(IsToken = true, MinLength = 1L, MaxLength = 3L)]
-        [SchemaAttr(0, "keytip")]
-        [Index(23)]
-        public StringValue Keytip { get; set; }
+        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getKeytip")]
-        [Index(24)]
-        public StringValue GetKeytip { get; set; }
+        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr(0, "showLabel")]
-        [Index(25)]
-        public BooleanValue ShowLabel { get; set; }
+        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowLabel")]
-        [Index(26)]
-        public StringValue GetShowLabel { get; set; }
+        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr(0, "showImage")]
-        [Index(27)]
-        public BooleanValue ShowImage { get; set; }
+        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowImage")]
-        [Index(28)]
-        public StringValue GetShowImage { get; set; }
+        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VisibleToggleButton>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<VisibleToggleButton>()
+                           .AddAttribute(0, "getPressed", a => a.GetPressed, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "enabled", a => a.Enabled)
+                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+                           })
+                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                           })
+                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
+                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showImage", a => a.ShowImage)
+                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VisibleToggleButton>(deep);
@@ -7952,72 +8668,85 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idQ")]
-        [Index(1)]
-        public StringValue IdQ { get; set; }
+        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr(0, "visible")]
-        [Index(2)]
-        public BooleanValue Visible { get; set; }
+        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getVisible")]
-        [Index(3)]
-        public StringValue GetVisible { get; set; }
+        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterMso")]
-        [Index(4)]
-        public StringValue InsertAfterMso { get; set; }
+        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeMso")]
-        [Index(5)]
-        public StringValue InsertBeforeMso { get; set; }
+        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterQ")]
-        [Index(6)]
-        public StringValue InsertAfterQ { get; set; }
+        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeQ")]
-        [Index(7)]
-        public StringValue InsertBeforeQ { get; set; }
+        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VerticalSeparator>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<VerticalSeparator>()
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "visible", a => a.Visible)
+                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VerticalSeparator>(deep);
@@ -8069,6 +8798,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         public DialogBoxLauncher(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DialogBoxLauncher>();
 
         /// <summary>
         /// <para>UnsizedButton.</para>
@@ -8175,189 +8906,215 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idQ")]
-        [Index(1)]
-        public StringValue IdQ { get; set; }
+        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idMso")]
-        [Index(2)]
-        public StringValue IdMso { get; set; }
+        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "tag")]
-        [Index(3)]
-        public StringValue Tag { get; set; }
+        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "label")]
-        [Index(4)]
-        public StringValue Label { get; set; }
+        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getLabel")]
-        [Index(5)]
-        public StringValue GetLabel { get; set; }
+        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "image")]
-        [Index(6)]
-        public StringValue Image { get; set; }
+        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "imageMso")]
-        [Index(7)]
-        public StringValue ImageMso { get; set; }
+        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getImage")]
-        [Index(8)]
-        public StringValue GetImage { get; set; }
+        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterMso")]
-        [Index(9)]
-        public StringValue InsertAfterMso { get; set; }
+        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeMso")]
-        [Index(10)]
-        public StringValue InsertBeforeMso { get; set; }
+        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterQ")]
-        [Index(11)]
-        public StringValue InsertAfterQ { get; set; }
+        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeQ")]
-        [Index(12)]
-        public StringValue InsertBeforeQ { get; set; }
+        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "screentip")]
-        [Index(13)]
-        public StringValue Screentip { get; set; }
+        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getScreentip")]
-        [Index(14)]
-        public StringValue GetScreentip { get; set; }
+        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "supertip")]
-        [Index(15)]
-        public StringValue Supertip { get; set; }
+        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSupertip")]
-        [Index(16)]
-        public StringValue GetSupertip { get; set; }
+        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr(0, "visible")]
-        [Index(17)]
-        public BooleanValue Visible { get; set; }
+        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getVisible")]
-        [Index(18)]
-        public StringValue GetVisible { get; set; }
+        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [StringValidator(IsToken = true, MinLength = 1L, MaxLength = 3L)]
-        [SchemaAttr(0, "keytip")]
-        [Index(19)]
-        public StringValue Keytip { get; set; }
+        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getKeytip")]
-        [Index(20)]
-        public StringValue GetKeytip { get; set; }
+        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Group>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Group>()
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "visible", a => a.Visible)
+                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                           })
+                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -8417,266 +9174,293 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idQ")]
-        [Index(1)]
-        public StringValue IdQ { get; set; }
+        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idMso")]
-        [Index(2)]
-        public StringValue IdMso { get; set; }
+        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 4096L)]
-        [SchemaAttr(0, "description")]
-        [Index(3)]
-        public StringValue Description { get; set; }
+        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getDescription")]
-        [Index(4)]
-        public StringValue GetDescription { get; set; }
+        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr(0, "size")]
-        [Index(5)]
-        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSize</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSize")]
-        [Index(6)]
-        public StringValue GetSize { get; set; }
+        public StringValue GetSize { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "image")]
-        [Index(7)]
-        public StringValue Image { get; set; }
+        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "imageMso")]
-        [Index(8)]
-        public StringValue ImageMso { get; set; }
+        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getImage")]
-        [Index(9)]
-        public StringValue GetImage { get; set; }
+        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "screentip")]
-        [Index(10)]
-        public StringValue Screentip { get; set; }
+        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getScreentip")]
-        [Index(11)]
-        public StringValue GetScreentip { get; set; }
+        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "supertip")]
-        [Index(12)]
-        public StringValue Supertip { get; set; }
+        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getSupertip")]
-        [Index(13)]
-        public StringValue GetSupertip { get; set; }
+        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr(0, "enabled")]
-        [Index(14)]
-        public BooleanValue Enabled { get; set; }
+        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getEnabled")]
-        [Index(15)]
-        public StringValue GetEnabled { get; set; }
+        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "label")]
-        [Index(16)]
-        public StringValue Label { get; set; }
+        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getLabel")]
-        [Index(17)]
-        public StringValue GetLabel { get; set; }
+        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterMso")]
-        [Index(18)]
-        public StringValue InsertAfterMso { get; set; }
+        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeMso")]
-        [Index(19)]
-        public StringValue InsertBeforeMso { get; set; }
+        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterQ")]
-        [Index(20)]
-        public StringValue InsertAfterQ { get; set; }
+        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeQ")]
-        [Index(21)]
-        public StringValue InsertBeforeQ { get; set; }
+        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr(0, "visible")]
-        [Index(22)]
-        public BooleanValue Visible { get; set; }
+        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getVisible")]
-        [Index(23)]
-        public StringValue GetVisible { get; set; }
+        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [StringValidator(IsToken = true, MinLength = 1L, MaxLength = 3L)]
-        [SchemaAttr(0, "keytip")]
-        [Index(24)]
-        public StringValue Keytip { get; set; }
+        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getKeytip")]
-        [Index(25)]
-        public StringValue GetKeytip { get; set; }
+        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr(0, "showLabel")]
-        [Index(26)]
-        public BooleanValue ShowLabel { get; set; }
+        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowLabel")]
-        [Index(27)]
-        public StringValue GetShowLabel { get; set; }
+        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr(0, "showImage")]
-        [Index(28)]
-        public BooleanValue ShowImage { get; set; }
+        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getShowImage")]
-        [Index(29)]
-        public StringValue GetShowImage { get; set; }
+        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<QuickAccessToolbarControlClone>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<QuickAccessToolbarControlClone>()
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+                           })
+                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "size", a => a.Size)
+                           .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "enabled", a => a.Enabled)
+                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "visible", a => a.Visible)
+                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                           })
+                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
+                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "showImage", a => a.ShowImage)
+                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<QuickAccessToolbarControlClone>(deep);
@@ -8729,6 +9513,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         public SharedQatControls(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SharedQatControls>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -8793,6 +9579,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         public DocumentSpecificQuickAccessToolbarControls(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocumentSpecificQuickAccessToolbarControls>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -8911,126 +9699,145 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idQ")]
-        [Index(1)]
-        public StringValue IdQ { get; set; }
+        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idMso")]
-        [Index(2)]
-        public StringValue IdMso { get; set; }
+        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "tag")]
-        [Index(3)]
-        public StringValue Tag { get; set; }
+        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "label")]
-        [Index(4)]
-        public StringValue Label { get; set; }
+        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getLabel")]
-        [Index(5)]
-        public StringValue GetLabel { get; set; }
+        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterMso")]
-        [Index(6)]
-        public StringValue InsertAfterMso { get; set; }
+        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeMso")]
-        [Index(7)]
-        public StringValue InsertBeforeMso { get; set; }
+        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertAfterQ")]
-        [Index(8)]
-        public StringValue InsertAfterQ { get; set; }
+        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [StringValidator(IsQName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "insertBeforeQ")]
-        [Index(9)]
-        public StringValue InsertBeforeQ { get; set; }
+        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr(0, "visible")]
-        [Index(10)]
-        public BooleanValue Visible { get; set; }
+        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getVisible")]
-        [Index(11)]
-        public StringValue GetVisible { get; set; }
+        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [StringValidator(IsToken = true, MinLength = 1L, MaxLength = 3L)]
-        [SchemaAttr(0, "keytip")]
-        [Index(12)]
-        public StringValue Keytip { get; set; }
+        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getKeytip")]
-        [Index(13)]
-        public StringValue GetKeytip { get; set; }
+        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Tab>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Tab>()
+                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "visible", a => a.Visible)
+                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                           })
+                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -9097,28 +9904,36 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idMso")]
-        [Index(0)]
-        public StringValue IdMso { get; set; }
+        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr(0, "visible")]
-        [Index(1)]
-        public BooleanValue Visible { get; set; }
+        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getVisible")]
-        [Index(2)]
-        public StringValue GetVisible { get; set; }
+        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ContextualTabSet>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ContextualTabSet>()
+                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "visible", a => a.Visible)
+                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -9151,36 +9966,45 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "onAction")]
-        [Index(0)]
-        public StringValue OnAction { get; set; }
+        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr(0, "enabled")]
-        [Index(1)]
-        public BooleanValue Enabled { get; set; }
+        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [StringValidator(MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "getEnabled")]
-        [Index(2)]
-        public StringValue GetEnabled { get; set; }
+        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [StringValidator(IsToken = true, IsNcName = true, MinLength = 1L, MaxLength = 1024L)]
-        [SchemaAttr(0, "idMso")]
-        [Index(3)]
-        public StringValue IdMso { get; set; }
+        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RepurposedCommand>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RepurposedCommand>()
+                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "enabled", a => a.Enabled)
+                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+                           })
+                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RepurposedCommand>(deep);
@@ -9248,6 +10072,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         public OfficeMenu(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OfficeMenu>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -9331,6 +10157,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         public QuickAccessToolbar(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<QuickAccessToolbar>();
 
         /// <summary>
         /// <para>SharedQatControls.</para>
@@ -9417,6 +10245,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Tabs>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Tab), 1, 100)
@@ -9475,6 +10305,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ContextualTabSets>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.ContextualTabSet), 1, 100)
@@ -9532,6 +10364,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         public RepurposedCommands(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RepurposedCommands>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -9601,9 +10435,15 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>startFromScratch</para>
         /// <para>Represents the following attribute in the schema: startFromScratch</para>
         /// </summary>
-        [SchemaAttr(0, "startFromScratch")]
-        [Index(0)]
-        public BooleanValue StartFromScratch { get; set; }
+        public BooleanValue StartFromScratch { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Ribbon>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Ribbon>()
+                           .AddAttribute(0, "startFromScratch", a => a.StartFromScratch);
+        }
 
         /// <summary>
         /// <para>OfficeMenu.</para>

@@ -5,6 +5,7 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Drawing.ChartDrawing;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Office2010.Drawing.Charts;
 using DocumentFormat.OpenXml.Office2013.Drawing.Chart;
 using DocumentFormat.OpenXml.Packaging;
@@ -36,18 +37,25 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Number Format Code</para>
         /// <para>Represents the following attribute in the schema: formatCode</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "formatCode")]
-        [Index(0)]
-        public StringValue FormatCode { get; set; }
+        public StringValue FormatCode { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Linked to Source</para>
         /// <para>Represents the following attribute in the schema: sourceLinked</para>
         /// </summary>
-        [SchemaAttr(0, "sourceLinked")]
-        [Index(1)]
-        public BooleanValue SourceLinked { get; set; }
+        public BooleanValue SourceLinked { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberingFormat>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<NumberingFormat>()
+                           .AddAttribute(0, "formatCode", a => a.FormatCode, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "sourceLinked", a => a.SourceLinked);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumberingFormat>(deep);
@@ -130,10 +138,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "bwMode")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChartShapeProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ChartShapeProperties>()
+                           .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         /// <summary>
         /// <para>2D Transform for Individual Objects.</para>
@@ -235,6 +251,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextProperties>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties), 1, 1),
@@ -295,6 +313,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public RichText(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RichText>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -405,10 +425,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Data Label Position Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DataLabelPositionValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DataLabelPositionValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DataLabelPositionValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataLabelPosition>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<DataLabelPosition>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataLabelPosition>(deep);
@@ -430,6 +458,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowLegendKey>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowLegendKey>(deep);
     }
@@ -449,6 +479,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public ShowValue() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowValue>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowValue>(deep);
@@ -470,6 +502,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowCategoryName>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowCategoryName>(deep);
     }
@@ -489,6 +523,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public ShowSeriesName() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowSeriesName>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowSeriesName>(deep);
@@ -510,6 +546,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowPercent>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowPercent>(deep);
     }
@@ -529,6 +567,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public ShowBubbleSize() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowBubbleSize>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowBubbleSize>(deep);
@@ -550,6 +590,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowLeaderLines>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowLeaderLines>(deep);
     }
@@ -569,6 +611,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public VaryColors() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VaryColors>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VaryColors>(deep);
@@ -590,6 +634,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Wireframe>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Wireframe>(deep);
     }
@@ -609,6 +655,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Delete() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Delete>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Delete>(deep);
@@ -630,6 +678,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Overlay>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Overlay>(deep);
     }
@@ -649,6 +699,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public RightAngleAxes() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RightAngleAxes>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RightAngleAxes>(deep);
@@ -670,6 +722,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowHorizontalBorder>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowHorizontalBorder>(deep);
     }
@@ -689,6 +743,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public ShowVerticalBorder() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowVerticalBorder>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowVerticalBorder>(deep);
@@ -710,6 +766,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowOutlineBorder>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowOutlineBorder>(deep);
     }
@@ -729,6 +787,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public ShowKeys() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowKeys>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowKeys>(deep);
@@ -750,6 +810,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<InvertIfNegative>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<InvertIfNegative>(deep);
     }
@@ -769,6 +831,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Bubble3D() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Bubble3D>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Bubble3D>(deep);
@@ -790,6 +854,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DisplayRSquaredValue>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DisplayRSquaredValue>(deep);
     }
@@ -809,6 +875,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public DisplayEquation() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DisplayEquation>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DisplayEquation>(deep);
@@ -830,6 +898,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoEndCap>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoEndCap>(deep);
     }
@@ -849,6 +919,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public ApplyToFront() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ApplyToFront>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ApplyToFront>(deep);
@@ -870,6 +942,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ApplyToSides>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ApplyToSides>(deep);
     }
@@ -889,6 +963,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public ApplyToEnd() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ApplyToEnd>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ApplyToEnd>(deep);
@@ -910,6 +986,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutoTitleDeleted>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoTitleDeleted>(deep);
     }
@@ -929,6 +1007,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public PlotVisibleOnly() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PlotVisibleOnly>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PlotVisibleOnly>(deep);
@@ -950,6 +1030,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowDataLabelsOverMaximum>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowDataLabelsOverMaximum>(deep);
     }
@@ -969,6 +1051,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public ChartObject() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChartObject>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChartObject>(deep);
@@ -990,6 +1074,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Data>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Data>(deep);
     }
@@ -1009,6 +1095,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Formatting() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Formatting>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Formatting>(deep);
@@ -1030,6 +1118,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Selection>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Selection>(deep);
     }
@@ -1049,6 +1139,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public UserInterface() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UserInterface>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UserInterface>(deep);
@@ -1070,6 +1162,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutoUpdate>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoUpdate>(deep);
     }
@@ -1089,6 +1183,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Smooth() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Smooth>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Smooth>(deep);
@@ -1110,6 +1206,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowMarker>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowMarker>(deep);
     }
@@ -1129,6 +1227,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public ShowNegativeBubbles() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowNegativeBubbles>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowNegativeBubbles>(deep);
@@ -1150,6 +1250,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutoLabeled>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoLabeled>(deep);
     }
@@ -1169,6 +1271,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public NoMultiLevelLabels() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoMultiLevelLabels>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoMultiLevelLabels>(deep);
@@ -1190,6 +1294,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Date1904>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Date1904>(deep);
     }
@@ -1209,6 +1315,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public RoundedCorners() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RoundedCorners>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RoundedCorners>(deep);
@@ -1232,9 +1340,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Boolean Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public BooleanValue Val { get; set; }
+        public BooleanValue Val { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BooleanType>()
+                           .AddAttribute(0, "val", a => a.Val);
+        }
     }
 
     /// <summary>
@@ -1265,6 +1378,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             return new StringValue { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Separator>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Separator>(deep);
@@ -1299,6 +1414,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             return new StringValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TrendlineName>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TrendlineName>(deep);
     }
@@ -1331,6 +1448,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             return new StringValue { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Formula>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Formula>(deep);
@@ -1384,6 +1503,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Layout(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Layout>();
 
         /// <summary>
         /// <para>Manual Layout.</para>
@@ -1473,6 +1594,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public ChartText(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChartText>();
 
         /// <summary>
         /// <para>String Reference.</para>
@@ -1575,6 +1698,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LeaderLines>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
@@ -1631,6 +1756,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public DropLines(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DropLines>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1689,6 +1816,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MajorGridlines>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
@@ -1745,6 +1874,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public MinorGridlines(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MinorGridlines>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1803,6 +1934,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SeriesLines>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
@@ -1859,6 +1992,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public HighLowLines(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HighLowLines>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1946,6 +2081,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Index>();
+
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true)
         };
@@ -1971,6 +2108,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Order() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Order>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true)
@@ -1998,6 +2137,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AxisId>();
+
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true)
         };
@@ -2023,6 +2164,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public CrossingAxis() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CrossingAxis>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true)
@@ -2050,6 +2193,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PointCount>();
+
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true)
         };
@@ -2075,6 +2220,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public SecondPiePoint() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SecondPiePoint>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true)
@@ -2102,6 +2249,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Explosion>();
+
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true)
         };
@@ -2127,6 +2276,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public FormatId() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FormatId>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true)
@@ -2156,10 +2307,17 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Integer Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public UInt32Value Val { get; set; }
+        public UInt32Value Val { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<UnsignedIntegerType>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
     }
 
     /// <summary>
@@ -2210,6 +2368,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public SeriesText(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SeriesText>();
 
         /// <summary>
         /// <para>StringReference.</para>
@@ -2272,9 +2432,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Grouping Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.GroupingValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.GroupingValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.GroupingValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Grouping>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Grouping>()
+                           .AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Grouping>(deep);
@@ -2352,6 +2518,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public LineChartSeries(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LineChartSeries>();
 
         /// <summary>
         /// <para>Index.</para>
@@ -2538,6 +2706,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataLabels>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabel), 0, 0),
@@ -2599,10 +2769,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Bar Direction Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarDirectionValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarDirectionValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarDirectionValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BarDirection>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BarDirection>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BarDirection>(deep);
@@ -2628,9 +2806,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Bar Grouping Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarGroupingValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarGroupingValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarGroupingValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BarGrouping>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BarGrouping>()
+                           .AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BarGrouping>(deep);
@@ -2708,6 +2892,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public BarChartSeries(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BarChartSeries>();
 
         /// <summary>
         /// <para>Index.</para>
@@ -2886,6 +3072,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AreaChartSeries>();
+
         /// <summary>
         /// <para>Index.</para>
         /// <para>Represents the following element tag in the schema: c:idx.</para>
@@ -3045,6 +3233,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public PieChartSeries(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PieChartSeries>();
 
         /// <summary>
         /// <para>Index.</para>
@@ -3213,6 +3403,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public SurfaceChartSeries(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SurfaceChartSeries>();
 
         /// <summary>
         /// <para>Index.</para>
@@ -3403,6 +3595,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BandFormats>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BandFormat), 0, 0)
@@ -3468,6 +3662,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Scaling(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Scaling>();
 
         /// <summary>
         /// <para>Logarithmic Base.</para>
@@ -3569,10 +3765,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Axis Position Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.AxisPositionValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.AxisPositionValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.AxisPositionValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AxisPosition>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<AxisPosition>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AxisPosition>(deep);
@@ -3634,6 +3838,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Title(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Title>();
 
         /// <summary>
         /// <para>Chart Text.</para>
@@ -3745,6 +3951,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MajorTickMark>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MajorTickMark>(deep);
     }
@@ -3764,6 +3972,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public MinorTickMark() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MinorTickMark>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MinorTickMark>(deep);
@@ -3787,9 +3997,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Tick Mark Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickMarkValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickMarkValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickMarkValues>>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TickMarkType>()
+                           .AddAttribute(0, "val", a => a.Val);
+        }
     }
 
     /// <summary>
@@ -3812,9 +4027,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Tick Label Position Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPositionValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPositionValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPositionValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TickLabelPosition>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TickLabelPosition>()
+                           .AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TickLabelPosition>(deep);
@@ -3840,10 +4061,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Crosses Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossesValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossesValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossesValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Crosses>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Crosses>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Crosses>(deep);
@@ -3864,6 +4093,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public CrossesAt() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CrossesAt>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(0 /*:val*/, false, new string[] { "INF", "-INF", "NaN" })
@@ -3891,6 +4122,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Left>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Left>(deep);
     }
@@ -3910,6 +4143,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Top() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Top>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Top>(deep);
@@ -3931,6 +4166,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Width>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Width>(deep);
     }
@@ -3951,6 +4188,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Height>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Height>(deep);
     }
@@ -3970,6 +4209,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Forward() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Forward>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(0 /*:val*/, false, new string[] { "INF", "-INF", "NaN" }),
@@ -3998,6 +4239,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Backward>();
+
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*:val*/, true, 0, true, double.PositiveInfinity, true)
         };
@@ -4024,6 +4267,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Intercept>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Intercept>(deep);
     }
@@ -4044,6 +4289,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ErrorBarValue>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ErrorBarValue>(deep);
     }
@@ -4063,6 +4310,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public SplitPosition() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SplitPosition>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(0 /*:val*/, false, new string[] { "INF", "-INF", "NaN" })
@@ -4090,6 +4339,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomDisplayUnit>();
+
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(0 /*:val*/, false, new string[] { "INF", "-INF", "NaN" })
         };
@@ -4116,6 +4367,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MaxAxisValue>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MaxAxisValue>(deep);
     }
@@ -4135,6 +4388,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public MinAxisValue() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MinAxisValue>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MinAxisValue>(deep);
@@ -4158,10 +4413,17 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Floating Point Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public DoubleValue Val { get; set; }
+        public DoubleValue Val { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<DoubleType>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
     }
 
     /// <summary>
@@ -4238,6 +4500,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public ChartSpace(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChartSpace>();
 
         /// <summary>
         /// <para>Date1904.</para>
@@ -4386,6 +4650,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UserShapes>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 0)
@@ -4451,6 +4717,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChartReference>();
+
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipExistConstraint(0 /*r:id*/)
         };
@@ -4477,6 +4745,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LegacyDrawingHeaderFooter>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LegacyDrawingHeaderFooter>(deep);
     }
@@ -4496,6 +4766,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public UserShapesReference() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UserShapesReference>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UserShapesReference>(deep);
@@ -4522,10 +4794,17 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RelationshipIdType>()
+                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
     }
 
     /// <summary>
@@ -4572,10 +4851,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Uniform Resource Identifier</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Extension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Extension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -4617,6 +4904,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             return new StringValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumericValue>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumericValue>(deep);
     }
@@ -4649,6 +4938,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             return new StringValue { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FormatCode>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormatCode>(deep);
@@ -4683,6 +4974,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             return new StringValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OddHeader>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OddHeader>(deep);
     }
@@ -4715,6 +5008,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             return new StringValue { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OddFooter>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OddFooter>(deep);
@@ -4749,6 +5044,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             return new StringValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EvenHeader>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EvenHeader>(deep);
     }
@@ -4781,6 +5078,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             return new StringValue { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EvenFooter>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EvenFooter>(deep);
@@ -4815,6 +5114,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             return new StringValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FirstHeader>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstHeader>(deep);
     }
@@ -4848,6 +5149,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             return new StringValue { InnerText = text };
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FirstFooter>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstFooter>(deep);
     }
@@ -4880,6 +5183,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             return new StringValue { InnerText = text };
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotTableName>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotTableName>(deep);
@@ -4936,18 +5241,25 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Index</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "idx")]
-        [Index(0)]
-        public UInt32Value Index { get; set; }
+        public UInt32Value Index { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Number Format</para>
         /// <para>Represents the following attribute in the schema: formatCode</para>
         /// </summary>
-        [SchemaAttr(0, "formatCode")]
-        [Index(1)]
-        public StringValue FormatCode { get; set; }
+        public StringValue FormatCode { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumericPoint>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<NumericPoint>()
+                           .AddAttribute(0, "idx", a => a.Index, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "formatCode", a => a.FormatCode);
+        }
 
         /// <summary>
         /// <para>Numeric Value.</para>
@@ -5026,6 +5338,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Extension), 0, 0)
@@ -5087,6 +5401,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public NumberReference(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberReference>();
 
         /// <summary>
         /// <para>Formula.</para>
@@ -5189,6 +5505,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberLiteral>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.FormatCode), 0, 1),
@@ -5251,6 +5569,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public NumberingCache(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberingCache>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -5391,6 +5711,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Level>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringPoint), 0, 0)
@@ -5452,6 +5774,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public MultiLevelStringReference(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MultiLevelStringReference>();
 
         /// <summary>
         /// <para>Formula.</para>
@@ -5556,6 +5880,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StringReference>();
+
         /// <summary>
         /// <para>Formula.</para>
         /// <para>Represents the following element tag in the schema: c:f.</para>
@@ -5656,6 +5982,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StringLiteral>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
@@ -5716,6 +6044,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public StringCache(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StringCache>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -5813,9 +6143,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Layout Target Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutTargetValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutTargetValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutTargetValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LayoutTarget>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<LayoutTarget>()
+                           .AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LayoutTarget>(deep);
@@ -5837,6 +6173,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LeftMode>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LeftMode>(deep);
     }
@@ -5856,6 +6194,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public TopMode() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TopMode>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopMode>(deep);
@@ -5877,6 +6217,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WidthMode>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WidthMode>(deep);
     }
@@ -5896,6 +6238,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public HeightMode() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HeightMode>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HeightMode>(deep);
@@ -5919,9 +6263,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Layout Mode Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutModeValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutModeValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutModeValues>>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<LayoutModeType>()
+                           .AddAttribute(0, "val", a => a.Val);
+        }
     }
 
     /// <summary>
@@ -5988,6 +6337,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public ManualLayout(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ManualLayout>();
 
         /// <summary>
         /// <para>Layout Target.</para>
@@ -6159,10 +6510,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>X Rotation Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [NumberValidator(MinInclusive = -90L, MaxInclusive = 90L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public SByteValue Val { get; set; }
+        public SByteValue Val { get => GetAttribute<SByteValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RotateX>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RotateX>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-90L), MaxInclusive = (90L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RotateX>(deep);
@@ -6188,10 +6547,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Height Percent Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 5L, MaxInclusive = 500L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public UInt16Value Val { get; set; }
+        public UInt16Value Val { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HeightPercent>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<HeightPercent>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (5L), MaxInclusive = (500L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HeightPercent>(deep);
@@ -6217,10 +6584,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Y Rotation Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 360L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public UInt16Value Val { get; set; }
+        public UInt16Value Val { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RotateY>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RotateY>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (360L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RotateY>(deep);
@@ -6246,10 +6621,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Depth Percent Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 20L, MaxInclusive = 2000L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public UInt16Value Val { get; set; }
+        public UInt16Value Val { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DepthPercent>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<DepthPercent>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), MaxInclusive = (2000L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DepthPercent>(deep);
@@ -6275,10 +6658,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Perspective Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 240L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public ByteValue Val { get; set; }
+        public ByteValue Val { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Perspective>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Perspective>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (240L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Perspective>(deep);
@@ -6304,10 +6695,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Marker Style Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.MarkerStyleValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.MarkerStyleValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.MarkerStyleValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Symbol>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Symbol>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Symbol>(deep);
@@ -6333,10 +6732,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Marker Size Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 2L, MaxInclusive = 72L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public ByteValue Val { get; set; }
+        public ByteValue Val { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Size>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Size>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L), MaxInclusive = (72L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Size>(deep);
@@ -6394,6 +6801,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Marker(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Marker>();
 
         /// <summary>
         /// <para>Symbol.</para>
@@ -6516,6 +6925,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PictureOptions>();
+
         /// <summary>
         /// <para>Apply To Front.</para>
         /// <para>Represents the following element tag in the schema: c:applyToFront.</para>
@@ -6616,9 +7027,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Trendline Type Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TrendlineValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TrendlineValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TrendlineValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TrendlineType>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TrendlineType>()
+                           .AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TrendlineType>(deep);
@@ -6644,11 +7061,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Order Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 2L, MaxInclusive = 6L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public ByteValue Val { get; set; }
+        public ByteValue Val { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PolynomialOrder>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<PolynomialOrder>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L), MaxInclusive = (6L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PolynomialOrder>(deep);
@@ -6674,11 +7099,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Period Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 2L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public UInt32Value Val { get; set; }
+        public UInt32Value Val { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Period>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Period>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Period>(deep);
@@ -6740,6 +7173,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public TrendlineLabel(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TrendlineLabel>();
 
         /// <summary>
         /// <para>Layout.</para>
@@ -6855,10 +7290,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Error Bar Direction Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarDirectionValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarDirectionValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarDirectionValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ErrorDirection>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ErrorDirection>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ErrorDirection>(deep);
@@ -6884,10 +7327,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Error Bar Type Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ErrorBarType>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ErrorBarType>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ErrorBarType>(deep);
@@ -6913,10 +7364,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Error Bar Type Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ErrorBarValueType>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ErrorBarValueType>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ErrorBarValueType>(deep);
@@ -6968,6 +7427,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Plus(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Plus>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -7031,6 +7492,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Minus>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -7092,6 +7555,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Values(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Values>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -7155,6 +7620,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<YValues>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -7216,6 +7683,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public BubbleSize(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BubbleSize>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -7322,6 +7791,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GapWidth>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GapWidth>(deep);
     }
@@ -7341,6 +7812,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public GapDepth() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GapDepth>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GapDepth>(deep);
@@ -7364,10 +7837,17 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Gap Size Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 500L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public UInt16Value Val { get; set; }
+        public UInt16Value Val { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<GapAmountType>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (500L) });
+                           });
+        }
     }
 
     /// <summary>
@@ -7415,6 +7895,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public UpBars(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UpBars>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -7472,6 +7954,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public DownBars(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DownBars>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -7563,10 +8047,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Pie of Pie or Bar of Pie Type Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OfPieValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OfPieValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OfPieValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OfPieType>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<OfPieType>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OfPieType>(deep);
@@ -7592,10 +8084,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Split Type Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SplitValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SplitValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SplitValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SplitType>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SplitType>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SplitType>(deep);
@@ -7648,6 +8148,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomSplit>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SecondPiePoint), 0, 0)
@@ -7679,10 +8181,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Second Pie Size Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 5L, MaxInclusive = 200L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public UInt16Value Val { get; set; }
+        public UInt16Value Val { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SecondPieSize>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SecondPieSize>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (5L), MaxInclusive = (200L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SecondPieSize>(deep);
@@ -7736,6 +8246,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public BandFormat(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BandFormat>();
 
         /// <summary>
         /// <para>Index.</para>
@@ -7795,10 +8307,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Picture Format Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PictureFormatValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PictureFormatValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PictureFormatValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PictureFormat>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<PictureFormat>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PictureFormat>(deep);
@@ -7824,11 +8344,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Picture Stack Unit</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public DoubleValue Val { get; set; }
+        public DoubleValue Val { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PictureStackUnit>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<PictureStackUnit>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PictureStackUnit>(deep);
@@ -7854,9 +8382,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Built In Unit Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BuiltInUnitValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BuiltInUnitValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BuiltInUnitValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BuiltInUnit>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BuiltInUnit>()
+                           .AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BuiltInUnit>(deep);
@@ -7914,6 +8448,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public DisplayUnitsLabel(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DisplayUnitsLabel>();
 
         /// <summary>
         /// <para>Layout.</para>
@@ -8001,11 +8537,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Logarithmic Base Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 2L, MaxInclusive = 1000L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public DoubleValue Val { get; set; }
+        public DoubleValue Val { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LogBase>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<LogBase>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L), MaxInclusive = (1000L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LogBase>(deep);
@@ -8031,9 +8575,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Orientation Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OrientationValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OrientationValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OrientationValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Orientation>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Orientation>()
+                           .AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Orientation>(deep);
@@ -8093,6 +8643,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public PivotFormat(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotFormat>();
 
         /// <summary>
         /// <para>Index.</para>
@@ -8194,9 +8746,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Legend Position Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LegendPositionValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LegendPositionValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LegendPositionValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LegendPosition>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<LegendPosition>()
+                           .AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LegendPosition>(deep);
@@ -8254,6 +8812,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public LegendEntry(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LegendEntry>();
 
         /// <summary>
         /// <para>Index.</para>
@@ -8338,6 +8898,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotFormats>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PivotFormat), 0, 0)
@@ -8407,6 +8969,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public View3D(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<View3D>();
 
         /// <summary>
         /// <para>X Rotation.</para>
@@ -8565,6 +9129,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Floor>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Thickness), 0, 1),
@@ -8628,6 +9194,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SideWall>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Thickness), 0, 1),
@@ -8690,6 +9258,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public BackWall(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BackWall>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -8902,6 +9472,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PlotArea>();
+
         /// <summary>
         /// <para>Layout.</para>
         /// <para>Represents the following element tag in the schema: c:layout.</para>
@@ -9014,6 +9586,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Legend>();
+
         /// <summary>
         /// <para>Legend Position.</para>
         /// <para>Represents the following element tag in the schema: c:legendPos.</para>
@@ -9064,9 +9638,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Display Blanks As Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAsValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAsValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAsValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DisplayBlanksAs>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<DisplayBlanksAs>()
+                           .AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DisplayBlanksAs>(deep);
@@ -9133,25 +9713,29 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Align With Margins</para>
         /// <para>Represents the following attribute in the schema: alignWithMargins</para>
         /// </summary>
-        [SchemaAttr(0, "alignWithMargins")]
-        [Index(0)]
-        public BooleanValue AlignWithMargins { get; set; }
+        public BooleanValue AlignWithMargins { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Different Odd Even</para>
         /// <para>Represents the following attribute in the schema: differentOddEven</para>
         /// </summary>
-        [SchemaAttr(0, "differentOddEven")]
-        [Index(1)]
-        public BooleanValue DifferentOddEven { get; set; }
+        public BooleanValue DifferentOddEven { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Different First</para>
         /// <para>Represents the following attribute in the schema: differentFirst</para>
         /// </summary>
-        [SchemaAttr(0, "differentFirst")]
-        [Index(2)]
-        public BooleanValue DifferentFirst { get; set; }
+        public BooleanValue DifferentFirst { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HeaderFooter>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<HeaderFooter>()
+                           .AddAttribute(0, "alignWithMargins", a => a.AlignWithMargins)
+                           .AddAttribute(0, "differentOddEven", a => a.DifferentOddEven)
+                           .AddAttribute(0, "differentFirst", a => a.DifferentFirst);
+        }
 
         /// <summary>
         /// <para>Odd Header.</para>
@@ -9267,55 +9851,68 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Left</para>
         /// <para>Represents the following attribute in the schema: l</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "l")]
-        [Index(0)]
-        public DoubleValue Left { get; set; }
+        public DoubleValue Left { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Right</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "r")]
-        [Index(1)]
-        public DoubleValue Right { get; set; }
+        public DoubleValue Right { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Top</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "t")]
-        [Index(2)]
-        public DoubleValue Top { get; set; }
+        public DoubleValue Top { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Bottom</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "b")]
-        [Index(3)]
-        public DoubleValue Bottom { get; set; }
+        public DoubleValue Bottom { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Header</para>
         /// <para>Represents the following attribute in the schema: header</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "header")]
-        [Index(4)]
-        public DoubleValue Header { get; set; }
+        public DoubleValue Header { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Footer</para>
         /// <para>Represents the following attribute in the schema: footer</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "footer")]
-        [Index(5)]
-        public DoubleValue Footer { get; set; }
+        public DoubleValue Footer { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PageMargins>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<PageMargins>()
+                           .AddAttribute(0, "l", a => a.Left, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "r", a => a.Right, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "t", a => a.Top, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "b", a => a.Bottom, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "header", a => a.Header, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "footer", a => a.Footer, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(3 /*:b*/, true, 0, true, 49, false),
@@ -9352,73 +9949,71 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Page Size</para>
         /// <para>Represents the following attribute in the schema: paperSize</para>
         /// </summary>
-        [SchemaAttr(0, "paperSize")]
-        [Index(0)]
-        public UInt32Value PaperSize { get; set; }
+        public UInt32Value PaperSize { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>First Page Number</para>
         /// <para>Represents the following attribute in the schema: firstPageNumber</para>
         /// </summary>
-        [SchemaAttr(0, "firstPageNumber")]
-        [Index(1)]
-        public Int32Value FirstPageNumber { get; set; }
+        public Int32Value FirstPageNumber { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Orientation</para>
         /// <para>Represents the following attribute in the schema: orientation</para>
         /// </summary>
-        [SchemaAttr(0, "orientation")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PageSetupOrientationValues> Orientation { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PageSetupOrientationValues> Orientation { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PageSetupOrientationValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Black and White</para>
         /// <para>Represents the following attribute in the schema: blackAndWhite</para>
         /// </summary>
-        [SchemaAttr(0, "blackAndWhite")]
-        [Index(3)]
-        public BooleanValue BlackAndWhite { get; set; }
+        public BooleanValue BlackAndWhite { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Draft</para>
         /// <para>Represents the following attribute in the schema: draft</para>
         /// </summary>
-        [SchemaAttr(0, "draft")]
-        [Index(4)]
-        public BooleanValue Draft { get; set; }
+        public BooleanValue Draft { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Use First Page Number</para>
         /// <para>Represents the following attribute in the schema: useFirstPageNumber</para>
         /// </summary>
-        [SchemaAttr(0, "useFirstPageNumber")]
-        [Index(5)]
-        public BooleanValue UseFirstPageNumber { get; set; }
+        public BooleanValue UseFirstPageNumber { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Horizontal DPI</para>
         /// <para>Represents the following attribute in the schema: horizontalDpi</para>
         /// </summary>
-        [SchemaAttr(0, "horizontalDpi")]
-        [Index(6)]
-        public Int32Value HorizontalDpi { get; set; }
+        public Int32Value HorizontalDpi { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Vertical DPI</para>
         /// <para>Represents the following attribute in the schema: verticalDpi</para>
         /// </summary>
-        [SchemaAttr(0, "verticalDpi")]
-        [Index(7)]
-        public Int32Value VerticalDpi { get; set; }
+        public Int32Value VerticalDpi { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Copies</para>
         /// <para>Represents the following attribute in the schema: copies</para>
         /// </summary>
-        [SchemaAttr(0, "copies")]
-        [Index(8)]
-        public UInt32Value Copies { get; set; }
+        public UInt32Value Copies { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PageSetup>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<PageSetup>()
+                           .AddAttribute(0, "paperSize", a => a.PaperSize)
+                           .AddAttribute(0, "firstPageNumber", a => a.FirstPageNumber)
+                           .AddAttribute(0, "orientation", a => a.Orientation)
+                           .AddAttribute(0, "blackAndWhite", a => a.BlackAndWhite)
+                           .AddAttribute(0, "draft", a => a.Draft)
+                           .AddAttribute(0, "useFirstPageNumber", a => a.UseFirstPageNumber)
+                           .AddAttribute(0, "horizontalDpi", a => a.HorizontalDpi)
+                           .AddAttribute(0, "verticalDpi", a => a.VerticalDpi)
+                           .AddAttribute(0, "copies", a => a.Copies);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(8 /*:copies*/, true, double.NegativeInfinity, true, 2147483647, true),
@@ -9510,10 +10105,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "bwMode")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapeProperties>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ShapeProperties>()
+                           .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         /// <summary>
         /// <para>2D Transform for Individual Objects.</para>
@@ -9648,6 +10251,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataLabel>();
+
         /// <summary>
         /// <para>Index.</para>
         /// <para>Represents the following element tag in the schema: c:idx.</para>
@@ -9761,6 +10366,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AreaChart>();
+
         /// <summary>
         /// <para>Grouping.</para>
         /// <para>Represents the following element tag in the schema: c:grouping.</para>
@@ -9870,6 +10477,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Area3DChart(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Area3DChart>();
 
         /// <summary>
         /// <para>Grouping.</para>
@@ -9988,6 +10597,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LineChart>();
+
         /// <summary>
         /// <para>Grouping.</para>
         /// <para>Represents the following element tag in the schema: c:grouping.</para>
@@ -10102,6 +10713,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Line3DChart>();
+
         /// <summary>
         /// <para>Grouping.</para>
         /// <para>Represents the following element tag in the schema: c:grouping.</para>
@@ -10211,6 +10824,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StockChart>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LineChartSeries), 3, 4),
@@ -10284,6 +10899,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public RadarChart(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RadarChart>();
 
         /// <summary>
         /// <para>RadarStyle.</para>
@@ -10384,6 +11001,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ScatterChart>();
+
         /// <summary>
         /// <para>ScatterStyle.</para>
         /// <para>Represents the following element tag in the schema: c:scatterStyle.</para>
@@ -10481,6 +11100,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PieChart>();
+
         /// <summary>
         /// <para>VaryColors.</para>
         /// <para>Represents the following element tag in the schema: c:varyColors.</para>
@@ -10567,6 +11188,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Pie3DChart(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Pie3DChart>();
 
         /// <summary>
         /// <para>VaryColors.</para>
@@ -10657,6 +11280,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public DoughnutChart(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoughnutChart>();
 
         /// <summary>
         /// <para>VaryColors.</para>
@@ -10757,6 +11382,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public BarChart(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BarChart>();
 
         /// <summary>
         /// <para>Bar Direction.</para>
@@ -10887,6 +11514,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Bar3DChart(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Bar3DChart>();
 
         /// <summary>
         /// <para>Bar Direction.</para>
@@ -11020,6 +11649,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OfPieChart>();
+
         /// <summary>
         /// <para>Pie of Pie or Bar of Pie Type.</para>
         /// <para>Represents the following element tag in the schema: c:ofPieType.</para>
@@ -11128,6 +11759,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SurfaceChart>();
+
         /// <summary>
         /// <para>Wireframe.</para>
         /// <para>Represents the following element tag in the schema: c:wireframe.</para>
@@ -11218,6 +11851,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Surface3DChart(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Surface3DChart>();
 
         /// <summary>
         /// <para>Wireframe.</para>
@@ -11323,6 +11958,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public BubbleChart(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BubbleChart>();
 
         /// <summary>
         /// <para>VaryColors.</para>
@@ -11442,6 +12079,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public ValueAxis(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ValueAxis>();
 
         /// <summary>
         /// <para>Axis ID.</para>
@@ -11755,6 +12394,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public CategoryAxis(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CategoryAxis>();
 
         /// <summary>
         /// <para>Axis ID.</para>
@@ -12073,6 +12714,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DateAxis>();
+
         /// <summary>
         /// <para>Axis ID.</para>
         /// <para>Represents the following element tag in the schema: c:axId.</para>
@@ -12381,6 +13024,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SeriesAxis>();
+
         /// <summary>
         /// <para>Axis ID.</para>
         /// <para>Represents the following element tag in the schema: c:axId.</para>
@@ -12660,6 +13305,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataTable>();
+
         /// <summary>
         /// <para>Show Horizontal Border.</para>
         /// <para>Represents the following element tag in the schema: c:showHorzBorder.</para>
@@ -12788,10 +13435,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>First Slice Angle Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 360L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public UInt16Value Val { get; set; }
+        public UInt16Value Val { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FirstSliceAngle>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<FirstSliceAngle>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (360L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstSliceAngle>(deep);
@@ -12817,11 +13472,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Hole Size Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 1L, MaxInclusive = 90L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public ByteValue Val { get; set; }
+        public ByteValue Val { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HoleSize>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<HoleSize>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (90L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HoleSize>(deep);
@@ -12878,10 +13541,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Index</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "idx")]
-        [Index(0)]
-        public UInt32Value Index { get; set; }
+        public UInt32Value Index { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StringPoint>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<StringPoint>()
+                           .AddAttribute(0, "idx", a => a.Index, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <summary>
         /// <para>Text Value.</para>
@@ -12933,10 +13604,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public ByteValue Val { get; set; }
+        public ByteValue Val { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Thickness>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Thickness>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Thickness>(deep);
@@ -12993,11 +13672,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StockChartExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<StockChartExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -13062,11 +13749,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PieChartExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<PieChartExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -13131,11 +13826,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Pie3DChartExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Pie3DChartExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -13204,11 +13907,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumRefExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<NumRefExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -13275,11 +13986,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StrDataExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<StrDataExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -13348,11 +14067,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StrRefExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<StrRefExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -13423,11 +14150,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MultiLvlStrRefExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<MultiLvlStrRefExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -13502,11 +14237,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DLblExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<DLblExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -13587,11 +14330,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DLblsExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<DLblsExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -13668,11 +14419,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LineSerExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<LineSerExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -13746,11 +14505,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ScatterSerExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ScatterSerExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -13824,11 +14591,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RadarSerExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RadarSerExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -13902,11 +14677,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AreaSerExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<AreaSerExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -13980,11 +14763,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PieSerExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<PieSerExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14056,11 +14847,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SurfaceSerExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SurfaceSerExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14127,11 +14926,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LineChartExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<LineChartExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14196,11 +15003,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Line3DChartExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Line3DChartExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14265,11 +15080,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ScatterChartExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ScatterChartExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14334,11 +15157,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RadarChartExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RadarChartExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14403,11 +15234,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BarChartExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BarChartExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14472,11 +15311,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Bar3DChartExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Bar3DChartExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14541,11 +15388,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AreaChartExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<AreaChartExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14610,11 +15465,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Area3DChartExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Area3DChartExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14679,11 +15542,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BubbleChartExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BubbleChartExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14748,11 +15619,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SurfaceChartExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SurfaceChartExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14817,11 +15696,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Surface3DChartExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Surface3DChartExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14886,11 +15773,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CatAxExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<CatAxExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14955,11 +15850,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DateAxExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<DateAxExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -15024,11 +15927,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SerAxExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SerAxExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -15093,11 +16004,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ValAxExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ValAxExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -15163,6 +16082,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public UpDownBars(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UpDownBars>();
 
         /// <summary>
         /// <para>Gap Width.</para>
@@ -15277,6 +16198,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StockChartExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StockChartExtension), 0, 0)
@@ -15334,6 +16257,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public PieChartExtensionList(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PieChartExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -15393,6 +16318,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Pie3DChartExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Pie3DChartExtension), 0, 0)
@@ -15450,6 +16377,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public NumRefExtensionList(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumRefExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -15509,6 +16438,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StrDataExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StrDataExtension), 0, 0)
@@ -15566,6 +16497,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public StrRefExtensionList(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StrRefExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -15628,6 +16561,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public MultiLevelStringCache(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MultiLevelStringCache>();
 
         /// <summary>
         /// <para>PointCount.</para>
@@ -15702,6 +16637,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MultiLvlStrRefExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtension), 0, 0)
@@ -15760,6 +16697,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DLblExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DLblExtension), 0, 0)
@@ -15817,6 +16756,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public DLblsExtensionList(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DLblsExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -15889,6 +16830,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public DataPoint(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataPoint>();
 
         /// <summary>
         /// <para>Index.</para>
@@ -16080,6 +17023,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Trendline(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Trendline>();
 
         /// <summary>
         /// <para>Trendline Name.</para>
@@ -16322,6 +17267,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ErrorBars>();
+
         /// <summary>
         /// <para>Error Bar Direction.</para>
         /// <para>Represents the following element tag in the schema: c:errDir.</para>
@@ -16508,6 +17455,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CategoryAxisData>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -16575,6 +17524,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public XValues(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<XValues>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -16760,6 +17711,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LineSerExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LineSerExtension), 0, 0)
@@ -16817,6 +17770,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public ScatterSerExtensionList(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ScatterSerExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -16876,6 +17831,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RadarSerExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtension), 0, 0)
@@ -16907,9 +17864,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Shape Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ShapeValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ShapeValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ShapeValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Shape>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Shape>()
+                           .AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shape>(deep);
@@ -16961,6 +17924,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public BarSerExtensionList(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BarSerExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -17032,11 +17997,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BarSerExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BarSerExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -17101,6 +18074,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AreaSerExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtension), 0, 0)
@@ -17159,6 +18134,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PieSerExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PieSerExtension), 0, 0)
@@ -17216,6 +18193,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public BubbleSerExtensionList(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BubbleSerExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -17285,11 +18264,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BubbleSerExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BubbleSerExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -17353,6 +18340,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SurfaceSerExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtension), 0, 0)
@@ -17410,6 +18399,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public LineChartExtensionList(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LineChartExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -17469,6 +18460,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Line3DChartExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Line3DChartExtension), 0, 0)
@@ -17500,9 +18493,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Scatter Style Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ScatterStyleValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ScatterStyleValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ScatterStyleValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ScatterStyle>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ScatterStyle>()
+                           .AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScatterStyle>(deep);
@@ -17578,6 +18577,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public ScatterChartSeries(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ScatterChartSeries>();
 
         /// <summary>
         /// <para>Index.</para>
@@ -17720,6 +18721,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ScatterChartExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ScatterChartExtension), 0, 0)
@@ -17751,10 +18754,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Radar Style Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.RadarStyleValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.RadarStyleValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.RadarStyleValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RadarStyle>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RadarStyle>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RadarStyle>(deep);
@@ -17826,6 +18837,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public RadarChartSeries(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RadarChartSeries>();
 
         /// <summary>
         /// <para>Index.</para>
@@ -17979,6 +18992,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RadarChartExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RadarChartExtension), 0, 0)
@@ -18010,10 +19025,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Overlap Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [NumberValidator(MinInclusive = -100L, MaxInclusive = 100L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public SByteValue Val { get; set; }
+        public SByteValue Val { get => GetAttribute<SByteValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Overlap>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Overlap>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100L), MaxInclusive = (100L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Overlap>(deep);
@@ -18065,6 +19088,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public BarChartExtensionList(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BarChartExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -18124,6 +19149,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Bar3DChartExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Bar3DChartExtension), 0, 0)
@@ -18182,6 +19209,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AreaChartExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AreaChartExtension), 0, 0)
@@ -18239,6 +19268,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Area3DChartExtensionList(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Area3DChartExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -18325,6 +19356,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public BubbleChartSeries(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BubbleChartSeries>();
 
         /// <summary>
         /// <para>Index.</para>
@@ -18455,10 +19488,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Bubble Scale Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 300L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public UInt32Value Val { get; set; }
+        public UInt32Value Val { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BubbleScale>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BubbleScale>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (300L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BubbleScale>(deep);
@@ -18484,9 +19525,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Size Represents Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SizeRepresentsValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SizeRepresentsValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SizeRepresentsValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SizeRepresents>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SizeRepresents>()
+                           .AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SizeRepresents>(deep);
@@ -18538,6 +19585,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public BubbleChartExtensionList(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BubbleChartExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -18597,6 +19646,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SurfaceChartExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartExtension), 0, 0)
@@ -18655,6 +19706,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Surface3DChartExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Surface3DChartExtension), 0, 0)
@@ -18686,10 +19739,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Label Alignment Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LabelAlignmentValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LabelAlignmentValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LabelAlignmentValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LabelAlignment>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<LabelAlignment>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LabelAlignment>(deep);
@@ -18715,10 +19776,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Label Offset Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 1000L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public UInt16Value Val { get; set; }
+        public UInt16Value Val { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LabelOffset>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<LabelOffset>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (1000L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LabelOffset>(deep);
@@ -18740,6 +19809,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TickLabelSkip>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TickLabelSkip>(deep);
     }
@@ -18759,6 +19830,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public TickMarkSkip() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TickMarkSkip>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TickMarkSkip>(deep);
@@ -18782,11 +19855,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Tick Skip Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 1L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public Int32Value Val { get; set; }
+        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SkipType>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L) });
+                           });
+        }
     }
 
     /// <summary>
@@ -18836,6 +19916,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CatAxExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CatAxExtension), 0, 0)
@@ -18863,6 +19945,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BaseTimeUnit>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BaseTimeUnit>(deep);
     }
@@ -18883,6 +19967,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MajorTimeUnit>();
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MajorTimeUnit>(deep);
     }
@@ -18902,6 +19988,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public MinorTimeUnit() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MinorTimeUnit>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MinorTimeUnit>(deep);
@@ -18925,9 +20013,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Time Unit Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TimeUnitValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TimeUnitValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TimeUnitValues>>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TimeUnitType>()
+                           .AddAttribute(0, "val", a => a.Val);
+        }
     }
 
     /// <summary>
@@ -18945,6 +20038,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public MajorUnit() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MajorUnit>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MajorUnit>(deep);
@@ -18965,6 +20060,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public MinorUnit() : base()
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MinorUnit>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MinorUnit>(deep);
@@ -18988,11 +20085,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Major Unit Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinExclusive = 0L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public DoubleValue Val { get; set; }
+        public DoubleValue Val { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<AxisUnitType>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinExclusive = (0L) });
+                           });
+        }
     }
 
     /// <summary>
@@ -19041,6 +20145,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public DateAxExtensionList(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DateAxExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -19100,6 +20206,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SerAxExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SerAxExtension), 0, 0)
@@ -19131,10 +20239,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Cross Between Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossBetweenValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossBetweenValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossBetweenValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CrossBetween>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<CrossBetween>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CrossBetween>(deep);
@@ -19192,6 +20308,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public DisplayUnits(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DisplayUnits>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -19257,6 +20375,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ValAxExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ValAxExtension), 0, 0)
@@ -19288,10 +20408,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Language Code</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EditingLanguage>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<EditingLanguage>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EditingLanguage>(deep);
@@ -19317,10 +20445,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Style Type</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 1L, MaxInclusive = 48L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public ByteValue Val { get; set; }
+        public ByteValue Val { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Style>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<Style>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (48L) });
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Style>(deep);
@@ -19377,121 +20513,140 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Background 1</para>
         /// <para>Represents the following attribute in the schema: bg1</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "bg1")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Background1 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Background1 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Text 1</para>
         /// <para>Represents the following attribute in the schema: tx1</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "tx1")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Text1 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Text1 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Background 2</para>
         /// <para>Represents the following attribute in the schema: bg2</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "bg2")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Background2 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Background2 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Text 2</para>
         /// <para>Represents the following attribute in the schema: tx2</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "tx2")]
-        [Index(3)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Text2 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Text2 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Accent 1</para>
         /// <para>Represents the following attribute in the schema: accent1</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "accent1")]
-        [Index(4)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent1 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent1 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Accent 2</para>
         /// <para>Represents the following attribute in the schema: accent2</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "accent2")]
-        [Index(5)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent2 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent2 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Accent 3</para>
         /// <para>Represents the following attribute in the schema: accent3</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "accent3")]
-        [Index(6)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent3 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent3 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Accent 4</para>
         /// <para>Represents the following attribute in the schema: accent4</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "accent4")]
-        [Index(7)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent4 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent4 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Accent 5</para>
         /// <para>Represents the following attribute in the schema: accent5</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "accent5")]
-        [Index(8)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent5 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent5 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Accent 6</para>
         /// <para>Represents the following attribute in the schema: accent6</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "accent6")]
-        [Index(9)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent6 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent6 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Hyperlink</para>
         /// <para>Represents the following attribute in the schema: hlink</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "hlink")]
-        [Index(10)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Hyperlink { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Hyperlink { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Followed Hyperlink</para>
         /// <para>Represents the following attribute in the schema: folHlink</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "folHlink")]
-        [Index(11)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> FollowedHyperlink { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> FollowedHyperlink { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColorMapOverride>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ColorMapOverride>()
+                           .AddAttribute(0, "bg1", a => a.Background1, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "tx1", a => a.Text1, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "bg2", a => a.Background2, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "tx2", a => a.Text2, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "accent1", a => a.Accent1, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "accent2", a => a.Accent2, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "accent3", a => a.Accent3, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "accent4", a => a.Accent4, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "accent5", a => a.Accent5, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "accent6", a => a.Accent6, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "hlink", a => a.Hyperlink, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "folHlink", a => a.FollowedHyperlink, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         /// <summary>
         /// <para>ExtensionList.</para>
@@ -19567,6 +20722,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public PivotSource(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotSource>();
 
         /// <summary>
         /// <para>Pivot Name.</para>
@@ -19674,6 +20831,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Protection(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Protection>();
 
         /// <summary>
         /// <para>Chart Object.</para>
@@ -19825,6 +20984,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Chart(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Chart>();
 
         /// <summary>
         /// <para>Title.</para>
@@ -20072,10 +21233,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ExternalData>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ExternalData>()
+                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <summary>
         /// <para>Update Automatically.</para>
@@ -20159,6 +21328,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public PrintSettings(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PrintSettings>();
 
         /// <summary>
         /// <para>Header and Footer.</para>
@@ -20273,6 +21444,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChartSpaceExtensionList>();
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartSpaceExtension), 0, 0)
@@ -20339,11 +21512,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChartSpaceExtension>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ChartSpaceExtension>()
+                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {

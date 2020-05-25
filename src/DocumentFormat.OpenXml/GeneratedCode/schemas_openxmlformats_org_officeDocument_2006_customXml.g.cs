@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
@@ -65,11 +66,19 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         /// <remark>
         /// xmlns:ds=http://schemas.openxmlformats.org/officeDocument/2006/customXml
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(20, "itemID")]
-        [Index(0)]
-        public StringValue ItemId { get; set; }
+        public StringValue ItemId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataStoreItem>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<DataStoreItem>()
+                           .AddAttribute(20, "itemID", a => a.ItemId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                           });
+        }
 
         /// <summary>
         /// <para>Set of Associated XML Schemas.</para>
@@ -149,10 +158,18 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         /// <remark>
         /// xmlns:ds=http://schemas.openxmlformats.org/officeDocument/2006/customXml
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(20, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SchemaReference>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SchemaReference>()
+                           .AddAttribute(20, "uri", a => a.Uri, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SchemaReference>(deep);
@@ -204,6 +221,8 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         public SchemaReferences(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SchemaReferences>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {

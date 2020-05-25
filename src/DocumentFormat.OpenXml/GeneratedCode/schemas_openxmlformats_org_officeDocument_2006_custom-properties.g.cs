@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
@@ -59,6 +60,8 @@ namespace DocumentFormat.OpenXml.CustomProperties
         public Properties(string outerXml) : base(outerXml)
         {
         }
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Properties>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -219,36 +222,43 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Format ID</para>
         /// <para>Represents the following attribute in the schema: fmtid</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(Pattern = "\\s*\\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\\}\\s*")]
-        [SchemaAttr(0, "fmtid")]
-        [Index(0)]
-        public StringValue FormatId { get; set; }
+        public StringValue FormatId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Property ID</para>
         /// <para>Represents the following attribute in the schema: pid</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "pid")]
-        [Index(1)]
-        public Int32Value PropertyId { get; set; }
+        public Int32Value PropertyId { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Custom File Property Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr(0, "name")]
-        [Index(2)]
-        public StringValue Name { get; set; }
+        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
 
         /// <summary>
         /// <para>Bookmark Link Target</para>
         /// <para>Represents the following attribute in the schema: linkTarget</para>
         /// </summary>
-        [SchemaAttr(0, "linkTarget")]
-        [Index(3)]
-        public StringValue LinkTarget { get; set; }
+        public StringValue LinkTarget { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomDocumentProperty>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<CustomDocumentProperty>()
+                           .AddAttribute(0, "fmtid", a => a.FormatId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\\}\\s*") });
+                           })
+                           .AddAttribute(0, "pid", a => a.PropertyId, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "name", a => a.Name)
+                           .AddAttribute(0, "linkTarget", a => a.LinkTarget);
+        }
 
         /// <summary>
         /// <para>Vector.</para>
