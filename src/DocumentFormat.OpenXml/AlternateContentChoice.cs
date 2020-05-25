@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml
@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml
         /// Gets a value that represents the tag name of the
         /// Choice element.
         /// </summary>
-        public static string TagName =>Name;
+        public static string TagName => Name;
 
         /// <summary>
         /// Gets the local name of the Choice element.
@@ -78,9 +78,11 @@ namespace DocumentFormat.OpenXml
         /// namespaces a markup consumer needs in order to understand and select that
         /// Choice and process the content.
         /// </summary>
-        [SchemaAttr(0, "Requires")]
-        [Index(0)]
-        public StringValue Requires { get; set; }
+        public StringValue Requires
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         {
@@ -107,5 +109,15 @@ namespace DocumentFormat.OpenXml
         ///  to clone only the node itself.
         /// </param>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AlternateContentChoice>(deep);
+
+        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AlternateContentChoice>();
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+
+            builder.AddElement<AlternateContentChoice>()
+                .AddAttribute(0, "Requires", a => a.Requires);
+        }
     }
 }

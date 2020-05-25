@@ -13,7 +13,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public static ElementMetadata Create<TElement>()
             where TElement : OpenXmlElement, new()
-            => CreatorHelper<TElement>.Instance;
+            => new ElementMetadata(CreatorHelper<TElement>.Instance);
 
         public ElementMetadata(ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> tags)
         {
@@ -116,9 +116,9 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
         private static class CreatorHelper<T>
             where T : OpenXmlElement, new()
         {
-            public static ElementMetadata Instance { get; } = InternalCreate();
+            public static ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> Instance { get; } = InternalCreate();
 
-            private static ElementMetadata InternalCreate()
+            private static ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> InternalCreate()
             {
                 var element = new T();
 
@@ -126,7 +126,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
                 element.ConfigureMetadata(builder);
 
-                return new ElementMetadata(builder.Build());
+                return builder.Build();
             }
         }
     }

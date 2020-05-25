@@ -46,7 +46,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <summary>
         /// Gets or sets the SdtProperties.
         /// </summary>
-        [Index(0)]
         public SdtProperties SdtProperties
         {
             get => _constraint.Get<SdtProperties>(this);
@@ -56,7 +55,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <summary>
         /// Gets or sets the SdtEndCharProperties.
         /// </summary>
-        [Index(1)]
         public SdtEndCharProperties SdtEndCharProperties
         {
             get => _constraint.Get<SdtEndCharProperties>(this);

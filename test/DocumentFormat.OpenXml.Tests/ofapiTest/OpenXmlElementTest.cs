@@ -286,13 +286,12 @@ namespace DocumentFormat.OpenXml.Tests
             p = new Paragraph(paragraphOuterXml);
 
             // Since the element is initialized with outer xml, namespaces will already be tracked, and thus will be listed first
-            var paragraphOuterXml2 = "<w:p xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:rsidP=\"001\"><w:r><w:t>Run Text.</w:t><w:t>Run 2.</w:t></w:r></w:p>";
-            Assert.Equal(paragraphOuterXml2, p.OuterXml);
+            Assert.Equal(paragraphOuterXml, p.OuterXml);
             Assert.Equal(paragraphInnerXml, p.InnerXml);
             Assert.Equal(run1Text + run2Text, p.InnerText);
 
             var unknownElement = OpenXmlUnknownElement.CreateOpenXmlUnknownElement(paragraphOuterXml);
-            Assert.Equal(paragraphOuterXml2, unknownElement.OuterXml);
+            Assert.Equal(paragraphOuterXml, unknownElement.OuterXml);
             Assert.Equal(paragraphInnerXml, unknownElement.InnerXml);
         }
 
@@ -637,17 +636,16 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.StartsWith(ExceptionMessages.InvalidOuterXml, ex1.Message);
 
             // Valid outer xml
-            var validOuterXmlWithPrefix = "<mso:customUI xmlns:mso=\"http://schemas.microsoft.com/office/2006/01/customui\" />";
             var validOuterXml = "<customUI  xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\"></customUI>";
             var cUi2 = new DocumentFormat.OpenXml.Office.CustomUI.CustomUI(validOuterXml);
-            Assert.Equal(validOuterXmlWithPrefix, cUi2.OuterXml);
+            Assert.Equal(validOuterXml, cUi2.OuterXml);
 
             // Valid outer xml but starting with whitespace.
             var validOuterXmlWithWhitespaces = "     <customUI  xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\"></customUI>";
             var cUi3 = new DocumentFormat.OpenXml.Office.CustomUI.CustomUI(validOuterXmlWithWhitespaces);
 
             // The whitespace should be trimmed when getting OuterXml.
-            Assert.Equal(validOuterXmlWithPrefix, cUi2.OuterXml);
+            Assert.Equal(validOuterXml, cUi2.OuterXml);
 
             // verify bug #671248
             var paragraphXml = "<w:p xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" mc:Ignorable=\"w14\" " +
@@ -667,15 +665,13 @@ namespace DocumentFormat.OpenXml.Tests
         {
             // Valid outer xml
             var validOuterXml = "<myElement  xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\"></myElement>";
-            var actualOuterXml = "<myElement xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\" />";
             var unknown1 = OpenXmlUnknownElement.CreateOpenXmlUnknownElement(validOuterXml);
-            Assert.Equal(actualOuterXml, unknown1.OuterXml);
+            Assert.Equal(validOuterXml, unknown1.OuterXml);
 
             // Valid outer xml but starting with whitespace.
             var validOuterXmlWithWhitespaces = "   <myElement  xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\"></myElement>";
-            var actualValidOuterXmlWithWhitespaces = "<myElement xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\" />";
             var unknown2 = OpenXmlUnknownElement.CreateOpenXmlUnknownElement(validOuterXmlWithWhitespaces);
-            Assert.Equal(actualValidOuterXmlWithWhitespaces, unknown2.OuterXml);
+            Assert.Equal(validOuterXmlWithWhitespaces, unknown2.OuterXml);
 
             // Check bug #484153.
             var outerXmlWithXmlDecl = "<?xml version=\"1.0\" encoding=\"utf-8\"?><customUI  xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\"></customUI>";
@@ -968,37 +964,6 @@ namespace DocumentFormat.OpenXml.Tests
             catch
             {
                 Assert.True(false); // Assert.Fail("Should not throw exception.");
-            }
-        }
-
-        [Fact]
-        public void AllElementsHaveIndexAttribute()
-        {
-            var skippedTypes = new HashSet<Type>
-            {
-                typeof(OpenXmlElement),
-                typeof(OpenXmlCompositeElement),
-                typeof(OpenXmlLeafElement),
-                typeof(OpenXmlLeafTextElement),
-            };
-
-            var types = typeof(OpenXmlElement).GetTypeInfo().Assembly.GetTypes()
-                .Where(t => typeof(OpenXmlElement).IsAssignableFrom(t))
-                .Where(t => !skippedTypes.Contains(t));
-
-            foreach (var type in types)
-            {
-                foreach (var property in type.GetTypeInfo().GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly))
-                {
-                    if (typeof(OpenXmlSimpleType).IsAssignableFrom(property.PropertyType))
-                    {
-                        // Skip any obsolete properties as those redirect to other properties
-                        if (property.GetCustomAttribute<ObsoleteAttribute>() == null)
-                        {
-                            Assert.NotNull(property.GetCustomAttribute<IndexAttribute>());
-                        }
-                    }
-                }
             }
         }
 

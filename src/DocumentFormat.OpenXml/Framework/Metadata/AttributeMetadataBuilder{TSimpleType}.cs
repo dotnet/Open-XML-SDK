@@ -53,11 +53,6 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             return this;
         }
 
-        public AttributeMetadataBuilder<TSimpleType> MimimumVersion(FileFormatVersions version)
-        {
-            return this;
-        }
-
         public byte Namespace { get; }
 
         public string Name { get; }
