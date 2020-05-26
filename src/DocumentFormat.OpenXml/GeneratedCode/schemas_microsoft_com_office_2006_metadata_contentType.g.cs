@@ -18,8 +18,6 @@ namespace DocumentFormat.OpenXml.Office.ContentType
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ct:contentTypeSchema.</para>
     /// </summary>
-    [SchemaAttr(38, "contentTypeSchema")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ContentTypeSchema : OpenXmlCompositeElement
     {
         /// <summary>
@@ -160,21 +158,23 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(38, "contentTypeSchema");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ContentTypeSchema>()
-                           .AddAttribute(38, "_", a => a.UnderScore)
-                           .AddAttribute(41, "_", a => a.ReservedAttributeString)
-                           .AddAttribute(41, "contentTypeName", a => a.ContentTypeName)
-                           .AddAttribute(41, "contentTypeID", a => a.ContentTypeID, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("0x([0-9A-Fa-f][1-9A-Fa-f]|[1-9A-Fa-f][0-9A-Fa-f]|00[0-9A-Fa-f]{32})*"), MinLength = (2L), MaxLength = (1026L) });
-                           })
-                           .AddAttribute(41, "contentTypeVersion", a => a.ContentTypeVersion, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
-                           })
-                           .AddAttribute(41, "contentTypeDescription", a => a.ContentTypeDescription)
-                           .AddAttribute(41, "contentTypeScope", a => a.ContentTypeScope)
-                           .AddAttribute(41, "versionID", a => a.VersionID);
+.AddAttribute(38, "_", a => a.UnderScore)
+.AddAttribute(41, "_", a => a.ReservedAttributeString)
+.AddAttribute(41, "contentTypeName", a => a.ContentTypeName)
+.AddAttribute(41, "contentTypeID", a => a.ContentTypeID, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("0x([0-9A-Fa-f][1-9A-Fa-f]|[1-9A-Fa-f][0-9A-Fa-f]|00[0-9A-Fa-f]{32})*"), MinLength = (2L), MaxLength = (1026L) });
+})
+.AddAttribute(41, "contentTypeVersion", a => a.ContentTypeVersion, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+})
+.AddAttribute(41, "contentTypeDescription", a => a.ContentTypeDescription)
+.AddAttribute(41, "contentTypeScope", a => a.ContentTypeScope)
+.AddAttribute(41, "versionID", a => a.VersionID);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)

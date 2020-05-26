@@ -31,8 +31,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FillReference))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectReference))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FontReference))]
-    [SchemaAttr(50, "style")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ShapeStyle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -64,6 +62,13 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ShapeStyle(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(50, "style");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <summary>
@@ -144,8 +149,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
-    [SchemaAttr(50, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -177,6 +180,13 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public OfficeArtExtensionList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(50, "extLst");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)

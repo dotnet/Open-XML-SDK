@@ -24,8 +24,6 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(LongProperty))]
-    [SchemaAttr(40, "LongProperties")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LongProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -59,6 +57,13 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(40, "LongProperties");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.LongProperties.LongProperty), 0, 0)
@@ -75,8 +80,6 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is lp:LongProp.</para>
     /// </summary>
-    [SchemaAttr(40, "LongProp")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LongProperty : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -112,8 +115,10 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(40, "LongProp");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<LongProperty>()
-                           .AddAttribute(0, "name", a => a.Name);
+.AddAttribute(0, "name", a => a.Name);
         }
 
         /// <inheritdoc/>

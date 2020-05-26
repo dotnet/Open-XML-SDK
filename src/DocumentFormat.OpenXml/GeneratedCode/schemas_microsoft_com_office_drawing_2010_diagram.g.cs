@@ -29,8 +29,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Diagram
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList))]
-    [SchemaAttr(58, "cNvPr")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -117,18 +115,20 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Diagram
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(58, "cNvPr");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<NonVisualDrawingProperties>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "descr", a => a.Description)
-                           .AddAttribute(0, "hidden", a => a.Hidden)
-                           .AddAttribute(0, "title", a => a.Title);
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "descr", a => a.Description)
+.AddAttribute(0, "hidden", a => a.Hidden)
+.AddAttribute(0, "title", a => a.Title);
         }
 
         /// <summary>
@@ -188,8 +188,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Diagram
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm14:recolorImg.</para>
     /// </summary>
-    [SchemaAttr(58, "recolorImg")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class RecolorImages : OpenXmlLeafElement
     {
         /// <summary>
@@ -212,8 +210,10 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Diagram
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(58, "recolorImg");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<RecolorImages>()
-                           .AddAttribute(0, "val", a => a.Val);
+.AddAttribute(0, "val", a => a.Val);
         }
 
         /// <inheritdoc/>

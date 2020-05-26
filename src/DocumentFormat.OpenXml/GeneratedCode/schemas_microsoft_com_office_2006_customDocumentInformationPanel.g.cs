@@ -28,8 +28,6 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     [ChildElementInfo(typeof(ShowOnOpen))]
     [ChildElementInfo(typeof(DefaultPropertyEditorNamespace))]
     [ChildElementInfo(typeof(CustomPropertyEditor))]
-    [SchemaAttr(37, "customPropertyEditors")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CustomPropertyEditors : OpenXmlCompositeElement
     {
         /// <summary>
@@ -61,6 +59,13 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public CustomPropertyEditors(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(37, "customPropertyEditors");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -107,9 +112,6 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cdip:XMLNamespace.</para>
     /// </summary>
-    [StringValidator(IsUri = true)]
-    [SchemaAttr(37, "XMLNamespace")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PropertyEditorNamespace : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -132,6 +134,14 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+            builder.SetSchema(37, "XMLNamespace");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PropertyEditorNamespace>(deep);
     }
@@ -141,9 +151,6 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cdip:defaultPropertyEditorNamespace.</para>
     /// </summary>
-    [StringValidator(IsUri = true)]
-    [SchemaAttr(37, "defaultPropertyEditorNamespace")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DefaultPropertyEditorNamespace : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -166,6 +173,14 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+            builder.SetSchema(37, "defaultPropertyEditorNamespace");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultPropertyEditorNamespace>(deep);
     }
@@ -175,8 +190,6 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cdip:XSNLocation.</para>
     /// </summary>
-    [SchemaAttr(37, "XSNLocation")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class XsnFileLocation : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -199,6 +212,13 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(37, "XSNLocation");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<XsnFileLocation>(deep);
     }
@@ -208,9 +228,6 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cdip:showOnOpen.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(BooleanValue))]
-    [SchemaAttr(37, "showOnOpen")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShowOnOpen : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -233,6 +250,14 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
             return new BooleanValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(BooleanValue)) });
+            builder.SetSchema(37, "showOnOpen");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowOnOpen>(deep);
     }
@@ -251,8 +276,6 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     /// </remark>
     [ChildElementInfo(typeof(PropertyEditorNamespace))]
     [ChildElementInfo(typeof(XsnFileLocation))]
-    [SchemaAttr(37, "customPropertyEditor")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CustomPropertyEditor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -284,6 +307,13 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public CustomPropertyEditor(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(37, "customPropertyEditor");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>

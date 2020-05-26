@@ -23,8 +23,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:ext.</para>
     /// </summary>
-    [SchemaAttr(22, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Extension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -71,12 +69,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Extension>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -104,8 +104,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(CalculationCell))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "calcChain")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CalculationChain : OpenXmlPartRootElement
     {
         /// <summary>
@@ -137,6 +135,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public CalculationChain(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "calcChain");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -198,8 +203,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(Authors))]
     [ChildElementInfo(typeof(CommentList))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "comments")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Comments : OpenXmlPartRootElement
     {
         /// <summary>
@@ -231,6 +234,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Comments(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "comments");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -330,8 +340,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(Schema))]
     [ChildElementInfo(typeof(Map))]
-    [SchemaAttr(22, "MapInfo")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MapInfo : OpenXmlPartRootElement
     {
         /// <summary>
@@ -378,11 +386,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "MapInfo");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<MapInfo>()
-                           .AddAttribute(0, "SelectionNamespaces", a => a.SelectionNamespaces, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "SelectionNamespaces", a => a.SelectionNamespaces, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -440,8 +450,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Connection))]
-    [SchemaAttr(22, "connections")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Connections : OpenXmlPartRootElement
     {
         /// <summary>
@@ -473,6 +481,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Connections(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "connections");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -549,8 +564,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(MeasureGroups))]
     [ChildElementInfo(typeof(Maps))]
     [ChildElementInfo(typeof(PivotCacheDefinitionExtensionList))]
-    [SchemaAttr(22, "pivotCacheDefinition")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PivotCacheDefinition : OpenXmlPartRootElement
     {
         /// <summary>
@@ -780,26 +793,28 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "pivotCacheDefinition");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PivotCacheDefinition>()
-                           .AddAttribute(19, "id", a => a.Id)
-                           .AddAttribute(0, "invalid", a => a.Invalid)
-                           .AddAttribute(0, "saveData", a => a.SaveData)
-                           .AddAttribute(0, "refreshOnLoad", a => a.RefreshOnLoad)
-                           .AddAttribute(0, "optimizeMemory", a => a.OptimizeMemory)
-                           .AddAttribute(0, "enableRefresh", a => a.EnableRefresh)
-                           .AddAttribute(0, "refreshedBy", a => a.RefreshedBy)
-                           .AddAttribute(0, "refreshedDateIso", a => a.LastRefreshedDateIso)
-                           .AddAttribute(0, "refreshedDate", a => a.RefreshedDate)
-                           .AddAttribute(0, "backgroundQuery", a => a.BackgroundQuery)
-                           .AddAttribute(0, "missingItemsLimit", a => a.MissingItemsLimit)
-                           .AddAttribute(0, "createdVersion", a => a.CreatedVersion)
-                           .AddAttribute(0, "refreshedVersion", a => a.RefreshedVersion)
-                           .AddAttribute(0, "minRefreshableVersion", a => a.MinRefreshableVersion)
-                           .AddAttribute(0, "recordCount", a => a.RecordCount)
-                           .AddAttribute(0, "upgradeOnRefresh", a => a.UpgradeOnRefresh)
-                           .AddAttribute(0, "tupleCache", a => a.IsTupleCache)
-                           .AddAttribute(0, "supportSubquery", a => a.SupportSubquery)
-                           .AddAttribute(0, "supportAdvancedDrill", a => a.SupportAdvancedDrill);
+.AddAttribute(19, "id", a => a.Id)
+.AddAttribute(0, "invalid", a => a.Invalid)
+.AddAttribute(0, "saveData", a => a.SaveData)
+.AddAttribute(0, "refreshOnLoad", a => a.RefreshOnLoad)
+.AddAttribute(0, "optimizeMemory", a => a.OptimizeMemory)
+.AddAttribute(0, "enableRefresh", a => a.EnableRefresh)
+.AddAttribute(0, "refreshedBy", a => a.RefreshedBy)
+.AddAttribute(0, "refreshedDateIso", a => a.LastRefreshedDateIso)
+.AddAttribute(0, "refreshedDate", a => a.RefreshedDate)
+.AddAttribute(0, "backgroundQuery", a => a.BackgroundQuery)
+.AddAttribute(0, "missingItemsLimit", a => a.MissingItemsLimit)
+.AddAttribute(0, "createdVersion", a => a.CreatedVersion)
+.AddAttribute(0, "refreshedVersion", a => a.RefreshedVersion)
+.AddAttribute(0, "minRefreshableVersion", a => a.MinRefreshableVersion)
+.AddAttribute(0, "recordCount", a => a.RecordCount)
+.AddAttribute(0, "upgradeOnRefresh", a => a.UpgradeOnRefresh)
+.AddAttribute(0, "tupleCache", a => a.IsTupleCache)
+.AddAttribute(0, "supportSubquery", a => a.SupportSubquery)
+.AddAttribute(0, "supportAdvancedDrill", a => a.SupportAdvancedDrill);
         }
 
         /// <summary>
@@ -1017,8 +1032,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(PivotCacheRecord))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "pivotCacheRecords")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PivotCacheRecords : OpenXmlPartRootElement
     {
         /// <summary>
@@ -1065,8 +1078,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "pivotCacheRecords");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PivotCacheRecords>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1156,8 +1171,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(RowHierarchiesUsage))]
     [ChildElementInfo(typeof(ColumnHierarchiesUsage))]
     [ChildElementInfo(typeof(PivotTableDefinitionExtensionList))]
-    [SchemaAttr(22, "pivotTableDefinition")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PivotTableDefinition : OpenXmlPartRootElement
     {
         /// <summary>
@@ -1874,84 +1887,86 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "pivotTableDefinition");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PivotTableDefinition>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "cacheId", a => a.CacheId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "dataOnRows", a => a.DataOnRows)
-                           .AddAttribute(0, "dataPosition", a => a.DataPosition)
-                           .AddAttribute(0, "autoFormatId", a => a.AutoFormatId)
-                           .AddAttribute(0, "applyNumberFormats", a => a.ApplyNumberFormats)
-                           .AddAttribute(0, "applyBorderFormats", a => a.ApplyBorderFormats)
-                           .AddAttribute(0, "applyFontFormats", a => a.ApplyFontFormats)
-                           .AddAttribute(0, "applyPatternFormats", a => a.ApplyPatternFormats)
-                           .AddAttribute(0, "applyAlignmentFormats", a => a.ApplyAlignmentFormats)
-                           .AddAttribute(0, "applyWidthHeightFormats", a => a.ApplyWidthHeightFormats)
-                           .AddAttribute(0, "dataCaption", a => a.DataCaption, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "grandTotalCaption", a => a.GrandTotalCaption)
-                           .AddAttribute(0, "errorCaption", a => a.ErrorCaption)
-                           .AddAttribute(0, "showError", a => a.ShowError)
-                           .AddAttribute(0, "missingCaption", a => a.MissingCaption)
-                           .AddAttribute(0, "showMissing", a => a.ShowMissing)
-                           .AddAttribute(0, "pageStyle", a => a.PageStyle)
-                           .AddAttribute(0, "pivotTableStyle", a => a.PivotTableStyleName)
-                           .AddAttribute(0, "vacatedStyle", a => a.VacatedStyle)
-                           .AddAttribute(0, "tag", a => a.Tag)
-                           .AddAttribute(0, "updatedVersion", a => a.UpdatedVersion)
-                           .AddAttribute(0, "minRefreshableVersion", a => a.MinRefreshableVersion)
-                           .AddAttribute(0, "asteriskTotals", a => a.AsteriskTotals)
-                           .AddAttribute(0, "showItems", a => a.ShowItems)
-                           .AddAttribute(0, "editData", a => a.EditData)
-                           .AddAttribute(0, "disableFieldList", a => a.DisableFieldList)
-                           .AddAttribute(0, "showCalcMbrs", a => a.ShowCalculatedMembers)
-                           .AddAttribute(0, "visualTotals", a => a.VisualTotals)
-                           .AddAttribute(0, "showMultipleLabel", a => a.ShowMultipleLabel)
-                           .AddAttribute(0, "showDataDropDown", a => a.ShowDataDropDown)
-                           .AddAttribute(0, "showDrill", a => a.ShowDrill)
-                           .AddAttribute(0, "printDrill", a => a.PrintDrill)
-                           .AddAttribute(0, "showMemberPropertyTips", a => a.ShowMemberPropertyTips)
-                           .AddAttribute(0, "showDataTips", a => a.ShowDataTips)
-                           .AddAttribute(0, "enableWizard", a => a.EnableWizard)
-                           .AddAttribute(0, "enableDrill", a => a.EnableDrill)
-                           .AddAttribute(0, "enableFieldProperties", a => a.EnableFieldProperties)
-                           .AddAttribute(0, "preserveFormatting", a => a.PreserveFormatting)
-                           .AddAttribute(0, "useAutoFormatting", a => a.UseAutoFormatting)
-                           .AddAttribute(0, "pageWrap", a => a.PageWrap)
-                           .AddAttribute(0, "pageOverThenDown", a => a.PageOverThenDown)
-                           .AddAttribute(0, "subtotalHiddenItems", a => a.SubtotalHiddenItems)
-                           .AddAttribute(0, "rowGrandTotals", a => a.RowGrandTotals)
-                           .AddAttribute(0, "colGrandTotals", a => a.ColumnGrandTotals)
-                           .AddAttribute(0, "fieldPrintTitles", a => a.FieldPrintTitles)
-                           .AddAttribute(0, "itemPrintTitles", a => a.ItemPrintTitles)
-                           .AddAttribute(0, "mergeItem", a => a.MergeItem)
-                           .AddAttribute(0, "showDropZones", a => a.ShowDropZones)
-                           .AddAttribute(0, "createdVersion", a => a.CreatedVersion)
-                           .AddAttribute(0, "indent", a => a.Indent)
-                           .AddAttribute(0, "showEmptyRow", a => a.ShowEmptyRow)
-                           .AddAttribute(0, "showEmptyCol", a => a.ShowEmptyColumn)
-                           .AddAttribute(0, "showHeaders", a => a.ShowHeaders)
-                           .AddAttribute(0, "compact", a => a.Compact)
-                           .AddAttribute(0, "outline", a => a.Outline)
-                           .AddAttribute(0, "outlineData", a => a.OutlineData)
-                           .AddAttribute(0, "compactData", a => a.CompactData)
-                           .AddAttribute(0, "published", a => a.Published)
-                           .AddAttribute(0, "gridDropZones", a => a.GridDropZones)
-                           .AddAttribute(0, "immersive", a => a.StopImmersiveUi)
-                           .AddAttribute(0, "multipleFieldFilters", a => a.MultipleFieldFilters)
-                           .AddAttribute(0, "chartFormat", a => a.ChartFormat)
-                           .AddAttribute(0, "rowHeaderCaption", a => a.RowHeaderCaption)
-                           .AddAttribute(0, "colHeaderCaption", a => a.ColumnHeaderCaption)
-                           .AddAttribute(0, "fieldListSortAscending", a => a.FieldListSortAscending)
-                           .AddAttribute(0, "mdxSubqueries", a => a.MdxSubqueries)
-                           .AddAttribute(0, "customListSort", a => a.CustomListSort);
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "cacheId", a => a.CacheId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "dataOnRows", a => a.DataOnRows)
+.AddAttribute(0, "dataPosition", a => a.DataPosition)
+.AddAttribute(0, "autoFormatId", a => a.AutoFormatId)
+.AddAttribute(0, "applyNumberFormats", a => a.ApplyNumberFormats)
+.AddAttribute(0, "applyBorderFormats", a => a.ApplyBorderFormats)
+.AddAttribute(0, "applyFontFormats", a => a.ApplyFontFormats)
+.AddAttribute(0, "applyPatternFormats", a => a.ApplyPatternFormats)
+.AddAttribute(0, "applyAlignmentFormats", a => a.ApplyAlignmentFormats)
+.AddAttribute(0, "applyWidthHeightFormats", a => a.ApplyWidthHeightFormats)
+.AddAttribute(0, "dataCaption", a => a.DataCaption, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "grandTotalCaption", a => a.GrandTotalCaption)
+.AddAttribute(0, "errorCaption", a => a.ErrorCaption)
+.AddAttribute(0, "showError", a => a.ShowError)
+.AddAttribute(0, "missingCaption", a => a.MissingCaption)
+.AddAttribute(0, "showMissing", a => a.ShowMissing)
+.AddAttribute(0, "pageStyle", a => a.PageStyle)
+.AddAttribute(0, "pivotTableStyle", a => a.PivotTableStyleName)
+.AddAttribute(0, "vacatedStyle", a => a.VacatedStyle)
+.AddAttribute(0, "tag", a => a.Tag)
+.AddAttribute(0, "updatedVersion", a => a.UpdatedVersion)
+.AddAttribute(0, "minRefreshableVersion", a => a.MinRefreshableVersion)
+.AddAttribute(0, "asteriskTotals", a => a.AsteriskTotals)
+.AddAttribute(0, "showItems", a => a.ShowItems)
+.AddAttribute(0, "editData", a => a.EditData)
+.AddAttribute(0, "disableFieldList", a => a.DisableFieldList)
+.AddAttribute(0, "showCalcMbrs", a => a.ShowCalculatedMembers)
+.AddAttribute(0, "visualTotals", a => a.VisualTotals)
+.AddAttribute(0, "showMultipleLabel", a => a.ShowMultipleLabel)
+.AddAttribute(0, "showDataDropDown", a => a.ShowDataDropDown)
+.AddAttribute(0, "showDrill", a => a.ShowDrill)
+.AddAttribute(0, "printDrill", a => a.PrintDrill)
+.AddAttribute(0, "showMemberPropertyTips", a => a.ShowMemberPropertyTips)
+.AddAttribute(0, "showDataTips", a => a.ShowDataTips)
+.AddAttribute(0, "enableWizard", a => a.EnableWizard)
+.AddAttribute(0, "enableDrill", a => a.EnableDrill)
+.AddAttribute(0, "enableFieldProperties", a => a.EnableFieldProperties)
+.AddAttribute(0, "preserveFormatting", a => a.PreserveFormatting)
+.AddAttribute(0, "useAutoFormatting", a => a.UseAutoFormatting)
+.AddAttribute(0, "pageWrap", a => a.PageWrap)
+.AddAttribute(0, "pageOverThenDown", a => a.PageOverThenDown)
+.AddAttribute(0, "subtotalHiddenItems", a => a.SubtotalHiddenItems)
+.AddAttribute(0, "rowGrandTotals", a => a.RowGrandTotals)
+.AddAttribute(0, "colGrandTotals", a => a.ColumnGrandTotals)
+.AddAttribute(0, "fieldPrintTitles", a => a.FieldPrintTitles)
+.AddAttribute(0, "itemPrintTitles", a => a.ItemPrintTitles)
+.AddAttribute(0, "mergeItem", a => a.MergeItem)
+.AddAttribute(0, "showDropZones", a => a.ShowDropZones)
+.AddAttribute(0, "createdVersion", a => a.CreatedVersion)
+.AddAttribute(0, "indent", a => a.Indent)
+.AddAttribute(0, "showEmptyRow", a => a.ShowEmptyRow)
+.AddAttribute(0, "showEmptyCol", a => a.ShowEmptyColumn)
+.AddAttribute(0, "showHeaders", a => a.ShowHeaders)
+.AddAttribute(0, "compact", a => a.Compact)
+.AddAttribute(0, "outline", a => a.Outline)
+.AddAttribute(0, "outlineData", a => a.OutlineData)
+.AddAttribute(0, "compactData", a => a.CompactData)
+.AddAttribute(0, "published", a => a.Published)
+.AddAttribute(0, "gridDropZones", a => a.GridDropZones)
+.AddAttribute(0, "immersive", a => a.StopImmersiveUi)
+.AddAttribute(0, "multipleFieldFilters", a => a.MultipleFieldFilters)
+.AddAttribute(0, "chartFormat", a => a.ChartFormat)
+.AddAttribute(0, "rowHeaderCaption", a => a.RowHeaderCaption)
+.AddAttribute(0, "colHeaderCaption", a => a.ColumnHeaderCaption)
+.AddAttribute(0, "fieldListSortAscending", a => a.FieldListSortAscending)
+.AddAttribute(0, "mdxSubqueries", a => a.MdxSubqueries)
+.AddAttribute(0, "customListSort", a => a.CustomListSort);
         }
 
         /// <summary>
@@ -2265,8 +2280,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(QueryTableRefresh))]
     [ChildElementInfo(typeof(QueryTableExtensionList))]
-    [SchemaAttr(22, "queryTable")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class QueryTable : OpenXmlPartRootElement
     {
         /// <summary>
@@ -2523,35 +2536,37 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "queryTable");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<QueryTable>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "headers", a => a.Headers)
-                           .AddAttribute(0, "rowNumbers", a => a.RowNumbers)
-                           .AddAttribute(0, "disableRefresh", a => a.DisableRefresh)
-                           .AddAttribute(0, "backgroundRefresh", a => a.BackgroundRefresh)
-                           .AddAttribute(0, "firstBackgroundRefresh", a => a.FirstBackgroundRefresh)
-                           .AddAttribute(0, "refreshOnLoad", a => a.RefreshOnLoad)
-                           .AddAttribute(0, "growShrinkType", a => a.GrowShrinkType)
-                           .AddAttribute(0, "fillFormulas", a => a.FillFormulas)
-                           .AddAttribute(0, "removeDataOnSave", a => a.RemoveDataOnSave)
-                           .AddAttribute(0, "disableEdit", a => a.DisableEdit)
-                           .AddAttribute(0, "preserveFormatting", a => a.PreserveFormatting)
-                           .AddAttribute(0, "adjustColumnWidth", a => a.AdjustColumnWidth)
-                           .AddAttribute(0, "intermediate", a => a.Intermediate)
-                           .AddAttribute(0, "connectionId", a => a.ConnectionId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "autoFormatId", a => a.AutoFormatId)
-                           .AddAttribute(0, "applyNumberFormats", a => a.ApplyNumberFormats)
-                           .AddAttribute(0, "applyBorderFormats", a => a.ApplyBorderFormats)
-                           .AddAttribute(0, "applyFontFormats", a => a.ApplyFontFormats)
-                           .AddAttribute(0, "applyPatternFormats", a => a.ApplyPatternFormats)
-                           .AddAttribute(0, "applyAlignmentFormats", a => a.ApplyAlignmentFormats)
-                           .AddAttribute(0, "applyWidthHeightFormats", a => a.ApplyWidthHeightFormats);
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "headers", a => a.Headers)
+.AddAttribute(0, "rowNumbers", a => a.RowNumbers)
+.AddAttribute(0, "disableRefresh", a => a.DisableRefresh)
+.AddAttribute(0, "backgroundRefresh", a => a.BackgroundRefresh)
+.AddAttribute(0, "firstBackgroundRefresh", a => a.FirstBackgroundRefresh)
+.AddAttribute(0, "refreshOnLoad", a => a.RefreshOnLoad)
+.AddAttribute(0, "growShrinkType", a => a.GrowShrinkType)
+.AddAttribute(0, "fillFormulas", a => a.FillFormulas)
+.AddAttribute(0, "removeDataOnSave", a => a.RemoveDataOnSave)
+.AddAttribute(0, "disableEdit", a => a.DisableEdit)
+.AddAttribute(0, "preserveFormatting", a => a.PreserveFormatting)
+.AddAttribute(0, "adjustColumnWidth", a => a.AdjustColumnWidth)
+.AddAttribute(0, "intermediate", a => a.Intermediate)
+.AddAttribute(0, "connectionId", a => a.ConnectionId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "autoFormatId", a => a.AutoFormatId)
+.AddAttribute(0, "applyNumberFormats", a => a.ApplyNumberFormats)
+.AddAttribute(0, "applyBorderFormats", a => a.ApplyBorderFormats)
+.AddAttribute(0, "applyFontFormats", a => a.ApplyFontFormats)
+.AddAttribute(0, "applyPatternFormats", a => a.ApplyPatternFormats)
+.AddAttribute(0, "applyAlignmentFormats", a => a.ApplyAlignmentFormats)
+.AddAttribute(0, "applyWidthHeightFormats", a => a.ApplyWidthHeightFormats);
         }
 
         /// <summary>
@@ -2646,8 +2661,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(SharedStringItem))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "sst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SharedStringTable : OpenXmlPartRootElement
     {
         /// <summary>
@@ -2704,9 +2717,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "sst");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SharedStringTable>()
-                           .AddAttribute(0, "count", a => a.Count)
-                           .AddAttribute(0, "uniqueCount", a => a.UniqueCount);
+.AddAttribute(0, "count", a => a.Count)
+.AddAttribute(0, "uniqueCount", a => a.UniqueCount);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -2771,8 +2786,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Header))]
-    [SchemaAttr(22, "headers")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Headers : OpenXmlPartRootElement
     {
         /// <summary>
@@ -2929,26 +2942,28 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "headers");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Headers>()
-                           .AddAttribute(0, "guid", a => a.Guid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "lastGuid", a => a.LastGuid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "shared", a => a.Shared)
-                           .AddAttribute(0, "diskRevisions", a => a.DiskRevisions)
-                           .AddAttribute(0, "history", a => a.History)
-                           .AddAttribute(0, "trackRevisions", a => a.TrackRevisions)
-                           .AddAttribute(0, "exclusive", a => a.Exclusive)
-                           .AddAttribute(0, "revisionId", a => a.RevisionId)
-                           .AddAttribute(0, "version", a => a.Version)
-                           .AddAttribute(0, "keepChangeHistory", a => a.KeepChangeHistory)
-                           .AddAttribute(0, "protected", a => a.Protected)
-                           .AddAttribute(0, "preserveHistory", a => a.PreserveHistory);
+.AddAttribute(0, "guid", a => a.Guid, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "lastGuid", a => a.LastGuid, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "shared", a => a.Shared)
+.AddAttribute(0, "diskRevisions", a => a.DiskRevisions)
+.AddAttribute(0, "history", a => a.History)
+.AddAttribute(0, "trackRevisions", a => a.TrackRevisions)
+.AddAttribute(0, "exclusive", a => a.Exclusive)
+.AddAttribute(0, "revisionId", a => a.RevisionId)
+.AddAttribute(0, "version", a => a.Version)
+.AddAttribute(0, "keepChangeHistory", a => a.KeepChangeHistory)
+.AddAttribute(0, "protected", a => a.Protected)
+.AddAttribute(0, "preserveHistory", a => a.PreserveHistory);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -3036,8 +3051,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(RevisionComment))]
     [ChildElementInfo(typeof(RevisionQueryTable))]
     [ChildElementInfo(typeof(RevisionConflict))]
-    [SchemaAttr(22, "revisions")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Revisions : OpenXmlPartRootElement
     {
         /// <summary>
@@ -3069,6 +3082,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Revisions(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "revisions");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
@@ -3136,8 +3156,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(UserInfo))]
-    [SchemaAttr(22, "users")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Users : OpenXmlPartRootElement
     {
         /// <summary>
@@ -3184,8 +3202,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "users");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Users>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -3322,8 +3342,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(WebPublishItems))]
     [ChildElementInfo(typeof(TableParts))]
     [ChildElementInfo(typeof(WorksheetExtensionList))]
-    [SchemaAttr(22, "worksheet")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Worksheet : OpenXmlPartRootElement
     {
         /// <summary>
@@ -3355,6 +3373,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Worksheet(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "worksheet");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -3526,8 +3551,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(Picture))]
     [ChildElementInfo(typeof(WebPublishItems))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "chartsheet")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Chartsheet : OpenXmlPartRootElement
     {
         /// <summary>
@@ -3559,6 +3582,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Chartsheet(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "chartsheet");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -3840,8 +3870,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(OleObjects))]
     [ChildElementInfo(typeof(Controls), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "dialogsheet")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DialogSheet : OpenXmlPartRootElement
     {
         /// <summary>
@@ -3873,6 +3901,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DialogSheet(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "dialogsheet");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -4164,8 +4199,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(CellMetadata))]
     [ChildElementInfo(typeof(ValueMetadata))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "metadata")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Metadata : OpenXmlPartRootElement
     {
         /// <summary>
@@ -4197,6 +4230,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Metadata(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "metadata");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -4298,8 +4338,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(SingleXmlCell))]
-    [SchemaAttr(22, "singleXmlCells")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SingleXmlCells : OpenXmlPartRootElement
     {
         /// <summary>
@@ -4331,6 +4369,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public SingleXmlCells(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "singleXmlCells");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4407,8 +4452,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(TableStyles))]
     [ChildElementInfo(typeof(Colors))]
     [ChildElementInfo(typeof(StylesheetExtensionList))]
-    [SchemaAttr(22, "styleSheet")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Stylesheet : OpenXmlPartRootElement
     {
         /// <summary>
@@ -4440,6 +4483,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Stylesheet(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "styleSheet");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -4655,8 +4705,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(DdeLink))]
     [ChildElementInfo(typeof(OleLink))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "externalLink")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ExternalLink : OpenXmlPartRootElement
     {
         /// <summary>
@@ -4688,6 +4736,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ExternalLink(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "externalLink");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4758,8 +4813,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(TableColumns))]
     [ChildElementInfo(typeof(TableStyleInfo))]
     [ChildElementInfo(typeof(TableExtensionList))]
-    [SchemaAttr(22, "table")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Table : OpenXmlPartRootElement
     {
         /// <summary>
@@ -5016,38 +5069,40 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "table");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Table>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "name", a => a.Name)
-                           .AddAttribute(0, "displayName", a => a.DisplayName, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "comment", a => a.Comment)
-                           .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "tableType", a => a.TableType)
-                           .AddAttribute(0, "headerRowCount", a => a.HeaderRowCount)
-                           .AddAttribute(0, "insertRow", a => a.InsertRow)
-                           .AddAttribute(0, "insertRowShift", a => a.InsertRowShift)
-                           .AddAttribute(0, "totalsRowCount", a => a.TotalsRowCount)
-                           .AddAttribute(0, "totalsRowShown", a => a.TotalsRowShown)
-                           .AddAttribute(0, "published", a => a.Published)
-                           .AddAttribute(0, "headerRowDxfId", a => a.HeaderRowFormatId)
-                           .AddAttribute(0, "dataDxfId", a => a.DataFormatId)
-                           .AddAttribute(0, "totalsRowDxfId", a => a.TotalsRowFormatId)
-                           .AddAttribute(0, "headerRowBorderDxfId", a => a.HeaderRowBorderFormatId)
-                           .AddAttribute(0, "tableBorderDxfId", a => a.BorderFormatId)
-                           .AddAttribute(0, "totalsRowBorderDxfId", a => a.TotalsRowBorderFormatId)
-                           .AddAttribute(0, "headerRowCellStyle", a => a.HeaderRowCellStyle)
-                           .AddAttribute(0, "dataCellStyle", a => a.DataCellStyle)
-                           .AddAttribute(0, "totalsRowCellStyle", a => a.TotalsRowCellStyle)
-                           .AddAttribute(0, "connectionId", a => a.ConnectionId);
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "name", a => a.Name)
+.AddAttribute(0, "displayName", a => a.DisplayName, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "comment", a => a.Comment)
+.AddAttribute(0, "ref", a => a.Reference, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "tableType", a => a.TableType)
+.AddAttribute(0, "headerRowCount", a => a.HeaderRowCount)
+.AddAttribute(0, "insertRow", a => a.InsertRow)
+.AddAttribute(0, "insertRowShift", a => a.InsertRowShift)
+.AddAttribute(0, "totalsRowCount", a => a.TotalsRowCount)
+.AddAttribute(0, "totalsRowShown", a => a.TotalsRowShown)
+.AddAttribute(0, "published", a => a.Published)
+.AddAttribute(0, "headerRowDxfId", a => a.HeaderRowFormatId)
+.AddAttribute(0, "dataDxfId", a => a.DataFormatId)
+.AddAttribute(0, "totalsRowDxfId", a => a.TotalsRowFormatId)
+.AddAttribute(0, "headerRowBorderDxfId", a => a.HeaderRowBorderFormatId)
+.AddAttribute(0, "tableBorderDxfId", a => a.BorderFormatId)
+.AddAttribute(0, "totalsRowBorderDxfId", a => a.TotalsRowBorderFormatId)
+.AddAttribute(0, "headerRowCellStyle", a => a.HeaderRowCellStyle)
+.AddAttribute(0, "dataCellStyle", a => a.DataCellStyle)
+.AddAttribute(0, "totalsRowCellStyle", a => a.TotalsRowCellStyle)
+.AddAttribute(0, "connectionId", a => a.ConnectionId);
         }
 
         /// <summary>
@@ -5195,8 +5250,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(VolatileType))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "volTypes")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VolatileTypes : OpenXmlPartRootElement
     {
         /// <summary>
@@ -5228,6 +5281,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public VolatileTypes(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "volTypes");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5319,8 +5379,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(FileRecoveryProperties))]
     [ChildElementInfo(typeof(WebPublishObjects))]
     [ChildElementInfo(typeof(WorkbookExtensionList))]
-    [SchemaAttr(22, "workbook")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Workbook : OpenXmlPartRootElement
     {
         /// <summary>
@@ -5367,8 +5425,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "workbook");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Workbook>()
-                           .AddAttribute(0, "conformance", a => a.Conformance);
+.AddAttribute(0, "conformance", a => a.Conformance);
         }
 
         /// <summary>
@@ -5653,8 +5713,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.IconFilter), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(IconFilter))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "filterColumn")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FilterColumn : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5721,13 +5779,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "filterColumn");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<FilterColumn>()
-                           .AddAttribute(0, "colId", a => a.ColumnId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "hiddenButton", a => a.HiddenButton)
-                           .AddAttribute(0, "showButton", a => a.ShowButton);
+.AddAttribute(0, "colId", a => a.ColumnId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "hiddenButton", a => a.HiddenButton)
+.AddAttribute(0, "showButton", a => a.ShowButton);
         }
 
         /// <summary>
@@ -5882,8 +5942,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.SortCondition), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(SortCondition))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "sortState")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SortState : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5960,14 +6018,16 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "sortState");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SortState>()
-                           .AddAttribute(0, "columnSort", a => a.ColumnSort)
-                           .AddAttribute(0, "caseSensitive", a => a.CaseSensitive)
-                           .AddAttribute(0, "sortMethod", a => a.SortMethod)
-                           .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "columnSort", a => a.ColumnSort)
+.AddAttribute(0, "caseSensitive", a => a.CaseSensitive)
+.AddAttribute(0, "sortMethod", a => a.SortMethod)
+.AddAttribute(0, "ref", a => a.Reference, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5998,8 +6058,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Extension))]
-    [SchemaAttr(22, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6033,6 +6091,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 1)
@@ -6055,8 +6120,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:customFilter.</para>
     /// </summary>
-    [SchemaAttr(22, "customFilter")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CustomFilter : OpenXmlLeafElement
     {
         /// <summary>
@@ -6089,9 +6152,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "customFilter");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CustomFilter>()
-                           .AddAttribute(0, "operator", a => a.Operator)
-                           .AddAttribute(0, "val", a => a.Val);
+.AddAttribute(0, "operator", a => a.Operator)
+.AddAttribute(0, "val", a => a.Val);
         }
 
         /// <inheritdoc/>
@@ -6103,8 +6168,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:c.</para>
     /// </summary>
-    [SchemaAttr(22, "c")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CalculationCell : OpenXmlLeafElement
     {
         /// <summary>
@@ -6177,16 +6240,18 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "c");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CalculationCell>()
-                           .AddAttribute(0, "r", a => a.CellReference, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "i", a => a.SheetId)
-                           .AddAttribute(0, "s", a => a.InChildChain)
-                           .AddAttribute(0, "l", a => a.NewLevel)
-                           .AddAttribute(0, "t", a => a.NewThread)
-                           .AddAttribute(0, "a", a => a.Array);
+.AddAttribute(0, "r", a => a.CellReference, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "i", a => a.SheetId)
+.AddAttribute(0, "s", a => a.InChildChain)
+.AddAttribute(0, "l", a => a.NewLevel)
+.AddAttribute(0, "t", a => a.NewThread)
+.AddAttribute(0, "a", a => a.Array);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -6213,8 +6278,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Author))]
-    [SchemaAttr(22, "authors")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Authors : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6248,6 +6311,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "authors");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Author), 0, 0)
@@ -6271,8 +6341,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Comment))]
-    [SchemaAttr(22, "commentList")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CommentList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6306,6 +6374,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "commentList");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Comment), 0, 0)
@@ -6331,8 +6406,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(CommentText))]
     [ChildElementInfo(typeof(CommentProperties), FileFormatVersions.Office2010)]
-    [SchemaAttr(22, "comment")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Comment : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6409,23 +6482,25 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "comment");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Comment>()
-                           .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "authorId", a => a.AuthorId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "guid", a => a.Guid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "shapeId", a => a.ShapeId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-                           });
+.AddAttribute(0, "ref", a => a.Reference, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "authorId", a => a.AuthorId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "guid", a => a.Guid, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "shapeId", a => a.ShapeId, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+});
         }
 
         /// <summary>
@@ -6478,8 +6553,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:author.</para>
     /// </summary>
-    [SchemaAttr(22, "author")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Author : XstringType
     {
         /// <summary>
@@ -6502,6 +6575,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "author");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Author>(deep);
     }
@@ -6511,8 +6591,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:t.</para>
     /// </summary>
-    [SchemaAttr(22, "t")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Text : XstringType
     {
         /// <summary>
@@ -6535,6 +6613,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "t");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Text>(deep);
     }
@@ -6544,8 +6629,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:v.</para>
     /// </summary>
-    [SchemaAttr(22, "v")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CellValue : XstringType
     {
         /// <summary>
@@ -6568,6 +6651,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "v");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CellValue>(deep);
     }
@@ -6577,8 +6667,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:formula.</para>
     /// </summary>
-    [SchemaAttr(22, "formula")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Formula : XstringType
     {
         /// <summary>
@@ -6601,6 +6689,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "formula");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Formula>(deep);
     }
@@ -6610,8 +6705,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:oldFormula.</para>
     /// </summary>
-    [SchemaAttr(22, "oldFormula")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OldFormula : XstringType
     {
         /// <summary>
@@ -6634,6 +6727,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "oldFormula");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OldFormula>(deep);
     }
@@ -6643,8 +6743,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:oddHeader.</para>
     /// </summary>
-    [SchemaAttr(22, "oddHeader")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OddHeader : XstringType
     {
         /// <summary>
@@ -6667,6 +6765,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "oddHeader");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OddHeader>(deep);
     }
@@ -6676,8 +6781,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:oddFooter.</para>
     /// </summary>
-    [SchemaAttr(22, "oddFooter")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OddFooter : XstringType
     {
         /// <summary>
@@ -6700,6 +6803,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "oddFooter");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OddFooter>(deep);
     }
@@ -6709,8 +6819,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:evenHeader.</para>
     /// </summary>
-    [SchemaAttr(22, "evenHeader")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class EvenHeader : XstringType
     {
         /// <summary>
@@ -6733,6 +6841,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "evenHeader");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EvenHeader>(deep);
     }
@@ -6742,8 +6857,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:evenFooter.</para>
     /// </summary>
-    [SchemaAttr(22, "evenFooter")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class EvenFooter : XstringType
     {
         /// <summary>
@@ -6766,6 +6879,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "evenFooter");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EvenFooter>(deep);
     }
@@ -6775,8 +6895,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:firstHeader.</para>
     /// </summary>
-    [SchemaAttr(22, "firstHeader")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FirstHeader : XstringType
     {
         /// <summary>
@@ -6799,6 +6917,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "firstHeader");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstHeader>(deep);
     }
@@ -6808,8 +6933,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:firstFooter.</para>
     /// </summary>
-    [SchemaAttr(22, "firstFooter")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FirstFooter : XstringType
     {
         /// <summary>
@@ -6832,6 +6955,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "firstFooter");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstFooter>(deep);
     }
@@ -6841,8 +6971,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:val.</para>
     /// </summary>
-    [SchemaAttr(22, "val")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DdeLinkValue : XstringType
     {
         /// <summary>
@@ -6865,6 +6993,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "val");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DdeLinkValue>(deep);
     }
@@ -6874,8 +7009,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:stp.</para>
     /// </summary>
-    [SchemaAttr(22, "stp")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Subtopic : XstringType
     {
         /// <summary>
@@ -6898,6 +7031,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "stp");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Subtopic>(deep);
     }
@@ -6907,8 +7047,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:formula1.</para>
     /// </summary>
-    [SchemaAttr(22, "formula1")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Formula1 : XstringType
     {
         /// <summary>
@@ -6931,6 +7069,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "formula1");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Formula1>(deep);
     }
@@ -6940,8 +7085,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:formula2.</para>
     /// </summary>
-    [SchemaAttr(22, "formula2")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Formula2 : XstringType
     {
         /// <summary>
@@ -6962,6 +7105,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
             return new StringValue { InnerText = text };
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "formula2");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -7021,8 +7171,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:Schema.</para>
     /// </summary>
-    [SchemaAttr(22, "Schema")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Schema : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7089,13 +7237,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "Schema");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Schema>()
-                           .AddAttribute(0, "ID", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "SchemaRef", a => a.SchemaReference)
-                           .AddAttribute(0, "Namespace", a => a.Namespace);
+.AddAttribute(0, "ID", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "SchemaRef", a => a.SchemaReference)
+.AddAttribute(0, "Namespace", a => a.Namespace);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -7130,8 +7280,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DataBinding))]
-    [SchemaAttr(22, "Map")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Map : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7258,43 +7406,45 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "Map");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Map>()
-                           .AddAttribute(0, "ID", a => a.ID, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "Name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "RootElement", a => a.RootElement, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "SchemaID", a => a.SchemaId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "ShowImportExportValidationErrors", a => a.ShowImportExportErrors, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "AutoFit", a => a.AutoFit, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "Append", a => a.AppendData, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "PreserveSortAFLayout", a => a.PreserveAutoFilterState, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "PreserveFormat", a => a.PreserveFormat, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "ID", a => a.ID, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "Name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "RootElement", a => a.RootElement, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "SchemaID", a => a.SchemaId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "ShowImportExportValidationErrors", a => a.ShowImportExportErrors, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "AutoFit", a => a.AutoFit, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "Append", a => a.AppendData, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "PreserveSortAFLayout", a => a.PreserveAutoFilterState, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "PreserveFormat", a => a.PreserveFormat, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -7335,8 +7485,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:DataBinding.</para>
     /// </summary>
-    [SchemaAttr(22, "DataBinding")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DataBinding : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7423,15 +7571,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "DataBinding");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DataBinding>()
-                           .AddAttribute(0, "DataBindingName", a => a.DataBindingName)
-                           .AddAttribute(0, "FileBinding", a => a.FileBinding)
-                           .AddAttribute(0, "ConnectionID", a => a.ConnectionId)
-                           .AddAttribute(0, "FileBindingName", a => a.FileBindingName)
-                           .AddAttribute(0, "DataBindingLoadMode", a => a.DataBindingLoadMode, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "DataBindingName", a => a.DataBindingName)
+.AddAttribute(0, "FileBinding", a => a.FileBinding)
+.AddAttribute(0, "ConnectionID", a => a.ConnectionId)
+.AddAttribute(0, "FileBindingName", a => a.FileBindingName)
+.AddAttribute(0, "DataBindingLoadMode", a => a.DataBindingLoadMode, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -7481,8 +7631,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(TextProperties))]
     [ChildElementInfo(typeof(Parameters))]
     [ChildElementInfo(typeof(ConnectionExtensionList))]
-    [SchemaAttr(22, "connection")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Connection : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7719,33 +7867,35 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "connection");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Connection>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "sourceFile", a => a.SourceFile)
-                           .AddAttribute(0, "odcFile", a => a.ConnectionFile)
-                           .AddAttribute(0, "keepAlive", a => a.KeepAlive)
-                           .AddAttribute(0, "interval", a => a.Interval)
-                           .AddAttribute(0, "name", a => a.Name)
-                           .AddAttribute(0, "description", a => a.Description)
-                           .AddAttribute(0, "type", a => a.Type)
-                           .AddAttribute(0, "reconnectionMethod", a => a.ReconnectionMethod)
-                           .AddAttribute(0, "refreshedVersion", a => a.RefreshedVersion, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "minRefreshableVersion", a => a.MinRefreshableVersion)
-                           .AddAttribute(0, "savePassword", a => a.SavePassword)
-                           .AddAttribute(0, "new", a => a.New)
-                           .AddAttribute(0, "deleted", a => a.Deleted)
-                           .AddAttribute(0, "onlyUseConnectionFile", a => a.OnlyUseConnectionFile)
-                           .AddAttribute(0, "background", a => a.Background)
-                           .AddAttribute(0, "refreshOnLoad", a => a.RefreshOnLoad)
-                           .AddAttribute(0, "saveData", a => a.SaveData)
-                           .AddAttribute(0, "credentials", a => a.Credentials)
-                           .AddAttribute(0, "singleSignOnId", a => a.SingleSignOnId);
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "sourceFile", a => a.SourceFile)
+.AddAttribute(0, "odcFile", a => a.ConnectionFile)
+.AddAttribute(0, "keepAlive", a => a.KeepAlive)
+.AddAttribute(0, "interval", a => a.Interval)
+.AddAttribute(0, "name", a => a.Name)
+.AddAttribute(0, "description", a => a.Description)
+.AddAttribute(0, "type", a => a.Type)
+.AddAttribute(0, "reconnectionMethod", a => a.ReconnectionMethod)
+.AddAttribute(0, "refreshedVersion", a => a.RefreshedVersion, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "minRefreshableVersion", a => a.MinRefreshableVersion)
+.AddAttribute(0, "savePassword", a => a.SavePassword)
+.AddAttribute(0, "new", a => a.New)
+.AddAttribute(0, "deleted", a => a.Deleted)
+.AddAttribute(0, "onlyUseConnectionFile", a => a.OnlyUseConnectionFile)
+.AddAttribute(0, "background", a => a.Background)
+.AddAttribute(0, "refreshOnLoad", a => a.RefreshOnLoad)
+.AddAttribute(0, "saveData", a => a.SaveData)
+.AddAttribute(0, "credentials", a => a.Credentials)
+.AddAttribute(0, "singleSignOnId", a => a.SingleSignOnId);
         }
 
         /// <summary>
@@ -7872,8 +8022,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(MissingTable))]
     [ChildElementInfo(typeof(CharacterValue))]
     [ChildElementInfo(typeof(FieldItem))]
-    [SchemaAttr(22, "tables")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Tables : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7920,8 +8068,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "tables");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Tables>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
@@ -7942,8 +8092,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:parameter.</para>
     /// </summary>
-    [SchemaAttr(22, "parameter")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Parameter : OpenXmlLeafElement
     {
         /// <summary>
@@ -8056,17 +8204,19 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "parameter");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Parameter>()
-                           .AddAttribute(0, "name", a => a.Name)
-                           .AddAttribute(0, "sqlType", a => a.SqlType)
-                           .AddAttribute(0, "parameterType", a => a.ParameterType)
-                           .AddAttribute(0, "refreshOnChange", a => a.RefreshOnChange)
-                           .AddAttribute(0, "prompt", a => a.Prompt)
-                           .AddAttribute(0, "boolean", a => a.Boolean)
-                           .AddAttribute(0, "double", a => a.Double)
-                           .AddAttribute(0, "integer", a => a.Integer)
-                           .AddAttribute(0, "string", a => a.String)
-                           .AddAttribute(0, "cell", a => a.Cell);
+.AddAttribute(0, "name", a => a.Name)
+.AddAttribute(0, "sqlType", a => a.SqlType)
+.AddAttribute(0, "parameterType", a => a.ParameterType)
+.AddAttribute(0, "refreshOnChange", a => a.RefreshOnChange)
+.AddAttribute(0, "prompt", a => a.Prompt)
+.AddAttribute(0, "boolean", a => a.Boolean)
+.AddAttribute(0, "double", a => a.Double)
+.AddAttribute(0, "integer", a => a.Integer)
+.AddAttribute(0, "string", a => a.String)
+.AddAttribute(0, "cell", a => a.Cell);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -8088,8 +8238,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:m.</para>
     /// </summary>
-    [SchemaAttr(22, "m")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MissingTable : OpenXmlLeafElement
     {
         /// <summary>
@@ -8097,6 +8245,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </summary>
         public MissingTable() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "m");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -8108,8 +8263,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:s.</para>
     /// </summary>
-    [SchemaAttr(22, "s")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CharacterValue : OpenXmlLeafElement
     {
         /// <summary>
@@ -8132,11 +8285,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "s");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CharacterValue>()
-                           .AddAttribute(0, "v", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "v", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -8148,8 +8303,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:x.</para>
     /// </summary>
-    [SchemaAttr(22, "x")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FieldItem : OpenXmlLeafElement
     {
         /// <summary>
@@ -8172,11 +8325,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "x");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<FieldItem>()
-                           .AddAttribute(0, "v", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "v", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -8188,8 +8343,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:textField.</para>
     /// </summary>
-    [SchemaAttr(22, "textField")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TextField : OpenXmlLeafElement
     {
         /// <summary>
@@ -8222,9 +8375,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "textField");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<TextField>()
-                           .AddAttribute(0, "type", a => a.Type)
-                           .AddAttribute(0, "position", a => a.Position);
+.AddAttribute(0, "type", a => a.Type)
+.AddAttribute(0, "position", a => a.Position);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -8255,8 +8410,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(FieldGroup))]
     [ChildElementInfo(typeof(MemberPropertiesMap))]
     [ChildElementInfo(typeof(CacheFieldExtensionList))]
-    [SchemaAttr(22, "cacheField")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CacheField : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8423,23 +8576,25 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "cacheField");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CacheField>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "caption", a => a.Caption)
-                           .AddAttribute(0, "propertyName", a => a.PropertyName)
-                           .AddAttribute(0, "serverField", a => a.ServerField)
-                           .AddAttribute(0, "uniqueList", a => a.UniqueList)
-                           .AddAttribute(0, "numFmtId", a => a.NumberFormatId)
-                           .AddAttribute(0, "formula", a => a.Formula)
-                           .AddAttribute(0, "sqlType", a => a.SqlType)
-                           .AddAttribute(0, "hierarchy", a => a.Hierarchy)
-                           .AddAttribute(0, "level", a => a.Level)
-                           .AddAttribute(0, "databaseField", a => a.DatabaseField)
-                           .AddAttribute(0, "mappingCount", a => a.MappingCount)
-                           .AddAttribute(0, "memberPropertyField", a => a.MemberPropertyField);
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "caption", a => a.Caption)
+.AddAttribute(0, "propertyName", a => a.PropertyName)
+.AddAttribute(0, "serverField", a => a.ServerField)
+.AddAttribute(0, "uniqueList", a => a.UniqueList)
+.AddAttribute(0, "numFmtId", a => a.NumberFormatId)
+.AddAttribute(0, "formula", a => a.Formula)
+.AddAttribute(0, "sqlType", a => a.SqlType)
+.AddAttribute(0, "hierarchy", a => a.Hierarchy)
+.AddAttribute(0, "level", a => a.Level)
+.AddAttribute(0, "databaseField", a => a.DatabaseField)
+.AddAttribute(0, "mappingCount", a => a.MappingCount)
+.AddAttribute(0, "memberPropertyField", a => a.MemberPropertyField);
         }
 
         /// <summary>
@@ -8500,8 +8655,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Page))]
-    [SchemaAttr(22, "pages")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Pages : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8548,8 +8701,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "pages");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Pages>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -8575,8 +8730,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(RangeSet))]
-    [SchemaAttr(22, "rangeSets")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RangeSets : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8623,8 +8776,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "rangeSets");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RangeSets>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -8650,8 +8805,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(PageItem))]
-    [SchemaAttr(22, "page")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Page : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8698,8 +8851,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "page");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Page>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -8718,8 +8873,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:pageItem.</para>
     /// </summary>
-    [SchemaAttr(22, "pageItem")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PageItem : OpenXmlLeafElement
     {
         /// <summary>
@@ -8742,11 +8895,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "pageItem");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PageItem>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -8758,8 +8913,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rangeSet.</para>
     /// </summary>
-    [SchemaAttr(22, "rangeSet")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RangeSet : OpenXmlLeafElement
     {
         /// <summary>
@@ -8855,15 +9008,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "rangeSet");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RangeSet>()
-                           .AddAttribute(0, "i1", a => a.FieldItemIndexPage1)
-                           .AddAttribute(0, "i2", a => a.FieldItemIndexPage2)
-                           .AddAttribute(0, "i3", a => a.FieldItemIndexPage3)
-                           .AddAttribute(0, "i4", a => a.FieldItemIndexPage4)
-                           .AddAttribute(0, "ref", a => a.Reference)
-                           .AddAttribute(0, "name", a => a.Name)
-                           .AddAttribute(0, "sheet", a => a.Sheet)
-                           .AddAttribute(19, "id", a => a.Id);
+.AddAttribute(0, "i1", a => a.FieldItemIndexPage1)
+.AddAttribute(0, "i2", a => a.FieldItemIndexPage2)
+.AddAttribute(0, "i3", a => a.FieldItemIndexPage3)
+.AddAttribute(0, "i4", a => a.FieldItemIndexPage4)
+.AddAttribute(0, "ref", a => a.Reference)
+.AddAttribute(0, "name", a => a.Name)
+.AddAttribute(0, "sheet", a => a.Sheet)
+.AddAttribute(19, "id", a => a.Id);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -8891,8 +9046,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(Tuples))]
     [ChildElementInfo(typeof(MemberPropertyIndex))]
-    [SchemaAttr(22, "m")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MissingItem : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9039,24 +9192,26 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "m");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<MissingItem>()
-                           .AddAttribute(0, "u", a => a.Unused)
-                           .AddAttribute(0, "f", a => a.Calculated)
-                           .AddAttribute(0, "c", a => a.Caption)
-                           .AddAttribute(0, "cp", a => a.PropertyCount)
-                           .AddAttribute(0, "in", a => a.FormatIndex)
-                           .AddAttribute(0, "bc", a => a.BackgroundColor, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
-                           })
-                           .AddAttribute(0, "fc", a => a.ForegroundColor, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
-                           })
-                           .AddAttribute(0, "i", a => a.Italic)
-                           .AddAttribute(0, "un", a => a.Underline)
-                           .AddAttribute(0, "st", a => a.Strikethrough)
-                           .AddAttribute(0, "b", a => a.Bold);
+.AddAttribute(0, "u", a => a.Unused)
+.AddAttribute(0, "f", a => a.Calculated)
+.AddAttribute(0, "c", a => a.Caption)
+.AddAttribute(0, "cp", a => a.PropertyCount)
+.AddAttribute(0, "in", a => a.FormatIndex)
+.AddAttribute(0, "bc", a => a.BackgroundColor, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+})
+.AddAttribute(0, "fc", a => a.ForegroundColor, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+})
+.AddAttribute(0, "i", a => a.Italic)
+.AddAttribute(0, "un", a => a.Underline)
+.AddAttribute(0, "st", a => a.Strikethrough)
+.AddAttribute(0, "b", a => a.Bold);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -9092,8 +9247,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(Tuples))]
     [ChildElementInfo(typeof(MemberPropertyIndex))]
-    [SchemaAttr(22, "n")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NumberItem : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9250,28 +9403,30 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "n");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<NumberItem>()
-                           .AddAttribute(0, "v", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "u", a => a.Unused)
-                           .AddAttribute(0, "f", a => a.Calculated)
-                           .AddAttribute(0, "c", a => a.Caption)
-                           .AddAttribute(0, "cp", a => a.PropertyCount)
-                           .AddAttribute(0, "in", a => a.FormatIndex)
-                           .AddAttribute(0, "bc", a => a.BackgroundColor, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
-                           })
-                           .AddAttribute(0, "fc", a => a.ForegroundColor, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
-                           })
-                           .AddAttribute(0, "i", a => a.Italic)
-                           .AddAttribute(0, "un", a => a.Underline)
-                           .AddAttribute(0, "st", a => a.Strikethrough)
-                           .AddAttribute(0, "b", a => a.Bold);
+.AddAttribute(0, "v", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "u", a => a.Unused)
+.AddAttribute(0, "f", a => a.Calculated)
+.AddAttribute(0, "c", a => a.Caption)
+.AddAttribute(0, "cp", a => a.PropertyCount)
+.AddAttribute(0, "in", a => a.FormatIndex)
+.AddAttribute(0, "bc", a => a.BackgroundColor, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+})
+.AddAttribute(0, "fc", a => a.ForegroundColor, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+})
+.AddAttribute(0, "i", a => a.Italic)
+.AddAttribute(0, "un", a => a.Underline)
+.AddAttribute(0, "st", a => a.Strikethrough)
+.AddAttribute(0, "b", a => a.Bold);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -9306,8 +9461,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(MemberPropertyIndex))]
-    [SchemaAttr(22, "b")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BooleanItem : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9394,15 +9547,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "b");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<BooleanItem>()
-                           .AddAttribute(0, "v", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "u", a => a.Unused)
-                           .AddAttribute(0, "f", a => a.Calculated)
-                           .AddAttribute(0, "c", a => a.Caption)
-                           .AddAttribute(0, "cp", a => a.PropertyCount);
+.AddAttribute(0, "v", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "u", a => a.Unused)
+.AddAttribute(0, "f", a => a.Calculated)
+.AddAttribute(0, "c", a => a.Caption)
+.AddAttribute(0, "cp", a => a.PropertyCount);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -9436,8 +9591,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(Tuples))]
     [ChildElementInfo(typeof(MemberPropertyIndex))]
-    [SchemaAttr(22, "e")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ErrorItem : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9594,28 +9747,30 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "e");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ErrorItem>()
-                           .AddAttribute(0, "v", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "u", a => a.Unused)
-                           .AddAttribute(0, "f", a => a.Calculated)
-                           .AddAttribute(0, "c", a => a.Caption)
-                           .AddAttribute(0, "cp", a => a.PropertyCount)
-                           .AddAttribute(0, "in", a => a.FormatIndex)
-                           .AddAttribute(0, "bc", a => a.BackgroundColor, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
-                           })
-                           .AddAttribute(0, "fc", a => a.ForegroundColor, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
-                           })
-                           .AddAttribute(0, "i", a => a.Italic)
-                           .AddAttribute(0, "un", a => a.Underline)
-                           .AddAttribute(0, "st", a => a.Strikethrough)
-                           .AddAttribute(0, "b", a => a.Bold);
+.AddAttribute(0, "v", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "u", a => a.Unused)
+.AddAttribute(0, "f", a => a.Calculated)
+.AddAttribute(0, "c", a => a.Caption)
+.AddAttribute(0, "cp", a => a.PropertyCount)
+.AddAttribute(0, "in", a => a.FormatIndex)
+.AddAttribute(0, "bc", a => a.BackgroundColor, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+})
+.AddAttribute(0, "fc", a => a.ForegroundColor, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+})
+.AddAttribute(0, "i", a => a.Italic)
+.AddAttribute(0, "un", a => a.Underline)
+.AddAttribute(0, "st", a => a.Strikethrough)
+.AddAttribute(0, "b", a => a.Bold);
         }
 
         /// <summary>
@@ -9664,8 +9819,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(Tuples))]
     [ChildElementInfo(typeof(MemberPropertyIndex))]
-    [SchemaAttr(22, "s")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StringItem : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9822,28 +9975,30 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "s");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<StringItem>()
-                           .AddAttribute(0, "v", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "u", a => a.Unused)
-                           .AddAttribute(0, "f", a => a.Calculated)
-                           .AddAttribute(0, "c", a => a.Caption)
-                           .AddAttribute(0, "cp", a => a.PropertyCount)
-                           .AddAttribute(0, "in", a => a.FormatIndex)
-                           .AddAttribute(0, "bc", a => a.BackgroundColor, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
-                           })
-                           .AddAttribute(0, "fc", a => a.ForegroundColor, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
-                           })
-                           .AddAttribute(0, "i", a => a.Italic)
-                           .AddAttribute(0, "un", a => a.Underline)
-                           .AddAttribute(0, "st", a => a.Strikethrough)
-                           .AddAttribute(0, "b", a => a.Bold);
+.AddAttribute(0, "v", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "u", a => a.Unused)
+.AddAttribute(0, "f", a => a.Calculated)
+.AddAttribute(0, "c", a => a.Caption)
+.AddAttribute(0, "cp", a => a.PropertyCount)
+.AddAttribute(0, "in", a => a.FormatIndex)
+.AddAttribute(0, "bc", a => a.BackgroundColor, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+})
+.AddAttribute(0, "fc", a => a.ForegroundColor, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+})
+.AddAttribute(0, "i", a => a.Italic)
+.AddAttribute(0, "un", a => a.Underline)
+.AddAttribute(0, "st", a => a.Strikethrough)
+.AddAttribute(0, "b", a => a.Bold);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -9877,8 +10032,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(MemberPropertyIndex))]
-    [SchemaAttr(22, "d")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DateTimeItem : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9965,15 +10118,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "d");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DateTimeItem>()
-                           .AddAttribute(0, "v", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "u", a => a.Unused)
-                           .AddAttribute(0, "f", a => a.Calculated)
-                           .AddAttribute(0, "c", a => a.Caption)
-                           .AddAttribute(0, "cp", a => a.PropertyCount);
+.AddAttribute(0, "v", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "u", a => a.Unused)
+.AddAttribute(0, "f", a => a.Calculated)
+.AddAttribute(0, "c", a => a.Caption)
+.AddAttribute(0, "cp", a => a.PropertyCount);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -10004,8 +10159,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description>Tuple &lt;x:tpl></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(22, "tpls")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Tuples : TuplesType
     {
         /// <summary>
@@ -10039,6 +10192,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "tpls");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuple), 1, 0)
@@ -10061,8 +10221,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description>Tuple &lt;x:tpl></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(22, "sortByTuple")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SortByTuple : TuplesType
     {
         /// <summary>
@@ -10094,6 +10252,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public SortByTuple(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "sortByTuple");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -10175,8 +10340,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:x.</para>
     /// </summary>
-    [SchemaAttr(22, "x")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MemberPropertyIndex : XType
     {
         /// <summary>
@@ -10184,6 +10347,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </summary>
         public MemberPropertyIndex() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "x");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -10195,8 +10365,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:mpMap.</para>
     /// </summary>
-    [SchemaAttr(22, "mpMap")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MemberPropertiesMap : XType
     {
         /// <summary>
@@ -10204,6 +10372,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </summary>
         public MemberPropertiesMap() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "mpMap");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -10272,8 +10447,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(StringItem))]
     [ChildElementInfo(typeof(DateTimeItem))]
     [ChildElementInfo(typeof(FieldItem))]
-    [SchemaAttr(22, "r")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PivotCacheRecord : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10307,6 +10480,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "r");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MissingItem), 1, 1),
@@ -10329,8 +10509,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:kpi.</para>
     /// </summary>
-    [SchemaAttr(22, "kpi")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Kpi : OpenXmlLeafElement
     {
         /// <summary>
@@ -10443,26 +10621,28 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "kpi");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Kpi>()
-                           .AddAttribute(0, "uniqueName", a => a.UniqueName, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "caption", a => a.Caption, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "displayFolder", a => a.DisplayFolder)
-                           .AddAttribute(0, "measureGroup", a => a.MeasureGroup)
-                           .AddAttribute(0, "parent", a => a.ParentKpi)
-                           .AddAttribute(0, "value", a => a.Value, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "goal", a => a.Goal)
-                           .AddAttribute(0, "status", a => a.Status)
-                           .AddAttribute(0, "trend", a => a.Trend)
-                           .AddAttribute(0, "weight", a => a.Weight);
+.AddAttribute(0, "uniqueName", a => a.UniqueName, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "caption", a => a.Caption, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "displayFolder", a => a.DisplayFolder)
+.AddAttribute(0, "measureGroup", a => a.MeasureGroup)
+.AddAttribute(0, "parent", a => a.ParentKpi)
+.AddAttribute(0, "value", a => a.Value, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "goal", a => a.Goal)
+.AddAttribute(0, "status", a => a.Status)
+.AddAttribute(0, "trend", a => a.Trend)
+.AddAttribute(0, "weight", a => a.Weight);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -10489,8 +10669,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:fieldUsage.</para>
     /// </summary>
-    [SchemaAttr(22, "fieldUsage")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FieldUsage : OpenXmlLeafElement
     {
         /// <summary>
@@ -10513,11 +10691,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "fieldUsage");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<FieldUsage>()
-                           .AddAttribute(0, "x", a => a.Index, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "x", a => a.Index, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -10545,8 +10725,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(Groups))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "groupLevel")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class GroupLevel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10623,17 +10801,19 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "groupLevel");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<GroupLevel>()
-                           .AddAttribute(0, "uniqueName", a => a.UniqueName, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "caption", a => a.Caption, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "user", a => a.User)
-                           .AddAttribute(0, "customRollUp", a => a.CustomRollUp);
+.AddAttribute(0, "uniqueName", a => a.UniqueName, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "caption", a => a.Caption, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "user", a => a.User)
+.AddAttribute(0, "customRollUp", a => a.CustomRollUp);
         }
 
         /// <summary>
@@ -10692,8 +10872,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Group))]
-    [SchemaAttr(22, "groups")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Groups : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10740,8 +10918,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "groups");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Groups>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -10767,8 +10947,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(GroupMembers))]
-    [SchemaAttr(22, "group")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Group : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10855,21 +11033,23 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "group");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Group>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "uniqueName", a => a.UniqueName, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "caption", a => a.Caption, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "uniqueParent", a => a.UniqueParent)
-                           .AddAttribute(0, "id", a => a.Id);
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "uniqueName", a => a.UniqueName, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "caption", a => a.Caption, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "uniqueParent", a => a.UniqueParent)
+.AddAttribute(0, "id", a => a.Id);
         }
 
         /// <summary>
@@ -10917,8 +11097,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(GroupMember))]
-    [SchemaAttr(22, "groupMembers")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class GroupMembers : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10965,8 +11143,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "groupMembers");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<GroupMembers>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -10985,8 +11165,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:groupMember.</para>
     /// </summary>
-    [SchemaAttr(22, "groupMember")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class GroupMember : OpenXmlLeafElement
     {
         /// <summary>
@@ -11019,12 +11197,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "groupMember");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<GroupMember>()
-                           .AddAttribute(0, "uniqueName", a => a.UniqueName, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "group", a => a.Group);
+.AddAttribute(0, "uniqueName", a => a.UniqueName, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "group", a => a.Group);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -11056,8 +11236,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(NumberItem))]
     [ChildElementInfo(typeof(ErrorItem))]
     [ChildElementInfo(typeof(StringItem))]
-    [SchemaAttr(22, "entries")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Entries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11104,8 +11282,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "entries");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Entries>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
@@ -11134,8 +11314,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(TupleSet))]
-    [SchemaAttr(22, "sets")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Sets : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11182,8 +11360,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "sets");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Sets>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -11209,8 +11389,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Query))]
-    [SchemaAttr(22, "queryCache")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class QueryCache : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11257,8 +11435,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "queryCache");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<QueryCache>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -11284,8 +11464,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ServerFormat))]
-    [SchemaAttr(22, "serverFormats")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ServerFormats : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11332,8 +11510,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "serverFormats");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ServerFormats>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -11352,8 +11532,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:serverFormat.</para>
     /// </summary>
-    [SchemaAttr(22, "serverFormat")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ServerFormat : OpenXmlLeafElement
     {
         /// <summary>
@@ -11386,9 +11564,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "serverFormat");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ServerFormat>()
-                           .AddAttribute(0, "culture", a => a.Culture)
-                           .AddAttribute(0, "format", a => a.Format);
+.AddAttribute(0, "culture", a => a.Culture)
+.AddAttribute(0, "format", a => a.Format);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -11408,8 +11588,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:tpl.</para>
     /// </summary>
-    [SchemaAttr(22, "tpl")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Tuple : OpenXmlLeafElement
     {
         /// <summary>
@@ -11452,13 +11630,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "tpl");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Tuple>()
-                           .AddAttribute(0, "fld", a => a.Field)
-                           .AddAttribute(0, "hier", a => a.Hierarchy)
-                           .AddAttribute(0, "item", a => a.Item, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "fld", a => a.Field)
+.AddAttribute(0, "hier", a => a.Hierarchy)
+.AddAttribute(0, "item", a => a.Item, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -11487,8 +11667,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(Tuples))]
     [ChildElementInfo(typeof(SortByTuple))]
-    [SchemaAttr(22, "set")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TupleSet : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11575,18 +11753,20 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "set");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<TupleSet>()
-                           .AddAttribute(0, "count", a => a.Count)
-                           .AddAttribute(0, "maxRank", a => a.MaxRank, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "setDefinition", a => a.SetDefinition, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "sortType", a => a.SortType)
-                           .AddAttribute(0, "queryFailed", a => a.QueryFailed);
+.AddAttribute(0, "count", a => a.Count)
+.AddAttribute(0, "maxRank", a => a.MaxRank, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "setDefinition", a => a.SetDefinition, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "sortType", a => a.SortType)
+.AddAttribute(0, "queryFailed", a => a.QueryFailed);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -11620,8 +11800,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Tuples))]
-    [SchemaAttr(22, "query")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Query : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11668,11 +11846,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "query");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Query>()
-                           .AddAttribute(0, "mdx", a => a.Mdx, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "mdx", a => a.Mdx, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -11719,8 +11899,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(PivotArea))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "calculatedItem")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CalculatedItem : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11777,9 +11955,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "calculatedItem");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CalculatedItem>()
-                           .AddAttribute(0, "field", a => a.Field)
-                           .AddAttribute(0, "formula", a => a.Formula);
+.AddAttribute(0, "field", a => a.Field)
+.AddAttribute(0, "formula", a => a.Formula);
         }
 
         /// <summary>
@@ -11834,8 +12014,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(PivotAreaReferences))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "pivotArea")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PivotArea : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11992,19 +12170,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "pivotArea");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PivotArea>()
-                           .AddAttribute(0, "field", a => a.Field)
-                           .AddAttribute(0, "type", a => a.Type)
-                           .AddAttribute(0, "dataOnly", a => a.DataOnly)
-                           .AddAttribute(0, "labelOnly", a => a.LabelOnly)
-                           .AddAttribute(0, "grandRow", a => a.GrandRow)
-                           .AddAttribute(0, "grandCol", a => a.GrandColumn)
-                           .AddAttribute(0, "cacheIndex", a => a.CacheIndex)
-                           .AddAttribute(0, "outline", a => a.Outline)
-                           .AddAttribute(0, "offset", a => a.Offset)
-                           .AddAttribute(0, "collapsedLevelsAreSubtotals", a => a.CollapsedLevelsAreSubtotals)
-                           .AddAttribute(0, "axis", a => a.Axis)
-                           .AddAttribute(0, "fieldPosition", a => a.FieldPosition);
+.AddAttribute(0, "field", a => a.Field)
+.AddAttribute(0, "type", a => a.Type)
+.AddAttribute(0, "dataOnly", a => a.DataOnly)
+.AddAttribute(0, "labelOnly", a => a.LabelOnly)
+.AddAttribute(0, "grandRow", a => a.GrandRow)
+.AddAttribute(0, "grandCol", a => a.GrandColumn)
+.AddAttribute(0, "cacheIndex", a => a.CacheIndex)
+.AddAttribute(0, "outline", a => a.Outline)
+.AddAttribute(0, "offset", a => a.Offset)
+.AddAttribute(0, "collapsedLevelsAreSubtotals", a => a.CollapsedLevelsAreSubtotals)
+.AddAttribute(0, "axis", a => a.Axis)
+.AddAttribute(0, "fieldPosition", a => a.FieldPosition);
         }
 
         /// <summary>
@@ -12063,8 +12243,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CalculatedMemberExtensionList))]
-    [SchemaAttr(22, "calculatedMember")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CalculatedMember : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12171,20 +12349,22 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "calculatedMember");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CalculatedMember>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "mdx", a => a.Mdx, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "memberName", a => a.MemberName)
-                           .AddAttribute(0, "hierarchy", a => a.Hierarchy)
-                           .AddAttribute(0, "parent", a => a.ParentName)
-                           .AddAttribute(0, "solveOrder", a => a.SolveOrder)
-                           .AddAttribute(0, "set", a => a.Set);
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "mdx", a => a.Mdx, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "memberName", a => a.MemberName)
+.AddAttribute(0, "hierarchy", a => a.Hierarchy)
+.AddAttribute(0, "parent", a => a.ParentName)
+.AddAttribute(0, "solveOrder", a => a.SolveOrder)
+.AddAttribute(0, "set", a => a.Set);
         }
 
         /// <summary>
@@ -12241,8 +12421,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(Items))]
     [ChildElementInfo(typeof(AutoSortScope))]
     [ChildElementInfo(typeof(PivotFieldExtensionList))]
-    [SchemaAttr(22, "pivotField")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PivotField : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12759,55 +12937,57 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "pivotField");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PivotField>()
-                           .AddAttribute(0, "name", a => a.Name)
-                           .AddAttribute(0, "axis", a => a.Axis)
-                           .AddAttribute(0, "dataField", a => a.DataField)
-                           .AddAttribute(0, "subtotalCaption", a => a.SubtotalCaption)
-                           .AddAttribute(0, "showDropDowns", a => a.ShowDropDowns)
-                           .AddAttribute(0, "hiddenLevel", a => a.HiddenLevel)
-                           .AddAttribute(0, "uniqueMemberProperty", a => a.UniqueMemberProperty)
-                           .AddAttribute(0, "compact", a => a.Compact)
-                           .AddAttribute(0, "allDrilled", a => a.AllDrilled)
-                           .AddAttribute(0, "numFmtId", a => a.NumberFormatId)
-                           .AddAttribute(0, "outline", a => a.Outline)
-                           .AddAttribute(0, "subtotalTop", a => a.SubtotalTop)
-                           .AddAttribute(0, "dragToRow", a => a.DragToRow)
-                           .AddAttribute(0, "dragToCol", a => a.DragToColumn)
-                           .AddAttribute(0, "multipleItemSelectionAllowed", a => a.MultipleItemSelectionAllowed)
-                           .AddAttribute(0, "dragToPage", a => a.DragToPage)
-                           .AddAttribute(0, "dragToData", a => a.DragToData)
-                           .AddAttribute(0, "dragOff", a => a.DragOff)
-                           .AddAttribute(0, "showAll", a => a.ShowAll)
-                           .AddAttribute(0, "insertBlankRow", a => a.InsertBlankRow)
-                           .AddAttribute(0, "serverField", a => a.ServerField)
-                           .AddAttribute(0, "insertPageBreak", a => a.InsertPageBreak)
-                           .AddAttribute(0, "autoShow", a => a.AutoShow)
-                           .AddAttribute(0, "topAutoShow", a => a.TopAutoShow)
-                           .AddAttribute(0, "hideNewItems", a => a.HideNewItems)
-                           .AddAttribute(0, "measureFilter", a => a.MeasureFilter)
-                           .AddAttribute(0, "includeNewItemsInFilter", a => a.IncludeNewItemsInFilter)
-                           .AddAttribute(0, "itemPageCount", a => a.ItemPageCount)
-                           .AddAttribute(0, "sortType", a => a.SortType)
-                           .AddAttribute(0, "dataSourceSort", a => a.DataSourceSort)
-                           .AddAttribute(0, "nonAutoSortDefault", a => a.NonAutoSortDefault)
-                           .AddAttribute(0, "rankBy", a => a.RankBy)
-                           .AddAttribute(0, "defaultSubtotal", a => a.DefaultSubtotal)
-                           .AddAttribute(0, "sumSubtotal", a => a.SumSubtotal)
-                           .AddAttribute(0, "countASubtotal", a => a.CountASubtotal)
-                           .AddAttribute(0, "avgSubtotal", a => a.AverageSubTotal)
-                           .AddAttribute(0, "maxSubtotal", a => a.MaxSubtotal)
-                           .AddAttribute(0, "minSubtotal", a => a.MinSubtotal)
-                           .AddAttribute(0, "productSubtotal", a => a.ApplyProductInSubtotal)
-                           .AddAttribute(0, "countSubtotal", a => a.CountSubtotal)
-                           .AddAttribute(0, "stdDevSubtotal", a => a.ApplyStandardDeviationInSubtotal)
-                           .AddAttribute(0, "stdDevPSubtotal", a => a.ApplyStandardDeviationPInSubtotal)
-                           .AddAttribute(0, "varSubtotal", a => a.ApplyVarianceInSubtotal)
-                           .AddAttribute(0, "varPSubtotal", a => a.ApplyVariancePInSubtotal)
-                           .AddAttribute(0, "showPropCell", a => a.ShowPropCell)
-                           .AddAttribute(0, "showPropTip", a => a.ShowPropertyTooltip)
-                           .AddAttribute(0, "showPropAsCaption", a => a.ShowPropAsCaption)
-                           .AddAttribute(0, "defaultAttributeDrillState", a => a.DefaultAttributeDrillState);
+.AddAttribute(0, "name", a => a.Name)
+.AddAttribute(0, "axis", a => a.Axis)
+.AddAttribute(0, "dataField", a => a.DataField)
+.AddAttribute(0, "subtotalCaption", a => a.SubtotalCaption)
+.AddAttribute(0, "showDropDowns", a => a.ShowDropDowns)
+.AddAttribute(0, "hiddenLevel", a => a.HiddenLevel)
+.AddAttribute(0, "uniqueMemberProperty", a => a.UniqueMemberProperty)
+.AddAttribute(0, "compact", a => a.Compact)
+.AddAttribute(0, "allDrilled", a => a.AllDrilled)
+.AddAttribute(0, "numFmtId", a => a.NumberFormatId)
+.AddAttribute(0, "outline", a => a.Outline)
+.AddAttribute(0, "subtotalTop", a => a.SubtotalTop)
+.AddAttribute(0, "dragToRow", a => a.DragToRow)
+.AddAttribute(0, "dragToCol", a => a.DragToColumn)
+.AddAttribute(0, "multipleItemSelectionAllowed", a => a.MultipleItemSelectionAllowed)
+.AddAttribute(0, "dragToPage", a => a.DragToPage)
+.AddAttribute(0, "dragToData", a => a.DragToData)
+.AddAttribute(0, "dragOff", a => a.DragOff)
+.AddAttribute(0, "showAll", a => a.ShowAll)
+.AddAttribute(0, "insertBlankRow", a => a.InsertBlankRow)
+.AddAttribute(0, "serverField", a => a.ServerField)
+.AddAttribute(0, "insertPageBreak", a => a.InsertPageBreak)
+.AddAttribute(0, "autoShow", a => a.AutoShow)
+.AddAttribute(0, "topAutoShow", a => a.TopAutoShow)
+.AddAttribute(0, "hideNewItems", a => a.HideNewItems)
+.AddAttribute(0, "measureFilter", a => a.MeasureFilter)
+.AddAttribute(0, "includeNewItemsInFilter", a => a.IncludeNewItemsInFilter)
+.AddAttribute(0, "itemPageCount", a => a.ItemPageCount)
+.AddAttribute(0, "sortType", a => a.SortType)
+.AddAttribute(0, "dataSourceSort", a => a.DataSourceSort)
+.AddAttribute(0, "nonAutoSortDefault", a => a.NonAutoSortDefault)
+.AddAttribute(0, "rankBy", a => a.RankBy)
+.AddAttribute(0, "defaultSubtotal", a => a.DefaultSubtotal)
+.AddAttribute(0, "sumSubtotal", a => a.SumSubtotal)
+.AddAttribute(0, "countASubtotal", a => a.CountASubtotal)
+.AddAttribute(0, "avgSubtotal", a => a.AverageSubTotal)
+.AddAttribute(0, "maxSubtotal", a => a.MaxSubtotal)
+.AddAttribute(0, "minSubtotal", a => a.MinSubtotal)
+.AddAttribute(0, "productSubtotal", a => a.ApplyProductInSubtotal)
+.AddAttribute(0, "countSubtotal", a => a.CountSubtotal)
+.AddAttribute(0, "stdDevSubtotal", a => a.ApplyStandardDeviationInSubtotal)
+.AddAttribute(0, "stdDevPSubtotal", a => a.ApplyStandardDeviationPInSubtotal)
+.AddAttribute(0, "varSubtotal", a => a.ApplyVarianceInSubtotal)
+.AddAttribute(0, "varPSubtotal", a => a.ApplyVariancePInSubtotal)
+.AddAttribute(0, "showPropCell", a => a.ShowPropCell)
+.AddAttribute(0, "showPropTip", a => a.ShowPropertyTooltip)
+.AddAttribute(0, "showPropAsCaption", a => a.ShowPropAsCaption)
+.AddAttribute(0, "defaultAttributeDrillState", a => a.DefaultAttributeDrillState);
         }
 
         /// <summary>
@@ -12873,8 +13053,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:item.</para>
     /// </summary>
-    [SchemaAttr(22, "item")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Item : OpenXmlLeafElement
     {
         /// <summary>
@@ -12997,18 +13175,20 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "item");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Item>()
-                           .AddAttribute(0, "n", a => a.ItemName)
-                           .AddAttribute(0, "t", a => a.ItemType)
-                           .AddAttribute(0, "h", a => a.Hidden)
-                           .AddAttribute(0, "s", a => a.HasStringVlue)
-                           .AddAttribute(0, "sd", a => a.HideDetails)
-                           .AddAttribute(0, "f", a => a.Calculated)
-                           .AddAttribute(0, "m", a => a.Missing)
-                           .AddAttribute(0, "c", a => a.ChildItems)
-                           .AddAttribute(0, "x", a => a.Index)
-                           .AddAttribute(0, "d", a => a.Expanded)
-                           .AddAttribute(0, "e", a => a.DrillAcrossAttributes);
+.AddAttribute(0, "n", a => a.ItemName)
+.AddAttribute(0, "t", a => a.ItemType)
+.AddAttribute(0, "h", a => a.Hidden)
+.AddAttribute(0, "s", a => a.HasStringVlue)
+.AddAttribute(0, "sd", a => a.HideDetails)
+.AddAttribute(0, "f", a => a.Calculated)
+.AddAttribute(0, "m", a => a.Missing)
+.AddAttribute(0, "c", a => a.ChildItems)
+.AddAttribute(0, "x", a => a.Index)
+.AddAttribute(0, "d", a => a.Expanded)
+.AddAttribute(0, "e", a => a.DrillAcrossAttributes);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -13035,8 +13215,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DataFieldExtensionList))]
-    [SchemaAttr(22, "dataField")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DataField : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13143,17 +13321,19 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "dataField");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DataField>()
-                           .AddAttribute(0, "name", a => a.Name)
-                           .AddAttribute(0, "fld", a => a.Field, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "subtotal", a => a.Subtotal)
-                           .AddAttribute(0, "showDataAs", a => a.ShowDataAs)
-                           .AddAttribute(0, "baseField", a => a.BaseField)
-                           .AddAttribute(0, "baseItem", a => a.BaseItem)
-                           .AddAttribute(0, "numFmtId", a => a.NumberFormatId);
+.AddAttribute(0, "name", a => a.Name)
+.AddAttribute(0, "fld", a => a.Field, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "subtotal", a => a.Subtotal)
+.AddAttribute(0, "showDataAs", a => a.ShowDataAs)
+.AddAttribute(0, "baseField", a => a.BaseField)
+.AddAttribute(0, "baseItem", a => a.BaseItem)
+.AddAttribute(0, "numFmtId", a => a.NumberFormatId);
         }
 
         /// <summary>
@@ -13198,8 +13378,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(MemberPropertyIndex))]
-    [SchemaAttr(22, "i")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RowItem : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13266,10 +13444,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "i");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RowItem>()
-                           .AddAttribute(0, "t", a => a.ItemType)
-                           .AddAttribute(0, "r", a => a.RepeatedItemCount)
-                           .AddAttribute(0, "i", a => a.Index);
+.AddAttribute(0, "t", a => a.ItemType)
+.AddAttribute(0, "r", a => a.RepeatedItemCount)
+.AddAttribute(0, "i", a => a.Index);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -13294,8 +13474,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:field.</para>
     /// </summary>
-    [SchemaAttr(22, "field")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Field : OpenXmlLeafElement
     {
         /// <summary>
@@ -13318,11 +13496,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "field");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Field>()
-                           .AddAttribute(0, "x", a => a.Index, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "x", a => a.Index, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -13349,8 +13529,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(PivotArea))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "format")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Format : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13407,9 +13585,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "format");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Format>()
-                           .AddAttribute(0, "action", a => a.Action)
-                           .AddAttribute(0, "dxfId", a => a.FormatId);
+.AddAttribute(0, "action", a => a.Action)
+.AddAttribute(0, "dxfId", a => a.FormatId);
         }
 
         /// <summary>
@@ -13470,8 +13650,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(PivotAreas))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "conditionalFormat")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ConditionalFormat : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13538,13 +13716,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "conditionalFormat");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ConditionalFormat>()
-                           .AddAttribute(0, "scope", a => a.Scope)
-                           .AddAttribute(0, "type", a => a.Type)
-                           .AddAttribute(0, "priority", a => a.Priority, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "scope", a => a.Scope)
+.AddAttribute(0, "type", a => a.Type)
+.AddAttribute(0, "priority", a => a.Priority, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -13603,8 +13783,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(PivotArea))]
-    [SchemaAttr(22, "pivotAreas")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PivotAreas : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13651,8 +13829,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "pivotAreas");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PivotAreas>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -13678,8 +13858,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(PivotArea))]
-    [SchemaAttr(22, "chartFormat")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ChartFormat : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13746,16 +13924,18 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "chartFormat");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ChartFormat>()
-                           .AddAttribute(0, "chart", a => a.Chart, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "format", a => a.Format, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "series", a => a.Series);
+.AddAttribute(0, "chart", a => a.Chart, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "format", a => a.Format, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "series", a => a.Series);
         }
 
         /// <summary>
@@ -13798,8 +13978,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(MemberProperties))]
     [ChildElementInfo(typeof(Members))]
     [ChildElementInfo(typeof(PivotHierarchyExtensionList))]
-    [SchemaAttr(22, "pivotHierarchy")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PivotHierarchy : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13946,18 +14124,20 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "pivotHierarchy");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PivotHierarchy>()
-                           .AddAttribute(0, "outline", a => a.Outline)
-                           .AddAttribute(0, "multipleItemSelectionAllowed", a => a.MultipleItemSelectionAllowed)
-                           .AddAttribute(0, "subtotalTop", a => a.SubtotalTop)
-                           .AddAttribute(0, "showInFieldList", a => a.ShowInFieldList)
-                           .AddAttribute(0, "dragToRow", a => a.DragToRow)
-                           .AddAttribute(0, "dragToCol", a => a.DragToColumn)
-                           .AddAttribute(0, "dragToPage", a => a.DragToPage)
-                           .AddAttribute(0, "dragToData", a => a.DragToData)
-                           .AddAttribute(0, "dragOff", a => a.DragOff)
-                           .AddAttribute(0, "includeNewItemsInFilter", a => a.IncludeNewItemsInFilter)
-                           .AddAttribute(0, "caption", a => a.Caption);
+.AddAttribute(0, "outline", a => a.Outline)
+.AddAttribute(0, "multipleItemSelectionAllowed", a => a.MultipleItemSelectionAllowed)
+.AddAttribute(0, "subtotalTop", a => a.SubtotalTop)
+.AddAttribute(0, "showInFieldList", a => a.ShowInFieldList)
+.AddAttribute(0, "dragToRow", a => a.DragToRow)
+.AddAttribute(0, "dragToCol", a => a.DragToColumn)
+.AddAttribute(0, "dragToPage", a => a.DragToPage)
+.AddAttribute(0, "dragToData", a => a.DragToData)
+.AddAttribute(0, "dragOff", a => a.DragOff)
+.AddAttribute(0, "includeNewItemsInFilter", a => a.IncludeNewItemsInFilter)
+.AddAttribute(0, "caption", a => a.Caption);
         }
 
         /// <summary>
@@ -13997,8 +14177,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rowHierarchyUsage.</para>
     /// </summary>
-    [SchemaAttr(22, "rowHierarchyUsage")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RowHierarchyUsage : HierarchyUsageType
     {
         /// <summary>
@@ -14006,6 +14184,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </summary>
         public RowHierarchyUsage() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "rowHierarchyUsage");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -14017,8 +14202,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:colHierarchyUsage.</para>
     /// </summary>
-    [SchemaAttr(22, "colHierarchyUsage")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColumnHierarchyUsage : HierarchyUsageType
     {
         /// <summary>
@@ -14026,6 +14209,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </summary>
         public ColumnHierarchyUsage() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "colHierarchyUsage");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -14072,8 +14262,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:mp.</para>
     /// </summary>
-    [SchemaAttr(22, "mp")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MemberProperty : OpenXmlLeafElement
     {
         /// <summary>
@@ -14176,19 +14364,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "mp");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<MemberProperty>()
-                           .AddAttribute(0, "name", a => a.Name)
-                           .AddAttribute(0, "showCell", a => a.ShowCell)
-                           .AddAttribute(0, "showTip", a => a.ShowTip)
-                           .AddAttribute(0, "showAsCaption", a => a.ShowAsCaption)
-                           .AddAttribute(0, "nameLen", a => a.NameLength)
-                           .AddAttribute(0, "pPos", a => a.PropertyNamePosition)
-                           .AddAttribute(0, "pLen", a => a.PropertyNameLength)
-                           .AddAttribute(0, "level", a => a.Level)
-                           .AddAttribute(0, "field", a => a.Field, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "name", a => a.Name)
+.AddAttribute(0, "showCell", a => a.ShowCell)
+.AddAttribute(0, "showTip", a => a.ShowTip)
+.AddAttribute(0, "showAsCaption", a => a.ShowAsCaption)
+.AddAttribute(0, "nameLen", a => a.NameLength)
+.AddAttribute(0, "pPos", a => a.PropertyNamePosition)
+.AddAttribute(0, "pLen", a => a.PropertyNameLength)
+.AddAttribute(0, "level", a => a.Level)
+.AddAttribute(0, "field", a => a.Field, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -14206,8 +14396,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:member.</para>
     /// </summary>
-    [SchemaAttr(22, "member")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Member : OpenXmlLeafElement
     {
         /// <summary>
@@ -14230,11 +14418,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "member");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Member>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -14246,8 +14436,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:dimension.</para>
     /// </summary>
-    [SchemaAttr(22, "dimension")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Dimension : OpenXmlLeafElement
     {
         /// <summary>
@@ -14300,20 +14488,22 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "dimension");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Dimension>()
-                           .AddAttribute(0, "measure", a => a.Measure)
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "uniqueName", a => a.UniqueName, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "caption", a => a.Caption, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "measure", a => a.Measure)
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "uniqueName", a => a.UniqueName, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "caption", a => a.Caption, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -14334,8 +14524,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:measureGroup.</para>
     /// </summary>
-    [SchemaAttr(22, "measureGroup")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MeasureGroup : OpenXmlLeafElement
     {
         /// <summary>
@@ -14368,15 +14556,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "measureGroup");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<MeasureGroup>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "caption", a => a.Caption, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "caption", a => a.Caption, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -14395,8 +14585,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:map.</para>
     /// </summary>
-    [SchemaAttr(22, "map")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MeasureDimensionMap : OpenXmlLeafElement
     {
         /// <summary>
@@ -14429,15 +14617,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "map");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<MeasureDimensionMap>()
-                           .AddAttribute(0, "measureGroup", a => a.MeasureGroup, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "dimension", a => a.Dimension, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "measureGroup", a => a.MeasureGroup, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "dimension", a => a.Dimension, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -14458,8 +14648,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(AutoFilter))]
     [ChildElementInfo(typeof(PivotFilterExtensionList))]
-    [SchemaAttr(22, "filter")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PivotFilter : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14606,27 +14794,29 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "filter");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PivotFilter>()
-                           .AddAttribute(0, "fld", a => a.Field, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "mpFld", a => a.MemberPropertyFieldId)
-                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "evalOrder", a => a.EvaluationOrder)
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "iMeasureHier", a => a.MeasureHierarchy)
-                           .AddAttribute(0, "iMeasureFld", a => a.MeasureField)
-                           .AddAttribute(0, "name", a => a.Name)
-                           .AddAttribute(0, "description", a => a.Description)
-                           .AddAttribute(0, "stringValue1", a => a.StringValue1)
-                           .AddAttribute(0, "stringValue2", a => a.StringValue2);
+.AddAttribute(0, "fld", a => a.Field, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "mpFld", a => a.MemberPropertyFieldId)
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "evalOrder", a => a.EvaluationOrder)
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "iMeasureHier", a => a.MeasureHierarchy)
+.AddAttribute(0, "iMeasureFld", a => a.MeasureField)
+.AddAttribute(0, "name", a => a.Name)
+.AddAttribute(0, "description", a => a.Description)
+.AddAttribute(0, "stringValue1", a => a.StringValue1)
+.AddAttribute(0, "stringValue2", a => a.StringValue2);
         }
 
         /// <summary>
@@ -14692,8 +14882,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(FieldsUsage))]
     [ChildElementInfo(typeof(GroupLevels))]
     [ChildElementInfo(typeof(CacheHierarchyExtensionList))]
-    [SchemaAttr(22, "cacheHierarchy")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CacheHierarchy : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14950,35 +15138,37 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "cacheHierarchy");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CacheHierarchy>()
-                           .AddAttribute(0, "uniqueName", a => a.UniqueName, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "caption", a => a.Caption)
-                           .AddAttribute(0, "measure", a => a.Measure)
-                           .AddAttribute(0, "set", a => a.Set)
-                           .AddAttribute(0, "parentSet", a => a.ParentSet)
-                           .AddAttribute(0, "iconSet", a => a.IconSet)
-                           .AddAttribute(0, "attribute", a => a.Attribute)
-                           .AddAttribute(0, "time", a => a.Time)
-                           .AddAttribute(0, "keyAttribute", a => a.KeyAttribute)
-                           .AddAttribute(0, "defaultMemberUniqueName", a => a.DefaultMemberUniqueName)
-                           .AddAttribute(0, "allUniqueName", a => a.AllUniqueName)
-                           .AddAttribute(0, "allCaption", a => a.AllCaption)
-                           .AddAttribute(0, "dimensionUniqueName", a => a.DimensionUniqueName)
-                           .AddAttribute(0, "displayFolder", a => a.DisplayFolder)
-                           .AddAttribute(0, "measureGroup", a => a.MeasureGroup)
-                           .AddAttribute(0, "measures", a => a.Measures)
-                           .AddAttribute(0, "count", a => a.Count, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "oneField", a => a.OneField)
-                           .AddAttribute(0, "memberValueDatatype", a => a.MemberValueDatatype)
-                           .AddAttribute(0, "unbalanced", a => a.Unbalanced)
-                           .AddAttribute(0, "unbalancedGroup", a => a.UnbalancedGroup)
-                           .AddAttribute(0, "hidden", a => a.Hidden);
+.AddAttribute(0, "uniqueName", a => a.UniqueName, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "caption", a => a.Caption)
+.AddAttribute(0, "measure", a => a.Measure)
+.AddAttribute(0, "set", a => a.Set)
+.AddAttribute(0, "parentSet", a => a.ParentSet)
+.AddAttribute(0, "iconSet", a => a.IconSet)
+.AddAttribute(0, "attribute", a => a.Attribute)
+.AddAttribute(0, "time", a => a.Time)
+.AddAttribute(0, "keyAttribute", a => a.KeyAttribute)
+.AddAttribute(0, "defaultMemberUniqueName", a => a.DefaultMemberUniqueName)
+.AddAttribute(0, "allUniqueName", a => a.AllUniqueName)
+.AddAttribute(0, "allCaption", a => a.AllCaption)
+.AddAttribute(0, "dimensionUniqueName", a => a.DimensionUniqueName)
+.AddAttribute(0, "displayFolder", a => a.DisplayFolder)
+.AddAttribute(0, "measureGroup", a => a.MeasureGroup)
+.AddAttribute(0, "measures", a => a.Measures)
+.AddAttribute(0, "count", a => a.Count, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "oneField", a => a.OneField)
+.AddAttribute(0, "memberValueDatatype", a => a.MemberValueDatatype)
+.AddAttribute(0, "unbalanced", a => a.Unbalanced)
+.AddAttribute(0, "unbalancedGroup", a => a.UnbalancedGroup)
+.AddAttribute(0, "hidden", a => a.Hidden);
         }
 
         /// <summary>
@@ -15049,8 +15239,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rangePr.</para>
     /// </summary>
-    [SchemaAttr(22, "rangePr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RangeProperties : OpenXmlLeafElement
     {
         /// <summary>
@@ -15143,15 +15331,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "rangePr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RangeProperties>()
-                           .AddAttribute(0, "autoStart", a => a.AutoStart)
-                           .AddAttribute(0, "autoEnd", a => a.AutoEnd)
-                           .AddAttribute(0, "groupBy", a => a.GroupBy)
-                           .AddAttribute(0, "startNum", a => a.StartNumber)
-                           .AddAttribute(0, "endNum", a => a.EndNum)
-                           .AddAttribute(0, "startDate", a => a.StartDate)
-                           .AddAttribute(0, "endDate", a => a.EndDate)
-                           .AddAttribute(0, "groupInterval", a => a.GroupInterval);
+.AddAttribute(0, "autoStart", a => a.AutoStart)
+.AddAttribute(0, "autoEnd", a => a.AutoEnd)
+.AddAttribute(0, "groupBy", a => a.GroupBy)
+.AddAttribute(0, "startNum", a => a.StartNumber)
+.AddAttribute(0, "endNum", a => a.EndNum)
+.AddAttribute(0, "startDate", a => a.StartDate)
+.AddAttribute(0, "endDate", a => a.EndDate)
+.AddAttribute(0, "groupInterval", a => a.GroupInterval);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -15176,8 +15366,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(FieldItem))]
-    [SchemaAttr(22, "discretePr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DiscreteProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15224,8 +15412,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "discretePr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DiscreteProperties>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -15261,8 +15451,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(ErrorItem))]
     [ChildElementInfo(typeof(StringItem))]
     [ChildElementInfo(typeof(DateTimeItem))]
-    [SchemaAttr(22, "groupItems")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class GroupItems : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15309,8 +15497,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "groupItems");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<GroupItems>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
@@ -15341,8 +15531,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "pageField")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PageField : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15429,15 +15617,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "pageField");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PageField>()
-                           .AddAttribute(0, "fld", a => a.Field, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "item", a => a.Item)
-                           .AddAttribute(0, "hier", a => a.Hierarchy)
-                           .AddAttribute(0, "name", a => a.Name)
-                           .AddAttribute(0, "cap", a => a.Caption);
+.AddAttribute(0, "fld", a => a.Field, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "item", a => a.Item)
+.AddAttribute(0, "hier", a => a.Hierarchy)
+.AddAttribute(0, "name", a => a.Name)
+.AddAttribute(0, "cap", a => a.Caption);
         }
 
         /// <summary>
@@ -15483,8 +15673,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(PivotAreaReference))]
-    [SchemaAttr(22, "references")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PivotAreaReferences : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15531,8 +15719,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "references");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PivotAreaReferences>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -15560,8 +15750,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(FieldItem))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "reference")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PivotAreaReference : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15768,24 +15956,26 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "reference");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PivotAreaReference>()
-                           .AddAttribute(0, "field", a => a.Field)
-                           .AddAttribute(0, "count", a => a.Count)
-                           .AddAttribute(0, "selected", a => a.Selected)
-                           .AddAttribute(0, "byPosition", a => a.ByPosition)
-                           .AddAttribute(0, "relative", a => a.Relative)
-                           .AddAttribute(0, "defaultSubtotal", a => a.DefaultSubtotal)
-                           .AddAttribute(0, "sumSubtotal", a => a.SumSubtotal)
-                           .AddAttribute(0, "countASubtotal", a => a.CountASubtotal)
-                           .AddAttribute(0, "avgSubtotal", a => a.AverageSubtotal)
-                           .AddAttribute(0, "maxSubtotal", a => a.MaxSubtotal)
-                           .AddAttribute(0, "minSubtotal", a => a.MinSubtotal)
-                           .AddAttribute(0, "productSubtotal", a => a.ApplyProductInSubtotal)
-                           .AddAttribute(0, "countSubtotal", a => a.CountSubtotal)
-                           .AddAttribute(0, "stdDevSubtotal", a => a.ApplyStandardDeviationInSubtotal)
-                           .AddAttribute(0, "stdDevPSubtotal", a => a.ApplyStandardDeviationPInSubtotal)
-                           .AddAttribute(0, "varSubtotal", a => a.ApplyVarianceInSubtotal)
-                           .AddAttribute(0, "varPSubtotal", a => a.ApplyVariancePInSubtotal);
+.AddAttribute(0, "field", a => a.Field)
+.AddAttribute(0, "count", a => a.Count)
+.AddAttribute(0, "selected", a => a.Selected)
+.AddAttribute(0, "byPosition", a => a.ByPosition)
+.AddAttribute(0, "relative", a => a.Relative)
+.AddAttribute(0, "defaultSubtotal", a => a.DefaultSubtotal)
+.AddAttribute(0, "sumSubtotal", a => a.SumSubtotal)
+.AddAttribute(0, "countASubtotal", a => a.CountASubtotal)
+.AddAttribute(0, "avgSubtotal", a => a.AverageSubtotal)
+.AddAttribute(0, "maxSubtotal", a => a.MaxSubtotal)
+.AddAttribute(0, "minSubtotal", a => a.MinSubtotal)
+.AddAttribute(0, "productSubtotal", a => a.ApplyProductInSubtotal)
+.AddAttribute(0, "countSubtotal", a => a.CountSubtotal)
+.AddAttribute(0, "stdDevSubtotal", a => a.ApplyStandardDeviationInSubtotal)
+.AddAttribute(0, "stdDevPSubtotal", a => a.ApplyStandardDeviationPInSubtotal)
+.AddAttribute(0, "varSubtotal", a => a.ApplyVarianceInSubtotal)
+.AddAttribute(0, "varPSubtotal", a => a.ApplyVariancePInSubtotal);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -15812,8 +16002,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(QueryTableField))]
-    [SchemaAttr(22, "queryTableFields")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class QueryTableFields : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15860,8 +16048,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "queryTableFields");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<QueryTableFields>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -15887,8 +16077,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DeletedField))]
-    [SchemaAttr(22, "queryTableDeletedFields")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class QueryTableDeletedFields : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15935,8 +16123,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "queryTableDeletedFields");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<QueryTableDeletedFields>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -15955,8 +16145,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:deletedField.</para>
     /// </summary>
-    [SchemaAttr(22, "deletedField")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DeletedField : OpenXmlLeafElement
     {
         /// <summary>
@@ -15979,11 +16167,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "deletedField");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DeletedField>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -16008,8 +16198,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "queryTableField")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class QueryTableField : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16116,17 +16304,19 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "queryTableField");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<QueryTableField>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "name", a => a.Name)
-                           .AddAttribute(0, "dataBound", a => a.DataBound)
-                           .AddAttribute(0, "rowNumbers", a => a.RowNumbers)
-                           .AddAttribute(0, "fillFormulas", a => a.FillFormulas)
-                           .AddAttribute(0, "clipped", a => a.Clipped)
-                           .AddAttribute(0, "tableColumnId", a => a.TableColumnId);
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "name", a => a.Name)
+.AddAttribute(0, "dataBound", a => a.DataBound)
+.AddAttribute(0, "rowNumbers", a => a.RowNumbers)
+.AddAttribute(0, "fillFormulas", a => a.FillFormulas)
+.AddAttribute(0, "clipped", a => a.Clipped)
+.AddAttribute(0, "tableColumnId", a => a.TableColumnId);
         }
 
         /// <summary>
@@ -16178,8 +16368,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description>PhoneticProperties &lt;x:phoneticPr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(22, "si")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SharedStringItem : RstType
     {
         /// <summary>
@@ -16213,6 +16401,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "si");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Text), 0, 1),
@@ -16241,8 +16436,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description>PhoneticProperties &lt;x:phoneticPr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(22, "is")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class InlineString : RstType
     {
         /// <summary>
@@ -16276,6 +16469,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "is");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Text), 0, 1),
@@ -16304,8 +16504,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description>PhoneticProperties &lt;x:phoneticPr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(22, "text")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CommentText : RstType
     {
         /// <summary>
@@ -16337,6 +16535,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public CommentText(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "text");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -16404,6 +16609,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+        }
+
         /// <summary>
         /// <para>Text.</para>
         /// <para>Represents the following element tag in the schema: x:t.</para>
@@ -16423,8 +16633,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:b.</para>
     /// </summary>
-    [SchemaAttr(22, "b")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Bold : BooleanPropertyType
     {
         /// <summary>
@@ -16432,6 +16640,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </summary>
         public Bold() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "b");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -16443,8 +16658,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:i.</para>
     /// </summary>
-    [SchemaAttr(22, "i")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Italic : BooleanPropertyType
     {
         /// <summary>
@@ -16452,6 +16665,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </summary>
         public Italic() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "i");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -16463,8 +16683,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:strike.</para>
     /// </summary>
-    [SchemaAttr(22, "strike")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Strike : BooleanPropertyType
     {
         /// <summary>
@@ -16472,6 +16690,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </summary>
         public Strike() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "strike");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -16483,8 +16708,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:condense.</para>
     /// </summary>
-    [SchemaAttr(22, "condense")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Condense : BooleanPropertyType
     {
         /// <summary>
@@ -16492,6 +16715,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </summary>
         public Condense() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "condense");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -16503,8 +16733,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:extend.</para>
     /// </summary>
-    [SchemaAttr(22, "extend")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Extend : BooleanPropertyType
     {
         /// <summary>
@@ -16512,6 +16740,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </summary>
         public Extend() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "extend");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -16523,8 +16758,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:outline.</para>
     /// </summary>
-    [SchemaAttr(22, "outline")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Outline : BooleanPropertyType
     {
         /// <summary>
@@ -16532,6 +16765,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </summary>
         public Outline() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "outline");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -16543,8 +16783,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:shadow.</para>
     /// </summary>
-    [SchemaAttr(22, "shadow")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Shadow : BooleanPropertyType
     {
         /// <summary>
@@ -16552,6 +16790,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </summary>
         public Shadow() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "shadow");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -16595,8 +16840,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:u.</para>
     /// </summary>
-    [SchemaAttr(22, "u")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Underline : OpenXmlLeafElement
     {
         /// <summary>
@@ -16619,8 +16862,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "u");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Underline>()
-                           .AddAttribute(0, "val", a => a.Val);
+.AddAttribute(0, "val", a => a.Val);
         }
 
         /// <inheritdoc/>
@@ -16632,8 +16877,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:vertAlign.</para>
     /// </summary>
-    [SchemaAttr(22, "vertAlign")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VerticalTextAlignment : OpenXmlLeafElement
     {
         /// <summary>
@@ -16656,11 +16899,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "vertAlign");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<VerticalTextAlignment>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -16672,8 +16917,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sz.</para>
     /// </summary>
-    [SchemaAttr(22, "sz")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FontSize : OpenXmlLeafElement
     {
         /// <summary>
@@ -16696,11 +16939,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "sz");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<FontSize>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -16718,8 +16963,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:color.</para>
     /// </summary>
-    [SchemaAttr(22, "color")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Color : ColorType
     {
         /// <summary>
@@ -16727,6 +16970,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </summary>
         public Color() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "color");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -16746,8 +16996,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:tabColor.</para>
     /// </summary>
-    [SchemaAttr(22, "tabColor")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TabColor : ColorType
     {
         /// <summary>
@@ -16755,6 +17003,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </summary>
         public TabColor() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "tabColor");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -16773,8 +17028,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:fgColor.</para>
     /// </summary>
-    [SchemaAttr(22, "fgColor")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ForegroundColor : ColorType
     {
         /// <summary>
@@ -16782,6 +17035,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </summary>
         public ForegroundColor() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "fgColor");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -16799,8 +17059,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:bgColor.</para>
     /// </summary>
-    [SchemaAttr(22, "bgColor")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BackgroundColor : ColorType
     {
         /// <summary>
@@ -16808,6 +17066,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </summary>
         public BackgroundColor() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "bgColor");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -16904,8 +17169,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rFont.</para>
     /// </summary>
-    [SchemaAttr(22, "rFont")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RunFont : OpenXmlLeafElement
     {
         /// <summary>
@@ -16928,11 +17191,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "rFont");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RunFont>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -16950,8 +17215,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:family.</para>
     /// </summary>
-    [SchemaAttr(22, "family")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FontFamily : InternationalPropertyType
     {
         /// <summary>
@@ -16959,6 +17222,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </summary>
         public FontFamily() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "family");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -16976,8 +17246,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:charset.</para>
     /// </summary>
-    [SchemaAttr(22, "charset")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RunPropertyCharSet : InternationalPropertyType
     {
         /// <summary>
@@ -16985,6 +17253,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </summary>
         public RunPropertyCharSet() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "charset");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -17037,8 +17312,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:scheme.</para>
     /// </summary>
-    [SchemaAttr(22, "scheme")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FontScheme : OpenXmlLeafElement
     {
         /// <summary>
@@ -17061,11 +17334,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "scheme");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<FontScheme>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -17112,8 +17387,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(FontFamily))]
     [ChildElementInfo(typeof(RunPropertyCharSet))]
     [ChildElementInfo(typeof(FontScheme))]
-    [SchemaAttr(22, "rPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RunProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17145,6 +17418,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public RunProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "rPr");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 0)
@@ -17186,8 +17466,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(RunProperties))]
     [ChildElementInfo(typeof(Text))]
-    [SchemaAttr(22, "r")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Run : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17219,6 +17497,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Run(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "r");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -17271,8 +17556,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Text))]
-    [SchemaAttr(22, "rPh")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PhoneticRun : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17329,15 +17612,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "rPh");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PhoneticRun>()
-                           .AddAttribute(0, "sb", a => a.BaseTextStartIndex, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "eb", a => a.EndingBaseIndex, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "sb", a => a.BaseTextStartIndex, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "eb", a => a.EndingBaseIndex, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -17375,8 +17660,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:phoneticPr.</para>
     /// </summary>
-    [SchemaAttr(22, "phoneticPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PhoneticProperties : OpenXmlLeafElement
     {
         /// <summary>
@@ -17419,13 +17702,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "phoneticPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PhoneticProperties>()
-                           .AddAttribute(0, "fontId", a => a.FontId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "type", a => a.Type)
-                           .AddAttribute(0, "alignment", a => a.Alignment);
+.AddAttribute(0, "fontId", a => a.FontId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "type", a => a.Type)
+.AddAttribute(0, "alignment", a => a.Alignment);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -17454,8 +17739,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(SheetIdMap))]
     [ChildElementInfo(typeof(ReviewedList))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "header")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Header : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17565,30 +17848,32 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "header");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Header>()
-                           .AddAttribute(0, "guid", a => a.Guid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "dateTime", a => a.DateTime, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "maxSheetId", a => a.MaxSheetId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "userName", a => a.UserName, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "minRId", a => a.MinRevisionId)
-                           .AddAttribute(0, "maxRId", a => a.MaxRevisionId);
+.AddAttribute(0, "guid", a => a.Guid, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "dateTime", a => a.DateTime, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "maxSheetId", a => a.MaxSheetId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "userName", a => a.UserName, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "minRId", a => a.MinRevisionId)
+.AddAttribute(0, "maxRId", a => a.MaxRevisionId);
         }
 
         /// <summary>
@@ -17667,8 +17952,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(Undo))]
     [ChildElementInfo(typeof(RevisionCellChange))]
     [ChildElementInfo(typeof(RevisionFormat))]
-    [SchemaAttr(22, "rrc")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RevisionRowColumn : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17785,27 +18068,29 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "rrc");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RevisionRowColumn>()
-                           .AddAttribute(0, "rId", a => a.RevisionId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "ua", a => a.Ua)
-                           .AddAttribute(0, "ra", a => a.Ra)
-                           .AddAttribute(0, "sId", a => a.SheetId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "eol", a => a.EndOfList)
-                           .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "action", a => a.Action, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "edge", a => a.Edge);
+.AddAttribute(0, "rId", a => a.RevisionId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "ua", a => a.Ua)
+.AddAttribute(0, "ra", a => a.Ra)
+.AddAttribute(0, "sId", a => a.SheetId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "eol", a => a.EndOfList)
+.AddAttribute(0, "ref", a => a.Reference, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "action", a => a.Action, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "edge", a => a.Edge);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -17843,8 +18128,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(Undo))]
     [ChildElementInfo(typeof(RevisionCellChange))]
     [ChildElementInfo(typeof(RevisionFormat))]
-    [SchemaAttr(22, "rm")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RevisionMove : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17951,26 +18234,28 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "rm");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RevisionMove>()
-                           .AddAttribute(0, "rId", a => a.RevisionId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "ua", a => a.Ua)
-                           .AddAttribute(0, "ra", a => a.Ra)
-                           .AddAttribute(0, "sheetId", a => a.SheetId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "source", a => a.Source, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "destination", a => a.Destination, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "sourceSheetId", a => a.SourceSheetId);
+.AddAttribute(0, "rId", a => a.RevisionId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "ua", a => a.Ua)
+.AddAttribute(0, "ra", a => a.Ra)
+.AddAttribute(0, "sheetId", a => a.SheetId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "source", a => a.Source, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "destination", a => a.Destination, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "sourceSheetId", a => a.SourceSheetId);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -17998,8 +18283,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rcv.</para>
     /// </summary>
-    [SchemaAttr(22, "rcv")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RevisionCustomView : OpenXmlLeafElement
     {
         /// <summary>
@@ -18032,16 +18315,18 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "rcv");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RevisionCustomView>()
-                           .AddAttribute(0, "guid", a => a.Guid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "action", a => a.Action, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "guid", a => a.Guid, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "action", a => a.Action, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -18060,8 +18345,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "rsnm")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RevisionSheetName : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18158,25 +18441,27 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "rsnm");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RevisionSheetName>()
-                           .AddAttribute(0, "rId", a => a.RevisionId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "ua", a => a.Ua)
-                           .AddAttribute(0, "ra", a => a.Ra)
-                           .AddAttribute(0, "sheetId", a => a.SheetId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "oldName", a => a.OldName, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "newName", a => a.NewName, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "rId", a => a.RevisionId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "ua", a => a.Ua)
+.AddAttribute(0, "ra", a => a.Ra)
+.AddAttribute(0, "sheetId", a => a.SheetId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "oldName", a => a.OldName, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "newName", a => a.NewName, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -18214,8 +18499,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:ris.</para>
     /// </summary>
-    [SchemaAttr(22, "ris")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RevisionInsertSheet : OpenXmlLeafElement
     {
         /// <summary>
@@ -18288,25 +18571,27 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "ris");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RevisionInsertSheet>()
-                           .AddAttribute(0, "rId", a => a.RevisionId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "ua", a => a.Ua)
-                           .AddAttribute(0, "ra", a => a.Ra)
-                           .AddAttribute(0, "sheetId", a => a.SheetId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "sheetPosition", a => a.SheetPosition, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "rId", a => a.RevisionId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "ua", a => a.Ua)
+.AddAttribute(0, "ra", a => a.Ra)
+.AddAttribute(0, "sheetId", a => a.SheetId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "sheetPosition", a => a.SheetPosition, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -18340,8 +18625,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(OldDifferentialFormat))]
     [ChildElementInfo(typeof(NewDifferentialFormat))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "rcc")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RevisionCellChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18518,27 +18801,29 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "rcc");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RevisionCellChange>()
-                           .AddAttribute(0, "rId", a => a.RevisionId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "ua", a => a.Ua)
-                           .AddAttribute(0, "ra", a => a.Ra)
-                           .AddAttribute(0, "sId", a => a.SheetId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "odxf", a => a.OldFormatting)
-                           .AddAttribute(0, "xfDxf", a => a.RowColumnFormattingAffected)
-                           .AddAttribute(0, "s", a => a.StyleRevision)
-                           .AddAttribute(0, "dxf", a => a.Format)
-                           .AddAttribute(0, "numFmtId", a => a.NumberFormatId)
-                           .AddAttribute(0, "quotePrefix", a => a.QuotePrefix)
-                           .AddAttribute(0, "oldQuotePrefix", a => a.OldQuotePrefix)
-                           .AddAttribute(0, "ph", a => a.HasPhoneticText)
-                           .AddAttribute(0, "oldPh", a => a.OldPhoneticText)
-                           .AddAttribute(0, "endOfListFormulaUpdate", a => a.EndOfListFormulaUpdate);
+.AddAttribute(0, "rId", a => a.RevisionId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "ua", a => a.Ua)
+.AddAttribute(0, "ra", a => a.Ra)
+.AddAttribute(0, "sId", a => a.SheetId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "odxf", a => a.OldFormatting)
+.AddAttribute(0, "xfDxf", a => a.RowColumnFormattingAffected)
+.AddAttribute(0, "s", a => a.StyleRevision)
+.AddAttribute(0, "dxf", a => a.Format)
+.AddAttribute(0, "numFmtId", a => a.NumberFormatId)
+.AddAttribute(0, "quotePrefix", a => a.QuotePrefix)
+.AddAttribute(0, "oldQuotePrefix", a => a.OldQuotePrefix)
+.AddAttribute(0, "ph", a => a.HasPhoneticText)
+.AddAttribute(0, "oldPh", a => a.OldPhoneticText)
+.AddAttribute(0, "endOfListFormulaUpdate", a => a.EndOfListFormulaUpdate);
         }
 
         /// <summary>
@@ -18641,8 +18926,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(DifferentialFormat))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "rfmt")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RevisionFormat : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18739,19 +19022,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "rfmt");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RevisionFormat>()
-                           .AddAttribute(0, "sheetId", a => a.SheetId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "xfDxf", a => a.RowOrColumnAffected)
-                           .AddAttribute(0, "s", a => a.StyleAffected)
-                           .AddAttribute(0, "sqref", a => a.SequenceOfReferences, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "start", a => a.Start)
-                           .AddAttribute(0, "length", a => a.Length);
+.AddAttribute(0, "sheetId", a => a.SheetId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "xfDxf", a => a.RowOrColumnAffected)
+.AddAttribute(0, "s", a => a.StyleAffected)
+.AddAttribute(0, "sqref", a => a.SequenceOfReferences, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "start", a => a.Start)
+.AddAttribute(0, "length", a => a.Length);
         }
 
         /// <summary>
@@ -18803,8 +19088,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:raf.</para>
     /// </summary>
-    [SchemaAttr(22, "raf")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RevisionAutoFormat : OpenXmlLeafElement
     {
         /// <summary>
@@ -18907,22 +19190,24 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "raf");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RevisionAutoFormat>()
-                           .AddAttribute(0, "sheetId", a => a.SheetId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "autoFormatId", a => a.AutoFormatId)
-                           .AddAttribute(0, "applyNumberFormats", a => a.ApplyNumberFormats)
-                           .AddAttribute(0, "applyBorderFormats", a => a.ApplyBorderFormats)
-                           .AddAttribute(0, "applyFontFormats", a => a.ApplyFontFormats)
-                           .AddAttribute(0, "applyPatternFormats", a => a.ApplyPatternFormats)
-                           .AddAttribute(0, "applyAlignmentFormats", a => a.ApplyAlignmentFormats)
-                           .AddAttribute(0, "applyWidthHeightFormats", a => a.ApplyWidthHeightFormats)
-                           .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "sheetId", a => a.SheetId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "autoFormatId", a => a.AutoFormatId)
+.AddAttribute(0, "applyNumberFormats", a => a.ApplyNumberFormats)
+.AddAttribute(0, "applyBorderFormats", a => a.ApplyBorderFormats)
+.AddAttribute(0, "applyFontFormats", a => a.ApplyFontFormats)
+.AddAttribute(0, "applyPatternFormats", a => a.ApplyPatternFormats)
+.AddAttribute(0, "applyAlignmentFormats", a => a.ApplyAlignmentFormats)
+.AddAttribute(0, "applyWidthHeightFormats", a => a.ApplyWidthHeightFormats)
+.AddAttribute(0, "ref", a => a.Reference, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -18952,8 +19237,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(Formula))]
     [ChildElementInfo(typeof(OldFormula))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "rdn")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RevisionDefinedName : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19230,37 +19513,39 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "rdn");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RevisionDefinedName>()
-                           .AddAttribute(0, "rId", a => a.RevisionId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "ua", a => a.Ua)
-                           .AddAttribute(0, "ra", a => a.Ra)
-                           .AddAttribute(0, "localSheetId", a => a.LocalSheetId)
-                           .AddAttribute(0, "customView", a => a.CustomView)
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "function", a => a.Function)
-                           .AddAttribute(0, "oldFunction", a => a.OldFunction)
-                           .AddAttribute(0, "functionGroupId", a => a.FunctionGroupId)
-                           .AddAttribute(0, "oldFunctionGroupId", a => a.OldFunctionGroupId)
-                           .AddAttribute(0, "shortcutKey", a => a.ShortcutKey)
-                           .AddAttribute(0, "oldShortcutKey", a => a.OldShortcutKey)
-                           .AddAttribute(0, "hidden", a => a.Hidden)
-                           .AddAttribute(0, "oldHidden", a => a.OldHidden)
-                           .AddAttribute(0, "customMenu", a => a.CustomMenu)
-                           .AddAttribute(0, "oldCustomMenu", a => a.OldCustomMenu)
-                           .AddAttribute(0, "description", a => a.Description)
-                           .AddAttribute(0, "oldDescription", a => a.OldDescription)
-                           .AddAttribute(0, "help", a => a.Help)
-                           .AddAttribute(0, "oldHelp", a => a.OldHelp)
-                           .AddAttribute(0, "statusBar", a => a.StatusBar)
-                           .AddAttribute(0, "oldStatusBar", a => a.OldStatusBar)
-                           .AddAttribute(0, "comment", a => a.Comment)
-                           .AddAttribute(0, "oldComment", a => a.OldComment);
+.AddAttribute(0, "rId", a => a.RevisionId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "ua", a => a.Ua)
+.AddAttribute(0, "ra", a => a.Ra)
+.AddAttribute(0, "localSheetId", a => a.LocalSheetId)
+.AddAttribute(0, "customView", a => a.CustomView)
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "function", a => a.Function)
+.AddAttribute(0, "oldFunction", a => a.OldFunction)
+.AddAttribute(0, "functionGroupId", a => a.FunctionGroupId)
+.AddAttribute(0, "oldFunctionGroupId", a => a.OldFunctionGroupId)
+.AddAttribute(0, "shortcutKey", a => a.ShortcutKey)
+.AddAttribute(0, "oldShortcutKey", a => a.OldShortcutKey)
+.AddAttribute(0, "hidden", a => a.Hidden)
+.AddAttribute(0, "oldHidden", a => a.OldHidden)
+.AddAttribute(0, "customMenu", a => a.CustomMenu)
+.AddAttribute(0, "oldCustomMenu", a => a.OldCustomMenu)
+.AddAttribute(0, "description", a => a.Description)
+.AddAttribute(0, "oldDescription", a => a.OldDescription)
+.AddAttribute(0, "help", a => a.Help)
+.AddAttribute(0, "oldHelp", a => a.OldHelp)
+.AddAttribute(0, "statusBar", a => a.StatusBar)
+.AddAttribute(0, "oldStatusBar", a => a.OldStatusBar)
+.AddAttribute(0, "comment", a => a.Comment)
+.AddAttribute(0, "oldComment", a => a.OldComment);
         }
 
         /// <summary>
@@ -19340,8 +19625,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rcmt.</para>
     /// </summary>
-    [SchemaAttr(22, "rcmt")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RevisionComment : OpenXmlLeafElement
     {
         /// <summary>
@@ -19464,31 +19747,33 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "rcmt");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RevisionComment>()
-                           .AddAttribute(0, "sheetId", a => a.SheetId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "cell", a => a.Cell, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "guid", a => a.Guid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "action", a => a.Action)
-                           .AddAttribute(0, "alwaysShow", a => a.AlwaysShow)
-                           .AddAttribute(0, "old", a => a.Old)
-                           .AddAttribute(0, "hiddenRow", a => a.HiddenRow)
-                           .AddAttribute(0, "hiddenColumn", a => a.HiddenColumn)
-                           .AddAttribute(0, "author", a => a.Author, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "oldLength", a => a.OldLength)
-                           .AddAttribute(0, "newLength", a => a.NewLength);
+.AddAttribute(0, "sheetId", a => a.SheetId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "cell", a => a.Cell, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "guid", a => a.Guid, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "action", a => a.Action)
+.AddAttribute(0, "alwaysShow", a => a.AlwaysShow)
+.AddAttribute(0, "old", a => a.Old)
+.AddAttribute(0, "hiddenRow", a => a.HiddenRow)
+.AddAttribute(0, "hiddenColumn", a => a.HiddenColumn)
+.AddAttribute(0, "author", a => a.Author, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "oldLength", a => a.OldLength)
+.AddAttribute(0, "newLength", a => a.NewLength);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -19506,8 +19791,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rqt.</para>
     /// </summary>
-    [SchemaAttr(22, "rqt")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RevisionQueryTable : OpenXmlLeafElement
     {
         /// <summary>
@@ -19550,19 +19833,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "rqt");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RevisionQueryTable>()
-                           .AddAttribute(0, "sheetId", a => a.SheetId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "fieldId", a => a.FieldId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "sheetId", a => a.SheetId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "ref", a => a.Reference, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "fieldId", a => a.FieldId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -19574,8 +19859,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rcft.</para>
     /// </summary>
-    [SchemaAttr(22, "rcft")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RevisionConflict : OpenXmlLeafElement
     {
         /// <summary>
@@ -19628,14 +19911,16 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "rcft");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RevisionConflict>()
-                           .AddAttribute(0, "rId", a => a.RevisionId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "ua", a => a.Ua)
-                           .AddAttribute(0, "ra", a => a.Ra)
-                           .AddAttribute(0, "sheetId", a => a.SheetId);
+.AddAttribute(0, "rId", a => a.RevisionId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "ua", a => a.Ua)
+.AddAttribute(0, "ra", a => a.Ra)
+.AddAttribute(0, "sheetId", a => a.SheetId);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -19660,8 +19945,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(SheetId))]
-    [SchemaAttr(22, "sheetIdMap")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SheetIdMap : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19708,8 +19991,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "sheetIdMap");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SheetIdMap>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -19735,8 +20020,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Reviewed))]
-    [SchemaAttr(22, "reviewedList")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ReviewedList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19783,8 +20066,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "reviewedList");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ReviewedList>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -19803,8 +20088,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:reviewed.</para>
     /// </summary>
-    [SchemaAttr(22, "reviewed")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Reviewed : OpenXmlLeafElement
     {
         /// <summary>
@@ -19827,11 +20110,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "reviewed");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Reviewed>()
-                           .AddAttribute(0, "rId", a => a.RevisionId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "rId", a => a.RevisionId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -19849,8 +20134,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:undo.</para>
     /// </summary>
-    [SchemaAttr(22, "undo")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Undo : OpenXmlLeafElement
     {
         /// <summary>
@@ -19973,27 +20256,29 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "undo");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Undo>()
-                           .AddAttribute(0, "index", a => a.Index, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "exp", a => a.Expression, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "ref3D", a => a.Reference3D)
-                           .AddAttribute(0, "array", a => a.Array)
-                           .AddAttribute(0, "v", a => a.Val)
-                           .AddAttribute(0, "nf", a => a.DefinedNameFormula)
-                           .AddAttribute(0, "cs", a => a.CrossSheetMove)
-                           .AddAttribute(0, "dr", a => a.DeletedRange, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "dn", a => a.DefinedName)
-                           .AddAttribute(0, "r", a => a.CellReference)
-                           .AddAttribute(0, "sId", a => a.SheetId);
+.AddAttribute(0, "index", a => a.Index, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "exp", a => a.Expression, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "ref3D", a => a.Reference3D)
+.AddAttribute(0, "array", a => a.Array)
+.AddAttribute(0, "v", a => a.Val)
+.AddAttribute(0, "nf", a => a.DefinedNameFormula)
+.AddAttribute(0, "cs", a => a.CrossSheetMove)
+.AddAttribute(0, "dr", a => a.DeletedRange, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "dn", a => a.DefinedName)
+.AddAttribute(0, "r", a => a.CellReference)
+.AddAttribute(0, "sId", a => a.SheetId);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -20023,8 +20308,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description>ExtensionList &lt;x:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(22, "oc")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OldCell : CellType
     {
         /// <summary>
@@ -20056,6 +20339,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public OldCell(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "oc");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -20094,8 +20384,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description>ExtensionList &lt;x:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(22, "c")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Cell : CellType
     {
         /// <summary>
@@ -20127,6 +20415,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Cell(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "c");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -20348,8 +20643,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(CellValue))]
     [ChildElementInfo(typeof(InlineString))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "nc")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NewCell : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20446,16 +20739,18 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "nc");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<NewCell>()
-                           .AddAttribute(0, "r", a => a.CellReference, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "s", a => a.StyleIndex)
-                           .AddAttribute(0, "t", a => a.DataType)
-                           .AddAttribute(0, "cm", a => a.CellMetaIndex)
-                           .AddAttribute(0, "vm", a => a.ValueMetaIndex)
-                           .AddAttribute(0, "ph", a => a.ShowPhonetic);
+.AddAttribute(0, "r", a => a.CellReference, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "s", a => a.StyleIndex)
+.AddAttribute(0, "t", a => a.DataType)
+.AddAttribute(0, "cm", a => a.CellMetaIndex)
+.AddAttribute(0, "vm", a => a.ValueMetaIndex)
+.AddAttribute(0, "ph", a => a.ShowPhonetic);
         }
 
         /// <summary>
@@ -20549,8 +20844,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description>ExtensionList &lt;x:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(22, "odxf")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OldDifferentialFormat : DifferentialFormatType
     {
         /// <summary>
@@ -20582,6 +20875,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public OldDifferentialFormat(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "odxf");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -20618,8 +20918,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description>ExtensionList &lt;x:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(22, "ndxf")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NewDifferentialFormat : DifferentialFormatType
     {
         /// <summary>
@@ -20651,6 +20949,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NewDifferentialFormat(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "ndxf");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -20687,8 +20992,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description>ExtensionList &lt;x:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(22, "dxf")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DifferentialFormat : DifferentialFormatType
     {
         /// <summary>
@@ -20720,6 +21023,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DifferentialFormat(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "dxf");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -20794,6 +21104,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         protected DifferentialFormatType(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
         }
 
         /// <summary>
@@ -20893,8 +21208,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sheetId.</para>
     /// </summary>
-    [SchemaAttr(22, "sheetId")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SheetId : OpenXmlLeafElement
     {
         /// <summary>
@@ -20917,11 +21230,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "sheetId");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SheetId>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -20939,8 +21254,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:f.</para>
     /// </summary>
-    [SchemaAttr(22, "f")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CellFormula : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -21099,20 +21412,22 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "f");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CellFormula>()
-                           .AddAttribute(0, "t", a => a.FormulaType)
-                           .AddAttribute(0, "aca", a => a.AlwaysCalculateArray)
-                           .AddAttribute(0, "ref", a => a.Reference)
-                           .AddAttribute(0, "dt2D", a => a.DataTable2D)
-                           .AddAttribute(0, "dtr", a => a.DataTableRow)
-                           .AddAttribute(0, "del1", a => a.Input1Deleted)
-                           .AddAttribute(0, "del2", a => a.Input2Deleted)
-                           .AddAttribute(0, "r1", a => a.R1)
-                           .AddAttribute(0, "r2", a => a.R2)
-                           .AddAttribute(0, "ca", a => a.CalculateCell)
-                           .AddAttribute(0, "si", a => a.SharedIndex)
-                           .AddAttribute(0, "bx", a => a.Bx)
-                           .AddAttribute(1, "space", a => a.Space);
+.AddAttribute(0, "t", a => a.FormulaType)
+.AddAttribute(0, "aca", a => a.AlwaysCalculateArray)
+.AddAttribute(0, "ref", a => a.Reference)
+.AddAttribute(0, "dt2D", a => a.DataTable2D)
+.AddAttribute(0, "dtr", a => a.DataTableRow)
+.AddAttribute(0, "del1", a => a.Input1Deleted)
+.AddAttribute(0, "del2", a => a.Input2Deleted)
+.AddAttribute(0, "r1", a => a.R1)
+.AddAttribute(0, "r2", a => a.R2)
+.AddAttribute(0, "ca", a => a.CalculateCell)
+.AddAttribute(0, "si", a => a.SharedIndex)
+.AddAttribute(0, "bx", a => a.Bx)
+.AddAttribute(1, "space", a => a.Space);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -21138,8 +21453,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "userInfo")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class UserInfo : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21216,24 +21529,26 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "userInfo");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<UserInfo>()
-                           .AddAttribute(0, "guid", a => a.Guid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "dateTime", a => a.DateTime, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "guid", a => a.Guid, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "dateTime", a => a.DateTime, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -21274,8 +21589,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(Cell))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "row")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Row : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21445,23 +21758,25 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "row");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Row>()
-                           .AddAttribute(0, "r", a => a.RowIndex)
-                           .AddAttribute(0, "spans", a => a.Spans)
-                           .AddAttribute(0, "s", a => a.StyleIndex)
-                           .AddAttribute(0, "customFormat", a => a.CustomFormat)
-                           .AddAttribute(0, "ht", a => a.Height)
-                           .AddAttribute(0, "hidden", a => a.Hidden)
-                           .AddAttribute(0, "customHeight", a => a.CustomHeight)
-                           .AddAttribute(0, "outlineLevel", a => a.OutlineLevel)
-                           .AddAttribute(0, "collapsed", a => a.Collapsed)
-                           .AddAttribute(0, "thickTop", a => a.ThickTop)
-                           .AddAttribute(0, "thickBot", a => a.ThickBot)
-                           .AddAttribute(0, "ph", a => a.ShowPhonetic)
-                           .AddAttribute(55, "dyDescent", a => a.DyDescent, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-                           });
+.AddAttribute(0, "r", a => a.RowIndex)
+.AddAttribute(0, "spans", a => a.Spans)
+.AddAttribute(0, "s", a => a.StyleIndex)
+.AddAttribute(0, "customFormat", a => a.CustomFormat)
+.AddAttribute(0, "ht", a => a.Height)
+.AddAttribute(0, "hidden", a => a.Hidden)
+.AddAttribute(0, "customHeight", a => a.CustomHeight)
+.AddAttribute(0, "outlineLevel", a => a.OutlineLevel)
+.AddAttribute(0, "collapsed", a => a.Collapsed)
+.AddAttribute(0, "thickTop", a => a.ThickTop)
+.AddAttribute(0, "thickBot", a => a.ThickBot)
+.AddAttribute(0, "ph", a => a.ShowPhonetic)
+.AddAttribute(55, "dyDescent", a => a.DyDescent, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -21489,8 +21804,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:col.</para>
     /// </summary>
-    [SchemaAttr(22, "col")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Column : OpenXmlLeafElement
     {
         /// <summary>
@@ -21603,23 +21916,25 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "col");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Column>()
-                           .AddAttribute(0, "min", a => a.Min, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "max", a => a.Max, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "width", a => a.Width)
-                           .AddAttribute(0, "style", a => a.Style)
-                           .AddAttribute(0, "hidden", a => a.Hidden)
-                           .AddAttribute(0, "bestFit", a => a.BestFit)
-                           .AddAttribute(0, "customWidth", a => a.CustomWidth)
-                           .AddAttribute(0, "phonetic", a => a.Phonetic)
-                           .AddAttribute(0, "outlineLevel", a => a.OutlineLevel)
-                           .AddAttribute(0, "collapsed", a => a.Collapsed);
+.AddAttribute(0, "min", a => a.Min, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "max", a => a.Max, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "width", a => a.Width)
+.AddAttribute(0, "style", a => a.Style)
+.AddAttribute(0, "hidden", a => a.Hidden)
+.AddAttribute(0, "bestFit", a => a.BestFit)
+.AddAttribute(0, "customWidth", a => a.CustomWidth)
+.AddAttribute(0, "phonetic", a => a.Phonetic)
+.AddAttribute(0, "outlineLevel", a => a.OutlineLevel)
+.AddAttribute(0, "collapsed", a => a.Collapsed);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -21643,8 +21958,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:outlinePr.</para>
     /// </summary>
-    [SchemaAttr(22, "outlinePr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OutlineProperties : OpenXmlLeafElement
     {
         /// <summary>
@@ -21697,11 +22010,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "outlinePr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<OutlineProperties>()
-                           .AddAttribute(0, "applyStyles", a => a.ApplyStyles)
-                           .AddAttribute(0, "summaryBelow", a => a.SummaryBelow)
-                           .AddAttribute(0, "summaryRight", a => a.SummaryRight)
-                           .AddAttribute(0, "showOutlineSymbols", a => a.ShowOutlineSymbols);
+.AddAttribute(0, "applyStyles", a => a.ApplyStyles)
+.AddAttribute(0, "summaryBelow", a => a.SummaryBelow)
+.AddAttribute(0, "summaryRight", a => a.SummaryRight)
+.AddAttribute(0, "showOutlineSymbols", a => a.ShowOutlineSymbols);
         }
 
         /// <inheritdoc/>
@@ -21713,8 +22028,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:pageSetUpPr.</para>
     /// </summary>
-    [SchemaAttr(22, "pageSetUpPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PageSetupProperties : OpenXmlLeafElement
     {
         /// <summary>
@@ -21747,9 +22060,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "pageSetUpPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PageSetupProperties>()
-                           .AddAttribute(0, "autoPageBreaks", a => a.AutoPageBreaks)
-                           .AddAttribute(0, "fitToPage", a => a.FitToPage);
+.AddAttribute(0, "autoPageBreaks", a => a.AutoPageBreaks)
+.AddAttribute(0, "fitToPage", a => a.FitToPage);
         }
 
         /// <inheritdoc/>
@@ -21761,8 +22076,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:pane.</para>
     /// </summary>
-    [SchemaAttr(22, "pane")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Pane : OpenXmlLeafElement
     {
         /// <summary>
@@ -21825,12 +22138,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "pane");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Pane>()
-                           .AddAttribute(0, "xSplit", a => a.HorizontalSplit)
-                           .AddAttribute(0, "ySplit", a => a.VerticalSplit)
-                           .AddAttribute(0, "topLeftCell", a => a.TopLeftCell)
-                           .AddAttribute(0, "activePane", a => a.ActivePane)
-                           .AddAttribute(0, "state", a => a.State);
+.AddAttribute(0, "xSplit", a => a.HorizontalSplit)
+.AddAttribute(0, "ySplit", a => a.VerticalSplit)
+.AddAttribute(0, "topLeftCell", a => a.TopLeftCell)
+.AddAttribute(0, "activePane", a => a.ActivePane)
+.AddAttribute(0, "state", a => a.State);
         }
 
         /// <inheritdoc/>
@@ -21842,8 +22157,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:selection.</para>
     /// </summary>
-    [SchemaAttr(22, "selection")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Selection : OpenXmlLeafElement
     {
         /// <summary>
@@ -21896,11 +22209,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "selection");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Selection>()
-                           .AddAttribute(0, "pane", a => a.Pane)
-                           .AddAttribute(0, "activeCell", a => a.ActiveCell)
-                           .AddAttribute(0, "activeCellId", a => a.ActiveCellId)
-                           .AddAttribute(0, "sqref", a => a.SequenceOfReferences);
+.AddAttribute(0, "pane", a => a.Pane)
+.AddAttribute(0, "activeCell", a => a.ActiveCell)
+.AddAttribute(0, "activeCellId", a => a.ActiveCellId)
+.AddAttribute(0, "sqref", a => a.SequenceOfReferences);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -21925,8 +22240,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(PivotArea))]
-    [SchemaAttr(22, "pivotSelection")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PivotSelection : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22136,27 +22449,29 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "pivotSelection");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PivotSelection>()
-                           .AddAttribute(0, "pane", a => a.Pane)
-                           .AddAttribute(0, "showHeader", a => a.ShowHeader)
-                           .AddAttribute(0, "label", a => a.Label)
-                           .AddAttribute(0, "data", a => a.Data)
-                           .AddAttribute(0, "extendable", a => a.Extendable)
-                           .AddAttribute(0, "count", a => a.Count)
-                           .AddAttribute(0, "axis", a => a.Axis)
-                           .AddAttribute(0, "dimension", a => a.Dimension)
-                           .AddAttribute(0, "start", a => a.Start)
-                           .AddAttribute(0, "min", a => a.Min)
-                           .AddAttribute(0, "max", a => a.Max)
-                           .AddAttribute(0, "activeRow", a => a.ActiveRow)
-                           .AddAttribute(0, "activeCol", a => a.ActiveColumn)
-                           .AddAttribute(0, "previousRow", a => a.PreviousRow)
-                           .AddAttribute(0, "previousCol", a => a.PreviousColumn)
-                           .AddAttribute(0, "click", a => a.Click)
-                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "pane", a => a.Pane)
+.AddAttribute(0, "showHeader", a => a.ShowHeader)
+.AddAttribute(0, "label", a => a.Label)
+.AddAttribute(0, "data", a => a.Data)
+.AddAttribute(0, "extendable", a => a.Extendable)
+.AddAttribute(0, "count", a => a.Count)
+.AddAttribute(0, "axis", a => a.Axis)
+.AddAttribute(0, "dimension", a => a.Dimension)
+.AddAttribute(0, "start", a => a.Start)
+.AddAttribute(0, "min", a => a.Min)
+.AddAttribute(0, "max", a => a.Max)
+.AddAttribute(0, "activeRow", a => a.ActiveRow)
+.AddAttribute(0, "activeCol", a => a.ActiveColumn)
+.AddAttribute(0, "previousRow", a => a.PreviousRow)
+.AddAttribute(0, "previousCol", a => a.PreviousColumn)
+.AddAttribute(0, "click", a => a.Click)
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -22196,8 +22511,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:brk.</para>
     /// </summary>
-    [SchemaAttr(22, "brk")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Break : OpenXmlLeafElement
     {
         /// <summary>
@@ -22260,12 +22573,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "brk");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Break>()
-                           .AddAttribute(0, "id", a => a.Id)
-                           .AddAttribute(0, "min", a => a.Min)
-                           .AddAttribute(0, "max", a => a.Max)
-                           .AddAttribute(0, "man", a => a.ManualPageBreak)
-                           .AddAttribute(0, "pt", a => a.PivotTablePageBreak);
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "min", a => a.Min)
+.AddAttribute(0, "max", a => a.Max)
+.AddAttribute(0, "man", a => a.ManualPageBreak)
+.AddAttribute(0, "pt", a => a.PivotTablePageBreak);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -22285,8 +22600,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:dataRef.</para>
     /// </summary>
-    [SchemaAttr(22, "dataRef")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DataReference : OpenXmlLeafElement
     {
         /// <summary>
@@ -22342,11 +22655,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "dataRef");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DataReference>()
-                           .AddAttribute(0, "ref", a => a.Reference)
-                           .AddAttribute(0, "name", a => a.Name)
-                           .AddAttribute(0, "sheet", a => a.Sheet)
-                           .AddAttribute(19, "id", a => a.Id);
+.AddAttribute(0, "ref", a => a.Reference)
+.AddAttribute(0, "name", a => a.Name)
+.AddAttribute(0, "sheet", a => a.Sheet)
+.AddAttribute(19, "id", a => a.Id);
         }
 
         /// <inheritdoc/>
@@ -22364,8 +22679,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description>Break &lt;x:brk></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(22, "rowBreaks")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RowBreaks : PageBreakType
     {
         /// <summary>
@@ -22399,6 +22712,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "rowBreaks");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 1022, true),
             new AttributeValueRangeConstraint(1 /*:manualBreakCount*/, true, double.NegativeInfinity, true, 1022, true)
@@ -22428,8 +22748,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description>Break &lt;x:brk></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(22, "colBreaks")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColumnBreaks : PageBreakType
     {
         /// <summary>
@@ -22461,6 +22779,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ColumnBreaks(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "colBreaks");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -22560,8 +22885,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:pageMargins.</para>
     /// </summary>
-    [SchemaAttr(22, "pageMargins")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PageMargins : OpenXmlLeafElement
     {
         /// <summary>
@@ -22634,31 +22957,33 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "pageMargins");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PageMargins>()
-                           .AddAttribute(0, "left", a => a.Left, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "right", a => a.Right, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "top", a => a.Top, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "bottom", a => a.Bottom, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "header", a => a.Header, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "footer", a => a.Footer, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "left", a => a.Left, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "right", a => a.Right, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "top", a => a.Top, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "bottom", a => a.Bottom, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "header", a => a.Header, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "footer", a => a.Footer, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -22681,8 +23006,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:printOptions.</para>
     /// </summary>
-    [SchemaAttr(22, "printOptions")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PrintOptions : OpenXmlLeafElement
     {
         /// <summary>
@@ -22745,12 +23068,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "printOptions");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PrintOptions>()
-                           .AddAttribute(0, "horizontalCentered", a => a.HorizontalCentered)
-                           .AddAttribute(0, "verticalCentered", a => a.VerticalCentered)
-                           .AddAttribute(0, "headings", a => a.Headings)
-                           .AddAttribute(0, "gridLines", a => a.GridLines)
-                           .AddAttribute(0, "gridLinesSet", a => a.GridLinesSet);
+.AddAttribute(0, "horizontalCentered", a => a.HorizontalCentered)
+.AddAttribute(0, "verticalCentered", a => a.VerticalCentered)
+.AddAttribute(0, "headings", a => a.Headings)
+.AddAttribute(0, "gridLines", a => a.GridLines)
+.AddAttribute(0, "gridLinesSet", a => a.GridLinesSet);
         }
 
         /// <inheritdoc/>
@@ -22762,8 +23087,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:pageSetup.</para>
     /// </summary>
-    [SchemaAttr(22, "pageSetup")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PageSetup : OpenXmlLeafElement
     {
         /// <summary>
@@ -22949,24 +23272,26 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "pageSetup");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PageSetup>()
-                           .AddAttribute(0, "paperSize", a => a.PaperSize)
-                           .AddAttribute(0, "scale", a => a.Scale)
-                           .AddAttribute(0, "firstPageNumber", a => a.FirstPageNumber)
-                           .AddAttribute(0, "fitToWidth", a => a.FitToWidth)
-                           .AddAttribute(0, "fitToHeight", a => a.FitToHeight)
-                           .AddAttribute(0, "pageOrder", a => a.PageOrder)
-                           .AddAttribute(0, "orientation", a => a.Orientation)
-                           .AddAttribute(0, "usePrinterDefaults", a => a.UsePrinterDefaults)
-                           .AddAttribute(0, "blackAndWhite", a => a.BlackAndWhite)
-                           .AddAttribute(0, "draft", a => a.Draft)
-                           .AddAttribute(0, "cellComments", a => a.CellComments)
-                           .AddAttribute(0, "useFirstPageNumber", a => a.UseFirstPageNumber)
-                           .AddAttribute(0, "errors", a => a.Errors)
-                           .AddAttribute(0, "horizontalDpi", a => a.HorizontalDpi)
-                           .AddAttribute(0, "verticalDpi", a => a.VerticalDpi)
-                           .AddAttribute(0, "copies", a => a.Copies)
-                           .AddAttribute(19, "id", a => a.Id);
+.AddAttribute(0, "paperSize", a => a.PaperSize)
+.AddAttribute(0, "scale", a => a.Scale)
+.AddAttribute(0, "firstPageNumber", a => a.FirstPageNumber)
+.AddAttribute(0, "fitToWidth", a => a.FitToWidth)
+.AddAttribute(0, "fitToHeight", a => a.FitToHeight)
+.AddAttribute(0, "pageOrder", a => a.PageOrder)
+.AddAttribute(0, "orientation", a => a.Orientation)
+.AddAttribute(0, "usePrinterDefaults", a => a.UsePrinterDefaults)
+.AddAttribute(0, "blackAndWhite", a => a.BlackAndWhite)
+.AddAttribute(0, "draft", a => a.Draft)
+.AddAttribute(0, "cellComments", a => a.CellComments)
+.AddAttribute(0, "useFirstPageNumber", a => a.UseFirstPageNumber)
+.AddAttribute(0, "errors", a => a.Errors)
+.AddAttribute(0, "horizontalDpi", a => a.HorizontalDpi)
+.AddAttribute(0, "verticalDpi", a => a.VerticalDpi)
+.AddAttribute(0, "copies", a => a.Copies)
+.AddAttribute(19, "id", a => a.Id);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -23005,8 +23330,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(EvenFooter))]
     [ChildElementInfo(typeof(FirstHeader))]
     [ChildElementInfo(typeof(FirstFooter))]
-    [SchemaAttr(22, "headerFooter")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HeaderFooter : OpenXmlCompositeElement
     {
         /// <summary>
@@ -23083,11 +23406,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "headerFooter");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<HeaderFooter>()
-                           .AddAttribute(0, "differentOddEven", a => a.DifferentOddEven)
-                           .AddAttribute(0, "differentFirst", a => a.DifferentFirst)
-                           .AddAttribute(0, "scaleWithDoc", a => a.ScaleWithDoc)
-                           .AddAttribute(0, "alignWithMargins", a => a.AlignWithMargins);
+.AddAttribute(0, "differentOddEven", a => a.DifferentOddEven)
+.AddAttribute(0, "differentFirst", a => a.DifferentFirst)
+.AddAttribute(0, "scaleWithDoc", a => a.ScaleWithDoc)
+.AddAttribute(0, "alignWithMargins", a => a.AlignWithMargins);
         }
 
         /// <summary>
@@ -23200,8 +23525,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(FilterColumn))]
     [ChildElementInfo(typeof(SortState))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "autoFilter")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AutoFilter : OpenXmlCompositeElement
     {
         /// <summary>
@@ -23248,8 +23571,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "autoFilter");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<AutoFilter>()
-                           .AddAttribute(0, "ref", a => a.Reference);
+.AddAttribute(0, "ref", a => a.Reference);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -23285,8 +23610,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(DataBar))]
     [ChildElementInfo(typeof(IconSet))]
     [ChildElementInfo(typeof(ConditionalFormattingRuleExtensionList))]
-    [SchemaAttr(22, "cfRule")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ConditionalFormattingRule : OpenXmlCompositeElement
     {
         /// <summary>
@@ -23453,26 +23776,28 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "cfRule");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ConditionalFormattingRule>()
-                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "dxfId", a => a.FormatId)
-                           .AddAttribute(0, "priority", a => a.Priority, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "stopIfTrue", a => a.StopIfTrue)
-                           .AddAttribute(0, "aboveAverage", a => a.AboveAverage)
-                           .AddAttribute(0, "percent", a => a.Percent)
-                           .AddAttribute(0, "bottom", a => a.Bottom)
-                           .AddAttribute(0, "operator", a => a.Operator)
-                           .AddAttribute(0, "text", a => a.Text)
-                           .AddAttribute(0, "timePeriod", a => a.TimePeriod)
-                           .AddAttribute(0, "rank", a => a.Rank)
-                           .AddAttribute(0, "stdDev", a => a.StdDev)
-                           .AddAttribute(0, "equalAverage", a => a.EqualAverage);
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "dxfId", a => a.FormatId)
+.AddAttribute(0, "priority", a => a.Priority, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "stopIfTrue", a => a.StopIfTrue)
+.AddAttribute(0, "aboveAverage", a => a.AboveAverage)
+.AddAttribute(0, "percent", a => a.Percent)
+.AddAttribute(0, "bottom", a => a.Bottom)
+.AddAttribute(0, "operator", a => a.Operator)
+.AddAttribute(0, "text", a => a.Text)
+.AddAttribute(0, "timePeriod", a => a.TimePeriod)
+.AddAttribute(0, "rank", a => a.Rank)
+.AddAttribute(0, "stdDev", a => a.StdDev)
+.AddAttribute(0, "equalAverage", a => a.EqualAverage);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -23503,8 +23828,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:hyperlink.</para>
     /// </summary>
-    [SchemaAttr(22, "hyperlink")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Hyperlink : OpenXmlLeafElement
     {
         /// <summary>
@@ -23570,15 +23893,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "hyperlink");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Hyperlink>()
-                           .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(19, "id", a => a.Id)
-                           .AddAttribute(0, "location", a => a.Location)
-                           .AddAttribute(0, "tooltip", a => a.Tooltip)
-                           .AddAttribute(0, "display", a => a.Display);
+.AddAttribute(0, "ref", a => a.Reference, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(19, "id", a => a.Id)
+.AddAttribute(0, "location", a => a.Location)
+.AddAttribute(0, "tooltip", a => a.Tooltip)
+.AddAttribute(0, "display", a => a.Display);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -23606,8 +23931,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "cfvo")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ConditionalFormatValueObject : OpenXmlCompositeElement
     {
         /// <summary>
@@ -23674,13 +23997,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "cfvo");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ConditionalFormatValueObject>()
-                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "val", a => a.Val)
-                           .AddAttribute(0, "gte", a => a.GreaterThanOrEqual);
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "val", a => a.Val)
+.AddAttribute(0, "gte", a => a.GreaterThanOrEqual);
         }
 
         /// <summary>
@@ -23719,8 +24044,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(InputCells))]
-    [SchemaAttr(22, "scenario")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Scenario : OpenXmlCompositeElement
     {
         /// <summary>
@@ -23817,16 +24140,18 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "scenario");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Scenario>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "locked", a => a.Locked)
-                           .AddAttribute(0, "hidden", a => a.Hidden)
-                           .AddAttribute(0, "count", a => a.Count)
-                           .AddAttribute(0, "user", a => a.User)
-                           .AddAttribute(0, "comment", a => a.Comment);
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "locked", a => a.Locked)
+.AddAttribute(0, "hidden", a => a.Hidden)
+.AddAttribute(0, "count", a => a.Count)
+.AddAttribute(0, "user", a => a.User)
+.AddAttribute(0, "comment", a => a.Comment);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -23855,8 +24180,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:protectedRange.</para>
     /// </summary>
-    [SchemaAttr(22, "protectedRange")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ProtectedRange : OpenXmlLeafElement
     {
         /// <summary>
@@ -23949,24 +24272,26 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "protectedRange");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ProtectedRange>()
-                           .AddAttribute(0, "password", a => a.Password, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
-                           })
-                           .AddAttribute(0, "algorithmName", a => a.AlgorithmName)
-                           .AddAttribute(0, "hashValue", a => a.HashValue)
-                           .AddAttribute(0, "saltValue", a => a.SaltValue)
-                           .AddAttribute(0, "spinCount", a => a.SpinCount)
-                           .AddAttribute(0, "sqref", a => a.SequenceOfReferences, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "securityDescriptor", a => a.SecurityDescriptor);
+.AddAttribute(0, "password", a => a.Password, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
+})
+.AddAttribute(0, "algorithmName", a => a.AlgorithmName)
+.AddAttribute(0, "hashValue", a => a.HashValue)
+.AddAttribute(0, "saltValue", a => a.SaltValue)
+.AddAttribute(0, "spinCount", a => a.SpinCount)
+.AddAttribute(0, "sqref", a => a.SequenceOfReferences, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "securityDescriptor", a => a.SecurityDescriptor);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -23986,8 +24311,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:cellWatch.</para>
     /// </summary>
-    [SchemaAttr(22, "cellWatch")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CellWatch : OpenXmlLeafElement
     {
         /// <summary>
@@ -24010,11 +24333,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "cellWatch");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CellWatch>()
-                           .AddAttribute(0, "r", a => a.CellReference, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "r", a => a.CellReference, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -24032,8 +24357,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:pageSetup.</para>
     /// </summary>
-    [SchemaAttr(22, "pageSetup")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ChartSheetPageSetup : OpenXmlLeafElement
     {
         /// <summary>
@@ -24159,18 +24482,20 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "pageSetup");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ChartSheetPageSetup>()
-                           .AddAttribute(0, "paperSize", a => a.PaperSize)
-                           .AddAttribute(0, "firstPageNumber", a => a.FirstPageNumber)
-                           .AddAttribute(0, "orientation", a => a.Orientation)
-                           .AddAttribute(0, "usePrinterDefaults", a => a.UsePrinterDefaults)
-                           .AddAttribute(0, "blackAndWhite", a => a.BlackAndWhite)
-                           .AddAttribute(0, "draft", a => a.Draft)
-                           .AddAttribute(0, "useFirstPageNumber", a => a.UseFirstPageNumber)
-                           .AddAttribute(0, "horizontalDpi", a => a.HorizontalDpi)
-                           .AddAttribute(0, "verticalDpi", a => a.VerticalDpi)
-                           .AddAttribute(0, "copies", a => a.Copies)
-                           .AddAttribute(19, "id", a => a.Id);
+.AddAttribute(0, "paperSize", a => a.PaperSize)
+.AddAttribute(0, "firstPageNumber", a => a.FirstPageNumber)
+.AddAttribute(0, "orientation", a => a.Orientation)
+.AddAttribute(0, "usePrinterDefaults", a => a.UsePrinterDefaults)
+.AddAttribute(0, "blackAndWhite", a => a.BlackAndWhite)
+.AddAttribute(0, "draft", a => a.Draft)
+.AddAttribute(0, "useFirstPageNumber", a => a.UseFirstPageNumber)
+.AddAttribute(0, "horizontalDpi", a => a.HorizontalDpi)
+.AddAttribute(0, "verticalDpi", a => a.VerticalDpi)
+.AddAttribute(0, "copies", a => a.Copies)
+.AddAttribute(19, "id", a => a.Id);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -24190,8 +24515,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:customPr.</para>
     /// </summary>
-    [SchemaAttr(22, "customPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CustomProperty : OpenXmlLeafElement
     {
         /// <summary>
@@ -24227,15 +24550,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "customPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CustomProperty>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -24253,8 +24578,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:webPublishItem.</para>
     /// </summary>
-    [SchemaAttr(22, "webPublishItem")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class WebPublishItem : OpenXmlLeafElement
     {
         /// <summary>
@@ -24347,27 +24670,29 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "webPublishItem");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<WebPublishItem>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "divId", a => a.DivId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "sourceType", a => a.SourceType, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "sourceRef", a => a.SourceRef)
-                           .AddAttribute(0, "sourceObject", a => a.SourceObject)
-                           .AddAttribute(0, "destinationFile", a => a.DestinationFile, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "title", a => a.Title)
-                           .AddAttribute(0, "autoRepublish", a => a.AutoRepublish);
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "divId", a => a.DivId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "sourceType", a => a.SourceType, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "sourceRef", a => a.SourceRef)
+.AddAttribute(0, "sourceObject", a => a.SourceObject)
+.AddAttribute(0, "destinationFile", a => a.DestinationFile, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "title", a => a.Title)
+.AddAttribute(0, "autoRepublish", a => a.AutoRepublish);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -24391,8 +24716,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:tablePart.</para>
     /// </summary>
-    [SchemaAttr(22, "tablePart")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TablePart : OpenXmlLeafElement
     {
         /// <summary>
@@ -24418,11 +24741,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "tablePart");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<TablePart>()
-                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -24441,8 +24766,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "sheetView")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ChartSheetView : OpenXmlCompositeElement
     {
         /// <summary>
@@ -24519,14 +24842,16 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "sheetView");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ChartSheetView>()
-                           .AddAttribute(0, "tabSelected", a => a.TabSelected)
-                           .AddAttribute(0, "zoomScale", a => a.ZoomScale)
-                           .AddAttribute(0, "workbookViewId", a => a.WorkbookViewId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "zoomToFit", a => a.ZoomToFit);
+.AddAttribute(0, "tabSelected", a => a.TabSelected)
+.AddAttribute(0, "zoomScale", a => a.ZoomScale)
+.AddAttribute(0, "workbookViewId", a => a.WorkbookViewId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "zoomToFit", a => a.ZoomToFit);
         }
 
         /// <summary>
@@ -24576,8 +24901,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(PageMargins))]
     [ChildElementInfo(typeof(ChartSheetPageSetup))]
     [ChildElementInfo(typeof(HeaderFooter))]
-    [SchemaAttr(22, "customSheetView")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CustomChartsheetView : OpenXmlCompositeElement
     {
         /// <summary>
@@ -24654,15 +24977,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "customSheetView");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CustomChartsheetView>()
-                           .AddAttribute(0, "guid", a => a.Guid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "scale", a => a.Scale)
-                           .AddAttribute(0, "state", a => a.State)
-                           .AddAttribute(0, "zoomToFit", a => a.ZoomToFit);
+.AddAttribute(0, "guid", a => a.Guid, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "scale", a => a.Scale)
+.AddAttribute(0, "state", a => a.State)
+.AddAttribute(0, "zoomToFit", a => a.ZoomToFit);
         }
 
         /// <summary>
@@ -24728,8 +25053,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:inputCells.</para>
     /// </summary>
-    [SchemaAttr(22, "inputCells")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class InputCells : OpenXmlLeafElement
     {
         /// <summary>
@@ -24792,18 +25115,20 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "inputCells");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<InputCells>()
-                           .AddAttribute(0, "r", a => a.CellReference, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "deleted", a => a.Deleted)
-                           .AddAttribute(0, "undone", a => a.Undone)
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "numFmtId", a => a.NumberFormatId);
+.AddAttribute(0, "r", a => a.CellReference, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "deleted", a => a.Deleted)
+.AddAttribute(0, "undone", a => a.Undone)
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "numFmtId", a => a.NumberFormatId);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -24828,8 +25153,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ControlProperties), FileFormatVersions.Office2010)]
-    [SchemaAttr(22, "control")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Control : OpenXmlCompositeElement
     {
         /// <summary>
@@ -24899,16 +25222,18 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "control");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Control>()
-                           .AddAttribute(0, "shapeId", a => a.ShapeId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "name", a => a.Name);
+.AddAttribute(0, "shapeId", a => a.ShapeId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "name", a => a.Name);
         }
 
         /// <summary>
@@ -24948,8 +25273,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:ignoredError.</para>
     /// </summary>
-    [SchemaAttr(22, "ignoredError")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class IgnoredError : OpenXmlLeafElement
     {
         /// <summary>
@@ -25062,20 +25385,22 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "ignoredError");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<IgnoredError>()
-                           .AddAttribute(0, "sqref", a => a.SequenceOfReferences, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "evalError", a => a.EvalError)
-                           .AddAttribute(0, "twoDigitTextYear", a => a.TwoDigitTextYear)
-                           .AddAttribute(0, "numberStoredAsText", a => a.NumberStoredAsText)
-                           .AddAttribute(0, "formula", a => a.Formula)
-                           .AddAttribute(0, "formulaRange", a => a.FormulaRange)
-                           .AddAttribute(0, "unlockedFormula", a => a.UnlockedFormula)
-                           .AddAttribute(0, "emptyCellReference", a => a.EmptyCellReference)
-                           .AddAttribute(0, "listDataValidation", a => a.ListDataValidation)
-                           .AddAttribute(0, "calculatedColumn", a => a.CalculatedColumn);
+.AddAttribute(0, "sqref", a => a.SequenceOfReferences, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "evalError", a => a.EvalError)
+.AddAttribute(0, "twoDigitTextYear", a => a.TwoDigitTextYear)
+.AddAttribute(0, "numberStoredAsText", a => a.NumberStoredAsText)
+.AddAttribute(0, "formula", a => a.Formula)
+.AddAttribute(0, "formulaRange", a => a.FormulaRange)
+.AddAttribute(0, "unlockedFormula", a => a.UnlockedFormula)
+.AddAttribute(0, "emptyCellReference", a => a.EmptyCellReference)
+.AddAttribute(0, "listDataValidation", a => a.ListDataValidation)
+.AddAttribute(0, "calculatedColumn", a => a.CalculatedColumn);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -25093,8 +25418,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:mergeCell.</para>
     /// </summary>
-    [SchemaAttr(22, "mergeCell")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MergeCell : OpenXmlLeafElement
     {
         /// <summary>
@@ -25117,11 +25440,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "mergeCell");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<MergeCell>()
-                           .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "ref", a => a.Reference, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -25144,8 +25469,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.ExcelAc.List), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(Formula1))]
     [ChildElementInfo(typeof(Formula2))]
-    [SchemaAttr(22, "dataValidation")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DataValidation : OpenXmlCompositeElement
     {
         /// <summary>
@@ -25312,23 +25635,25 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "dataValidation");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DataValidation>()
-                           .AddAttribute(0, "type", a => a.Type)
-                           .AddAttribute(0, "errorStyle", a => a.ErrorStyle)
-                           .AddAttribute(0, "imeMode", a => a.ImeMode)
-                           .AddAttribute(0, "operator", a => a.Operator)
-                           .AddAttribute(0, "allowBlank", a => a.AllowBlank)
-                           .AddAttribute(0, "showDropDown", a => a.ShowDropDown)
-                           .AddAttribute(0, "showInputMessage", a => a.ShowInputMessage)
-                           .AddAttribute(0, "showErrorMessage", a => a.ShowErrorMessage)
-                           .AddAttribute(0, "errorTitle", a => a.ErrorTitle)
-                           .AddAttribute(0, "error", a => a.Error)
-                           .AddAttribute(0, "promptTitle", a => a.PromptTitle)
-                           .AddAttribute(0, "prompt", a => a.Prompt)
-                           .AddAttribute(0, "sqref", a => a.SequenceOfReferences, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "type", a => a.Type)
+.AddAttribute(0, "errorStyle", a => a.ErrorStyle)
+.AddAttribute(0, "imeMode", a => a.ImeMode)
+.AddAttribute(0, "operator", a => a.Operator)
+.AddAttribute(0, "allowBlank", a => a.AllowBlank)
+.AddAttribute(0, "showDropDown", a => a.ShowDropDown)
+.AddAttribute(0, "showInputMessage", a => a.ShowInputMessage)
+.AddAttribute(0, "showErrorMessage", a => a.ShowErrorMessage)
+.AddAttribute(0, "errorTitle", a => a.ErrorTitle)
+.AddAttribute(0, "error", a => a.Error)
+.AddAttribute(0, "promptTitle", a => a.PromptTitle)
+.AddAttribute(0, "prompt", a => a.Prompt)
+.AddAttribute(0, "sqref", a => a.SequenceOfReferences, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -25409,8 +25734,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(Selection))]
     [ChildElementInfo(typeof(PivotSelection))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "sheetView")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SheetView : OpenXmlCompositeElement
     {
         /// <summary>
@@ -25637,29 +25960,31 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "sheetView");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SheetView>()
-                           .AddAttribute(0, "windowProtection", a => a.WindowProtection)
-                           .AddAttribute(0, "showFormulas", a => a.ShowFormulas)
-                           .AddAttribute(0, "showGridLines", a => a.ShowGridLines)
-                           .AddAttribute(0, "showRowColHeaders", a => a.ShowRowColHeaders)
-                           .AddAttribute(0, "showZeros", a => a.ShowZeros)
-                           .AddAttribute(0, "rightToLeft", a => a.RightToLeft)
-                           .AddAttribute(0, "tabSelected", a => a.TabSelected)
-                           .AddAttribute(0, "showRuler", a => a.ShowRuler)
-                           .AddAttribute(0, "showOutlineSymbols", a => a.ShowOutlineSymbols)
-                           .AddAttribute(0, "defaultGridColor", a => a.DefaultGridColor)
-                           .AddAttribute(0, "showWhiteSpace", a => a.ShowWhiteSpace)
-                           .AddAttribute(0, "view", a => a.View)
-                           .AddAttribute(0, "topLeftCell", a => a.TopLeftCell)
-                           .AddAttribute(0, "colorId", a => a.ColorId)
-                           .AddAttribute(0, "zoomScale", a => a.ZoomScale)
-                           .AddAttribute(0, "zoomScaleNormal", a => a.ZoomScaleNormal)
-                           .AddAttribute(0, "zoomScaleSheetLayoutView", a => a.ZoomScaleSheetLayoutView)
-                           .AddAttribute(0, "zoomScalePageLayoutView", a => a.ZoomScalePageLayoutView)
-                           .AddAttribute(0, "workbookViewId", a => a.WorkbookViewId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "windowProtection", a => a.WindowProtection)
+.AddAttribute(0, "showFormulas", a => a.ShowFormulas)
+.AddAttribute(0, "showGridLines", a => a.ShowGridLines)
+.AddAttribute(0, "showRowColHeaders", a => a.ShowRowColHeaders)
+.AddAttribute(0, "showZeros", a => a.ShowZeros)
+.AddAttribute(0, "rightToLeft", a => a.RightToLeft)
+.AddAttribute(0, "tabSelected", a => a.TabSelected)
+.AddAttribute(0, "showRuler", a => a.ShowRuler)
+.AddAttribute(0, "showOutlineSymbols", a => a.ShowOutlineSymbols)
+.AddAttribute(0, "defaultGridColor", a => a.DefaultGridColor)
+.AddAttribute(0, "showWhiteSpace", a => a.ShowWhiteSpace)
+.AddAttribute(0, "view", a => a.View)
+.AddAttribute(0, "topLeftCell", a => a.TopLeftCell)
+.AddAttribute(0, "colorId", a => a.ColorId)
+.AddAttribute(0, "zoomScale", a => a.ZoomScale)
+.AddAttribute(0, "zoomScaleNormal", a => a.ZoomScaleNormal)
+.AddAttribute(0, "zoomScaleSheetLayoutView", a => a.ZoomScaleSheetLayoutView)
+.AddAttribute(0, "zoomScalePageLayoutView", a => a.ZoomScalePageLayoutView)
+.AddAttribute(0, "workbookViewId", a => a.WorkbookViewId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -25729,8 +26054,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(HeaderFooter))]
     [ChildElementInfo(typeof(AutoFilter))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "customSheetView")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CustomSheetView : OpenXmlCompositeElement
     {
         /// <summary>
@@ -25967,31 +26290,33 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "customSheetView");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CustomSheetView>()
-                           .AddAttribute(0, "guid", a => a.Guid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "scale", a => a.Scale)
-                           .AddAttribute(0, "colorId", a => a.ColorId)
-                           .AddAttribute(0, "showPageBreaks", a => a.ShowPageBreaks)
-                           .AddAttribute(0, "showFormulas", a => a.ShowFormulas)
-                           .AddAttribute(0, "showGridLines", a => a.ShowGridLines)
-                           .AddAttribute(0, "showRowCol", a => a.ShowRowColumn)
-                           .AddAttribute(0, "outlineSymbols", a => a.OutlineSymbols)
-                           .AddAttribute(0, "zeroValues", a => a.ZeroValues)
-                           .AddAttribute(0, "fitToPage", a => a.FitToPage)
-                           .AddAttribute(0, "printArea", a => a.PrintArea)
-                           .AddAttribute(0, "filter", a => a.Filter)
-                           .AddAttribute(0, "showAutoFilter", a => a.ShowAutoFilter)
-                           .AddAttribute(0, "hiddenRows", a => a.HiddenRows)
-                           .AddAttribute(0, "hiddenColumns", a => a.HiddenColumns)
-                           .AddAttribute(0, "state", a => a.State)
-                           .AddAttribute(0, "filterUnique", a => a.FilterUnique)
-                           .AddAttribute(0, "view", a => a.View)
-                           .AddAttribute(0, "showRuler", a => a.ShowRuler)
-                           .AddAttribute(0, "topLeftCell", a => a.TopLeftCell);
+.AddAttribute(0, "guid", a => a.Guid, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "scale", a => a.Scale)
+.AddAttribute(0, "colorId", a => a.ColorId)
+.AddAttribute(0, "showPageBreaks", a => a.ShowPageBreaks)
+.AddAttribute(0, "showFormulas", a => a.ShowFormulas)
+.AddAttribute(0, "showGridLines", a => a.ShowGridLines)
+.AddAttribute(0, "showRowCol", a => a.ShowRowColumn)
+.AddAttribute(0, "outlineSymbols", a => a.OutlineSymbols)
+.AddAttribute(0, "zeroValues", a => a.ZeroValues)
+.AddAttribute(0, "fitToPage", a => a.FitToPage)
+.AddAttribute(0, "printArea", a => a.PrintArea)
+.AddAttribute(0, "filter", a => a.Filter)
+.AddAttribute(0, "showAutoFilter", a => a.ShowAutoFilter)
+.AddAttribute(0, "hiddenRows", a => a.HiddenRows)
+.AddAttribute(0, "hiddenColumns", a => a.HiddenColumns)
+.AddAttribute(0, "state", a => a.State)
+.AddAttribute(0, "filterUnique", a => a.FilterUnique)
+.AddAttribute(0, "view", a => a.View)
+.AddAttribute(0, "showRuler", a => a.ShowRuler)
+.AddAttribute(0, "topLeftCell", a => a.TopLeftCell);
         }
 
         /// <summary>
@@ -26163,8 +26488,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(EmbeddedObjectProperties), FileFormatVersions.Office2010)]
-    [SchemaAttr(22, "oleObject")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OleObject : OpenXmlCompositeElement
     {
         /// <summary>
@@ -26274,17 +26597,19 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "oleObject");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<OleObject>()
-                           .AddAttribute(0, "progId", a => a.ProgId)
-                           .AddAttribute(0, "dvAspect", a => a.DataOrViewAspect)
-                           .AddAttribute(0, "link", a => a.Link)
-                           .AddAttribute(0, "oleUpdate", a => a.OleUpdate)
-                           .AddAttribute(0, "autoLoad", a => a.AutoLoad)
-                           .AddAttribute(0, "shapeId", a => a.ShapeId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(19, "id", a => a.Id);
+.AddAttribute(0, "progId", a => a.ProgId)
+.AddAttribute(0, "dvAspect", a => a.DataOrViewAspect)
+.AddAttribute(0, "link", a => a.Link)
+.AddAttribute(0, "oleUpdate", a => a.OleUpdate)
+.AddAttribute(0, "autoLoad", a => a.AutoLoad)
+.AddAttribute(0, "shapeId", a => a.ShapeId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(19, "id", a => a.Id);
         }
 
         /// <summary>
@@ -26331,8 +26656,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(MetadataType))]
-    [SchemaAttr(22, "metadataTypes")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MetadataTypes : OpenXmlCompositeElement
     {
         /// <summary>
@@ -26379,8 +26702,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "metadataTypes");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<MetadataTypes>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -26412,8 +26737,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CharacterValue))]
-    [SchemaAttr(22, "metadataStrings")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MetadataStrings : OpenXmlCompositeElement
     {
         /// <summary>
@@ -26460,8 +26783,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "metadataStrings");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<MetadataStrings>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -26493,8 +26818,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Mdx))]
-    [SchemaAttr(22, "mdxMetadata")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MdxMetadata : OpenXmlCompositeElement
     {
         /// <summary>
@@ -26541,8 +26864,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "mdxMetadata");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<MdxMetadata>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -26576,8 +26901,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(FutureMetadataBlock))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "futureMetadata")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FutureMetadata : OpenXmlCompositeElement
     {
         /// <summary>
@@ -26634,12 +26957,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "futureMetadata");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<FutureMetadata>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -26674,8 +26999,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description>MetadataBlock &lt;x:bk></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(22, "cellMetadata")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CellMetadata : MetadataBlocksType
     {
         /// <summary>
@@ -26709,6 +27032,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "cellMetadata");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 2147483647, true)
         };
@@ -26737,8 +27067,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description>MetadataBlock &lt;x:bk></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(22, "valueMetadata")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ValueMetadata : MetadataBlocksType
     {
         /// <summary>
@@ -26770,6 +27098,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ValueMetadata(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "valueMetadata");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -26857,8 +27192,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:metadataType.</para>
     /// </summary>
-    [SchemaAttr(22, "metadataType")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MetadataType : OpenXmlLeafElement
     {
         /// <summary>
@@ -27151,41 +27484,43 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "metadataType");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<MetadataType>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "minSupportedVersion", a => a.MinSupportedVersion, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "ghostRow", a => a.GhostRow)
-                           .AddAttribute(0, "ghostCol", a => a.GhostColumn)
-                           .AddAttribute(0, "edit", a => a.Edit)
-                           .AddAttribute(0, "delete", a => a.Delete)
-                           .AddAttribute(0, "copy", a => a.Copy)
-                           .AddAttribute(0, "pasteAll", a => a.PasteAll)
-                           .AddAttribute(0, "pasteFormulas", a => a.PasteFormulas)
-                           .AddAttribute(0, "pasteValues", a => a.PasteValues)
-                           .AddAttribute(0, "pasteFormats", a => a.PasteFormats)
-                           .AddAttribute(0, "pasteComments", a => a.PasteComments)
-                           .AddAttribute(0, "pasteDataValidation", a => a.PasteDataValidation)
-                           .AddAttribute(0, "pasteBorders", a => a.PasteBorders)
-                           .AddAttribute(0, "pasteColWidths", a => a.PasteColWidths)
-                           .AddAttribute(0, "pasteNumberFormats", a => a.PasteNumberFormats)
-                           .AddAttribute(0, "merge", a => a.Merge)
-                           .AddAttribute(0, "splitFirst", a => a.SplitFirst)
-                           .AddAttribute(0, "splitAll", a => a.SplitAll)
-                           .AddAttribute(0, "rowColShift", a => a.RowColumnShift)
-                           .AddAttribute(0, "clearAll", a => a.ClearAll)
-                           .AddAttribute(0, "clearFormats", a => a.ClearFormats)
-                           .AddAttribute(0, "clearContents", a => a.ClearContents)
-                           .AddAttribute(0, "clearComments", a => a.ClearComments)
-                           .AddAttribute(0, "assign", a => a.Assign)
-                           .AddAttribute(0, "coerce", a => a.Coerce)
-                           .AddAttribute(0, "adjust", a => a.Adjust)
-                           .AddAttribute(0, "cellMeta", a => a.CellMeta);
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "minSupportedVersion", a => a.MinSupportedVersion, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "ghostRow", a => a.GhostRow)
+.AddAttribute(0, "ghostCol", a => a.GhostColumn)
+.AddAttribute(0, "edit", a => a.Edit)
+.AddAttribute(0, "delete", a => a.Delete)
+.AddAttribute(0, "copy", a => a.Copy)
+.AddAttribute(0, "pasteAll", a => a.PasteAll)
+.AddAttribute(0, "pasteFormulas", a => a.PasteFormulas)
+.AddAttribute(0, "pasteValues", a => a.PasteValues)
+.AddAttribute(0, "pasteFormats", a => a.PasteFormats)
+.AddAttribute(0, "pasteComments", a => a.PasteComments)
+.AddAttribute(0, "pasteDataValidation", a => a.PasteDataValidation)
+.AddAttribute(0, "pasteBorders", a => a.PasteBorders)
+.AddAttribute(0, "pasteColWidths", a => a.PasteColWidths)
+.AddAttribute(0, "pasteNumberFormats", a => a.PasteNumberFormats)
+.AddAttribute(0, "merge", a => a.Merge)
+.AddAttribute(0, "splitFirst", a => a.SplitFirst)
+.AddAttribute(0, "splitAll", a => a.SplitAll)
+.AddAttribute(0, "rowColShift", a => a.RowColumnShift)
+.AddAttribute(0, "clearAll", a => a.ClearAll)
+.AddAttribute(0, "clearFormats", a => a.ClearFormats)
+.AddAttribute(0, "clearContents", a => a.ClearContents)
+.AddAttribute(0, "clearComments", a => a.ClearComments)
+.AddAttribute(0, "assign", a => a.Assign)
+.AddAttribute(0, "coerce", a => a.Coerce)
+.AddAttribute(0, "adjust", a => a.Adjust)
+.AddAttribute(0, "cellMeta", a => a.CellMeta);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -27211,8 +27546,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(MetadataRecord))]
-    [SchemaAttr(22, "bk")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MetadataBlock : OpenXmlCompositeElement
     {
         /// <summary>
@@ -27246,6 +27579,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "bk");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataRecord), 1, 0)
@@ -27262,8 +27602,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rc.</para>
     /// </summary>
-    [SchemaAttr(22, "rc")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MetadataRecord : OpenXmlLeafElement
     {
         /// <summary>
@@ -27296,15 +27634,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "rc");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<MetadataRecord>()
-                           .AddAttribute(0, "t", a => a.TypeIndex, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "v", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "t", a => a.TypeIndex, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "v", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -27330,8 +27670,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "bk")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FutureMetadataBlock : OpenXmlCompositeElement
     {
         /// <summary>
@@ -27363,6 +27701,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public FutureMetadataBlock(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "bk");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -27407,8 +27752,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(MdxSet))]
     [ChildElementInfo(typeof(MdxMemberProp))]
     [ChildElementInfo(typeof(MdxKpi))]
-    [SchemaAttr(22, "mdx")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Mdx : OpenXmlCompositeElement
     {
         /// <summary>
@@ -27465,15 +27808,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "mdx");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Mdx>()
-                           .AddAttribute(0, "n", a => a.NameIndex, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "f", a => a.CubeFunction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "n", a => a.NameIndex, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "f", a => a.CubeFunction, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -27561,8 +27906,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(NameIndex))]
-    [SchemaAttr(22, "t")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MdxTuple : OpenXmlCompositeElement
     {
         /// <summary>
@@ -27699,23 +28042,25 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "t");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<MdxTuple>()
-                           .AddAttribute(0, "c", a => a.MemberIndexCount)
-                           .AddAttribute(0, "ct", a => a.CultureCurrency)
-                           .AddAttribute(0, "si", a => a.FormattingStringIndex)
-                           .AddAttribute(0, "fi", a => a.FormatIndex)
-                           .AddAttribute(0, "bc", a => a.BackgroundColor, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
-                           })
-                           .AddAttribute(0, "fc", a => a.ForegroundColor, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
-                           })
-                           .AddAttribute(0, "i", a => a.Italic)
-                           .AddAttribute(0, "u", a => a.Underline)
-                           .AddAttribute(0, "st", a => a.Strikethrough)
-                           .AddAttribute(0, "b", a => a.Bold);
+.AddAttribute(0, "c", a => a.MemberIndexCount)
+.AddAttribute(0, "ct", a => a.CultureCurrency)
+.AddAttribute(0, "si", a => a.FormattingStringIndex)
+.AddAttribute(0, "fi", a => a.FormatIndex)
+.AddAttribute(0, "bc", a => a.BackgroundColor, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+})
+.AddAttribute(0, "fc", a => a.ForegroundColor, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+})
+.AddAttribute(0, "i", a => a.Italic)
+.AddAttribute(0, "u", a => a.Underline)
+.AddAttribute(0, "st", a => a.Strikethrough)
+.AddAttribute(0, "b", a => a.Bold);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -27750,8 +28095,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(NameIndex))]
-    [SchemaAttr(22, "ms")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MdxSet : OpenXmlCompositeElement
     {
         /// <summary>
@@ -27818,13 +28161,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "ms");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<MdxSet>()
-                           .AddAttribute(0, "ns", a => a.SetDefinitionIndex, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "c", a => a.MemberIndexCount)
-                           .AddAttribute(0, "o", a => a.SortingOrder);
+.AddAttribute(0, "ns", a => a.SetDefinitionIndex, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "c", a => a.MemberIndexCount)
+.AddAttribute(0, "o", a => a.SortingOrder);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -27851,8 +28196,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:p.</para>
     /// </summary>
-    [SchemaAttr(22, "p")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MdxMemberProp : OpenXmlLeafElement
     {
         /// <summary>
@@ -27885,15 +28228,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "p");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<MdxMemberProp>()
-                           .AddAttribute(0, "n", a => a.NameIndex, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "np", a => a.PropertyNameIndex, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "n", a => a.NameIndex, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "np", a => a.PropertyNameIndex, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -27914,8 +28259,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:k.</para>
     /// </summary>
-    [SchemaAttr(22, "k")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MdxKpi : OpenXmlLeafElement
     {
         /// <summary>
@@ -27958,19 +28301,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "k");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<MdxKpi>()
-                           .AddAttribute(0, "n", a => a.NameIndex, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "np", a => a.KpiIndex, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "p", a => a.KpiProperty, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "n", a => a.NameIndex, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "np", a => a.KpiIndex, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "p", a => a.KpiProperty, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -27991,8 +28336,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:n.</para>
     /// </summary>
-    [SchemaAttr(22, "n")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NameIndex : OpenXmlLeafElement
     {
         /// <summary>
@@ -28025,12 +28368,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "n");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<NameIndex>()
-                           .AddAttribute(0, "x", a => a.Index, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "s", a => a.IsASet);
+.AddAttribute(0, "x", a => a.Index, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "s", a => a.IsASet);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -28058,8 +28403,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(XmlCellProperties))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "singleXmlCell")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SingleXmlCell : OpenXmlCompositeElement
     {
         /// <summary>
@@ -28126,19 +28469,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "singleXmlCell");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SingleXmlCell>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "r", a => a.CellReference, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "connectionId", a => a.ConnectionId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "r", a => a.CellReference, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "connectionId", a => a.ConnectionId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -28201,8 +28546,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(XmlProperties))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "xmlCellPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class XmlCellProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -28259,15 +28602,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "xmlCellPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<XmlCellProperties>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "uniqueName", a => a.UniqueName, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "uniqueName", a => a.UniqueName, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -28328,8 +28673,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "xmlPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class XmlProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -28396,19 +28739,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "xmlPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<XmlProperties>()
-                           .AddAttribute(0, "mapId", a => a.MapId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "xpath", a => a.XPath, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "xmlDataType", a => a.XmlDataType, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "mapId", a => a.MapId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "xpath", a => a.XPath, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "xmlDataType", a => a.XmlDataType, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -28456,8 +28801,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(ForegroundColor))]
     [ChildElementInfo(typeof(BackgroundColor))]
-    [SchemaAttr(22, "patternFill")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PatternFill : OpenXmlCompositeElement
     {
         /// <summary>
@@ -28504,8 +28847,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "patternFill");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PatternFill>()
-                           .AddAttribute(0, "patternType", a => a.PatternType);
+.AddAttribute(0, "patternType", a => a.PatternType);
         }
 
         /// <summary>
@@ -28558,8 +28903,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(GradientStop))]
-    [SchemaAttr(22, "gradientFill")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class GradientFill : OpenXmlCompositeElement
     {
         /// <summary>
@@ -28656,13 +28999,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "gradientFill");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<GradientFill>()
-                           .AddAttribute(0, "type", a => a.Type)
-                           .AddAttribute(0, "degree", a => a.Degree)
-                           .AddAttribute(0, "left", a => a.Left)
-                           .AddAttribute(0, "right", a => a.Right)
-                           .AddAttribute(0, "top", a => a.Top)
-                           .AddAttribute(0, "bottom", a => a.Bottom);
+.AddAttribute(0, "type", a => a.Type)
+.AddAttribute(0, "degree", a => a.Degree)
+.AddAttribute(0, "left", a => a.Left)
+.AddAttribute(0, "right", a => a.Right)
+.AddAttribute(0, "top", a => a.Top)
+.AddAttribute(0, "bottom", a => a.Bottom);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -28698,8 +29043,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Color))]
-    [SchemaAttr(22, "stop")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class GradientStop : OpenXmlCompositeElement
     {
         /// <summary>
@@ -28746,11 +29089,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "stop");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<GradientStop>()
-                           .AddAttribute(0, "position", a => a.Position, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "position", a => a.Position, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -28788,8 +29133,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:numFmt.</para>
     /// </summary>
-    [SchemaAttr(22, "numFmt")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NumberingFormat : OpenXmlLeafElement
     {
         /// <summary>
@@ -28822,15 +29165,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "numFmt");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<NumberingFormat>()
-                           .AddAttribute(0, "numFmtId", a => a.NumberFormatId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "formatCode", a => a.FormatCode, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "numFmtId", a => a.NumberFormatId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "formatCode", a => a.FormatCode, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -28848,8 +29193,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:alignment.</para>
     /// </summary>
-    [SchemaAttr(22, "alignment")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Alignment : OpenXmlLeafElement
     {
         /// <summary>
@@ -28962,17 +29305,19 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "alignment");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Alignment>()
-                           .AddAttribute(0, "horizontal", a => a.Horizontal)
-                           .AddAttribute(0, "vertical", a => a.Vertical)
-                           .AddAttribute(0, "textRotation", a => a.TextRotation)
-                           .AddAttribute(0, "wrapText", a => a.WrapText)
-                           .AddAttribute(0, "indent", a => a.Indent)
-                           .AddAttribute(0, "relativeIndent", a => a.RelativeIndent)
-                           .AddAttribute(0, "justifyLastLine", a => a.JustifyLastLine)
-                           .AddAttribute(0, "shrinkToFit", a => a.ShrinkToFit)
-                           .AddAttribute(0, "readingOrder", a => a.ReadingOrder)
-                           .AddAttribute(0, "mergeCell", a => a.MergeCell);
+.AddAttribute(0, "horizontal", a => a.Horizontal)
+.AddAttribute(0, "vertical", a => a.Vertical)
+.AddAttribute(0, "textRotation", a => a.TextRotation)
+.AddAttribute(0, "wrapText", a => a.WrapText)
+.AddAttribute(0, "indent", a => a.Indent)
+.AddAttribute(0, "relativeIndent", a => a.RelativeIndent)
+.AddAttribute(0, "justifyLastLine", a => a.JustifyLastLine)
+.AddAttribute(0, "shrinkToFit", a => a.ShrinkToFit)
+.AddAttribute(0, "readingOrder", a => a.ReadingOrder)
+.AddAttribute(0, "mergeCell", a => a.MergeCell);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -28992,8 +29337,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:protection.</para>
     /// </summary>
-    [SchemaAttr(22, "protection")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Protection : OpenXmlLeafElement
     {
         /// <summary>
@@ -29026,9 +29369,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "protection");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Protection>()
-                           .AddAttribute(0, "locked", a => a.Locked)
-                           .AddAttribute(0, "hidden", a => a.Hidden);
+.AddAttribute(0, "locked", a => a.Locked)
+.AddAttribute(0, "hidden", a => a.Hidden);
         }
 
         /// <inheritdoc/>
@@ -29075,8 +29420,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(FontFamilyNumbering))]
     [ChildElementInfo(typeof(FontCharSet))]
     [ChildElementInfo(typeof(FontScheme))]
-    [SchemaAttr(22, "font")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Font : OpenXmlCompositeElement
     {
         /// <summary>
@@ -29108,6 +29451,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Font(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "font");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -29344,8 +29694,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(PatternFill))]
     [ChildElementInfo(typeof(GradientFill))]
-    [SchemaAttr(22, "fill")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Fill : OpenXmlCompositeElement
     {
         /// <summary>
@@ -29377,6 +29725,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Fill(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "fill");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -29445,8 +29800,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(DiagonalBorder))]
     [ChildElementInfo(typeof(VerticalBorder))]
     [ChildElementInfo(typeof(HorizontalBorder))]
-    [SchemaAttr(22, "border")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Border : OpenXmlCompositeElement
     {
         /// <summary>
@@ -29513,10 +29866,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "border");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Border>()
-                           .AddAttribute(0, "diagonalUp", a => a.DiagonalUp)
-                           .AddAttribute(0, "diagonalDown", a => a.DiagonalDown)
-                           .AddAttribute(0, "outline", a => a.Outline);
+.AddAttribute(0, "diagonalUp", a => a.DiagonalUp)
+.AddAttribute(0, "diagonalDown", a => a.DiagonalDown)
+.AddAttribute(0, "outline", a => a.Outline);
         }
 
         /// <summary>
@@ -29667,8 +30022,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(RgbColor))]
-    [SchemaAttr(22, "indexedColors")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class IndexedColors : OpenXmlCompositeElement
     {
         /// <summary>
@@ -29702,6 +30055,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "indexedColors");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RgbColor), 1, 64)
@@ -29725,8 +30085,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Color))]
-    [SchemaAttr(22, "mruColors")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MruColors : OpenXmlCompositeElement
     {
         /// <summary>
@@ -29760,6 +30118,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "mruColors");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 1, 10)
@@ -29783,8 +30148,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(TableStyleElement))]
-    [SchemaAttr(22, "tableStyle")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TableStyle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -29861,14 +30224,16 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "tableStyle");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<TableStyle>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "pivot", a => a.Pivot)
-                           .AddAttribute(0, "table", a => a.Table)
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "pivot", a => a.Pivot)
+.AddAttribute(0, "table", a => a.Table)
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -29893,8 +30258,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rgbColor.</para>
     /// </summary>
-    [SchemaAttr(22, "rgbColor")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RgbColor : OpenXmlLeafElement
     {
         /// <summary>
@@ -29917,11 +30280,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "rgbColor");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RgbColor>()
-                           .AddAttribute(0, "rgb", a => a.Rgb, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
-                           });
+.AddAttribute(0, "rgb", a => a.Rgb, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+});
         }
 
         /// <inheritdoc/>
@@ -29940,8 +30305,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "cellStyle")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CellStyle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -30038,16 +30401,18 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "cellStyle");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CellStyle>()
-                           .AddAttribute(0, "name", a => a.Name)
-                           .AddAttribute(0, "xfId", a => a.FormatId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "builtinId", a => a.BuiltinId)
-                           .AddAttribute(0, "iLevel", a => a.OutlineLevel)
-                           .AddAttribute(0, "hidden", a => a.Hidden)
-                           .AddAttribute(0, "customBuiltin", a => a.CustomBuiltin);
+.AddAttribute(0, "name", a => a.Name)
+.AddAttribute(0, "xfId", a => a.FormatId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "builtinId", a => a.BuiltinId)
+.AddAttribute(0, "iLevel", a => a.OutlineLevel)
+.AddAttribute(0, "hidden", a => a.Hidden)
+.AddAttribute(0, "customBuiltin", a => a.CustomBuiltin);
         }
 
         /// <summary>
@@ -30100,8 +30465,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(Alignment))]
     [ChildElementInfo(typeof(Protection))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "xf")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CellFormat : OpenXmlCompositeElement
     {
         /// <summary>
@@ -30268,20 +30631,22 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "xf");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CellFormat>()
-                           .AddAttribute(0, "numFmtId", a => a.NumberFormatId)
-                           .AddAttribute(0, "fontId", a => a.FontId)
-                           .AddAttribute(0, "fillId", a => a.FillId)
-                           .AddAttribute(0, "borderId", a => a.BorderId)
-                           .AddAttribute(0, "xfId", a => a.FormatId)
-                           .AddAttribute(0, "quotePrefix", a => a.QuotePrefix)
-                           .AddAttribute(0, "pivotButton", a => a.PivotButton)
-                           .AddAttribute(0, "applyNumberFormat", a => a.ApplyNumberFormat)
-                           .AddAttribute(0, "applyFont", a => a.ApplyFont)
-                           .AddAttribute(0, "applyFill", a => a.ApplyFill)
-                           .AddAttribute(0, "applyBorder", a => a.ApplyBorder)
-                           .AddAttribute(0, "applyAlignment", a => a.ApplyAlignment)
-                           .AddAttribute(0, "applyProtection", a => a.ApplyProtection);
+.AddAttribute(0, "numFmtId", a => a.NumberFormatId)
+.AddAttribute(0, "fontId", a => a.FontId)
+.AddAttribute(0, "fillId", a => a.FillId)
+.AddAttribute(0, "borderId", a => a.BorderId)
+.AddAttribute(0, "xfId", a => a.FormatId)
+.AddAttribute(0, "quotePrefix", a => a.QuotePrefix)
+.AddAttribute(0, "pivotButton", a => a.PivotButton)
+.AddAttribute(0, "applyNumberFormat", a => a.ApplyNumberFormat)
+.AddAttribute(0, "applyFont", a => a.ApplyFont)
+.AddAttribute(0, "applyFill", a => a.ApplyFill)
+.AddAttribute(0, "applyBorder", a => a.ApplyBorder)
+.AddAttribute(0, "applyAlignment", a => a.ApplyAlignment)
+.AddAttribute(0, "applyProtection", a => a.ApplyProtection);
         }
 
         /// <summary>
@@ -30351,8 +30716,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:name.</para>
     /// </summary>
-    [SchemaAttr(22, "name")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FontName : OpenXmlLeafElement
     {
         /// <summary>
@@ -30375,12 +30738,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "name");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<FontName>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L) });
-                           });
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L) });
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -30398,8 +30763,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:family.</para>
     /// </summary>
-    [SchemaAttr(22, "family")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FontFamilyNumbering : OpenXmlLeafElement
     {
         /// <summary>
@@ -30422,12 +30785,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "family");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<FontFamilyNumbering>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (5L) });
-                           });
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (5L) });
+});
         }
 
         /// <inheritdoc/>
@@ -30439,8 +30804,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:charset.</para>
     /// </summary>
-    [SchemaAttr(22, "charset")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FontCharSet : OpenXmlLeafElement
     {
         /// <summary>
@@ -30463,12 +30826,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "charset");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<FontCharSet>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (255L) });
-                           });
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (255L) });
+});
         }
 
         /// <inheritdoc/>
@@ -30480,8 +30845,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:tableStyleElement.</para>
     /// </summary>
-    [SchemaAttr(22, "tableStyleElement")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TableStyleElement : OpenXmlLeafElement
     {
         /// <summary>
@@ -30524,13 +30887,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "tableStyleElement");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<TableStyleElement>()
-                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "size", a => a.Size)
-                           .AddAttribute(0, "dxfId", a => a.FormatId);
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "size", a => a.Size)
+.AddAttribute(0, "dxfId", a => a.FormatId);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -30556,8 +30921,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(SheetName))]
-    [SchemaAttr(22, "sheetNames")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SheetNames : OpenXmlCompositeElement
     {
         /// <summary>
@@ -30591,6 +30954,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "sheetNames");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetName), 1, 65534)
@@ -30614,8 +30984,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExternalDefinedName))]
-    [SchemaAttr(22, "definedNames")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ExternalDefinedNames : OpenXmlCompositeElement
     {
         /// <summary>
@@ -30649,6 +31017,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "definedNames");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalDefinedName), 0, 0)
@@ -30672,8 +31047,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExternalSheetData))]
-    [SchemaAttr(22, "sheetDataSet")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SheetDataSet : OpenXmlCompositeElement
     {
         /// <summary>
@@ -30707,6 +31080,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "sheetDataSet");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalSheetData), 1, 0)
@@ -30723,8 +31103,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:definedName.</para>
     /// </summary>
-    [SchemaAttr(22, "definedName")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ExternalDefinedName : OpenXmlLeafElement
     {
         /// <summary>
@@ -30767,13 +31145,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "definedName");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ExternalDefinedName>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "refersTo", a => a.RefersTo)
-                           .AddAttribute(0, "sheetId", a => a.SheetId);
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "refersTo", a => a.RefersTo)
+.AddAttribute(0, "sheetId", a => a.SheetId);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -30798,8 +31178,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExternalRow))]
-    [SchemaAttr(22, "sheetData")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ExternalSheetData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -30856,12 +31234,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "sheetData");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ExternalSheetData>()
-                           .AddAttribute(0, "sheetId", a => a.SheetId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "refreshError", a => a.RefreshError);
+.AddAttribute(0, "sheetId", a => a.SheetId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "refreshError", a => a.RefreshError);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -30893,8 +31273,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExternalCell))]
-    [SchemaAttr(22, "row")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ExternalRow : OpenXmlCompositeElement
     {
         /// <summary>
@@ -30941,11 +31319,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "row");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ExternalRow>()
-                           .AddAttribute(0, "r", a => a.RowIndex, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "r", a => a.RowIndex, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -30977,8 +31357,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Xstring))]
-    [SchemaAttr(22, "cell")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ExternalCell : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31045,13 +31423,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "cell");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ExternalCell>()
-                           .AddAttribute(0, "r", a => a.CellReference, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "t", a => a.DataType)
-                           .AddAttribute(0, "vm", a => a.ValueMetaIndex);
+.AddAttribute(0, "r", a => a.CellReference, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "t", a => a.DataType)
+.AddAttribute(0, "vm", a => a.ValueMetaIndex);
         }
 
         /// <summary>
@@ -31097,8 +31477,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DdeItem))]
-    [SchemaAttr(22, "ddeItems")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DdeItems : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31132,6 +31510,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "ddeItems");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DdeItem), 0, 0)
@@ -31155,8 +31540,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Values))]
-    [SchemaAttr(22, "ddeItem")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DdeItem : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31233,11 +31616,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "ddeItem");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DdeItem>()
-                           .AddAttribute(0, "name", a => a.Name)
-                           .AddAttribute(0, "ole", a => a.UseOle)
-                           .AddAttribute(0, "advise", a => a.Advise)
-                           .AddAttribute(0, "preferPic", a => a.PreferPicture);
+.AddAttribute(0, "name", a => a.Name)
+.AddAttribute(0, "ole", a => a.UseOle)
+.AddAttribute(0, "advise", a => a.Advise)
+.AddAttribute(0, "preferPic", a => a.PreferPicture);
         }
 
         /// <summary>
@@ -31283,8 +31668,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Value))]
-    [SchemaAttr(22, "values")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Values : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31341,9 +31724,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "values");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Values>()
-                           .AddAttribute(0, "rows", a => a.Rows)
-                           .AddAttribute(0, "cols", a => a.Columns);
+.AddAttribute(0, "rows", a => a.Rows)
+.AddAttribute(0, "cols", a => a.Columns);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -31376,8 +31761,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DdeLinkValue))]
-    [SchemaAttr(22, "value")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Value : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31424,8 +31807,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "value");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Value>()
-                           .AddAttribute(0, "t", a => a.ValueType);
+.AddAttribute(0, "t", a => a.ValueType);
         }
 
         /// <summary>
@@ -31466,8 +31851,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(OleItem))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.OleItem), FileFormatVersions.Office2010)]
-    [SchemaAttr(22, "oleItems")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OleItems : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31501,6 +31884,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "oleItems");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OleItem), 1, 1),
@@ -31529,8 +31919,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(SheetNames))]
     [ChildElementInfo(typeof(ExternalDefinedNames))]
     [ChildElementInfo(typeof(SheetDataSet))]
-    [SchemaAttr(22, "externalBook")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ExternalBook : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31580,11 +31968,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "externalBook");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ExternalBook>()
-                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -31651,8 +32041,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DdeItems))]
-    [SchemaAttr(22, "ddeLink")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DdeLink : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31709,15 +32097,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "ddeLink");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DdeLink>()
-                           .AddAttribute(0, "ddeService", a => a.DdeService, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "ddeTopic", a => a.DdeTopic, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "ddeService", a => a.DdeService, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "ddeTopic", a => a.DdeTopic, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -31763,8 +32153,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(OleItems))]
-    [SchemaAttr(22, "oleLink")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OleLink : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31824,15 +32212,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "oleLink");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<OleLink>()
-                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "progId", a => a.ProgId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "progId", a => a.ProgId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -31870,8 +32260,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sheetName.</para>
     /// </summary>
-    [SchemaAttr(22, "sheetName")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SheetName : OpenXmlLeafElement
     {
         /// <summary>
@@ -31894,8 +32282,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "sheetName");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SheetName>()
-                           .AddAttribute(0, "val", a => a.Val);
+.AddAttribute(0, "val", a => a.Val);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -31913,8 +32303,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:v.</para>
     /// </summary>
-    [SchemaAttr(22, "v")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Xstring : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -31935,6 +32323,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
             return new StringValue { InnerText = text };
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "v");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -31959,8 +32354,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(TotalsRowFormula))]
     [ChildElementInfo(typeof(XmlColumnProperties))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "tableColumn")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TableColumn : OpenXmlCompositeElement
     {
         /// <summary>
@@ -32117,25 +32510,27 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "tableColumn");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<TableColumn>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "uniqueName", a => a.UniqueName)
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "totalsRowFunction", a => a.TotalsRowFunction)
-                           .AddAttribute(0, "totalsRowLabel", a => a.TotalsRowLabel)
-                           .AddAttribute(0, "queryTableFieldId", a => a.QueryTableFieldId)
-                           .AddAttribute(0, "headerRowDxfId", a => a.HeaderRowDifferentialFormattingId)
-                           .AddAttribute(0, "dataDxfId", a => a.DataFormatId)
-                           .AddAttribute(0, "totalsRowDxfId", a => a.TotalsRowDifferentialFormattingId)
-                           .AddAttribute(0, "headerRowCellStyle", a => a.HeaderRowCellStyle)
-                           .AddAttribute(0, "dataCellStyle", a => a.DataCellStyle)
-                           .AddAttribute(0, "totalsRowCellStyle", a => a.TotalsRowCellStyle);
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "uniqueName", a => a.UniqueName)
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "totalsRowFunction", a => a.TotalsRowFunction)
+.AddAttribute(0, "totalsRowLabel", a => a.TotalsRowLabel)
+.AddAttribute(0, "queryTableFieldId", a => a.QueryTableFieldId)
+.AddAttribute(0, "headerRowDxfId", a => a.HeaderRowDifferentialFormattingId)
+.AddAttribute(0, "dataDxfId", a => a.DataFormatId)
+.AddAttribute(0, "totalsRowDxfId", a => a.TotalsRowDifferentialFormattingId)
+.AddAttribute(0, "headerRowCellStyle", a => a.HeaderRowCellStyle)
+.AddAttribute(0, "dataCellStyle", a => a.DataCellStyle)
+.AddAttribute(0, "totalsRowCellStyle", a => a.TotalsRowCellStyle);
         }
 
         /// <summary>
@@ -32228,8 +32623,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:calculatedColumnFormula.</para>
     /// </summary>
-    [SchemaAttr(22, "calculatedColumnFormula")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CalculatedColumnFormula : TableFormulaType
     {
         /// <summary>
@@ -32252,6 +32645,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "calculatedColumnFormula");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CalculatedColumnFormula>(deep);
     }
@@ -32261,8 +32661,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:totalsRowFormula.</para>
     /// </summary>
-    [SchemaAttr(22, "totalsRowFormula")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TotalsRowFormula : TableFormulaType
     {
         /// <summary>
@@ -32283,6 +32681,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
             return new StringValue { InnerText = text };
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "totalsRowFormula");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -32360,8 +32765,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "xmlColumnPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class XmlColumnProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -32438,20 +32841,22 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "xmlColumnPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<XmlColumnProperties>()
-                           .AddAttribute(0, "mapId", a => a.MapId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "xpath", a => a.XPath, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "denormalized", a => a.Denormalized)
-                           .AddAttribute(0, "xmlDataType", a => a.XmlDataType, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "mapId", a => a.MapId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "xpath", a => a.XPath, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "denormalized", a => a.Denormalized)
+.AddAttribute(0, "xmlDataType", a => a.XmlDataType, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -32498,8 +32903,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Main))]
-    [SchemaAttr(22, "volType")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VolatileType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -32546,11 +32949,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "volType");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<VolatileType>()
-                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -32576,8 +32981,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Topic))]
-    [SchemaAttr(22, "main")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Main : OpenXmlCompositeElement
     {
         /// <summary>
@@ -32624,11 +33027,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "main");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Main>()
-                           .AddAttribute(0, "first", a => a.First, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "first", a => a.First, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -32664,8 +33069,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(Xstring))]
     [ChildElementInfo(typeof(Subtopic))]
     [ChildElementInfo(typeof(TopicReferences))]
-    [SchemaAttr(22, "tp")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Topic : OpenXmlCompositeElement
     {
         /// <summary>
@@ -32712,8 +33115,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "tp");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Topic>()
-                           .AddAttribute(0, "t", a => a.ValueType);
+.AddAttribute(0, "t", a => a.ValueType);
         }
 
         /// <summary>
@@ -32747,8 +33152,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:tr.</para>
     /// </summary>
-    [SchemaAttr(22, "tr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TopicReferences : OpenXmlLeafElement
     {
         /// <summary>
@@ -32781,15 +33184,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "tr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<TopicReferences>()
-                           .AddAttribute(0, "r", a => a.CellReference, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "s", a => a.SheetId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "r", a => a.CellReference, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "s", a => a.SheetId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -32807,8 +33212,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:pivotCache.</para>
     /// </summary>
-    [SchemaAttr(22, "pivotCache")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PivotCache : OpenXmlLeafElement
     {
         /// <summary>
@@ -32844,15 +33247,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "pivotCache");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PivotCache>()
-                           .AddAttribute(0, "cacheId", a => a.CacheId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "cacheId", a => a.CacheId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -32871,8 +33276,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:webPublishObject.</para>
     /// </summary>
-    [SchemaAttr(22, "webPublishObject")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class WebPublishObject : OpenXmlLeafElement
     {
         /// <summary>
@@ -32945,22 +33348,24 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "webPublishObject");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<WebPublishObject>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "divId", a => a.DivId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "sourceObject", a => a.SourceObject)
-                           .AddAttribute(0, "destinationFile", a => a.DestinationFile, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "title", a => a.Title)
-                           .AddAttribute(0, "autoRepublish", a => a.AutoRepublish);
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "divId", a => a.DivId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "sourceObject", a => a.SourceObject)
+.AddAttribute(0, "destinationFile", a => a.DestinationFile, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "title", a => a.Title)
+.AddAttribute(0, "autoRepublish", a => a.AutoRepublish);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -32982,8 +33387,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:externalReference.</para>
     /// </summary>
-    [SchemaAttr(22, "externalReference")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ExternalReference : OpenXmlLeafElement
     {
         /// <summary>
@@ -33009,11 +33412,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "externalReference");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ExternalReference>()
-                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -33032,8 +33437,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "customWorkbookView")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CustomWorkbookView : OpenXmlCompositeElement
     {
         /// <summary>
@@ -33310,41 +33713,43 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "customWorkbookView");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CustomWorkbookView>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "guid", a => a.Guid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "autoUpdate", a => a.AutoUpdate)
-                           .AddAttribute(0, "mergeInterval", a => a.MergeInterval)
-                           .AddAttribute(0, "changesSavedWin", a => a.ChangesSavedWin)
-                           .AddAttribute(0, "onlySync", a => a.OnlySync)
-                           .AddAttribute(0, "personalView", a => a.PersonalView)
-                           .AddAttribute(0, "includePrintSettings", a => a.IncludePrintSettings)
-                           .AddAttribute(0, "includeHiddenRowCol", a => a.IncludeHiddenRowColumn)
-                           .AddAttribute(0, "maximized", a => a.Maximized)
-                           .AddAttribute(0, "minimized", a => a.Minimized)
-                           .AddAttribute(0, "showHorizontalScroll", a => a.ShowHorizontalScroll)
-                           .AddAttribute(0, "showVerticalScroll", a => a.ShowVerticalScroll)
-                           .AddAttribute(0, "showSheetTabs", a => a.ShowSheetTabs)
-                           .AddAttribute(0, "xWindow", a => a.XWindow)
-                           .AddAttribute(0, "yWindow", a => a.YWindow)
-                           .AddAttribute(0, "windowWidth", a => a.WindowWidth)
-                           .AddAttribute(0, "windowHeight", a => a.WindowHeight)
-                           .AddAttribute(0, "tabRatio", a => a.TabRatio)
-                           .AddAttribute(0, "activeSheetId", a => a.ActiveSheetId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "showFormulaBar", a => a.ShowFormulaBar)
-                           .AddAttribute(0, "showStatusbar", a => a.ShowStatusbar)
-                           .AddAttribute(0, "showComments", a => a.ShowComments)
-                           .AddAttribute(0, "showObjects", a => a.ShowObjects);
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "guid", a => a.Guid, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "autoUpdate", a => a.AutoUpdate)
+.AddAttribute(0, "mergeInterval", a => a.MergeInterval)
+.AddAttribute(0, "changesSavedWin", a => a.ChangesSavedWin)
+.AddAttribute(0, "onlySync", a => a.OnlySync)
+.AddAttribute(0, "personalView", a => a.PersonalView)
+.AddAttribute(0, "includePrintSettings", a => a.IncludePrintSettings)
+.AddAttribute(0, "includeHiddenRowCol", a => a.IncludeHiddenRowColumn)
+.AddAttribute(0, "maximized", a => a.Maximized)
+.AddAttribute(0, "minimized", a => a.Minimized)
+.AddAttribute(0, "showHorizontalScroll", a => a.ShowHorizontalScroll)
+.AddAttribute(0, "showVerticalScroll", a => a.ShowVerticalScroll)
+.AddAttribute(0, "showSheetTabs", a => a.ShowSheetTabs)
+.AddAttribute(0, "xWindow", a => a.XWindow)
+.AddAttribute(0, "yWindow", a => a.YWindow)
+.AddAttribute(0, "windowWidth", a => a.WindowWidth)
+.AddAttribute(0, "windowHeight", a => a.WindowHeight)
+.AddAttribute(0, "tabRatio", a => a.TabRatio)
+.AddAttribute(0, "activeSheetId", a => a.ActiveSheetId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "showFormulaBar", a => a.ShowFormulaBar)
+.AddAttribute(0, "showStatusbar", a => a.ShowStatusbar)
+.AddAttribute(0, "showComments", a => a.ShowComments)
+.AddAttribute(0, "showObjects", a => a.ShowObjects);
         }
 
         /// <summary>
@@ -33386,8 +33791,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sheet.</para>
     /// </summary>
-    [SchemaAttr(22, "sheet")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Sheet : OpenXmlLeafElement
     {
         /// <summary>
@@ -33443,20 +33846,22 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "sheet");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Sheet>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "sheetId", a => a.SheetId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "state", a => a.State)
-                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "sheetId", a => a.SheetId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "state", a => a.State)
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -33487,8 +33892,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "workbookView")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class WorkbookView : OpenXmlCompositeElement
     {
         /// <summary>
@@ -33655,20 +34058,22 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "workbookView");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<WorkbookView>()
-                           .AddAttribute(0, "visibility", a => a.Visibility)
-                           .AddAttribute(0, "minimized", a => a.Minimized)
-                           .AddAttribute(0, "showHorizontalScroll", a => a.ShowHorizontalScroll)
-                           .AddAttribute(0, "showVerticalScroll", a => a.ShowVerticalScroll)
-                           .AddAttribute(0, "showSheetTabs", a => a.ShowSheetTabs)
-                           .AddAttribute(0, "xWindow", a => a.XWindow)
-                           .AddAttribute(0, "yWindow", a => a.YWindow)
-                           .AddAttribute(0, "windowWidth", a => a.WindowWidth)
-                           .AddAttribute(0, "windowHeight", a => a.WindowHeight)
-                           .AddAttribute(0, "tabRatio", a => a.TabRatio)
-                           .AddAttribute(0, "firstSheet", a => a.FirstSheet)
-                           .AddAttribute(0, "activeTab", a => a.ActiveTab)
-                           .AddAttribute(0, "autoFilterDateGrouping", a => a.AutoFilterDateGrouping);
+.AddAttribute(0, "visibility", a => a.Visibility)
+.AddAttribute(0, "minimized", a => a.Minimized)
+.AddAttribute(0, "showHorizontalScroll", a => a.ShowHorizontalScroll)
+.AddAttribute(0, "showVerticalScroll", a => a.ShowVerticalScroll)
+.AddAttribute(0, "showSheetTabs", a => a.ShowSheetTabs)
+.AddAttribute(0, "xWindow", a => a.XWindow)
+.AddAttribute(0, "yWindow", a => a.YWindow)
+.AddAttribute(0, "windowWidth", a => a.WindowWidth)
+.AddAttribute(0, "windowHeight", a => a.WindowHeight)
+.AddAttribute(0, "tabRatio", a => a.TabRatio)
+.AddAttribute(0, "firstSheet", a => a.FirstSheet)
+.AddAttribute(0, "activeTab", a => a.ActiveTab)
+.AddAttribute(0, "autoFilterDateGrouping", a => a.AutoFilterDateGrouping);
         }
 
         /// <summary>
@@ -33709,8 +34114,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:definedName.</para>
     /// </summary>
-    [SchemaAttr(22, "definedName")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DefinedName : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -33886,25 +34289,27 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "definedName");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DefinedName>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "comment", a => a.Comment)
-                           .AddAttribute(0, "customMenu", a => a.CustomMenu)
-                           .AddAttribute(0, "description", a => a.Description)
-                           .AddAttribute(0, "help", a => a.Help)
-                           .AddAttribute(0, "statusBar", a => a.StatusBar)
-                           .AddAttribute(0, "localSheetId", a => a.LocalSheetId)
-                           .AddAttribute(0, "hidden", a => a.Hidden)
-                           .AddAttribute(0, "function", a => a.Function)
-                           .AddAttribute(0, "vbProcedure", a => a.VbProcedure)
-                           .AddAttribute(0, "xlm", a => a.Xlm)
-                           .AddAttribute(0, "functionGroupId", a => a.FunctionGroupId)
-                           .AddAttribute(0, "shortcutKey", a => a.ShortcutKey)
-                           .AddAttribute(0, "publishToServer", a => a.PublishToServer)
-                           .AddAttribute(0, "workbookParameter", a => a.WorkbookParameter);
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "comment", a => a.Comment)
+.AddAttribute(0, "customMenu", a => a.CustomMenu)
+.AddAttribute(0, "description", a => a.Description)
+.AddAttribute(0, "help", a => a.Help)
+.AddAttribute(0, "statusBar", a => a.StatusBar)
+.AddAttribute(0, "localSheetId", a => a.LocalSheetId)
+.AddAttribute(0, "hidden", a => a.Hidden)
+.AddAttribute(0, "function", a => a.Function)
+.AddAttribute(0, "vbProcedure", a => a.VbProcedure)
+.AddAttribute(0, "xlm", a => a.Xlm)
+.AddAttribute(0, "functionGroupId", a => a.FunctionGroupId)
+.AddAttribute(0, "shortcutKey", a => a.ShortcutKey)
+.AddAttribute(0, "publishToServer", a => a.PublishToServer)
+.AddAttribute(0, "workbookParameter", a => a.WorkbookParameter);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -33924,8 +34329,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:functionGroup.</para>
     /// </summary>
-    [SchemaAttr(22, "functionGroup")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FunctionGroup : OpenXmlLeafElement
     {
         /// <summary>
@@ -33948,11 +34351,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "functionGroup");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<FunctionGroup>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -33977,8 +34382,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Table), FileFormatVersions.Office2010)]
-    [SchemaAttr(22, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TableExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -34025,12 +34428,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<TableExtension>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -34059,8 +34464,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(FromMarker), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(ToMarker), FileFormatVersions.Office2010)]
-    [SchemaAttr(22, "anchor")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ObjectAnchor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -34127,10 +34530,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "anchor");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<ObjectAnchor>()
-                           .AddAttribute(0, "moveWithCells", a => a.MoveWithCells)
-                           .AddAttribute(0, "sizeWithCells", a => a.SizeWithCells)
-                           .AddAttribute(0, "z-order", a => a.ZOrder);
+.AddAttribute(0, "moveWithCells", a => a.MoveWithCells)
+.AddAttribute(0, "sizeWithCells", a => a.SizeWithCells)
+.AddAttribute(0, "z-order", a => a.ZOrder);
         }
 
         /// <summary>
@@ -34185,8 +34590,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset &lt;xdr:rowOff></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(22, "from")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class FromMarker : MarkerType
     {
         /// <summary>
@@ -34220,6 +34623,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "from");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId), 1, 1),
@@ -34248,8 +34658,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset &lt;xdr:rowOff></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(22, "to")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ToMarker : MarkerType
     {
         /// <summary>
@@ -34281,6 +34689,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ToMarker(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "to");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -34348,6 +34763,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+        }
+
         /// <summary>
         /// <para>Column).</para>
         /// <para>Represents the following element tag in the schema: xdr:col.</para>
@@ -34413,8 +34833,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Id), FileFormatVersions.Office2010)]
-    [SchemaAttr(22, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ConditionalFormattingRuleExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -34461,12 +34879,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ConditionalFormattingRuleExtension>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -34493,8 +34913,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotHierarchy), FileFormatVersions.Office2010)]
-    [SchemaAttr(22, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PivotHierarchyExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -34541,12 +34959,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PivotHierarchyExtension>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -34573,8 +34993,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotField), FileFormatVersions.Office2010)]
-    [SchemaAttr(22, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PivotFieldExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -34621,12 +35039,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PivotFieldExtension>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -34653,8 +35073,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.SourceConnection), FileFormatVersions.Office2010)]
-    [SchemaAttr(22, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CacheSourceExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -34701,12 +35119,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CacheSourceExtension>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -34733,8 +35153,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(TableColumn))]
-    [SchemaAttr(22, "tableColumns")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TableColumns : OpenXmlCompositeElement
     {
         /// <summary>
@@ -34781,8 +35199,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "tableColumns");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<TableColumns>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -34801,8 +35221,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:tableStyleInfo.</para>
     /// </summary>
-    [SchemaAttr(22, "tableStyleInfo")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TableStyleInfo : OpenXmlLeafElement
     {
         /// <summary>
@@ -34865,12 +35283,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "tableStyleInfo");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<TableStyleInfo>()
-                           .AddAttribute(0, "name", a => a.Name)
-                           .AddAttribute(0, "showFirstColumn", a => a.ShowFirstColumn)
-                           .AddAttribute(0, "showLastColumn", a => a.ShowLastColumn)
-                           .AddAttribute(0, "showRowStripes", a => a.ShowRowStripes)
-                           .AddAttribute(0, "showColumnStripes", a => a.ShowColumnStripes);
+.AddAttribute(0, "name", a => a.Name)
+.AddAttribute(0, "showFirstColumn", a => a.ShowFirstColumn)
+.AddAttribute(0, "showLastColumn", a => a.ShowLastColumn)
+.AddAttribute(0, "showRowStripes", a => a.ShowRowStripes)
+.AddAttribute(0, "showColumnStripes", a => a.ShowColumnStripes);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -34895,8 +35315,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(TableExtension))]
-    [SchemaAttr(22, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TableExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -34930,6 +35348,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableExtension), 0, 0)
@@ -34946,8 +35371,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:oleItem.</para>
     /// </summary>
-    [SchemaAttr(22, "oleItem")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OleItem : OpenXmlLeafElement
     {
         /// <summary>
@@ -35000,14 +35423,16 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "oleItem");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<OleItem>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "icon", a => a.Icon)
-                           .AddAttribute(0, "advise", a => a.Advise)
-                           .AddAttribute(0, "preferPic", a => a.PreferPicture);
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "icon", a => a.Icon)
+.AddAttribute(0, "advise", a => a.Advise)
+.AddAttribute(0, "preferPic", a => a.PreferPicture);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -35032,8 +35457,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description>Color &lt;x:color></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(22, "start")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class StartBorder : BorderPropertiesType
     {
         /// <summary>
@@ -35067,6 +35490,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "start");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
@@ -35089,8 +35519,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description>Color &lt;x:color></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(22, "end")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class EndBorder : BorderPropertiesType
     {
         /// <summary>
@@ -35124,6 +35552,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "end");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
@@ -35146,8 +35581,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description>Color &lt;x:color></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(22, "left")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LeftBorder : BorderPropertiesType
     {
         /// <summary>
@@ -35181,6 +35614,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "left");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
@@ -35203,8 +35643,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description>Color &lt;x:color></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(22, "right")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RightBorder : BorderPropertiesType
     {
         /// <summary>
@@ -35238,6 +35676,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "right");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
@@ -35260,8 +35705,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description>Color &lt;x:color></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(22, "top")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TopBorder : BorderPropertiesType
     {
         /// <summary>
@@ -35295,6 +35738,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "top");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
@@ -35317,8 +35767,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description>Color &lt;x:color></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(22, "bottom")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BottomBorder : BorderPropertiesType
     {
         /// <summary>
@@ -35352,6 +35800,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "bottom");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
@@ -35374,8 +35829,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description>Color &lt;x:color></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(22, "diagonal")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DiagonalBorder : BorderPropertiesType
     {
         /// <summary>
@@ -35409,6 +35862,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "diagonal");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
@@ -35431,8 +35891,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description>Color &lt;x:color></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(22, "vertical")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VerticalBorder : BorderPropertiesType
     {
         /// <summary>
@@ -35466,6 +35924,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "vertical");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
@@ -35488,8 +35953,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description>Color &lt;x:color></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(22, "horizontal")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HorizontalBorder : BorderPropertiesType
     {
         /// <summary>
@@ -35521,6 +35984,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public HorizontalBorder(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "horizontal");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -35622,8 +36092,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ObjectAnchor), FileFormatVersions.Office2010)]
-    [SchemaAttr(22, "controlPr")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ControlProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -35813,22 +36281,24 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "controlPr");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<ControlProperties>()
-                           .AddAttribute(0, "locked", a => a.Locked)
-                           .AddAttribute(0, "defaultSize", a => a.DefaultSize)
-                           .AddAttribute(0, "print", a => a.Print)
-                           .AddAttribute(0, "disabled", a => a.Disabled)
-                           .AddAttribute(0, "recalcAlways", a => a.RecalcAlways)
-                           .AddAttribute(0, "uiObject", a => a.UiObject)
-                           .AddAttribute(0, "autoFill", a => a.AutoFill)
-                           .AddAttribute(0, "autoLine", a => a.AutoLine)
-                           .AddAttribute(0, "autoPict", a => a.AutoPict)
-                           .AddAttribute(0, "macro", a => a.Macro)
-                           .AddAttribute(0, "altText", a => a.AltText)
-                           .AddAttribute(0, "linkedCell", a => a.LinkedCell)
-                           .AddAttribute(0, "listFillRange", a => a.ListFillRange)
-                           .AddAttribute(0, "cf", a => a.Cf)
-                           .AddAttribute(19, "id", a => a.Id);
+.AddAttribute(0, "locked", a => a.Locked)
+.AddAttribute(0, "defaultSize", a => a.DefaultSize)
+.AddAttribute(0, "print", a => a.Print)
+.AddAttribute(0, "disabled", a => a.Disabled)
+.AddAttribute(0, "recalcAlways", a => a.RecalcAlways)
+.AddAttribute(0, "uiObject", a => a.UiObject)
+.AddAttribute(0, "autoFill", a => a.AutoFill)
+.AddAttribute(0, "autoLine", a => a.AutoLine)
+.AddAttribute(0, "autoPict", a => a.AutoPict)
+.AddAttribute(0, "macro", a => a.Macro)
+.AddAttribute(0, "altText", a => a.AltText)
+.AddAttribute(0, "linkedCell", a => a.LinkedCell)
+.AddAttribute(0, "listFillRange", a => a.ListFillRange)
+.AddAttribute(0, "cf", a => a.Cf)
+.AddAttribute(19, "id", a => a.Id);
         }
 
         /// <summary>
@@ -35867,8 +36337,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ObjectAnchor), FileFormatVersions.Office2010)]
-    [SchemaAttr(22, "objectPr")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class EmbeddedObjectProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -36028,19 +36496,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "objectPr");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<EmbeddedObjectProperties>()
-                           .AddAttribute(0, "locked", a => a.Locked)
-                           .AddAttribute(0, "defaultSize", a => a.DefaultSize)
-                           .AddAttribute(0, "print", a => a.Print)
-                           .AddAttribute(0, "disabled", a => a.Disabled)
-                           .AddAttribute(0, "uiObject", a => a.UiObject)
-                           .AddAttribute(0, "autoFill", a => a.AutoFill)
-                           .AddAttribute(0, "autoLine", a => a.AutoLine)
-                           .AddAttribute(0, "autoPict", a => a.AutoPict)
-                           .AddAttribute(0, "macro", a => a.Macro)
-                           .AddAttribute(0, "altText", a => a.AltText)
-                           .AddAttribute(0, "dde", a => a.Dde)
-                           .AddAttribute(19, "id", a => a.Id);
+.AddAttribute(0, "locked", a => a.Locked)
+.AddAttribute(0, "defaultSize", a => a.DefaultSize)
+.AddAttribute(0, "print", a => a.Print)
+.AddAttribute(0, "disabled", a => a.Disabled)
+.AddAttribute(0, "uiObject", a => a.UiObject)
+.AddAttribute(0, "autoFill", a => a.AutoFill)
+.AddAttribute(0, "autoLine", a => a.AutoLine)
+.AddAttribute(0, "autoPict", a => a.AutoPict)
+.AddAttribute(0, "macro", a => a.Macro)
+.AddAttribute(0, "altText", a => a.AltText)
+.AddAttribute(0, "dde", a => a.Dde)
+.AddAttribute(19, "id", a => a.Id);
         }
 
         /// <summary>
@@ -36079,8 +36549,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(TabColor))]
-    [SchemaAttr(22, "sheetPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ChartSheetProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -36137,9 +36605,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "sheetPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ChartSheetProperties>()
-                           .AddAttribute(0, "published", a => a.Published)
-                           .AddAttribute(0, "codeName", a => a.CodeName);
+.AddAttribute(0, "published", a => a.Published)
+.AddAttribute(0, "codeName", a => a.CodeName);
         }
 
         /// <summary>
@@ -36187,8 +36657,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(ChartSheetView))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "sheetViews")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ChartSheetViews : OpenXmlCompositeElement
     {
         /// <summary>
@@ -36222,6 +36690,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "sheetViews");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ChartSheetView), 1, 0),
@@ -36239,8 +36714,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sheetProtection.</para>
     /// </summary>
-    [SchemaAttr(22, "sheetProtection")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ChartSheetProtection : OpenXmlLeafElement
     {
         /// <summary>
@@ -36323,17 +36796,19 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "sheetProtection");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ChartSheetProtection>()
-                           .AddAttribute(0, "password", a => a.Password, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
-                           })
-                           .AddAttribute(0, "algorithmName", a => a.AlgorithmName)
-                           .AddAttribute(0, "hashValue", a => a.HashValue)
-                           .AddAttribute(0, "saltValue", a => a.SaltValue)
-                           .AddAttribute(0, "spinCount", a => a.SpinCount)
-                           .AddAttribute(0, "content", a => a.Content)
-                           .AddAttribute(0, "objects", a => a.Objects);
+.AddAttribute(0, "password", a => a.Password, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
+})
+.AddAttribute(0, "algorithmName", a => a.AlgorithmName)
+.AddAttribute(0, "hashValue", a => a.HashValue)
+.AddAttribute(0, "saltValue", a => a.SaltValue)
+.AddAttribute(0, "spinCount", a => a.SpinCount)
+.AddAttribute(0, "content", a => a.Content)
+.AddAttribute(0, "objects", a => a.Objects);
         }
 
         /// <inheritdoc/>
@@ -36352,8 +36827,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CustomChartsheetView))]
-    [SchemaAttr(22, "customSheetViews")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CustomChartsheetViews : OpenXmlCompositeElement
     {
         /// <summary>
@@ -36387,6 +36860,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "customSheetViews");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomChartsheetView), 0, 0)
@@ -36403,8 +36883,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:drawing.</para>
     /// </summary>
-    [SchemaAttr(22, "drawing")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Drawing : OpenXmlLeafElement
     {
         /// <summary>
@@ -36430,11 +36908,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "drawing");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Drawing>()
-                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -36452,8 +36932,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:legacyDrawing.</para>
     /// </summary>
-    [SchemaAttr(22, "legacyDrawing")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LegacyDrawing : LegacyDrawingType
     {
         /// <summary>
@@ -36461,6 +36939,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </summary>
         public LegacyDrawing() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "legacyDrawing");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -36478,8 +36963,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:legacyDrawingHF.</para>
     /// </summary>
-    [SchemaAttr(22, "legacyDrawingHF")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LegacyDrawingHeaderFooter : LegacyDrawingType
     {
         /// <summary>
@@ -36487,6 +36970,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </summary>
         public LegacyDrawingHeaderFooter() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "legacyDrawingHF");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -36536,8 +37026,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:drawingHF.</para>
     /// </summary>
-    [SchemaAttr(22, "drawingHF")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DrawingHeaderFooter : OpenXmlLeafElement
     {
         /// <summary>
@@ -36743,29 +37231,31 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "drawingHF");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DrawingHeaderFooter>()
-                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "lho", a => a.Lho)
-                           .AddAttribute(0, "lhe", a => a.Lhe)
-                           .AddAttribute(0, "lhf", a => a.Lhf)
-                           .AddAttribute(0, "cho", a => a.Cho)
-                           .AddAttribute(0, "che", a => a.Che)
-                           .AddAttribute(0, "chf", a => a.Chf)
-                           .AddAttribute(0, "rho", a => a.Rho)
-                           .AddAttribute(0, "rhe", a => a.Rhe)
-                           .AddAttribute(0, "rhf", a => a.Rhf)
-                           .AddAttribute(0, "lfo", a => a.Lfo)
-                           .AddAttribute(0, "lfe", a => a.Lfe)
-                           .AddAttribute(0, "lff", a => a.Lff)
-                           .AddAttribute(0, "cfo", a => a.Cfo)
-                           .AddAttribute(0, "cfe", a => a.Cfe)
-                           .AddAttribute(0, "cff", a => a.Cff)
-                           .AddAttribute(0, "rfo", a => a.Rfo)
-                           .AddAttribute(0, "rfe", a => a.Rfe)
-                           .AddAttribute(0, "rff", a => a.Rff);
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "lho", a => a.Lho)
+.AddAttribute(0, "lhe", a => a.Lhe)
+.AddAttribute(0, "lhf", a => a.Lhf)
+.AddAttribute(0, "cho", a => a.Cho)
+.AddAttribute(0, "che", a => a.Che)
+.AddAttribute(0, "chf", a => a.Chf)
+.AddAttribute(0, "rho", a => a.Rho)
+.AddAttribute(0, "rhe", a => a.Rhe)
+.AddAttribute(0, "rhf", a => a.Rhf)
+.AddAttribute(0, "lfo", a => a.Lfo)
+.AddAttribute(0, "lfe", a => a.Lfe)
+.AddAttribute(0, "lff", a => a.Lff)
+.AddAttribute(0, "cfo", a => a.Cfo)
+.AddAttribute(0, "cfe", a => a.Cfe)
+.AddAttribute(0, "cff", a => a.Cff)
+.AddAttribute(0, "rfo", a => a.Rfo)
+.AddAttribute(0, "rfe", a => a.Rfe)
+.AddAttribute(0, "rff", a => a.Rff);
         }
 
         /// <inheritdoc/>
@@ -36777,8 +37267,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:picture.</para>
     /// </summary>
-    [SchemaAttr(22, "picture")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Picture : OpenXmlLeafElement
     {
         /// <summary>
@@ -36804,11 +37292,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "picture");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Picture>()
-                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -36827,8 +37317,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(WebPublishItem))]
-    [SchemaAttr(22, "webPublishItems")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class WebPublishItems : OpenXmlCompositeElement
     {
         /// <summary>
@@ -36875,8 +37363,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "webPublishItems");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<WebPublishItems>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -36904,8 +37394,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(ConditionalFormatValueObject))]
     [ChildElementInfo(typeof(Color))]
-    [SchemaAttr(22, "colorScale")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColorScale : OpenXmlCompositeElement
     {
         /// <summary>
@@ -36939,6 +37427,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "colorScale");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject), 2, 3),
@@ -36965,8 +37460,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(ConditionalFormatValueObject))]
     [ChildElementInfo(typeof(Color))]
-    [SchemaAttr(22, "dataBar")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DataBar : OpenXmlCompositeElement
     {
         /// <summary>
@@ -37033,10 +37526,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "dataBar");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DataBar>()
-                           .AddAttribute(0, "minLength", a => a.MinLength)
-                           .AddAttribute(0, "maxLength", a => a.MaxLength)
-                           .AddAttribute(0, "showValue", a => a.ShowValue);
+.AddAttribute(0, "minLength", a => a.MinLength)
+.AddAttribute(0, "maxLength", a => a.MaxLength)
+.AddAttribute(0, "showValue", a => a.ShowValue);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -37070,8 +37565,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ConditionalFormatValueObject))]
-    [SchemaAttr(22, "iconSet")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class IconSet : OpenXmlCompositeElement
     {
         /// <summary>
@@ -37148,11 +37641,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "iconSet");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<IconSet>()
-                           .AddAttribute(0, "iconSet", a => a.IconSetValue)
-                           .AddAttribute(0, "showValue", a => a.ShowValue)
-                           .AddAttribute(0, "percent", a => a.Percent)
-                           .AddAttribute(0, "reverse", a => a.Reverse);
+.AddAttribute(0, "iconSet", a => a.IconSetValue)
+.AddAttribute(0, "showValue", a => a.ShowValue)
+.AddAttribute(0, "percent", a => a.Percent)
+.AddAttribute(0, "reverse", a => a.Reverse);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -37178,8 +37673,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ConditionalFormattingRuleExtension))]
-    [SchemaAttr(22, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ConditionalFormattingRuleExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -37213,6 +37706,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRuleExtension), 0, 0)
@@ -37236,8 +37736,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DataReference))]
-    [SchemaAttr(22, "dataRefs")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DataReferences : OpenXmlCompositeElement
     {
         /// <summary>
@@ -37284,8 +37782,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "dataRefs");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DataReferences>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -37315,8 +37815,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(TabColor))]
     [ChildElementInfo(typeof(OutlineProperties))]
     [ChildElementInfo(typeof(PageSetupProperties))]
-    [SchemaAttr(22, "sheetPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SheetProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -37443,16 +37941,18 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "sheetPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SheetProperties>()
-                           .AddAttribute(0, "syncHorizontal", a => a.SyncHorizontal)
-                           .AddAttribute(0, "syncVertical", a => a.SyncVertical)
-                           .AddAttribute(0, "syncRef", a => a.SyncReference)
-                           .AddAttribute(0, "transitionEvaluation", a => a.TransitionEvaluation)
-                           .AddAttribute(0, "transitionEntry", a => a.TransitionEntry)
-                           .AddAttribute(0, "published", a => a.Published)
-                           .AddAttribute(0, "codeName", a => a.CodeName)
-                           .AddAttribute(0, "filterMode", a => a.FilterMode)
-                           .AddAttribute(0, "enableFormatConditionsCalculation", a => a.EnableFormatConditionsCalculation);
+.AddAttribute(0, "syncHorizontal", a => a.SyncHorizontal)
+.AddAttribute(0, "syncVertical", a => a.SyncVertical)
+.AddAttribute(0, "syncRef", a => a.SyncReference)
+.AddAttribute(0, "transitionEvaluation", a => a.TransitionEvaluation)
+.AddAttribute(0, "transitionEntry", a => a.TransitionEntry)
+.AddAttribute(0, "published", a => a.Published)
+.AddAttribute(0, "codeName", a => a.CodeName)
+.AddAttribute(0, "filterMode", a => a.FilterMode)
+.AddAttribute(0, "enableFormatConditionsCalculation", a => a.EnableFormatConditionsCalculation);
         }
 
         /// <summary>
@@ -37527,8 +38027,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(SheetView))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "sheetViews")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SheetViews : OpenXmlCompositeElement
     {
         /// <summary>
@@ -37562,6 +38060,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "sheetViews");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetView), 1, 0),
@@ -37579,8 +38084,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sheetFormatPr.</para>
     /// </summary>
-    [SchemaAttr(22, "sheetFormatPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SheetFormatProperties : OpenXmlLeafElement
     {
         /// <summary>
@@ -37696,23 +38199,25 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "sheetFormatPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SheetFormatProperties>()
-                           .AddAttribute(0, "baseColWidth", a => a.BaseColumnWidth)
-                           .AddAttribute(0, "defaultColWidth", a => a.DefaultColumnWidth)
-                           .AddAttribute(0, "defaultRowHeight", a => a.DefaultRowHeight, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "customHeight", a => a.CustomHeight)
-                           .AddAttribute(0, "zeroHeight", a => a.ZeroHeight)
-                           .AddAttribute(0, "thickTop", a => a.ThickTop)
-                           .AddAttribute(0, "thickBottom", a => a.ThickBottom)
-                           .AddAttribute(0, "outlineLevelRow", a => a.OutlineLevelRow)
-                           .AddAttribute(0, "outlineLevelCol", a => a.OutlineLevelColumn)
-                           .AddAttribute(55, "dyDescent", a => a.DyDescent, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-                           });
+.AddAttribute(0, "baseColWidth", a => a.BaseColumnWidth)
+.AddAttribute(0, "defaultColWidth", a => a.DefaultColumnWidth)
+.AddAttribute(0, "defaultRowHeight", a => a.DefaultRowHeight, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "customHeight", a => a.CustomHeight)
+.AddAttribute(0, "zeroHeight", a => a.ZeroHeight)
+.AddAttribute(0, "thickTop", a => a.ThickTop)
+.AddAttribute(0, "thickBottom", a => a.ThickBottom)
+.AddAttribute(0, "outlineLevelRow", a => a.OutlineLevelRow)
+.AddAttribute(0, "outlineLevelCol", a => a.OutlineLevelColumn)
+.AddAttribute(55, "dyDescent", a => a.DyDescent, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -37733,8 +38238,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sheetProtection.</para>
     /// </summary>
-    [SchemaAttr(22, "sheetProtection")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SheetProtection : OpenXmlLeafElement
     {
         /// <summary>
@@ -37957,31 +38460,33 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "sheetProtection");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SheetProtection>()
-                           .AddAttribute(0, "password", a => a.Password, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
-                           })
-                           .AddAttribute(0, "algorithmName", a => a.AlgorithmName)
-                           .AddAttribute(0, "hashValue", a => a.HashValue)
-                           .AddAttribute(0, "saltValue", a => a.SaltValue)
-                           .AddAttribute(0, "spinCount", a => a.SpinCount)
-                           .AddAttribute(0, "sheet", a => a.Sheet)
-                           .AddAttribute(0, "objects", a => a.Objects)
-                           .AddAttribute(0, "scenarios", a => a.Scenarios)
-                           .AddAttribute(0, "formatCells", a => a.FormatCells)
-                           .AddAttribute(0, "formatColumns", a => a.FormatColumns)
-                           .AddAttribute(0, "formatRows", a => a.FormatRows)
-                           .AddAttribute(0, "insertColumns", a => a.InsertColumns)
-                           .AddAttribute(0, "insertRows", a => a.InsertRows)
-                           .AddAttribute(0, "insertHyperlinks", a => a.InsertHyperlinks)
-                           .AddAttribute(0, "deleteColumns", a => a.DeleteColumns)
-                           .AddAttribute(0, "deleteRows", a => a.DeleteRows)
-                           .AddAttribute(0, "selectLockedCells", a => a.SelectLockedCells)
-                           .AddAttribute(0, "sort", a => a.Sort)
-                           .AddAttribute(0, "autoFilter", a => a.AutoFilter)
-                           .AddAttribute(0, "pivotTables", a => a.PivotTables)
-                           .AddAttribute(0, "selectUnlockedCells", a => a.SelectUnlockedCells);
+.AddAttribute(0, "password", a => a.Password, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
+})
+.AddAttribute(0, "algorithmName", a => a.AlgorithmName)
+.AddAttribute(0, "hashValue", a => a.HashValue)
+.AddAttribute(0, "saltValue", a => a.SaltValue)
+.AddAttribute(0, "spinCount", a => a.SpinCount)
+.AddAttribute(0, "sheet", a => a.Sheet)
+.AddAttribute(0, "objects", a => a.Objects)
+.AddAttribute(0, "scenarios", a => a.Scenarios)
+.AddAttribute(0, "formatCells", a => a.FormatCells)
+.AddAttribute(0, "formatColumns", a => a.FormatColumns)
+.AddAttribute(0, "formatRows", a => a.FormatRows)
+.AddAttribute(0, "insertColumns", a => a.InsertColumns)
+.AddAttribute(0, "insertRows", a => a.InsertRows)
+.AddAttribute(0, "insertHyperlinks", a => a.InsertHyperlinks)
+.AddAttribute(0, "deleteColumns", a => a.DeleteColumns)
+.AddAttribute(0, "deleteRows", a => a.DeleteRows)
+.AddAttribute(0, "selectLockedCells", a => a.SelectLockedCells)
+.AddAttribute(0, "sort", a => a.Sort)
+.AddAttribute(0, "autoFilter", a => a.AutoFilter)
+.AddAttribute(0, "pivotTables", a => a.PivotTables)
+.AddAttribute(0, "selectUnlockedCells", a => a.SelectUnlockedCells);
         }
 
         /// <inheritdoc/>
@@ -38000,8 +38505,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CustomSheetView))]
-    [SchemaAttr(22, "customSheetViews")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CustomSheetViews : OpenXmlCompositeElement
     {
         /// <summary>
@@ -38035,6 +38538,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "customSheetViews");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomSheetView), 1, 0)
@@ -38058,8 +38568,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(OleObject))]
-    [SchemaAttr(22, "oleObjects")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OleObjects : OpenXmlCompositeElement
     {
         /// <summary>
@@ -38093,6 +38601,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "oleObjects");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OleObject), 1, 65535)
@@ -38116,8 +38631,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Control))]
-    [SchemaAttr(22, "controls")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Controls : OpenXmlCompositeElement
     {
         /// <summary>
@@ -38151,6 +38664,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "controls");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Control), 1, 65535)
@@ -38167,8 +38687,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:dimension.</para>
     /// </summary>
-    [SchemaAttr(22, "dimension")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SheetDimension : OpenXmlLeafElement
     {
         /// <summary>
@@ -38191,11 +38709,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "dimension");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SheetDimension>()
-                           .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "ref", a => a.Reference, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -38214,8 +38734,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Column))]
-    [SchemaAttr(22, "cols")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Columns : OpenXmlCompositeElement
     {
         /// <summary>
@@ -38249,6 +38767,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "cols");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Column), 1, 0)
@@ -38272,8 +38797,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Row))]
-    [SchemaAttr(22, "sheetData")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SheetData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -38307,6 +38830,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "sheetData");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Row), 0, 0)
@@ -38330,8 +38860,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DataReferences))]
-    [SchemaAttr(22, "dataConsolidate")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DataConsolidate : OpenXmlCompositeElement
     {
         /// <summary>
@@ -38418,15 +38946,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "dataConsolidate");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DataConsolidate>()
-                           .AddAttribute(0, "function", a => a.Function)
-                           .AddAttribute(0, "leftLabels", a => a.LeftLabels)
-                           .AddAttribute(0, "startLabels", a => a.StartLabels, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-                           })
-                           .AddAttribute(0, "topLabels", a => a.TopLabels)
-                           .AddAttribute(0, "link", a => a.Link);
+.AddAttribute(0, "function", a => a.Function)
+.AddAttribute(0, "leftLabels", a => a.LeftLabels)
+.AddAttribute(0, "startLabels", a => a.StartLabels, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+})
+.AddAttribute(0, "topLabels", a => a.TopLabels)
+.AddAttribute(0, "link", a => a.Link);
         }
 
         /// <summary>
@@ -38467,8 +38997,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(ConditionalFormattingRule))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "conditionalFormatting")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ConditionalFormatting : OpenXmlCompositeElement
     {
         /// <summary>
@@ -38525,9 +39053,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "conditionalFormatting");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ConditionalFormatting>()
-                           .AddAttribute(0, "pivot", a => a.Pivot)
-                           .AddAttribute(0, "sqref", a => a.SequenceOfReferences);
+.AddAttribute(0, "pivot", a => a.Pivot)
+.AddAttribute(0, "sqref", a => a.SequenceOfReferences);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -38560,8 +39090,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CustomProperty))]
-    [SchemaAttr(22, "customProperties")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CustomProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -38595,6 +39123,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "customProperties");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomProperty), 1, 0)
@@ -38618,8 +39153,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(MemberProperty))]
-    [SchemaAttr(22, "mps")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MemberProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -38666,8 +39199,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "mps");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<MemberProperties>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -38693,8 +39228,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Member))]
-    [SchemaAttr(22, "members")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Members : OpenXmlCompositeElement
     {
         /// <summary>
@@ -38751,9 +39284,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "members");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Members>()
-                           .AddAttribute(0, "count", a => a.Count)
-                           .AddAttribute(0, "level", a => a.Level);
+.AddAttribute(0, "count", a => a.Count)
+.AddAttribute(0, "level", a => a.Level);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -38779,8 +39314,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(PivotHierarchyExtension))]
-    [SchemaAttr(22, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PivotHierarchyExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -38814,6 +39347,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotHierarchyExtension), 0, 0)
@@ -38837,8 +39377,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Item))]
-    [SchemaAttr(22, "items")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Items : OpenXmlCompositeElement
     {
         /// <summary>
@@ -38885,8 +39423,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "items");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Items>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -38912,8 +39452,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(PivotArea))]
-    [SchemaAttr(22, "autoSortScope")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AutoSortScope : OpenXmlCompositeElement
     {
         /// <summary>
@@ -38945,6 +39483,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public AutoSortScope(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "autoSortScope");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -38983,8 +39528,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(PivotFieldExtension))]
-    [SchemaAttr(22, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PivotFieldExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -39018,6 +39561,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtension), 0, 0)
@@ -39034,8 +39584,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:worksheetSource.</para>
     /// </summary>
-    [SchemaAttr(22, "worksheetSource")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class WorksheetSource : OpenXmlLeafElement
     {
         /// <summary>
@@ -39091,11 +39639,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "worksheetSource");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<WorksheetSource>()
-                           .AddAttribute(0, "ref", a => a.Reference)
-                           .AddAttribute(0, "name", a => a.Name)
-                           .AddAttribute(0, "sheet", a => a.Sheet)
-                           .AddAttribute(19, "id", a => a.Id);
+.AddAttribute(0, "ref", a => a.Reference)
+.AddAttribute(0, "name", a => a.Name)
+.AddAttribute(0, "sheet", a => a.Sheet)
+.AddAttribute(19, "id", a => a.Id);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -39124,8 +39674,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(Pages))]
     [ChildElementInfo(typeof(RangeSets))]
-    [SchemaAttr(22, "consolidation")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Consolidation : OpenXmlCompositeElement
     {
         /// <summary>
@@ -39172,8 +39720,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "consolidation");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Consolidation>()
-                           .AddAttribute(0, "autoPage", a => a.AutoPage);
+.AddAttribute(0, "autoPage", a => a.AutoPage);
         }
 
         /// <summary>
@@ -39226,8 +39776,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CacheSourceExtension))]
-    [SchemaAttr(22, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CacheSourceExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -39261,6 +39809,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheSourceExtension), 0, 0)
@@ -39284,8 +39839,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ObjectAnchor), FileFormatVersions.Office2010)]
-    [SchemaAttr(22, "commentPr")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class CommentProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -39472,22 +40025,24 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "commentPr");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<CommentProperties>()
-                           .AddAttribute(0, "locked", a => a.Locked)
-                           .AddAttribute(0, "defaultSize", a => a.DefaultSize)
-                           .AddAttribute(0, "print", a => a.Print)
-                           .AddAttribute(0, "disabled", a => a.Disabled)
-                           .AddAttribute(0, "uiObject", a => a.UiObject)
-                           .AddAttribute(0, "autoFill", a => a.AutoFill)
-                           .AddAttribute(0, "autoLine", a => a.AutoLine)
-                           .AddAttribute(0, "altText", a => a.AltText)
-                           .AddAttribute(0, "textHAlign", a => a.TextHAlign)
-                           .AddAttribute(0, "textVAlign", a => a.TextVAlign)
-                           .AddAttribute(0, "lockText", a => a.LockText)
-                           .AddAttribute(0, "justLastX", a => a.JustLastX)
-                           .AddAttribute(0, "autoScale", a => a.AutoScale)
-                           .AddAttribute(0, "rowHidden", a => a.RowHidden)
-                           .AddAttribute(0, "colHidden", a => a.ColHidden);
+.AddAttribute(0, "locked", a => a.Locked)
+.AddAttribute(0, "defaultSize", a => a.DefaultSize)
+.AddAttribute(0, "print", a => a.Print)
+.AddAttribute(0, "disabled", a => a.Disabled)
+.AddAttribute(0, "uiObject", a => a.UiObject)
+.AddAttribute(0, "autoFill", a => a.AutoFill)
+.AddAttribute(0, "autoLine", a => a.AutoLine)
+.AddAttribute(0, "altText", a => a.AltText)
+.AddAttribute(0, "textHAlign", a => a.TextHAlign)
+.AddAttribute(0, "textVAlign", a => a.TextVAlign)
+.AddAttribute(0, "lockText", a => a.LockText)
+.AddAttribute(0, "justLastX", a => a.JustLastX)
+.AddAttribute(0, "autoScale", a => a.AutoScale)
+.AddAttribute(0, "rowHidden", a => a.RowHidden)
+.AddAttribute(0, "colHidden", a => a.ColHidden);
         }
 
         /// <summary>
@@ -39519,8 +40074,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sortCondition.</para>
     /// </summary>
-    [SchemaAttr(22, "sortCondition")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SortCondition : OpenXmlLeafElement
     {
         /// <summary>
@@ -39603,17 +40156,19 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "sortCondition");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SortCondition>()
-                           .AddAttribute(0, "descending", a => a.Descending)
-                           .AddAttribute(0, "sortBy", a => a.SortBy)
-                           .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "customList", a => a.CustomList)
-                           .AddAttribute(0, "dxfId", a => a.FormatId)
-                           .AddAttribute(0, "iconSet", a => a.IconSet)
-                           .AddAttribute(0, "iconId", a => a.IconId);
+.AddAttribute(0, "descending", a => a.Descending)
+.AddAttribute(0, "sortBy", a => a.SortBy)
+.AddAttribute(0, "ref", a => a.Reference, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "customList", a => a.CustomList)
+.AddAttribute(0, "dxfId", a => a.FormatId)
+.AddAttribute(0, "iconSet", a => a.IconSet)
+.AddAttribute(0, "iconId", a => a.IconId);
         }
 
         /// <inheritdoc/>
@@ -39625,8 +40180,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:filter.</para>
     /// </summary>
-    [SchemaAttr(22, "filter")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Filter : OpenXmlLeafElement
     {
         /// <summary>
@@ -39649,11 +40202,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "filter");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Filter>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -39665,8 +40220,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:dateGroupItem.</para>
     /// </summary>
-    [SchemaAttr(22, "dateGroupItem")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DateGroupItem : OpenXmlLeafElement
     {
         /// <summary>
@@ -39749,20 +40302,22 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "dateGroupItem");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DateGroupItem>()
-                           .AddAttribute(0, "year", a => a.Year, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "month", a => a.Month)
-                           .AddAttribute(0, "day", a => a.Day)
-                           .AddAttribute(0, "hour", a => a.Hour)
-                           .AddAttribute(0, "minute", a => a.Minute)
-                           .AddAttribute(0, "second", a => a.Second)
-                           .AddAttribute(0, "dateTimeGrouping", a => a.DateTimeGrouping, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "year", a => a.Year, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "month", a => a.Month)
+.AddAttribute(0, "day", a => a.Day)
+.AddAttribute(0, "hour", a => a.Hour)
+.AddAttribute(0, "minute", a => a.Minute)
+.AddAttribute(0, "second", a => a.Second)
+.AddAttribute(0, "dateTimeGrouping", a => a.DateTimeGrouping, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -39796,8 +40351,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Filter), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(Filter))]
     [ChildElementInfo(typeof(DateGroupItem))]
-    [SchemaAttr(22, "filters")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Filters : OpenXmlCompositeElement
     {
         /// <summary>
@@ -39854,9 +40407,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "filters");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Filters>()
-                           .AddAttribute(0, "blank", a => a.Blank)
-                           .AddAttribute(0, "calendarType", a => a.CalendarType);
+.AddAttribute(0, "blank", a => a.Blank)
+.AddAttribute(0, "calendarType", a => a.CalendarType);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -39877,8 +40432,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:top10.</para>
     /// </summary>
-    [SchemaAttr(22, "top10")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Top10 : OpenXmlLeafElement
     {
         /// <summary>
@@ -39931,14 +40484,16 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "top10");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Top10>()
-                           .AddAttribute(0, "top", a => a.Top)
-                           .AddAttribute(0, "percent", a => a.Percent)
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "filterVal", a => a.FilterValue);
+.AddAttribute(0, "top", a => a.Top)
+.AddAttribute(0, "percent", a => a.Percent)
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "filterVal", a => a.FilterValue);
         }
 
         /// <inheritdoc/>
@@ -39957,8 +40512,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CustomFilter))]
-    [SchemaAttr(22, "customFilters")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CustomFilters : OpenXmlCompositeElement
     {
         /// <summary>
@@ -40005,8 +40558,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "customFilters");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CustomFilters>()
-                           .AddAttribute(0, "and", a => a.And);
+.AddAttribute(0, "and", a => a.And);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -40025,8 +40580,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:dynamicFilter.</para>
     /// </summary>
-    [SchemaAttr(22, "dynamicFilter")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DynamicFilter : OpenXmlLeafElement
     {
         /// <summary>
@@ -40089,21 +40642,23 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "dynamicFilter");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DynamicFilter>()
-                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "val", a => a.Val)
-                           .AddAttribute(0, "maxVal", a => a.MaxVal)
-                           .AddAttribute(0, "valIso", a => a.ValIso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-                           })
-                           .AddAttribute(0, "maxValIso", a => a.MaxValIso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-                           });
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "val", a => a.Val)
+.AddAttribute(0, "maxVal", a => a.MaxVal)
+.AddAttribute(0, "valIso", a => a.ValIso, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+})
+.AddAttribute(0, "maxValIso", a => a.MaxValIso, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+});
         }
 
         /// <inheritdoc/>
@@ -40115,8 +40670,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:colorFilter.</para>
     /// </summary>
-    [SchemaAttr(22, "colorFilter")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColorFilter : OpenXmlLeafElement
     {
         /// <summary>
@@ -40149,12 +40702,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "colorFilter");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ColorFilter>()
-                           .AddAttribute(0, "dxfId", a => a.FormatId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "cellColor", a => a.CellColor);
+.AddAttribute(0, "dxfId", a => a.FormatId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "cellColor", a => a.CellColor);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -40172,8 +40727,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:iconFilter.</para>
     /// </summary>
-    [SchemaAttr(22, "iconFilter")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class IconFilter : OpenXmlLeafElement
     {
         /// <summary>
@@ -40206,12 +40759,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "iconFilter");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<IconFilter>()
-                           .AddAttribute(0, "iconSet", a => a.IconSet, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "iconId", a => a.IconId);
+.AddAttribute(0, "iconSet", a => a.IconSet, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "iconId", a => a.IconId);
         }
 
         /// <inheritdoc/>
@@ -40234,8 +40789,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.SlicerCachePivotTables), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.TableSlicerCache), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.SlicerCacheHideItemsWithNoData), FileFormatVersions.Office2013)]
-    [SchemaAttr(22, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SlicerCacheDefinitionExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -40282,12 +40835,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SlicerCacheDefinitionExtension>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -40318,8 +40873,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotFilter), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodState), FileFormatVersions.Office2013)]
-    [SchemaAttr(22, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PivotFilterExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -40366,12 +40919,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PivotFilterExtension>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -40399,8 +40954,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.QueryTable), FileFormatVersions.Office2013)]
-    [SchemaAttr(22, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class QueryTableExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -40447,12 +41000,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<QueryTableExtension>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -40472,8 +41027,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:dbPr.</para>
     /// </summary>
-    [SchemaAttr(22, "dbPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DatabaseProperties : OpenXmlLeafElement
     {
         /// <summary>
@@ -40526,14 +41079,16 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "dbPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DatabaseProperties>()
-                           .AddAttribute(0, "connection", a => a.Connection, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "command", a => a.Command)
-                           .AddAttribute(0, "serverCommand", a => a.ServerCommand)
-                           .AddAttribute(0, "commandType", a => a.CommandType);
+.AddAttribute(0, "connection", a => a.Connection, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "command", a => a.Command)
+.AddAttribute(0, "serverCommand", a => a.ServerCommand)
+.AddAttribute(0, "commandType", a => a.CommandType);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -40552,8 +41107,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:olapPr.</para>
     /// </summary>
-    [SchemaAttr(22, "olapPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OlapProperties : OpenXmlLeafElement
     {
         /// <summary>
@@ -40656,16 +41209,18 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "olapPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<OlapProperties>()
-                           .AddAttribute(0, "local", a => a.Local)
-                           .AddAttribute(0, "localConnection", a => a.LocalConnection)
-                           .AddAttribute(0, "localRefresh", a => a.LocalRefresh)
-                           .AddAttribute(0, "sendLocale", a => a.SendLocale)
-                           .AddAttribute(0, "rowDrillCount", a => a.RowDrillCount)
-                           .AddAttribute(0, "serverFill", a => a.ServerFill)
-                           .AddAttribute(0, "serverNumberFormat", a => a.ServerNumberFormat)
-                           .AddAttribute(0, "serverFont", a => a.ServerFont)
-                           .AddAttribute(0, "serverFontColor", a => a.ServerFontColor);
+.AddAttribute(0, "local", a => a.Local)
+.AddAttribute(0, "localConnection", a => a.LocalConnection)
+.AddAttribute(0, "localRefresh", a => a.LocalRefresh)
+.AddAttribute(0, "sendLocale", a => a.SendLocale)
+.AddAttribute(0, "rowDrillCount", a => a.RowDrillCount)
+.AddAttribute(0, "serverFill", a => a.ServerFill)
+.AddAttribute(0, "serverNumberFormat", a => a.ServerNumberFormat)
+.AddAttribute(0, "serverFont", a => a.ServerFont)
+.AddAttribute(0, "serverFontColor", a => a.ServerFontColor);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -40690,8 +41245,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Tables))]
-    [SchemaAttr(22, "webPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class WebQueryProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -40858,20 +41411,22 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "webPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<WebQueryProperties>()
-                           .AddAttribute(0, "xml", a => a.XmlSource)
-                           .AddAttribute(0, "sourceData", a => a.SourceData)
-                           .AddAttribute(0, "parsePre", a => a.ParsePreTag)
-                           .AddAttribute(0, "consecutive", a => a.Consecutive)
-                           .AddAttribute(0, "firstRow", a => a.FirstRow)
-                           .AddAttribute(0, "xl97", a => a.CreatedInExcel97)
-                           .AddAttribute(0, "textDates", a => a.TextDates)
-                           .AddAttribute(0, "xl2000", a => a.RefreshedInExcel2000)
-                           .AddAttribute(0, "url", a => a.Url)
-                           .AddAttribute(0, "post", a => a.Post)
-                           .AddAttribute(0, "htmlTables", a => a.HtmlTables)
-                           .AddAttribute(0, "htmlFormat", a => a.HtmlFormat)
-                           .AddAttribute(0, "editPage", a => a.EditPage);
+.AddAttribute(0, "xml", a => a.XmlSource)
+.AddAttribute(0, "sourceData", a => a.SourceData)
+.AddAttribute(0, "parsePre", a => a.ParsePreTag)
+.AddAttribute(0, "consecutive", a => a.Consecutive)
+.AddAttribute(0, "firstRow", a => a.FirstRow)
+.AddAttribute(0, "xl97", a => a.CreatedInExcel97)
+.AddAttribute(0, "textDates", a => a.TextDates)
+.AddAttribute(0, "xl2000", a => a.RefreshedInExcel2000)
+.AddAttribute(0, "url", a => a.Url)
+.AddAttribute(0, "post", a => a.Post)
+.AddAttribute(0, "htmlTables", a => a.HtmlTables)
+.AddAttribute(0, "htmlFormat", a => a.HtmlFormat)
+.AddAttribute(0, "editPage", a => a.EditPage);
         }
 
         /// <summary>
@@ -40916,8 +41471,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(TextFields))]
-    [SchemaAttr(22, "textPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TextProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -41114,23 +41667,25 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "textPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<TextProperties>()
-                           .AddAttribute(0, "prompt", a => a.Prompt)
-                           .AddAttribute(0, "fileType", a => a.FileType)
-                           .AddAttribute(0, "codePage", a => a.CodePage)
-                           .AddAttribute(0, "characterSet", a => a.TextCharacterSet)
-                           .AddAttribute(0, "firstRow", a => a.FirstRow)
-                           .AddAttribute(0, "sourceFile", a => a.SourceFile)
-                           .AddAttribute(0, "delimited", a => a.Delimited)
-                           .AddAttribute(0, "decimal", a => a.Decimal)
-                           .AddAttribute(0, "thousands", a => a.Thousands)
-                           .AddAttribute(0, "tab", a => a.TabAsDelimiter)
-                           .AddAttribute(0, "space", a => a.Space)
-                           .AddAttribute(0, "comma", a => a.Comma)
-                           .AddAttribute(0, "semicolon", a => a.Semicolon)
-                           .AddAttribute(0, "consecutive", a => a.Consecutive)
-                           .AddAttribute(0, "qualifier", a => a.Qualifier)
-                           .AddAttribute(0, "delimiter", a => a.Delimiter);
+.AddAttribute(0, "prompt", a => a.Prompt)
+.AddAttribute(0, "fileType", a => a.FileType)
+.AddAttribute(0, "codePage", a => a.CodePage)
+.AddAttribute(0, "characterSet", a => a.TextCharacterSet)
+.AddAttribute(0, "firstRow", a => a.FirstRow)
+.AddAttribute(0, "sourceFile", a => a.SourceFile)
+.AddAttribute(0, "delimited", a => a.Delimited)
+.AddAttribute(0, "decimal", a => a.Decimal)
+.AddAttribute(0, "thousands", a => a.Thousands)
+.AddAttribute(0, "tab", a => a.TabAsDelimiter)
+.AddAttribute(0, "space", a => a.Space)
+.AddAttribute(0, "comma", a => a.Comma)
+.AddAttribute(0, "semicolon", a => a.Semicolon)
+.AddAttribute(0, "consecutive", a => a.Consecutive)
+.AddAttribute(0, "qualifier", a => a.Qualifier)
+.AddAttribute(0, "delimiter", a => a.Delimiter);
         }
 
         /// <summary>
@@ -41179,8 +41734,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Parameter))]
-    [SchemaAttr(22, "parameters")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Parameters : OpenXmlCompositeElement
     {
         /// <summary>
@@ -41227,8 +41780,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "parameters");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Parameters>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -41254,8 +41809,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ConnectionExtension))]
-    [SchemaAttr(22, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ConnectionExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -41289,6 +41842,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConnectionExtension), 0, 0)
@@ -41314,8 +41874,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Connection), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.Connection), FileFormatVersions.Office2013)]
-    [SchemaAttr(22, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ConnectionExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -41362,12 +41920,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ConnectionExtension>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -41395,8 +41955,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(TextField))]
-    [SchemaAttr(22, "textFields")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TextFields : OpenXmlCompositeElement
     {
         /// <summary>
@@ -41443,8 +42001,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "textFields");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<TextFields>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -41474,8 +42034,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(WorksheetSource))]
     [ChildElementInfo(typeof(Consolidation))]
     [ChildElementInfo(typeof(CacheSourceExtensionList))]
-    [SchemaAttr(22, "cacheSource")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CacheSource : OpenXmlCompositeElement
     {
         /// <summary>
@@ -41532,12 +42090,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "cacheSource");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CacheSource>()
-                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "connectionId", a => a.ConnectionId);
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "connectionId", a => a.ConnectionId);
         }
 
         /// <summary>
@@ -41611,8 +42171,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CacheField))]
-    [SchemaAttr(22, "cacheFields")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CacheFields : OpenXmlCompositeElement
     {
         /// <summary>
@@ -41659,8 +42217,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "cacheFields");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CacheFields>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -41686,8 +42246,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CacheHierarchy))]
-    [SchemaAttr(22, "cacheHierarchies")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CacheHierarchies : OpenXmlCompositeElement
     {
         /// <summary>
@@ -41734,8 +42292,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "cacheHierarchies");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CacheHierarchies>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -41761,8 +42321,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Kpi))]
-    [SchemaAttr(22, "kpis")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Kpis : OpenXmlCompositeElement
     {
         /// <summary>
@@ -41809,8 +42367,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "kpis");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Kpis>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -41844,8 +42404,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(QueryCache))]
     [ChildElementInfo(typeof(ServerFormats))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "tupleCache")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TupleCache : OpenXmlCompositeElement
     {
         /// <summary>
@@ -41877,6 +42435,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public TupleCache(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "tupleCache");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -41971,8 +42536,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CalculatedItem))]
-    [SchemaAttr(22, "calculatedItems")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CalculatedItems : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42019,8 +42582,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "calculatedItems");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CalculatedItems>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -42046,8 +42611,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CalculatedMember))]
-    [SchemaAttr(22, "calculatedMembers")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CalculatedMembers : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42094,8 +42657,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "calculatedMembers");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CalculatedMembers>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -42121,8 +42686,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Dimension))]
-    [SchemaAttr(22, "dimensions")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Dimensions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42169,8 +42732,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "dimensions");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Dimensions>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -42196,8 +42761,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(MeasureGroup))]
-    [SchemaAttr(22, "measureGroups")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MeasureGroups : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42244,8 +42807,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "measureGroups");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<MeasureGroups>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -42271,8 +42836,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(MeasureDimensionMap))]
-    [SchemaAttr(22, "maps")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Maps : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42319,8 +42882,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "maps");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Maps>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -42346,8 +42911,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(PivotCacheDefinitionExtension))]
-    [SchemaAttr(22, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PivotCacheDefinitionExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42381,6 +42944,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinitionExtension), 0, 0)
@@ -42410,8 +42980,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotCacheDecoupled), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelinePivotCacheDefinition), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotCacheIdVersion), FileFormatVersions.Office2013)]
-    [SchemaAttr(22, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PivotCacheDefinitionExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42458,12 +43026,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PivotCacheDefinitionExtension>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -42503,8 +43073,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(ErrorItem))]
     [ChildElementInfo(typeof(StringItem))]
     [ChildElementInfo(typeof(DateTimeItem))]
-    [SchemaAttr(22, "sharedItems")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SharedItems : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42681,21 +43249,23 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "sharedItems");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SharedItems>()
-                           .AddAttribute(0, "containsSemiMixedTypes", a => a.ContainsSemiMixedTypes)
-                           .AddAttribute(0, "containsNonDate", a => a.ContainsNonDate)
-                           .AddAttribute(0, "containsDate", a => a.ContainsDate)
-                           .AddAttribute(0, "containsString", a => a.ContainsString)
-                           .AddAttribute(0, "containsBlank", a => a.ContainsBlank)
-                           .AddAttribute(0, "containsMixedTypes", a => a.ContainsMixedTypes)
-                           .AddAttribute(0, "containsNumber", a => a.ContainsNumber)
-                           .AddAttribute(0, "containsInteger", a => a.ContainsInteger)
-                           .AddAttribute(0, "minValue", a => a.MinValue)
-                           .AddAttribute(0, "maxValue", a => a.MaxValue)
-                           .AddAttribute(0, "minDate", a => a.MinDate)
-                           .AddAttribute(0, "maxDate", a => a.MaxDate)
-                           .AddAttribute(0, "count", a => a.Count)
-                           .AddAttribute(0, "longText", a => a.LongText);
+.AddAttribute(0, "containsSemiMixedTypes", a => a.ContainsSemiMixedTypes)
+.AddAttribute(0, "containsNonDate", a => a.ContainsNonDate)
+.AddAttribute(0, "containsDate", a => a.ContainsDate)
+.AddAttribute(0, "containsString", a => a.ContainsString)
+.AddAttribute(0, "containsBlank", a => a.ContainsBlank)
+.AddAttribute(0, "containsMixedTypes", a => a.ContainsMixedTypes)
+.AddAttribute(0, "containsNumber", a => a.ContainsNumber)
+.AddAttribute(0, "containsInteger", a => a.ContainsInteger)
+.AddAttribute(0, "minValue", a => a.MinValue)
+.AddAttribute(0, "maxValue", a => a.MaxValue)
+.AddAttribute(0, "minDate", a => a.MinDate)
+.AddAttribute(0, "maxDate", a => a.MaxDate)
+.AddAttribute(0, "count", a => a.Count)
+.AddAttribute(0, "longText", a => a.LongText);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -42738,8 +43308,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(RangeProperties))]
     [ChildElementInfo(typeof(DiscreteProperties))]
     [ChildElementInfo(typeof(GroupItems))]
-    [SchemaAttr(22, "fieldGroup")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FieldGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42796,9 +43364,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "fieldGroup");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<FieldGroup>()
-                           .AddAttribute(0, "par", a => a.ParentId)
-                           .AddAttribute(0, "base", a => a.Base);
+.AddAttribute(0, "par", a => a.ParentId)
+.AddAttribute(0, "base", a => a.Base);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -42829,8 +43399,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CacheFieldExtension))]
-    [SchemaAttr(22, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CacheFieldExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42864,6 +43432,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheFieldExtension), 0, 0)
@@ -42889,8 +43464,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.CacheField), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.CachedUniqueNames), FileFormatVersions.Office2013)]
-    [SchemaAttr(22, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CacheFieldExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42937,12 +43510,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CacheFieldExtension>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -42970,8 +43545,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(FieldUsage))]
-    [SchemaAttr(22, "fieldsUsage")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FieldsUsage : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43018,8 +43591,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "fieldsUsage");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<FieldsUsage>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -43045,8 +43620,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(GroupLevel))]
-    [SchemaAttr(22, "groupLevels")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class GroupLevels : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43093,8 +43666,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "groupLevels");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<GroupLevels>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -43120,8 +43695,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CacheHierarchyExtension))]
-    [SchemaAttr(22, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CacheHierarchyExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43155,6 +43728,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheHierarchyExtension), 0, 0)
@@ -43180,8 +43760,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.CacheHierarchy), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.CacheHierarchy), FileFormatVersions.Office2013)]
-    [SchemaAttr(22, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CacheHierarchyExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43228,12 +43806,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CacheHierarchyExtension>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -43261,8 +43841,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CalculatedMemberExtension))]
-    [SchemaAttr(22, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CalculatedMemberExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43296,6 +43874,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtension), 0, 0)
@@ -43321,8 +43906,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.CalculatedMember), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.CalculatedMember), FileFormatVersions.Office2013)]
-    [SchemaAttr(22, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CalculatedMemberExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43369,12 +43952,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CalculatedMemberExtension>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -43395,8 +43980,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:location.</para>
     /// </summary>
-    [SchemaAttr(22, "location")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Location : OpenXmlLeafElement
     {
         /// <summary>
@@ -43469,25 +44052,27 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "location");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Location>()
-                           .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "firstHeaderRow", a => a.FirstHeaderRow, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "firstDataRow", a => a.FirstDataRow, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "firstDataCol", a => a.FirstDataColumn, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "rowPageCount", a => a.RowPageCount)
-                           .AddAttribute(0, "colPageCount", a => a.ColumnsPerPage);
+.AddAttribute(0, "ref", a => a.Reference, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "firstHeaderRow", a => a.FirstHeaderRow, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "firstDataRow", a => a.FirstDataRow, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "firstDataCol", a => a.FirstDataColumn, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "rowPageCount", a => a.RowPageCount)
+.AddAttribute(0, "colPageCount", a => a.ColumnsPerPage);
         }
 
         /// <inheritdoc/>
@@ -43506,8 +44091,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(PivotField))]
-    [SchemaAttr(22, "pivotFields")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PivotFields : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43554,8 +44137,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "pivotFields");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PivotFields>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -43581,8 +44166,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Field))]
-    [SchemaAttr(22, "rowFields")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RowFields : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43629,8 +44212,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "rowFields");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RowFields>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -43656,8 +44241,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(RowItem))]
-    [SchemaAttr(22, "rowItems")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RowItems : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43704,8 +44287,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "rowItems");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RowItems>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -43731,8 +44316,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Field))]
-    [SchemaAttr(22, "colFields")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColumnFields : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43779,8 +44362,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "colFields");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ColumnFields>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -43806,8 +44391,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(RowItem))]
-    [SchemaAttr(22, "colItems")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColumnItems : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43854,8 +44437,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "colItems");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ColumnItems>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -43881,8 +44466,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(PageField))]
-    [SchemaAttr(22, "pageFields")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PageFields : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43929,8 +44512,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "pageFields");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PageFields>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -43956,8 +44541,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DataField))]
-    [SchemaAttr(22, "dataFields")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DataFields : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44004,8 +44587,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "dataFields");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DataFields>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -44031,8 +44616,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Format))]
-    [SchemaAttr(22, "formats")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Formats : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44079,8 +44662,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "formats");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Formats>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -44106,8 +44691,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ConditionalFormat))]
-    [SchemaAttr(22, "conditionalFormats")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ConditionalFormats : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44154,8 +44737,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "conditionalFormats");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ConditionalFormats>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -44181,8 +44766,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ChartFormat))]
-    [SchemaAttr(22, "chartFormats")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ChartFormats : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44229,8 +44812,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "chartFormats");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ChartFormats>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -44256,8 +44841,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(PivotHierarchy))]
-    [SchemaAttr(22, "pivotHierarchies")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PivotHierarchies : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44304,8 +44887,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "pivotHierarchies");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PivotHierarchies>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -44324,8 +44909,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:pivotTableStyleInfo.</para>
     /// </summary>
-    [SchemaAttr(22, "pivotTableStyleInfo")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PivotTableStyle : OpenXmlLeafElement
     {
         /// <summary>
@@ -44398,13 +44981,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "pivotTableStyleInfo");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PivotTableStyle>()
-                           .AddAttribute(0, "name", a => a.Name)
-                           .AddAttribute(0, "showRowHeaders", a => a.ShowRowHeaders)
-                           .AddAttribute(0, "showColHeaders", a => a.ShowColumnHeaders)
-                           .AddAttribute(0, "showRowStripes", a => a.ShowRowStripes)
-                           .AddAttribute(0, "showColStripes", a => a.ShowColumnStripes)
-                           .AddAttribute(0, "showLastColumn", a => a.ShowLastColumn);
+.AddAttribute(0, "name", a => a.Name)
+.AddAttribute(0, "showRowHeaders", a => a.ShowRowHeaders)
+.AddAttribute(0, "showColHeaders", a => a.ShowColumnHeaders)
+.AddAttribute(0, "showRowStripes", a => a.ShowRowStripes)
+.AddAttribute(0, "showColStripes", a => a.ShowColumnStripes)
+.AddAttribute(0, "showLastColumn", a => a.ShowLastColumn);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -44429,8 +45014,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(PivotFilter))]
-    [SchemaAttr(22, "filters")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PivotFilters : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44477,8 +45060,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "filters");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PivotFilters>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -44504,8 +45089,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(RowHierarchyUsage))]
-    [SchemaAttr(22, "rowHierarchiesUsage")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RowHierarchiesUsage : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44552,8 +45135,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "rowHierarchiesUsage");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RowHierarchiesUsage>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -44579,8 +45164,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ColumnHierarchyUsage))]
-    [SchemaAttr(22, "colHierarchiesUsage")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColumnHierarchiesUsage : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44627,8 +45210,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "colHierarchiesUsage");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ColumnHierarchiesUsage>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -44654,8 +45239,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(PivotTableDefinitionExtension))]
-    [SchemaAttr(22, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PivotTableDefinitionExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44689,6 +45272,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtension), 0, 0)
@@ -44716,8 +45306,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotTableDefinition), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotTableData), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotTableUISettings), FileFormatVersions.Office2013)]
-    [SchemaAttr(22, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PivotTableDefinitionExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44764,12 +45352,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PivotTableDefinitionExtension>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -44798,8 +45388,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DataFieldExtension))]
-    [SchemaAttr(22, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DataFieldExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44833,6 +45421,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataFieldExtension), 0, 0)
@@ -44858,8 +45453,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.DataField), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.DataField), FileFormatVersions.Office2013)]
-    [SchemaAttr(22, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DataFieldExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44906,12 +45499,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DataFieldExtension>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -44939,8 +45534,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(PivotFilterExtension))]
-    [SchemaAttr(22, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PivotFilterExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44974,6 +45567,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtension), 0, 0)
@@ -45003,8 +45603,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(QueryTableDeletedFields))]
     [ChildElementInfo(typeof(SortState))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "queryTableRefresh")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class QueryTableRefresh : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45111,14 +45709,16 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "queryTableRefresh");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<QueryTableRefresh>()
-                           .AddAttribute(0, "preserveSortFilterLayout", a => a.PreserveSortFilterLayout)
-                           .AddAttribute(0, "fieldIdWrapped", a => a.FieldIdWrapped)
-                           .AddAttribute(0, "headersInLastRefresh", a => a.HeadersInLastRefresh)
-                           .AddAttribute(0, "minimumVersion", a => a.MinimumVersion)
-                           .AddAttribute(0, "nextId", a => a.NextId)
-                           .AddAttribute(0, "unboundColumnsLeft", a => a.UnboundColumnsLeft)
-                           .AddAttribute(0, "unboundColumnsRight", a => a.UnboundColumnsRight);
+.AddAttribute(0, "preserveSortFilterLayout", a => a.PreserveSortFilterLayout)
+.AddAttribute(0, "fieldIdWrapped", a => a.FieldIdWrapped)
+.AddAttribute(0, "headersInLastRefresh", a => a.HeadersInLastRefresh)
+.AddAttribute(0, "minimumVersion", a => a.MinimumVersion)
+.AddAttribute(0, "nextId", a => a.NextId)
+.AddAttribute(0, "unboundColumnsLeft", a => a.UnboundColumnsLeft)
+.AddAttribute(0, "unboundColumnsRight", a => a.UnboundColumnsRight);
         }
 
         /// <summary>
@@ -45208,8 +45808,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(QueryTableExtension))]
-    [SchemaAttr(22, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class QueryTableExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45243,6 +45841,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.QueryTableExtension), 0, 0)
@@ -45259,8 +45864,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sheetCalcPr.</para>
     /// </summary>
-    [SchemaAttr(22, "sheetCalcPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SheetCalculationProperties : OpenXmlLeafElement
     {
         /// <summary>
@@ -45283,8 +45886,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "sheetCalcPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SheetCalculationProperties>()
-                           .AddAttribute(0, "fullCalcOnLoad", a => a.FullCalculationOnLoad);
+.AddAttribute(0, "fullCalcOnLoad", a => a.FullCalculationOnLoad);
         }
 
         /// <inheritdoc/>
@@ -45303,8 +45908,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ProtectedRange))]
-    [SchemaAttr(22, "protectedRanges")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ProtectedRanges : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45338,6 +45941,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "protectedRanges");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ProtectedRange), 1, 0)
@@ -45361,8 +45971,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Scenario))]
-    [SchemaAttr(22, "scenarios")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Scenarios : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45429,10 +46037,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "scenarios");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Scenarios>()
-                           .AddAttribute(0, "current", a => a.Current)
-                           .AddAttribute(0, "show", a => a.Show)
-                           .AddAttribute(0, "sqref", a => a.SequenceOfReferences);
+.AddAttribute(0, "current", a => a.Current)
+.AddAttribute(0, "show", a => a.Show)
+.AddAttribute(0, "sqref", a => a.SequenceOfReferences);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -45458,8 +46068,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(MergeCell))]
-    [SchemaAttr(22, "mergeCells")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MergeCells : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45506,8 +46114,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "mergeCells");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<MergeCells>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -45533,8 +46143,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DataValidation))]
-    [SchemaAttr(22, "dataValidations")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DataValidations : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45611,11 +46219,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "dataValidations");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DataValidations>()
-                           .AddAttribute(0, "disablePrompts", a => a.DisablePrompts)
-                           .AddAttribute(0, "xWindow", a => a.XWindow)
-                           .AddAttribute(0, "yWindow", a => a.YWindow)
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "disablePrompts", a => a.DisablePrompts)
+.AddAttribute(0, "xWindow", a => a.XWindow)
+.AddAttribute(0, "yWindow", a => a.YWindow)
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -45649,8 +46259,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Hyperlink))]
-    [SchemaAttr(22, "hyperlinks")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Hyperlinks : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45684,6 +46292,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "hyperlinks");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Hyperlink), 1, 0)
@@ -45707,8 +46322,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CellWatch))]
-    [SchemaAttr(22, "cellWatches")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CellWatches : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45742,6 +46355,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "cellWatches");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellWatch), 1, 0)
@@ -45767,8 +46387,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(IgnoredError))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(22, "ignoredErrors")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class IgnoredErrors : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45802,6 +46420,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "ignoredErrors");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.IgnoredError), 1, 9),
@@ -45826,8 +46451,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(TablePart))]
-    [SchemaAttr(22, "tableParts")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TableParts : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45874,8 +46497,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "tableParts");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<TableParts>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -45901,8 +46526,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(WorksheetExtension))]
-    [SchemaAttr(22, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class WorksheetExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45934,6 +46557,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public WorksheetExtensionList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -45973,8 +46603,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.IgnoredErrors), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.WebExtensions), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineReferences), FileFormatVersions.Office2013)]
-    [SchemaAttr(22, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class WorksheetExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -46021,12 +46649,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<WorksheetExtension>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -46060,8 +46690,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(NumberingFormat))]
-    [SchemaAttr(22, "numFmts")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NumberingFormats : OpenXmlCompositeElement
     {
         /// <summary>
@@ -46108,8 +46736,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "numFmts");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<NumberingFormats>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -46135,8 +46765,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Font))]
-    [SchemaAttr(22, "fonts")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Fonts : OpenXmlCompositeElement
     {
         /// <summary>
@@ -46196,12 +46824,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "fonts");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Fonts>()
-                           .AddAttribute(0, "count", a => a.Count)
-                           .AddAttribute(55, "knownFonts", a => a.KnownFonts, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-                           });
+.AddAttribute(0, "count", a => a.Count)
+.AddAttribute(55, "knownFonts", a => a.KnownFonts, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -46227,8 +46857,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Fill))]
-    [SchemaAttr(22, "fills")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Fills : OpenXmlCompositeElement
     {
         /// <summary>
@@ -46275,8 +46903,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "fills");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Fills>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -46302,8 +46932,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Border))]
-    [SchemaAttr(22, "borders")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Borders : OpenXmlCompositeElement
     {
         /// <summary>
@@ -46350,8 +46978,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "borders");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Borders>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -46377,8 +47007,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CellFormat))]
-    [SchemaAttr(22, "cellStyleXfs")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CellStyleFormats : OpenXmlCompositeElement
     {
         /// <summary>
@@ -46425,8 +47053,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "cellStyleXfs");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CellStyleFormats>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -46452,8 +47082,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CellFormat))]
-    [SchemaAttr(22, "cellXfs")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CellFormats : OpenXmlCompositeElement
     {
         /// <summary>
@@ -46500,8 +47128,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "cellXfs");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CellFormats>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -46527,8 +47157,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CellStyle))]
-    [SchemaAttr(22, "cellStyles")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CellStyles : OpenXmlCompositeElement
     {
         /// <summary>
@@ -46575,8 +47203,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "cellStyles");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CellStyles>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -46602,8 +47232,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DifferentialFormat))]
-    [SchemaAttr(22, "dxfs")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DifferentialFormats : OpenXmlCompositeElement
     {
         /// <summary>
@@ -46650,8 +47278,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "dxfs");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DifferentialFormats>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -46677,8 +47307,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(TableStyle))]
-    [SchemaAttr(22, "tableStyles")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TableStyles : OpenXmlCompositeElement
     {
         /// <summary>
@@ -46745,10 +47373,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "tableStyles");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<TableStyles>()
-                           .AddAttribute(0, "count", a => a.Count)
-                           .AddAttribute(0, "defaultTableStyle", a => a.DefaultTableStyle)
-                           .AddAttribute(0, "defaultPivotStyle", a => a.DefaultPivotStyle);
+.AddAttribute(0, "count", a => a.Count)
+.AddAttribute(0, "defaultTableStyle", a => a.DefaultTableStyle)
+.AddAttribute(0, "defaultPivotStyle", a => a.DefaultPivotStyle);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -46782,8 +47412,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </remark>
     [ChildElementInfo(typeof(IndexedColors))]
     [ChildElementInfo(typeof(MruColors))]
-    [SchemaAttr(22, "colors")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Colors : OpenXmlCompositeElement
     {
         /// <summary>
@@ -46815,6 +47443,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Colors(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "colors");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -46867,8 +47502,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(StylesheetExtension))]
-    [SchemaAttr(22, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StylesheetExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -46902,6 +47535,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.StylesheetExtension), 0, 0)
@@ -46931,8 +47571,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerStyles), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.DifferentialFormats), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineStyles), FileFormatVersions.Office2013)]
-    [SchemaAttr(22, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StylesheetExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -46979,12 +47617,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<StylesheetExtension>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -47007,8 +47647,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:fileVersion.</para>
     /// </summary>
-    [SchemaAttr(22, "fileVersion")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FileVersion : OpenXmlLeafElement
     {
         /// <summary>
@@ -47071,15 +47709,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "fileVersion");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<FileVersion>()
-                           .AddAttribute(0, "appName", a => a.ApplicationName)
-                           .AddAttribute(0, "lastEdited", a => a.LastEdited)
-                           .AddAttribute(0, "lowestEdited", a => a.LowestEdited)
-                           .AddAttribute(0, "rupBuild", a => a.BuildVersion)
-                           .AddAttribute(0, "codeName", a => a.CodeName, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           });
+.AddAttribute(0, "appName", a => a.ApplicationName)
+.AddAttribute(0, "lastEdited", a => a.LastEdited)
+.AddAttribute(0, "lowestEdited", a => a.LowestEdited)
+.AddAttribute(0, "rupBuild", a => a.BuildVersion)
+.AddAttribute(0, "codeName", a => a.CodeName, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -47100,8 +47740,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:fileSharing.</para>
     /// </summary>
-    [SchemaAttr(22, "fileSharing")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FileSharing : OpenXmlLeafElement
     {
         /// <summary>
@@ -47184,17 +47822,19 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "fileSharing");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<FileSharing>()
-                           .AddAttribute(0, "readOnlyRecommended", a => a.ReadOnlyRecommended)
-                           .AddAttribute(0, "userName", a => a.UserName)
-                           .AddAttribute(0, "reservationPassword", a => a.ReservationPassword, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
-                           })
-                           .AddAttribute(0, "algorithmName", a => a.AlgorithmName)
-                           .AddAttribute(0, "hashValue", a => a.HashValue)
-                           .AddAttribute(0, "saltValue", a => a.SaltValue)
-                           .AddAttribute(0, "spinCount", a => a.SpinCount);
+.AddAttribute(0, "readOnlyRecommended", a => a.ReadOnlyRecommended)
+.AddAttribute(0, "userName", a => a.UserName)
+.AddAttribute(0, "reservationPassword", a => a.ReservationPassword, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
+})
+.AddAttribute(0, "algorithmName", a => a.AlgorithmName)
+.AddAttribute(0, "hashValue", a => a.HashValue)
+.AddAttribute(0, "saltValue", a => a.SaltValue)
+.AddAttribute(0, "spinCount", a => a.SpinCount);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -47212,8 +47852,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:workbookPr.</para>
     /// </summary>
-    [SchemaAttr(22, "workbookPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class WorkbookProperties : OpenXmlLeafElement
     {
         /// <summary>
@@ -47416,29 +48054,31 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "workbookPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<WorkbookProperties>()
-                           .AddAttribute(0, "date1904", a => a.Date1904)
-                           .AddAttribute(0, "dateCompatibility", a => a.DateCompatibility, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-                           })
-                           .AddAttribute(0, "showObjects", a => a.ShowObjects)
-                           .AddAttribute(0, "showBorderUnselectedTables", a => a.ShowBorderUnselectedTables)
-                           .AddAttribute(0, "filterPrivacy", a => a.FilterPrivacy)
-                           .AddAttribute(0, "promptedSolutions", a => a.PromptedSolutions)
-                           .AddAttribute(0, "showInkAnnotation", a => a.ShowInkAnnotation)
-                           .AddAttribute(0, "backupFile", a => a.BackupFile)
-                           .AddAttribute(0, "saveExternalLinkValues", a => a.SaveExternalLinkValues)
-                           .AddAttribute(0, "updateLinks", a => a.UpdateLinks)
-                           .AddAttribute(0, "codeName", a => a.CodeName)
-                           .AddAttribute(0, "hidePivotFieldList", a => a.HidePivotFieldList)
-                           .AddAttribute(0, "showPivotChartFilter", a => a.ShowPivotChartFilter)
-                           .AddAttribute(0, "allowRefreshQuery", a => a.AllowRefreshQuery)
-                           .AddAttribute(0, "publishItems", a => a.PublishItems)
-                           .AddAttribute(0, "checkCompatibility", a => a.CheckCompatibility)
-                           .AddAttribute(0, "autoCompressPictures", a => a.AutoCompressPictures)
-                           .AddAttribute(0, "refreshAllConnections", a => a.RefreshAllConnections)
-                           .AddAttribute(0, "defaultThemeVersion", a => a.DefaultThemeVersion);
+.AddAttribute(0, "date1904", a => a.Date1904)
+.AddAttribute(0, "dateCompatibility", a => a.DateCompatibility, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+})
+.AddAttribute(0, "showObjects", a => a.ShowObjects)
+.AddAttribute(0, "showBorderUnselectedTables", a => a.ShowBorderUnselectedTables)
+.AddAttribute(0, "filterPrivacy", a => a.FilterPrivacy)
+.AddAttribute(0, "promptedSolutions", a => a.PromptedSolutions)
+.AddAttribute(0, "showInkAnnotation", a => a.ShowInkAnnotation)
+.AddAttribute(0, "backupFile", a => a.BackupFile)
+.AddAttribute(0, "saveExternalLinkValues", a => a.SaveExternalLinkValues)
+.AddAttribute(0, "updateLinks", a => a.UpdateLinks)
+.AddAttribute(0, "codeName", a => a.CodeName)
+.AddAttribute(0, "hidePivotFieldList", a => a.HidePivotFieldList)
+.AddAttribute(0, "showPivotChartFilter", a => a.ShowPivotChartFilter)
+.AddAttribute(0, "allowRefreshQuery", a => a.AllowRefreshQuery)
+.AddAttribute(0, "publishItems", a => a.PublishItems)
+.AddAttribute(0, "checkCompatibility", a => a.CheckCompatibility)
+.AddAttribute(0, "autoCompressPictures", a => a.AutoCompressPictures)
+.AddAttribute(0, "refreshAllConnections", a => a.RefreshAllConnections)
+.AddAttribute(0, "defaultThemeVersion", a => a.DefaultThemeVersion);
         }
 
         /// <inheritdoc/>
@@ -47450,8 +48090,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:workbookProtection.</para>
     /// </summary>
-    [SchemaAttr(22, "workbookProtection")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class WorkbookProtection : OpenXmlLeafElement
     {
         /// <summary>
@@ -47594,26 +48232,28 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "workbookProtection");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<WorkbookProtection>()
-                           .AddAttribute(0, "workbookPassword", a => a.WorkbookPassword, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
-                           })
-                           .AddAttribute(0, "revisionsPassword", a => a.RevisionsPassword, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
-                           })
-                           .AddAttribute(0, "lockStructure", a => a.LockStructure)
-                           .AddAttribute(0, "lockWindows", a => a.LockWindows)
-                           .AddAttribute(0, "lockRevision", a => a.LockRevision)
-                           .AddAttribute(0, "revisionsAlgorithmName", a => a.RevisionsAlgorithmName)
-                           .AddAttribute(0, "revisionsHashValue", a => a.RevisionsHashValue)
-                           .AddAttribute(0, "revisionsSaltValue", a => a.RevisionsSaltValue)
-                           .AddAttribute(0, "revisionsSpinCount", a => a.RevisionsSpinCount)
-                           .AddAttribute(0, "workbookAlgorithmName", a => a.WorkbookAlgorithmName)
-                           .AddAttribute(0, "workbookHashValue", a => a.WorkbookHashValue)
-                           .AddAttribute(0, "workbookSaltValue", a => a.WorkbookSaltValue)
-                           .AddAttribute(0, "workbookSpinCount", a => a.WorkbookSpinCount);
+.AddAttribute(0, "workbookPassword", a => a.WorkbookPassword, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
+})
+.AddAttribute(0, "revisionsPassword", a => a.RevisionsPassword, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
+})
+.AddAttribute(0, "lockStructure", a => a.LockStructure)
+.AddAttribute(0, "lockWindows", a => a.LockWindows)
+.AddAttribute(0, "lockRevision", a => a.LockRevision)
+.AddAttribute(0, "revisionsAlgorithmName", a => a.RevisionsAlgorithmName)
+.AddAttribute(0, "revisionsHashValue", a => a.RevisionsHashValue)
+.AddAttribute(0, "revisionsSaltValue", a => a.RevisionsSaltValue)
+.AddAttribute(0, "revisionsSpinCount", a => a.RevisionsSpinCount)
+.AddAttribute(0, "workbookAlgorithmName", a => a.WorkbookAlgorithmName)
+.AddAttribute(0, "workbookHashValue", a => a.WorkbookHashValue)
+.AddAttribute(0, "workbookSaltValue", a => a.WorkbookSaltValue)
+.AddAttribute(0, "workbookSpinCount", a => a.WorkbookSpinCount);
         }
 
         /// <inheritdoc/>
@@ -47632,8 +48272,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(WorkbookView))]
-    [SchemaAttr(22, "bookViews")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BookViews : OpenXmlCompositeElement
     {
         /// <summary>
@@ -47667,6 +48305,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "bookViews");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WorkbookView), 1, 0)
@@ -47690,8 +48335,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Sheet))]
-    [SchemaAttr(22, "sheets")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Sheets : OpenXmlCompositeElement
     {
         /// <summary>
@@ -47725,6 +48368,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "sheets");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Sheet), 1, 32767)
@@ -47748,8 +48398,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(FunctionGroup))]
-    [SchemaAttr(22, "functionGroups")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FunctionGroups : OpenXmlCompositeElement
     {
         /// <summary>
@@ -47796,8 +48444,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "functionGroups");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<FunctionGroups>()
-                           .AddAttribute(0, "builtInGroupCount", a => a.BuiltInGroupCount);
+.AddAttribute(0, "builtInGroupCount", a => a.BuiltInGroupCount);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -47829,8 +48479,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExternalReference))]
-    [SchemaAttr(22, "externalReferences")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ExternalReferences : OpenXmlCompositeElement
     {
         /// <summary>
@@ -47864,6 +48512,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "externalReferences");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalReference), 1, 65534)
@@ -47887,8 +48542,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DefinedName))]
-    [SchemaAttr(22, "definedNames")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DefinedNames : OpenXmlCompositeElement
     {
         /// <summary>
@@ -47922,6 +48575,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "definedNames");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DefinedName), 0, 0)
@@ -47938,8 +48598,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:calcPr.</para>
     /// </summary>
-    [SchemaAttr(22, "calcPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CalculationProperties : OpenXmlLeafElement
     {
         /// <summary>
@@ -48082,20 +48740,22 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "calcPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CalculationProperties>()
-                           .AddAttribute(0, "calcId", a => a.CalculationId)
-                           .AddAttribute(0, "calcMode", a => a.CalculationMode)
-                           .AddAttribute(0, "fullCalcOnLoad", a => a.FullCalculationOnLoad)
-                           .AddAttribute(0, "refMode", a => a.ReferenceMode)
-                           .AddAttribute(0, "iterate", a => a.Iterate)
-                           .AddAttribute(0, "iterateCount", a => a.IterateCount)
-                           .AddAttribute(0, "iterateDelta", a => a.IterateDelta)
-                           .AddAttribute(0, "fullPrecision", a => a.FullPrecision)
-                           .AddAttribute(0, "calcCompleted", a => a.CalculationCompleted)
-                           .AddAttribute(0, "calcOnSave", a => a.CalculationOnSave)
-                           .AddAttribute(0, "concurrentCalc", a => a.ConcurrentCalculation)
-                           .AddAttribute(0, "concurrentManualCount", a => a.ConcurrentManualCount)
-                           .AddAttribute(0, "forceFullCalc", a => a.ForceFullCalculation);
+.AddAttribute(0, "calcId", a => a.CalculationId)
+.AddAttribute(0, "calcMode", a => a.CalculationMode)
+.AddAttribute(0, "fullCalcOnLoad", a => a.FullCalculationOnLoad)
+.AddAttribute(0, "refMode", a => a.ReferenceMode)
+.AddAttribute(0, "iterate", a => a.Iterate)
+.AddAttribute(0, "iterateCount", a => a.IterateCount)
+.AddAttribute(0, "iterateDelta", a => a.IterateDelta)
+.AddAttribute(0, "fullPrecision", a => a.FullPrecision)
+.AddAttribute(0, "calcCompleted", a => a.CalculationCompleted)
+.AddAttribute(0, "calcOnSave", a => a.CalculationOnSave)
+.AddAttribute(0, "concurrentCalc", a => a.ConcurrentCalculation)
+.AddAttribute(0, "concurrentManualCount", a => a.ConcurrentManualCount)
+.AddAttribute(0, "forceFullCalc", a => a.ForceFullCalculation);
         }
 
         /// <inheritdoc/>
@@ -48107,8 +48767,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:oleSize.</para>
     /// </summary>
-    [SchemaAttr(22, "oleSize")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OleSize : OpenXmlLeafElement
     {
         /// <summary>
@@ -48131,11 +48789,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "oleSize");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<OleSize>()
-                           .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "ref", a => a.Reference, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -48154,8 +48814,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CustomWorkbookView))]
-    [SchemaAttr(22, "customWorkbookViews")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CustomWorkbookViews : OpenXmlCompositeElement
     {
         /// <summary>
@@ -48189,6 +48847,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "customWorkbookViews");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookView), 1, 0)
@@ -48212,8 +48877,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(PivotCache))]
-    [SchemaAttr(22, "pivotCaches")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PivotCaches : OpenXmlCompositeElement
     {
         /// <summary>
@@ -48247,6 +48910,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "pivotCaches");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCache), 1, 0)
@@ -48263,8 +48933,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:webPublishing.</para>
     /// </summary>
-    [SchemaAttr(22, "webPublishing")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class WebPublishing : OpenXmlLeafElement
     {
         /// <summary>
@@ -48367,16 +49035,18 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "webPublishing");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<WebPublishing>()
-                           .AddAttribute(0, "css", a => a.UseCss)
-                           .AddAttribute(0, "thicket", a => a.Thicket)
-                           .AddAttribute(0, "longFileNames", a => a.LongFileNames)
-                           .AddAttribute(0, "vml", a => a.UseVml)
-                           .AddAttribute(0, "allowPng", a => a.AllowPng)
-                           .AddAttribute(0, "targetScreenSize", a => a.TargetScreenSize)
-                           .AddAttribute(0, "dpi", a => a.Dpi)
-                           .AddAttribute(0, "codePage", a => a.CodePage)
-                           .AddAttribute(0, "characterSet", a => a.CharacterSet);
+.AddAttribute(0, "css", a => a.UseCss)
+.AddAttribute(0, "thicket", a => a.Thicket)
+.AddAttribute(0, "longFileNames", a => a.LongFileNames)
+.AddAttribute(0, "vml", a => a.UseVml)
+.AddAttribute(0, "allowPng", a => a.AllowPng)
+.AddAttribute(0, "targetScreenSize", a => a.TargetScreenSize)
+.AddAttribute(0, "dpi", a => a.Dpi)
+.AddAttribute(0, "codePage", a => a.CodePage)
+.AddAttribute(0, "characterSet", a => a.CharacterSet);
         }
 
         /// <inheritdoc/>
@@ -48388,8 +49058,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:fileRecoveryPr.</para>
     /// </summary>
-    [SchemaAttr(22, "fileRecoveryPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FileRecoveryProperties : OpenXmlLeafElement
     {
         /// <summary>
@@ -48442,11 +49110,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "fileRecoveryPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<FileRecoveryProperties>()
-                           .AddAttribute(0, "autoRecover", a => a.AutoRecover)
-                           .AddAttribute(0, "crashSave", a => a.CrashSave)
-                           .AddAttribute(0, "dataExtractLoad", a => a.DataExtractLoad)
-                           .AddAttribute(0, "repairLoad", a => a.RepairLoad);
+.AddAttribute(0, "autoRecover", a => a.AutoRecover)
+.AddAttribute(0, "crashSave", a => a.CrashSave)
+.AddAttribute(0, "dataExtractLoad", a => a.DataExtractLoad)
+.AddAttribute(0, "repairLoad", a => a.RepairLoad);
         }
 
         /// <inheritdoc/>
@@ -48465,8 +49135,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(WebPublishObject))]
-    [SchemaAttr(22, "webPublishObjects")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class WebPublishObjects : OpenXmlCompositeElement
     {
         /// <summary>
@@ -48513,8 +49181,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "webPublishObjects");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<WebPublishObjects>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -48540,8 +49210,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(WorkbookExtension))]
-    [SchemaAttr(22, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class WorkbookExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -48573,6 +49241,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public WorkbookExtensionList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -48618,8 +49293,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReferences), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.WorkbookProperties), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.DataModel), FileFormatVersions.Office2013)]
-    [SchemaAttr(22, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class WorkbookExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -48666,12 +49339,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(22, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<WorkbookExtension>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)

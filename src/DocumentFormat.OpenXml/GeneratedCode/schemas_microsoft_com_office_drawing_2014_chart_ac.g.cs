@@ -29,8 +29,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartsAc
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Level))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList))]
-    [SchemaAttr(81, "multiLvlStrLit")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class MultiLvlStrData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -62,6 +60,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartsAc
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public MultiLvlStrData(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(81, "multiLvlStrLit");
+            builder.Availability = (FileFormatVersions.Office2016);
         }
 
         /// <summary>

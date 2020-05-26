@@ -25,8 +25,6 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Schema))]
-    [SchemaAttr(25, "schemaLibrary")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SchemaLibrary : OpenXmlCompositeElement
     {
         /// <summary>
@@ -60,6 +58,13 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(25, "schemaLibrary");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.CustomXmlSchemaReferences.Schema), 0, 0)
@@ -76,8 +81,6 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is sl:schema.</para>
     /// </summary>
-    [SchemaAttr(25, "schema")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Schema : OpenXmlLeafElement
     {
         /// <summary>
@@ -129,10 +132,12 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(25, "schema");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Schema>()
-                           .AddAttribute(25, "uri", a => a.Uri)
-                           .AddAttribute(25, "manifestLocation", a => a.ManifestLocation)
-                           .AddAttribute(25, "schemaLocation", a => a.SchemaLocation);
+.AddAttribute(25, "uri", a => a.Uri)
+.AddAttribute(25, "manifestLocation", a => a.ManifestLocation)
+.AddAttribute(25, "schemaLocation", a => a.SchemaLocation);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {

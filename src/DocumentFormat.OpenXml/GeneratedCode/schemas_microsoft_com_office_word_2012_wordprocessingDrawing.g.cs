@@ -18,8 +18,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp15:webVideoPr.</para>
     /// </summary>
-    [SchemaAttr(75, "webVideoPr")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class WebVideoProperty : OpenXmlLeafElement
     {
         /// <summary>
@@ -62,10 +60,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(75, "webVideoPr");
+            builder.Availability = (FileFormatVersions.Office2013);
             builder.AddElement<WebVideoProperty>()
-                           .AddAttribute(0, "embeddedHtml", a => a.EmbeddedHtml)
-                           .AddAttribute(0, "h", a => a.Height)
-                           .AddAttribute(0, "w", a => a.Width);
+.AddAttribute(0, "embeddedHtml", a => a.EmbeddedHtml)
+.AddAttribute(0, "h", a => a.Height)
+.AddAttribute(0, "w", a => a.Width);
         }
 
         /// <inheritdoc/>

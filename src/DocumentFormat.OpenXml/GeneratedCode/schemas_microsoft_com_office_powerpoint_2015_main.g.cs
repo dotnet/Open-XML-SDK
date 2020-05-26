@@ -19,8 +19,6 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p16:designElem.</para>
     /// </summary>
-    [SchemaAttr(78, "designElem")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class DesignElement : OpenXmlLeafElement
     {
         /// <summary>
@@ -43,8 +41,10 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(78, "designElem");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<DesignElement>()
-                           .AddAttribute(0, "val", a => a.Val);
+.AddAttribute(0, "val", a => a.Val);
         }
 
         /// <inheritdoc/>

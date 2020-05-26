@@ -32,8 +32,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     [ChildElementInfo(typeof(NonVisualDrawingProperties), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(NonVisualInkContentPartProperties), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(ApplicationNonVisualDrawingProperties), FileFormatVersions.Office2010)]
-    [SchemaAttr(49, "nvContentPartPr")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -65,6 +63,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NonVisualContentPartProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "nvContentPartPr");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <summary>
@@ -133,8 +138,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Offset))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extents))]
-    [SchemaAttr(49, "xfrm")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Transform2D : OpenXmlCompositeElement
     {
         /// <summary>
@@ -201,10 +204,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "xfrm");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<Transform2D>()
-                           .AddAttribute(0, "rot", a => a.Rotation)
-                           .AddAttribute(0, "flipH", a => a.HorizontalFlip)
-                           .AddAttribute(0, "flipV", a => a.VerticalFlip);
+.AddAttribute(0, "rot", a => a.Rotation)
+.AddAttribute(0, "flipH", a => a.HorizontalFlip)
+.AddAttribute(0, "flipV", a => a.VerticalFlip);
         }
 
         /// <summary>
@@ -257,8 +262,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.Extension))]
-    [SchemaAttr(49, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ExtensionListModify : OpenXmlCompositeElement
     {
         /// <summary>
@@ -305,8 +308,10 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "extLst");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<ExtensionListModify>()
-                           .AddAttribute(0, "mod", a => a.Modify);
+.AddAttribute(0, "mod", a => a.Modify);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -344,8 +349,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     [ChildElementInfo(typeof(MediaFade), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(MediaBookmarkList), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
-    [SchemaAttr(49, "media")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Media : OpenXmlCompositeElement
     {
         /// <summary>
@@ -408,9 +411,11 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "media");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<Media>()
-                           .AddAttribute(19, "embed", a => a.Embed)
-                           .AddAttribute(19, "link", a => a.Link);
+.AddAttribute(19, "embed", a => a.Embed)
+.AddAttribute(19, "link", a => a.Link);
         }
 
         /// <summary>
@@ -491,8 +496,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:vortex.</para>
     /// </summary>
-    [SchemaAttr(49, "vortex")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class VortexTransition : SideDirectionTransitionType
     {
         /// <summary>
@@ -500,6 +503,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </summary>
         public VortexTransition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "vortex");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <inheritdoc/>
@@ -511,8 +521,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:pan.</para>
     /// </summary>
-    [SchemaAttr(49, "pan")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class PanTransition : SideDirectionTransitionType
     {
         /// <summary>
@@ -520,6 +528,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </summary>
         public PanTransition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "pan");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <inheritdoc/>
@@ -566,8 +581,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:switch.</para>
     /// </summary>
-    [SchemaAttr(49, "switch")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SwitchTransition : LeftRightDirectionTransitionType
     {
         /// <summary>
@@ -575,6 +588,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </summary>
         public SwitchTransition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "switch");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <inheritdoc/>
@@ -586,8 +606,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:flip.</para>
     /// </summary>
-    [SchemaAttr(49, "flip")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class FlipTransition : LeftRightDirectionTransitionType
     {
         /// <summary>
@@ -595,6 +613,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </summary>
         public FlipTransition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "flip");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <inheritdoc/>
@@ -606,8 +631,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:ferris.</para>
     /// </summary>
-    [SchemaAttr(49, "ferris")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class FerrisTransition : LeftRightDirectionTransitionType
     {
         /// <summary>
@@ -615,6 +638,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </summary>
         public FerrisTransition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "ferris");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <inheritdoc/>
@@ -626,8 +656,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:gallery.</para>
     /// </summary>
-    [SchemaAttr(49, "gallery")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class GalleryTransition : LeftRightDirectionTransitionType
     {
         /// <summary>
@@ -635,6 +663,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </summary>
         public GalleryTransition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "gallery");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <inheritdoc/>
@@ -646,8 +681,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:conveyor.</para>
     /// </summary>
-    [SchemaAttr(49, "conveyor")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ConveyorTransition : LeftRightDirectionTransitionType
     {
         /// <summary>
@@ -655,6 +688,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </summary>
         public ConveyorTransition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "conveyor");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <inheritdoc/>
@@ -701,8 +741,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:ripple.</para>
     /// </summary>
-    [SchemaAttr(49, "ripple")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class RippleTransition : OpenXmlLeafElement
     {
         /// <summary>
@@ -725,15 +763,17 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "ripple");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<RippleTransition>()
-                           .AddAttribute(0, "dir", a => a.Direction, aBuilder =>
-                           {
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Presentation.TransitionCornerDirectionValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionCenterDirectionTypeValues>)), UnionId = (0) });
-                               });
-                           });
+.AddAttribute(0, "dir", a => a.Direction, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Presentation.TransitionCornerDirectionValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionCenterDirectionTypeValues>)), UnionId = (0) });
+});
+});
         }
 
         /// <inheritdoc/>
@@ -745,8 +785,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:honeycomb.</para>
     /// </summary>
-    [SchemaAttr(49, "honeycomb")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class HoneycombTransition : EmptyType
     {
         /// <summary>
@@ -754,6 +792,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </summary>
         public HoneycombTransition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "honeycomb");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <inheritdoc/>
@@ -765,8 +810,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:flash.</para>
     /// </summary>
-    [SchemaAttr(49, "flash")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class FlashTransition : EmptyType
     {
         /// <summary>
@@ -774,6 +817,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </summary>
         public FlashTransition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "flash");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <inheritdoc/>
@@ -793,6 +843,11 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         protected EmptyType() : base()
         {
         }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+        }
     }
 
     /// <summary>
@@ -800,8 +855,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:prism.</para>
     /// </summary>
-    [SchemaAttr(49, "prism")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class PrismTransition : OpenXmlLeafElement
     {
         /// <summary>
@@ -844,13 +897,15 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "prism");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<PrismTransition>()
-                           .AddAttribute(0, "dir", a => a.Direction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "isContent", a => a.IsContent)
-                           .AddAttribute(0, "isInverted", a => a.IsInverted);
+.AddAttribute(0, "dir", a => a.Direction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "isContent", a => a.IsContent)
+.AddAttribute(0, "isInverted", a => a.IsInverted);
         }
 
         /// <inheritdoc/>
@@ -862,8 +917,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:doors.</para>
     /// </summary>
-    [SchemaAttr(49, "doors")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class DoorsTransition : OrientationTransitionType
     {
         /// <summary>
@@ -871,6 +924,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </summary>
         public DoorsTransition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "doors");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <inheritdoc/>
@@ -882,8 +942,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:window.</para>
     /// </summary>
-    [SchemaAttr(49, "window")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class WindowTransition : OrientationTransitionType
     {
         /// <summary>
@@ -891,6 +949,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </summary>
         public WindowTransition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "window");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <inheritdoc/>
@@ -937,8 +1002,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:glitter.</para>
     /// </summary>
-    [SchemaAttr(49, "glitter")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class GlitterTransition : OpenXmlLeafElement
     {
         /// <summary>
@@ -971,15 +1034,17 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "glitter");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<GlitterTransition>()
-                           .AddAttribute(0, "dir", a => a.Direction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "pattern", a => a.Pattern, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "dir", a => a.Direction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "pattern", a => a.Pattern, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <inheritdoc/>
@@ -991,8 +1056,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:warp.</para>
     /// </summary>
-    [SchemaAttr(49, "warp")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class WarpTransition : OpenXmlLeafElement
     {
         /// <summary>
@@ -1015,11 +1078,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "warp");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<WarpTransition>()
-                           .AddAttribute(0, "dir", a => a.Direction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "dir", a => a.Direction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <inheritdoc/>
@@ -1031,8 +1096,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:flythrough.</para>
     /// </summary>
-    [SchemaAttr(49, "flythrough")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class FlythroughTransition : OpenXmlLeafElement
     {
         /// <summary>
@@ -1065,12 +1128,14 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "flythrough");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<FlythroughTransition>()
-                           .AddAttribute(0, "dir", a => a.Direction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "hasBounce", a => a.HasBounce);
+.AddAttribute(0, "dir", a => a.Direction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "hasBounce", a => a.HasBounce);
         }
 
         /// <inheritdoc/>
@@ -1082,8 +1147,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:shred.</para>
     /// </summary>
-    [SchemaAttr(49, "shred")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ShredTransition : OpenXmlLeafElement
     {
         /// <summary>
@@ -1116,15 +1179,17 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "shred");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<ShredTransition>()
-                           .AddAttribute(0, "pattern", a => a.Pattern, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "dir", a => a.Direction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "pattern", a => a.Pattern, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "dir", a => a.Direction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <inheritdoc/>
@@ -1136,8 +1201,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:reveal.</para>
     /// </summary>
-    [SchemaAttr(49, "reveal")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class RevealTransition : OpenXmlLeafElement
     {
         /// <summary>
@@ -1170,12 +1233,14 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "reveal");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<RevealTransition>()
-                           .AddAttribute(0, "thruBlk", a => a.ThroughBlack)
-                           .AddAttribute(0, "dir", a => a.Direction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "thruBlk", a => a.ThroughBlack)
+.AddAttribute(0, "dir", a => a.Direction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <inheritdoc/>
@@ -1187,8 +1252,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:wheelReverse.</para>
     /// </summary>
-    [SchemaAttr(49, "wheelReverse")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class WheelReverseTransition : OpenXmlLeafElement
     {
         /// <summary>
@@ -1211,8 +1274,10 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "wheelReverse");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<WheelReverseTransition>()
-                           .AddAttribute(0, "spokes", a => a.Spokes);
+.AddAttribute(0, "spokes", a => a.Spokes);
         }
 
         /// <inheritdoc/>
@@ -1224,8 +1289,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:bmkTgt.</para>
     /// </summary>
-    [SchemaAttr(49, "bmkTgt")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class BookmarkTarget : OpenXmlLeafElement
     {
         /// <summary>
@@ -1258,15 +1321,17 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "bmkTgt");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<BookmarkTarget>()
-                           .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "bmkName", a => a.BookmarkName, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "bmkName", a => a.BookmarkName, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -1285,8 +1350,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(SectionOld), FileFormatVersions.Office2010)]
-    [SchemaAttr(49, "sectionPr")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SectionProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1320,6 +1383,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "sectionPr");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionOld), 1, 0, version: FileFormatVersions.Office2010)
@@ -1343,8 +1413,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Section), FileFormatVersions.Office2010)]
-    [SchemaAttr(49, "sectionLst")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SectionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1378,6 +1446,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "sectionLst");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.Section), 1, 0, version: FileFormatVersions.Office2010)
@@ -1394,8 +1469,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:browseMode.</para>
     /// </summary>
-    [SchemaAttr(49, "browseMode")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class BrowseMode : OpenXmlLeafElement
     {
         /// <summary>
@@ -1418,8 +1491,10 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "browseMode");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<BrowseMode>()
-                           .AddAttribute(0, "showStatus", a => a.ShowStatus);
+.AddAttribute(0, "showStatus", a => a.ShowStatus);
         }
 
         /// <inheritdoc/>
@@ -1448,8 +1523,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor))]
-    [SchemaAttr(49, "laserClr")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class LaserColor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1481,6 +1554,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public LaserColor(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "laserClr");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <summary>
@@ -1588,8 +1668,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:defaultImageDpi.</para>
     /// </summary>
-    [SchemaAttr(49, "defaultImageDpi")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class DefaultImageDpi : OpenXmlLeafElement
     {
         /// <summary>
@@ -1612,11 +1690,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "defaultImageDpi");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<DefaultImageDpi>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -1628,8 +1708,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:discardImageEditData.</para>
     /// </summary>
-    [SchemaAttr(49, "discardImageEditData")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class DiscardImageEditData : OpenXmlLeafElement
     {
         /// <summary>
@@ -1652,11 +1730,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "discardImageEditData");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<DiscardImageEditData>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -1668,8 +1748,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:showMediaCtrls.</para>
     /// </summary>
-    [SchemaAttr(49, "showMediaCtrls")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ShowMediaControls : OpenXmlLeafElement
     {
         /// <summary>
@@ -1692,11 +1770,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "showMediaCtrls");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<ShowMediaControls>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -1715,8 +1795,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(TracePointList), FileFormatVersions.Office2010)]
-    [SchemaAttr(49, "laserTraceLst")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class LaserTraceList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1750,6 +1828,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "laserTraceLst");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.TracePointList), 0, 0, version: FileFormatVersions.Office2010)
@@ -1766,8 +1851,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:creationId.</para>
     /// </summary>
-    [SchemaAttr(49, "creationId")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class CreationId : RandomIdType
     {
         /// <summary>
@@ -1775,6 +1858,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </summary>
         public CreationId() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "creationId");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <inheritdoc/>
@@ -1786,8 +1876,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:modId.</para>
     /// </summary>
-    [SchemaAttr(49, "modId")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ModificationId : RandomIdType
     {
         /// <summary>
@@ -1795,6 +1883,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </summary>
         public ModificationId() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "modId");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <inheritdoc/>
@@ -1860,8 +1955,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     [ChildElementInfo(typeof(ResumeEventRecord), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(SeekEventRecord), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(NullEventRecord), FileFormatVersions.Office2010)]
-    [SchemaAttr(49, "showEvtLst")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ShowEventRecordList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1893,6 +1986,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ShowEventRecordList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "showEvtLst");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <summary>
@@ -2022,8 +2122,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList))]
-    [SchemaAttr(49, "cNvPr")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2110,18 +2208,20 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "cNvPr");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<NonVisualDrawingProperties>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "descr", a => a.Description)
-                           .AddAttribute(0, "hidden", a => a.Hidden)
-                           .AddAttribute(0, "title", a => a.Title);
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "descr", a => a.Description)
+.AddAttribute(0, "hidden", a => a.Hidden)
+.AddAttribute(0, "title", a => a.Title);
         }
 
         /// <summary>
@@ -2190,8 +2290,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList), FileFormatVersions.Office2010)]
-    [SchemaAttr(49, "cNvContentPartPr")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2238,8 +2336,10 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "cNvContentPartPr");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<NonVisualInkContentPartProperties>()
-                           .AddAttribute(0, "isComment", a => a.IsComment);
+.AddAttribute(0, "isComment", a => a.IsComment);
         }
 
         /// <summary>
@@ -2306,8 +2406,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.QuickTimeFromFile))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.CustomerDataList))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtensionList))]
-    [SchemaAttr(49, "nvPr")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2364,9 +2462,11 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "nvPr");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<ApplicationNonVisualDrawingProperties>()
-                           .AddAttribute(0, "isPhoto", a => a.IsPhoto)
-                           .AddAttribute(0, "userDrawn", a => a.UserDrawn);
+.AddAttribute(0, "isPhoto", a => a.IsPhoto)
+.AddAttribute(0, "userDrawn", a => a.UserDrawn);
         }
 
         /// <summary>
@@ -2411,8 +2511,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:bmk.</para>
     /// </summary>
-    [SchemaAttr(49, "bmk")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class MediaBookmark : OpenXmlLeafElement
     {
         /// <summary>
@@ -2445,9 +2543,11 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "bmk");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<MediaBookmark>()
-                           .AddAttribute(0, "name", a => a.Name)
-                           .AddAttribute(0, "time", a => a.Time);
+.AddAttribute(0, "name", a => a.Name)
+.AddAttribute(0, "time", a => a.Time);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -2466,8 +2566,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:trim.</para>
     /// </summary>
-    [SchemaAttr(49, "trim")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class MediaTrim : OpenXmlLeafElement
     {
         /// <summary>
@@ -2500,9 +2598,11 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "trim");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<MediaTrim>()
-                           .AddAttribute(0, "st", a => a.Start)
-                           .AddAttribute(0, "end", a => a.End);
+.AddAttribute(0, "st", a => a.Start)
+.AddAttribute(0, "end", a => a.End);
         }
 
         /// <inheritdoc/>
@@ -2514,8 +2614,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:fade.</para>
     /// </summary>
-    [SchemaAttr(49, "fade")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class MediaFade : OpenXmlLeafElement
     {
         /// <summary>
@@ -2548,9 +2646,11 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "fade");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<MediaFade>()
-                           .AddAttribute(0, "in", a => a.InDuration)
-                           .AddAttribute(0, "out", a => a.OutDuration);
+.AddAttribute(0, "in", a => a.InDuration)
+.AddAttribute(0, "out", a => a.OutDuration);
         }
 
         /// <inheritdoc/>
@@ -2569,8 +2669,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(MediaBookmark), FileFormatVersions.Office2010)]
-    [SchemaAttr(49, "bmkLst")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class MediaBookmarkList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2604,6 +2702,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "bmkLst");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmark), 0, 0, version: FileFormatVersions.Office2010)
@@ -2627,8 +2732,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.Extension))]
-    [SchemaAttr(49, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2662,6 +2765,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "extLst");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 1)
@@ -2691,8 +2801,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
-    [SchemaAttr(49, "section")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SectionOld : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2759,16 +2867,18 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "section");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<SectionOld>()
-                           .AddAttribute(0, "name", a => a.Name)
-                           .AddAttribute(0, "slideIdLst", a => a.SlideIdList, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (2147483648L), MinInclusive = (256L) });
-                           })
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           });
+.AddAttribute(0, "name", a => a.Name)
+.AddAttribute(0, "slideIdLst", a => a.SlideIdList, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (2147483648L), MinInclusive = (256L) });
+})
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+});
         }
 
         /// <summary>
@@ -2800,8 +2910,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:sldId.</para>
     /// </summary>
-    [SchemaAttr(49, "sldId")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SectionSlideIdListEntry : OpenXmlLeafElement
     {
         /// <summary>
@@ -2824,12 +2932,14 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "sldId");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<SectionSlideIdListEntry>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (2147483648L), MinInclusive = (256L) });
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (2147483648L), MinInclusive = (256L) });
+});
         }
 
         /// <inheritdoc/>
@@ -2848,8 +2958,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(SectionSlideIdListEntry), FileFormatVersions.Office2010)]
-    [SchemaAttr(49, "sldIdLst")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SectionSlideIdList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2883,6 +2991,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "sldIdLst");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdListEntry), 0, 0, version: FileFormatVersions.Office2010)
@@ -2908,8 +3023,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </remark>
     [ChildElementInfo(typeof(SectionSlideIdList), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
-    [SchemaAttr(49, "section")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Section : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2966,12 +3079,14 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "section");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<Section>()
-                           .AddAttribute(0, "name", a => a.Name)
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           });
+.AddAttribute(0, "name", a => a.Name)
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+});
         }
 
         /// <summary>
@@ -3017,8 +3132,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:tracePt.</para>
     /// </summary>
-    [SchemaAttr(49, "tracePt")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class TracePoint : OpenXmlLeafElement
     {
         /// <summary>
@@ -3061,21 +3174,23 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "tracePt");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<TracePoint>()
-                           .AddAttribute(0, "t", a => a.Time, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "x", a => a.XCoordinate, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-                           })
-                           .AddAttribute(0, "y", a => a.YCoordinate, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-                           });
+.AddAttribute(0, "t", a => a.Time, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "x", a => a.XCoordinate, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+})
+.AddAttribute(0, "y", a => a.YCoordinate, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+});
         }
 
         /// <inheritdoc/>
@@ -3094,8 +3209,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(TracePoint), FileFormatVersions.Office2010)]
-    [SchemaAttr(49, "tracePtLst")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class TracePointList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3129,6 +3242,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "tracePtLst");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.TracePoint), 0, 0, version: FileFormatVersions.Office2010)
@@ -3145,8 +3265,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:triggerEvt.</para>
     /// </summary>
-    [SchemaAttr(49, "triggerEvt")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class TriggerEventRecord : OpenXmlLeafElement
     {
         /// <summary>
@@ -3189,20 +3307,22 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "triggerEvt");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<TriggerEventRecord>()
-                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "time", a => a.Time, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "objId", a => a.ObjectId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "time", a => a.Time, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "objId", a => a.ObjectId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -3214,8 +3334,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:playEvt.</para>
     /// </summary>
-    [SchemaAttr(49, "playEvt")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class PlayEventRecord : MediaPlaybackEventRecordType
     {
         /// <summary>
@@ -3223,6 +3341,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </summary>
         public PlayEventRecord() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "playEvt");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <inheritdoc/>
@@ -3234,8 +3359,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:stopEvt.</para>
     /// </summary>
-    [SchemaAttr(49, "stopEvt")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class StopEventRecord : MediaPlaybackEventRecordType
     {
         /// <summary>
@@ -3243,6 +3366,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </summary>
         public StopEventRecord() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "stopEvt");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <inheritdoc/>
@@ -3254,8 +3384,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:pauseEvt.</para>
     /// </summary>
-    [SchemaAttr(49, "pauseEvt")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class PauseEventRecord : MediaPlaybackEventRecordType
     {
         /// <summary>
@@ -3263,6 +3391,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </summary>
         public PauseEventRecord() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "pauseEvt");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <inheritdoc/>
@@ -3274,8 +3409,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:resumeEvt.</para>
     /// </summary>
-    [SchemaAttr(49, "resumeEvt")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ResumeEventRecord : MediaPlaybackEventRecordType
     {
         /// <summary>
@@ -3283,6 +3416,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </summary>
         public ResumeEventRecord() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "resumeEvt");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <inheritdoc/>
@@ -3343,8 +3483,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:seekEvt.</para>
     /// </summary>
-    [SchemaAttr(49, "seekEvt")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SeekEventRecord : OpenXmlLeafElement
     {
         /// <summary>
@@ -3387,19 +3525,21 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "seekEvt");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<SeekEventRecord>()
-                           .AddAttribute(0, "time", a => a.Time, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "objId", a => a.ObjectId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "seek", a => a.Seek, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "time", a => a.Time, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "objId", a => a.ObjectId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "seek", a => a.Seek, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -3411,8 +3551,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:nullEvt.</para>
     /// </summary>
-    [SchemaAttr(49, "nullEvt")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class NullEventRecord : OpenXmlLeafElement
     {
         /// <summary>
@@ -3445,15 +3583,17 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(49, "nullEvt");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<NullEventRecord>()
-                           .AddAttribute(0, "time", a => a.Time, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "objId", a => a.ObjectId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "time", a => a.Time, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "objId", a => a.ObjectId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>

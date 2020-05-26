@@ -27,8 +27,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ConditionalFormatting), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "conditionalFormattings")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ConditionalFormattings : OpenXmlCompositeElement
     {
         /// <summary>
@@ -62,6 +60,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "conditionalFormattings");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormatting), 1, 0, version: FileFormatVersions.Office2010)
@@ -85,8 +90,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DataValidation), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "dataValidations")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class DataValidations : OpenXmlCompositeElement
     {
         /// <summary>
@@ -163,11 +166,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "dataValidations");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<DataValidations>()
-                           .AddAttribute(0, "disablePrompts", a => a.DisablePrompts)
-                           .AddAttribute(0, "xWindow", a => a.XWindow)
-                           .AddAttribute(0, "yWindow", a => a.YWindow)
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "disablePrompts", a => a.DisablePrompts)
+.AddAttribute(0, "xWindow", a => a.XWindow)
+.AddAttribute(0, "yWindow", a => a.YWindow)
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -200,8 +205,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(SparklineGroup), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "sparklineGroups")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SparklineGroups : OpenXmlCompositeElement
     {
         /// <summary>
@@ -235,6 +238,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "sparklineGroups");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SparklineGroup), 1, 0, version: FileFormatVersions.Office2010)
@@ -258,8 +268,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(SlicerRef), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "slicerList")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SlicerList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -293,6 +301,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "slicerList");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerRef), 1, 0, version: FileFormatVersions.Office2010)
@@ -316,8 +331,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ProtectedRange), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "protectedRanges")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ProtectedRanges : OpenXmlCompositeElement
     {
         /// <summary>
@@ -351,6 +364,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "protectedRanges");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ProtectedRange), 1, 0, version: FileFormatVersions.Office2010)
@@ -376,8 +396,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </remark>
     [ChildElementInfo(typeof(IgnoredError), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "ignoredErrors")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class IgnoredErrors : OpenXmlCompositeElement
     {
         /// <summary>
@@ -411,6 +429,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "ignoredErrors");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.IgnoredError), 0, 0, version: FileFormatVersions.Office2010),
@@ -435,8 +460,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DefinedName), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "definedNames")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class DefinedNames : OpenXmlCompositeElement
     {
         /// <summary>
@@ -470,6 +493,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "definedNames");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DefinedName), 1, 0, version: FileFormatVersions.Office2010)
@@ -493,8 +523,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCache))]
-    [SchemaAttr(53, "pivotCaches")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class PivotCaches : OpenXmlCompositeElement
     {
         /// <summary>
@@ -528,6 +556,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "pivotCaches");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCache), 1, 0)
@@ -551,8 +586,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(SlicerCache), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "slicerCaches")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SlicerCaches : OpenXmlCompositeElement
     {
         /// <summary>
@@ -586,6 +619,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "slicerCaches");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerCache), 1, 0, version: FileFormatVersions.Office2010)
@@ -602,8 +642,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:workbookPr.</para>
     /// </summary>
-    [SchemaAttr(53, "workbookPr")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class WorkbookProperties : OpenXmlLeafElement
     {
         /// <summary>
@@ -646,10 +684,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "workbookPr");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<WorkbookProperties>()
-                           .AddAttribute(0, "defaultImageDpi", a => a.DefaultImageDpi)
-                           .AddAttribute(0, "discardImageEditData", a => a.DiscardImageEditData)
-                           .AddAttribute(0, "accuracyVersion", a => a.AccuracyVersion);
+.AddAttribute(0, "defaultImageDpi", a => a.DefaultImageDpi)
+.AddAttribute(0, "discardImageEditData", a => a.DiscardImageEditData)
+.AddAttribute(0, "accuracyVersion", a => a.AccuracyVersion);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -674,8 +714,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(TupleSet), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "calculatedMember")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class CalculatedMember : OpenXmlCompositeElement
     {
         /// <summary>
@@ -762,12 +800,14 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "calculatedMember");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<CalculatedMember>()
-                           .AddAttribute(0, "displayFolder", a => a.DisplayFolder)
-                           .AddAttribute(0, "flattenHierarchies", a => a.FlattenHierarchies)
-                           .AddAttribute(0, "dynamicSet", a => a.DynamicSet)
-                           .AddAttribute(0, "hierarchizeDistinct", a => a.HierarchizeDistinct)
-                           .AddAttribute(0, "mdxLong", a => a.MdxLong);
+.AddAttribute(0, "displayFolder", a => a.DisplayFolder)
+.AddAttribute(0, "flattenHierarchies", a => a.FlattenHierarchies)
+.AddAttribute(0, "dynamicSet", a => a.DynamicSet)
+.AddAttribute(0, "hierarchizeDistinct", a => a.HierarchizeDistinct)
+.AddAttribute(0, "mdxLong", a => a.MdxLong);
         }
 
         /// <summary>
@@ -813,8 +853,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(SetLevels), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "cacheHierarchy")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class CacheHierarchy : OpenXmlCompositeElement
     {
         /// <summary>
@@ -891,11 +929,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "cacheHierarchy");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<CacheHierarchy>()
-                           .AddAttribute(0, "flattenHierarchies", a => a.FlattenHierarchies)
-                           .AddAttribute(0, "measuresSet", a => a.MeasuresSet)
-                           .AddAttribute(0, "hierarchizeDistinct", a => a.HierarchizeDistinct)
-                           .AddAttribute(0, "ignore", a => a.Ignore);
+.AddAttribute(0, "flattenHierarchies", a => a.FlattenHierarchies)
+.AddAttribute(0, "measuresSet", a => a.MeasuresSet)
+.AddAttribute(0, "hierarchizeDistinct", a => a.HierarchizeDistinct)
+.AddAttribute(0, "ignore", a => a.Ignore);
         }
 
         /// <summary>
@@ -935,8 +975,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:dataField.</para>
     /// </summary>
-    [SchemaAttr(53, "dataField")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class DataField : OpenXmlLeafElement
     {
         /// <summary>
@@ -979,10 +1017,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "dataField");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<DataField>()
-                           .AddAttribute(0, "pivotShowAs", a => a.PivotShowAs)
-                           .AddAttribute(0, "sourceField", a => a.SourceField)
-                           .AddAttribute(0, "uniqueName", a => a.UniqueName);
+.AddAttribute(0, "pivotShowAs", a => a.PivotShowAs)
+.AddAttribute(0, "sourceField", a => a.SourceField)
+.AddAttribute(0, "uniqueName", a => a.UniqueName);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -1001,8 +1041,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotField.</para>
     /// </summary>
-    [SchemaAttr(53, "pivotField")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class PivotField : OpenXmlLeafElement
     {
         /// <summary>
@@ -1035,9 +1073,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "pivotField");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<PivotField>()
-                           .AddAttribute(0, "fillDownLabels", a => a.FillDownLabels)
-                           .AddAttribute(0, "ignore", a => a.Ignore);
+.AddAttribute(0, "fillDownLabels", a => a.FillDownLabels)
+.AddAttribute(0, "ignore", a => a.Ignore);
         }
 
         /// <inheritdoc/>
@@ -1060,8 +1100,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     [ChildElementInfo(typeof(PivotEdits), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(PivotChanges), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(ConditionalFormats), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "pivotTableDefinition")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class PivotTableDefinition : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1198,17 +1236,19 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "pivotTableDefinition");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<PivotTableDefinition>()
-                           .AddAttribute(0, "fillDownLabelsDefault", a => a.FillDownLabelsDefault)
-                           .AddAttribute(0, "visualTotalsForSets", a => a.VisualTotalsForSets)
-                           .AddAttribute(0, "calculatedMembersInFilters", a => a.CalculatedMembersInFilters)
-                           .AddAttribute(0, "altText", a => a.AltText)
-                           .AddAttribute(0, "altTextSummary", a => a.AltTextSummary)
-                           .AddAttribute(0, "enableEdit", a => a.EnableEdit)
-                           .AddAttribute(0, "autoApply", a => a.AutoApply)
-                           .AddAttribute(0, "allocationMethod", a => a.AllocationMethod)
-                           .AddAttribute(0, "weightExpression", a => a.WeightExpression)
-                           .AddAttribute(0, "hideValuesRow", a => a.HideValuesRow);
+.AddAttribute(0, "fillDownLabelsDefault", a => a.FillDownLabelsDefault)
+.AddAttribute(0, "visualTotalsForSets", a => a.VisualTotalsForSets)
+.AddAttribute(0, "calculatedMembersInFilters", a => a.CalculatedMembersInFilters)
+.AddAttribute(0, "altText", a => a.AltText)
+.AddAttribute(0, "altTextSummary", a => a.AltTextSummary)
+.AddAttribute(0, "enableEdit", a => a.EnableEdit)
+.AddAttribute(0, "autoApply", a => a.AutoApply)
+.AddAttribute(0, "allocationMethod", a => a.AllocationMethod)
+.AddAttribute(0, "weightExpression", a => a.WeightExpression)
+.AddAttribute(0, "hideValuesRow", a => a.HideValuesRow);
         }
 
         /// <summary>
@@ -1276,8 +1316,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotCacheDefinition.</para>
     /// </summary>
-    [SchemaAttr(53, "pivotCacheDefinition")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class PivotCacheDefinition : OpenXmlLeafElement
     {
         /// <summary>
@@ -1340,12 +1378,14 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "pivotCacheDefinition");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<PivotCacheDefinition>()
-                           .AddAttribute(0, "slicerData", a => a.SlicerData)
-                           .AddAttribute(0, "pivotCacheId", a => a.PivotCacheId)
-                           .AddAttribute(0, "supportSubqueryNonVisual", a => a.SupportSubqueryNonVisual)
-                           .AddAttribute(0, "supportSubqueryCalcMem", a => a.SupportSubqueryCalcMem)
-                           .AddAttribute(0, "supportAddCalcMems", a => a.SupportAddCalcMems);
+.AddAttribute(0, "slicerData", a => a.SlicerData)
+.AddAttribute(0, "pivotCacheId", a => a.PivotCacheId)
+.AddAttribute(0, "supportSubqueryNonVisual", a => a.SupportSubqueryNonVisual)
+.AddAttribute(0, "supportSubqueryCalcMem", a => a.SupportSubqueryCalcMem)
+.AddAttribute(0, "supportAddCalcMems", a => a.SupportAddCalcMems);
         }
 
         /// <inheritdoc/>
@@ -1364,8 +1404,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CalculatedMembers), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "connection")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Connection : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1422,9 +1460,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "connection");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<Connection>()
-                           .AddAttribute(0, "culture", a => a.Culture)
-                           .AddAttribute(0, "embeddedDataId", a => a.EmbeddedDataId);
+.AddAttribute(0, "culture", a => a.Culture)
+.AddAttribute(0, "embeddedDataId", a => a.EmbeddedDataId);
         }
 
         /// <summary>
@@ -1463,8 +1503,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:table.</para>
     /// </summary>
-    [SchemaAttr(53, "table")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Table : OpenXmlLeafElement
     {
         /// <summary>
@@ -1497,9 +1535,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "table");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<Table>()
-                           .AddAttribute(0, "altText", a => a.AltText)
-                           .AddAttribute(0, "altTextSummary", a => a.AltTextSummary);
+.AddAttribute(0, "altText", a => a.AltText)
+.AddAttribute(0, "altTextSummary", a => a.AltTextSummary);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -1525,8 +1565,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(SlicerStyle), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "slicerStyles")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SlicerStyles : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1573,11 +1611,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "slicerStyles");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<SlicerStyles>()
-                           .AddAttribute(0, "defaultSlicerStyle", a => a.DefaultSlicerStyle, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "defaultSlicerStyle", a => a.DefaultSlicerStyle, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -1609,8 +1649,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat))]
-    [SchemaAttr(53, "dxfs")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class DifferentialFormats : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1657,8 +1695,10 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "dxfs");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<DifferentialFormats>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1684,8 +1724,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DdeValues), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "oleItem")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class OleItem : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1762,14 +1800,16 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "oleItem");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<OleItem>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "icon", a => a.Icon)
-                           .AddAttribute(0, "advise", a => a.Advise)
-                           .AddAttribute(0, "preferPic", a => a.PreferPicture);
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "icon", a => a.Icon)
+.AddAttribute(0, "advise", a => a.Advise)
+.AddAttribute(0, "preferPic", a => a.PreferPicture);
         }
 
         /// <summary>
@@ -1801,8 +1841,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotHierarchy.</para>
     /// </summary>
-    [SchemaAttr(53, "pivotHierarchy")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class PivotHierarchy : OpenXmlLeafElement
     {
         /// <summary>
@@ -1825,8 +1863,10 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "pivotHierarchy");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<PivotHierarchy>()
-                           .AddAttribute(0, "ignore", a => a.Ignore);
+.AddAttribute(0, "ignore", a => a.Ignore);
         }
 
         /// <inheritdoc/>
@@ -1838,8 +1878,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:cacheField.</para>
     /// </summary>
-    [SchemaAttr(53, "cacheField")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class CacheField : OpenXmlLeafElement
     {
         /// <summary>
@@ -1862,8 +1900,10 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "cacheField");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<CacheField>()
-                           .AddAttribute(0, "ignore", a => a.Ignore);
+.AddAttribute(0, "ignore", a => a.Ignore);
         }
 
         /// <inheritdoc/>
@@ -1875,9 +1915,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:id.</para>
     /// </summary>
-    [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-    [SchemaAttr(53, "id")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Id : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1900,6 +1937,14 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+            builder.SetSchema(53, "id");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Id>(deep);
     }
@@ -1909,8 +1954,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:iconFilter.</para>
     /// </summary>
-    [SchemaAttr(53, "iconFilter")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class IconFilter : OpenXmlLeafElement
     {
         /// <summary>
@@ -1943,15 +1986,17 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "iconFilter");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<IconFilter>()
-                           .AddAttribute(0, "iconSet", a => a.IconSet, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "iconId", a => a.IconId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "iconSet", a => a.IconSet, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "iconId", a => a.IconId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -1963,8 +2008,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:filter.</para>
     /// </summary>
-    [SchemaAttr(53, "filter")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Filter : OpenXmlLeafElement
     {
         /// <summary>
@@ -1987,8 +2030,10 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "filter");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<Filter>()
-                           .AddAttribute(0, "val", a => a.Val);
+.AddAttribute(0, "val", a => a.Val);
         }
 
         /// <inheritdoc/>
@@ -2007,8 +2052,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CustomFilter), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "customFilters")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class CustomFilters : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2055,8 +2098,10 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "customFilters");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<CustomFilters>()
-                           .AddAttribute(0, "and", a => a.And);
+.AddAttribute(0, "and", a => a.And);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2075,8 +2120,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:sortCondition.</para>
     /// </summary>
-    [SchemaAttr(53, "sortCondition")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SortCondition : OpenXmlLeafElement
     {
         /// <summary>
@@ -2159,17 +2202,19 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "sortCondition");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<SortCondition>()
-                           .AddAttribute(0, "descending", a => a.Descending)
-                           .AddAttribute(0, "sortBy", a => a.SortBy)
-                           .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "customList", a => a.CustomList)
-                           .AddAttribute(0, "dxfId", a => a.FormatId)
-                           .AddAttribute(0, "iconSet", a => a.IconSet)
-                           .AddAttribute(0, "iconId", a => a.IconId);
+.AddAttribute(0, "descending", a => a.Descending)
+.AddAttribute(0, "sortBy", a => a.SortBy)
+.AddAttribute(0, "ref", a => a.Reference, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "customList", a => a.CustomList)
+.AddAttribute(0, "dxfId", a => a.FormatId)
+.AddAttribute(0, "iconSet", a => a.IconSet)
+.AddAttribute(0, "iconId", a => a.IconId);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -2189,8 +2234,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:sourceConnection.</para>
     /// </summary>
-    [SchemaAttr(53, "sourceConnection")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SourceConnection : OpenXmlLeafElement
     {
         /// <summary>
@@ -2213,11 +2256,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "sourceConnection");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<SourceConnection>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -2236,8 +2281,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "datastoreItem")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class DatastoreItem : OpenXmlPartRootElement
     {
         /// <summary>
@@ -2284,11 +2327,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "datastoreItem");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<DatastoreItem>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -2366,8 +2411,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </remark>
     [ChildElementInfo(typeof(ListItems), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "formControlPr")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class FormControlProperties : OpenXmlPartRootElement
     {
         /// <summary>
@@ -2714,53 +2757,55 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "formControlPr");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<FormControlProperties>()
-                           .AddAttribute(0, "objectType", a => a.ObjectType, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "checked", a => a.Checked, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "colored", a => a.Colored)
-                           .AddAttribute(0, "dropLines", a => a.DropLines)
-                           .AddAttribute(0, "dropStyle", a => a.DropStyle, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "dx", a => a.ScrollBarWidth)
-                           .AddAttribute(0, "firstButton", a => a.FirstButton)
-                           .AddAttribute(0, "fmlaGroup", a => a.FmlaGroup)
-                           .AddAttribute(0, "fmlaLink", a => a.FmlaLink)
-                           .AddAttribute(0, "fmlaRange", a => a.FmlaRange)
-                           .AddAttribute(0, "fmlaTxbx", a => a.FmlaTextbox)
-                           .AddAttribute(0, "horiz", a => a.Horizontal)
-                           .AddAttribute(0, "inc", a => a.Incremental)
-                           .AddAttribute(0, "justLastX", a => a.JustLastX)
-                           .AddAttribute(0, "lockText", a => a.LockText)
-                           .AddAttribute(0, "max", a => a.Max)
-                           .AddAttribute(0, "min", a => a.Min)
-                           .AddAttribute(0, "multiSel", a => a.MultipleSelection)
-                           .AddAttribute(0, "noThreeD", a => a.NoThreeD)
-                           .AddAttribute(0, "noThreeD2", a => a.NoThreeD2)
-                           .AddAttribute(0, "page", a => a.Page)
-                           .AddAttribute(0, "sel", a => a.Selected)
-                           .AddAttribute(0, "seltype", a => a.SelectionType, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "textHAlign", a => a.TextHorizontalAlign)
-                           .AddAttribute(0, "textVAlign", a => a.TextVerticalAlign)
-                           .AddAttribute(0, "val", a => a.Val)
-                           .AddAttribute(0, "widthMin", a => a.MinimumWidth)
-                           .AddAttribute(0, "editVal", a => a.EditVal, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "multiLine", a => a.MultipleLines)
-                           .AddAttribute(0, "verticalBar", a => a.VerticalBar)
-                           .AddAttribute(0, "passwordEdit", a => a.PasswordEdit);
+.AddAttribute(0, "objectType", a => a.ObjectType, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "checked", a => a.Checked, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "colored", a => a.Colored)
+.AddAttribute(0, "dropLines", a => a.DropLines)
+.AddAttribute(0, "dropStyle", a => a.DropStyle, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "dx", a => a.ScrollBarWidth)
+.AddAttribute(0, "firstButton", a => a.FirstButton)
+.AddAttribute(0, "fmlaGroup", a => a.FmlaGroup)
+.AddAttribute(0, "fmlaLink", a => a.FmlaLink)
+.AddAttribute(0, "fmlaRange", a => a.FmlaRange)
+.AddAttribute(0, "fmlaTxbx", a => a.FmlaTextbox)
+.AddAttribute(0, "horiz", a => a.Horizontal)
+.AddAttribute(0, "inc", a => a.Incremental)
+.AddAttribute(0, "justLastX", a => a.JustLastX)
+.AddAttribute(0, "lockText", a => a.LockText)
+.AddAttribute(0, "max", a => a.Max)
+.AddAttribute(0, "min", a => a.Min)
+.AddAttribute(0, "multiSel", a => a.MultipleSelection)
+.AddAttribute(0, "noThreeD", a => a.NoThreeD)
+.AddAttribute(0, "noThreeD2", a => a.NoThreeD2)
+.AddAttribute(0, "page", a => a.Page)
+.AddAttribute(0, "sel", a => a.Selected)
+.AddAttribute(0, "seltype", a => a.SelectionType, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "textHAlign", a => a.TextHorizontalAlign)
+.AddAttribute(0, "textVAlign", a => a.TextVerticalAlign)
+.AddAttribute(0, "val", a => a.Val)
+.AddAttribute(0, "widthMin", a => a.MinimumWidth)
+.AddAttribute(0, "editVal", a => a.EditVal, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "multiLine", a => a.MultipleLines)
+.AddAttribute(0, "verticalBar", a => a.VerticalBar)
+.AddAttribute(0, "passwordEdit", a => a.PasswordEdit);
         }
 
         /// <summary>
@@ -2854,8 +2899,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Slicer), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "slicers")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Slicers : OpenXmlPartRootElement
     {
         /// <summary>
@@ -2887,6 +2930,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Slicers(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "slicers");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2947,8 +2997,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     [ChildElementInfo(typeof(SlicerCachePivotTables), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(SlicerCacheData), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(SlicerCacheDefinitionExtensionList), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "slicerCacheDefinition")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SlicerCacheDefinition : OpenXmlPartRootElement
     {
         /// <summary>
@@ -3005,15 +3053,17 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "slicerCacheDefinition");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<SlicerCacheDefinition>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "sourceName", a => a.SourceName, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "sourceName", a => a.SourceName, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -3115,8 +3165,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     [ChildElementInfo(typeof(ConditionalFormattingRule), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office.Excel.ReferenceSequence))]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "conditionalFormatting")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ConditionalFormatting : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3163,8 +3211,10 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "conditionalFormatting");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<ConditionalFormatting>()
-                           .AddAttribute(0, "pivot", a => a.Pivot);
+.AddAttribute(0, "pivot", a => a.Pivot);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3202,8 +3252,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     [ChildElementInfo(typeof(IconSet), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DifferentialType), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "cfRule")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ConditionalFormattingRule : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3380,24 +3428,26 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "cfRule");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<ConditionalFormattingRule>()
-                           .AddAttribute(0, "type", a => a.Type)
-                           .AddAttribute(0, "priority", a => a.Priority)
-                           .AddAttribute(0, "stopIfTrue", a => a.StopIfTrue)
-                           .AddAttribute(0, "aboveAverage", a => a.AboveAverage)
-                           .AddAttribute(0, "percent", a => a.Percent)
-                           .AddAttribute(0, "bottom", a => a.Bottom)
-                           .AddAttribute(0, "operator", a => a.Operator)
-                           .AddAttribute(0, "text", a => a.Text)
-                           .AddAttribute(0, "timePeriod", a => a.TimePeriod)
-                           .AddAttribute(0, "rank", a => a.Rank)
-                           .AddAttribute(0, "stdDev", a => a.StandardDeviation)
-                           .AddAttribute(0, "equalAverage", a => a.EqualAverage)
-                           .AddAttribute(0, "activePresent", a => a.ActivePresent)
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           });
+.AddAttribute(0, "type", a => a.Type)
+.AddAttribute(0, "priority", a => a.Priority)
+.AddAttribute(0, "stopIfTrue", a => a.StopIfTrue)
+.AddAttribute(0, "aboveAverage", a => a.AboveAverage)
+.AddAttribute(0, "percent", a => a.Percent)
+.AddAttribute(0, "bottom", a => a.Bottom)
+.AddAttribute(0, "operator", a => a.Operator)
+.AddAttribute(0, "text", a => a.Text)
+.AddAttribute(0, "timePeriod", a => a.TimePeriod)
+.AddAttribute(0, "rank", a => a.Rank)
+.AddAttribute(0, "stdDev", a => a.StandardDeviation)
+.AddAttribute(0, "equalAverage", a => a.EqualAverage)
+.AddAttribute(0, "activePresent", a => a.ActivePresent)
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -3442,8 +3492,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Extension))]
-    [SchemaAttr(53, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3475,6 +3523,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ExtensionList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "extLst");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3510,8 +3565,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     [ChildElementInfo(typeof(DataValidationForumla1), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DataValidationForumla2), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office.Excel.ReferenceSequence))]
-    [SchemaAttr(53, "dataValidation")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class DataValidation : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3668,19 +3721,21 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "dataValidation");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<DataValidation>()
-                           .AddAttribute(0, "type", a => a.Type)
-                           .AddAttribute(0, "errorStyle", a => a.ErrorStyle)
-                           .AddAttribute(0, "imeMode", a => a.ImeMode)
-                           .AddAttribute(0, "operator", a => a.Operator)
-                           .AddAttribute(0, "allowBlank", a => a.AllowBlank)
-                           .AddAttribute(0, "showDropDown", a => a.ShowDropDown)
-                           .AddAttribute(0, "showInputMessage", a => a.ShowInputMessage)
-                           .AddAttribute(0, "showErrorMessage", a => a.ShowErrorMessage)
-                           .AddAttribute(0, "errorTitle", a => a.ErrorTitle)
-                           .AddAttribute(0, "error", a => a.Error)
-                           .AddAttribute(0, "promptTitle", a => a.PromptTitle)
-                           .AddAttribute(0, "prompt", a => a.Prompt);
+.AddAttribute(0, "type", a => a.Type)
+.AddAttribute(0, "errorStyle", a => a.ErrorStyle)
+.AddAttribute(0, "imeMode", a => a.ImeMode)
+.AddAttribute(0, "operator", a => a.Operator)
+.AddAttribute(0, "allowBlank", a => a.AllowBlank)
+.AddAttribute(0, "showDropDown", a => a.ShowDropDown)
+.AddAttribute(0, "showInputMessage", a => a.ShowInputMessage)
+.AddAttribute(0, "showErrorMessage", a => a.ShowErrorMessage)
+.AddAttribute(0, "errorTitle", a => a.ErrorTitle)
+.AddAttribute(0, "error", a => a.Error)
+.AddAttribute(0, "promptTitle", a => a.PromptTitle)
+.AddAttribute(0, "prompt", a => a.Prompt);
         }
 
         /// <summary>
@@ -3754,8 +3809,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description>DocumentFormat.OpenXml.Office.Excel.Formula &lt;xne:f></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(53, "formula1")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class DataValidationForumla1 : DataValidationFormulaType
     {
         /// <summary>
@@ -3789,6 +3842,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "formula1");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Formula), 1, 1)
@@ -3811,8 +3871,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description>DocumentFormat.OpenXml.Office.Excel.Formula &lt;xne:f></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(53, "formula2")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class DataValidationForumla2 : DataValidationFormulaType
     {
         /// <summary>
@@ -3844,6 +3902,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DataValidationForumla2(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "formula2");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3902,6 +3967,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+        }
+
         /// <summary>
         /// <para>Formula.</para>
         /// <para>Represents the following element tag in the schema: xne:f.</para>
@@ -3946,8 +4016,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     [ChildElementInfo(typeof(LowMarkerColor), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office.Excel.Formula))]
     [ChildElementInfo(typeof(Sparklines), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "sparklineGroup")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SparklineGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4154,24 +4222,26 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "sparklineGroup");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<SparklineGroup>()
-                           .AddAttribute(0, "manualMax", a => a.ManualMax)
-                           .AddAttribute(0, "manualMin", a => a.ManualMin)
-                           .AddAttribute(0, "lineWeight", a => a.LineWeight)
-                           .AddAttribute(0, "type", a => a.Type)
-                           .AddAttribute(0, "dateAxis", a => a.DateAxis)
-                           .AddAttribute(0, "displayEmptyCellsAs", a => a.DisplayEmptyCellsAs)
-                           .AddAttribute(0, "markers", a => a.Markers)
-                           .AddAttribute(0, "high", a => a.High)
-                           .AddAttribute(0, "low", a => a.Low)
-                           .AddAttribute(0, "first", a => a.First)
-                           .AddAttribute(0, "last", a => a.Last)
-                           .AddAttribute(0, "negative", a => a.Negative)
-                           .AddAttribute(0, "displayXAxis", a => a.DisplayXAxis)
-                           .AddAttribute(0, "displayHidden", a => a.DisplayHidden)
-                           .AddAttribute(0, "minAxisType", a => a.MinAxisType)
-                           .AddAttribute(0, "maxAxisType", a => a.MaxAxisType)
-                           .AddAttribute(0, "rightToLeft", a => a.RightToLeft);
+.AddAttribute(0, "manualMax", a => a.ManualMax)
+.AddAttribute(0, "manualMin", a => a.ManualMin)
+.AddAttribute(0, "lineWeight", a => a.LineWeight)
+.AddAttribute(0, "type", a => a.Type)
+.AddAttribute(0, "dateAxis", a => a.DateAxis)
+.AddAttribute(0, "displayEmptyCellsAs", a => a.DisplayEmptyCellsAs)
+.AddAttribute(0, "markers", a => a.Markers)
+.AddAttribute(0, "high", a => a.High)
+.AddAttribute(0, "low", a => a.Low)
+.AddAttribute(0, "first", a => a.First)
+.AddAttribute(0, "last", a => a.Last)
+.AddAttribute(0, "negative", a => a.Negative)
+.AddAttribute(0, "displayXAxis", a => a.DisplayXAxis)
+.AddAttribute(0, "displayHidden", a => a.DisplayHidden)
+.AddAttribute(0, "minAxisType", a => a.MinAxisType)
+.AddAttribute(0, "maxAxisType", a => a.MaxAxisType)
+.AddAttribute(0, "rightToLeft", a => a.RightToLeft);
         }
 
         /// <summary>
@@ -4336,8 +4406,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorSeries.</para>
     /// </summary>
-    [SchemaAttr(53, "colorSeries")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SeriesColor : ColorType
     {
         /// <summary>
@@ -4345,6 +4413,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// </summary>
         public SeriesColor() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "colorSeries");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -4362,8 +4437,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorNegative.</para>
     /// </summary>
-    [SchemaAttr(53, "colorNegative")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class NegativeColor : ColorType
     {
         /// <summary>
@@ -4371,6 +4444,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// </summary>
         public NegativeColor() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "colorNegative");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -4388,8 +4468,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorAxis.</para>
     /// </summary>
-    [SchemaAttr(53, "colorAxis")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class AxisColor : ColorType
     {
         /// <summary>
@@ -4397,6 +4475,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// </summary>
         public AxisColor() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "colorAxis");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -4414,8 +4499,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorMarkers.</para>
     /// </summary>
-    [SchemaAttr(53, "colorMarkers")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class MarkersColor : ColorType
     {
         /// <summary>
@@ -4423,6 +4506,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// </summary>
         public MarkersColor() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "colorMarkers");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -4440,8 +4530,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorFirst.</para>
     /// </summary>
-    [SchemaAttr(53, "colorFirst")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class FirstMarkerColor : ColorType
     {
         /// <summary>
@@ -4449,6 +4537,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// </summary>
         public FirstMarkerColor() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "colorFirst");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -4466,8 +4561,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorLast.</para>
     /// </summary>
-    [SchemaAttr(53, "colorLast")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class LastMarkerColor : ColorType
     {
         /// <summary>
@@ -4475,6 +4568,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// </summary>
         public LastMarkerColor() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "colorLast");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -4492,8 +4592,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorHigh.</para>
     /// </summary>
-    [SchemaAttr(53, "colorHigh")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class HighMarkerColor : ColorType
     {
         /// <summary>
@@ -4501,6 +4599,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// </summary>
         public HighMarkerColor() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "colorHigh");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -4518,8 +4623,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorLow.</para>
     /// </summary>
-    [SchemaAttr(53, "colorLow")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class LowMarkerColor : ColorType
     {
         /// <summary>
@@ -4527,6 +4630,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// </summary>
         public LowMarkerColor() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "colorLow");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <inheritdoc/>
@@ -4538,8 +4648,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:color.</para>
     /// </summary>
-    [SchemaAttr(53, "color")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Color : ColorType
     {
         /// <summary>
@@ -4547,6 +4655,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// </summary>
         public Color() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "color");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <inheritdoc/>
@@ -4558,8 +4673,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:fillColor.</para>
     /// </summary>
-    [SchemaAttr(53, "fillColor")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class FillColor : ColorType
     {
         /// <summary>
@@ -4567,6 +4680,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// </summary>
         public FillColor() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "fillColor");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <inheritdoc/>
@@ -4578,8 +4698,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:borderColor.</para>
     /// </summary>
-    [SchemaAttr(53, "borderColor")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class BorderColor : ColorType
     {
         /// <summary>
@@ -4587,6 +4705,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// </summary>
         public BorderColor() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "borderColor");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <inheritdoc/>
@@ -4598,8 +4723,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:negativeFillColor.</para>
     /// </summary>
-    [SchemaAttr(53, "negativeFillColor")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class NegativeFillColor : ColorType
     {
         /// <summary>
@@ -4607,6 +4730,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// </summary>
         public NegativeFillColor() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "negativeFillColor");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <inheritdoc/>
@@ -4618,8 +4748,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:negativeBorderColor.</para>
     /// </summary>
-    [SchemaAttr(53, "negativeBorderColor")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class NegativeBorderColor : ColorType
     {
         /// <summary>
@@ -4627,6 +4755,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// </summary>
         public NegativeBorderColor() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "negativeBorderColor");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <inheritdoc/>
@@ -4638,8 +4773,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:axisColor.</para>
     /// </summary>
-    [SchemaAttr(53, "axisColor")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class BarAxisColor : ColorType
     {
         /// <summary>
@@ -4647,6 +4780,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// </summary>
         public BarAxisColor() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "axisColor");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <inheritdoc/>
@@ -4744,8 +4884,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Sparkline), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "sparklines")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Sparklines : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4779,6 +4917,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "sparklines");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Sparkline), 1, 0, version: FileFormatVersions.Office2010)
@@ -4804,8 +4949,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office.Excel.Formula))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office.Excel.ReferenceSequence))]
-    [SchemaAttr(53, "sparkline")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Sparkline : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4837,6 +4980,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Sparkline(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "sparkline");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <summary>
@@ -4882,8 +5032,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:slicer.</para>
     /// </summary>
-    [SchemaAttr(53, "slicer")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SlicerRef : OpenXmlLeafElement
     {
         /// <summary>
@@ -4909,11 +5057,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "slicer");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<SlicerRef>()
-                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -4931,8 +5081,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:slicerCache.</para>
     /// </summary>
-    [SchemaAttr(53, "slicerCache")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SlicerCache : OpenXmlLeafElement
     {
         /// <summary>
@@ -4958,11 +5106,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "slicerCache");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<SlicerCache>()
-                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -4987,8 +5137,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ArgumentDescriptions), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "definedName")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class DefinedName : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5035,11 +5183,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "definedName");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<DefinedName>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -5084,8 +5234,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ArgumentDescription), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "argumentDescriptions")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ArgumentDescriptions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5132,8 +5280,10 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "argumentDescriptions");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<ArgumentDescriptions>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5152,8 +5302,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:argumentDescription.</para>
     /// </summary>
-    [SchemaAttr(53, "argumentDescription")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ArgumentDescription : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -5189,11 +5337,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "argumentDescription");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<ArgumentDescription>()
-                           .AddAttribute(0, "index", a => a.Index, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "index", a => a.Index, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -5220,8 +5370,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </remark>
     [ChildElementInfo(typeof(TupleSetHeaders), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(TupleSetRows), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "tupleSet")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class TupleSet : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5278,9 +5426,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "tupleSet");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<TupleSet>()
-                           .AddAttribute(0, "rowCount", a => a.RowCount)
-                           .AddAttribute(0, "columnCount", a => a.ColumnCount);
+.AddAttribute(0, "rowCount", a => a.RowCount)
+.AddAttribute(0, "columnCount", a => a.ColumnCount);
         }
 
         /// <summary>
@@ -5333,8 +5483,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(TupleSetHeader), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "headers")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class TupleSetHeaders : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5368,6 +5516,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "headers");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.TupleSetHeader), 1, 0, version: FileFormatVersions.Office2010)
@@ -5391,8 +5546,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(TupleSetRow), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "rows")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class TupleSetRows : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5426,6 +5579,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "rows");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.TupleSetRow), 1, 0, version: FileFormatVersions.Office2010)
@@ -5442,8 +5602,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:header.</para>
     /// </summary>
-    [SchemaAttr(53, "header")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class TupleSetHeader : OpenXmlLeafElement
     {
         /// <summary>
@@ -5476,9 +5634,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "header");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<TupleSetHeader>()
-                           .AddAttribute(0, "uniqueName", a => a.UniqueName)
-                           .AddAttribute(0, "hierarchyName", a => a.HierarchyName);
+.AddAttribute(0, "uniqueName", a => a.UniqueName)
+.AddAttribute(0, "hierarchyName", a => a.HierarchyName);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -5504,8 +5664,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(TupleSetRowItem), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "row")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class TupleSetRow : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5539,6 +5697,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "row");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.TupleSetRowItem), 1, 0, version: FileFormatVersions.Office2010)
@@ -5555,8 +5720,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:rowItem.</para>
     /// </summary>
-    [SchemaAttr(53, "rowItem")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class TupleSetRowItem : OpenXmlLeafElement
     {
         /// <summary>
@@ -5589,9 +5752,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "rowItem");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<TupleSetRowItem>()
-                           .AddAttribute(0, "u", a => a.UniqueName)
-                           .AddAttribute(0, "d", a => a.DisplayName);
+.AddAttribute(0, "u", a => a.UniqueName)
+.AddAttribute(0, "d", a => a.DisplayName);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -5610,8 +5775,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:setLevel.</para>
     /// </summary>
-    [SchemaAttr(53, "setLevel")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SetLevel : OpenXmlLeafElement
     {
         /// <summary>
@@ -5634,11 +5797,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "setLevel");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<SetLevel>()
-                           .AddAttribute(0, "hierarchy", a => a.Hierarchy, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "hierarchy", a => a.Hierarchy, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -5663,8 +5828,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(SetLevel), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "setLevels")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SetLevels : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5711,8 +5874,10 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "setLevels");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<SetLevels>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5740,8 +5905,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </remark>
     [ChildElementInfo(typeof(ConditionalFormattingValueObject), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(Color), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "colorScale")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ColorScale : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5773,6 +5936,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ColorScale(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "colorScale");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5809,8 +5979,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     [ChildElementInfo(typeof(NegativeFillColor), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(NegativeBorderColor), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(BarAxisColor), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "dataBar")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class DataBar : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5937,16 +6105,18 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "dataBar");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<DataBar>()
-                           .AddAttribute(0, "minLength", a => a.MinLength)
-                           .AddAttribute(0, "maxLength", a => a.MaxLength)
-                           .AddAttribute(0, "showValue", a => a.ShowValue)
-                           .AddAttribute(0, "border", a => a.Border)
-                           .AddAttribute(0, "gradient", a => a.Gradient)
-                           .AddAttribute(0, "direction", a => a.Direction)
-                           .AddAttribute(0, "negativeBarColorSameAsPositive", a => a.NegativeBarColorSameAsPositive)
-                           .AddAttribute(0, "negativeBarBorderColorSameAsPositive", a => a.NegativeBarBorderColorSameAsPositive)
-                           .AddAttribute(0, "axisPosition", a => a.AxisPosition);
+.AddAttribute(0, "minLength", a => a.MinLength)
+.AddAttribute(0, "maxLength", a => a.MaxLength)
+.AddAttribute(0, "showValue", a => a.ShowValue)
+.AddAttribute(0, "border", a => a.Border)
+.AddAttribute(0, "gradient", a => a.Gradient)
+.AddAttribute(0, "direction", a => a.Direction)
+.AddAttribute(0, "negativeBarColorSameAsPositive", a => a.NegativeBarColorSameAsPositive)
+.AddAttribute(0, "negativeBarBorderColorSameAsPositive", a => a.NegativeBarBorderColorSameAsPositive)
+.AddAttribute(0, "axisPosition", a => a.AxisPosition);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -5986,8 +6156,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </remark>
     [ChildElementInfo(typeof(ConditionalFormattingValueObject), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(ConditionalFormattingIcon), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "iconSet")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class IconSet : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6074,12 +6242,14 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "iconSet");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<IconSet>()
-                           .AddAttribute(0, "iconSet", a => a.IconSetTypes)
-                           .AddAttribute(0, "showValue", a => a.ShowValue)
-                           .AddAttribute(0, "percent", a => a.Percent)
-                           .AddAttribute(0, "reverse", a => a.Reverse)
-                           .AddAttribute(0, "custom", a => a.Custom);
+.AddAttribute(0, "iconSet", a => a.IconSetTypes)
+.AddAttribute(0, "showValue", a => a.ShowValue)
+.AddAttribute(0, "percent", a => a.Percent)
+.AddAttribute(0, "reverse", a => a.Reverse)
+.AddAttribute(0, "custom", a => a.Custom);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -6118,8 +6288,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Border))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList))]
-    [SchemaAttr(53, "dxf")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class DifferentialType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6151,6 +6319,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DifferentialType(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "dxf");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <summary>
@@ -6275,8 +6450,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office.Excel.Formula))]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "cfvo")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ConditionalFormattingValueObject : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6333,12 +6506,14 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "cfvo");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<ConditionalFormattingValueObject>()
-                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "gte", a => a.GreaterThanOrEqual);
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "gte", a => a.GreaterThanOrEqual);
         }
 
         /// <summary>
@@ -6384,8 +6559,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:cfIcon.</para>
     /// </summary>
-    [SchemaAttr(53, "cfIcon")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ConditionalFormattingIcon : OpenXmlLeafElement
     {
         /// <summary>
@@ -6418,15 +6591,17 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "cfIcon");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<ConditionalFormattingIcon>()
-                           .AddAttribute(0, "iconSet", a => a.IconSet, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "iconId", a => a.IconId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "iconSet", a => a.IconSet, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "iconId", a => a.IconId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -6445,8 +6620,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(PivotEdit), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "pivotEdits")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class PivotEdits : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6480,6 +6653,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "pivotEdits");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotEdit), 1, 0, version: FileFormatVersions.Office2010)
@@ -6503,8 +6683,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(PivotChange), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "pivotChanges")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class PivotChanges : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6538,6 +6716,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "pivotChanges");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotChange), 1, 0, version: FileFormatVersions.Office2010)
@@ -6561,8 +6746,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ConditionalFormat), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "conditionalFormats")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ConditionalFormats : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6609,8 +6792,10 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "conditionalFormats");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<ConditionalFormats>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -6636,8 +6821,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedMember))]
-    [SchemaAttr(53, "calculatedMembers")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class CalculatedMembers : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6684,8 +6867,10 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "calculatedMembers");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<CalculatedMembers>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -6717,8 +6902,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     [ChildElementInfo(typeof(TupleItems), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(PivotArea), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "pivotEdit")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class PivotEdit : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6750,6 +6933,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public PivotEdit(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "pivotEdit");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <summary>
@@ -6832,8 +7022,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office.Excel.Formula))]
     [ChildElementInfo(typeof(PivotEditValue), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "userEdit")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class PivotUserEdit : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6865,6 +7053,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public PivotUserEdit(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "userEdit");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <summary>
@@ -6917,8 +7112,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Xstring), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "tupleItems")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class TupleItems : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6952,6 +7145,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "tupleItems");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Xstring), 1, 0, version: FileFormatVersions.Office2010)
@@ -6977,8 +7177,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList))]
-    [SchemaAttr(53, "pivotArea")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class PivotArea : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7135,19 +7333,21 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "pivotArea");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<PivotArea>()
-                           .AddAttribute(0, "field", a => a.Field)
-                           .AddAttribute(0, "type", a => a.Type)
-                           .AddAttribute(0, "dataOnly", a => a.DataOnly)
-                           .AddAttribute(0, "labelOnly", a => a.LabelOnly)
-                           .AddAttribute(0, "grandRow", a => a.GrandRow)
-                           .AddAttribute(0, "grandCol", a => a.GrandColumn)
-                           .AddAttribute(0, "cacheIndex", a => a.CacheIndex)
-                           .AddAttribute(0, "outline", a => a.Outline)
-                           .AddAttribute(0, "offset", a => a.Offset)
-                           .AddAttribute(0, "collapsedLevelsAreSubtotals", a => a.CollapsedLevelsAreSubtotals)
-                           .AddAttribute(0, "axis", a => a.Axis)
-                           .AddAttribute(0, "fieldPosition", a => a.FieldPosition);
+.AddAttribute(0, "field", a => a.Field)
+.AddAttribute(0, "type", a => a.Type)
+.AddAttribute(0, "dataOnly", a => a.DataOnly)
+.AddAttribute(0, "labelOnly", a => a.LabelOnly)
+.AddAttribute(0, "grandRow", a => a.GrandRow)
+.AddAttribute(0, "grandCol", a => a.GrandColumn)
+.AddAttribute(0, "cacheIndex", a => a.CacheIndex)
+.AddAttribute(0, "outline", a => a.Outline)
+.AddAttribute(0, "offset", a => a.Offset)
+.AddAttribute(0, "collapsedLevelsAreSubtotals", a => a.CollapsedLevelsAreSubtotals)
+.AddAttribute(0, "axis", a => a.Axis)
+.AddAttribute(0, "fieldPosition", a => a.FieldPosition);
         }
 
         /// <summary>
@@ -7204,8 +7404,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     [ChildElementInfo(typeof(PivotEditValue), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(TupleItems), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "pivotChange")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class PivotChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7262,9 +7460,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "pivotChange");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<PivotChange>()
-                           .AddAttribute(0, "allocationMethod", a => a.AllocationMethod)
-                           .AddAttribute(0, "weightExpression", a => a.WeightExpression);
+.AddAttribute(0, "allocationMethod", a => a.AllocationMethod)
+.AddAttribute(0, "weightExpression", a => a.WeightExpression);
         }
 
         /// <summary>
@@ -7330,8 +7530,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:editValue.</para>
     /// </summary>
-    [SchemaAttr(53, "editValue")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class PivotEditValue : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -7367,11 +7565,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "editValue");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<PivotEditValue>()
-                           .AddAttribute(0, "valueType", a => a.ValueType, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "valueType", a => a.ValueType, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -7389,8 +7589,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:tupleItem.</para>
     /// </summary>
-    [SchemaAttr(53, "tupleItem")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Xstring : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -7413,6 +7611,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "tupleItem");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Xstring>(deep);
     }
@@ -7429,8 +7634,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(SlicerStyleElement), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "slicerStyleElements")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SlicerStyleElements : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7464,6 +7667,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "slicerStyleElements");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElement), 1, 0, version: FileFormatVersions.Office2010)
@@ -7487,8 +7697,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Value))]
-    [SchemaAttr(53, "values")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class DdeValues : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7545,9 +7753,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "values");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<DdeValues>()
-                           .AddAttribute(0, "rows", a => a.Rows)
-                           .AddAttribute(0, "cols", a => a.Columns);
+.AddAttribute(0, "rows", a => a.Rows)
+.AddAttribute(0, "cols", a => a.Columns);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -7575,8 +7785,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </remark>
     [ChildElementInfo(typeof(PivotAreas), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "conditionalFormat")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ConditionalFormat : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7653,15 +7861,17 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "conditionalFormat");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<ConditionalFormat>()
-                           .AddAttribute(0, "scope", a => a.Scope)
-                           .AddAttribute(0, "type", a => a.Type)
-                           .AddAttribute(0, "priority", a => a.Priority)
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           });
+.AddAttribute(0, "scope", a => a.Scope)
+.AddAttribute(0, "type", a => a.Type)
+.AddAttribute(0, "priority", a => a.Priority)
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+});
         }
 
         /// <summary>
@@ -7722,8 +7932,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotArea))]
-    [SchemaAttr(53, "pivotAreas")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class PivotAreas : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7770,8 +7978,10 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "pivotAreas");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<PivotAreas>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -7797,8 +8007,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(SlicerStyleElements), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "slicerStyle")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SlicerStyle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7845,11 +8053,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "slicerStyle");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<SlicerStyle>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -7889,8 +8099,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:slicerStyleElement.</para>
     /// </summary>
-    [SchemaAttr(53, "slicerStyleElement")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SlicerStyleElement : OpenXmlLeafElement
     {
         /// <summary>
@@ -7923,12 +8131,14 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "slicerStyleElement");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<SlicerStyleElement>()
-                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "dxfId", a => a.FormatId);
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "dxfId", a => a.FormatId);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -7954,8 +8164,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office.Excel.ReferenceSequence))]
-    [SchemaAttr(53, "ignoredError")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class IgnoredError : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8082,16 +8290,18 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "ignoredError");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<IgnoredError>()
-                           .AddAttribute(0, "evalError", a => a.EvalError)
-                           .AddAttribute(0, "twoDigitTextYear", a => a.TwoDigitTextYear)
-                           .AddAttribute(0, "numberStoredAsText", a => a.NumberStoredAsText)
-                           .AddAttribute(0, "formula", a => a.Formula)
-                           .AddAttribute(0, "formulaRange", a => a.FormulaRange)
-                           .AddAttribute(0, "unlockedFormula", a => a.UnlockedFormula)
-                           .AddAttribute(0, "emptyCellReference", a => a.EmptyCellReference)
-                           .AddAttribute(0, "listDataValidation", a => a.ListDataValidation)
-                           .AddAttribute(0, "calculatedColumn", a => a.CalculatedColumn);
+.AddAttribute(0, "evalError", a => a.EvalError)
+.AddAttribute(0, "twoDigitTextYear", a => a.TwoDigitTextYear)
+.AddAttribute(0, "numberStoredAsText", a => a.NumberStoredAsText)
+.AddAttribute(0, "formula", a => a.Formula)
+.AddAttribute(0, "formulaRange", a => a.FormulaRange)
+.AddAttribute(0, "unlockedFormula", a => a.UnlockedFormula)
+.AddAttribute(0, "emptyCellReference", a => a.EmptyCellReference)
+.AddAttribute(0, "listDataValidation", a => a.ListDataValidation)
+.AddAttribute(0, "calculatedColumn", a => a.CalculatedColumn);
         }
 
         /// <summary>
@@ -8130,8 +8340,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office.Excel.ReferenceSequence))]
-    [SchemaAttr(53, "protectedRange")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ProtectedRange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8238,20 +8446,22 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "protectedRange");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<ProtectedRange>()
-                           .AddAttribute(0, "password", a => a.Password, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
-                           })
-                           .AddAttribute(0, "algorithmName", a => a.AlgorithmName)
-                           .AddAttribute(0, "hashValue", a => a.HashValue)
-                           .AddAttribute(0, "saltValue", a => a.SaltValue)
-                           .AddAttribute(0, "spinCount", a => a.SpinCount)
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "securityDescriptor", a => a.SecurityDescriptor);
+.AddAttribute(0, "password", a => a.Password, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
+})
+.AddAttribute(0, "algorithmName", a => a.AlgorithmName)
+.AddAttribute(0, "hashValue", a => a.HashValue)
+.AddAttribute(0, "saltValue", a => a.SaltValue)
+.AddAttribute(0, "spinCount", a => a.SpinCount)
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "securityDescriptor", a => a.SecurityDescriptor);
         }
 
         /// <summary>
@@ -8291,8 +8501,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:customFilter.</para>
     /// </summary>
-    [SchemaAttr(53, "customFilter")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class CustomFilter : OpenXmlLeafElement
     {
         /// <summary>
@@ -8325,9 +8533,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "customFilter");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<CustomFilter>()
-                           .AddAttribute(0, "operator", a => a.Operator)
-                           .AddAttribute(0, "val", a => a.Val);
+.AddAttribute(0, "operator", a => a.Operator)
+.AddAttribute(0, "val", a => a.Val);
         }
 
         /// <inheritdoc/>
@@ -8339,8 +8549,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:item.</para>
     /// </summary>
-    [SchemaAttr(53, "item")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ListItem : OpenXmlLeafElement
     {
         /// <summary>
@@ -8363,11 +8571,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "item");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<ListItem>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -8388,8 +8598,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </remark>
     [ChildElementInfo(typeof(ListItem), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "itemLst")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ListItems : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8423,6 +8631,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "itemLst");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ListItem), 0, 0, version: FileFormatVersions.Office2010),
@@ -8447,8 +8662,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "slicer")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Slicer : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8585,26 +8798,28 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "slicer");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<Slicer>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "cache", a => a.Cache, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "caption", a => a.Caption)
-                           .AddAttribute(0, "startItem", a => a.StartItem)
-                           .AddAttribute(0, "columnCount", a => a.ColumnCount)
-                           .AddAttribute(0, "showCaption", a => a.ShowCaption)
-                           .AddAttribute(0, "level", a => a.Level)
-                           .AddAttribute(0, "style", a => a.Style)
-                           .AddAttribute(0, "lockedPosition", a => a.LockedPosition)
-                           .AddAttribute(0, "rowHeight", a => a.RowHeight, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "cache", a => a.Cache, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "caption", a => a.Caption)
+.AddAttribute(0, "startItem", a => a.StartItem)
+.AddAttribute(0, "columnCount", a => a.ColumnCount)
+.AddAttribute(0, "showCaption", a => a.ShowCaption)
+.AddAttribute(0, "level", a => a.Level)
+.AddAttribute(0, "style", a => a.Style)
+.AddAttribute(0, "lockedPosition", a => a.LockedPosition)
+.AddAttribute(0, "rowHeight", a => a.RowHeight, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -8656,8 +8871,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     [ChildElementInfo(typeof(OlapSlicerCacheLevelsData), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(OlapSlicerCacheSelections), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "olap")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class OlapSlicerCache : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8704,11 +8917,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "olap");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<OlapSlicerCache>()
-                           .AddAttribute(0, "pivotCacheId", a => a.PivotCacheId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "pivotCacheId", a => a.PivotCacheId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -8777,8 +8992,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </remark>
     [ChildElementInfo(typeof(TabularSlicerCacheItems), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "tabular")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class TabularSlicerCache : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8865,15 +9078,17 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "tabular");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<TabularSlicerCache>()
-                           .AddAttribute(0, "pivotCacheId", a => a.PivotCacheId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "sortOrder", a => a.SortOrder)
-                           .AddAttribute(0, "customListSort", a => a.CustomListSort)
-                           .AddAttribute(0, "showMissing", a => a.ShowMissing)
-                           .AddAttribute(0, "crossFilter", a => a.CrossFilter);
+.AddAttribute(0, "pivotCacheId", a => a.PivotCacheId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "sortOrder", a => a.SortOrder)
+.AddAttribute(0, "customListSort", a => a.CustomListSort)
+.AddAttribute(0, "showMissing", a => a.ShowMissing)
+.AddAttribute(0, "crossFilter", a => a.CrossFilter);
         }
 
         /// <summary>
@@ -8919,8 +9134,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotTable.</para>
     /// </summary>
-    [SchemaAttr(53, "pivotTable")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SlicerCachePivotTable : OpenXmlLeafElement
     {
         /// <summary>
@@ -8953,15 +9166,17 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "pivotTable");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<SlicerCachePivotTable>()
-                           .AddAttribute(0, "tabId", a => a.TabId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "tabId", a => a.TabId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -8979,8 +9194,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:p.</para>
     /// </summary>
-    [SchemaAttr(53, "p")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class OlapSlicerCacheItemParent : OpenXmlLeafElement
     {
         /// <summary>
@@ -9003,11 +9216,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "p");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<OlapSlicerCacheItemParent>()
-                           .AddAttribute(0, "n", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "n", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -9026,8 +9241,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(OlapSlicerCacheItemParent), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "i")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class OlapSlicerCacheItem : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9094,13 +9307,15 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "i");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<OlapSlicerCacheItem>()
-                           .AddAttribute(0, "n", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "c", a => a.DisplayName)
-                           .AddAttribute(0, "nd", a => a.NonDisplay);
+.AddAttribute(0, "n", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "c", a => a.DisplayName)
+.AddAttribute(0, "nd", a => a.NonDisplay);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -9126,8 +9341,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(OlapSlicerCacheItem), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "range")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class OlapSlicerCacheRange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9174,11 +9387,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "range");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<OlapSlicerCacheRange>()
-                           .AddAttribute(0, "startItem", a => a.StartItem, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "startItem", a => a.StartItem, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -9210,8 +9425,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(OlapSlicerCacheRange), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "ranges")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class OlapSlicerCacheRanges : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9245,6 +9458,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "ranges");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheRange), 0, 0, version: FileFormatVersions.Office2010)
@@ -9268,8 +9488,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(OlapSlicerCacheRanges), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "level")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class OlapSlicerCacheLevelData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9356,18 +9574,20 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "level");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<OlapSlicerCacheLevelData>()
-                           .AddAttribute(0, "uniqueName", a => a.UniqueName, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "sourceCaption", a => a.SourceCaption)
-                           .AddAttribute(0, "count", a => a.Count, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "sortOrder", a => a.SortOrder)
-                           .AddAttribute(0, "crossFilter", a => a.CrossFilter);
+.AddAttribute(0, "uniqueName", a => a.UniqueName, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "sourceCaption", a => a.SourceCaption)
+.AddAttribute(0, "count", a => a.Count, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "sortOrder", a => a.SortOrder)
+.AddAttribute(0, "crossFilter", a => a.CrossFilter);
         }
 
         /// <summary>
@@ -9412,8 +9632,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(OlapSlicerCacheLevelData), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "levels")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class OlapSlicerCacheLevelsData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9460,8 +9678,10 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "levels");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<OlapSlicerCacheLevelsData>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -9487,8 +9707,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(OlapSlicerCacheSelection), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "selections")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class OlapSlicerCacheSelections : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9535,8 +9753,10 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "selections");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<OlapSlicerCacheSelections>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -9562,8 +9782,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(OlapSlicerCacheItemParent), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "selection")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class OlapSlicerCacheSelection : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9610,11 +9828,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "selection");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<OlapSlicerCacheSelection>()
-                           .AddAttribute(0, "n", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "n", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -9640,8 +9860,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(TabularSlicerCacheItem), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "items")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class TabularSlicerCacheItems : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9688,8 +9906,10 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "items");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<TabularSlicerCacheItems>()
-                           .AddAttribute(0, "count", a => a.Count);
+.AddAttribute(0, "count", a => a.Count);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -9708,8 +9928,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:i.</para>
     /// </summary>
-    [SchemaAttr(53, "i")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class TabularSlicerCacheItem : OpenXmlLeafElement
     {
         /// <summary>
@@ -9752,13 +9970,15 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "i");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<TabularSlicerCacheItem>()
-                           .AddAttribute(0, "x", a => a.Atom, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "s", a => a.IsSelected)
-                           .AddAttribute(0, "nd", a => a.NonDisplay);
+.AddAttribute(0, "x", a => a.Atom, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "s", a => a.IsSelected)
+.AddAttribute(0, "nd", a => a.NonDisplay);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -9783,8 +10003,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(SlicerCachePivotTable), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "pivotTables")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SlicerCachePivotTables : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9818,6 +10036,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "pivotTables");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTable), 1, 0, version: FileFormatVersions.Office2010)
@@ -9843,8 +10068,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </remark>
     [ChildElementInfo(typeof(OlapSlicerCache), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(TabularSlicerCache), FileFormatVersions.Office2010)]
-    [SchemaAttr(53, "data")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SlicerCacheData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9876,6 +10099,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public SlicerCacheData(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "data");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <summary>
@@ -9928,8 +10158,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.SlicerCacheDefinitionExtension))]
-    [SchemaAttr(53, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SlicerCacheDefinitionExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9961,6 +10189,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public SlicerCacheDefinitionExtensionList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(53, "extLst");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)

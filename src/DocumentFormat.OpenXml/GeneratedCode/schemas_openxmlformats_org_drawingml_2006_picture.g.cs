@@ -35,8 +35,6 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
     [ChildElementInfo(typeof(ShapeProperties))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Pictures.ShapeStyle), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Pictures.OfficeArtExtensionList), FileFormatVersions.Office2010)]
-    [SchemaAttr(17, "pic")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Picture : OpenXmlCompositeElement
     {
         /// <summary>
@@ -68,6 +66,13 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Picture(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(17, "pic");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -166,8 +171,6 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList))]
-    [SchemaAttr(17, "cNvPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -254,18 +257,20 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(17, "cNvPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<NonVisualDrawingProperties>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "descr", a => a.Description)
-                           .AddAttribute(0, "hidden", a => a.Hidden)
-                           .AddAttribute(0, "title", a => a.Title);
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "descr", a => a.Description)
+.AddAttribute(0, "hidden", a => a.Hidden)
+.AddAttribute(0, "title", a => a.Title);
         }
 
         /// <summary>
@@ -340,8 +345,6 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PictureLocks))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList))]
-    [SchemaAttr(17, "cNvPicPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -388,8 +391,10 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(17, "cNvPicPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<NonVisualPictureDrawingProperties>()
-                           .AddAttribute(0, "preferRelativeResize", a => a.PreferRelativeResize);
+.AddAttribute(0, "preferRelativeResize", a => a.PreferRelativeResize);
         }
 
         /// <summary>
@@ -444,8 +449,6 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
     /// </remark>
     [ChildElementInfo(typeof(NonVisualDrawingProperties))]
     [ChildElementInfo(typeof(NonVisualPictureDrawingProperties))]
-    [SchemaAttr(17, "nvPicPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualPictureProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -477,6 +480,13 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NonVisualPictureProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(17, "nvPicPr");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -535,8 +545,6 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SourceRectangle))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Tile))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Stretch))]
-    [SchemaAttr(17, "blipFill")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BlipFill : OpenXmlCompositeElement
     {
         /// <summary>
@@ -593,9 +601,11 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(17, "blipFill");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<BlipFill>()
-                           .AddAttribute(0, "dpi", a => a.Dpi)
-                           .AddAttribute(0, "rotWithShape", a => a.RotateWithShape);
+.AddAttribute(0, "dpi", a => a.Dpi)
+.AddAttribute(0, "rotWithShape", a => a.RotateWithShape);
         }
 
         /// <summary>
@@ -684,8 +694,6 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
-    [SchemaAttr(17, "spPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -732,11 +740,13 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(17, "spPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ShapeProperties>()
-                           .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <summary>

@@ -31,8 +31,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     [ChildElementInfo(typeof(MismatchedKeyMapCustomization))]
     [ChildElementInfo(typeof(Toolbars))]
     [ChildElementInfo(typeof(AllocatedCommands))]
-    [SchemaAttr(33, "tcg")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TemplateCommandGroup : OpenXmlPartRootElement
     {
         /// <summary>
@@ -64,6 +62,13 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public TemplateCommandGroup(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "tcg");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -123,8 +128,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Mcd))]
-    [SchemaAttr(33, "mcds")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Mcds : OpenXmlCompositeElement
     {
         /// <summary>
@@ -158,6 +161,13 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "mcds");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Mcd), 0, 0)
@@ -183,8 +193,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// </remark>
     [ChildElementInfo(typeof(DocEvents))]
     [ChildElementInfo(typeof(Mcds))]
-    [SchemaAttr(33, "vbaSuppData")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VbaSuppData : OpenXmlPartRootElement
     {
         /// <summary>
@@ -216,6 +224,13 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public VbaSuppData(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "vbaSuppData");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -299,8 +314,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(SingleDataSourceRecord))]
-    [SchemaAttr(33, "recipients")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MailMergeRecipients : OpenXmlPartRootElement
     {
         /// <summary>
@@ -334,6 +347,13 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "recipients");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.SingleDataSourceRecord), 1, 0)
@@ -350,8 +370,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:fci.</para>
     /// </summary>
-    [SchemaAttr(33, "fci")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
     {
         /// <summary>
@@ -403,16 +421,18 @@ namespace DocumentFormat.OpenXml.Office.Word
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "fci");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<FixedCommandKeyboardCustomization>()
-                           .AddAttribute(33, "fciName", a => a.CommandName)
-                           .AddAttribute(33, "fciIndex", a => a.CommandIndex, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
-                           })
-                           .AddAttribute(33, "swArg", a => a.Argument, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
-                           });
+.AddAttribute(33, "fciName", a => a.CommandName)
+.AddAttribute(33, "fciIndex", a => a.CommandIndex, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
+})
+.AddAttribute(33, "swArg", a => a.Argument, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
+});
         }
 
         /// <inheritdoc/>
@@ -424,8 +444,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:macro.</para>
     /// </summary>
-    [SchemaAttr(33, "macro")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MacroKeyboardCustomization : MacroWllType
     {
         /// <summary>
@@ -433,6 +451,13 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// </summary>
         public MacroKeyboardCustomization() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "macro");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -444,8 +469,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:wll.</para>
     /// </summary>
-    [SchemaAttr(33, "wll")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class WllMacroKeyboardCustomization : MacroWllType
     {
         /// <summary>
@@ -453,6 +476,13 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// </summary>
         public WllMacroKeyboardCustomization() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "wll");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -499,8 +529,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:acd.</para>
     /// </summary>
-    [SchemaAttr(33, "acd")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AllocatedCommandKeyboardCustomization : AcceleratorKeymapType
     {
         /// <summary>
@@ -508,6 +536,13 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// </summary>
         public AllocatedCommandKeyboardCustomization() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "acd");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -519,8 +554,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:acdEntry.</para>
     /// </summary>
-    [SchemaAttr(33, "acdEntry")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AllocatedCommandManifestEntry : AcceleratorKeymapType
     {
         /// <summary>
@@ -528,6 +561,13 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// </summary>
         public AllocatedCommandManifestEntry() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "acdEntry");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -574,8 +614,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:wch.</para>
     /// </summary>
-    [SchemaAttr(33, "wch")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CharacterInsertion : OpenXmlLeafElement
     {
         /// <summary>
@@ -601,12 +639,14 @@ namespace DocumentFormat.OpenXml.Office.Word
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "wch");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CharacterInsertion>()
-                           .AddAttribute(33, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
-                           });
+.AddAttribute(33, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+});
         }
 
         /// <inheritdoc/>
@@ -633,8 +673,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     [ChildElementInfo(typeof(AllocatedCommandKeyboardCustomization))]
     [ChildElementInfo(typeof(WllMacroKeyboardCustomization))]
     [ChildElementInfo(typeof(CharacterInsertion))]
-    [SchemaAttr(33, "keymap")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class KeyMapEntry : OpenXmlCompositeElement
     {
         /// <summary>
@@ -736,24 +774,26 @@ namespace DocumentFormat.OpenXml.Office.Word
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "keymap");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<KeyMapEntry>()
-                           .AddAttribute(33, "chmPrimary", a => a.CharacterMapPrimary, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
-                           })
-                           .AddAttribute(33, "chmSecondary", a => a.CharacterMapSecondary, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
-                           })
-                           .AddAttribute(33, "kcmPrimary", a => a.KeyCodePrimary, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
-                           })
-                           .AddAttribute(33, "kcmSecondary", a => a.KeyCodeSecondary, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
-                           })
-                           .AddAttribute(33, "mask", a => a.Mask);
+.AddAttribute(33, "chmPrimary", a => a.CharacterMapPrimary, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
+})
+.AddAttribute(33, "chmSecondary", a => a.CharacterMapSecondary, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
+})
+.AddAttribute(33, "kcmPrimary", a => a.KeyCodePrimary, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
+})
+.AddAttribute(33, "kcmSecondary", a => a.KeyCodeSecondary, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
+})
+.AddAttribute(33, "mask", a => a.Mask);
         }
 
         /// <summary>
@@ -841,8 +881,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:acd.</para>
     /// </summary>
-    [SchemaAttr(33, "acd")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AllocatedCommand : OpenXmlLeafElement
     {
         /// <summary>
@@ -907,14 +945,16 @@ namespace DocumentFormat.OpenXml.Office.Word
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "acd");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<AllocatedCommand>()
-                           .AddAttribute(33, "argValue", a => a.ArgumentValue)
-                           .AddAttribute(33, "fciBasedOn", a => a.CommandBasedOn)
-                           .AddAttribute(33, "fciIndexBasedOn", a => a.CommandIndexBasedOn, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
-                           })
-                           .AddAttribute(33, "acdName", a => a.AcceleratorName);
+.AddAttribute(33, "argValue", a => a.ArgumentValue)
+.AddAttribute(33, "fciBasedOn", a => a.CommandBasedOn)
+.AddAttribute(33, "fciIndexBasedOn", a => a.CommandIndexBasedOn, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
+})
+.AddAttribute(33, "acdName", a => a.AcceleratorName);
         }
 
         /// <inheritdoc/>
@@ -926,8 +966,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:mcd.</para>
     /// </summary>
-    [SchemaAttr(33, "mcd")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Mcd : OpenXmlLeafElement
     {
         /// <summary>
@@ -1005,18 +1043,20 @@ namespace DocumentFormat.OpenXml.Office.Word
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "mcd");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Mcd>()
-                           .AddAttribute(33, "macroName", a => a.MacroName)
-                           .AddAttribute(33, "name", a => a.Name)
-                           .AddAttribute(33, "menuHelp", a => a.MenuHelp)
-                           .AddAttribute(33, "bEncrypt", a => a.BEncrypt, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
-                           })
-                           .AddAttribute(33, "cmg", a => a.Cmg, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
-                           });
+.AddAttribute(33, "macroName", a => a.MacroName)
+.AddAttribute(33, "name", a => a.Name)
+.AddAttribute(33, "menuHelp", a => a.MenuHelp)
+.AddAttribute(33, "bEncrypt", a => a.BEncrypt, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
+})
+.AddAttribute(33, "cmg", a => a.Cmg, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -1036,8 +1076,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocNew.</para>
     /// </summary>
-    [SchemaAttr(33, "eventDocNew")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class EventDocNewXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1060,6 +1098,13 @@ namespace DocumentFormat.OpenXml.Office.Word
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "eventDocNew");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocNewXsdString>(deep);
     }
@@ -1069,8 +1114,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocOpen.</para>
     /// </summary>
-    [SchemaAttr(33, "eventDocOpen")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class EventDocOpenXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1093,6 +1136,13 @@ namespace DocumentFormat.OpenXml.Office.Word
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "eventDocOpen");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocOpenXsdString>(deep);
     }
@@ -1102,8 +1152,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocClose.</para>
     /// </summary>
-    [SchemaAttr(33, "eventDocClose")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class EventDocCloseXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1126,6 +1174,13 @@ namespace DocumentFormat.OpenXml.Office.Word
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "eventDocClose");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocCloseXsdString>(deep);
     }
@@ -1135,8 +1190,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocSync.</para>
     /// </summary>
-    [SchemaAttr(33, "eventDocSync")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class EventDocSyncXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1159,6 +1212,13 @@ namespace DocumentFormat.OpenXml.Office.Word
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "eventDocSync");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocSyncXsdString>(deep);
     }
@@ -1168,8 +1228,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocXmlAfterInsert.</para>
     /// </summary>
-    [SchemaAttr(33, "eventDocXmlAfterInsert")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class EventDocXmlAfterInsertXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1192,6 +1250,13 @@ namespace DocumentFormat.OpenXml.Office.Word
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "eventDocXmlAfterInsert");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocXmlAfterInsertXsdString>(deep);
     }
@@ -1201,8 +1266,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocXmlBeforeDelete.</para>
     /// </summary>
-    [SchemaAttr(33, "eventDocXmlBeforeDelete")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class EventDocXmlBeforeDeleteXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1225,6 +1288,13 @@ namespace DocumentFormat.OpenXml.Office.Word
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "eventDocXmlBeforeDelete");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocXmlBeforeDeleteXsdString>(deep);
     }
@@ -1234,8 +1304,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocContentControlAfterInsert.</para>
     /// </summary>
-    [SchemaAttr(33, "eventDocContentControlAfterInsert")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class EventDocContentControlAfterInsertXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1258,6 +1326,13 @@ namespace DocumentFormat.OpenXml.Office.Word
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "eventDocContentControlAfterInsert");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocContentControlAfterInsertXsdString>(deep);
     }
@@ -1267,8 +1342,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocContentControlBeforeDelete.</para>
     /// </summary>
-    [SchemaAttr(33, "eventDocContentControlBeforeDelete")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class EventDocContentControlBeforeDeleteXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1291,6 +1364,13 @@ namespace DocumentFormat.OpenXml.Office.Word
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "eventDocContentControlBeforeDelete");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocContentControlBeforeDeleteXsdString>(deep);
     }
@@ -1300,8 +1380,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocContentControlOnExit.</para>
     /// </summary>
-    [SchemaAttr(33, "eventDocContentControlOnExit")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class EventDocContentControlOnExistXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1324,6 +1402,13 @@ namespace DocumentFormat.OpenXml.Office.Word
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "eventDocContentControlOnExit");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocContentControlOnExistXsdString>(deep);
     }
@@ -1333,8 +1418,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocContentControlOnEnter.</para>
     /// </summary>
-    [SchemaAttr(33, "eventDocContentControlOnEnter")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class EventDocContentControlOnEnterXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1357,6 +1440,13 @@ namespace DocumentFormat.OpenXml.Office.Word
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "eventDocContentControlOnEnter");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocContentControlOnEnterXsdString>(deep);
     }
@@ -1366,8 +1456,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocStoreUpdate.</para>
     /// </summary>
-    [SchemaAttr(33, "eventDocStoreUpdate")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class EventDocStoreUpdateXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1390,6 +1478,13 @@ namespace DocumentFormat.OpenXml.Office.Word
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "eventDocStoreUpdate");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocStoreUpdateXsdString>(deep);
     }
@@ -1399,8 +1494,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocContentControlContentUpdate.</para>
     /// </summary>
-    [SchemaAttr(33, "eventDocContentControlContentUpdate")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class EventDocContentControlUpdateXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1423,6 +1516,13 @@ namespace DocumentFormat.OpenXml.Office.Word
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "eventDocContentControlContentUpdate");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocContentControlUpdateXsdString>(deep);
     }
@@ -1432,8 +1532,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocBuildingBlockAfterInsert.</para>
     /// </summary>
-    [SchemaAttr(33, "eventDocBuildingBlockAfterInsert")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class EventDocBuildingBlockAfterInsertXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1454,6 +1552,13 @@ namespace DocumentFormat.OpenXml.Office.Word
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
             return new StringValue { InnerText = text };
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "eventDocBuildingBlockAfterInsert");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1496,8 +1601,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     [ChildElementInfo(typeof(EventDocStoreUpdateXsdString))]
     [ChildElementInfo(typeof(EventDocContentControlUpdateXsdString))]
     [ChildElementInfo(typeof(EventDocBuildingBlockAfterInsertXsdString))]
-    [SchemaAttr(33, "docEvents")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DocEvents : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1529,6 +1632,13 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DocEvents(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "docEvents");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -1735,8 +1845,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(AllocatedCommandManifestEntry))]
-    [SchemaAttr(33, "acdManifest")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AllocatedCommandManifest : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1770,6 +1878,13 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "acdManifest");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifestEntry), 0, 0)
@@ -1786,8 +1901,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:toolbarData.</para>
     /// </summary>
-    [SchemaAttr(33, "toolbarData")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ToolbarData : OpenXmlLeafElement
     {
         /// <summary>
@@ -1813,11 +1926,13 @@ namespace DocumentFormat.OpenXml.Office.Word
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "toolbarData");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ToolbarData>()
-                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -1835,8 +1950,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     ///   <item><description>KeyMapEntry &lt;wne:keymap></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(33, "keymaps")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class KeyMapCustomizations : KeymapsType
     {
         /// <summary>
@@ -1870,6 +1983,13 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "keymaps");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.KeyMapEntry), 0, 0)
@@ -1892,8 +2012,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     ///   <item><description>KeyMapEntry &lt;wne:keymap></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(33, "keymapsBad")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MismatchedKeyMapCustomization : KeymapsType
     {
         /// <summary>
@@ -1925,6 +2043,13 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public MismatchedKeyMapCustomization(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "keymapsBad");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1982,6 +2107,11 @@ namespace DocumentFormat.OpenXml.Office.Word
         protected KeymapsType(string outerXml) : base(outerXml)
         {
         }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+        }
     }
 
     /// <summary>
@@ -1998,8 +2128,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// </remark>
     [ChildElementInfo(typeof(AllocatedCommandManifest))]
     [ChildElementInfo(typeof(ToolbarData))]
-    [SchemaAttr(33, "toolbars")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Toolbars : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2033,6 +2161,13 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "toolbars");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifest), 0, 0),
@@ -2057,8 +2192,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(AllocatedCommand))]
-    [SchemaAttr(33, "acds")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AllocatedCommands : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2092,6 +2225,13 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "acds");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommand), 0, 0)
@@ -2108,8 +2248,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:active.</para>
     /// </summary>
-    [SchemaAttr(33, "active")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RecordIncluded : OpenXmlLeafElement
     {
         /// <summary>
@@ -2135,8 +2273,10 @@ namespace DocumentFormat.OpenXml.Office.Word
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "active");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RecordIncluded>()
-                           .AddAttribute(33, "val", a => a.Val);
+.AddAttribute(33, "val", a => a.Val);
         }
 
         /// <inheritdoc/>
@@ -2148,8 +2288,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:hash.</para>
     /// </summary>
-    [SchemaAttr(33, "hash")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RecordHashCode : OpenXmlLeafElement
     {
         /// <summary>
@@ -2175,11 +2313,13 @@ namespace DocumentFormat.OpenXml.Office.Word
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "hash");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RecordHashCode>()
-                           .AddAttribute(33, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(33, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -2200,8 +2340,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// </remark>
     [ChildElementInfo(typeof(RecordIncluded))]
     [ChildElementInfo(typeof(RecordHashCode))]
-    [SchemaAttr(33, "recipientData")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SingleDataSourceRecord : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2233,6 +2371,13 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public SingleDataSourceRecord(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(33, "recipientData");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>

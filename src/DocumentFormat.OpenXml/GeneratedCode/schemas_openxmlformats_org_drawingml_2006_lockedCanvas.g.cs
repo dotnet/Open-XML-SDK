@@ -43,8 +43,6 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrame))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupShape))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GvmlGroupShapeExtensionList))]
-    [SchemaAttr(15, "lockedCanvas")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LockedCanvas : OpenXmlCompositeElement
     {
         /// <summary>
@@ -76,6 +74,13 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public LockedCanvas(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(15, "lockedCanvas");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>

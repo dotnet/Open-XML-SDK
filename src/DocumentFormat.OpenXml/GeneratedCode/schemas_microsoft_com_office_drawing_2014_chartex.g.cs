@@ -38,8 +38,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     [ChildElementInfo(typeof(ColorMappingType), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(PrintSettings), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
-    [SchemaAttr(80, "chartSpace")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class ChartSpace : OpenXmlPartRootElement
     {
         /// <summary>
@@ -71,6 +69,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ChartSpace(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "chartSpace");
+            builder.Availability = (FileFormatVersions.Office2016);
         }
 
         /// <summary>
@@ -217,9 +222,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:binCount.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(UInt32Value))]
-    [SchemaAttr(80, "binCount")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class BinCountXsdunsignedInt : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -242,6 +244,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             return new UInt32Value { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)) });
+            builder.SetSchema(80, "binCount");
+            builder.Availability = (FileFormatVersions.Office2016);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BinCountXsdunsignedInt>(deep);
     }
@@ -251,8 +261,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:ext.</para>
     /// </summary>
-    [SchemaAttr(80, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class Extension2 : OpenXmlCompositeElement
     {
         /// <summary>
@@ -299,11 +307,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "ext");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<Extension2>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -322,8 +332,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:pt.</para>
     /// </summary>
-    [SchemaAttr(80, "pt")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class ChartStringValue : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -359,11 +367,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "pt");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<ChartStringValue>()
-                           .AddAttribute(0, "idx", a => a.Index, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "idx", a => a.Index, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -375,8 +385,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:pt.</para>
     /// </summary>
-    [SchemaAttr(80, "pt")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class NumericValue : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -412,11 +420,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "pt");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<NumericValue>()
-                           .AddAttribute(0, "idx", a => a.Idx, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "idx", a => a.Idx, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -437,8 +447,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// </remark>
     [ChildElementInfo(typeof(Formula), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(NumericLevel), FileFormatVersions.Office2016)]
-    [SchemaAttr(80, "numDim")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class NumericDimension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -485,11 +493,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "numDim");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<NumericDimension>()
-                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -521,8 +531,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// </remark>
     [ChildElementInfo(typeof(Formula), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(StringLevel), FileFormatVersions.Office2016)]
-    [SchemaAttr(80, "strDim")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class StringDimension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -569,11 +577,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "strDim");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<StringDimension>()
-                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -603,8 +613,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Extension2), FileFormatVersions.Office2016)]
-    [SchemaAttr(80, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -638,6 +646,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "extLst");
+            builder.Availability = (FileFormatVersions.Office2016);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Extension2), 0, 0, version: FileFormatVersions.Office2016)
@@ -654,8 +669,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:externalData.</para>
     /// </summary>
-    [SchemaAttr(80, "externalData")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class ExternalData : OpenXmlLeafElement
     {
         /// <summary>
@@ -694,15 +707,17 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "externalData");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<ExternalData>()
-                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(80, "autoUpdate", a => a.AutoUpdate, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2016));
-                           });
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(80, "autoUpdate", a => a.AutoUpdate, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2016));
+});
         }
 
         /// <inheritdoc/>
@@ -725,8 +740,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     [ChildElementInfo(typeof(NumericDimension), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(StringDimension), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
-    [SchemaAttr(80, "data")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class Data : OpenXmlCompositeElement
     {
         /// <summary>
@@ -773,11 +786,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "data");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<Data>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -810,8 +825,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// </remark>
     [ChildElementInfo(typeof(Formula), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(VXsdstring), FileFormatVersions.Office2016)]
-    [SchemaAttr(80, "txData")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class TextData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -845,6 +858,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "txData");
+            builder.Availability = (FileFormatVersions.Office2016);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -873,8 +893,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Paragraph &lt;a:p></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(80, "rich")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class RichTextBody : TextBodyType
     {
         /// <summary>
@@ -908,6 +926,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "rich");
+            builder.Availability = (FileFormatVersions.Office2016);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties), 1, 1),
@@ -934,8 +959,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Paragraph &lt;a:p></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(80, "txPr")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class TxPrTextBody : TextBodyType
     {
         /// <summary>
@@ -967,6 +990,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public TxPrTextBody(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "txPr");
+            builder.Availability = (FileFormatVersions.Office2016);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1031,6 +1061,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+        }
+
         /// <summary>
         /// <para>Body Properties.</para>
         /// <para>Represents the following element tag in the schema: a:bodyPr.</para>
@@ -1072,8 +1107,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// </remark>
     [ChildElementInfo(typeof(TextData), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(RichTextBody), FileFormatVersions.Office2016)]
-    [SchemaAttr(80, "tx")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class Text : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1105,6 +1138,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Text(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "tx");
+            builder.Availability = (FileFormatVersions.Office2016);
         }
 
         /// <summary>
@@ -1188,8 +1228,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
-    [SchemaAttr(80, "spPr")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1236,11 +1274,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "spPr");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<ShapeProperties>()
-                           .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <summary>
@@ -1317,8 +1357,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(TxPrTextBody), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
-    [SchemaAttr(80, "unitsLabel")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class AxisUnitsLabel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1350,6 +1388,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public AxisUnitsLabel(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "unitsLabel");
+            builder.Availability = (FileFormatVersions.Office2016);
         }
 
         /// <summary>
@@ -1423,8 +1468,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:catScaling.</para>
     /// </summary>
-    [SchemaAttr(80, "catScaling")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class CategoryAxisScaling : OpenXmlLeafElement
     {
         /// <summary>
@@ -1447,15 +1490,17 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "catScaling");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<CategoryAxisScaling>()
-                           .AddAttribute(0, "gapWidth", a => a.GapWidth, aBuilder =>
-                           {
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(DoubleValue)), UnionId = (0) });
-                                   union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
-                               });
-                           });
+.AddAttribute(0, "gapWidth", a => a.GapWidth, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(DoubleValue)), UnionId = (0) });
+union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+});
+});
         }
 
         /// <inheritdoc/>
@@ -1467,8 +1512,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:valScaling.</para>
     /// </summary>
-    [SchemaAttr(80, "valScaling")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class ValueAxisScaling : OpenXmlLeafElement
     {
         /// <summary>
@@ -1521,39 +1564,41 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "valScaling");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<ValueAxisScaling>()
-                           .AddAttribute(0, "max", a => a.Max, aBuilder =>
-                           {
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DoubleValue)), UnionId = (0) });
-                                   union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
-                               });
-                           })
-                           .AddAttribute(0, "min", a => a.Min, aBuilder =>
-                           {
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DoubleValue)), UnionId = (0) });
-                                   union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
-                               });
-                           })
-                           .AddAttribute(0, "majorUnit", a => a.MajorUnit, aBuilder =>
-                           {
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new NumberValidatorAttribute() { MinExclusive = (0L), SimpleType = (typeof(DoubleValue)), UnionId = (0) });
-                                   union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
-                               });
-                           })
-                           .AddAttribute(0, "minorUnit", a => a.MinorUnit, aBuilder =>
-                           {
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new NumberValidatorAttribute() { MinExclusive = (0L), SimpleType = (typeof(DoubleValue)), UnionId = (0) });
-                                   union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
-                               });
-                           });
+.AddAttribute(0, "max", a => a.Max, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DoubleValue)), UnionId = (0) });
+union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+});
+})
+.AddAttribute(0, "min", a => a.Min, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DoubleValue)), UnionId = (0) });
+union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+});
+})
+.AddAttribute(0, "majorUnit", a => a.MajorUnit, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { MinExclusive = (0L), SimpleType = (typeof(DoubleValue)), UnionId = (0) });
+union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+});
+})
+.AddAttribute(0, "minorUnit", a => a.MinorUnit, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { MinExclusive = (0L), SimpleType = (typeof(DoubleValue)), UnionId = (0) });
+union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+});
+});
         }
 
         /// <inheritdoc/>
@@ -1578,8 +1623,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(TxPrTextBody), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
-    [SchemaAttr(80, "title")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class AxisTitle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1611,6 +1654,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public AxisTitle(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "title");
+            builder.Availability = (FileFormatVersions.Office2016);
         }
 
         /// <summary>
@@ -1693,8 +1743,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// </remark>
     [ChildElementInfo(typeof(AxisUnitsLabel), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
-    [SchemaAttr(80, "units")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class AxisUnits : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1741,8 +1789,10 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "units");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<AxisUnits>()
-                           .AddAttribute(0, "unit", a => a.Unit);
+.AddAttribute(0, "unit", a => a.Unit);
         }
 
         /// <summary>
@@ -1795,8 +1845,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(80, "majorGridlines")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class MajorGridlinesGridlines : OpenXmlGridlinesElement
     {
         /// <summary>
@@ -1830,6 +1878,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "majorGridlines");
+            builder.Availability = (FileFormatVersions.Office2016);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties), 0, 1, version: FileFormatVersions.Office2016),
@@ -1854,8 +1909,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(80, "minorGridlines")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class MinorGridlinesGridlines : OpenXmlGridlinesElement
     {
         /// <summary>
@@ -1887,6 +1940,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public MinorGridlinesGridlines(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "minorGridlines");
+            builder.Availability = (FileFormatVersions.Office2016);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1948,6 +2008,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+        }
+
         /// <summary>
         /// <para>ShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: cx:spPr.</para>
@@ -1986,8 +2051,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(80, "majorTickMarks")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class MajorTickMarksTickMarks : OpenXmlTickMarksElement
     {
         /// <summary>
@@ -2021,6 +2084,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "majorTickMarks");
+            builder.Availability = (FileFormatVersions.Office2016);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList), 0, 1, version: FileFormatVersions.Office2016)
@@ -2043,8 +2113,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(80, "minorTickMarks")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class MinorTickMarksTickMarks : OpenXmlTickMarksElement
     {
         /// <summary>
@@ -2076,6 +2144,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public MinorTickMarksTickMarks(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "minorTickMarks");
+            builder.Availability = (FileFormatVersions.Office2016);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2177,8 +2252,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
-    [SchemaAttr(80, "tickLabels")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class TickLabels : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2212,6 +2285,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "tickLabels");
+            builder.Availability = (FileFormatVersions.Office2016);
+        }
+
         /// <summary>
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: cx:extLst.</para>
@@ -2241,8 +2321,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:numFmt.</para>
     /// </summary>
-    [SchemaAttr(80, "numFmt")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class NumberFormat : OpenXmlLeafElement
     {
         /// <summary>
@@ -2275,12 +2353,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "numFmt");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<NumberFormat>()
-                           .AddAttribute(0, "formatCode", a => a.FormatCode, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "sourceLinked", a => a.SourceLinked);
+.AddAttribute(0, "formatCode", a => a.FormatCode, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "sourceLinked", a => a.SourceLinked);
         }
 
         /// <inheritdoc/>
@@ -2292,9 +2372,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:binSize.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(DoubleValue))]
-    [SchemaAttr(80, "binSize")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class Xsddouble : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2317,6 +2394,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             return new DoubleValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DoubleValue)) });
+            builder.SetSchema(80, "binSize");
+            builder.Availability = (FileFormatVersions.Office2016);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Xsddouble>(deep);
     }
@@ -2326,8 +2411,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:parentLabelLayout.</para>
     /// </summary>
-    [SchemaAttr(80, "parentLabelLayout")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class ParentLabelLayout : OpenXmlLeafElement
     {
         /// <summary>
@@ -2350,11 +2433,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "parentLabelLayout");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<ParentLabelLayout>()
-                           .AddAttribute(0, "val", a => a.ParentLabelLayoutVal, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "val", a => a.ParentLabelLayoutVal, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -2366,8 +2451,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:visibility.</para>
     /// </summary>
-    [SchemaAttr(80, "visibility")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class SeriesElementVisibilities : OpenXmlLeafElement
     {
         /// <summary>
@@ -2430,12 +2513,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "visibility");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<SeriesElementVisibilities>()
-                           .AddAttribute(0, "connectorLines", a => a.ConnectorLines)
-                           .AddAttribute(0, "meanLine", a => a.MeanLine)
-                           .AddAttribute(0, "meanMarker", a => a.MeanMarker)
-                           .AddAttribute(0, "nonoutliers", a => a.Nonoutliers)
-                           .AddAttribute(0, "outliers", a => a.Outliers);
+.AddAttribute(0, "connectorLines", a => a.ConnectorLines)
+.AddAttribute(0, "meanLine", a => a.MeanLine)
+.AddAttribute(0, "meanMarker", a => a.MeanMarker)
+.AddAttribute(0, "nonoutliers", a => a.Nonoutliers)
+.AddAttribute(0, "outliers", a => a.Outliers);
         }
 
         /// <inheritdoc/>
@@ -2447,8 +2532,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:aggregation.</para>
     /// </summary>
-    [SchemaAttr(80, "aggregation")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class Aggregation : OpenXmlLeafElement
     {
         /// <summary>
@@ -2456,6 +2539,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// </summary>
         public Aggregation() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "aggregation");
+            builder.Availability = (FileFormatVersions.Office2016);
         }
 
         /// <inheritdoc/>
@@ -2476,8 +2566,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// </remark>
     [ChildElementInfo(typeof(Xsddouble), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(BinCountXsdunsignedInt), FileFormatVersions.Office2016)]
-    [SchemaAttr(80, "binning")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class Binning : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2544,24 +2632,26 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "binning");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<Binning>()
-                           .AddAttribute(0, "intervalClosed", a => a.IntervalClosed)
-                           .AddAttribute(0, "underflow", a => a.Underflow, aBuilder =>
-                           {
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DoubleValue)), UnionId = (0) });
-                                   union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
-                               });
-                           })
-                           .AddAttribute(0, "overflow", a => a.Overflow, aBuilder =>
-                           {
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DoubleValue)), UnionId = (0) });
-                                   union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
-                               });
-                           });
+.AddAttribute(0, "intervalClosed", a => a.IntervalClosed)
+.AddAttribute(0, "underflow", a => a.Underflow, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DoubleValue)), UnionId = (0) });
+union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+});
+})
+.AddAttribute(0, "overflow", a => a.Overflow, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DoubleValue)), UnionId = (0) });
+union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+});
+});
         }
 
         /// <summary>
@@ -2607,8 +2697,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:statistics.</para>
     /// </summary>
-    [SchemaAttr(80, "statistics")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class Statistics : OpenXmlLeafElement
     {
         /// <summary>
@@ -2631,8 +2719,10 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "statistics");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<Statistics>()
-                           .AddAttribute(0, "quartileMethod", a => a.QuartileMethod);
+.AddAttribute(0, "quartileMethod", a => a.QuartileMethod);
         }
 
         /// <inheritdoc/>
@@ -2651,8 +2741,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(UnsignedIntegerType), FileFormatVersions.Office2016)]
-    [SchemaAttr(80, "subtotals")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class Subtotals : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2686,6 +2774,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "subtotals");
+            builder.Availability = (FileFormatVersions.Office2016);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.UnsignedIntegerType), 0, 0, version: FileFormatVersions.Office2016)
@@ -2702,8 +2797,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:visibility.</para>
     /// </summary>
-    [SchemaAttr(80, "visibility")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class DataLabelVisibilities : OpenXmlLeafElement
     {
         /// <summary>
@@ -2746,10 +2839,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "visibility");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<DataLabelVisibilities>()
-                           .AddAttribute(0, "seriesName", a => a.SeriesName)
-                           .AddAttribute(0, "categoryName", a => a.CategoryName)
-                           .AddAttribute(0, "value", a => a.Value);
+.AddAttribute(0, "seriesName", a => a.SeriesName)
+.AddAttribute(0, "categoryName", a => a.CategoryName)
+.AddAttribute(0, "value", a => a.Value);
         }
 
         /// <inheritdoc/>
@@ -2761,8 +2856,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:separator.</para>
     /// </summary>
-    [SchemaAttr(80, "separator")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class SeparatorXsdstring : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2785,6 +2878,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "separator");
+            builder.Availability = (FileFormatVersions.Office2016);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SeparatorXsdstring>(deep);
     }
@@ -2794,8 +2894,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:oddHeader.</para>
     /// </summary>
-    [SchemaAttr(80, "oddHeader")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class OddHeaderXsdstring : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2818,6 +2916,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "oddHeader");
+            builder.Availability = (FileFormatVersions.Office2016);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OddHeaderXsdstring>(deep);
     }
@@ -2827,8 +2932,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:oddFooter.</para>
     /// </summary>
-    [SchemaAttr(80, "oddFooter")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class OddFooterXsdstring : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2851,6 +2954,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "oddFooter");
+            builder.Availability = (FileFormatVersions.Office2016);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OddFooterXsdstring>(deep);
     }
@@ -2860,8 +2970,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:evenHeader.</para>
     /// </summary>
-    [SchemaAttr(80, "evenHeader")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class EvenHeaderXsdstring : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2884,6 +2992,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "evenHeader");
+            builder.Availability = (FileFormatVersions.Office2016);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EvenHeaderXsdstring>(deep);
     }
@@ -2893,8 +3008,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:evenFooter.</para>
     /// </summary>
-    [SchemaAttr(80, "evenFooter")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class EvenFooterXsdstring : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2917,6 +3030,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "evenFooter");
+            builder.Availability = (FileFormatVersions.Office2016);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EvenFooterXsdstring>(deep);
     }
@@ -2926,8 +3046,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:firstHeader.</para>
     /// </summary>
-    [SchemaAttr(80, "firstHeader")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class FirstHeaderXsdstring : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2950,6 +3068,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "firstHeader");
+            builder.Availability = (FileFormatVersions.Office2016);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstHeaderXsdstring>(deep);
     }
@@ -2959,8 +3084,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:firstFooter.</para>
     /// </summary>
-    [SchemaAttr(80, "firstFooter")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class FirstFooterXsdstring : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2983,6 +3106,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "firstFooter");
+            builder.Availability = (FileFormatVersions.Office2016);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstFooterXsdstring>(deep);
     }
@@ -2992,8 +3122,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:v.</para>
     /// </summary>
-    [SchemaAttr(80, "v")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class VXsdstring : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -3014,6 +3142,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
             return new StringValue { InnerText = text };
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "v");
+            builder.Availability = (FileFormatVersions.Office2016);
         }
 
         /// <inheritdoc/>
@@ -3042,8 +3177,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     [ChildElementInfo(typeof(DataLabelVisibilities), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(SeparatorXsdstring), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
-    [SchemaAttr(80, "dataLabel")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class DataLabel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3100,12 +3233,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "dataLabel");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<DataLabel>()
-                           .AddAttribute(0, "idx", a => a.Idx, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "pos", a => a.Pos);
+.AddAttribute(0, "idx", a => a.Idx, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "pos", a => a.Pos);
         }
 
         /// <summary>
@@ -3207,8 +3342,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:dataLabelHidden.</para>
     /// </summary>
-    [SchemaAttr(80, "dataLabelHidden")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class DataLabelHidden : OpenXmlLeafElement
     {
         /// <summary>
@@ -3231,11 +3364,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "dataLabelHidden");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<DataLabelHidden>()
-                           .AddAttribute(0, "idx", a => a.Idx, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "idx", a => a.Idx, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -3256,8 +3391,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// </remark>
     [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
-    [SchemaAttr(80, "dataPt")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class DataPoint : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3304,11 +3437,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "dataPt");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<DataPoint>()
-                           .AddAttribute(0, "idx", a => a.Idx, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "idx", a => a.Idx, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -3375,8 +3510,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     [ChildElementInfo(typeof(DataLabel), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(DataLabelHidden), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
-    [SchemaAttr(80, "dataLabels")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class DataLabels : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3423,8 +3556,10 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "dataLabels");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<DataLabels>()
-                           .AddAttribute(0, "pos", a => a.Pos);
+.AddAttribute(0, "pos", a => a.Pos);
         }
 
         /// <summary>
@@ -3515,8 +3650,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:dataId.</para>
     /// </summary>
-    [SchemaAttr(80, "dataId")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class DataId : OpenXmlLeafElement
     {
         /// <summary>
@@ -3539,11 +3672,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "dataId");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<DataId>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -3574,8 +3709,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     [ChildElementInfo(typeof(Statistics), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(Subtotals), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
-    [SchemaAttr(80, "layoutPr")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class SeriesLayoutProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3607,6 +3740,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public SeriesLayoutProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "layoutPr");
+            builder.Availability = (FileFormatVersions.Office2016);
         }
 
         /// <summary>
@@ -3660,9 +3800,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:axisId.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(UInt32Value))]
-    [SchemaAttr(80, "axisId")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class AxisId : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -3685,6 +3822,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             return new UInt32Value { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)) });
+            builder.SetSchema(80, "axisId");
+            builder.Availability = (FileFormatVersions.Office2016);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AxisId>(deep);
     }
@@ -3703,8 +3848,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// </remark>
     [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
-    [SchemaAttr(80, "plotSurface")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class PlotSurface : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3736,6 +3879,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public PlotSurface(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "plotSurface");
+            builder.Availability = (FileFormatVersions.Office2016);
         }
 
         /// <summary>
@@ -3802,8 +3952,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     [ChildElementInfo(typeof(SeriesLayoutProperties), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(AxisId), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
-    [SchemaAttr(80, "series")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class Series : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3890,15 +4038,17 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "series");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<Series>()
-                           .AddAttribute(0, "layoutId", a => a.LayoutId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "hidden", a => a.Hidden)
-                           .AddAttribute(0, "ownerIdx", a => a.OwnerIdx)
-                           .AddAttribute(0, "uniqueId", a => a.UniqueId)
-                           .AddAttribute(0, "formatIdx", a => a.FormatIdx);
+.AddAttribute(0, "layoutId", a => a.LayoutId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "hidden", a => a.Hidden)
+.AddAttribute(0, "ownerIdx", a => a.OwnerIdx)
+.AddAttribute(0, "uniqueId", a => a.UniqueId)
+.AddAttribute(0, "formatIdx", a => a.FormatIdx);
         }
 
         /// <summary>
@@ -3961,8 +4111,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     [ChildElementInfo(typeof(PlotSurface), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(Series), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
-    [SchemaAttr(80, "plotAreaRegion")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class PlotAreaRegion : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3994,6 +4142,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public PlotAreaRegion(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "plotAreaRegion");
+            builder.Availability = (FileFormatVersions.Office2016);
         }
 
         /// <summary>
@@ -4058,8 +4213,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(TxPrTextBody), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
-    [SchemaAttr(80, "axis")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class Axis : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4116,12 +4269,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "axis");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<Axis>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "hidden", a => a.Hidden);
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "hidden", a => a.Hidden);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4168,8 +4323,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(TxPrTextBody), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
-    [SchemaAttr(80, "title")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class ChartTitle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4236,10 +4389,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "title");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<ChartTitle>()
-                           .AddAttribute(0, "pos", a => a.Pos)
-                           .AddAttribute(0, "align", a => a.Align)
-                           .AddAttribute(0, "overlay", a => a.Overlay);
+.AddAttribute(0, "pos", a => a.Pos)
+.AddAttribute(0, "align", a => a.Align)
+.AddAttribute(0, "overlay", a => a.Overlay);
         }
 
         /// <summary>
@@ -4326,8 +4481,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     [ChildElementInfo(typeof(Axis), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
-    [SchemaAttr(80, "plotArea")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class PlotArea : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4359,6 +4512,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public PlotArea(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "plotArea");
+            builder.Availability = (FileFormatVersions.Office2016);
         }
 
         /// <summary>
@@ -4404,8 +4564,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(TxPrTextBody), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
-    [SchemaAttr(80, "legend")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class Legend : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4472,10 +4630,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "legend");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<Legend>()
-                           .AddAttribute(0, "pos", a => a.Pos)
-                           .AddAttribute(0, "align", a => a.Align)
-                           .AddAttribute(0, "overlay", a => a.Overlay);
+.AddAttribute(0, "pos", a => a.Pos)
+.AddAttribute(0, "align", a => a.Align)
+.AddAttribute(0, "overlay", a => a.Overlay);
         }
 
         /// <summary>
@@ -4552,8 +4712,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     [ChildElementInfo(typeof(EvenFooterXsdstring), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(FirstHeaderXsdstring), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(FirstFooterXsdstring), FileFormatVersions.Office2016)]
-    [SchemaAttr(80, "headerFooter")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class HeaderFooter : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4620,10 +4778,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "headerFooter");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<HeaderFooter>()
-                           .AddAttribute(0, "alignWithMargins", a => a.AlignWithMargins)
-                           .AddAttribute(0, "differentOddEven", a => a.DifferentOddEven)
-                           .AddAttribute(0, "differentFirst", a => a.DifferentFirst);
+.AddAttribute(0, "alignWithMargins", a => a.AlignWithMargins)
+.AddAttribute(0, "differentOddEven", a => a.DifferentOddEven)
+.AddAttribute(0, "differentFirst", a => a.DifferentFirst);
         }
 
         /// <summary>
@@ -4725,8 +4885,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:pageMargins.</para>
     /// </summary>
-    [SchemaAttr(80, "pageMargins")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class PageMargins : OpenXmlLeafElement
     {
         /// <summary>
@@ -4799,31 +4957,33 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "pageMargins");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<PageMargins>()
-                           .AddAttribute(0, "l", a => a.L, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "r", a => a.R, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "t", a => a.T, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "b", a => a.B, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "header", a => a.Header, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "footer", a => a.Footer, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "l", a => a.L, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "r", a => a.R, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "t", a => a.T, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "b", a => a.B, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "header", a => a.Header, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "footer", a => a.Footer, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -4835,8 +4995,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:pageSetup.</para>
     /// </summary>
-    [SchemaAttr(80, "pageSetup")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class PageSetup : OpenXmlLeafElement
     {
         /// <summary>
@@ -4939,16 +5097,18 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "pageSetup");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<PageSetup>()
-                           .AddAttribute(0, "paperSize", a => a.PaperSize)
-                           .AddAttribute(0, "firstPageNumber", a => a.FirstPageNumber)
-                           .AddAttribute(0, "orientation", a => a.Orientation)
-                           .AddAttribute(0, "blackAndWhite", a => a.BlackAndWhite)
-                           .AddAttribute(0, "draft", a => a.Draft)
-                           .AddAttribute(0, "useFirstPageNumber", a => a.UseFirstPageNumber)
-                           .AddAttribute(0, "horizontalDpi", a => a.HorizontalDpi)
-                           .AddAttribute(0, "verticalDpi", a => a.VerticalDpi)
-                           .AddAttribute(0, "copies", a => a.Copies);
+.AddAttribute(0, "paperSize", a => a.PaperSize)
+.AddAttribute(0, "firstPageNumber", a => a.FirstPageNumber)
+.AddAttribute(0, "orientation", a => a.Orientation)
+.AddAttribute(0, "blackAndWhite", a => a.BlackAndWhite)
+.AddAttribute(0, "draft", a => a.Draft)
+.AddAttribute(0, "useFirstPageNumber", a => a.UseFirstPageNumber)
+.AddAttribute(0, "horizontalDpi", a => a.HorizontalDpi)
+.AddAttribute(0, "verticalDpi", a => a.VerticalDpi)
+.AddAttribute(0, "copies", a => a.Copies);
         }
 
         /// <inheritdoc/>
@@ -4971,8 +5131,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     [ChildElementInfo(typeof(ExternalData), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(Data), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
-    [SchemaAttr(80, "chartData")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class ChartData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5004,6 +5162,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ChartData(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "chartData");
+            builder.Availability = (FileFormatVersions.Office2016);
         }
 
         /// <summary>
@@ -5050,8 +5215,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     [ChildElementInfo(typeof(PlotArea), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(Legend), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
-    [SchemaAttr(80, "chart")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class Chart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5083,6 +5246,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Chart(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "chart");
+            builder.Availability = (FileFormatVersions.Office2016);
         }
 
         /// <summary>
@@ -5163,8 +5333,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-    [SchemaAttr(80, "clrMapOvr")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class ColorMappingType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5321,67 +5489,69 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "clrMapOvr");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<ColorMappingType>()
-                           .AddAttribute(0, "bg1", a => a.Background1, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "tx1", a => a.Text1, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "bg2", a => a.Background2, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "tx2", a => a.Text2, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "accent1", a => a.Accent1, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "accent2", a => a.Accent2, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "accent3", a => a.Accent3, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "accent4", a => a.Accent4, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "accent5", a => a.Accent5, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "accent6", a => a.Accent6, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "hlink", a => a.Hyperlink, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "folHlink", a => a.FollowedHyperlink, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "bg1", a => a.Background1, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "tx1", a => a.Text1, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "bg2", a => a.Background2, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "tx2", a => a.Text2, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "accent1", a => a.Accent1, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "accent2", a => a.Accent2, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "accent3", a => a.Accent3, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "accent4", a => a.Accent4, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "accent5", a => a.Accent5, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "accent6", a => a.Accent6, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "hlink", a => a.Hyperlink, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "folHlink", a => a.FollowedHyperlink, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <summary>
@@ -5424,8 +5594,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     [ChildElementInfo(typeof(HeaderFooter), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(PageMargins), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(PageSetup), FileFormatVersions.Office2016)]
-    [SchemaAttr(80, "printSettings")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class PrintSettings : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5457,6 +5625,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public PrintSettings(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "printSettings");
+            builder.Availability = (FileFormatVersions.Office2016);
         }
 
         /// <summary>
@@ -5516,8 +5691,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:f.</para>
     /// </summary>
-    [SchemaAttr(80, "f")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class Formula : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -5553,8 +5726,10 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "f");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<Formula>()
-                           .AddAttribute(0, "dir", a => a.Dir);
+.AddAttribute(0, "dir", a => a.Dir);
         }
 
         /// <inheritdoc/>
@@ -5573,8 +5748,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ChartStringValue), FileFormatVersions.Office2016)]
-    [SchemaAttr(80, "lvl")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class StringLevel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5621,11 +5794,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "lvl");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<StringLevel>()
-                           .AddAttribute(0, "ptCount", a => a.PtCount, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "ptCount", a => a.PtCount, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5651,8 +5826,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(NumericValue), FileFormatVersions.Office2016)]
-    [SchemaAttr(80, "lvl")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class NumericLevel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5709,12 +5882,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "lvl");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<NumericLevel>()
-                           .AddAttribute(0, "ptCount", a => a.PtCount, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "formatCode", a => a.FormatCode);
+.AddAttribute(0, "ptCount", a => a.PtCount, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "formatCode", a => a.FormatCode);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5733,8 +5908,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:idx.</para>
     /// </summary>
-    [SchemaAttr(80, "idx")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class UnsignedIntegerType : OpenXmlLeafElement
     {
         /// <summary>
@@ -5757,11 +5930,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(80, "idx");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<UnsignedIntegerType>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>

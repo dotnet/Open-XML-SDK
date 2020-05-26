@@ -46,8 +46,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     [ChildElementInfo(typeof(Lock))]
     [ChildElementInfo(typeof(ColorMostRecentlyUsed))]
     [ChildElementInfo(typeof(ColorMenu))]
-    [SchemaAttr(27, "shapedefaults")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShapeDefaults : OpenXmlCompositeElement
     {
         /// <summary>
@@ -196,17 +194,19 @@ namespace DocumentFormat.OpenXml.Vml.Office
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(27, "shapedefaults");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ShapeDefaults>()
-                           .AddAttribute(26, "ext", a => a.Extension)
-                           .AddAttribute(0, "spidmax", a => a.MaxShapeId)
-                           .AddAttribute(0, "style", a => a.Style)
-                           .AddAttribute(0, "fill", a => a.BeFilled)
-                           .AddAttribute(0, "fillcolor", a => a.FillColor)
-                           .AddAttribute(0, "stroke", a => a.IsStroke)
-                           .AddAttribute(0, "strokecolor", a => a.StrokeColor)
-                           .AddAttribute(27, "allowincell", a => a.AllowInCell)
-                           .AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
-                           .AddAttribute(27, "insetmode", a => a.InsetMode);
+.AddAttribute(26, "ext", a => a.Extension)
+.AddAttribute(0, "spidmax", a => a.MaxShapeId)
+.AddAttribute(0, "style", a => a.Style)
+.AddAttribute(0, "fill", a => a.BeFilled)
+.AddAttribute(0, "fillcolor", a => a.FillColor)
+.AddAttribute(0, "stroke", a => a.IsStroke)
+.AddAttribute(0, "strokecolor", a => a.StrokeColor)
+.AddAttribute(27, "allowincell", a => a.AllowInCell)
+.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
+.AddAttribute(27, "insetmode", a => a.InsetMode);
         }
 
         /// <summary>
@@ -389,8 +389,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     [ChildElementInfo(typeof(ShapeIdMap))]
     [ChildElementInfo(typeof(RegroupTable))]
     [ChildElementInfo(typeof(Rules))]
-    [SchemaAttr(27, "shapelayout")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShapeLayout : OpenXmlCompositeElement
     {
         /// <summary>
@@ -440,8 +438,10 @@ namespace DocumentFormat.OpenXml.Vml.Office
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(27, "shapelayout");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ShapeLayout>()
-                           .AddAttribute(26, "ext", a => a.Extension);
+.AddAttribute(26, "ext", a => a.Extension);
         }
 
         /// <summary>
@@ -501,8 +501,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:signatureline.</para>
     /// </summary>
-    [SchemaAttr(27, "signatureline")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SignatureLine : OpenXmlLeafElement
     {
         /// <summary>
@@ -657,26 +655,28 @@ namespace DocumentFormat.OpenXml.Vml.Office
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(27, "signatureline");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SignatureLine>()
-                           .AddAttribute(26, "ext", a => a.Extension)
-                           .AddAttribute(0, "issignatureline", a => a.IsSignatureLine)
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "provid", a => a.ProviderId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "signinginstructionsset", a => a.SigningInstructionsSet)
-                           .AddAttribute(0, "allowcomments", a => a.AllowComments)
-                           .AddAttribute(0, "showsigndate", a => a.ShowSignDate)
-                           .AddAttribute(27, "suggestedsigner", a => a.SuggestedSigner)
-                           .AddAttribute(27, "suggestedsigner2", a => a.SuggestedSigner2)
-                           .AddAttribute(27, "suggestedsigneremail", a => a.SuggestedSignerEmail)
-                           .AddAttribute(0, "signinginstructions", a => a.SigningInstructions)
-                           .AddAttribute(0, "addlxml", a => a.AdditionalXml)
-                           .AddAttribute(0, "sigprovurl", a => a.SignatureProviderUrl);
+.AddAttribute(26, "ext", a => a.Extension)
+.AddAttribute(0, "issignatureline", a => a.IsSignatureLine)
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "provid", a => a.ProviderId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "signinginstructionsset", a => a.SigningInstructionsSet)
+.AddAttribute(0, "allowcomments", a => a.AllowComments)
+.AddAttribute(0, "showsigndate", a => a.ShowSignDate)
+.AddAttribute(27, "suggestedsigner", a => a.SuggestedSigner)
+.AddAttribute(27, "suggestedsigner2", a => a.SuggestedSigner2)
+.AddAttribute(27, "suggestedsigneremail", a => a.SuggestedSignerEmail)
+.AddAttribute(0, "signinginstructions", a => a.SigningInstructions)
+.AddAttribute(0, "addlxml", a => a.AdditionalXml)
+.AddAttribute(0, "sigprovurl", a => a.SignatureProviderUrl);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -694,8 +694,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:ink.</para>
     /// </summary>
-    [SchemaAttr(27, "ink")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Ink : OpenXmlLeafElement
     {
         /// <summary>
@@ -728,9 +726,11 @@ namespace DocumentFormat.OpenXml.Vml.Office
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(27, "ink");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Ink>()
-                           .AddAttribute(0, "i", a => a.InkData)
-                           .AddAttribute(0, "annotation", a => a.AnnotationFlag);
+.AddAttribute(0, "i", a => a.InkData)
+.AddAttribute(0, "annotation", a => a.AnnotationFlag);
         }
 
         /// <inheritdoc/>
@@ -749,8 +749,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(RelationTable))]
-    [SchemaAttr(27, "diagram")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Diagram : OpenXmlCompositeElement
     {
         /// <summary>
@@ -890,17 +888,19 @@ namespace DocumentFormat.OpenXml.Vml.Office
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(27, "diagram");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Diagram>()
-                           .AddAttribute(26, "ext", a => a.Extension)
-                           .AddAttribute(0, "dgmstyle", a => a.Style)
-                           .AddAttribute(0, "autoformat", a => a.AutoFormat)
-                           .AddAttribute(0, "reverse", a => a.Reverse)
-                           .AddAttribute(0, "autolayout", a => a.AutoLayout)
-                           .AddAttribute(0, "dgmscalex", a => a.ScaleX)
-                           .AddAttribute(0, "dgmscaley", a => a.ScaleY)
-                           .AddAttribute(0, "dgmfontsize", a => a.FontSize)
-                           .AddAttribute(0, "constrainbounds", a => a.ConstrainBounds)
-                           .AddAttribute(0, "dgmbasetextscale", a => a.BaseTextScale);
+.AddAttribute(26, "ext", a => a.Extension)
+.AddAttribute(0, "dgmstyle", a => a.Style)
+.AddAttribute(0, "autoformat", a => a.AutoFormat)
+.AddAttribute(0, "reverse", a => a.Reverse)
+.AddAttribute(0, "autolayout", a => a.AutoLayout)
+.AddAttribute(0, "dgmscalex", a => a.ScaleX)
+.AddAttribute(0, "dgmscaley", a => a.ScaleY)
+.AddAttribute(0, "dgmfontsize", a => a.FontSize)
+.AddAttribute(0, "constrainbounds", a => a.ConstrainBounds)
+.AddAttribute(0, "dgmbasetextscale", a => a.BaseTextScale);
         }
 
         /// <summary>
@@ -932,8 +932,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:skew.</para>
     /// </summary>
-    [SchemaAttr(27, "skew")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Skew : OpenXmlLeafElement
     {
         /// <summary>
@@ -1009,13 +1007,15 @@ namespace DocumentFormat.OpenXml.Vml.Office
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(27, "skew");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Skew>()
-                           .AddAttribute(26, "ext", a => a.Extension)
-                           .AddAttribute(0, "id", a => a.Id)
-                           .AddAttribute(0, "on", a => a.On)
-                           .AddAttribute(0, "offset", a => a.Offset)
-                           .AddAttribute(0, "origin", a => a.Origin)
-                           .AddAttribute(0, "matrix", a => a.Matrix);
+.AddAttribute(26, "ext", a => a.Extension)
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "on", a => a.On)
+.AddAttribute(0, "offset", a => a.Offset)
+.AddAttribute(0, "origin", a => a.Origin)
+.AddAttribute(0, "matrix", a => a.Matrix);
         }
 
         /// <inheritdoc/>
@@ -1027,8 +1027,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:extrusion.</para>
     /// </summary>
-    [SchemaAttr(27, "extrusion")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Extrusion : OpenXmlLeafElement
     {
         /// <summary>
@@ -1354,38 +1352,40 @@ namespace DocumentFormat.OpenXml.Vml.Office
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(27, "extrusion");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Extrusion>()
-                           .AddAttribute(26, "ext", a => a.Extension)
-                           .AddAttribute(0, "on", a => a.On)
-                           .AddAttribute(0, "type", a => a.Type)
-                           .AddAttribute(0, "render", a => a.Render)
-                           .AddAttribute(0, "viewpointorigin", a => a.ViewpointOrigin)
-                           .AddAttribute(0, "viewpoint", a => a.Viewpoint)
-                           .AddAttribute(0, "skewangle", a => a.SkewAngle)
-                           .AddAttribute(0, "skewamt", a => a.SkewAmount)
-                           .AddAttribute(0, "foredepth", a => a.ForceDepth)
-                           .AddAttribute(0, "backdepth", a => a.BackDepth)
-                           .AddAttribute(0, "orientation", a => a.Orientation)
-                           .AddAttribute(0, "orientationangle", a => a.OrientationAngle)
-                           .AddAttribute(0, "lockrotationcenter", a => a.LockRotationCenter)
-                           .AddAttribute(0, "autorotationcenter", a => a.AutoRotationCenter)
-                           .AddAttribute(0, "rotationcenter", a => a.RotationCenter)
-                           .AddAttribute(0, "rotationangle", a => a.RotationAngle)
-                           .AddAttribute(0, "color", a => a.Color)
-                           .AddAttribute(0, "shininess", a => a.Shininess)
-                           .AddAttribute(0, "specularity", a => a.Specularity)
-                           .AddAttribute(0, "diffusity", a => a.Diffusity)
-                           .AddAttribute(0, "metal", a => a.Metal)
-                           .AddAttribute(0, "edge", a => a.Edge)
-                           .AddAttribute(0, "facet", a => a.Facet)
-                           .AddAttribute(0, "lightface", a => a.LightFace)
-                           .AddAttribute(0, "brightness", a => a.Brightness)
-                           .AddAttribute(0, "lightposition", a => a.LightPosition)
-                           .AddAttribute(0, "lightlevel", a => a.LightLevel)
-                           .AddAttribute(0, "lightharsh", a => a.LightHarsh)
-                           .AddAttribute(0, "lightposition2", a => a.LightPosition2)
-                           .AddAttribute(0, "lightlevel2", a => a.LightLevel2)
-                           .AddAttribute(0, "lightharsh2", a => a.LightHarsh2);
+.AddAttribute(26, "ext", a => a.Extension)
+.AddAttribute(0, "on", a => a.On)
+.AddAttribute(0, "type", a => a.Type)
+.AddAttribute(0, "render", a => a.Render)
+.AddAttribute(0, "viewpointorigin", a => a.ViewpointOrigin)
+.AddAttribute(0, "viewpoint", a => a.Viewpoint)
+.AddAttribute(0, "skewangle", a => a.SkewAngle)
+.AddAttribute(0, "skewamt", a => a.SkewAmount)
+.AddAttribute(0, "foredepth", a => a.ForceDepth)
+.AddAttribute(0, "backdepth", a => a.BackDepth)
+.AddAttribute(0, "orientation", a => a.Orientation)
+.AddAttribute(0, "orientationangle", a => a.OrientationAngle)
+.AddAttribute(0, "lockrotationcenter", a => a.LockRotationCenter)
+.AddAttribute(0, "autorotationcenter", a => a.AutoRotationCenter)
+.AddAttribute(0, "rotationcenter", a => a.RotationCenter)
+.AddAttribute(0, "rotationangle", a => a.RotationAngle)
+.AddAttribute(0, "color", a => a.Color)
+.AddAttribute(0, "shininess", a => a.Shininess)
+.AddAttribute(0, "specularity", a => a.Specularity)
+.AddAttribute(0, "diffusity", a => a.Diffusity)
+.AddAttribute(0, "metal", a => a.Metal)
+.AddAttribute(0, "edge", a => a.Edge)
+.AddAttribute(0, "facet", a => a.Facet)
+.AddAttribute(0, "lightface", a => a.LightFace)
+.AddAttribute(0, "brightness", a => a.Brightness)
+.AddAttribute(0, "lightposition", a => a.LightPosition)
+.AddAttribute(0, "lightlevel", a => a.LightLevel)
+.AddAttribute(0, "lightharsh", a => a.LightHarsh)
+.AddAttribute(0, "lightposition2", a => a.LightPosition2)
+.AddAttribute(0, "lightlevel2", a => a.LightLevel2)
+.AddAttribute(0, "lightharsh2", a => a.LightHarsh2);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -1406,8 +1406,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:callout.</para>
     /// </summary>
-    [SchemaAttr(27, "callout")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Callout : OpenXmlLeafElement
     {
         /// <summary>
@@ -1563,21 +1561,23 @@ namespace DocumentFormat.OpenXml.Vml.Office
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(27, "callout");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Callout>()
-                           .AddAttribute(26, "ext", a => a.Extension)
-                           .AddAttribute(0, "on", a => a.On)
-                           .AddAttribute(0, "type", a => a.Type)
-                           .AddAttribute(0, "gap", a => a.Gap)
-                           .AddAttribute(0, "angle", a => a.Angle)
-                           .AddAttribute(0, "dropauto", a => a.DropAuto)
-                           .AddAttribute(0, "drop", a => a.Drop)
-                           .AddAttribute(0, "distance", a => a.Distance)
-                           .AddAttribute(0, "lengthspecified", a => a.LengthSpecified)
-                           .AddAttribute(0, "length", a => a.Length)
-                           .AddAttribute(0, "accentbar", a => a.AccentBar)
-                           .AddAttribute(0, "textborder", a => a.TextBorder)
-                           .AddAttribute(0, "minusx", a => a.MinusX)
-                           .AddAttribute(0, "minusy", a => a.MinusY);
+.AddAttribute(26, "ext", a => a.Extension)
+.AddAttribute(0, "on", a => a.On)
+.AddAttribute(0, "type", a => a.Type)
+.AddAttribute(0, "gap", a => a.Gap)
+.AddAttribute(0, "angle", a => a.Angle)
+.AddAttribute(0, "dropauto", a => a.DropAuto)
+.AddAttribute(0, "drop", a => a.Drop)
+.AddAttribute(0, "distance", a => a.Distance)
+.AddAttribute(0, "lengthspecified", a => a.LengthSpecified)
+.AddAttribute(0, "length", a => a.Length)
+.AddAttribute(0, "accentbar", a => a.AccentBar)
+.AddAttribute(0, "textborder", a => a.TextBorder)
+.AddAttribute(0, "minusx", a => a.MinusX)
+.AddAttribute(0, "minusy", a => a.MinusY);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -1595,8 +1595,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:lock.</para>
     /// </summary>
-    [SchemaAttr(27, "lock")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Lock : OpenXmlLeafElement
     {
         /// <summary>
@@ -1732,19 +1730,21 @@ namespace DocumentFormat.OpenXml.Vml.Office
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(27, "lock");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Lock>()
-                           .AddAttribute(26, "ext", a => a.Extension)
-                           .AddAttribute(0, "position", a => a.Position)
-                           .AddAttribute(0, "selection", a => a.Selection)
-                           .AddAttribute(0, "grouping", a => a.Grouping)
-                           .AddAttribute(0, "ungrouping", a => a.Ungrouping)
-                           .AddAttribute(0, "rotation", a => a.Rotation)
-                           .AddAttribute(0, "cropping", a => a.Cropping)
-                           .AddAttribute(0, "verticies", a => a.Verticies)
-                           .AddAttribute(0, "adjusthandles", a => a.AdjustHandles)
-                           .AddAttribute(0, "text", a => a.TextLock)
-                           .AddAttribute(0, "aspectratio", a => a.AspectRatio)
-                           .AddAttribute(0, "shapetype", a => a.ShapeType);
+.AddAttribute(26, "ext", a => a.Extension)
+.AddAttribute(0, "position", a => a.Position)
+.AddAttribute(0, "selection", a => a.Selection)
+.AddAttribute(0, "grouping", a => a.Grouping)
+.AddAttribute(0, "ungrouping", a => a.Ungrouping)
+.AddAttribute(0, "rotation", a => a.Rotation)
+.AddAttribute(0, "cropping", a => a.Cropping)
+.AddAttribute(0, "verticies", a => a.Verticies)
+.AddAttribute(0, "adjusthandles", a => a.AdjustHandles)
+.AddAttribute(0, "text", a => a.TextLock)
+.AddAttribute(0, "aspectratio", a => a.AspectRatio)
+.AddAttribute(0, "shapetype", a => a.ShapeType);
         }
 
         /// <inheritdoc/>
@@ -1767,8 +1767,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     [ChildElementInfo(typeof(LinkType))]
     [ChildElementInfo(typeof(LockedField))]
     [ChildElementInfo(typeof(FieldCodes))]
-    [SchemaAttr(27, "OLEObject")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OleObject : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1878,14 +1876,16 @@ namespace DocumentFormat.OpenXml.Vml.Office
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(27, "OLEObject");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<OleObject>()
-                           .AddAttribute(0, "Type", a => a.Type)
-                           .AddAttribute(0, "ProgID", a => a.ProgId)
-                           .AddAttribute(0, "ShapeID", a => a.ShapeId)
-                           .AddAttribute(0, "DrawAspect", a => a.DrawAspect)
-                           .AddAttribute(0, "ObjectID", a => a.ObjectId)
-                           .AddAttribute(19, "id", a => a.Id)
-                           .AddAttribute(0, "UpdateMode", a => a.UpdateMode);
+.AddAttribute(0, "Type", a => a.Type)
+.AddAttribute(0, "ProgID", a => a.ProgId)
+.AddAttribute(0, "ShapeID", a => a.ShapeId)
+.AddAttribute(0, "DrawAspect", a => a.DrawAspect)
+.AddAttribute(0, "ObjectID", a => a.ObjectId)
+.AddAttribute(19, "id", a => a.Id)
+.AddAttribute(0, "UpdateMode", a => a.UpdateMode);
         }
 
         /// <summary>
@@ -1952,8 +1952,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:complex.</para>
     /// </summary>
-    [SchemaAttr(27, "complex")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Complex : OpenXmlLeafElement
     {
         /// <summary>
@@ -1979,8 +1977,10 @@ namespace DocumentFormat.OpenXml.Vml.Office
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(27, "complex");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Complex>()
-                           .AddAttribute(26, "ext", a => a.Extension);
+.AddAttribute(26, "ext", a => a.Extension);
         }
 
         /// <inheritdoc/>
@@ -1992,8 +1992,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:left.</para>
     /// </summary>
-    [SchemaAttr(27, "left")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LeftStroke : StrokeChildType
     {
         /// <summary>
@@ -2001,6 +1999,13 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// </summary>
         public LeftStroke() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(27, "left");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -2012,8 +2017,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:top.</para>
     /// </summary>
-    [SchemaAttr(27, "top")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TopStroke : StrokeChildType
     {
         /// <summary>
@@ -2021,6 +2024,13 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// </summary>
         public TopStroke() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(27, "top");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -2032,8 +2042,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:right.</para>
     /// </summary>
-    [SchemaAttr(27, "right")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RightStroke : StrokeChildType
     {
         /// <summary>
@@ -2041,6 +2049,13 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// </summary>
         public RightStroke() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(27, "right");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -2052,8 +2067,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:bottom.</para>
     /// </summary>
-    [SchemaAttr(27, "bottom")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BottomStroke : StrokeChildType
     {
         /// <summary>
@@ -2061,6 +2074,13 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// </summary>
         public BottomStroke() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(27, "bottom");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -2079,8 +2099,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:column.</para>
     /// </summary>
-    [SchemaAttr(27, "column")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColumnStroke : StrokeChildType
     {
         /// <summary>
@@ -2088,6 +2106,13 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// </summary>
         public ColumnStroke() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(27, "column");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -2438,8 +2463,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:clippath.</para>
     /// </summary>
-    [SchemaAttr(27, "clippath")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ClipPath : OpenXmlLeafElement
     {
         /// <summary>
@@ -2465,11 +2488,13 @@ namespace DocumentFormat.OpenXml.Vml.Office
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(27, "clippath");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ClipPath>()
-                           .AddAttribute(27, "v", a => a.Value, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(27, "v", a => a.Value, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -2481,8 +2506,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:fill.</para>
     /// </summary>
-    [SchemaAttr(27, "fill")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FillExtendedProperties : OpenXmlLeafElement
     {
         /// <summary>
@@ -2518,9 +2541,11 @@ namespace DocumentFormat.OpenXml.Vml.Office
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(27, "fill");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<FillExtendedProperties>()
-                           .AddAttribute(26, "ext", a => a.Extension)
-                           .AddAttribute(0, "type", a => a.Type);
+.AddAttribute(26, "ext", a => a.Extension)
+.AddAttribute(0, "type", a => a.Type);
         }
 
         /// <inheritdoc/>
@@ -2532,8 +2557,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:idmap.</para>
     /// </summary>
-    [SchemaAttr(27, "idmap")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShapeIdMap : OpenXmlLeafElement
     {
         /// <summary>
@@ -2569,9 +2592,11 @@ namespace DocumentFormat.OpenXml.Vml.Office
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(27, "idmap");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ShapeIdMap>()
-                           .AddAttribute(26, "ext", a => a.Extension)
-                           .AddAttribute(0, "data", a => a.Data);
+.AddAttribute(26, "ext", a => a.Extension)
+.AddAttribute(0, "data", a => a.Data);
         }
 
         /// <inheritdoc/>
@@ -2590,8 +2615,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Entry))]
-    [SchemaAttr(27, "regrouptable")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RegroupTable : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2641,8 +2664,10 @@ namespace DocumentFormat.OpenXml.Vml.Office
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(27, "regrouptable");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RegroupTable>()
-                           .AddAttribute(26, "ext", a => a.Extension);
+.AddAttribute(26, "ext", a => a.Extension);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2668,8 +2693,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Rule))]
-    [SchemaAttr(27, "rules")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Rules : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2719,8 +2742,10 @@ namespace DocumentFormat.OpenXml.Vml.Office
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(27, "rules");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Rules>()
-                           .AddAttribute(26, "ext", a => a.Extension);
+.AddAttribute(26, "ext", a => a.Extension);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2739,8 +2764,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:entry.</para>
     /// </summary>
-    [SchemaAttr(27, "entry")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Entry : OpenXmlLeafElement
     {
         /// <summary>
@@ -2773,9 +2796,11 @@ namespace DocumentFormat.OpenXml.Vml.Office
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(27, "entry");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Entry>()
-                           .AddAttribute(0, "new", a => a.New)
-                           .AddAttribute(0, "old", a => a.Old);
+.AddAttribute(0, "new", a => a.New)
+.AddAttribute(0, "old", a => a.Old);
         }
 
         /// <inheritdoc/>
@@ -2794,8 +2819,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Proxy))]
-    [SchemaAttr(27, "r")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Rule : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2872,17 +2895,19 @@ namespace DocumentFormat.OpenXml.Vml.Office
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(27, "r");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Rule>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "type", a => a.Type)
-                           .AddAttribute(0, "how", a => a.How)
-                           .AddAttribute(0, "idref", a => a.ShapeReference, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "type", a => a.Type)
+.AddAttribute(0, "how", a => a.How)
+.AddAttribute(0, "idref", a => a.ShapeReference, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2908,8 +2933,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Relation))]
-    [SchemaAttr(27, "relationtable")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RelationTable : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2959,8 +2982,10 @@ namespace DocumentFormat.OpenXml.Vml.Office
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(27, "relationtable");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RelationTable>()
-                           .AddAttribute(26, "ext", a => a.Extension);
+.AddAttribute(26, "ext", a => a.Extension);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2979,8 +3004,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:rel.</para>
     /// </summary>
-    [SchemaAttr(27, "rel")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Relation : OpenXmlLeafElement
     {
         /// <summary>
@@ -3036,20 +3059,22 @@ namespace DocumentFormat.OpenXml.Vml.Office
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(27, "rel");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Relation>()
-                           .AddAttribute(26, "ext", a => a.Extension)
-                           .AddAttribute(0, "idsrc", a => a.SourceId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "iddest", a => a.DestinationId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "idcntr", a => a.CenterShapeId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(26, "ext", a => a.Extension)
+.AddAttribute(0, "idsrc", a => a.SourceId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "iddest", a => a.DestinationId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "idcntr", a => a.CenterShapeId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <inheritdoc/>
@@ -3061,9 +3086,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:LinkType.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Office.OleLinkValues>))]
-    [SchemaAttr(27, "LinkType")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LinkType : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -3086,6 +3108,14 @@ namespace DocumentFormat.OpenXml.Vml.Office
             return new EnumValue<DocumentFormat.OpenXml.Vml.Office.OleLinkValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Office.OleLinkValues>)) });
+            builder.SetSchema(27, "LinkType");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LinkType>(deep);
     }
@@ -3095,9 +3125,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:LockedField.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(TrueFalseBlankValue))]
-    [SchemaAttr(27, "LockedField")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LockedField : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -3120,6 +3147,14 @@ namespace DocumentFormat.OpenXml.Vml.Office
             return new TrueFalseBlankValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(TrueFalseBlankValue)) });
+            builder.SetSchema(27, "LockedField");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LockedField>(deep);
     }
@@ -3129,8 +3164,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:FieldCodes.</para>
     /// </summary>
-    [SchemaAttr(27, "FieldCodes")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FieldCodes : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -3153,6 +3186,13 @@ namespace DocumentFormat.OpenXml.Vml.Office
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(27, "FieldCodes");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FieldCodes>(deep);
     }
@@ -3162,8 +3202,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:proxy.</para>
     /// </summary>
-    [SchemaAttr(27, "proxy")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Proxy : OpenXmlLeafElement
     {
         /// <summary>
@@ -3216,18 +3254,20 @@ namespace DocumentFormat.OpenXml.Vml.Office
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(27, "proxy");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Proxy>()
-                           .AddAttribute(0, "start", a => a.Start)
-                           .AddAttribute(0, "end", a => a.End)
-                           .AddAttribute(0, "idref", a => a.ShapeReference, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "connectloc", a => a.ConnectionLocation, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "start", a => a.Start)
+.AddAttribute(0, "end", a => a.End)
+.AddAttribute(0, "idref", a => a.ShapeReference, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "connectloc", a => a.ConnectionLocation, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -3239,8 +3279,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:colormru.</para>
     /// </summary>
-    [SchemaAttr(27, "colormru")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColorMostRecentlyUsed : OpenXmlLeafElement
     {
         /// <summary>
@@ -3276,9 +3314,11 @@ namespace DocumentFormat.OpenXml.Vml.Office
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(27, "colormru");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ColorMostRecentlyUsed>()
-                           .AddAttribute(26, "ext", a => a.Extension)
-                           .AddAttribute(0, "colors", a => a.Colors);
+.AddAttribute(26, "ext", a => a.Extension)
+.AddAttribute(0, "colors", a => a.Colors);
         }
 
         /// <inheritdoc/>
@@ -3290,8 +3330,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:colormenu.</para>
     /// </summary>
-    [SchemaAttr(27, "colormenu")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColorMenu : OpenXmlLeafElement
     {
         /// <summary>
@@ -3357,12 +3395,14 @@ namespace DocumentFormat.OpenXml.Vml.Office
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(27, "colormenu");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ColorMenu>()
-                           .AddAttribute(26, "ext", a => a.Extension)
-                           .AddAttribute(0, "strokecolor", a => a.StrokeColor)
-                           .AddAttribute(0, "fillcolor", a => a.FillColor)
-                           .AddAttribute(0, "shadowcolor", a => a.ShadowColor)
-                           .AddAttribute(0, "extrusioncolor", a => a.ExtrusionColor);
+.AddAttribute(26, "ext", a => a.Extension)
+.AddAttribute(0, "strokecolor", a => a.StrokeColor)
+.AddAttribute(0, "fillcolor", a => a.FillColor)
+.AddAttribute(0, "shadowcolor", a => a.ShadowColor)
+.AddAttribute(0, "extrusioncolor", a => a.ExtrusionColor);
         }
 
         /// <inheritdoc/>

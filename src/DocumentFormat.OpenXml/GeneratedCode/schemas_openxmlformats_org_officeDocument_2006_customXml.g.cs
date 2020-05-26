@@ -24,8 +24,6 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(SchemaReferences))]
-    [SchemaAttr(20, "datastoreItem")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DataStoreItem : OpenXmlPartRootElement
     {
         /// <summary>
@@ -75,12 +73,14 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(20, "datastoreItem");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DataStoreItem>()
-                           .AddAttribute(20, "itemID", a => a.ItemId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           });
+.AddAttribute(20, "itemID", a => a.ItemId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+});
         }
 
         /// <summary>
@@ -143,8 +143,6 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ds:schemaRef.</para>
     /// </summary>
-    [SchemaAttr(20, "schemaRef")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SchemaReference : OpenXmlLeafElement
     {
         /// <summary>
@@ -170,11 +168,13 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(20, "schemaRef");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SchemaReference>()
-                           .AddAttribute(20, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(20, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -193,8 +193,6 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(SchemaReference))]
-    [SchemaAttr(20, "schemaRefs")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SchemaReferences : OpenXmlCompositeElement
     {
         /// <summary>
@@ -226,6 +224,13 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public SchemaReferences(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(20, "schemaRefs");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)

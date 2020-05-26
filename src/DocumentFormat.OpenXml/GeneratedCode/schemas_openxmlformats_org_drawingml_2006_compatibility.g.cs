@@ -19,8 +19,6 @@ namespace DocumentFormat.OpenXml.Drawing.LegacyCompatibility
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is comp:legacyDrawing.</para>
     /// </summary>
-    [SchemaAttr(13, "legacyDrawing")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LegacyDrawing : OpenXmlLeafElement
     {
         /// <summary>
@@ -43,12 +41,14 @@ namespace DocumentFormat.OpenXml.Drawing.LegacyCompatibility
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(13, "legacyDrawing");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<LegacyDrawing>()
-                           .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {

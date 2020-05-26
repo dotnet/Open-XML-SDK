@@ -26,8 +26,6 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
-    [SchemaAttr(73, "themeFamily")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class ThemeFamily : OpenXmlCompositeElement
     {
         /// <summary>
@@ -94,21 +92,23 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(73, "themeFamily");
+            builder.Availability = (FileFormatVersions.Office2013);
             builder.AddElement<ThemeFamily>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "vid", a => a.Vid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           });
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "vid", a => a.Vid, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+});
         }
 
         /// <summary>
@@ -153,8 +153,6 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
-    [SchemaAttr(73, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -188,6 +186,13 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(73, "extLst");
+            builder.Availability = (FileFormatVersions.Office2013);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 1, 1)
@@ -217,8 +222,6 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
-    [SchemaAttr(73, "themeVariant")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class ThemeVariant : OpenXmlCompositeElement
     {
         /// <summary>
@@ -308,30 +311,32 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(73, "themeVariant");
+            builder.Availability = (FileFormatVersions.Office2013);
             builder.AddElement<ThemeVariant>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "vid", a => a.Vid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "cx", a => a.X, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-                           })
-                           .AddAttribute(0, "cy", a => a.Y, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-                           })
-                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "vid", a => a.Vid, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "cx", a => a.X, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+})
+.AddAttribute(0, "cy", a => a.Y, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+})
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -370,8 +375,6 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ThemeVariant), FileFormatVersions.Office2013)]
-    [SchemaAttr(73, "themeVariantLst")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class ThemeVariantList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -403,6 +406,13 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ThemeVariantList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(73, "themeVariantLst");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)

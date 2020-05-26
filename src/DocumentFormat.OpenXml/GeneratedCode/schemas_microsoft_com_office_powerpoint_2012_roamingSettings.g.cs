@@ -17,8 +17,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pRoam:key.</para>
     /// </summary>
-    [SchemaAttr(76, "key")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class Key : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -41,6 +39,13 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(76, "key");
+            builder.Availability = (FileFormatVersions.Office2013);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Key>(deep);
     }
@@ -50,8 +55,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pRoam:value.</para>
     /// </summary>
-    [SchemaAttr(76, "value")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class Value : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -74,6 +77,13 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(76, "value");
+            builder.Availability = (FileFormatVersions.Office2013);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Value>(deep);
     }
@@ -92,8 +102,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
     /// </remark>
     [ChildElementInfo(typeof(Key), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(Value), FileFormatVersions.Office2013)]
-    [SchemaAttr(76, "props")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class RoamingProperty : OpenXmlCompositeElement
     {
         /// <summary>
@@ -125,6 +133,13 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public RoamingProperty(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(76, "props");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         /// <summary>

@@ -18,9 +18,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp14:pctPosHOffset.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(Int32Value))]
-    [SchemaAttr(51, "pctPosHOffset")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class PercentagePositionHeightOffset : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -43,6 +40,14 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
             return new Int32Value { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
+            builder.SetSchema(51, "pctPosHOffset");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PercentagePositionHeightOffset>(deep);
     }
@@ -52,9 +57,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp14:pctPosVOffset.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(Int32Value))]
-    [SchemaAttr(51, "pctPosVOffset")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class PercentagePositionVerticalOffset : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -77,6 +79,14 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
             return new Int32Value { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
+            builder.SetSchema(51, "pctPosVOffset");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PercentagePositionVerticalOffset>(deep);
     }
@@ -93,8 +103,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(PercentageWidth), FileFormatVersions.Office2010)]
-    [SchemaAttr(51, "sizeRelH")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class RelativeWidth : OpenXmlCompositeElement
     {
         /// <summary>
@@ -141,12 +149,14 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(51, "sizeRelH");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<RelativeWidth>()
-                           .AddAttribute(0, "relativeFrom", a => a.ObjectId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "relativeFrom", a => a.ObjectId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <summary>
@@ -185,8 +195,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(PercentageHeight), FileFormatVersions.Office2010)]
-    [SchemaAttr(51, "sizeRelV")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class RelativeHeight : OpenXmlCompositeElement
     {
         /// <summary>
@@ -233,12 +241,14 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(51, "sizeRelV");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<RelativeHeight>()
-                           .AddAttribute(0, "relativeFrom", a => a.RelativeFrom, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "relativeFrom", a => a.RelativeFrom, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <summary>
@@ -270,9 +280,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp14:pctWidth.</para>
     /// </summary>
-    [NumberValidator(MinInclusive = 0L, SimpleType = typeof(Int32Value))]
-    [SchemaAttr(51, "pctWidth")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class PercentageWidth : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -295,6 +302,14 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
             return new Int32Value { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)) });
+            builder.SetSchema(51, "pctWidth");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PercentageWidth>(deep);
     }
@@ -304,9 +319,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp14:pctHeight.</para>
     /// </summary>
-    [NumberValidator(MinInclusive = 0L, SimpleType = typeof(Int32Value))]
-    [SchemaAttr(51, "pctHeight")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class PercentageHeight : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -327,6 +339,14 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
             return new Int32Value { InnerText = text };
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)) });
+            builder.SetSchema(51, "pctHeight");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <inheritdoc/>

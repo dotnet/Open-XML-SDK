@@ -34,8 +34,6 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     [ChildElementInfo(typeof(CompanyPhoneNumber))]
     [ChildElementInfo(typeof(CompanyFaxNumber))]
     [ChildElementInfo(typeof(CompanyEmailAddress))]
-    [SchemaAttr(36, "CoverPageProperties")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CoverPageProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -67,6 +65,13 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public CoverPageProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(36, "CoverPageProperties");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -168,8 +173,6 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:PublishDate.</para>
     /// </summary>
-    [SchemaAttr(36, "PublishDate")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PublishDate : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -192,6 +195,13 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(36, "PublishDate");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PublishDate>(deep);
     }
@@ -201,8 +211,6 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:Abstract.</para>
     /// </summary>
-    [SchemaAttr(36, "Abstract")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DocumentAbstract : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -225,6 +233,13 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(36, "Abstract");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocumentAbstract>(deep);
     }
@@ -234,8 +249,6 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:CompanyAddress.</para>
     /// </summary>
-    [SchemaAttr(36, "CompanyAddress")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CompanyAddress : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -258,6 +271,13 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(36, "CompanyAddress");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CompanyAddress>(deep);
     }
@@ -267,8 +287,6 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:CompanyPhone.</para>
     /// </summary>
-    [SchemaAttr(36, "CompanyPhone")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CompanyPhoneNumber : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -291,6 +309,13 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(36, "CompanyPhone");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CompanyPhoneNumber>(deep);
     }
@@ -300,8 +325,6 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:CompanyFax.</para>
     /// </summary>
-    [SchemaAttr(36, "CompanyFax")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CompanyFaxNumber : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -324,6 +347,13 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(36, "CompanyFax");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CompanyFaxNumber>(deep);
     }
@@ -333,8 +363,6 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:CompanyEmail.</para>
     /// </summary>
-    [SchemaAttr(36, "CompanyEmail")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CompanyEmailAddress : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -355,6 +383,13 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
             return new StringValue { InnerText = text };
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(36, "CompanyEmail");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>

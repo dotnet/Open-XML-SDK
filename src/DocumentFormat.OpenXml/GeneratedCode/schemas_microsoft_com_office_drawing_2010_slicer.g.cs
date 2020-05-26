@@ -26,8 +26,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Slicer
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2010)]
-    [SchemaAttr(62, "slicer")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Slicer : OpenXmlCompositeElement
     {
         /// <summary>
@@ -74,11 +72,13 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Slicer
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(62, "slicer");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<Slicer>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -117,8 +117,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Slicer
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
-    [SchemaAttr(62, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -150,6 +148,13 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Slicer
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public OfficeArtExtensionList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(62, "extLst");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)

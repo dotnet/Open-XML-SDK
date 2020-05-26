@@ -29,8 +29,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(RevExHeader), FileFormatVersions.Office2016)]
-    [SchemaAttr(83, "revHdrs")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class RevExHeaders : OpenXmlCompositeElement
     {
         /// <summary>
@@ -107,23 +105,25 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "revHdrs");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<RevExHeaders>()
-                           .AddAttribute(0, "minRev", a => a.MinRev, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "maxRev", a => a.MaxRev, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "docId", a => a.DocId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "endpointId", a => a.EndpointId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "minRev", a => a.MinRev, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "maxRev", a => a.MaxRev, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "docId", a => a.DocId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "endpointId", a => a.EndpointId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -175,8 +175,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     [ChildElementInfo(typeof(RevisionList), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(RevListAutoExpandRw), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(RevGroup), FileFormatVersions.Office2016)]
-    [SchemaAttr(83, "revStream")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class RevExStream : OpenXmlCompositeElement
     {
         /// <summary>
@@ -208,6 +206,13 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public RevExStream(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "revStream");
+            builder.Availability = (FileFormatVersions.Office2016);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
@@ -258,8 +263,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Border))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList))]
-    [SchemaAttr(83, "dxf")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class DifferentialFormatType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -291,6 +294,13 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DifferentialFormatType(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "dxf");
+            builder.Availability = (FileFormatVersions.Office2016);
         }
 
         /// <summary>
@@ -406,8 +416,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:revisionPtr.</para>
     /// </summary>
-    [SchemaAttr(83, "revisionPtr")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class RevisionPtr : OpenXmlLeafElement
     {
         /// <summary>
@@ -440,15 +448,17 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "revisionPtr");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<RevisionPtr>()
-                           .AddAttribute(0, "revIDLastSave", a => a.RevIDLastSave, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "documentId", a => a.DocumentId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "revIDLastSave", a => a.RevIDLastSave, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "documentId", a => a.DocumentId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -477,8 +487,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     [ChildElementInfo(typeof(Comments), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(AutoFilter), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(pivotTableDefinition), FileFormatVersions.Office2016)]
-    [SchemaAttr(83, "objectState")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class StateBasedObject : OpenXmlCompositeElement
     {
         /// <summary>
@@ -510,6 +518,13 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public StateBasedObject(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "objectState");
+            builder.Availability = (FileFormatVersions.Office2016);
         }
 
         /// <summary>
@@ -611,8 +626,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:hdr.</para>
     /// </summary>
-    [SchemaAttr(83, "hdr")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class RevExHeader : OpenXmlLeafElement
     {
         /// <summary>
@@ -668,17 +681,19 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "hdr");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<RevExHeader>()
-                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "minRev", a => a.MinRev)
-                           .AddAttribute(0, "maxRev", a => a.MaxRev)
-                           .AddAttribute(0, "time", a => a.Time, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "minRev", a => a.MinRev)
+.AddAttribute(0, "maxRev", a => a.MaxRev)
+.AddAttribute(0, "time", a => a.Time, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -697,8 +712,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(RevExTest), FileFormatVersions.Office2016)]
-    [SchemaAttr(83, "xrrftr")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class RevExFuture : OpenXmlCompositeElement
     {
         /// <summary>
@@ -795,27 +808,29 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "xrrftr");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<RevExFuture>()
-                           .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "sh", a => a.Sh, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "ctx", a => a.Ctx)
-                           .AddAttribute(0, "sti", a => a.Sti);
+.AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "ctx", a => a.Ctx)
+.AddAttribute(0, "sti", a => a.Sti);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 1)
@@ -834,8 +849,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrUspt.</para>
     /// </summary>
-    [SchemaAttr(83, "xrrUspt")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class RevExUnsupported : OpenXmlLeafElement
     {
         /// <summary>
@@ -898,26 +911,28 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "xrrUspt");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<RevExUnsupported>()
-                           .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "sh", a => a.Sh, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "ctx", a => a.Ctx);
+.AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "ctx", a => a.Ctx);
         }
 
         /// <inheritdoc/>
@@ -929,8 +944,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrTrim.</para>
     /// </summary>
-    [SchemaAttr(83, "xrrTrim")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class RevExTrimmed : OpenXmlLeafElement
     {
         /// <summary>
@@ -993,26 +1006,28 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "xrrTrim");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<RevExTrimmed>()
-                           .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "sh", a => a.Sh, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "ctx", a => a.Ctx);
+.AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "ctx", a => a.Ctx);
         }
 
         /// <inheritdoc/>
@@ -1024,8 +1039,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrrc.</para>
     /// </summary>
-    [SchemaAttr(83, "xrrrc")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class RevExRowColumn : OpenXmlLeafElement
     {
         /// <summary>
@@ -1118,35 +1131,37 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "xrrrc");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<RevExRowColumn>()
-                           .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "sh", a => a.Sh, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "ctx", a => a.Ctx)
-                           .AddAttribute(0, "eol", a => a.Eol)
-                           .AddAttribute(0, "ref", a => a.Ref, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "action", a => a.Action, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "ctx", a => a.Ctx)
+.AddAttribute(0, "eol", a => a.Eol)
+.AddAttribute(0, "ref", a => a.Ref, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "action", a => a.Action, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -1158,8 +1173,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrm.</para>
     /// </summary>
-    [SchemaAttr(83, "xrrm")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class RevExMove : OpenXmlLeafElement
     {
         /// <summary>
@@ -1252,38 +1265,40 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "xrrm");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<RevExMove>()
-                           .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "sh", a => a.Sh, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "ctx", a => a.Ctx)
-                           .AddAttribute(0, "src", a => a.Src, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "dst", a => a.Dst, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "srcSh", a => a.SrcSh, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           });
+.AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "ctx", a => a.Ctx)
+.AddAttribute(0, "src", a => a.Src, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "dst", a => a.Dst, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "srcSh", a => a.SrcSh, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+});
         }
 
         /// <inheritdoc/>
@@ -1304,8 +1319,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </remark>
     [ChildElementInfo(typeof(RevCell), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(ChangeCellSubEdit), FileFormatVersions.Office2016)]
-    [SchemaAttr(83, "xrrc")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class RevExChangeCell : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1442,37 +1455,39 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "xrrc");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<RevExChangeCell>()
-                           .AddAttribute(0, "listUid", a => a.ListUid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "sh", a => a.Sh, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "ctx", a => a.Ctx)
-                           .AddAttribute(0, "r", a => a.R, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "t", a => a.T)
-                           .AddAttribute(0, "x", a => a.X)
-                           .AddAttribute(0, "w", a => a.W);
+.AddAttribute(0, "listUid", a => a.ListUid, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "ctx", a => a.Ctx)
+.AddAttribute(0, "r", a => a.R, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "t", a => a.T)
+.AddAttribute(0, "x", a => a.X)
+.AddAttribute(0, "w", a => a.W);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1501,8 +1516,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </remark>
     [ChildElementInfo(typeof(DifferentialFormatType), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
-    [SchemaAttr(83, "xrrf")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class RevExFormatting : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1729,46 +1742,48 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "xrrf");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<RevExFormatting>()
-                           .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "sh", a => a.Sh, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "ctx", a => a.Ctx)
-                           .AddAttribute(0, "numFmtId", a => a.NumFmtId)
-                           .AddAttribute(0, "xfDxf", a => a.XfDxf)
-                           .AddAttribute(0, "style", a => a.Style)
-                           .AddAttribute(0, "sqref", a => a.Sqref, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "start", a => a.Start)
-                           .AddAttribute(0, "length", a => a.Length)
-                           .AddAttribute(0, "styleUid", a => a.StyleUid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "fBlankCell", a => a.FBlankCell)
-                           .AddAttribute(0, "applyNumberFormat", a => a.ApplyNumberFormat)
-                           .AddAttribute(0, "applyFont", a => a.ApplyFont)
-                           .AddAttribute(0, "applyFill", a => a.ApplyFill)
-                           .AddAttribute(0, "applyBorder", a => a.ApplyBorder)
-                           .AddAttribute(0, "applyAlignment", a => a.ApplyAlignment)
-                           .AddAttribute(0, "applyProtection", a => a.ApplyProtection);
+.AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "ctx", a => a.Ctx)
+.AddAttribute(0, "numFmtId", a => a.NumFmtId)
+.AddAttribute(0, "xfDxf", a => a.XfDxf)
+.AddAttribute(0, "style", a => a.Style)
+.AddAttribute(0, "sqref", a => a.Sqref, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "start", a => a.Start)
+.AddAttribute(0, "length", a => a.Length)
+.AddAttribute(0, "styleUid", a => a.StyleUid, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "fBlankCell", a => a.FBlankCell)
+.AddAttribute(0, "applyNumberFormat", a => a.ApplyNumberFormat)
+.AddAttribute(0, "applyFont", a => a.ApplyFont)
+.AddAttribute(0, "applyFill", a => a.ApplyFill)
+.AddAttribute(0, "applyBorder", a => a.ApplyBorder)
+.AddAttribute(0, "applyAlignment", a => a.ApplyAlignment)
+.AddAttribute(0, "applyProtection", a => a.ApplyProtection);
         }
 
         /// <summary>
@@ -1823,8 +1838,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </remark>
     [ChildElementInfo(typeof(FormulaFormula), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
-    [SchemaAttr(83, "xrrDefName")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class RevExDefinedName : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2021,40 +2034,42 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "xrrDefName");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<RevExDefinedName>()
-                           .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "sh", a => a.Sh, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "ctx", a => a.Ctx)
-                           .AddAttribute(0, "customView", a => a.CustomView)
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "function", a => a.Function)
-                           .AddAttribute(0, "functionGroupId", a => a.FunctionGroupId)
-                           .AddAttribute(0, "shortcutKey", a => a.ShortcutKey)
-                           .AddAttribute(0, "hidden", a => a.Hidden)
-                           .AddAttribute(0, "customMenu", a => a.CustomMenu)
-                           .AddAttribute(0, "description", a => a.Description)
-                           .AddAttribute(0, "help", a => a.Help)
-                           .AddAttribute(0, "statusBar", a => a.StatusBar)
-                           .AddAttribute(0, "comment", a => a.Comment);
+.AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "ctx", a => a.Ctx)
+.AddAttribute(0, "customView", a => a.CustomView)
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "function", a => a.Function)
+.AddAttribute(0, "functionGroupId", a => a.FunctionGroupId)
+.AddAttribute(0, "shortcutKey", a => a.ShortcutKey)
+.AddAttribute(0, "hidden", a => a.Hidden)
+.AddAttribute(0, "customMenu", a => a.CustomMenu)
+.AddAttribute(0, "description", a => a.Description)
+.AddAttribute(0, "help", a => a.Help)
+.AddAttribute(0, "statusBar", a => a.StatusBar)
+.AddAttribute(0, "comment", a => a.Comment);
         }
 
         /// <summary>
@@ -2107,8 +2122,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(StateBasedHeader), FileFormatVersions.Office2016)]
-    [SchemaAttr(83, "xrrdo")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class RevExDelObj : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2195,26 +2208,28 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "xrrdo");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<RevExDelObj>()
-                           .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "sh", a => a.Sh, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "ctx", a => a.Ctx);
+.AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "ctx", a => a.Ctx);
         }
 
         /// <summary>
@@ -2257,8 +2272,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     [ChildElementInfo(typeof(StateBasedHeader), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(RevisionStateLink), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(RevisionState), FileFormatVersions.Office2016)]
-    [SchemaAttr(83, "xrrco")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class RevExChgObj : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2345,26 +2358,28 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "xrrco");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<RevExChgObj>()
-                           .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "sh", a => a.Sh, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "ctx", a => a.Ctx);
+.AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "ctx", a => a.Ctx);
         }
 
         /// <summary>
@@ -2401,8 +2416,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrSheet.</para>
     /// </summary>
-    [SchemaAttr(83, "xrrSheet")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class RevExSheetOp : OpenXmlLeafElement
     {
         /// <summary>
@@ -2505,33 +2518,35 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "xrrSheet");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<RevExSheetOp>()
-                           .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "sh", a => a.Sh, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "ctx", a => a.Ctx)
-                           .AddAttribute(0, "op", a => a.Op, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "name", a => a.Name)
-                           .AddAttribute(0, "idOrig", a => a.IdOrig)
-                           .AddAttribute(0, "idNew", a => a.IdNew);
+.AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "ctx", a => a.Ctx)
+.AddAttribute(0, "op", a => a.Op, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "name", a => a.Name)
+.AddAttribute(0, "idOrig", a => a.IdOrig)
+.AddAttribute(0, "idNew", a => a.IdNew);
         }
 
         /// <inheritdoc/>
@@ -2543,8 +2558,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrList.</para>
     /// </summary>
-    [SchemaAttr(83, "xrrList")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class RevisionList : OpenXmlLeafElement
     {
         /// <summary>
@@ -2687,40 +2700,42 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "xrrList");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<RevisionList>()
-                           .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "sh", a => a.Sh, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "ctx", a => a.Ctx)
-                           .AddAttribute(0, "Data", a => a.Data)
-                           .AddAttribute(0, "Formatting", a => a.Formatting)
-                           .AddAttribute(0, "RangeBased", a => a.RangeBased)
-                           .AddAttribute(0, "Fake", a => a.Fake)
-                           .AddAttribute(0, "ref", a => a.Ref, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "Headers", a => a.Headers)
-                           .AddAttribute(0, "InsDelHeaders", a => a.InsDelHeaders)
-                           .AddAttribute(0, "rId", a => a.RId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "ctx", a => a.Ctx)
+.AddAttribute(0, "Data", a => a.Data)
+.AddAttribute(0, "Formatting", a => a.Formatting)
+.AddAttribute(0, "RangeBased", a => a.RangeBased)
+.AddAttribute(0, "Fake", a => a.Fake)
+.AddAttribute(0, "ref", a => a.Ref, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "Headers", a => a.Headers)
+.AddAttribute(0, "InsDelHeaders", a => a.InsDelHeaders)
+.AddAttribute(0, "rId", a => a.RId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -2732,8 +2747,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrListExpR.</para>
     /// </summary>
-    [SchemaAttr(83, "xrrListExpR")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class RevListAutoExpandRw : OpenXmlLeafElement
     {
         /// <summary>
@@ -2816,35 +2829,37 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "xrrListExpR");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<RevListAutoExpandRw>()
-                           .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "sh", a => a.Sh, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "ctx", a => a.Ctx)
-                           .AddAttribute(0, "refAdded", a => a.RefAdded, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "listGuid", a => a.ListGuid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           });
+.AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "ctx", a => a.Ctx)
+.AddAttribute(0, "refAdded", a => a.RefAdded, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "listGuid", a => a.ListGuid, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+});
         }
 
         /// <inheritdoc/>
@@ -2887,8 +2902,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     [ChildElementInfo(typeof(RevExSheetOp), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(RevisionList), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(RevListAutoExpandRw), FileFormatVersions.Office2016)]
-    [SchemaAttr(83, "xrrg")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class RevGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2975,26 +2988,28 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "xrrg");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<RevGroup>()
-                           .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "sh", a => a.Sh, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "ctx", a => a.Ctx);
+.AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "ctx", a => a.Ctx);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
@@ -3025,8 +3040,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrtest.</para>
     /// </summary>
-    [SchemaAttr(83, "xrrtest")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class RevExTest : OpenXmlLeafElement
     {
         /// <summary>
@@ -3034,6 +3047,13 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </summary>
         public RevExTest() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "xrrtest");
+            builder.Availability = (FileFormatVersions.Office2016);
         }
 
         /// <inheritdoc/>
@@ -3056,8 +3076,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     [ChildElementInfo(typeof(FFormula), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(Xstring), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(RstType), FileFormatVersions.Office2016)]
-    [SchemaAttr(83, "c")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class RevCell : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3134,11 +3152,13 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "c");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<RevCell>()
-                           .AddAttribute(0, "t", a => a.T)
-                           .AddAttribute(0, "nop", a => a.Nop)
-                           .AddAttribute(0, "tick", a => a.Tick)
-                           .AddAttribute(0, "rep", a => a.Rep);
+.AddAttribute(0, "t", a => a.T)
+.AddAttribute(0, "nop", a => a.Nop)
+.AddAttribute(0, "tick", a => a.Tick)
+.AddAttribute(0, "rep", a => a.Rep);
         }
 
         /// <summary>
@@ -3205,8 +3225,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(RevCell), FileFormatVersions.Office2016)]
-    [SchemaAttr(83, "ccse")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class ChangeCellSubEdit : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3283,14 +3301,16 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "ccse");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<ChangeCellSubEdit>()
-                           .AddAttribute(0, "r", a => a.R, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "t", a => a.T)
-                           .AddAttribute(0, "x", a => a.X)
-                           .AddAttribute(0, "w", a => a.W);
+.AddAttribute(0, "r", a => a.R, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "t", a => a.T)
+.AddAttribute(0, "x", a => a.X)
+.AddAttribute(0, "w", a => a.W);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3316,8 +3336,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Extension))]
-    [SchemaAttr(83, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3351,6 +3369,13 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "extLst");
+            builder.Availability = (FileFormatVersions.Office2016);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 1)
@@ -3373,8 +3398,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:formula.</para>
     /// </summary>
-    [SchemaAttr(83, "formula")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class FormulaFormula : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -3397,6 +3420,13 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "formula");
+            builder.Availability = (FileFormatVersions.Office2016);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaFormula>(deep);
     }
@@ -3406,8 +3436,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:f.</para>
     /// </summary>
-    [SchemaAttr(83, "f")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class FFormula : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -3430,6 +3458,13 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "f");
+            builder.Availability = (FileFormatVersions.Office2016);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FFormula>(deep);
     }
@@ -3446,8 +3481,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(RefMap), FileFormatVersions.Office2016)]
-    [SchemaAttr(83, "hdr")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class StateBasedHeader : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3534,19 +3567,21 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "hdr");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<StateBasedHeader>()
-                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "eft", a => a.Eft, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "eftx", a => a.Eftx)
-                           .AddAttribute(0, "seft", a => a.Seft)
-                           .AddAttribute(0, "seftx", a => a.Seftx);
+.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "eft", a => a.Eft, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "eftx", a => a.Eftx)
+.AddAttribute(0, "seft", a => a.Seft)
+.AddAttribute(0, "seftx", a => a.Seftx);
         }
 
         /// <summary>
@@ -3578,8 +3613,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:link.</para>
     /// </summary>
-    [SchemaAttr(83, "link")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class RevisionStateLink : OpenXmlLeafElement
     {
         /// <summary>
@@ -3605,11 +3638,13 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "link");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<RevisionStateLink>()
-                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -3636,8 +3671,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     [ChildElementInfo(typeof(ShowGridlinesHeadings), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(FreezePanes), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(Outlines), FileFormatVersions.Office2016)]
-    [SchemaAttr(83, "body")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class RevisionState : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3669,6 +3702,13 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public RevisionState(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "body");
+            builder.Availability = (FileFormatVersions.Office2016);
         }
 
         /// <summary>
@@ -3771,8 +3811,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     [ChildElementInfo(typeof(RefOartAnchor), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(RefFuture), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(RefTest), FileFormatVersions.Office2016)]
-    [SchemaAttr(83, "refmap")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class RefMap : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3806,6 +3844,13 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "refmap");
+            builder.Availability = (FileFormatVersions.Office2016);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RefCell), 1, 1, version: FileFormatVersions.Office2016),
@@ -3826,8 +3871,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:rowColVisualOps.</para>
     /// </summary>
-    [SchemaAttr(83, "rowColVisualOps")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class RowColVisualOps : OpenXmlLeafElement
     {
         /// <summary>
@@ -3880,17 +3923,19 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "rowColVisualOps");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<RowColVisualOps>()
-                           .AddAttribute(0, "action", a => a.Action, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "isRow", a => a.IsRow, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "size", a => a.Size)
-                           .AddAttribute(0, "userSized", a => a.UserSized);
+.AddAttribute(0, "action", a => a.Action, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "isRow", a => a.IsRow, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "size", a => a.Size)
+.AddAttribute(0, "userSized", a => a.UserSized);
         }
 
         /// <inheritdoc/>
@@ -3902,8 +3947,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:hideUnhideSheet.</para>
     /// </summary>
-    [SchemaAttr(83, "hideUnhideSheet")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class HideUnhideSheet : OpenXmlLeafElement
     {
         /// <summary>
@@ -3926,11 +3969,13 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "hideUnhideSheet");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<HideUnhideSheet>()
-                           .AddAttribute(0, "hide", a => a.Hide, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "hide", a => a.Hide, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -3942,8 +3987,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:showGridlinesHeadings.</para>
     /// </summary>
-    [SchemaAttr(83, "showGridlinesHeadings")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class ShowGridlinesHeadings : OpenXmlLeafElement
     {
         /// <summary>
@@ -3976,15 +4019,17 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "showGridlinesHeadings");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<ShowGridlinesHeadings>()
-                           .AddAttribute(0, "showGridLines", a => a.ShowGridLines, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "showRowCol", a => a.ShowRowCol, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "showGridLines", a => a.ShowGridLines, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "showRowCol", a => a.ShowRowCol, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -3996,8 +4041,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:freezePanes.</para>
     /// </summary>
-    [SchemaAttr(83, "freezePanes")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class FreezePanes : OpenXmlLeafElement
     {
         /// <summary>
@@ -4020,11 +4063,13 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "freezePanes");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<FreezePanes>()
-                           .AddAttribute(0, "sheetViewUid", a => a.SheetViewUid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           });
+.AddAttribute(0, "sheetViewUid", a => a.SheetViewUid, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+});
         }
 
         /// <inheritdoc/>
@@ -4043,8 +4088,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Outline), FileFormatVersions.Office2016)]
-    [SchemaAttr(83, "outlines")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class Outlines : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4091,11 +4134,13 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "outlines");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<Outlines>()
-                           .AddAttribute(0, "isRow", a => a.IsRow, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "isRow", a => a.IsRow, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4114,8 +4159,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:outline.</para>
     /// </summary>
-    [SchemaAttr(83, "outline")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class Outline : OpenXmlLeafElement
     {
         /// <summary>
@@ -4148,15 +4191,17 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "outline");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<Outline>()
-                           .AddAttribute(0, "isCollapsed", a => a.IsCollapsed, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "level", a => a.Level, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "isCollapsed", a => a.IsCollapsed, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "level", a => a.Level, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -4168,8 +4213,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:v.</para>
     /// </summary>
-    [SchemaAttr(83, "v")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class Xstring : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -4190,6 +4233,13 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
             return new StringValue { InnerText = text };
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "v");
+            builder.Availability = (FileFormatVersions.Office2016);
         }
 
         /// <inheritdoc/>
@@ -4214,8 +4264,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Run))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.PhoneticRun))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties))]
-    [SchemaAttr(83, "is")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class RstType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4247,6 +4295,13 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public RstType(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "is");
+            builder.Availability = (FileFormatVersions.Office2016);
         }
 
         /// <summary>
@@ -4281,8 +4336,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:ref.</para>
     /// </summary>
-    [SchemaAttr(83, "ref")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class RefCell : OpenXmlLeafElement
     {
         /// <summary>
@@ -4365,29 +4418,31 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "ref");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<RefCell>()
-                           .AddAttribute(0, "n", a => a.N, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "ajt", a => a.Ajt, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "ajtx", a => a.Ajtx)
-                           .AddAttribute(0, "homeRef", a => a.HomeRef)
-                           .AddAttribute(0, "r", a => a.R, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "uidLast", a => a.UidLast, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           });
+.AddAttribute(0, "n", a => a.N, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "ajt", a => a.Ajt, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "ajtx", a => a.Ajtx)
+.AddAttribute(0, "homeRef", a => a.HomeRef)
+.AddAttribute(0, "r", a => a.R, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "uidLast", a => a.UidLast, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+});
         }
 
         /// <inheritdoc/>
@@ -4399,8 +4454,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:sheetUid.</para>
     /// </summary>
-    [SchemaAttr(83, "sheetUid")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class SheetXluid : OpenXmlLeafElement
     {
         /// <summary>
@@ -4463,22 +4516,24 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "sheetUid");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<SheetXluid>()
-                           .AddAttribute(0, "n", a => a.N, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "ajt", a => a.Ajt, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "ajtx", a => a.Ajtx)
-                           .AddAttribute(0, "homeRef", a => a.HomeRef)
-                           .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           });
+.AddAttribute(0, "n", a => a.N, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "ajt", a => a.Ajt, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "ajtx", a => a.Ajtx)
+.AddAttribute(0, "homeRef", a => a.HomeRef)
+.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+});
         }
 
         /// <inheritdoc/>
@@ -4490,8 +4545,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:oartAnchor.</para>
     /// </summary>
-    [SchemaAttr(83, "oartAnchor")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class RefOartAnchor : OpenXmlLeafElement
     {
         /// <summary>
@@ -4644,54 +4697,56 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "oartAnchor");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<RefOartAnchor>()
-                           .AddAttribute(0, "n", a => a.N, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "ajt", a => a.Ajt, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "ajtx", a => a.Ajtx)
-                           .AddAttribute(0, "homeRef", a => a.HomeRef)
-                           .AddAttribute(0, "r", a => a.R)
-                           .AddAttribute(0, "fromRowOff", a => a.FromRowOff, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-                           })
-                           .AddAttribute(0, "fromColOff", a => a.FromColOff, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-                           })
-                           .AddAttribute(0, "toRowOff", a => a.ToRowOff, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-                           })
-                           .AddAttribute(0, "toColOff", a => a.ToColOff, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-                           })
-                           .AddAttribute(0, "cx", a => a.Cx, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
-                           })
-                           .AddAttribute(0, "cy", a => a.Cy, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
-                           })
-                           .AddAttribute(0, "x", a => a.X, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-                           })
-                           .AddAttribute(0, "y", a => a.Y, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-                           })
-                           .AddAttribute(0, "oat", a => a.Oat, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "n", a => a.N, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "ajt", a => a.Ajt, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "ajtx", a => a.Ajtx)
+.AddAttribute(0, "homeRef", a => a.HomeRef)
+.AddAttribute(0, "r", a => a.R)
+.AddAttribute(0, "fromRowOff", a => a.FromRowOff, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+})
+.AddAttribute(0, "fromColOff", a => a.FromColOff, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+})
+.AddAttribute(0, "toRowOff", a => a.ToRowOff, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+})
+.AddAttribute(0, "toColOff", a => a.ToColOff, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+})
+.AddAttribute(0, "cx", a => a.Cx, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+})
+.AddAttribute(0, "cy", a => a.Cy, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+})
+.AddAttribute(0, "x", a => a.X, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+})
+.AddAttribute(0, "y", a => a.Y, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+})
+.AddAttribute(0, "oat", a => a.Oat, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -4703,8 +4758,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:future.</para>
     /// </summary>
-    [SchemaAttr(83, "future")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class RefFuture : OpenXmlLeafElement
     {
         /// <summary>
@@ -4712,6 +4765,13 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </summary>
         public RefFuture() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "future");
+            builder.Availability = (FileFormatVersions.Office2016);
         }
 
         /// <inheritdoc/>
@@ -4723,8 +4783,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:test.</para>
     /// </summary>
-    [SchemaAttr(83, "test")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class RefTest : OpenXmlLeafElement
     {
         /// <summary>
@@ -4777,17 +4835,19 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "test");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<RefTest>()
-                           .AddAttribute(0, "n", a => a.N, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "ajt", a => a.Ajt, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "ajtx", a => a.Ajtx)
-                           .AddAttribute(0, "homeRef", a => a.HomeRef);
+.AddAttribute(0, "n", a => a.N, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "ajt", a => a.Ajt, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "ajtx", a => a.Ajtx)
+.AddAttribute(0, "homeRef", a => a.HomeRef);
         }
 
         /// <inheritdoc/>
@@ -4810,8 +4870,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.ExcelAc.List), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Formula1))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Formula2))]
-    [SchemaAttr(83, "dataValidation")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class DataValidation : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4978,23 +5036,25 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "dataValidation");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<DataValidation>()
-                           .AddAttribute(0, "type", a => a.Type)
-                           .AddAttribute(0, "errorStyle", a => a.ErrorStyle)
-                           .AddAttribute(0, "imeMode", a => a.ImeMode)
-                           .AddAttribute(0, "operator", a => a.Operator)
-                           .AddAttribute(0, "allowBlank", a => a.AllowBlank)
-                           .AddAttribute(0, "showDropDown", a => a.ShowDropDown)
-                           .AddAttribute(0, "showInputMessage", a => a.ShowInputMessage)
-                           .AddAttribute(0, "showErrorMessage", a => a.ShowErrorMessage)
-                           .AddAttribute(0, "errorTitle", a => a.ErrorTitle)
-                           .AddAttribute(0, "error", a => a.Error)
-                           .AddAttribute(0, "promptTitle", a => a.PromptTitle)
-                           .AddAttribute(0, "prompt", a => a.Prompt)
-                           .AddAttribute(0, "sqref", a => a.SequenceOfReferences, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "type", a => a.Type)
+.AddAttribute(0, "errorStyle", a => a.ErrorStyle)
+.AddAttribute(0, "imeMode", a => a.ImeMode)
+.AddAttribute(0, "operator", a => a.Operator)
+.AddAttribute(0, "allowBlank", a => a.AllowBlank)
+.AddAttribute(0, "showDropDown", a => a.ShowDropDown)
+.AddAttribute(0, "showInputMessage", a => a.ShowInputMessage)
+.AddAttribute(0, "showErrorMessage", a => a.ShowErrorMessage)
+.AddAttribute(0, "errorTitle", a => a.ErrorTitle)
+.AddAttribute(0, "error", a => a.Error)
+.AddAttribute(0, "promptTitle", a => a.PromptTitle)
+.AddAttribute(0, "prompt", a => a.Prompt)
+.AddAttribute(0, "sqref", a => a.SequenceOfReferences, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -5054,8 +5114,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:hyperlink.</para>
     /// </summary>
-    [SchemaAttr(83, "hyperlink")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class Hyperlink : OpenXmlLeafElement
     {
         /// <summary>
@@ -5121,15 +5179,17 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "hyperlink");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<Hyperlink>()
-                           .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(19, "id", a => a.Id)
-                           .AddAttribute(0, "location", a => a.Location)
-                           .AddAttribute(0, "tooltip", a => a.Tooltip)
-                           .AddAttribute(0, "display", a => a.Display);
+.AddAttribute(0, "ref", a => a.Reference, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(19, "id", a => a.Id)
+.AddAttribute(0, "location", a => a.Location)
+.AddAttribute(0, "tooltip", a => a.Tooltip)
+.AddAttribute(0, "display", a => a.Display);
         }
 
         /// <inheritdoc/>
@@ -5166,8 +5226,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office.Excel.Formula))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Sparklines), FileFormatVersions.Office2010)]
-    [SchemaAttr(83, "sparklineGroup")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class SparklineGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5374,24 +5432,26 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "sparklineGroup");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<SparklineGroup>()
-                           .AddAttribute(0, "manualMax", a => a.ManualMax)
-                           .AddAttribute(0, "manualMin", a => a.ManualMin)
-                           .AddAttribute(0, "lineWeight", a => a.LineWeight)
-                           .AddAttribute(0, "type", a => a.Type)
-                           .AddAttribute(0, "dateAxis", a => a.DateAxis)
-                           .AddAttribute(0, "displayEmptyCellsAs", a => a.DisplayEmptyCellsAs)
-                           .AddAttribute(0, "markers", a => a.Markers)
-                           .AddAttribute(0, "high", a => a.High)
-                           .AddAttribute(0, "low", a => a.Low)
-                           .AddAttribute(0, "first", a => a.First)
-                           .AddAttribute(0, "last", a => a.Last)
-                           .AddAttribute(0, "negative", a => a.Negative)
-                           .AddAttribute(0, "displayXAxis", a => a.DisplayXAxis)
-                           .AddAttribute(0, "displayHidden", a => a.DisplayHidden)
-                           .AddAttribute(0, "minAxisType", a => a.MinAxisType)
-                           .AddAttribute(0, "maxAxisType", a => a.MaxAxisType)
-                           .AddAttribute(0, "rightToLeft", a => a.RightToLeft);
+.AddAttribute(0, "manualMax", a => a.ManualMax)
+.AddAttribute(0, "manualMin", a => a.ManualMin)
+.AddAttribute(0, "lineWeight", a => a.LineWeight)
+.AddAttribute(0, "type", a => a.Type)
+.AddAttribute(0, "dateAxis", a => a.DateAxis)
+.AddAttribute(0, "displayEmptyCellsAs", a => a.DisplayEmptyCellsAs)
+.AddAttribute(0, "markers", a => a.Markers)
+.AddAttribute(0, "high", a => a.High)
+.AddAttribute(0, "low", a => a.Low)
+.AddAttribute(0, "first", a => a.First)
+.AddAttribute(0, "last", a => a.Last)
+.AddAttribute(0, "negative", a => a.Negative)
+.AddAttribute(0, "displayXAxis", a => a.DisplayXAxis)
+.AddAttribute(0, "displayHidden", a => a.DisplayHidden)
+.AddAttribute(0, "minAxisType", a => a.MinAxisType)
+.AddAttribute(0, "maxAxisType", a => a.MaxAxisType)
+.AddAttribute(0, "rightToLeft", a => a.RightToLeft);
         }
 
         /// <summary>
@@ -5560,8 +5620,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Authors))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.CommentList))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList))]
-    [SchemaAttr(83, "comments")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class Comments : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5593,6 +5651,13 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Comments(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "comments");
+            builder.Availability = (FileFormatVersions.Office2016);
         }
 
         /// <summary>
@@ -5663,8 +5728,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.FilterColumn))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.SortState))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList))]
-    [SchemaAttr(83, "autoFilter")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class AutoFilter : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5711,8 +5774,10 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "autoFilter");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<AutoFilter>()
-                           .AddAttribute(0, "ref", a => a.Reference);
+.AddAttribute(0, "ref", a => a.Reference);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5772,8 +5837,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList))]
-    [SchemaAttr(83, "pivotTableDefinition")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class pivotTableDefinition : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6490,84 +6553,86 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(83, "pivotTableDefinition");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<pivotTableDefinition>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "cacheId", a => a.CacheId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "dataOnRows", a => a.DataOnRows)
-                           .AddAttribute(0, "dataPosition", a => a.DataPosition)
-                           .AddAttribute(0, "autoFormatId", a => a.AutoFormatId)
-                           .AddAttribute(0, "applyNumberFormats", a => a.ApplyNumberFormats)
-                           .AddAttribute(0, "applyBorderFormats", a => a.ApplyBorderFormats)
-                           .AddAttribute(0, "applyFontFormats", a => a.ApplyFontFormats)
-                           .AddAttribute(0, "applyPatternFormats", a => a.ApplyPatternFormats)
-                           .AddAttribute(0, "applyAlignmentFormats", a => a.ApplyAlignmentFormats)
-                           .AddAttribute(0, "applyWidthHeightFormats", a => a.ApplyWidthHeightFormats)
-                           .AddAttribute(0, "dataCaption", a => a.DataCaption, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "grandTotalCaption", a => a.GrandTotalCaption)
-                           .AddAttribute(0, "errorCaption", a => a.ErrorCaption)
-                           .AddAttribute(0, "showError", a => a.ShowError)
-                           .AddAttribute(0, "missingCaption", a => a.MissingCaption)
-                           .AddAttribute(0, "showMissing", a => a.ShowMissing)
-                           .AddAttribute(0, "pageStyle", a => a.PageStyle)
-                           .AddAttribute(0, "pivotTableStyle", a => a.PivotTableStyleName)
-                           .AddAttribute(0, "vacatedStyle", a => a.VacatedStyle)
-                           .AddAttribute(0, "tag", a => a.Tag)
-                           .AddAttribute(0, "updatedVersion", a => a.UpdatedVersion)
-                           .AddAttribute(0, "minRefreshableVersion", a => a.MinRefreshableVersion)
-                           .AddAttribute(0, "asteriskTotals", a => a.AsteriskTotals)
-                           .AddAttribute(0, "showItems", a => a.ShowItems)
-                           .AddAttribute(0, "editData", a => a.EditData)
-                           .AddAttribute(0, "disableFieldList", a => a.DisableFieldList)
-                           .AddAttribute(0, "showCalcMbrs", a => a.ShowCalculatedMembers)
-                           .AddAttribute(0, "visualTotals", a => a.VisualTotals)
-                           .AddAttribute(0, "showMultipleLabel", a => a.ShowMultipleLabel)
-                           .AddAttribute(0, "showDataDropDown", a => a.ShowDataDropDown)
-                           .AddAttribute(0, "showDrill", a => a.ShowDrill)
-                           .AddAttribute(0, "printDrill", a => a.PrintDrill)
-                           .AddAttribute(0, "showMemberPropertyTips", a => a.ShowMemberPropertyTips)
-                           .AddAttribute(0, "showDataTips", a => a.ShowDataTips)
-                           .AddAttribute(0, "enableWizard", a => a.EnableWizard)
-                           .AddAttribute(0, "enableDrill", a => a.EnableDrill)
-                           .AddAttribute(0, "enableFieldProperties", a => a.EnableFieldProperties)
-                           .AddAttribute(0, "preserveFormatting", a => a.PreserveFormatting)
-                           .AddAttribute(0, "useAutoFormatting", a => a.UseAutoFormatting)
-                           .AddAttribute(0, "pageWrap", a => a.PageWrap)
-                           .AddAttribute(0, "pageOverThenDown", a => a.PageOverThenDown)
-                           .AddAttribute(0, "subtotalHiddenItems", a => a.SubtotalHiddenItems)
-                           .AddAttribute(0, "rowGrandTotals", a => a.RowGrandTotals)
-                           .AddAttribute(0, "colGrandTotals", a => a.ColumnGrandTotals)
-                           .AddAttribute(0, "fieldPrintTitles", a => a.FieldPrintTitles)
-                           .AddAttribute(0, "itemPrintTitles", a => a.ItemPrintTitles)
-                           .AddAttribute(0, "mergeItem", a => a.MergeItem)
-                           .AddAttribute(0, "showDropZones", a => a.ShowDropZones)
-                           .AddAttribute(0, "createdVersion", a => a.CreatedVersion)
-                           .AddAttribute(0, "indent", a => a.Indent)
-                           .AddAttribute(0, "showEmptyRow", a => a.ShowEmptyRow)
-                           .AddAttribute(0, "showEmptyCol", a => a.ShowEmptyColumn)
-                           .AddAttribute(0, "showHeaders", a => a.ShowHeaders)
-                           .AddAttribute(0, "compact", a => a.Compact)
-                           .AddAttribute(0, "outline", a => a.Outline)
-                           .AddAttribute(0, "outlineData", a => a.OutlineData)
-                           .AddAttribute(0, "compactData", a => a.CompactData)
-                           .AddAttribute(0, "published", a => a.Published)
-                           .AddAttribute(0, "gridDropZones", a => a.GridDropZones)
-                           .AddAttribute(0, "immersive", a => a.StopImmersiveUi)
-                           .AddAttribute(0, "multipleFieldFilters", a => a.MultipleFieldFilters)
-                           .AddAttribute(0, "chartFormat", a => a.ChartFormat)
-                           .AddAttribute(0, "rowHeaderCaption", a => a.RowHeaderCaption)
-                           .AddAttribute(0, "colHeaderCaption", a => a.ColumnHeaderCaption)
-                           .AddAttribute(0, "fieldListSortAscending", a => a.FieldListSortAscending)
-                           .AddAttribute(0, "mdxSubqueries", a => a.MdxSubqueries)
-                           .AddAttribute(0, "customListSort", a => a.CustomListSort);
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "cacheId", a => a.CacheId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "dataOnRows", a => a.DataOnRows)
+.AddAttribute(0, "dataPosition", a => a.DataPosition)
+.AddAttribute(0, "autoFormatId", a => a.AutoFormatId)
+.AddAttribute(0, "applyNumberFormats", a => a.ApplyNumberFormats)
+.AddAttribute(0, "applyBorderFormats", a => a.ApplyBorderFormats)
+.AddAttribute(0, "applyFontFormats", a => a.ApplyFontFormats)
+.AddAttribute(0, "applyPatternFormats", a => a.ApplyPatternFormats)
+.AddAttribute(0, "applyAlignmentFormats", a => a.ApplyAlignmentFormats)
+.AddAttribute(0, "applyWidthHeightFormats", a => a.ApplyWidthHeightFormats)
+.AddAttribute(0, "dataCaption", a => a.DataCaption, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "grandTotalCaption", a => a.GrandTotalCaption)
+.AddAttribute(0, "errorCaption", a => a.ErrorCaption)
+.AddAttribute(0, "showError", a => a.ShowError)
+.AddAttribute(0, "missingCaption", a => a.MissingCaption)
+.AddAttribute(0, "showMissing", a => a.ShowMissing)
+.AddAttribute(0, "pageStyle", a => a.PageStyle)
+.AddAttribute(0, "pivotTableStyle", a => a.PivotTableStyleName)
+.AddAttribute(0, "vacatedStyle", a => a.VacatedStyle)
+.AddAttribute(0, "tag", a => a.Tag)
+.AddAttribute(0, "updatedVersion", a => a.UpdatedVersion)
+.AddAttribute(0, "minRefreshableVersion", a => a.MinRefreshableVersion)
+.AddAttribute(0, "asteriskTotals", a => a.AsteriskTotals)
+.AddAttribute(0, "showItems", a => a.ShowItems)
+.AddAttribute(0, "editData", a => a.EditData)
+.AddAttribute(0, "disableFieldList", a => a.DisableFieldList)
+.AddAttribute(0, "showCalcMbrs", a => a.ShowCalculatedMembers)
+.AddAttribute(0, "visualTotals", a => a.VisualTotals)
+.AddAttribute(0, "showMultipleLabel", a => a.ShowMultipleLabel)
+.AddAttribute(0, "showDataDropDown", a => a.ShowDataDropDown)
+.AddAttribute(0, "showDrill", a => a.ShowDrill)
+.AddAttribute(0, "printDrill", a => a.PrintDrill)
+.AddAttribute(0, "showMemberPropertyTips", a => a.ShowMemberPropertyTips)
+.AddAttribute(0, "showDataTips", a => a.ShowDataTips)
+.AddAttribute(0, "enableWizard", a => a.EnableWizard)
+.AddAttribute(0, "enableDrill", a => a.EnableDrill)
+.AddAttribute(0, "enableFieldProperties", a => a.EnableFieldProperties)
+.AddAttribute(0, "preserveFormatting", a => a.PreserveFormatting)
+.AddAttribute(0, "useAutoFormatting", a => a.UseAutoFormatting)
+.AddAttribute(0, "pageWrap", a => a.PageWrap)
+.AddAttribute(0, "pageOverThenDown", a => a.PageOverThenDown)
+.AddAttribute(0, "subtotalHiddenItems", a => a.SubtotalHiddenItems)
+.AddAttribute(0, "rowGrandTotals", a => a.RowGrandTotals)
+.AddAttribute(0, "colGrandTotals", a => a.ColumnGrandTotals)
+.AddAttribute(0, "fieldPrintTitles", a => a.FieldPrintTitles)
+.AddAttribute(0, "itemPrintTitles", a => a.ItemPrintTitles)
+.AddAttribute(0, "mergeItem", a => a.MergeItem)
+.AddAttribute(0, "showDropZones", a => a.ShowDropZones)
+.AddAttribute(0, "createdVersion", a => a.CreatedVersion)
+.AddAttribute(0, "indent", a => a.Indent)
+.AddAttribute(0, "showEmptyRow", a => a.ShowEmptyRow)
+.AddAttribute(0, "showEmptyCol", a => a.ShowEmptyColumn)
+.AddAttribute(0, "showHeaders", a => a.ShowHeaders)
+.AddAttribute(0, "compact", a => a.Compact)
+.AddAttribute(0, "outline", a => a.Outline)
+.AddAttribute(0, "outlineData", a => a.OutlineData)
+.AddAttribute(0, "compactData", a => a.CompactData)
+.AddAttribute(0, "published", a => a.Published)
+.AddAttribute(0, "gridDropZones", a => a.GridDropZones)
+.AddAttribute(0, "immersive", a => a.StopImmersiveUi)
+.AddAttribute(0, "multipleFieldFilters", a => a.MultipleFieldFilters)
+.AddAttribute(0, "chartFormat", a => a.ChartFormat)
+.AddAttribute(0, "rowHeaderCaption", a => a.RowHeaderCaption)
+.AddAttribute(0, "colHeaderCaption", a => a.ColumnHeaderCaption)
+.AddAttribute(0, "fieldListSortAscending", a => a.FieldListSortAscending)
+.AddAttribute(0, "mdxSubqueries", a => a.MdxSubqueries)
+.AddAttribute(0, "customListSort", a => a.CustomListSort);
         }
 
         /// <summary>

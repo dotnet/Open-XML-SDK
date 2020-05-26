@@ -39,8 +39,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor))]
     [ChildElementInfo(typeof(ColorStyleVariation), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
-    [SchemaAttr(65, "colorStyle")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class ColorStyle : OpenXmlPartRootElement
     {
         /// <summary>
@@ -97,17 +95,19 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "colorStyle");
+            builder.Availability = (FileFormatVersions.Office2013);
             builder.AddElement<ColorStyle>()
-                           .AddAttribute(0, "meth", a => a.Method, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ColorStyleMethodEnum>)), UnionId = (0) });
-                                   union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
-                               });
-                           })
-                           .AddAttribute(0, "id", a => a.Id);
+.AddAttribute(0, "meth", a => a.Method, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ColorStyleMethodEnum>)), UnionId = (0) });
+union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+});
+})
+.AddAttribute(0, "id", a => a.Id);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -239,8 +239,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     [ChildElementInfo(typeof(ValueAxis), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(Wall), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
-    [SchemaAttr(65, "chartStyle")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class ChartStyle : OpenXmlPartRootElement
     {
         /// <summary>
@@ -287,8 +285,10 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "chartStyle");
+            builder.Availability = (FileFormatVersions.Office2013);
             builder.AddElement<ChartStyle>()
-                           .AddAttribute(0, "id", a => a.Id);
+.AddAttribute(0, "id", a => a.Id);
         }
 
         /// <summary>
@@ -846,8 +846,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BlueModulation))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Gamma))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.InverseGamma))]
-    [SchemaAttr(65, "variation")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class ColorStyleVariation : OpenXmlCompositeElement
     {
         /// <summary>
@@ -879,6 +877,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ColorStyleVariation(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "variation");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -937,8 +942,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
-    [SchemaAttr(65, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -970,6 +973,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public OfficeArtExtensionList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "extLst");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1055,8 +1065,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BlueModulation))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Gamma))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.InverseGamma))]
-    [SchemaAttr(65, "styleClr")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class StyleColor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1103,16 +1111,18 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "styleClr");
+            builder.Availability = (FileFormatVersions.Office2013);
             builder.AddElement<StyleColor>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColorEnum>)), UnionId = (0) });
-                                   union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
-                               });
-                           });
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColorEnum>)), UnionId = (0) });
+union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+});
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1176,8 +1186,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>StyleColor &lt;cs:styleClr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "lnRef")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class LineReference : StyleReference
     {
         /// <summary>
@@ -1209,6 +1217,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public LineReference(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "lnRef");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1251,8 +1266,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>StyleColor &lt;cs:styleClr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "fillRef")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class FillReference : StyleReference
     {
         /// <summary>
@@ -1284,6 +1297,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public FillReference(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "fillRef");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1326,8 +1346,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>StyleColor &lt;cs:styleClr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "effectRef")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class EffectReference : StyleReference
     {
         /// <summary>
@@ -1359,6 +1377,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public EffectReference(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "effectRef");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1478,9 +1503,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:lineWidthScale.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(DoubleValue))]
-    [SchemaAttr(65, "lineWidthScale")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class LineWidthScale : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1501,6 +1523,14 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
             return new DoubleValue { InnerText = text };
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DoubleValue)) });
+            builder.SetSchema(65, "lineWidthScale");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         /// <inheritdoc/>
@@ -1531,8 +1561,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor))]
     [ChildElementInfo(typeof(StyleColor), FileFormatVersions.Office2013)]
-    [SchemaAttr(65, "fontRef")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class FontReference : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1589,13 +1617,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "fontRef");
+            builder.Availability = (FileFormatVersions.Office2013);
             builder.AddElement<FontReference>()
-                           .AddAttribute(0, "idx", a => a.Index, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "mods", a => a.Modifiers);
+.AddAttribute(0, "idx", a => a.Index, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "mods", a => a.Modifiers);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1661,8 +1691,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
-    [SchemaAttr(65, "spPr")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1709,11 +1737,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "spPr");
+            builder.Availability = (FileFormatVersions.Office2013);
             builder.AddElement<ShapeProperties>()
-                           .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <summary>
@@ -1826,8 +1856,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnMouseOver))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RightToLeft))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-    [SchemaAttr(65, "defRPr")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2054,44 +2082,46 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "defRPr");
+            builder.Availability = (FileFormatVersions.Office2013);
             builder.AddElement<TextCharacterPropertiesType>()
-                           .AddAttribute(0, "kumimoji", a => a.Kumimoji)
-                           .AddAttribute(0, "lang", a => a.Language)
-                           .AddAttribute(0, "altLang", a => a.AlternativeLanguage)
-                           .AddAttribute(0, "sz", a => a.FontSize, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (100L), MaxInclusive = (400000L) });
-                           })
-                           .AddAttribute(0, "b", a => a.Bold)
-                           .AddAttribute(0, "i", a => a.Italic)
-                           .AddAttribute(0, "u", a => a.Underline, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "strike", a => a.Strike, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "kern", a => a.Kerning, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (400000L) });
-                           })
-                           .AddAttribute(0, "cap", a => a.Capital, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "spc", a => a.Spacing, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-400000L), MaxInclusive = (400000L) });
-                           })
-                           .AddAttribute(0, "normalizeH", a => a.NormalizeHeight)
-                           .AddAttribute(0, "baseline", a => a.Baseline)
-                           .AddAttribute(0, "noProof", a => a.NoProof)
-                           .AddAttribute(0, "dirty", a => a.Dirty)
-                           .AddAttribute(0, "err", a => a.SpellingError)
-                           .AddAttribute(0, "smtClean", a => a.SmtClean)
-                           .AddAttribute(0, "smtId", a => a.SmtId)
-                           .AddAttribute(0, "bmk", a => a.Bookmark);
+.AddAttribute(0, "kumimoji", a => a.Kumimoji)
+.AddAttribute(0, "lang", a => a.Language)
+.AddAttribute(0, "altLang", a => a.AlternativeLanguage)
+.AddAttribute(0, "sz", a => a.FontSize, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (100L), MaxInclusive = (400000L) });
+})
+.AddAttribute(0, "b", a => a.Bold)
+.AddAttribute(0, "i", a => a.Italic)
+.AddAttribute(0, "u", a => a.Underline, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "strike", a => a.Strike, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "kern", a => a.Kerning, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (400000L) });
+})
+.AddAttribute(0, "cap", a => a.Capital, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "spc", a => a.Spacing, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-400000L), MaxInclusive = (400000L) });
+})
+.AddAttribute(0, "normalizeH", a => a.NormalizeHeight)
+.AddAttribute(0, "baseline", a => a.Baseline)
+.AddAttribute(0, "noProof", a => a.NoProof)
+.AddAttribute(0, "dirty", a => a.Dirty)
+.AddAttribute(0, "err", a => a.SpellingError)
+.AddAttribute(0, "smtClean", a => a.SmtClean)
+.AddAttribute(0, "smtId", a => a.SmtId)
+.AddAttribute(0, "bmk", a => a.Bookmark);
         }
 
         /// <summary>
@@ -2189,8 +2219,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FlatText))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-    [SchemaAttr(65, "bodyPr")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class TextBodyProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2417,47 +2445,49 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "bodyPr");
+            builder.Availability = (FileFormatVersions.Office2013);
             builder.AddElement<TextBodyProperties>()
-                           .AddAttribute(0, "rot", a => a.Rotation)
-                           .AddAttribute(0, "spcFirstLastPara", a => a.UseParagraphSpacing)
-                           .AddAttribute(0, "vertOverflow", a => a.VerticalOverflow, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "horzOverflow", a => a.HorizontalOverflow, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "vert", a => a.Vertical, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "wrap", a => a.Wrap, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "lIns", a => a.LeftInset)
-                           .AddAttribute(0, "tIns", a => a.TopInset)
-                           .AddAttribute(0, "rIns", a => a.RightInset)
-                           .AddAttribute(0, "bIns", a => a.BottomInset)
-                           .AddAttribute(0, "numCol", a => a.ColumnCount, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (16L) });
-                           })
-                           .AddAttribute(0, "spcCol", a => a.ColumnSpacing, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
-                           })
-                           .AddAttribute(0, "rtlCol", a => a.RightToLeftColumns)
-                           .AddAttribute(0, "fromWordArt", a => a.FromWordArt)
-                           .AddAttribute(0, "anchor", a => a.Anchor, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "anchorCtr", a => a.AnchorCenter)
-                           .AddAttribute(0, "forceAA", a => a.ForceAntiAlias)
-                           .AddAttribute(0, "upright", a => a.UpRight)
-                           .AddAttribute(0, "compatLnSpc", a => a.CompatibleLineSpacing);
+.AddAttribute(0, "rot", a => a.Rotation)
+.AddAttribute(0, "spcFirstLastPara", a => a.UseParagraphSpacing)
+.AddAttribute(0, "vertOverflow", a => a.VerticalOverflow, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "horzOverflow", a => a.HorizontalOverflow, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "vert", a => a.Vertical, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "wrap", a => a.Wrap, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "lIns", a => a.LeftInset)
+.AddAttribute(0, "tIns", a => a.TopInset)
+.AddAttribute(0, "rIns", a => a.RightInset)
+.AddAttribute(0, "bIns", a => a.BottomInset)
+.AddAttribute(0, "numCol", a => a.ColumnCount, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (16L) });
+})
+.AddAttribute(0, "spcCol", a => a.ColumnSpacing, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+})
+.AddAttribute(0, "rtlCol", a => a.RightToLeftColumns)
+.AddAttribute(0, "fromWordArt", a => a.FromWordArt)
+.AddAttribute(0, "anchor", a => a.Anchor, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "anchorCtr", a => a.AnchorCenter)
+.AddAttribute(0, "forceAA", a => a.ForceAntiAlias)
+.AddAttribute(0, "upright", a => a.UpRight)
+.AddAttribute(0, "compatLnSpc", a => a.CompatibleLineSpacing);
         }
 
         /// <summary>
@@ -2508,8 +2538,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:categoryAxis.</para>
     /// </summary>
-    [SchemaAttr(65, "categoryAxis")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class CategoryAxisProperties : AxisProperties
     {
         /// <summary>
@@ -2517,6 +2545,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </summary>
         public CategoryAxisProperties() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "categoryAxis");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         /// <inheritdoc/>
@@ -2528,8 +2563,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:seriesAxis.</para>
     /// </summary>
-    [SchemaAttr(65, "seriesAxis")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class SeriesAxisProperties : AxisProperties
     {
         /// <summary>
@@ -2537,6 +2570,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </summary>
         public SeriesAxisProperties() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "seriesAxis");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         /// <inheritdoc/>
@@ -2548,8 +2588,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:valueAxis.</para>
     /// </summary>
-    [SchemaAttr(65, "valueAxis")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class ValueAxisProperties : AxisProperties
     {
         /// <summary>
@@ -2557,6 +2595,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </summary>
         public ValueAxisProperties() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "valueAxis");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         /// <inheritdoc/>
@@ -2687,8 +2732,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataSeries.</para>
     /// </summary>
-    [SchemaAttr(65, "dataSeries")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class DataSeries : OpenXmlLeafElement
     {
         /// <summary>
@@ -2781,39 +2824,41 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "dataSeries");
+            builder.Availability = (FileFormatVersions.Office2013);
             builder.AddElement<DataSeries>()
-                           .AddAttribute(0, "overlap", a => a.Overlap, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100L), MaxInclusive = (100L) });
-                           })
-                           .AddAttribute(0, "gapWidth", a => a.GapWidth, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (500L) });
-                           })
-                           .AddAttribute(0, "gapDepth", a => a.GapDepth, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (500L) });
-                           })
-                           .AddAttribute(0, "doughnutHoleSize", a => a.DoughnutHoleSize, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (10L), MaxInclusive = (90L) });
-                           })
-                           .AddAttribute(0, "markerVisible", a => a.MarkerVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "hiloLines", a => a.HiloLines, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "dropLines", a => a.DropLines, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "seriesLines", a => a.SeriesLines, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "overlap", a => a.Overlap, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100L), MaxInclusive = (100L) });
+})
+.AddAttribute(0, "gapWidth", a => a.GapWidth, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (500L) });
+})
+.AddAttribute(0, "gapDepth", a => a.GapDepth, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (500L) });
+})
+.AddAttribute(0, "doughnutHoleSize", a => a.DoughnutHoleSize, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (10L), MaxInclusive = (90L) });
+})
+.AddAttribute(0, "markerVisible", a => a.MarkerVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "hiloLines", a => a.HiloLines, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "dropLines", a => a.DropLines, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "seriesLines", a => a.SeriesLines, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <inheritdoc/>
@@ -2825,8 +2870,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataLabels.</para>
     /// </summary>
-    [SchemaAttr(65, "dataLabels")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class DataLabels : OpenXmlLeafElement
     {
         /// <summary>
@@ -2899,31 +2942,33 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "dataLabels");
+            builder.Availability = (FileFormatVersions.Office2013);
             builder.AddElement<DataLabels>()
-                           .AddAttribute(0, "position", a => a.Position, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "value", a => a.Value, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "seriesName", a => a.SeriesName, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "categoryName", a => a.CategoryName, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "legendKey", a => a.LegendKey, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "percentage", a => a.Percentage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "position", a => a.Position, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "value", a => a.Value, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "seriesName", a => a.SeriesName, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "categoryName", a => a.CategoryName, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "legendKey", a => a.LegendKey, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "percentage", a => a.Percentage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <inheritdoc/>
@@ -2935,8 +2980,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataTable.</para>
     /// </summary>
-    [SchemaAttr(65, "dataTable")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class DataTable : OpenXmlLeafElement
     {
         /// <summary>
@@ -2989,23 +3032,25 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "dataTable");
+            builder.Availability = (FileFormatVersions.Office2013);
             builder.AddElement<DataTable>()
-                           .AddAttribute(0, "legendKeys", a => a.LegendKeys, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "horizontalBorder", a => a.HorizontalBorder, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "verticalBorder", a => a.VerticalBorder, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "outlineBorder", a => a.OutlineBorder, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "legendKeys", a => a.LegendKeys, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "horizontalBorder", a => a.HorizontalBorder, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "verticalBorder", a => a.VerticalBorder, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "outlineBorder", a => a.OutlineBorder, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <inheritdoc/>
@@ -3017,8 +3062,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:legend.</para>
     /// </summary>
-    [SchemaAttr(65, "legend")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class Legend : OpenXmlLeafElement
     {
         /// <summary>
@@ -3061,19 +3104,21 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "legend");
+            builder.Availability = (FileFormatVersions.Office2013);
             builder.AddElement<Legend>()
-                           .AddAttribute(0, "visible", a => a.Visible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "includeInLayout", a => a.IncludeInLayout, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "position", a => a.Position, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "visible", a => a.Visible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "includeInLayout", a => a.IncludeInLayout, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "position", a => a.Position, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <inheritdoc/>
@@ -3085,8 +3130,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:title.</para>
     /// </summary>
-    [SchemaAttr(65, "title")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class Title : OpenXmlLeafElement
     {
         /// <summary>
@@ -3109,11 +3152,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "title");
+            builder.Availability = (FileFormatVersions.Office2013);
             builder.AddElement<Title>()
-                           .AddAttribute(0, "position", a => a.Position, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "position", a => a.Position, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <inheritdoc/>
@@ -3125,8 +3170,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:trendline.</para>
     /// </summary>
-    [SchemaAttr(65, "trendline")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class Trendline : OpenXmlLeafElement
     {
         /// <summary>
@@ -3169,19 +3212,21 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "trendline");
+            builder.Availability = (FileFormatVersions.Office2013);
             builder.AddElement<Trendline>()
-                           .AddAttribute(0, "add", a => a.Add, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "equation", a => a.Equation, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "rsquared", a => a.RSquared, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "add", a => a.Add, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "equation", a => a.Equation, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "rsquared", a => a.RSquared, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <inheritdoc/>
@@ -3193,8 +3238,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:view3D.</para>
     /// </summary>
-    [SchemaAttr(65, "view3D")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class View3DProperties : OpenXmlLeafElement
     {
         /// <summary>
@@ -3267,31 +3310,33 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "view3D");
+            builder.Availability = (FileFormatVersions.Office2013);
             builder.AddElement<View3DProperties>()
-                           .AddAttribute(0, "rotX", a => a.RotX, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-90L), MaxInclusive = (90L) });
-                           })
-                           .AddAttribute(0, "rotY", a => a.RotY, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (360L) });
-                           })
-                           .AddAttribute(0, "rAngAx", a => a.RightAngleAxes, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "perspective", a => a.Perspective, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (240L) });
-                           })
-                           .AddAttribute(0, "heightPercent", a => a.HeightPercent, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (5L), MaxInclusive = (500L) });
-                           })
-                           .AddAttribute(0, "depthPercent", a => a.DepthPercent, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), MaxInclusive = (2000L) });
-                           });
+.AddAttribute(0, "rotX", a => a.RotX, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-90L), MaxInclusive = (90L) });
+})
+.AddAttribute(0, "rotY", a => a.RotY, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (360L) });
+})
+.AddAttribute(0, "rAngAx", a => a.RightAngleAxes, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "perspective", a => a.Perspective, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (240L) });
+})
+.AddAttribute(0, "heightPercent", a => a.HeightPercent, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (5L), MaxInclusive = (500L) });
+})
+.AddAttribute(0, "depthPercent", a => a.DepthPercent, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), MaxInclusive = (2000L) });
+});
         }
 
         /// <inheritdoc/>
@@ -3317,8 +3362,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "axisTitle")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class AxisTitle : StyleEntry
     {
         /// <summary>
@@ -3350,6 +3393,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public AxisTitle(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "axisTitle");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3390,8 +3440,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "categoryAxis")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class CategoryAxis : StyleEntry
     {
         /// <summary>
@@ -3423,6 +3471,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public CategoryAxis(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "categoryAxis");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3463,8 +3518,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "chartArea")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class ChartArea : StyleEntry
     {
         /// <summary>
@@ -3496,6 +3549,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ChartArea(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "chartArea");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3536,8 +3596,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "dataLabel")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class DataLabel : StyleEntry
     {
         /// <summary>
@@ -3569,6 +3627,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DataLabel(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "dataLabel");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3609,8 +3674,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "dataLabelCallout")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class DataLabelCallout : StyleEntry
     {
         /// <summary>
@@ -3642,6 +3705,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DataLabelCallout(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "dataLabelCallout");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3682,8 +3752,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "dataPoint")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class DataPoint : StyleEntry
     {
         /// <summary>
@@ -3715,6 +3783,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DataPoint(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "dataPoint");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3755,8 +3830,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "dataPoint3D")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class DataPoint3D : StyleEntry
     {
         /// <summary>
@@ -3788,6 +3861,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DataPoint3D(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "dataPoint3D");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3828,8 +3908,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "dataPointLine")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class DataPointLine : StyleEntry
     {
         /// <summary>
@@ -3861,6 +3939,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DataPointLine(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "dataPointLine");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3901,8 +3986,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "dataPointMarker")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class DataPointMarker : StyleEntry
     {
         /// <summary>
@@ -3934,6 +4017,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DataPointMarker(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "dataPointMarker");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3974,8 +4064,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "dataPointWireframe")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class DataPointWireframe : StyleEntry
     {
         /// <summary>
@@ -4007,6 +4095,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DataPointWireframe(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "dataPointWireframe");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4047,8 +4142,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "dataTable")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class DataTableStyle : StyleEntry
     {
         /// <summary>
@@ -4080,6 +4173,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DataTableStyle(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "dataTable");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4120,8 +4220,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "downBar")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class DownBar : StyleEntry
     {
         /// <summary>
@@ -4153,6 +4251,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DownBar(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "downBar");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4193,8 +4298,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "dropLine")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class DropLine : StyleEntry
     {
         /// <summary>
@@ -4226,6 +4329,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DropLine(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "dropLine");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4266,8 +4376,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "errorBar")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class ErrorBar : StyleEntry
     {
         /// <summary>
@@ -4299,6 +4407,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ErrorBar(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "errorBar");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4339,8 +4454,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "floor")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class Floor : StyleEntry
     {
         /// <summary>
@@ -4372,6 +4485,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Floor(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "floor");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4412,8 +4532,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "gridlineMajor")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class GridlineMajor : StyleEntry
     {
         /// <summary>
@@ -4445,6 +4563,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public GridlineMajor(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "gridlineMajor");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4485,8 +4610,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "gridlineMinor")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class GridlineMinor : StyleEntry
     {
         /// <summary>
@@ -4518,6 +4641,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public GridlineMinor(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "gridlineMinor");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4558,8 +4688,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "hiLoLine")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class HiLoLine : StyleEntry
     {
         /// <summary>
@@ -4591,6 +4719,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public HiLoLine(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "hiLoLine");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4631,8 +4766,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "leaderLine")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class LeaderLine : StyleEntry
     {
         /// <summary>
@@ -4664,6 +4797,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public LeaderLine(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "leaderLine");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4704,8 +4844,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "legend")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class LegendStyle : StyleEntry
     {
         /// <summary>
@@ -4737,6 +4875,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public LegendStyle(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "legend");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4777,8 +4922,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "plotArea")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class PlotArea : StyleEntry
     {
         /// <summary>
@@ -4810,6 +4953,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public PlotArea(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "plotArea");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4850,8 +5000,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "plotArea3D")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class PlotArea3D : StyleEntry
     {
         /// <summary>
@@ -4883,6 +5031,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public PlotArea3D(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "plotArea3D");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4923,8 +5078,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "seriesAxis")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class SeriesAxis : StyleEntry
     {
         /// <summary>
@@ -4956,6 +5109,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public SeriesAxis(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "seriesAxis");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4996,8 +5156,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "seriesLine")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class SeriesLine : StyleEntry
     {
         /// <summary>
@@ -5029,6 +5187,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public SeriesLine(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "seriesLine");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5069,8 +5234,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "title")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class TitleStyle : StyleEntry
     {
         /// <summary>
@@ -5102,6 +5265,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public TitleStyle(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "title");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5142,8 +5312,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "trendline")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class TrendlineStyle : StyleEntry
     {
         /// <summary>
@@ -5175,6 +5343,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public TrendlineStyle(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "trendline");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5215,8 +5390,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "trendlineLabel")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class TrendlineLabel : StyleEntry
     {
         /// <summary>
@@ -5248,6 +5421,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public TrendlineLabel(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "trendlineLabel");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5288,8 +5468,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "upBar")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class UpBar : StyleEntry
     {
         /// <summary>
@@ -5321,6 +5499,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public UpBar(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "upBar");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5361,8 +5546,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "valueAxis")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class ValueAxis : StyleEntry
     {
         /// <summary>
@@ -5394,6 +5577,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ValueAxis(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "valueAxis");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5434,8 +5624,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(65, "wall")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class Wall : StyleEntry
     {
         /// <summary>
@@ -5467,6 +5655,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Wall(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "wall");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5689,8 +5884,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataPointMarkerLayout.</para>
     /// </summary>
-    [SchemaAttr(65, "dataPointMarkerLayout")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class MarkerLayoutProperties : OpenXmlLeafElement
     {
         /// <summary>
@@ -5723,15 +5916,17 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(65, "dataPointMarkerLayout");
+            builder.Availability = (FileFormatVersions.Office2013);
             builder.AddElement<MarkerLayoutProperties>()
-                           .AddAttribute(0, "symbol", a => a.Symbol, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "size", a => a.Size, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L), MaxInclusive = (72L) });
-                           });
+.AddAttribute(0, "symbol", a => a.Symbol, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "size", a => a.Size, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L), MaxInclusive = (72L) });
+});
         }
 
         /// <inheritdoc/>

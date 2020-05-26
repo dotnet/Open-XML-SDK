@@ -25,8 +25,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
-    [SchemaAttr(77, "timeslicer")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class TimeSlicer : OpenXmlCompositeElement
     {
         /// <summary>
@@ -73,11 +71,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(77, "timeslicer");
+            builder.Availability = (FileFormatVersions.Office2013);
             builder.AddElement<TimeSlicer>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -116,8 +116,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
-    [SchemaAttr(77, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -149,6 +147,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public OfficeArtExtensionList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(77, "extLst");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)

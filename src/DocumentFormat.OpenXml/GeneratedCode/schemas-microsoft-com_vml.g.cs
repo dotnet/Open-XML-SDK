@@ -23,8 +23,6 @@ namespace DocumentFormat.OpenXml.Vml
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:path.</para>
     /// </summary>
-    [SchemaAttr(26, "path")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Path : OpenXmlLeafElement
     {
         /// <summary>
@@ -199,22 +197,24 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "path");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Path>()
-                           .AddAttribute(0, "id", a => a.Id)
-                           .AddAttribute(0, "v", a => a.Value)
-                           .AddAttribute(0, "limo", a => a.Limo)
-                           .AddAttribute(0, "textboxrect", a => a.TextboxRectangle)
-                           .AddAttribute(0, "fillok", a => a.AllowFill)
-                           .AddAttribute(0, "strokeok", a => a.AllowStroke)
-                           .AddAttribute(0, "shadowok", a => a.AllowShading)
-                           .AddAttribute(0, "arrowok", a => a.ShowArrowhead)
-                           .AddAttribute(0, "gradientshapeok", a => a.AllowGradientShape)
-                           .AddAttribute(0, "textpathok", a => a.AllowTextPath)
-                           .AddAttribute(0, "insetpenok", a => a.AllowInsetPen)
-                           .AddAttribute(27, "connecttype", a => a.ConnectionPointType)
-                           .AddAttribute(27, "connectlocs", a => a.ConnectionPoints)
-                           .AddAttribute(27, "connectangles", a => a.ConnectAngles)
-                           .AddAttribute(27, "extrusionok", a => a.AllowExtrusion);
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "v", a => a.Value)
+.AddAttribute(0, "limo", a => a.Limo)
+.AddAttribute(0, "textboxrect", a => a.TextboxRectangle)
+.AddAttribute(0, "fillok", a => a.AllowFill)
+.AddAttribute(0, "strokeok", a => a.AllowStroke)
+.AddAttribute(0, "shadowok", a => a.AllowShading)
+.AddAttribute(0, "arrowok", a => a.ShowArrowhead)
+.AddAttribute(0, "gradientshapeok", a => a.AllowGradientShape)
+.AddAttribute(0, "textpathok", a => a.AllowTextPath)
+.AddAttribute(0, "insetpenok", a => a.AllowInsetPen)
+.AddAttribute(27, "connecttype", a => a.ConnectionPointType)
+.AddAttribute(27, "connectlocs", a => a.ConnectionPoints)
+.AddAttribute(27, "connectangles", a => a.ConnectAngles)
+.AddAttribute(27, "extrusionok", a => a.AllowExtrusion);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -239,8 +239,6 @@ namespace DocumentFormat.OpenXml.Vml
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Formula))]
-    [SchemaAttr(26, "formulas")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Formulas : OpenXmlCompositeElement
     {
         /// <summary>
@@ -274,6 +272,13 @@ namespace DocumentFormat.OpenXml.Vml
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "formulas");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formula), 0, 128)
@@ -297,8 +302,6 @@ namespace DocumentFormat.OpenXml.Vml
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ShapeHandle))]
-    [SchemaAttr(26, "handles")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShapeHandles : OpenXmlCompositeElement
     {
         /// <summary>
@@ -332,6 +335,13 @@ namespace DocumentFormat.OpenXml.Vml
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "handles");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandle), 0, 4)
@@ -355,8 +365,6 @@ namespace DocumentFormat.OpenXml.Vml
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties))]
-    [SchemaAttr(26, "fill")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Fill : OpenXmlCompositeElement
     {
         /// <summary>
@@ -671,33 +679,35 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "fill");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Fill>()
-                           .AddAttribute(0, "id", a => a.Id)
-                           .AddAttribute(0, "type", a => a.Type)
-                           .AddAttribute(0, "on", a => a.On)
-                           .AddAttribute(0, "color", a => a.Color)
-                           .AddAttribute(0, "opacity", a => a.Opacity)
-                           .AddAttribute(0, "color2", a => a.Color2)
-                           .AddAttribute(0, "src", a => a.Source)
-                           .AddAttribute(27, "href", a => a.Href)
-                           .AddAttribute(27, "althref", a => a.AlternateImageReference)
-                           .AddAttribute(0, "size", a => a.Size)
-                           .AddAttribute(0, "origin", a => a.Origin)
-                           .AddAttribute(0, "position", a => a.Position)
-                           .AddAttribute(0, "aspect", a => a.Aspect)
-                           .AddAttribute(0, "colors", a => a.Colors)
-                           .AddAttribute(0, "angle", a => a.Angle)
-                           .AddAttribute(0, "alignshape", a => a.AlignShape)
-                           .AddAttribute(0, "focus", a => a.Focus)
-                           .AddAttribute(0, "focussize", a => a.FocusSize)
-                           .AddAttribute(0, "focusposition", a => a.FocusPosition)
-                           .AddAttribute(0, "method", a => a.Method)
-                           .AddAttribute(27, "detectmouseclick", a => a.DetectMouseClick)
-                           .AddAttribute(27, "title", a => a.Title)
-                           .AddAttribute(27, "opacity2", a => a.Opacity2)
-                           .AddAttribute(0, "recolor", a => a.Recolor)
-                           .AddAttribute(0, "rotate", a => a.Rotate)
-                           .AddAttribute(19, "id", a => a.RelationshipId);
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "type", a => a.Type)
+.AddAttribute(0, "on", a => a.On)
+.AddAttribute(0, "color", a => a.Color)
+.AddAttribute(0, "opacity", a => a.Opacity)
+.AddAttribute(0, "color2", a => a.Color2)
+.AddAttribute(0, "src", a => a.Source)
+.AddAttribute(27, "href", a => a.Href)
+.AddAttribute(27, "althref", a => a.AlternateImageReference)
+.AddAttribute(0, "size", a => a.Size)
+.AddAttribute(0, "origin", a => a.Origin)
+.AddAttribute(0, "position", a => a.Position)
+.AddAttribute(0, "aspect", a => a.Aspect)
+.AddAttribute(0, "colors", a => a.Colors)
+.AddAttribute(0, "angle", a => a.Angle)
+.AddAttribute(0, "alignshape", a => a.AlignShape)
+.AddAttribute(0, "focus", a => a.Focus)
+.AddAttribute(0, "focussize", a => a.FocusSize)
+.AddAttribute(0, "focusposition", a => a.FocusPosition)
+.AddAttribute(0, "method", a => a.Method)
+.AddAttribute(27, "detectmouseclick", a => a.DetectMouseClick)
+.AddAttribute(27, "title", a => a.Title)
+.AddAttribute(27, "opacity2", a => a.Opacity2)
+.AddAttribute(0, "recolor", a => a.Recolor)
+.AddAttribute(0, "rotate", a => a.Rotate)
+.AddAttribute(19, "id", a => a.RelationshipId);
         }
 
         /// <summary>
@@ -756,8 +766,6 @@ namespace DocumentFormat.OpenXml.Vml
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.RightStroke))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.BottomStroke))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ColumnStroke))]
-    [SchemaAttr(26, "stroke")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Stroke : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1089,35 +1097,37 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "stroke");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Stroke>()
-                           .AddAttribute(0, "id", a => a.Id)
-                           .AddAttribute(0, "on", a => a.On)
-                           .AddAttribute(0, "weight", a => a.Weight)
-                           .AddAttribute(0, "color", a => a.Color)
-                           .AddAttribute(0, "opacity", a => a.Opacity)
-                           .AddAttribute(0, "linestyle", a => a.LineStyle)
-                           .AddAttribute(0, "miterlimit", a => a.Miterlimit)
-                           .AddAttribute(0, "joinstyle", a => a.JoinStyle)
-                           .AddAttribute(0, "endcap", a => a.EndCap)
-                           .AddAttribute(0, "dashstyle", a => a.DashStyle)
-                           .AddAttribute(0, "filltype", a => a.FillType)
-                           .AddAttribute(0, "src", a => a.Source)
-                           .AddAttribute(0, "imageaspect", a => a.ImageAspect)
-                           .AddAttribute(0, "imagesize", a => a.ImageSize)
-                           .AddAttribute(0, "imagealignshape", a => a.ImageAlignShape)
-                           .AddAttribute(0, "color2", a => a.Color2)
-                           .AddAttribute(0, "startarrow", a => a.StartArrow)
-                           .AddAttribute(0, "startarrowwidth", a => a.StartArrowWidth)
-                           .AddAttribute(0, "startarrowlength", a => a.StartArrowLength)
-                           .AddAttribute(0, "endarrow", a => a.EndArrow)
-                           .AddAttribute(0, "endarrowwidth", a => a.EndArrowWidth)
-                           .AddAttribute(0, "endarrowlength", a => a.EndArrowLength)
-                           .AddAttribute(27, "href", a => a.Href)
-                           .AddAttribute(27, "althref", a => a.AlternateImageReference)
-                           .AddAttribute(27, "title", a => a.Title)
-                           .AddAttribute(27, "forcedash", a => a.ForceDash)
-                           .AddAttribute(19, "id", a => a.RelationshipId)
-                           .AddAttribute(0, "insetpen", a => a.Insetpen);
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "on", a => a.On)
+.AddAttribute(0, "weight", a => a.Weight)
+.AddAttribute(0, "color", a => a.Color)
+.AddAttribute(0, "opacity", a => a.Opacity)
+.AddAttribute(0, "linestyle", a => a.LineStyle)
+.AddAttribute(0, "miterlimit", a => a.Miterlimit)
+.AddAttribute(0, "joinstyle", a => a.JoinStyle)
+.AddAttribute(0, "endcap", a => a.EndCap)
+.AddAttribute(0, "dashstyle", a => a.DashStyle)
+.AddAttribute(0, "filltype", a => a.FillType)
+.AddAttribute(0, "src", a => a.Source)
+.AddAttribute(0, "imageaspect", a => a.ImageAspect)
+.AddAttribute(0, "imagesize", a => a.ImageSize)
+.AddAttribute(0, "imagealignshape", a => a.ImageAlignShape)
+.AddAttribute(0, "color2", a => a.Color2)
+.AddAttribute(0, "startarrow", a => a.StartArrow)
+.AddAttribute(0, "startarrowwidth", a => a.StartArrowWidth)
+.AddAttribute(0, "startarrowlength", a => a.StartArrowLength)
+.AddAttribute(0, "endarrow", a => a.EndArrow)
+.AddAttribute(0, "endarrowwidth", a => a.EndArrowWidth)
+.AddAttribute(0, "endarrowlength", a => a.EndArrowLength)
+.AddAttribute(27, "href", a => a.Href)
+.AddAttribute(27, "althref", a => a.AlternateImageReference)
+.AddAttribute(27, "title", a => a.Title)
+.AddAttribute(27, "forcedash", a => a.ForceDash)
+.AddAttribute(19, "id", a => a.RelationshipId)
+.AddAttribute(0, "insetpen", a => a.Insetpen);
         }
 
         /// <summary>
@@ -1215,8 +1225,6 @@ namespace DocumentFormat.OpenXml.Vml
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:shadow.</para>
     /// </summary>
-    [SchemaAttr(26, "shadow")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Shadow : OpenXmlLeafElement
     {
         /// <summary>
@@ -1339,18 +1347,20 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "shadow");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Shadow>()
-                           .AddAttribute(0, "id", a => a.Id)
-                           .AddAttribute(0, "on", a => a.On)
-                           .AddAttribute(0, "type", a => a.Type)
-                           .AddAttribute(0, "obscured", a => a.Obscured)
-                           .AddAttribute(0, "color", a => a.Color)
-                           .AddAttribute(0, "opacity", a => a.Opacity)
-                           .AddAttribute(0, "offset", a => a.Offset)
-                           .AddAttribute(0, "color2", a => a.Color2)
-                           .AddAttribute(0, "offset2", a => a.Offset2)
-                           .AddAttribute(0, "origin", a => a.Origin)
-                           .AddAttribute(0, "matrix", a => a.Matrix);
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "on", a => a.On)
+.AddAttribute(0, "type", a => a.Type)
+.AddAttribute(0, "obscured", a => a.Obscured)
+.AddAttribute(0, "color", a => a.Color)
+.AddAttribute(0, "opacity", a => a.Opacity)
+.AddAttribute(0, "offset", a => a.Offset)
+.AddAttribute(0, "color2", a => a.Color2)
+.AddAttribute(0, "offset2", a => a.Offset2)
+.AddAttribute(0, "origin", a => a.Origin)
+.AddAttribute(0, "matrix", a => a.Matrix);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -1375,8 +1385,6 @@ namespace DocumentFormat.OpenXml.Vml
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.TextBoxContent))]
-    [SchemaAttr(26, "textbox")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TextBox : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1456,11 +1464,13 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "textbox");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<TextBox>()
-                           .AddAttribute(0, "id", a => a.Id)
-                           .AddAttribute(0, "style", a => a.Style)
-                           .AddAttribute(0, "inset", a => a.Inset)
-                           .AddAttribute(27, "singleclick", a => a.SingleClick);
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "style", a => a.Style)
+.AddAttribute(0, "inset", a => a.Inset)
+.AddAttribute(27, "singleclick", a => a.SingleClick);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -1486,8 +1496,6 @@ namespace DocumentFormat.OpenXml.Vml
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:textpath.</para>
     /// </summary>
-    [SchemaAttr(26, "textpath")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TextPath : OpenXmlLeafElement
     {
         /// <summary>
@@ -1580,15 +1588,17 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "textpath");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<TextPath>()
-                           .AddAttribute(0, "id", a => a.Id)
-                           .AddAttribute(0, "style", a => a.Style)
-                           .AddAttribute(0, "on", a => a.On)
-                           .AddAttribute(0, "fitshape", a => a.FitShape)
-                           .AddAttribute(0, "fitpath", a => a.FitPath)
-                           .AddAttribute(0, "trim", a => a.Trim)
-                           .AddAttribute(0, "xscale", a => a.XScale)
-                           .AddAttribute(0, "string", a => a.String);
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "style", a => a.Style)
+.AddAttribute(0, "on", a => a.On)
+.AddAttribute(0, "fitshape", a => a.FitShape)
+.AddAttribute(0, "fitpath", a => a.FitPath)
+.AddAttribute(0, "trim", a => a.Trim)
+.AddAttribute(0, "xscale", a => a.XScale)
+.AddAttribute(0, "string", a => a.String);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -1606,8 +1616,6 @@ namespace DocumentFormat.OpenXml.Vml
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:imagedata.</para>
     /// </summary>
-    [SchemaAttr(26, "imagedata")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ImageData : OpenXmlLeafElement
     {
         /// <summary>
@@ -1828,26 +1836,28 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "imagedata");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ImageData>()
-                           .AddAttribute(0, "id", a => a.Id)
-                           .AddAttribute(0, "chromakey", a => a.ChromAKey)
-                           .AddAttribute(0, "cropleft", a => a.CropLeft)
-                           .AddAttribute(0, "croptop", a => a.CropTop)
-                           .AddAttribute(0, "cropright", a => a.CropRight)
-                           .AddAttribute(0, "cropbottom", a => a.CropBottom)
-                           .AddAttribute(0, "gain", a => a.Gain)
-                           .AddAttribute(0, "blacklevel", a => a.BlackLevel)
-                           .AddAttribute(0, "gamma", a => a.Gamma)
-                           .AddAttribute(0, "grayscale", a => a.Grayscale)
-                           .AddAttribute(0, "bilevel", a => a.BiLevel)
-                           .AddAttribute(0, "embosscolor", a => a.EmbossColor)
-                           .AddAttribute(0, "recolortarget", a => a.RecolorTarget)
-                           .AddAttribute(27, "title", a => a.Title)
-                           .AddAttribute(27, "detectmouseclick", a => a.DetectMouseClick)
-                           .AddAttribute(27, "relid", a => a.RelId)
-                           .AddAttribute(19, "id", a => a.RelationshipId)
-                           .AddAttribute(19, "pict", a => a.Picture)
-                           .AddAttribute(19, "href", a => a.RelHref);
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "chromakey", a => a.ChromAKey)
+.AddAttribute(0, "cropleft", a => a.CropLeft)
+.AddAttribute(0, "croptop", a => a.CropTop)
+.AddAttribute(0, "cropright", a => a.CropRight)
+.AddAttribute(0, "cropbottom", a => a.CropBottom)
+.AddAttribute(0, "gain", a => a.Gain)
+.AddAttribute(0, "blacklevel", a => a.BlackLevel)
+.AddAttribute(0, "gamma", a => a.Gamma)
+.AddAttribute(0, "grayscale", a => a.Grayscale)
+.AddAttribute(0, "bilevel", a => a.BiLevel)
+.AddAttribute(0, "embosscolor", a => a.EmbossColor)
+.AddAttribute(0, "recolortarget", a => a.RecolorTarget)
+.AddAttribute(27, "title", a => a.Title)
+.AddAttribute(27, "detectmouseclick", a => a.DetectMouseClick)
+.AddAttribute(27, "relid", a => a.RelId)
+.AddAttribute(19, "id", a => a.RelationshipId)
+.AddAttribute(19, "pict", a => a.Picture)
+.AddAttribute(19, "href", a => a.RelHref);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -1927,8 +1937,6 @@ namespace DocumentFormat.OpenXml.Vml
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Ink))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.InkAnnotationFlag))]
-    [SchemaAttr(26, "shape")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Shape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2630,66 +2638,68 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "shape");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Shape>()
-                           .AddAttribute(0, "id", a => a.Id)
-                           .AddAttribute(0, "style", a => a.Style)
-                           .AddAttribute(0, "href", a => a.Href)
-                           .AddAttribute(0, "target", a => a.Target)
-                           .AddAttribute(0, "class", a => a.Class)
-                           .AddAttribute(0, "title", a => a.Title)
-                           .AddAttribute(0, "alt", a => a.Alternate)
-                           .AddAttribute(0, "coordsize", a => a.CoordinateSize)
-                           .AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
-                           .AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
-                           .AddAttribute(0, "print", a => a.Print)
-                           .AddAttribute(27, "spid", a => a.OptionalString)
-                           .AddAttribute(27, "oned", a => a.Oned)
-                           .AddAttribute(27, "regroupid", a => a.RegroupId)
-                           .AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
-                           .AddAttribute(27, "button", a => a.Button)
-                           .AddAttribute(27, "userhidden", a => a.UserHidden)
-                           .AddAttribute(27, "bullet", a => a.Bullet)
-                           .AddAttribute(27, "hr", a => a.Horizontal)
-                           .AddAttribute(27, "hrstd", a => a.HorizontalStandard)
-                           .AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
-                           .AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
-                           .AddAttribute(27, "hralign", a => a.HorizontalAlignment)
-                           .AddAttribute(27, "allowincell", a => a.AllowInCell)
-                           .AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
-                           .AddAttribute(27, "userdrawn", a => a.UserDrawn)
-                           .AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
-                           .AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
-                           .AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
-                           .AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
-                           .AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
-                           .AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
-                           .AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
-                           .AddAttribute(27, "insetmode", a => a.InsetMode)
-                           .AddAttribute(0, "filled", a => a.Filled)
-                           .AddAttribute(0, "fillcolor", a => a.FillColor)
-                           .AddAttribute(0, "stroked", a => a.Stroked)
-                           .AddAttribute(0, "strokecolor", a => a.StrokeColor)
-                           .AddAttribute(0, "strokeweight", a => a.StrokeWeight)
-                           .AddAttribute(0, "insetpen", a => a.InsetPen)
-                           .AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
-                           })
-                           .AddAttribute(27, "connectortype", a => a.ConnectorType)
-                           .AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
-                           .AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
-                           .AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
-                           .AddAttribute(27, "forcedash", a => a.ForceDash)
-                           .AddAttribute(27, "oleicon", a => a.OleIcon)
-                           .AddAttribute(27, "ole", a => a.Ole)
-                           .AddAttribute(27, "preferrelative", a => a.PreferRelative)
-                           .AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
-                           .AddAttribute(27, "clip", a => a.Clip)
-                           .AddAttribute(0, "type", a => a.Type)
-                           .AddAttribute(0, "adj", a => a.Adjustment)
-                           .AddAttribute(0, "path", a => a.EdgePath)
-                           .AddAttribute(27, "gfxdata", a => a.EncodedPackage)
-                           .AddAttribute(0, "equationxml", a => a.EquationXml);
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "style", a => a.Style)
+.AddAttribute(0, "href", a => a.Href)
+.AddAttribute(0, "target", a => a.Target)
+.AddAttribute(0, "class", a => a.Class)
+.AddAttribute(0, "title", a => a.Title)
+.AddAttribute(0, "alt", a => a.Alternate)
+.AddAttribute(0, "coordsize", a => a.CoordinateSize)
+.AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
+.AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
+.AddAttribute(0, "print", a => a.Print)
+.AddAttribute(27, "spid", a => a.OptionalString)
+.AddAttribute(27, "oned", a => a.Oned)
+.AddAttribute(27, "regroupid", a => a.RegroupId)
+.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute(27, "button", a => a.Button)
+.AddAttribute(27, "userhidden", a => a.UserHidden)
+.AddAttribute(27, "bullet", a => a.Bullet)
+.AddAttribute(27, "hr", a => a.Horizontal)
+.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
+.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
+.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
+.AddAttribute(27, "allowincell", a => a.AllowInCell)
+.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
+.AddAttribute(27, "userdrawn", a => a.UserDrawn)
+.AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
+.AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
+.AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
+.AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
+.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
+.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute(27, "insetmode", a => a.InsetMode)
+.AddAttribute(0, "filled", a => a.Filled)
+.AddAttribute(0, "fillcolor", a => a.FillColor)
+.AddAttribute(0, "stroked", a => a.Stroked)
+.AddAttribute(0, "strokecolor", a => a.StrokeColor)
+.AddAttribute(0, "strokeweight", a => a.StrokeWeight)
+.AddAttribute(0, "insetpen", a => a.InsetPen)
+.AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
+})
+.AddAttribute(27, "connectortype", a => a.ConnectorType)
+.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
+.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute(27, "forcedash", a => a.ForceDash)
+.AddAttribute(27, "oleicon", a => a.OleIcon)
+.AddAttribute(27, "ole", a => a.Ole)
+.AddAttribute(27, "preferrelative", a => a.PreferRelative)
+.AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
+.AddAttribute(27, "clip", a => a.Clip)
+.AddAttribute(0, "type", a => a.Type)
+.AddAttribute(0, "adj", a => a.Adjustment)
+.AddAttribute(0, "path", a => a.EdgePath)
+.AddAttribute(27, "gfxdata", a => a.EncodedPackage)
+.AddAttribute(0, "equationxml", a => a.EquationXml);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -2799,8 +2809,6 @@ namespace DocumentFormat.OpenXml.Vml
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Complex))]
-    [SchemaAttr(26, "shapetype")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Shapetype : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3482,64 +3490,66 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "shapetype");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Shapetype>()
-                           .AddAttribute(0, "id", a => a.Id)
-                           .AddAttribute(0, "style", a => a.Style)
-                           .AddAttribute(0, "href", a => a.Href)
-                           .AddAttribute(0, "target", a => a.Target)
-                           .AddAttribute(0, "class", a => a.Class)
-                           .AddAttribute(0, "title", a => a.Title)
-                           .AddAttribute(0, "alt", a => a.Alternate)
-                           .AddAttribute(0, "coordsize", a => a.CoordinateSize)
-                           .AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
-                           .AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
-                           .AddAttribute(0, "print", a => a.Print)
-                           .AddAttribute(27, "spid", a => a.OptionalString)
-                           .AddAttribute(27, "oned", a => a.Oned)
-                           .AddAttribute(27, "regroupid", a => a.RegroupId)
-                           .AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
-                           .AddAttribute(27, "button", a => a.Button)
-                           .AddAttribute(27, "userhidden", a => a.UserHidden)
-                           .AddAttribute(27, "bullet", a => a.Bullet)
-                           .AddAttribute(27, "hr", a => a.Horizontal)
-                           .AddAttribute(27, "hrstd", a => a.HorizontalStandard)
-                           .AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
-                           .AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
-                           .AddAttribute(27, "hralign", a => a.HorizontalAlignment)
-                           .AddAttribute(27, "allowincell", a => a.AllowInCell)
-                           .AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
-                           .AddAttribute(27, "userdrawn", a => a.UserDrawn)
-                           .AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
-                           .AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
-                           .AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
-                           .AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
-                           .AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
-                           .AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
-                           .AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
-                           .AddAttribute(27, "insetmode", a => a.InsetMode)
-                           .AddAttribute(0, "filled", a => a.Filled)
-                           .AddAttribute(0, "fillcolor", a => a.FillColor)
-                           .AddAttribute(0, "stroked", a => a.Stroked)
-                           .AddAttribute(0, "strokecolor", a => a.StrokeColor)
-                           .AddAttribute(0, "strokeweight", a => a.StrokeWeight)
-                           .AddAttribute(0, "insetpen", a => a.InsetPen)
-                           .AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
-                           })
-                           .AddAttribute(27, "connectortype", a => a.ConnectorType)
-                           .AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
-                           .AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
-                           .AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
-                           .AddAttribute(27, "forcedash", a => a.ForceDash)
-                           .AddAttribute(27, "oleicon", a => a.OleIcon)
-                           .AddAttribute(27, "ole", a => a.Ole)
-                           .AddAttribute(27, "preferrelative", a => a.PreferRelative)
-                           .AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
-                           .AddAttribute(27, "clip", a => a.Clip)
-                           .AddAttribute(0, "adj", a => a.Adjustment)
-                           .AddAttribute(0, "path", a => a.EdgePath)
-                           .AddAttribute(27, "master", a => a.Master);
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "style", a => a.Style)
+.AddAttribute(0, "href", a => a.Href)
+.AddAttribute(0, "target", a => a.Target)
+.AddAttribute(0, "class", a => a.Class)
+.AddAttribute(0, "title", a => a.Title)
+.AddAttribute(0, "alt", a => a.Alternate)
+.AddAttribute(0, "coordsize", a => a.CoordinateSize)
+.AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
+.AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
+.AddAttribute(0, "print", a => a.Print)
+.AddAttribute(27, "spid", a => a.OptionalString)
+.AddAttribute(27, "oned", a => a.Oned)
+.AddAttribute(27, "regroupid", a => a.RegroupId)
+.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute(27, "button", a => a.Button)
+.AddAttribute(27, "userhidden", a => a.UserHidden)
+.AddAttribute(27, "bullet", a => a.Bullet)
+.AddAttribute(27, "hr", a => a.Horizontal)
+.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
+.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
+.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
+.AddAttribute(27, "allowincell", a => a.AllowInCell)
+.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
+.AddAttribute(27, "userdrawn", a => a.UserDrawn)
+.AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
+.AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
+.AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
+.AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
+.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
+.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute(27, "insetmode", a => a.InsetMode)
+.AddAttribute(0, "filled", a => a.Filled)
+.AddAttribute(0, "fillcolor", a => a.FillColor)
+.AddAttribute(0, "stroked", a => a.Stroked)
+.AddAttribute(0, "strokecolor", a => a.StrokeColor)
+.AddAttribute(0, "strokeweight", a => a.StrokeWeight)
+.AddAttribute(0, "insetpen", a => a.InsetPen)
+.AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
+})
+.AddAttribute(27, "connectortype", a => a.ConnectorType)
+.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
+.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute(27, "forcedash", a => a.ForceDash)
+.AddAttribute(27, "oleicon", a => a.OleIcon)
+.AddAttribute(27, "ole", a => a.Ole)
+.AddAttribute(27, "preferrelative", a => a.PreferRelative)
+.AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
+.AddAttribute(27, "clip", a => a.Clip)
+.AddAttribute(0, "adj", a => a.Adjustment)
+.AddAttribute(0, "path", a => a.EdgePath)
+.AddAttribute(27, "master", a => a.Master);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -3634,8 +3644,6 @@ namespace DocumentFormat.OpenXml.Vml
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
-    [SchemaAttr(26, "group")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Group : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4078,41 +4086,43 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "group");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Group>()
-                           .AddAttribute(0, "id", a => a.Id)
-                           .AddAttribute(0, "style", a => a.Style)
-                           .AddAttribute(0, "href", a => a.Href)
-                           .AddAttribute(0, "target", a => a.Target)
-                           .AddAttribute(0, "class", a => a.Class)
-                           .AddAttribute(0, "title", a => a.Title)
-                           .AddAttribute(0, "alt", a => a.Alternate)
-                           .AddAttribute(0, "coordsize", a => a.CoordinateSize)
-                           .AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
-                           .AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
-                           .AddAttribute(0, "print", a => a.Print)
-                           .AddAttribute(27, "spid", a => a.OptionalString)
-                           .AddAttribute(27, "oned", a => a.Oned)
-                           .AddAttribute(27, "regroupid", a => a.RegroupId)
-                           .AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
-                           .AddAttribute(27, "button", a => a.Button)
-                           .AddAttribute(27, "userhidden", a => a.UserHidden)
-                           .AddAttribute(27, "bullet", a => a.Bullet)
-                           .AddAttribute(27, "hr", a => a.Horizontal)
-                           .AddAttribute(27, "hrstd", a => a.HorizontalStandard)
-                           .AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
-                           .AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
-                           .AddAttribute(27, "hralign", a => a.HorizontalAlignment)
-                           .AddAttribute(27, "allowincell", a => a.AllowInCell)
-                           .AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
-                           .AddAttribute(27, "userdrawn", a => a.UserDrawn)
-                           .AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
-                           .AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
-                           .AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
-                           .AddAttribute(27, "insetmode", a => a.InsetMode)
-                           .AddAttribute(27, "gfxdata", a => a.Gfxdata)
-                           .AddAttribute(0, "editas", a => a.EditAs)
-                           .AddAttribute(27, "tableproperties", a => a.TableProperties)
-                           .AddAttribute(27, "tablelimits", a => a.TableLimits);
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "style", a => a.Style)
+.AddAttribute(0, "href", a => a.Href)
+.AddAttribute(0, "target", a => a.Target)
+.AddAttribute(0, "class", a => a.Class)
+.AddAttribute(0, "title", a => a.Title)
+.AddAttribute(0, "alt", a => a.Alternate)
+.AddAttribute(0, "coordsize", a => a.CoordinateSize)
+.AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
+.AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
+.AddAttribute(0, "print", a => a.Print)
+.AddAttribute(27, "spid", a => a.OptionalString)
+.AddAttribute(27, "oned", a => a.Oned)
+.AddAttribute(27, "regroupid", a => a.RegroupId)
+.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute(27, "button", a => a.Button)
+.AddAttribute(27, "userhidden", a => a.UserHidden)
+.AddAttribute(27, "bullet", a => a.Bullet)
+.AddAttribute(27, "hr", a => a.Horizontal)
+.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
+.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
+.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
+.AddAttribute(27, "allowincell", a => a.AllowInCell)
+.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
+.AddAttribute(27, "userdrawn", a => a.UserDrawn)
+.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
+.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute(27, "insetmode", a => a.InsetMode)
+.AddAttribute(27, "gfxdata", a => a.Gfxdata)
+.AddAttribute(0, "editas", a => a.EditAs)
+.AddAttribute(27, "tableproperties", a => a.TableProperties)
+.AddAttribute(27, "tablelimits", a => a.TableLimits);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -4163,8 +4173,6 @@ namespace DocumentFormat.OpenXml.Vml
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Fill))]
-    [SchemaAttr(26, "background")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Background : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4283,17 +4291,19 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "background");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Background>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MaxLength = (255L) });
-                           })
-                           .AddAttribute(0, "fill", a => a.Filled)
-                           .AddAttribute(0, "fillcolor", a => a.Fillcolor)
-                           .AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
-                           .AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
-                           .AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
-                           .AddAttribute(27, "targetscreensize", a => a.TargetScreenSize);
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MaxLength = (255L) });
+})
+.AddAttribute(0, "fill", a => a.Filled)
+.AddAttribute(0, "fillcolor", a => a.Fillcolor)
+.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
+.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute(27, "targetscreensize", a => a.TargetScreenSize);
         }
 
         /// <summary>
@@ -4382,8 +4392,6 @@ namespace DocumentFormat.OpenXml.Vml
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
-    [SchemaAttr(26, "arc")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Arc : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5055,66 +5063,68 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "arc");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Arc>()
-                           .AddAttribute(27, "spid", a => a.OptionalString)
-                           .AddAttribute(27, "oned", a => a.Oned)
-                           .AddAttribute(27, "regroupid", a => a.RegroupId)
-                           .AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
-                           .AddAttribute(27, "button", a => a.Button)
-                           .AddAttribute(27, "userhidden", a => a.UserHidden)
-                           .AddAttribute(27, "bullet", a => a.Bullet)
-                           .AddAttribute(27, "hr", a => a.Horizontal)
-                           .AddAttribute(27, "hrstd", a => a.HorizontalStandard)
-                           .AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
-                           .AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
-                           .AddAttribute(27, "hralign", a => a.HorizontalAlignment)
-                           .AddAttribute(27, "allowincell", a => a.AllowInCell)
-                           .AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
-                           .AddAttribute(27, "userdrawn", a => a.UserDrawn)
-                           .AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
-                           .AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
-                           .AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
-                           .AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
-                           .AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
-                           .AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
-                           .AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
-                           .AddAttribute(27, "insetmode", a => a.InsetMode)
-                           .AddAttribute(0, "filled", a => a.Filled)
-                           .AddAttribute(0, "fillcolor", a => a.FillColor)
-                           .AddAttribute(0, "stroked", a => a.Stroked)
-                           .AddAttribute(0, "strokecolor", a => a.StrokeColor)
-                           .AddAttribute(0, "strokeweight", a => a.StrokeWeight)
-                           .AddAttribute(0, "insetpen", a => a.InsetPen)
-                           .AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
-                           })
-                           .AddAttribute(27, "connectortype", a => a.ConnectorType)
-                           .AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
-                           .AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
-                           .AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
-                           .AddAttribute(27, "forcedash", a => a.ForceDash)
-                           .AddAttribute(27, "oleicon", a => a.OleIcon)
-                           .AddAttribute(27, "ole", a => a.Ole)
-                           .AddAttribute(27, "preferrelative", a => a.PreferRelative)
-                           .AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
-                           .AddAttribute(27, "clip", a => a.Clip)
-                           .AddAttribute(27, "gfxdata", a => a.Gfxdata)
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MaxLength = (255L) });
-                           })
-                           .AddAttribute(0, "style", a => a.Style)
-                           .AddAttribute(0, "href", a => a.Href)
-                           .AddAttribute(0, "target", a => a.Target)
-                           .AddAttribute(0, "title", a => a.Title)
-                           .AddAttribute(0, "alt", a => a.Alternate)
-                           .AddAttribute(0, "coordsize", a => a.CoordinateSize)
-                           .AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
-                           .AddAttribute(0, "wrapcoords", a => a.Wrapcoords)
-                           .AddAttribute(0, "print", a => a.Print)
-                           .AddAttribute(0, "startangle", a => a.StartAngle)
-                           .AddAttribute(0, "endangle", a => a.EndAngle);
+.AddAttribute(27, "spid", a => a.OptionalString)
+.AddAttribute(27, "oned", a => a.Oned)
+.AddAttribute(27, "regroupid", a => a.RegroupId)
+.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute(27, "button", a => a.Button)
+.AddAttribute(27, "userhidden", a => a.UserHidden)
+.AddAttribute(27, "bullet", a => a.Bullet)
+.AddAttribute(27, "hr", a => a.Horizontal)
+.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
+.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
+.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
+.AddAttribute(27, "allowincell", a => a.AllowInCell)
+.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
+.AddAttribute(27, "userdrawn", a => a.UserDrawn)
+.AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
+.AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
+.AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
+.AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
+.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
+.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute(27, "insetmode", a => a.InsetMode)
+.AddAttribute(0, "filled", a => a.Filled)
+.AddAttribute(0, "fillcolor", a => a.FillColor)
+.AddAttribute(0, "stroked", a => a.Stroked)
+.AddAttribute(0, "strokecolor", a => a.StrokeColor)
+.AddAttribute(0, "strokeweight", a => a.StrokeWeight)
+.AddAttribute(0, "insetpen", a => a.InsetPen)
+.AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
+})
+.AddAttribute(27, "connectortype", a => a.ConnectorType)
+.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
+.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute(27, "forcedash", a => a.ForceDash)
+.AddAttribute(27, "oleicon", a => a.OleIcon)
+.AddAttribute(27, "ole", a => a.Ole)
+.AddAttribute(27, "preferrelative", a => a.PreferRelative)
+.AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
+.AddAttribute(27, "clip", a => a.Clip)
+.AddAttribute(27, "gfxdata", a => a.Gfxdata)
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MaxLength = (255L) });
+})
+.AddAttribute(0, "style", a => a.Style)
+.AddAttribute(0, "href", a => a.Href)
+.AddAttribute(0, "target", a => a.Target)
+.AddAttribute(0, "title", a => a.Title)
+.AddAttribute(0, "alt", a => a.Alternate)
+.AddAttribute(0, "coordsize", a => a.CoordinateSize)
+.AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
+.AddAttribute(0, "wrapcoords", a => a.Wrapcoords)
+.AddAttribute(0, "print", a => a.Print)
+.AddAttribute(0, "startangle", a => a.StartAngle)
+.AddAttribute(0, "endangle", a => a.EndAngle);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -5223,8 +5233,6 @@ namespace DocumentFormat.OpenXml.Vml
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
-    [SchemaAttr(26, "curve")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Curve : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5926,66 +5934,68 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "curve");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Curve>()
-                           .AddAttribute(0, "id", a => a.Id)
-                           .AddAttribute(0, "style", a => a.Style)
-                           .AddAttribute(0, "href", a => a.Href)
-                           .AddAttribute(0, "target", a => a.Target)
-                           .AddAttribute(0, "class", a => a.Class)
-                           .AddAttribute(0, "title", a => a.Title)
-                           .AddAttribute(0, "alt", a => a.Alternate)
-                           .AddAttribute(0, "coordsize", a => a.CoordinateSize)
-                           .AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
-                           .AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
-                           .AddAttribute(0, "print", a => a.Print)
-                           .AddAttribute(27, "spid", a => a.OptionalString)
-                           .AddAttribute(27, "oned", a => a.Oned)
-                           .AddAttribute(27, "regroupid", a => a.RegroupId)
-                           .AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
-                           .AddAttribute(27, "button", a => a.Button)
-                           .AddAttribute(27, "userhidden", a => a.UserHidden)
-                           .AddAttribute(27, "bullet", a => a.Bullet)
-                           .AddAttribute(27, "hr", a => a.Horizontal)
-                           .AddAttribute(27, "hrstd", a => a.HorizontalStandard)
-                           .AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
-                           .AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
-                           .AddAttribute(27, "hralign", a => a.HorizontalAlignment)
-                           .AddAttribute(27, "allowincell", a => a.AllowInCell)
-                           .AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
-                           .AddAttribute(27, "userdrawn", a => a.UserDrawn)
-                           .AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
-                           .AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
-                           .AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
-                           .AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
-                           .AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
-                           .AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
-                           .AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
-                           .AddAttribute(27, "insetmode", a => a.InsetMode)
-                           .AddAttribute(0, "filled", a => a.Filled)
-                           .AddAttribute(0, "fillcolor", a => a.FillColor)
-                           .AddAttribute(0, "stroked", a => a.Stroked)
-                           .AddAttribute(0, "strokecolor", a => a.StrokeColor)
-                           .AddAttribute(0, "strokeweight", a => a.StrokeWeight)
-                           .AddAttribute(0, "insetpen", a => a.InsetPen)
-                           .AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
-                           })
-                           .AddAttribute(27, "connectortype", a => a.ConnectorType)
-                           .AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
-                           .AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
-                           .AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
-                           .AddAttribute(27, "forcedash", a => a.ForceDash)
-                           .AddAttribute(27, "oleicon", a => a.OleIcon)
-                           .AddAttribute(27, "ole", a => a.Ole)
-                           .AddAttribute(27, "preferrelative", a => a.PreferRelative)
-                           .AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
-                           .AddAttribute(27, "clip", a => a.Clip)
-                           .AddAttribute(27, "gfxdata", a => a.Gfxdata)
-                           .AddAttribute(0, "from", a => a.From)
-                           .AddAttribute(0, "control1", a => a.Control1)
-                           .AddAttribute(0, "control2", a => a.Control2)
-                           .AddAttribute(0, "to", a => a.To);
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "style", a => a.Style)
+.AddAttribute(0, "href", a => a.Href)
+.AddAttribute(0, "target", a => a.Target)
+.AddAttribute(0, "class", a => a.Class)
+.AddAttribute(0, "title", a => a.Title)
+.AddAttribute(0, "alt", a => a.Alternate)
+.AddAttribute(0, "coordsize", a => a.CoordinateSize)
+.AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
+.AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
+.AddAttribute(0, "print", a => a.Print)
+.AddAttribute(27, "spid", a => a.OptionalString)
+.AddAttribute(27, "oned", a => a.Oned)
+.AddAttribute(27, "regroupid", a => a.RegroupId)
+.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute(27, "button", a => a.Button)
+.AddAttribute(27, "userhidden", a => a.UserHidden)
+.AddAttribute(27, "bullet", a => a.Bullet)
+.AddAttribute(27, "hr", a => a.Horizontal)
+.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
+.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
+.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
+.AddAttribute(27, "allowincell", a => a.AllowInCell)
+.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
+.AddAttribute(27, "userdrawn", a => a.UserDrawn)
+.AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
+.AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
+.AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
+.AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
+.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
+.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute(27, "insetmode", a => a.InsetMode)
+.AddAttribute(0, "filled", a => a.Filled)
+.AddAttribute(0, "fillcolor", a => a.FillColor)
+.AddAttribute(0, "stroked", a => a.Stroked)
+.AddAttribute(0, "strokecolor", a => a.StrokeColor)
+.AddAttribute(0, "strokeweight", a => a.StrokeWeight)
+.AddAttribute(0, "insetpen", a => a.InsetPen)
+.AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
+})
+.AddAttribute(27, "connectortype", a => a.ConnectorType)
+.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
+.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute(27, "forcedash", a => a.ForceDash)
+.AddAttribute(27, "oleicon", a => a.OleIcon)
+.AddAttribute(27, "ole", a => a.Ole)
+.AddAttribute(27, "preferrelative", a => a.PreferRelative)
+.AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
+.AddAttribute(27, "clip", a => a.Clip)
+.AddAttribute(27, "gfxdata", a => a.Gfxdata)
+.AddAttribute(0, "from", a => a.From)
+.AddAttribute(0, "control1", a => a.Control1)
+.AddAttribute(0, "control2", a => a.Control2)
+.AddAttribute(0, "to", a => a.To);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -6092,8 +6102,6 @@ namespace DocumentFormat.OpenXml.Vml
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
-    [SchemaAttr(26, "image")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ImageFile : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6845,71 +6853,73 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "image");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ImageFile>()
-                           .AddAttribute(0, "id", a => a.Id)
-                           .AddAttribute(0, "style", a => a.Style)
-                           .AddAttribute(0, "href", a => a.Href)
-                           .AddAttribute(0, "target", a => a.Target)
-                           .AddAttribute(0, "class", a => a.Class)
-                           .AddAttribute(0, "title", a => a.Title)
-                           .AddAttribute(0, "alt", a => a.Alternate)
-                           .AddAttribute(0, "coordsize", a => a.CoordinateSize)
-                           .AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
-                           .AddAttribute(0, "print", a => a.Print)
-                           .AddAttribute(27, "spid", a => a.OptionalString)
-                           .AddAttribute(27, "oned", a => a.Oned)
-                           .AddAttribute(27, "regroupid", a => a.RegroupId)
-                           .AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
-                           .AddAttribute(27, "button", a => a.Button)
-                           .AddAttribute(27, "userhidden", a => a.UserHidden)
-                           .AddAttribute(27, "bullet", a => a.Bullet)
-                           .AddAttribute(27, "hr", a => a.Horizontal)
-                           .AddAttribute(27, "hrstd", a => a.HorizontalStandard)
-                           .AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
-                           .AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
-                           .AddAttribute(27, "hralign", a => a.HorizontalAlignment)
-                           .AddAttribute(27, "allowincell", a => a.AllowInCell)
-                           .AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
-                           .AddAttribute(27, "userdrawn", a => a.UserDrawn)
-                           .AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
-                           .AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
-                           .AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
-                           .AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
-                           .AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
-                           .AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
-                           .AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
-                           .AddAttribute(27, "insetmode", a => a.InsetMode)
-                           .AddAttribute(0, "filled", a => a.Filled)
-                           .AddAttribute(0, "fillcolor", a => a.FillColor)
-                           .AddAttribute(0, "stroked", a => a.Stroked)
-                           .AddAttribute(0, "strokecolor", a => a.StrokeColor)
-                           .AddAttribute(0, "strokeweight", a => a.StrokeWeight)
-                           .AddAttribute(0, "insetpen", a => a.InsetPen)
-                           .AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
-                           })
-                           .AddAttribute(27, "connectortype", a => a.ConnectorType)
-                           .AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
-                           .AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
-                           .AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
-                           .AddAttribute(27, "forcedash", a => a.ForceDash)
-                           .AddAttribute(27, "oleicon", a => a.OleIcon)
-                           .AddAttribute(27, "ole", a => a.Ole)
-                           .AddAttribute(27, "preferrelative", a => a.PreferRelative)
-                           .AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
-                           .AddAttribute(27, "clip", a => a.Clip)
-                           .AddAttribute(0, "src", a => a.Source)
-                           .AddAttribute(0, "cropleft", a => a.CropLeft)
-                           .AddAttribute(0, "croptop", a => a.CropTop)
-                           .AddAttribute(0, "cropright", a => a.CropRight)
-                           .AddAttribute(0, "cropbottom", a => a.CropBottom)
-                           .AddAttribute(0, "gain", a => a.Gain)
-                           .AddAttribute(0, "blacklevel", a => a.BlackLevel)
-                           .AddAttribute(0, "gamma", a => a.Gamma)
-                           .AddAttribute(0, "grayscale", a => a.GrayScale)
-                           .AddAttribute(0, "bilevel", a => a.BiLevel)
-                           .AddAttribute(27, "gfxdata", a => a.Gfxdata);
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "style", a => a.Style)
+.AddAttribute(0, "href", a => a.Href)
+.AddAttribute(0, "target", a => a.Target)
+.AddAttribute(0, "class", a => a.Class)
+.AddAttribute(0, "title", a => a.Title)
+.AddAttribute(0, "alt", a => a.Alternate)
+.AddAttribute(0, "coordsize", a => a.CoordinateSize)
+.AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
+.AddAttribute(0, "print", a => a.Print)
+.AddAttribute(27, "spid", a => a.OptionalString)
+.AddAttribute(27, "oned", a => a.Oned)
+.AddAttribute(27, "regroupid", a => a.RegroupId)
+.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute(27, "button", a => a.Button)
+.AddAttribute(27, "userhidden", a => a.UserHidden)
+.AddAttribute(27, "bullet", a => a.Bullet)
+.AddAttribute(27, "hr", a => a.Horizontal)
+.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
+.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
+.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
+.AddAttribute(27, "allowincell", a => a.AllowInCell)
+.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
+.AddAttribute(27, "userdrawn", a => a.UserDrawn)
+.AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
+.AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
+.AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
+.AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
+.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
+.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute(27, "insetmode", a => a.InsetMode)
+.AddAttribute(0, "filled", a => a.Filled)
+.AddAttribute(0, "fillcolor", a => a.FillColor)
+.AddAttribute(0, "stroked", a => a.Stroked)
+.AddAttribute(0, "strokecolor", a => a.StrokeColor)
+.AddAttribute(0, "strokeweight", a => a.StrokeWeight)
+.AddAttribute(0, "insetpen", a => a.InsetPen)
+.AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
+})
+.AddAttribute(27, "connectortype", a => a.ConnectorType)
+.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
+.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute(27, "forcedash", a => a.ForceDash)
+.AddAttribute(27, "oleicon", a => a.OleIcon)
+.AddAttribute(27, "ole", a => a.Ole)
+.AddAttribute(27, "preferrelative", a => a.PreferRelative)
+.AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
+.AddAttribute(27, "clip", a => a.Clip)
+.AddAttribute(0, "src", a => a.Source)
+.AddAttribute(0, "cropleft", a => a.CropLeft)
+.AddAttribute(0, "croptop", a => a.CropTop)
+.AddAttribute(0, "cropright", a => a.CropRight)
+.AddAttribute(0, "cropbottom", a => a.CropBottom)
+.AddAttribute(0, "gain", a => a.Gain)
+.AddAttribute(0, "blacklevel", a => a.BlackLevel)
+.AddAttribute(0, "gamma", a => a.Gamma)
+.AddAttribute(0, "grayscale", a => a.GrayScale)
+.AddAttribute(0, "bilevel", a => a.BiLevel)
+.AddAttribute(27, "gfxdata", a => a.Gfxdata);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -7016,8 +7026,6 @@ namespace DocumentFormat.OpenXml.Vml
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
-    [SchemaAttr(26, "line")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Line : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7699,64 +7707,66 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "line");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Line>()
-                           .AddAttribute(0, "id", a => a.Id)
-                           .AddAttribute(0, "style", a => a.Style)
-                           .AddAttribute(0, "href", a => a.Href)
-                           .AddAttribute(0, "target", a => a.Target)
-                           .AddAttribute(0, "class", a => a.Class)
-                           .AddAttribute(0, "title", a => a.Title)
-                           .AddAttribute(0, "alt", a => a.Alternate)
-                           .AddAttribute(0, "coordsize", a => a.CoordinateSize)
-                           .AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
-                           .AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
-                           .AddAttribute(0, "print", a => a.Print)
-                           .AddAttribute(27, "spid", a => a.OptionalString)
-                           .AddAttribute(27, "oned", a => a.Oned)
-                           .AddAttribute(27, "regroupid", a => a.RegroupId)
-                           .AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
-                           .AddAttribute(27, "button", a => a.Button)
-                           .AddAttribute(27, "userhidden", a => a.UserHidden)
-                           .AddAttribute(27, "bullet", a => a.Bullet)
-                           .AddAttribute(27, "hr", a => a.Horizontal)
-                           .AddAttribute(27, "hrstd", a => a.HorizontalStandard)
-                           .AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
-                           .AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
-                           .AddAttribute(27, "hralign", a => a.HorizontalAlignment)
-                           .AddAttribute(27, "allowincell", a => a.AllowInCell)
-                           .AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
-                           .AddAttribute(27, "userdrawn", a => a.UserDrawn)
-                           .AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
-                           .AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
-                           .AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
-                           .AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
-                           .AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
-                           .AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
-                           .AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
-                           .AddAttribute(27, "insetmode", a => a.InsetMode)
-                           .AddAttribute(0, "filled", a => a.Filled)
-                           .AddAttribute(0, "fillcolor", a => a.FillColor)
-                           .AddAttribute(0, "stroked", a => a.Stroked)
-                           .AddAttribute(0, "strokecolor", a => a.StrokeColor)
-                           .AddAttribute(0, "strokeweight", a => a.StrokeWeight)
-                           .AddAttribute(0, "insetpen", a => a.InsetPen)
-                           .AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
-                           })
-                           .AddAttribute(27, "connectortype", a => a.ConnectorType)
-                           .AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
-                           .AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
-                           .AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
-                           .AddAttribute(27, "forcedash", a => a.ForceDash)
-                           .AddAttribute(27, "oleicon", a => a.OleIcon)
-                           .AddAttribute(27, "ole", a => a.Ole)
-                           .AddAttribute(27, "preferrelative", a => a.PreferRelative)
-                           .AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
-                           .AddAttribute(27, "clip", a => a.Clip)
-                           .AddAttribute(27, "gfxdata", a => a.Gfxdata)
-                           .AddAttribute(0, "from", a => a.From)
-                           .AddAttribute(0, "to", a => a.To);
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "style", a => a.Style)
+.AddAttribute(0, "href", a => a.Href)
+.AddAttribute(0, "target", a => a.Target)
+.AddAttribute(0, "class", a => a.Class)
+.AddAttribute(0, "title", a => a.Title)
+.AddAttribute(0, "alt", a => a.Alternate)
+.AddAttribute(0, "coordsize", a => a.CoordinateSize)
+.AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
+.AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
+.AddAttribute(0, "print", a => a.Print)
+.AddAttribute(27, "spid", a => a.OptionalString)
+.AddAttribute(27, "oned", a => a.Oned)
+.AddAttribute(27, "regroupid", a => a.RegroupId)
+.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute(27, "button", a => a.Button)
+.AddAttribute(27, "userhidden", a => a.UserHidden)
+.AddAttribute(27, "bullet", a => a.Bullet)
+.AddAttribute(27, "hr", a => a.Horizontal)
+.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
+.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
+.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
+.AddAttribute(27, "allowincell", a => a.AllowInCell)
+.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
+.AddAttribute(27, "userdrawn", a => a.UserDrawn)
+.AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
+.AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
+.AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
+.AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
+.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
+.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute(27, "insetmode", a => a.InsetMode)
+.AddAttribute(0, "filled", a => a.Filled)
+.AddAttribute(0, "fillcolor", a => a.FillColor)
+.AddAttribute(0, "stroked", a => a.Stroked)
+.AddAttribute(0, "strokecolor", a => a.StrokeColor)
+.AddAttribute(0, "strokeweight", a => a.StrokeWeight)
+.AddAttribute(0, "insetpen", a => a.InsetPen)
+.AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
+})
+.AddAttribute(27, "connectortype", a => a.ConnectorType)
+.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
+.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute(27, "forcedash", a => a.ForceDash)
+.AddAttribute(27, "oleicon", a => a.OleIcon)
+.AddAttribute(27, "ole", a => a.Ole)
+.AddAttribute(27, "preferrelative", a => a.PreferRelative)
+.AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
+.AddAttribute(27, "clip", a => a.Clip)
+.AddAttribute(27, "gfxdata", a => a.Gfxdata)
+.AddAttribute(0, "from", a => a.From)
+.AddAttribute(0, "to", a => a.To);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -7861,8 +7871,6 @@ namespace DocumentFormat.OpenXml.Vml
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
-    [SchemaAttr(26, "oval")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Oval : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8524,62 +8532,64 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "oval");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Oval>()
-                           .AddAttribute(0, "id", a => a.Id)
-                           .AddAttribute(0, "style", a => a.Style)
-                           .AddAttribute(0, "href", a => a.Href)
-                           .AddAttribute(0, "target", a => a.Target)
-                           .AddAttribute(0, "class", a => a.Class)
-                           .AddAttribute(0, "title", a => a.Title)
-                           .AddAttribute(0, "alt", a => a.Alternate)
-                           .AddAttribute(0, "coordsize", a => a.CoordinateSize)
-                           .AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
-                           .AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
-                           .AddAttribute(0, "print", a => a.Print)
-                           .AddAttribute(27, "spid", a => a.OptionalString)
-                           .AddAttribute(27, "oned", a => a.Oned)
-                           .AddAttribute(27, "regroupid", a => a.RegroupId)
-                           .AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
-                           .AddAttribute(27, "button", a => a.Button)
-                           .AddAttribute(27, "userhidden", a => a.UserHidden)
-                           .AddAttribute(27, "bullet", a => a.Bullet)
-                           .AddAttribute(27, "hr", a => a.Horizontal)
-                           .AddAttribute(27, "hrstd", a => a.HorizontalStandard)
-                           .AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
-                           .AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
-                           .AddAttribute(27, "hralign", a => a.HorizontalAlignment)
-                           .AddAttribute(27, "allowincell", a => a.AllowInCell)
-                           .AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
-                           .AddAttribute(27, "userdrawn", a => a.UserDrawn)
-                           .AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
-                           .AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
-                           .AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
-                           .AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
-                           .AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
-                           .AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
-                           .AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
-                           .AddAttribute(27, "insetmode", a => a.InsetMode)
-                           .AddAttribute(0, "filled", a => a.Filled)
-                           .AddAttribute(0, "fillcolor", a => a.FillColor)
-                           .AddAttribute(0, "stroked", a => a.Stroked)
-                           .AddAttribute(0, "strokecolor", a => a.StrokeColor)
-                           .AddAttribute(0, "strokeweight", a => a.StrokeWeight)
-                           .AddAttribute(0, "insetpen", a => a.InsetPen)
-                           .AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
-                           })
-                           .AddAttribute(27, "connectortype", a => a.ConnectorType)
-                           .AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
-                           .AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
-                           .AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
-                           .AddAttribute(27, "forcedash", a => a.ForceDash)
-                           .AddAttribute(27, "oleicon", a => a.OleIcon)
-                           .AddAttribute(27, "ole", a => a.Ole)
-                           .AddAttribute(27, "preferrelative", a => a.PreferRelative)
-                           .AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
-                           .AddAttribute(27, "clip", a => a.Clip)
-                           .AddAttribute(27, "gfxdata", a => a.Gfxdata);
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "style", a => a.Style)
+.AddAttribute(0, "href", a => a.Href)
+.AddAttribute(0, "target", a => a.Target)
+.AddAttribute(0, "class", a => a.Class)
+.AddAttribute(0, "title", a => a.Title)
+.AddAttribute(0, "alt", a => a.Alternate)
+.AddAttribute(0, "coordsize", a => a.CoordinateSize)
+.AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
+.AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
+.AddAttribute(0, "print", a => a.Print)
+.AddAttribute(27, "spid", a => a.OptionalString)
+.AddAttribute(27, "oned", a => a.Oned)
+.AddAttribute(27, "regroupid", a => a.RegroupId)
+.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute(27, "button", a => a.Button)
+.AddAttribute(27, "userhidden", a => a.UserHidden)
+.AddAttribute(27, "bullet", a => a.Bullet)
+.AddAttribute(27, "hr", a => a.Horizontal)
+.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
+.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
+.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
+.AddAttribute(27, "allowincell", a => a.AllowInCell)
+.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
+.AddAttribute(27, "userdrawn", a => a.UserDrawn)
+.AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
+.AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
+.AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
+.AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
+.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
+.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute(27, "insetmode", a => a.InsetMode)
+.AddAttribute(0, "filled", a => a.Filled)
+.AddAttribute(0, "fillcolor", a => a.FillColor)
+.AddAttribute(0, "stroked", a => a.Stroked)
+.AddAttribute(0, "strokecolor", a => a.StrokeColor)
+.AddAttribute(0, "strokeweight", a => a.StrokeWeight)
+.AddAttribute(0, "insetpen", a => a.InsetPen)
+.AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
+})
+.AddAttribute(27, "connectortype", a => a.ConnectorType)
+.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
+.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute(27, "forcedash", a => a.ForceDash)
+.AddAttribute(27, "oleicon", a => a.OleIcon)
+.AddAttribute(27, "ole", a => a.Ole)
+.AddAttribute(27, "preferrelative", a => a.PreferRelative)
+.AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
+.AddAttribute(27, "clip", a => a.Clip)
+.AddAttribute(27, "gfxdata", a => a.Gfxdata);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -8688,8 +8698,6 @@ namespace DocumentFormat.OpenXml.Vml
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Ink))]
-    [SchemaAttr(26, "polyline")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PolyLine : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9361,63 +9369,65 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "polyline");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PolyLine>()
-                           .AddAttribute(0, "id", a => a.Id)
-                           .AddAttribute(0, "style", a => a.Style)
-                           .AddAttribute(0, "href", a => a.Href)
-                           .AddAttribute(0, "target", a => a.Target)
-                           .AddAttribute(0, "class", a => a.Class)
-                           .AddAttribute(0, "title", a => a.Title)
-                           .AddAttribute(0, "alt", a => a.Alternate)
-                           .AddAttribute(0, "coordsize", a => a.CoordinateSize)
-                           .AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
-                           .AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
-                           .AddAttribute(0, "print", a => a.Print)
-                           .AddAttribute(27, "spid", a => a.OptionalString)
-                           .AddAttribute(27, "oned", a => a.Oned)
-                           .AddAttribute(27, "regroupid", a => a.RegroupId)
-                           .AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
-                           .AddAttribute(27, "button", a => a.Button)
-                           .AddAttribute(27, "userhidden", a => a.UserHidden)
-                           .AddAttribute(27, "bullet", a => a.Bullet)
-                           .AddAttribute(27, "hr", a => a.Horizontal)
-                           .AddAttribute(27, "hrstd", a => a.HorizontalStandard)
-                           .AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
-                           .AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
-                           .AddAttribute(27, "hralign", a => a.HorizontalAlignment)
-                           .AddAttribute(27, "allowincell", a => a.AllowInCell)
-                           .AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
-                           .AddAttribute(27, "userdrawn", a => a.UserDrawn)
-                           .AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
-                           .AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
-                           .AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
-                           .AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
-                           .AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
-                           .AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
-                           .AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
-                           .AddAttribute(27, "insetmode", a => a.InsetMode)
-                           .AddAttribute(0, "filled", a => a.Filled)
-                           .AddAttribute(0, "fillcolor", a => a.FillColor)
-                           .AddAttribute(0, "stroked", a => a.Stroked)
-                           .AddAttribute(0, "strokecolor", a => a.StrokeColor)
-                           .AddAttribute(0, "strokeweight", a => a.StrokeWeight)
-                           .AddAttribute(0, "insetpen", a => a.InsetPen)
-                           .AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
-                           })
-                           .AddAttribute(27, "connectortype", a => a.ConnectorType)
-                           .AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
-                           .AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
-                           .AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
-                           .AddAttribute(27, "forcedash", a => a.ForceDash)
-                           .AddAttribute(27, "oleicon", a => a.OleIcon)
-                           .AddAttribute(27, "ole", a => a.Ole)
-                           .AddAttribute(27, "preferrelative", a => a.PreferRelative)
-                           .AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
-                           .AddAttribute(27, "clip", a => a.Clip)
-                           .AddAttribute(27, "gfxdata", a => a.Gfxdata)
-                           .AddAttribute(0, "points", a => a.Points);
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "style", a => a.Style)
+.AddAttribute(0, "href", a => a.Href)
+.AddAttribute(0, "target", a => a.Target)
+.AddAttribute(0, "class", a => a.Class)
+.AddAttribute(0, "title", a => a.Title)
+.AddAttribute(0, "alt", a => a.Alternate)
+.AddAttribute(0, "coordsize", a => a.CoordinateSize)
+.AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
+.AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
+.AddAttribute(0, "print", a => a.Print)
+.AddAttribute(27, "spid", a => a.OptionalString)
+.AddAttribute(27, "oned", a => a.Oned)
+.AddAttribute(27, "regroupid", a => a.RegroupId)
+.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute(27, "button", a => a.Button)
+.AddAttribute(27, "userhidden", a => a.UserHidden)
+.AddAttribute(27, "bullet", a => a.Bullet)
+.AddAttribute(27, "hr", a => a.Horizontal)
+.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
+.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
+.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
+.AddAttribute(27, "allowincell", a => a.AllowInCell)
+.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
+.AddAttribute(27, "userdrawn", a => a.UserDrawn)
+.AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
+.AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
+.AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
+.AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
+.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
+.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute(27, "insetmode", a => a.InsetMode)
+.AddAttribute(0, "filled", a => a.Filled)
+.AddAttribute(0, "fillcolor", a => a.FillColor)
+.AddAttribute(0, "stroked", a => a.Stroked)
+.AddAttribute(0, "strokecolor", a => a.StrokeColor)
+.AddAttribute(0, "strokeweight", a => a.StrokeWeight)
+.AddAttribute(0, "insetpen", a => a.InsetPen)
+.AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
+})
+.AddAttribute(27, "connectortype", a => a.ConnectorType)
+.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
+.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute(27, "forcedash", a => a.ForceDash)
+.AddAttribute(27, "oleicon", a => a.OleIcon)
+.AddAttribute(27, "ole", a => a.Ole)
+.AddAttribute(27, "preferrelative", a => a.PreferRelative)
+.AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
+.AddAttribute(27, "clip", a => a.Clip)
+.AddAttribute(27, "gfxdata", a => a.Gfxdata)
+.AddAttribute(0, "points", a => a.Points);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -9524,8 +9534,6 @@ namespace DocumentFormat.OpenXml.Vml
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
-    [SchemaAttr(26, "rect")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Rectangle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10187,62 +10195,64 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "rect");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Rectangle>()
-                           .AddAttribute(0, "id", a => a.Id)
-                           .AddAttribute(0, "style", a => a.Style)
-                           .AddAttribute(0, "href", a => a.Href)
-                           .AddAttribute(0, "target", a => a.Target)
-                           .AddAttribute(0, "class", a => a.Class)
-                           .AddAttribute(0, "title", a => a.Title)
-                           .AddAttribute(0, "alt", a => a.Alternate)
-                           .AddAttribute(0, "coordsize", a => a.CoordinateSize)
-                           .AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
-                           .AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
-                           .AddAttribute(0, "print", a => a.Print)
-                           .AddAttribute(27, "spid", a => a.OptionalString)
-                           .AddAttribute(27, "oned", a => a.Oned)
-                           .AddAttribute(27, "regroupid", a => a.RegroupId)
-                           .AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
-                           .AddAttribute(27, "button", a => a.Button)
-                           .AddAttribute(27, "userhidden", a => a.UserHidden)
-                           .AddAttribute(27, "bullet", a => a.Bullet)
-                           .AddAttribute(27, "hr", a => a.Horizontal)
-                           .AddAttribute(27, "hrstd", a => a.HorizontalStandard)
-                           .AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
-                           .AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
-                           .AddAttribute(27, "hralign", a => a.HorizontalAlignment)
-                           .AddAttribute(27, "allowincell", a => a.AllowInCell)
-                           .AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
-                           .AddAttribute(27, "userdrawn", a => a.UserDrawn)
-                           .AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
-                           .AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
-                           .AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
-                           .AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
-                           .AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
-                           .AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
-                           .AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
-                           .AddAttribute(27, "insetmode", a => a.InsetMode)
-                           .AddAttribute(0, "filled", a => a.Filled)
-                           .AddAttribute(0, "fillcolor", a => a.FillColor)
-                           .AddAttribute(0, "stroked", a => a.Stroked)
-                           .AddAttribute(0, "strokecolor", a => a.StrokeColor)
-                           .AddAttribute(0, "strokeweight", a => a.StrokeWeight)
-                           .AddAttribute(0, "insetpen", a => a.InsetPen)
-                           .AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
-                           })
-                           .AddAttribute(27, "connectortype", a => a.ConnectorType)
-                           .AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
-                           .AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
-                           .AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
-                           .AddAttribute(27, "forcedash", a => a.ForceDash)
-                           .AddAttribute(27, "oleicon", a => a.OleIcon)
-                           .AddAttribute(27, "ole", a => a.Ole)
-                           .AddAttribute(27, "preferrelative", a => a.PreferRelative)
-                           .AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
-                           .AddAttribute(27, "clip", a => a.Clip)
-                           .AddAttribute(27, "gfxdata", a => a.Gfxdata);
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "style", a => a.Style)
+.AddAttribute(0, "href", a => a.Href)
+.AddAttribute(0, "target", a => a.Target)
+.AddAttribute(0, "class", a => a.Class)
+.AddAttribute(0, "title", a => a.Title)
+.AddAttribute(0, "alt", a => a.Alternate)
+.AddAttribute(0, "coordsize", a => a.CoordinateSize)
+.AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
+.AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
+.AddAttribute(0, "print", a => a.Print)
+.AddAttribute(27, "spid", a => a.OptionalString)
+.AddAttribute(27, "oned", a => a.Oned)
+.AddAttribute(27, "regroupid", a => a.RegroupId)
+.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute(27, "button", a => a.Button)
+.AddAttribute(27, "userhidden", a => a.UserHidden)
+.AddAttribute(27, "bullet", a => a.Bullet)
+.AddAttribute(27, "hr", a => a.Horizontal)
+.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
+.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
+.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
+.AddAttribute(27, "allowincell", a => a.AllowInCell)
+.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
+.AddAttribute(27, "userdrawn", a => a.UserDrawn)
+.AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
+.AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
+.AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
+.AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
+.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
+.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute(27, "insetmode", a => a.InsetMode)
+.AddAttribute(0, "filled", a => a.Filled)
+.AddAttribute(0, "fillcolor", a => a.FillColor)
+.AddAttribute(0, "stroked", a => a.Stroked)
+.AddAttribute(0, "strokecolor", a => a.StrokeColor)
+.AddAttribute(0, "strokeweight", a => a.StrokeWeight)
+.AddAttribute(0, "insetpen", a => a.InsetPen)
+.AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
+})
+.AddAttribute(27, "connectortype", a => a.ConnectorType)
+.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
+.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute(27, "forcedash", a => a.ForceDash)
+.AddAttribute(27, "oleicon", a => a.OleIcon)
+.AddAttribute(27, "ole", a => a.Ole)
+.AddAttribute(27, "preferrelative", a => a.PreferRelative)
+.AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
+.AddAttribute(27, "clip", a => a.Clip)
+.AddAttribute(27, "gfxdata", a => a.Gfxdata);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -10349,8 +10359,6 @@ namespace DocumentFormat.OpenXml.Vml
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
-    [SchemaAttr(26, "roundrect")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RoundRectangle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11012,62 +11020,64 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "roundrect");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RoundRectangle>()
-                           .AddAttribute(0, "id", a => a.Id)
-                           .AddAttribute(0, "style", a => a.Style)
-                           .AddAttribute(0, "href", a => a.Href)
-                           .AddAttribute(0, "target", a => a.Target)
-                           .AddAttribute(0, "class", a => a.Class)
-                           .AddAttribute(0, "title", a => a.Title)
-                           .AddAttribute(0, "alt", a => a.Alternate)
-                           .AddAttribute(0, "coordsize", a => a.CoordinateSize)
-                           .AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
-                           .AddAttribute(0, "print", a => a.Print)
-                           .AddAttribute(27, "spid", a => a.OptionalString)
-                           .AddAttribute(27, "oned", a => a.Oned)
-                           .AddAttribute(27, "regroupid", a => a.RegroupId)
-                           .AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
-                           .AddAttribute(27, "button", a => a.Button)
-                           .AddAttribute(27, "userhidden", a => a.UserHidden)
-                           .AddAttribute(27, "bullet", a => a.Bullet)
-                           .AddAttribute(27, "hr", a => a.Horizontal)
-                           .AddAttribute(27, "hrstd", a => a.HorizontalStandard)
-                           .AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
-                           .AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
-                           .AddAttribute(27, "hralign", a => a.HorizontalAlignment)
-                           .AddAttribute(27, "allowincell", a => a.AllowInCell)
-                           .AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
-                           .AddAttribute(27, "userdrawn", a => a.UserDrawn)
-                           .AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
-                           .AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
-                           .AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
-                           .AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
-                           .AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
-                           .AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
-                           .AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
-                           .AddAttribute(27, "insetmode", a => a.InsetMode)
-                           .AddAttribute(0, "filled", a => a.Filled)
-                           .AddAttribute(0, "fillcolor", a => a.FillColor)
-                           .AddAttribute(0, "stroked", a => a.Stroked)
-                           .AddAttribute(0, "strokecolor", a => a.StrokeColor)
-                           .AddAttribute(0, "strokeweight", a => a.StrokeWeight)
-                           .AddAttribute(0, "insetpen", a => a.InsetPen)
-                           .AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
-                           })
-                           .AddAttribute(27, "connectortype", a => a.ConnectorType)
-                           .AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
-                           .AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
-                           .AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
-                           .AddAttribute(27, "forcedash", a => a.ForceDash)
-                           .AddAttribute(27, "oleicon", a => a.OleIcon)
-                           .AddAttribute(27, "ole", a => a.Ole)
-                           .AddAttribute(27, "preferrelative", a => a.PreferRelative)
-                           .AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
-                           .AddAttribute(27, "clip", a => a.Clip)
-                           .AddAttribute(27, "gfxdata", a => a.Gfxdata)
-                           .AddAttribute(0, "arcsize", a => a.ArcSize);
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "style", a => a.Style)
+.AddAttribute(0, "href", a => a.Href)
+.AddAttribute(0, "target", a => a.Target)
+.AddAttribute(0, "class", a => a.Class)
+.AddAttribute(0, "title", a => a.Title)
+.AddAttribute(0, "alt", a => a.Alternate)
+.AddAttribute(0, "coordsize", a => a.CoordinateSize)
+.AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
+.AddAttribute(0, "print", a => a.Print)
+.AddAttribute(27, "spid", a => a.OptionalString)
+.AddAttribute(27, "oned", a => a.Oned)
+.AddAttribute(27, "regroupid", a => a.RegroupId)
+.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute(27, "button", a => a.Button)
+.AddAttribute(27, "userhidden", a => a.UserHidden)
+.AddAttribute(27, "bullet", a => a.Bullet)
+.AddAttribute(27, "hr", a => a.Horizontal)
+.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
+.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
+.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
+.AddAttribute(27, "allowincell", a => a.AllowInCell)
+.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
+.AddAttribute(27, "userdrawn", a => a.UserDrawn)
+.AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
+.AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
+.AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
+.AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
+.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
+.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute(27, "insetmode", a => a.InsetMode)
+.AddAttribute(0, "filled", a => a.Filled)
+.AddAttribute(0, "fillcolor", a => a.FillColor)
+.AddAttribute(0, "stroked", a => a.Stroked)
+.AddAttribute(0, "strokecolor", a => a.StrokeColor)
+.AddAttribute(0, "strokeweight", a => a.StrokeWeight)
+.AddAttribute(0, "insetpen", a => a.InsetPen)
+.AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
+})
+.AddAttribute(27, "connectortype", a => a.ConnectorType)
+.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
+.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute(27, "forcedash", a => a.ForceDash)
+.AddAttribute(27, "oleicon", a => a.OleIcon)
+.AddAttribute(27, "ole", a => a.Ole)
+.AddAttribute(27, "preferrelative", a => a.PreferRelative)
+.AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
+.AddAttribute(27, "clip", a => a.Clip)
+.AddAttribute(27, "gfxdata", a => a.Gfxdata)
+.AddAttribute(0, "arcsize", a => a.ArcSize);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -11123,8 +11133,6 @@ namespace DocumentFormat.OpenXml.Vml
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:h.</para>
     /// </summary>
-    [SchemaAttr(26, "h")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShapeHandle : OpenXmlLeafElement
     {
         /// <summary>
@@ -11227,16 +11235,18 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "h");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ShapeHandle>()
-                           .AddAttribute(0, "position", a => a.Position)
-                           .AddAttribute(0, "polar", a => a.Polar)
-                           .AddAttribute(0, "map", a => a.Map)
-                           .AddAttribute(0, "invx", a => a.InvertX)
-                           .AddAttribute(0, "invy", a => a.InvertY)
-                           .AddAttribute(0, "switch", a => a.Switch)
-                           .AddAttribute(0, "xrange", a => a.XRange)
-                           .AddAttribute(0, "yrange", a => a.YRange)
-                           .AddAttribute(0, "radiusrange", a => a.RadiusRange);
+.AddAttribute(0, "position", a => a.Position)
+.AddAttribute(0, "polar", a => a.Polar)
+.AddAttribute(0, "map", a => a.Map)
+.AddAttribute(0, "invx", a => a.InvertX)
+.AddAttribute(0, "invy", a => a.InvertY)
+.AddAttribute(0, "switch", a => a.Switch)
+.AddAttribute(0, "xrange", a => a.XRange)
+.AddAttribute(0, "yrange", a => a.YRange)
+.AddAttribute(0, "radiusrange", a => a.RadiusRange);
         }
 
         /// <inheritdoc/>
@@ -11248,8 +11258,6 @@ namespace DocumentFormat.OpenXml.Vml
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:f.</para>
     /// </summary>
-    [SchemaAttr(26, "f")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Formula : OpenXmlLeafElement
     {
         /// <summary>
@@ -11272,8 +11280,10 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "f");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Formula>()
-                           .AddAttribute(0, "eqn", a => a.Equation);
+.AddAttribute(0, "eqn", a => a.Equation);
         }
 
         /// <inheritdoc/>

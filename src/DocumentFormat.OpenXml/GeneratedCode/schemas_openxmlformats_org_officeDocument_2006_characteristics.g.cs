@@ -24,8 +24,6 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Characteristic))]
-    [SchemaAttr(8, "additionalCharacteristics")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AdditionalCharacteristicsInfo : OpenXmlPartRootElement
     {
         /// <summary>
@@ -59,6 +57,13 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(8, "additionalCharacteristics");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.AdditionalCharacteristics.Characteristic), 0, 0)
@@ -75,8 +80,6 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ac:characteristic.</para>
     /// </summary>
-    [SchemaAttr(8, "characteristic")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Characteristic : OpenXmlLeafElement
     {
         /// <summary>
@@ -129,23 +132,25 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(8, "characteristic");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Characteristic>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "relation", a => a.Relation, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "vocabulary", a => a.Vocabulary, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
-                           });
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "relation", a => a.Relation, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "vocabulary", a => a.Vocabulary, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+});
         }
 
         /// <inheritdoc/>

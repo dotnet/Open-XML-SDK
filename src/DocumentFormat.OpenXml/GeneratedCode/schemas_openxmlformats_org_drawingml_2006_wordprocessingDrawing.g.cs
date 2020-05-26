@@ -20,8 +20,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:wrapNone.</para>
     /// </summary>
-    [SchemaAttr(16, "wrapNone")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class WrapNone : OpenXmlLeafElement
     {
         /// <summary>
@@ -29,6 +27,13 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// </summary>
         public WrapNone() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(16, "wrapNone");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -47,8 +52,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(EffectExtent))]
-    [SchemaAttr(16, "wrapSquare")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class WrapSquare : OpenXmlCompositeElement
     {
         /// <summary>
@@ -135,16 +138,18 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(16, "wrapSquare");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<WrapSquare>()
-                           .AddAttribute(0, "wrapText", a => a.WrapText, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "distT", a => a.DistanceFromTop)
-                           .AddAttribute(0, "distB", a => a.DistanceFromBottom)
-                           .AddAttribute(0, "distL", a => a.DistanceFromLeft)
-                           .AddAttribute(0, "distR", a => a.DistanceFromRight);
+.AddAttribute(0, "wrapText", a => a.WrapText, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "distT", a => a.DistanceFromTop)
+.AddAttribute(0, "distB", a => a.DistanceFromBottom)
+.AddAttribute(0, "distL", a => a.DistanceFromLeft)
+.AddAttribute(0, "distR", a => a.DistanceFromRight);
         }
 
         /// <summary>
@@ -183,8 +188,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(WrapPolygon))]
-    [SchemaAttr(16, "wrapTight")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class WrapTight : OpenXmlCompositeElement
     {
         /// <summary>
@@ -251,14 +254,16 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(16, "wrapTight");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<WrapTight>()
-                           .AddAttribute(0, "wrapText", a => a.WrapText, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "distL", a => a.DistanceFromLeft)
-                           .AddAttribute(0, "distR", a => a.DistanceFromRight);
+.AddAttribute(0, "wrapText", a => a.WrapText, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "distL", a => a.DistanceFromLeft)
+.AddAttribute(0, "distR", a => a.DistanceFromRight);
         }
 
         /// <summary>
@@ -297,8 +302,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(WrapPolygon))]
-    [SchemaAttr(16, "wrapThrough")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class WrapThrough : OpenXmlCompositeElement
     {
         /// <summary>
@@ -365,14 +368,16 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(16, "wrapThrough");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<WrapThrough>()
-                           .AddAttribute(0, "wrapText", a => a.WrapText, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "distL", a => a.DistanceFromLeft)
-                           .AddAttribute(0, "distR", a => a.DistanceFromRight);
+.AddAttribute(0, "wrapText", a => a.WrapText, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "distL", a => a.DistanceFromLeft)
+.AddAttribute(0, "distR", a => a.DistanceFromRight);
         }
 
         /// <summary>
@@ -411,8 +416,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(EffectExtent))]
-    [SchemaAttr(16, "wrapTopAndBottom")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class WrapTopBottom : OpenXmlCompositeElement
     {
         /// <summary>
@@ -469,9 +472,11 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(16, "wrapTopAndBottom");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<WrapTopBottom>()
-                           .AddAttribute(0, "distT", a => a.DistanceFromTop)
-                           .AddAttribute(0, "distB", a => a.DistanceFromBottom);
+.AddAttribute(0, "distT", a => a.DistanceFromTop)
+.AddAttribute(0, "distB", a => a.DistanceFromBottom);
         }
 
         /// <summary>
@@ -518,8 +523,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     [ChildElementInfo(typeof(DocProperties))]
     [ChildElementInfo(typeof(NonVisualGraphicFrameDrawingProperties))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Graphic))]
-    [SchemaAttr(16, "inline")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Inline : OpenXmlCompositeElement
     {
         /// <summary>
@@ -622,21 +625,23 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(16, "inline");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Inline>()
-                           .AddAttribute(0, "distT", a => a.DistanceFromTop)
-                           .AddAttribute(0, "distB", a => a.DistanceFromBottom)
-                           .AddAttribute(0, "distL", a => a.DistanceFromLeft)
-                           .AddAttribute(0, "distR", a => a.DistanceFromRight)
-                           .AddAttribute(51, "anchorId", a => a.AnchorId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
-                           })
-                           .AddAttribute(51, "editId", a => a.EditId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
-                           });
+.AddAttribute(0, "distT", a => a.DistanceFromTop)
+.AddAttribute(0, "distB", a => a.DistanceFromBottom)
+.AddAttribute(0, "distL", a => a.DistanceFromLeft)
+.AddAttribute(0, "distR", a => a.DistanceFromRight)
+.AddAttribute(51, "anchorId", a => a.AnchorId, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+})
+.AddAttribute(51, "editId", a => a.EditId, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+});
         }
 
         /// <summary>
@@ -759,8 +764,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Graphic))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeWidth), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeHeight), FileFormatVersions.Office2010)]
-    [SchemaAttr(16, "anchor")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Anchor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -933,43 +936,45 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(16, "anchor");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Anchor>()
-                           .AddAttribute(0, "distT", a => a.DistanceFromTop)
-                           .AddAttribute(0, "distB", a => a.DistanceFromBottom)
-                           .AddAttribute(0, "distL", a => a.DistanceFromLeft)
-                           .AddAttribute(0, "distR", a => a.DistanceFromRight)
-                           .AddAttribute(0, "simplePos", a => a.SimplePos)
-                           .AddAttribute(0, "relativeHeight", a => a.RelativeHeight, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "behindDoc", a => a.BehindDoc, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "locked", a => a.Locked, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "layoutInCell", a => a.LayoutInCell, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "hidden", a => a.Hidden)
-                           .AddAttribute(0, "allowOverlap", a => a.AllowOverlap, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(51, "editId", a => a.EditId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
-                           })
-                           .AddAttribute(51, "anchorId", a => a.AnchorId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
-                           });
+.AddAttribute(0, "distT", a => a.DistanceFromTop)
+.AddAttribute(0, "distB", a => a.DistanceFromBottom)
+.AddAttribute(0, "distL", a => a.DistanceFromLeft)
+.AddAttribute(0, "distR", a => a.DistanceFromRight)
+.AddAttribute(0, "simplePos", a => a.SimplePos)
+.AddAttribute(0, "relativeHeight", a => a.RelativeHeight, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "behindDoc", a => a.BehindDoc, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "locked", a => a.Locked, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "layoutInCell", a => a.LayoutInCell, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "hidden", a => a.Hidden)
+.AddAttribute(0, "allowOverlap", a => a.AllowOverlap, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(51, "editId", a => a.EditId, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+})
+.AddAttribute(51, "anchorId", a => a.AnchorId, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+});
         }
 
         /// <summary>
@@ -1076,8 +1081,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:start.</para>
     /// </summary>
-    [SchemaAttr(16, "start")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StartPoint : Point2DType
     {
         /// <summary>
@@ -1085,6 +1088,13 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// </summary>
         public StartPoint() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(16, "start");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1096,8 +1106,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:lineTo.</para>
     /// </summary>
-    [SchemaAttr(16, "lineTo")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LineTo : Point2DType
     {
         /// <summary>
@@ -1105,6 +1113,13 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// </summary>
         public LineTo() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(16, "lineTo");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1116,8 +1131,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:simplePos.</para>
     /// </summary>
-    [SchemaAttr(16, "simplePos")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SimplePosition : Point2DType
     {
         /// <summary>
@@ -1125,6 +1138,13 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// </summary>
         public SimplePosition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(16, "simplePos");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1187,8 +1207,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:effectExtent.</para>
     /// </summary>
-    [SchemaAttr(16, "effectExtent")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class EffectExtent : OpenXmlLeafElement
     {
         /// <summary>
@@ -1241,27 +1259,29 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(16, "effectExtent");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<EffectExtent>()
-                           .AddAttribute(0, "l", a => a.LeftEdge, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-                           })
-                           .AddAttribute(0, "t", a => a.TopEdge, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-                           })
-                           .AddAttribute(0, "r", a => a.RightEdge, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-                           })
-                           .AddAttribute(0, "b", a => a.BottomEdge, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-                           });
+.AddAttribute(0, "l", a => a.LeftEdge, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+})
+.AddAttribute(0, "t", a => a.TopEdge, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+})
+.AddAttribute(0, "r", a => a.RightEdge, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+})
+.AddAttribute(0, "b", a => a.BottomEdge, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+});
         }
 
         /// <inheritdoc/>
@@ -1282,8 +1302,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// </remark>
     [ChildElementInfo(typeof(StartPoint))]
     [ChildElementInfo(typeof(LineTo))]
-    [SchemaAttr(16, "wrapPolygon")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class WrapPolygon : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1330,8 +1348,10 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(16, "wrapPolygon");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<WrapPolygon>()
-                           .AddAttribute(0, "edited", a => a.Edited);
+.AddAttribute(0, "edited", a => a.Edited);
         }
 
         /// <summary>
@@ -1375,8 +1395,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     [ChildElementInfo(typeof(HorizontalAlignment))]
     [ChildElementInfo(typeof(PositionOffset))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset), FileFormatVersions.Office2010)]
-    [SchemaAttr(16, "positionH")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HorizontalPosition : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1423,12 +1441,14 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(16, "positionH");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<HorizontalPosition>()
-                           .AddAttribute(0, "relativeFrom", a => a.RelativeFrom, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "relativeFrom", a => a.RelativeFrom, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <summary>
@@ -1502,8 +1522,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     [ChildElementInfo(typeof(VerticalAlignment))]
     [ChildElementInfo(typeof(PositionOffset))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset), FileFormatVersions.Office2010)]
-    [SchemaAttr(16, "positionV")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VerticalPosition : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1550,12 +1568,14 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(16, "positionV");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<VerticalPosition>()
-                           .AddAttribute(0, "relativeFrom", a => a.RelativeFrom, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "relativeFrom", a => a.RelativeFrom, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <summary>
@@ -1618,8 +1638,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:extent.</para>
     /// </summary>
-    [SchemaAttr(16, "extent")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Extent : OpenXmlLeafElement
     {
         /// <summary>
@@ -1652,17 +1670,19 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(16, "extent");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Extent>()
-                           .AddAttribute(0, "cx", a => a.Cx, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
-                           })
-                           .AddAttribute(0, "cy", a => a.Cy, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
-                           });
+.AddAttribute(0, "cx", a => a.Cx, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+})
+.AddAttribute(0, "cy", a => a.Cy, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+});
         }
 
         /// <inheritdoc/>
@@ -1685,8 +1705,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList))]
-    [SchemaAttr(16, "docPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DocProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1773,18 +1791,20 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(16, "docPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DocProperties>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "descr", a => a.Description)
-                           .AddAttribute(0, "hidden", a => a.Hidden)
-                           .AddAttribute(0, "title", a => a.Title);
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "descr", a => a.Description)
+.AddAttribute(0, "hidden", a => a.Hidden)
+.AddAttribute(0, "title", a => a.Title);
         }
 
         /// <summary>
@@ -1859,8 +1879,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-    [SchemaAttr(16, "cNvGraphicFramePr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1892,6 +1910,13 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NonVisualGraphicFrameDrawingProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(16, "cNvGraphicFramePr");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -1937,10 +1962,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:align.</para>
     /// </summary>
-    [StringValidator(IsToken = true)]
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalAlignmentValues>))]
-    [SchemaAttr(16, "align")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VerticalAlignment : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1963,6 +1984,15 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
             return new EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalAlignmentValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalAlignmentValues>)) });
+            builder.SetSchema(16, "align");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VerticalAlignment>(deep);
     }
@@ -1972,9 +2002,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:posOffset.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(Int32Value))]
-    [SchemaAttr(16, "posOffset")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PositionOffset : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1997,6 +2024,14 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
             return new Int32Value { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
+            builder.SetSchema(16, "posOffset");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PositionOffset>(deep);
     }
@@ -2006,10 +2041,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:align.</para>
     /// </summary>
-    [StringValidator(IsToken = true)]
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalAlignmentValues>))]
-    [SchemaAttr(16, "align")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HorizontalAlignment : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2030,6 +2061,15 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
             return new EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalAlignmentValues> { InnerText = text };
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalAlignmentValues>)) });
+            builder.SetSchema(16, "align");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>

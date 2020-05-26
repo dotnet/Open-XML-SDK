@@ -17,8 +17,6 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w10:bordertop.</para>
     /// </summary>
-    [SchemaAttr(28, "bordertop")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TopBorder : BorderType
     {
         /// <summary>
@@ -26,6 +24,13 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         /// </summary>
         public TopBorder() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(28, "bordertop");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -37,8 +42,6 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w10:borderleft.</para>
     /// </summary>
-    [SchemaAttr(28, "borderleft")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LeftBorder : BorderType
     {
         /// <summary>
@@ -46,6 +49,13 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         /// </summary>
         public LeftBorder() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(28, "borderleft");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -57,8 +67,6 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w10:borderright.</para>
     /// </summary>
-    [SchemaAttr(28, "borderright")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RightBorder : BorderType
     {
         /// <summary>
@@ -66,6 +74,13 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         /// </summary>
         public RightBorder() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(28, "borderright");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -77,8 +92,6 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w10:borderbottom.</para>
     /// </summary>
-    [SchemaAttr(28, "borderbottom")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BottomBorder : BorderType
     {
         /// <summary>
@@ -86,6 +99,13 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         /// </summary>
         public BottomBorder() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(28, "borderbottom");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -154,8 +174,6 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w10:wrap.</para>
     /// </summary>
-    [SchemaAttr(28, "wrap")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TextWrap : OpenXmlLeafElement
     {
         /// <summary>
@@ -208,11 +226,13 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(28, "wrap");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<TextWrap>()
-                           .AddAttribute(0, "type", a => a.Type)
-                           .AddAttribute(0, "side", a => a.Side)
-                           .AddAttribute(0, "anchorx", a => a.AnchorX)
-                           .AddAttribute(0, "anchory", a => a.AnchorY);
+.AddAttribute(0, "type", a => a.Type)
+.AddAttribute(0, "side", a => a.Side)
+.AddAttribute(0, "anchorx", a => a.AnchorX)
+.AddAttribute(0, "anchory", a => a.AnchorY);
         }
 
         /// <inheritdoc/>
@@ -224,8 +244,6 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w10:anchorlock.</para>
     /// </summary>
-    [SchemaAttr(28, "anchorlock")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AnchorLock : OpenXmlLeafElement
     {
         /// <summary>
@@ -233,6 +251,13 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         /// </summary>
         public AnchorLock() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(28, "anchorlock");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>

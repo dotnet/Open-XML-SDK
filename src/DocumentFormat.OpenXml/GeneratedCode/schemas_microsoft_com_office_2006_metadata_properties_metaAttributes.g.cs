@@ -17,8 +17,6 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ma:DummyContentTypeElement.</para>
     /// </summary>
-    [SchemaAttr(41, "DummyContentTypeElement")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Dummy : OpenXmlLeafElement
     {
         /// <summary>
@@ -201,30 +199,32 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(41, "DummyContentTypeElement");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Dummy>()
-                           .AddAttribute(0, "decimals", a => a.Decimals)
-                           .AddAttribute(0, "default", a => a.Default)
-                           .AddAttribute(0, "description", a => a.Description)
-                           .AddAttribute(0, "displayName", a => a.DisplayName)
-                           .AddAttribute(0, "fieldsID", a => a.FieldsID)
-                           .AddAttribute(0, "format", a => a.Format)
-                           .AddAttribute(0, "hidden", a => a.Hidden)
-                           .AddAttribute(0, "index", a => a.Index, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
-                           })
-                           .AddAttribute(0, "internalName", a => a.InternalName)
-                           .AddAttribute(0, "LCID", a => a.LCID)
-                           .AddAttribute(0, "list", a => a.List)
-                           .AddAttribute(0, "percentage", a => a.Percentage)
-                           .AddAttribute(0, "readOnly", a => a.ReadOnly)
-                           .AddAttribute(0, "requiredMultiChoice", a => a.RequiredMultiChoice)
-                           .AddAttribute(0, "root", a => a.Root)
-                           .AddAttribute(0, "showField", a => a.ShowField)
-                           .AddAttribute(0, "web", a => a.Web, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}") });
-                           });
+.AddAttribute(0, "decimals", a => a.Decimals)
+.AddAttribute(0, "default", a => a.Default)
+.AddAttribute(0, "description", a => a.Description)
+.AddAttribute(0, "displayName", a => a.DisplayName)
+.AddAttribute(0, "fieldsID", a => a.FieldsID)
+.AddAttribute(0, "format", a => a.Format)
+.AddAttribute(0, "hidden", a => a.Hidden)
+.AddAttribute(0, "index", a => a.Index, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+})
+.AddAttribute(0, "internalName", a => a.InternalName)
+.AddAttribute(0, "LCID", a => a.LCID)
+.AddAttribute(0, "list", a => a.List)
+.AddAttribute(0, "percentage", a => a.Percentage)
+.AddAttribute(0, "readOnly", a => a.ReadOnly)
+.AddAttribute(0, "requiredMultiChoice", a => a.RequiredMultiChoice)
+.AddAttribute(0, "root", a => a.Root)
+.AddAttribute(0, "showField", a => a.ShowField)
+.AddAttribute(0, "web", a => a.Web, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}") });
+});
         }
 
         /// <inheritdoc/>

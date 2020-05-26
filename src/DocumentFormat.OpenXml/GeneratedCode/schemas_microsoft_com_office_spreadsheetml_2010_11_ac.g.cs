@@ -19,8 +19,6 @@ namespace DocumentFormat.OpenXml.Office2013.ExcelAc
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15ac:absPath.</para>
     /// </summary>
-    [SchemaAttr(74, "absPath")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class AbsolutePath : OpenXmlLeafElement
     {
         /// <summary>
@@ -43,11 +41,13 @@ namespace DocumentFormat.OpenXml.Office2013.ExcelAc
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(74, "absPath");
+            builder.Availability = (FileFormatVersions.Office2013);
             builder.AddElement<AbsolutePath>()
-                           .AddAttribute(0, "url", a => a.Url, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "url", a => a.Url, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {

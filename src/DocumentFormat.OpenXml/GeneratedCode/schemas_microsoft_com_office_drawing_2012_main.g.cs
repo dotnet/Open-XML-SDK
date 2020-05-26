@@ -18,8 +18,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a15:backgroundPr.</para>
     /// </summary>
-    [SchemaAttr(67, "backgroundPr")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class BackgroundProperties : OpenXmlLeafElement
     {
         /// <summary>
@@ -72,23 +70,25 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(67, "backgroundPr");
+            builder.Availability = (FileFormatVersions.Office2013);
             builder.AddElement<BackgroundProperties>()
-                           .AddAttribute(0, "bwMode", a => a.Mode, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "bwPure", a => a.Pure, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "bwNormal", a => a.Normal, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "targetScreenSize", a => a.TargetScreenSize, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "bwMode", a => a.Mode, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "bwPure", a => a.Pure, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "bwNormal", a => a.Normal, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "targetScreenSize", a => a.TargetScreenSize, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <inheritdoc/>
@@ -100,8 +100,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a15:nonVisualGroupProps.</para>
     /// </summary>
-    [SchemaAttr(67, "nonVisualGroupProps")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class NonVisualGroupProperties : OpenXmlLeafElement
     {
         /// <summary>
@@ -124,8 +122,10 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(67, "nonVisualGroupProps");
+            builder.Availability = (FileFormatVersions.Office2013);
             builder.AddElement<NonVisualGroupProperties>()
-                           .AddAttribute(0, "isLegacyGroup", a => a.IsLegacyGroup);
+.AddAttribute(0, "isLegacyGroup", a => a.IsLegacyGroup);
         }
 
         /// <inheritdoc/>
@@ -137,8 +137,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a15:objectPr.</para>
     /// </summary>
-    [SchemaAttr(67, "objectPr")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class ObjectProperties : OpenXmlLeafElement
     {
         /// <summary>
@@ -181,10 +179,12 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(67, "objectPr");
+            builder.Availability = (FileFormatVersions.Office2013);
             builder.AddElement<ObjectProperties>()
-                           .AddAttribute(0, "objectId", a => a.Id)
-                           .AddAttribute(0, "isActiveX", a => a.IsActiveX)
-                           .AddAttribute(0, "linkType", a => a.LinkType);
+.AddAttribute(0, "objectId", a => a.Id)
+.AddAttribute(0, "isActiveX", a => a.IsActiveX)
+.AddAttribute(0, "linkType", a => a.LinkType);
         }
 
         /// <inheritdoc/>
@@ -196,8 +196,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a15:signatureLine.</para>
     /// </summary>
-    [SchemaAttr(67, "signatureLine")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class SignatureLine : OpenXmlLeafElement
     {
         /// <summary>
@@ -330,25 +328,27 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(67, "signatureLine");
+            builder.Availability = (FileFormatVersions.Office2013);
             builder.AddElement<SignatureLine>()
-                           .AddAttribute(0, "isSignatureLine", a => a.IsSignatureLine)
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "provId", a => a.ProviderId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "signingInstructionsSet", a => a.SigningInstructionsSet)
-                           .AddAttribute(0, "allowComments", a => a.AllowComments)
-                           .AddAttribute(0, "showSignDate", a => a.ShowSignDate)
-                           .AddAttribute(0, "suggestedSigner", a => a.SuggestedSigner)
-                           .AddAttribute(0, "suggestedSigner2", a => a.SuggestedSigner2)
-                           .AddAttribute(0, "suggestedSignerEmail", a => a.SuggestedSignerEmail)
-                           .AddAttribute(0, "signingInstructions", a => a.SigningInstructions)
-                           .AddAttribute(0, "addlXml", a => a.AdditionalXml)
-                           .AddAttribute(0, "sigProvUrl", a => a.SignatureProviderUrl);
+.AddAttribute(0, "isSignatureLine", a => a.IsSignatureLine)
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "provId", a => a.ProviderId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "signingInstructionsSet", a => a.SigningInstructionsSet)
+.AddAttribute(0, "allowComments", a => a.AllowComments)
+.AddAttribute(0, "showSignDate", a => a.ShowSignDate)
+.AddAttribute(0, "suggestedSigner", a => a.SuggestedSigner)
+.AddAttribute(0, "suggestedSigner2", a => a.SuggestedSigner2)
+.AddAttribute(0, "suggestedSignerEmail", a => a.SuggestedSignerEmail)
+.AddAttribute(0, "signingInstructions", a => a.SigningInstructions)
+.AddAttribute(0, "addlXml", a => a.AdditionalXml)
+.AddAttribute(0, "sigProvUrl", a => a.SignatureProviderUrl);
         }
 
         /// <inheritdoc/>

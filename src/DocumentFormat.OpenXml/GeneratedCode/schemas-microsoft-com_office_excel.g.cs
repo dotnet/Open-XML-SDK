@@ -157,8 +157,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     [ChildElementInfo(typeof(ScriptLanguage))]
     [ChildElementInfo(typeof(ScriptLocation))]
     [ChildElementInfo(typeof(FormulaTextBox))]
-    [SchemaAttr(29, "ClientData")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ClientData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -205,11 +203,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(29, "ClientData");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ClientData>()
-                           .AddAttribute(0, "ObjectType", a => a.ObjectType, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "ObjectType", a => a.ObjectType, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -301,9 +301,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:MoveWithCells.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "MoveWithCells")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MoveWithCells : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -326,6 +323,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "MoveWithCells");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MoveWithCells>(deep);
     }
@@ -335,9 +340,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:SizeWithCells.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "SizeWithCells")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ResizeWithCells : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -360,6 +362,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "SizeWithCells");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ResizeWithCells>(deep);
     }
@@ -369,9 +379,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Locked.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "Locked")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Locked : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -394,6 +401,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "Locked");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Locked>(deep);
     }
@@ -403,9 +418,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:DefaultSize.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "DefaultSize")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DefaultSize : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -428,6 +440,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "DefaultSize");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultSize>(deep);
     }
@@ -437,9 +457,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:PrintObject.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "PrintObject")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PrintObject : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -462,6 +479,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "PrintObject");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PrintObject>(deep);
     }
@@ -471,9 +496,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Disabled.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "Disabled")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Disabled : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -496,6 +518,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "Disabled");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Disabled>(deep);
     }
@@ -505,9 +535,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:AutoFill.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "AutoFill")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AutoFill : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -530,6 +557,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "AutoFill");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoFill>(deep);
     }
@@ -539,9 +574,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:AutoLine.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "AutoLine")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AutoLine : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -564,6 +596,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "AutoLine");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoLine>(deep);
     }
@@ -573,9 +613,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:AutoPict.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "AutoPict")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AutoSizePicture : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -598,6 +635,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "AutoPict");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoSizePicture>(deep);
     }
@@ -607,9 +652,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:LockText.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "LockText")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LockText : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -632,6 +674,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "LockText");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LockText>(deep);
     }
@@ -641,9 +691,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:JustLastX.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "JustLastX")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class JustifyLastLine : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -666,6 +713,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "JustLastX");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<JustifyLastLine>(deep);
     }
@@ -675,9 +730,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:SecretEdit.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "SecretEdit")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SecretEdit : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -700,6 +752,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "SecretEdit");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SecretEdit>(deep);
     }
@@ -709,9 +769,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Default.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "Default")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DefaultButton : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -734,6 +791,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "Default");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultButton>(deep);
     }
@@ -743,9 +808,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Help.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "Help")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HelpButton : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -768,6 +830,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "Help");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HelpButton>(deep);
     }
@@ -777,9 +847,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Cancel.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "Cancel")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CancelButton : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -802,6 +869,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "Cancel");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CancelButton>(deep);
     }
@@ -811,9 +886,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Dismiss.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "Dismiss")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DismissButton : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -836,6 +908,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "Dismiss");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DismissButton>(deep);
     }
@@ -845,9 +925,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Visible.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "Visible")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Visible : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -870,6 +947,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "Visible");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Visible>(deep);
     }
@@ -879,9 +964,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:RowHidden.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "RowHidden")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RowHidden : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -904,6 +986,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "RowHidden");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowHidden>(deep);
     }
@@ -913,9 +1003,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:ColHidden.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "ColHidden")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColumnHidden : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -938,6 +1025,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "ColHidden");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnHidden>(deep);
     }
@@ -947,9 +1042,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:MultiLine.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "MultiLine")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MultiLine : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -972,6 +1064,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "MultiLine");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MultiLine>(deep);
     }
@@ -981,9 +1081,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:VScroll.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "VScroll")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VerticalScrollBar : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1006,6 +1103,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "VScroll");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VerticalScrollBar>(deep);
     }
@@ -1015,9 +1120,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:ValidIds.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "ValidIds")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ValidIds : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1040,6 +1142,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "ValidIds");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ValidIds>(deep);
     }
@@ -1049,9 +1159,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:NoThreeD2.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "NoThreeD2")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Disable3DForListBoxAndDropDown : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1074,6 +1181,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "NoThreeD2");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Disable3DForListBoxAndDropDown>(deep);
     }
@@ -1083,9 +1198,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Colored.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "Colored")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Colored : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1108,6 +1220,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "Colored");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Colored>(deep);
     }
@@ -1117,9 +1237,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:NoThreeD.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "NoThreeD")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Disable3D : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1142,6 +1259,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "NoThreeD");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Disable3D>(deep);
     }
@@ -1151,9 +1276,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:FirstButton.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "FirstButton")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FirstButton : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1176,6 +1298,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "FirstButton");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstButton>(deep);
     }
@@ -1185,9 +1315,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Horiz.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "Horiz")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HorizontalScrollBar : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1210,6 +1337,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "Horiz");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HorizontalScrollBar>(deep);
     }
@@ -1219,9 +1354,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:MapOCX.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "MapOCX")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MapOcxControl : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1244,6 +1376,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "MapOCX");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MapOcxControl>(deep);
     }
@@ -1253,9 +1393,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Camera.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "Camera")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CameraObject : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1278,6 +1415,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "Camera");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CameraObject>(deep);
     }
@@ -1287,9 +1432,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:RecalcAlways.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "RecalcAlways")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RecalculateAlways : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1312,6 +1454,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "RecalcAlways");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RecalculateAlways>(deep);
     }
@@ -1321,9 +1471,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:AutoScale.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "AutoScale")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AutoScaleFont : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1346,6 +1493,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "AutoScale");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoScaleFont>(deep);
     }
@@ -1355,9 +1510,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:DDE.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "DDE")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DdeObject : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1380,6 +1532,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "DDE");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DdeObject>(deep);
     }
@@ -1389,9 +1549,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:UIObj.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
-    [SchemaAttr(29, "UIObj")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class UIObject : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1414,6 +1571,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>)) });
+            builder.SetSchema(29, "UIObj");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UIObject>(deep);
     }
@@ -1423,8 +1588,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Anchor.</para>
     /// </summary>
-    [SchemaAttr(29, "Anchor")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Anchor : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1447,6 +1610,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(29, "Anchor");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Anchor>(deep);
     }
@@ -1456,8 +1626,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:TextHAlign.</para>
     /// </summary>
-    [SchemaAttr(29, "TextHAlign")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HorizontalTextAlignment : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1480,6 +1648,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(29, "TextHAlign");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HorizontalTextAlignment>(deep);
     }
@@ -1489,8 +1664,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:TextVAlign.</para>
     /// </summary>
-    [SchemaAttr(29, "TextVAlign")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VerticalTextAlignment : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1513,6 +1686,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(29, "TextVAlign");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VerticalTextAlignment>(deep);
     }
@@ -1522,8 +1702,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:FmlaRange.</para>
     /// </summary>
-    [SchemaAttr(29, "FmlaRange")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FormulaRange : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1546,6 +1724,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(29, "FmlaRange");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaRange>(deep);
     }
@@ -1555,8 +1740,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:SelType.</para>
     /// </summary>
-    [SchemaAttr(29, "SelType")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SelectionType : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1579,6 +1762,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(29, "SelType");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SelectionType>(deep);
     }
@@ -1588,8 +1778,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:MultiSel.</para>
     /// </summary>
-    [SchemaAttr(29, "MultiSel")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MultiSelections : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1612,6 +1800,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(29, "MultiSel");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MultiSelections>(deep);
     }
@@ -1621,8 +1816,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:LCT.</para>
     /// </summary>
-    [SchemaAttr(29, "LCT")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ListBoxCallbackType : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1645,6 +1838,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(29, "LCT");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ListBoxCallbackType>(deep);
     }
@@ -1654,8 +1854,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:ListItem.</para>
     /// </summary>
-    [SchemaAttr(29, "ListItem")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ListItem : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1678,6 +1876,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(29, "ListItem");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ListItem>(deep);
     }
@@ -1687,8 +1892,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:DropStyle.</para>
     /// </summary>
-    [SchemaAttr(29, "DropStyle")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DropStyle : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1711,6 +1914,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(29, "DropStyle");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropStyle>(deep);
     }
@@ -1720,8 +1930,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:FmlaLink.</para>
     /// </summary>
-    [SchemaAttr(29, "FmlaLink")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FormulaLink : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1744,6 +1952,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(29, "FmlaLink");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaLink>(deep);
     }
@@ -1753,8 +1968,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:FmlaPict.</para>
     /// </summary>
-    [SchemaAttr(29, "FmlaPict")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FormulaPicture : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1777,6 +1990,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(29, "FmlaPict");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaPicture>(deep);
     }
@@ -1786,8 +2006,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:FmlaGroup.</para>
     /// </summary>
-    [SchemaAttr(29, "FmlaGroup")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FormulaGroup : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1810,6 +2028,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(29, "FmlaGroup");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaGroup>(deep);
     }
@@ -1819,8 +2044,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:ScriptText.</para>
     /// </summary>
-    [SchemaAttr(29, "ScriptText")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ScriptText : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1843,6 +2066,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(29, "ScriptText");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScriptText>(deep);
     }
@@ -1852,8 +2082,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:ScriptExtended.</para>
     /// </summary>
-    [SchemaAttr(29, "ScriptExtended")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ScriptExtended : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1876,6 +2104,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(29, "ScriptExtended");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScriptExtended>(deep);
     }
@@ -1885,8 +2120,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:FmlaTxbx.</para>
     /// </summary>
-    [SchemaAttr(29, "FmlaTxbx")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FormulaTextBox : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1909,6 +2142,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(29, "FmlaTxbx");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaTextBox>(deep);
     }
@@ -1918,9 +2158,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:FmlaMacro.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 256L)]
-    [SchemaAttr(29, "FmlaMacro")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FormulaMacro : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1943,6 +2180,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (256L) });
+            builder.SetSchema(29, "FmlaMacro");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaMacro>(deep);
     }
@@ -1952,9 +2197,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Accel.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(ByteValue))]
-    [SchemaAttr(29, "Accel")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AcceleratorPrimary : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1977,6 +2219,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new ByteValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(ByteValue)) });
+            builder.SetSchema(29, "Accel");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AcceleratorPrimary>(deep);
     }
@@ -1986,9 +2236,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Accel2.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(ByteValue))]
-    [SchemaAttr(29, "Accel2")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AcceleratorSecondary : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2011,6 +2258,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new ByteValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(ByteValue)) });
+            builder.SetSchema(29, "Accel2");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AcceleratorSecondary>(deep);
     }
@@ -2020,9 +2275,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Row.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(IntegerValue))]
-    [SchemaAttr(29, "Row")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CommentRowTarget : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2045,6 +2297,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new IntegerValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(IntegerValue)) });
+            builder.SetSchema(29, "Row");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommentRowTarget>(deep);
     }
@@ -2054,9 +2314,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Column.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(IntegerValue))]
-    [SchemaAttr(29, "Column")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CommentColumnTarget : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2079,6 +2336,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new IntegerValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(IntegerValue)) });
+            builder.SetSchema(29, "Column");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommentColumnTarget>(deep);
     }
@@ -2088,9 +2353,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:VTEdit.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(IntegerValue))]
-    [SchemaAttr(29, "VTEdit")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class InputValidationType : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2113,6 +2375,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new IntegerValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(IntegerValue)) });
+            builder.SetSchema(29, "VTEdit");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<InputValidationType>(deep);
     }
@@ -2122,9 +2392,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:WidthMin.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(IntegerValue))]
-    [SchemaAttr(29, "WidthMin")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MinDropDownWidth : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2147,6 +2414,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new IntegerValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(IntegerValue)) });
+            builder.SetSchema(29, "WidthMin");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MinDropDownWidth>(deep);
     }
@@ -2156,9 +2431,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Sel.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(IntegerValue))]
-    [SchemaAttr(29, "Sel")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SelectionEntry : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2181,6 +2453,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new IntegerValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(IntegerValue)) });
+            builder.SetSchema(29, "Sel");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SelectionEntry>(deep);
     }
@@ -2190,9 +2470,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:DropLines.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(IntegerValue))]
-    [SchemaAttr(29, "DropLines")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DropLines : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2215,6 +2492,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new IntegerValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(IntegerValue)) });
+            builder.SetSchema(29, "DropLines");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropLines>(deep);
     }
@@ -2224,9 +2509,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Checked.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(IntegerValue))]
-    [SchemaAttr(29, "Checked")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Checked : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2249,6 +2531,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new IntegerValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(IntegerValue)) });
+            builder.SetSchema(29, "Checked");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Checked>(deep);
     }
@@ -2258,9 +2548,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Val.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(IntegerValue))]
-    [SchemaAttr(29, "Val")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ScrollBarPosition : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2283,6 +2570,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new IntegerValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(IntegerValue)) });
+            builder.SetSchema(29, "Val");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScrollBarPosition>(deep);
     }
@@ -2292,9 +2587,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Min.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(IntegerValue))]
-    [SchemaAttr(29, "Min")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ScrollBarMin : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2317,6 +2609,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new IntegerValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(IntegerValue)) });
+            builder.SetSchema(29, "Min");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScrollBarMin>(deep);
     }
@@ -2326,9 +2626,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Max.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(IntegerValue))]
-    [SchemaAttr(29, "Max")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ScrollBarMax : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2351,6 +2648,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new IntegerValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(IntegerValue)) });
+            builder.SetSchema(29, "Max");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScrollBarMax>(deep);
     }
@@ -2360,9 +2665,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Inc.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(IntegerValue))]
-    [SchemaAttr(29, "Inc")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ScrollBarIncrement : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2385,6 +2687,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new IntegerValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(IntegerValue)) });
+            builder.SetSchema(29, "Inc");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScrollBarIncrement>(deep);
     }
@@ -2394,9 +2704,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Page.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(IntegerValue))]
-    [SchemaAttr(29, "Page")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ScrollBarPageIncrement : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2419,6 +2726,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new IntegerValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(IntegerValue)) });
+            builder.SetSchema(29, "Page");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScrollBarPageIncrement>(deep);
     }
@@ -2428,9 +2743,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Dx.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(IntegerValue))]
-    [SchemaAttr(29, "Dx")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ScrollBarWidth : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2453,6 +2765,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new IntegerValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(IntegerValue)) });
+            builder.SetSchema(29, "Dx");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScrollBarWidth>(deep);
     }
@@ -2462,9 +2782,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:CF.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ClipboardFormatValues>))]
-    [SchemaAttr(29, "CF")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ClipboardFormat : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2487,6 +2804,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ClipboardFormatValues> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ClipboardFormatValues>)) });
+            builder.SetSchema(29, "CF");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ClipboardFormat>(deep);
     }
@@ -2496,9 +2821,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:ScriptLanguage.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(IntegerValue), IsNonNegative = true)]
-    [SchemaAttr(29, "ScriptLanguage")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ScriptLanguage : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2521,6 +2843,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new IntegerValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(IntegerValue)), IsNonNegative = (true) });
+            builder.SetSchema(29, "ScriptLanguage");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScriptLanguage>(deep);
     }
@@ -2530,9 +2860,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:ScriptLocation.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(IntegerValue), IsNonNegative = true)]
-    [SchemaAttr(29, "ScriptLocation")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ScriptLocation : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2553,6 +2880,14 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
             return new IntegerValue { InnerText = text };
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(IntegerValue)), IsNonNegative = (true) });
+            builder.SetSchema(29, "ScriptLocation");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>

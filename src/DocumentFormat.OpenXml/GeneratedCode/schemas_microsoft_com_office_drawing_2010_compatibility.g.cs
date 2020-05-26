@@ -18,8 +18,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.LegacyCompatibility
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is com14:compatSp.</para>
     /// </summary>
-    [SchemaAttr(63, "compatSp")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class CompatibilityShape : OpenXmlLeafElement
     {
         /// <summary>
@@ -42,12 +40,14 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.LegacyCompatibility
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(63, "compatSp");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<CompatibilityShape>()
-                           .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <inheritdoc/>

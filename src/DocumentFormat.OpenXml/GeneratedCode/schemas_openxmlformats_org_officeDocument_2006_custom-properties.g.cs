@@ -26,8 +26,6 @@ namespace DocumentFormat.OpenXml.CustomProperties
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CustomDocumentProperty))]
-    [SchemaAttr(4, "Properties")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Properties : OpenXmlPartRootElement
     {
         /// <summary>
@@ -59,6 +57,13 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Properties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(4, "Properties");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -181,8 +186,6 @@ namespace DocumentFormat.OpenXml.CustomProperties
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.VariantTypes.VTVStreamData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.VariantTypes.VTClassId))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.VariantTypes.VTClipboardData))]
-    [SchemaAttr(4, "property")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CustomDocumentProperty : OpenXmlCompositeElement
     {
         /// <summary>
@@ -259,18 +262,20 @@ namespace DocumentFormat.OpenXml.CustomProperties
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(4, "property");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CustomDocumentProperty>()
-                           .AddAttribute(0, "fmtid", a => a.FormatId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\\}\\s*") });
-                           })
-                           .AddAttribute(0, "pid", a => a.PropertyId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "name", a => a.Name)
-                           .AddAttribute(0, "linkTarget", a => a.LinkTarget);
+.AddAttribute(0, "fmtid", a => a.FormatId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\\}\\s*") });
+})
+.AddAttribute(0, "pid", a => a.PropertyId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "name", a => a.Name)
+.AddAttribute(0, "linkTarget", a => a.LinkTarget);
         }
 
         /// <summary>

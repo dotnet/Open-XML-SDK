@@ -17,8 +17,6 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pvml:iscomment.</para>
     /// </summary>
-    [SchemaAttr(30, "iscomment")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class InkAnnotationFlag : OpenXmlLeafElement
     {
         /// <summary>
@@ -26,6 +24,13 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
         /// </summary>
         public InkAnnotationFlag() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(30, "iscomment");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -37,8 +42,6 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pvml:textdata.</para>
     /// </summary>
-    [SchemaAttr(30, "textdata")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TextData : OpenXmlLeafElement
     {
         /// <summary>
@@ -61,8 +64,10 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(30, "textdata");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<TextData>()
-                           .AddAttribute(0, "id", a => a.Id);
+.AddAttribute(0, "id", a => a.Id);
         }
 
         /// <inheritdoc/>

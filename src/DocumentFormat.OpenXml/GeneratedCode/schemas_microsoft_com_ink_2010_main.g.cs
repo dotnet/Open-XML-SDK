@@ -28,8 +28,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
     [ChildElementInfo(typeof(ContextNodeProperty))]
     [ChildElementInfo(typeof(SourceLink))]
     [ChildElementInfo(typeof(DestinationLink))]
-    [SchemaAttr(45, "context")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ContextNode : OpenXmlCompositeElement
     {
         /// <summary>
@@ -276,89 +274,91 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(45, "context");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ContextNode>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Office2010.Ink.KnownContextNodeTypeValues>)), UnionId = (0) });
-                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"), UnionId = (0) });
-                               });
-                           })
-                           .AddAttribute(0, "rotatedBoundingBox", a => a.RotatedBoundingBox, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+,-?[0-9]+") });
-                           })
-                           .AddAttribute(0, "alignmentLevel", a => a.AlignmentLevel)
-                           .AddAttribute(0, "contentType", a => a.ContentType)
-                           .AddAttribute(0, "ascender", a => a.Ascender, aBuilder =>
-                           {
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(ListValue<StringValue>)), UnionId = (0) });
-                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
-                               });
-                           })
-                           .AddAttribute(0, "descender", a => a.Descender, aBuilder =>
-                           {
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(ListValue<StringValue>)), UnionId = (0) });
-                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
-                               });
-                           })
-                           .AddAttribute(0, "baseline", a => a.Baseline, aBuilder =>
-                           {
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(ListValue<StringValue>)), UnionId = (0) });
-                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
-                               });
-                           })
-                           .AddAttribute(0, "midline", a => a.Midline, aBuilder =>
-                           {
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(ListValue<StringValue>)), UnionId = (0) });
-                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
-                               });
-                           })
-                           .AddAttribute(0, "customRecognizerId", a => a.CustomRecognizerId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "mathML", a => a.MathML)
-                           .AddAttribute(0, "mathStruct", a => a.MathStruct)
-                           .AddAttribute(0, "mathSymbol", a => a.MathSymbol)
-                           .AddAttribute(0, "beginModifierType", a => a.BeginModifierType)
-                           .AddAttribute(0, "endModifierType", a => a.EndModifierType)
-                           .AddAttribute(0, "rotationAngle", a => a.RotationAngle)
-                           .AddAttribute(0, "hotPoints", a => a.HotPoints, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+,-?[0-9]+") });
-                           })
-                           .AddAttribute(0, "centroid", a => a.Centroid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+,-?[0-9]+") });
-                           })
-                           .AddAttribute(0, "semanticType", a => a.SemanticType, aBuilder =>
-                           {
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Office2010.Ink.KnownSemanticTypeValues>)), UnionId = (0) });
-                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), UnionId = (0) });
-                               });
-                           })
-                           .AddAttribute(0, "shapeName", a => a.ShapeName)
-                           .AddAttribute(0, "shapeGeometry", a => a.ShapeGeometry, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+,-?[0-9]+") });
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Office2010.Ink.KnownContextNodeTypeValues>)), UnionId = (0) });
+union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"), UnionId = (0) });
+});
+})
+.AddAttribute(0, "rotatedBoundingBox", a => a.RotatedBoundingBox, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+,-?[0-9]+") });
+})
+.AddAttribute(0, "alignmentLevel", a => a.AlignmentLevel)
+.AddAttribute(0, "contentType", a => a.ContentType)
+.AddAttribute(0, "ascender", a => a.Ascender, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(ListValue<StringValue>)), UnionId = (0) });
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+});
+})
+.AddAttribute(0, "descender", a => a.Descender, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(ListValue<StringValue>)), UnionId = (0) });
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+});
+})
+.AddAttribute(0, "baseline", a => a.Baseline, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(ListValue<StringValue>)), UnionId = (0) });
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+});
+})
+.AddAttribute(0, "midline", a => a.Midline, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(ListValue<StringValue>)), UnionId = (0) });
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+});
+})
+.AddAttribute(0, "customRecognizerId", a => a.CustomRecognizerId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "mathML", a => a.MathML)
+.AddAttribute(0, "mathStruct", a => a.MathStruct)
+.AddAttribute(0, "mathSymbol", a => a.MathSymbol)
+.AddAttribute(0, "beginModifierType", a => a.BeginModifierType)
+.AddAttribute(0, "endModifierType", a => a.EndModifierType)
+.AddAttribute(0, "rotationAngle", a => a.RotationAngle)
+.AddAttribute(0, "hotPoints", a => a.HotPoints, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+,-?[0-9]+") });
+})
+.AddAttribute(0, "centroid", a => a.Centroid, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+,-?[0-9]+") });
+})
+.AddAttribute(0, "semanticType", a => a.SemanticType, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Office2010.Ink.KnownSemanticTypeValues>)), UnionId = (0) });
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), UnionId = (0) });
+});
+})
+.AddAttribute(0, "shapeName", a => a.ShapeName)
+.AddAttribute(0, "shapeGeometry", a => a.ShapeGeometry, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+,-?[0-9]+") });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -379,8 +379,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is msink:property.</para>
     /// </summary>
-    [SchemaAttr(45, "property")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ContextNodeProperty : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -416,11 +414,13 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(45, "property");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ContextNodeProperty>()
-                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           });
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+});
         }
 
         /// <inheritdoc/>
@@ -432,8 +432,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is msink:sourceLink.</para>
     /// </summary>
-    [SchemaAttr(45, "sourceLink")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SourceLink : ContextLinkType
     {
         /// <summary>
@@ -441,6 +439,13 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// </summary>
         public SourceLink() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(45, "sourceLink");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -452,8 +457,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is msink:destinationLink.</para>
     /// </summary>
-    [SchemaAttr(45, "destinationLink")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DestinationLink : ContextLinkType
     {
         /// <summary>
@@ -461,6 +464,13 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// </summary>
         public DestinationLink() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(45, "destinationLink");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>

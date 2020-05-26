@@ -18,8 +18,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:control.</para>
     /// </summary>
-    [SchemaAttr(57, "control")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ControlCloneRegular : OpenXmlLeafElement
     {
         /// <summary>
@@ -292,99 +290,101 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "control");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<ControlCloneRegular>()
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
-                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showImage", a => a.ShowImage)
-                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "image", a => a.Image, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showLabel", a => a.ShowLabel)
+.AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showImage", a => a.ShowImage)
+.AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         /// <inheritdoc/>
@@ -396,8 +396,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:button.</para>
     /// </summary>
-    [SchemaAttr(57, "button")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ButtonRegular : OpenXmlLeafElement
     {
         /// <summary>
@@ -710,115 +708,117 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "button");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<ButtonRegular>()
-                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
-                           })
-                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
-                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showImage", a => a.ShowImage)
-                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "description", a => a.Description, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+})
+.AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "image", a => a.Image, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showLabel", a => a.ShowLabel)
+.AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showImage", a => a.ShowImage)
+.AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -836,8 +836,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:checkBox.</para>
     /// </summary>
-    [SchemaAttr(57, "checkBox")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class CheckBox : OpenXmlLeafElement
     {
         /// <summary>
@@ -1090,97 +1088,99 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "checkBox");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<CheckBox>()
-                           .AddAttribute(0, "getPressed", a => a.GetPressed, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
-                           })
-                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "getPressed", a => a.GetPressed, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "description", a => a.Description, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+})
+.AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         /// <inheritdoc/>
@@ -1201,8 +1201,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// </remark>
     [ChildElementInfo(typeof(Item), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(ButtonRegular), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "gallery")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class GalleryRegular : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1729,179 +1727,181 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "gallery");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<GalleryRegular>()
-                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
-                           })
-                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "invalidateContentOnDrop", a => a.InvalidateContentOnDrop)
-                           .AddAttribute(0, "columns", a => a.Columns, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (1024L), IsPositive = (true) });
-                           })
-                           .AddAttribute(0, "rows", a => a.Rows, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (1024L), IsPositive = (true) });
-                           })
-                           .AddAttribute(0, "itemWidth", a => a.ItemWidth, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (4096L), IsPositive = (true) });
-                           })
-                           .AddAttribute(0, "itemHeight", a => a.ItemHeight, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (4096L), IsPositive = (true) });
-                           })
-                           .AddAttribute(0, "getItemWidth", a => a.GetItemWidth, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getItemHeight", a => a.GetItemHeight, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showItemLabel", a => a.ShowItemLabel)
-                           .AddAttribute(0, "showInRibbon", a => a.ShowInRibbon)
-                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showItemImage", a => a.ShowItemImage)
-                           .AddAttribute(0, "getItemCount", a => a.GetItemCount, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getItemLabel", a => a.GetItemLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getItemScreentip", a => a.GetItemScreentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getItemSupertip", a => a.GetItemSupertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getItemImage", a => a.GetItemImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getItemID", a => a.GetItemID, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "sizeString", a => a.SizeString, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSelectedItemID", a => a.GetSelectedItemID, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSelectedItemIndex", a => a.GetSelectedItemIndex, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
-                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showImage", a => a.ShowImage)
-                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "description", a => a.Description, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+})
+.AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "invalidateContentOnDrop", a => a.InvalidateContentOnDrop)
+.AddAttribute(0, "columns", a => a.Columns, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (1024L), IsPositive = (true) });
+})
+.AddAttribute(0, "rows", a => a.Rows, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (1024L), IsPositive = (true) });
+})
+.AddAttribute(0, "itemWidth", a => a.ItemWidth, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (4096L), IsPositive = (true) });
+})
+.AddAttribute(0, "itemHeight", a => a.ItemHeight, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (4096L), IsPositive = (true) });
+})
+.AddAttribute(0, "getItemWidth", a => a.GetItemWidth, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getItemHeight", a => a.GetItemHeight, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showItemLabel", a => a.ShowItemLabel)
+.AddAttribute(0, "showInRibbon", a => a.ShowInRibbon)
+.AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "image", a => a.Image, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showItemImage", a => a.ShowItemImage)
+.AddAttribute(0, "getItemCount", a => a.GetItemCount, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getItemLabel", a => a.GetItemLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getItemScreentip", a => a.GetItemScreentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getItemSupertip", a => a.GetItemSupertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getItemImage", a => a.GetItemImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getItemID", a => a.GetItemID, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "sizeString", a => a.SizeString, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSelectedItemID", a => a.GetSelectedItemID, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSelectedItemIndex", a => a.GetSelectedItemIndex, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showLabel", a => a.ShowLabel)
+.AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showImage", a => a.ShowImage)
+.AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1927,8 +1927,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:toggleButton.</para>
     /// </summary>
-    [SchemaAttr(57, "toggleButton")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ToggleButtonRegular : OpenXmlLeafElement
     {
         /// <summary>
@@ -2251,119 +2249,121 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "toggleButton");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<ToggleButtonRegular>()
-                           .AddAttribute(0, "getPressed", a => a.GetPressed, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
-                           })
-                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
-                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showImage", a => a.ShowImage)
-                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "getPressed", a => a.GetPressed, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "description", a => a.Description, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+})
+.AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "image", a => a.Image, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showLabel", a => a.ShowLabel)
+.AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showImage", a => a.ShowImage)
+.AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         /// <inheritdoc/>
@@ -2375,8 +2375,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:menuSeparator.</para>
     /// </summary>
-    [SchemaAttr(57, "menuSeparator")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class MenuSeparator : OpenXmlLeafElement
     {
         /// <summary>
@@ -2479,43 +2477,45 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "menuSeparator");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<MenuSeparator>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "title", a => a.Title, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getTitle", a => a.GetTitle, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "title", a => a.Title, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getTitle", a => a.GetTitle, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         /// <inheritdoc/>
@@ -2538,8 +2538,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     [ChildElementInfo(typeof(VisibleButton), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(VisibleToggleButton), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(MenuRegular), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "splitButton")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SplitButtonRegular : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2736,62 +2734,64 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "splitButton");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<SplitButtonRegular>()
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
-                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showLabel", a => a.ShowLabel)
+.AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2841,8 +2841,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     [ChildElementInfo(typeof(SplitButtonRegular), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(MenuRegular), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DynamicMenuRegular), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "menu")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class MenuRegular : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3179,112 +3177,114 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "menu");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<MenuRegular>()
-                           .AddAttribute(0, "itemSize", a => a.ItemSize)
-                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
-                           })
-                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
-                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showImage", a => a.ShowImage)
-                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "itemSize", a => a.ItemSize)
+.AddAttribute(0, "description", a => a.Description, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+})
+.AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "image", a => a.Image, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showLabel", a => a.ShowLabel)
+.AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showImage", a => a.ShowImage)
+.AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3329,8 +3329,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:dynamicMenu.</para>
     /// </summary>
-    [SchemaAttr(57, "dynamicMenu")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class DynamicMenuRegular : OpenXmlLeafElement
     {
         /// <summary>
@@ -3653,117 +3651,119 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "dynamicMenu");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<DynamicMenuRegular>()
-                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
-                           })
-                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getContent", a => a.GetContent, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "invalidateContentOnDrop", a => a.InvalidateContentOnDrop)
-                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
-                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showImage", a => a.ShowImage)
-                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "description", a => a.Description, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+})
+.AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getContent", a => a.GetContent, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "invalidateContentOnDrop", a => a.InvalidateContentOnDrop)
+.AddAttribute(0, "image", a => a.Image, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showLabel", a => a.ShowLabel)
+.AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showImage", a => a.ShowImage)
+.AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         /// <inheritdoc/>
@@ -3786,8 +3786,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     [ChildElementInfo(typeof(VisibleButton), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(VisibleToggleButton), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(MenuWithTitle), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "splitButton")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3984,62 +3982,64 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "splitButton");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<SplitButtonWithTitle>()
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
-                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showLabel", a => a.ShowLabel)
+.AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4089,8 +4089,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     [ChildElementInfo(typeof(SplitButtonWithTitle), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(MenuWithTitle), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DynamicMenuRegular), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "menu")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class MenuWithTitle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4427,112 +4425,114 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "menu");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<MenuWithTitle>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "itemSize", a => a.ItemSize)
-                           .AddAttribute(0, "title", a => a.Title, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getTitle", a => a.GetTitle, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
-                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showImage", a => a.ShowImage)
-                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "itemSize", a => a.ItemSize)
+.AddAttribute(0, "title", a => a.Title, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getTitle", a => a.GetTitle, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "image", a => a.Image, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showLabel", a => a.ShowLabel)
+.AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showImage", a => a.ShowImage)
+.AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4577,8 +4577,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:menuSeparator.</para>
     /// </summary>
-    [SchemaAttr(57, "menuSeparator")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class MenuSeparatorNoTitle : OpenXmlLeafElement
     {
         /// <summary>
@@ -4661,35 +4659,37 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "menuSeparator");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<MenuSeparatorNoTitle>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         /// <inheritdoc/>
@@ -4701,8 +4701,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:control.</para>
     /// </summary>
-    [SchemaAttr(57, "control")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ControlClone : OpenXmlLeafElement
     {
         /// <summary>
@@ -5015,112 +5013,114 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "control");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<ControlClone>()
-                           .AddAttribute(0, "size", a => a.Size)
-                           .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
-                           })
-                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
-                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showImage", a => a.ShowImage)
-                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "size", a => a.Size)
+.AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "description", a => a.Description, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+})
+.AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "image", a => a.Image, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showLabel", a => a.ShowLabel)
+.AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showImage", a => a.ShowImage)
+.AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -5138,8 +5138,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:labelControl.</para>
     /// </summary>
-    [SchemaAttr(57, "labelControl")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class LabelControl : OpenXmlLeafElement
     {
         /// <summary>
@@ -5352,78 +5350,80 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "labelControl");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<LabelControl>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
-                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showLabel", a => a.ShowLabel)
+.AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         /// <inheritdoc/>
@@ -5435,8 +5435,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:button.</para>
     /// </summary>
-    [SchemaAttr(57, "button")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Button : OpenXmlLeafElement
     {
         /// <summary>
@@ -5769,120 +5767,122 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "button");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<Button>()
-                           .AddAttribute(0, "size", a => a.Size)
-                           .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
-                           })
-                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
-                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showImage", a => a.ShowImage)
-                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "size", a => a.Size)
+.AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "description", a => a.Description, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+})
+.AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "image", a => a.Image, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showLabel", a => a.ShowLabel)
+.AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showImage", a => a.ShowImage)
+.AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -5900,8 +5900,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:toggleButton.</para>
     /// </summary>
-    [SchemaAttr(57, "toggleButton")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ToggleButton : OpenXmlLeafElement
     {
         /// <summary>
@@ -6244,124 +6242,126 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "toggleButton");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<ToggleButton>()
-                           .AddAttribute(0, "size", a => a.Size)
-                           .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getPressed", a => a.GetPressed, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
-                           })
-                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
-                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showImage", a => a.ShowImage)
-                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "size", a => a.Size)
+.AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getPressed", a => a.GetPressed, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "description", a => a.Description, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+})
+.AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "image", a => a.Image, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showLabel", a => a.ShowLabel)
+.AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showImage", a => a.ShowImage)
+.AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         /// <inheritdoc/>
@@ -6373,8 +6373,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:editBox.</para>
     /// </summary>
-    [SchemaAttr(57, "editBox")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class EditBox : OpenXmlLeafElement
     {
         /// <summary>
@@ -6697,119 +6695,121 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "editBox");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<EditBox>()
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "maxLength", a => a.MaxLength, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (1024L), IsPositive = (true) });
-                           })
-                           .AddAttribute(0, "getText", a => a.GetText, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "onChange", a => a.OnChange, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "sizeString", a => a.SizeString, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
-                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showImage", a => a.ShowImage)
-                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "image", a => a.Image, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "maxLength", a => a.MaxLength, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (1024L), IsPositive = (true) });
+})
+.AddAttribute(0, "getText", a => a.GetText, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "onChange", a => a.OnChange, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "sizeString", a => a.SizeString, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showLabel", a => a.ShowLabel)
+.AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showImage", a => a.ShowImage)
+.AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         /// <inheritdoc/>
@@ -6828,8 +6828,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Item), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "comboBox")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ComboBox : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7256,145 +7254,147 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "comboBox");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<ComboBox>()
-                           .AddAttribute(0, "showItemImage", a => a.ShowItemImage)
-                           .AddAttribute(0, "getItemCount", a => a.GetItemCount, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getItemLabel", a => a.GetItemLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getItemScreentip", a => a.GetItemScreentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getItemSupertip", a => a.GetItemSupertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getItemImage", a => a.GetItemImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getItemID", a => a.GetItemID, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "sizeString", a => a.SizeString, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "invalidateContentOnDrop", a => a.InvalidateContentOnDrop)
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "maxLength", a => a.MaxLength, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (1024L), IsPositive = (true) });
-                           })
-                           .AddAttribute(0, "getText", a => a.GetText, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "onChange", a => a.OnChange, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
-                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showImage", a => a.ShowImage)
-                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "showItemImage", a => a.ShowItemImage)
+.AddAttribute(0, "getItemCount", a => a.GetItemCount, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getItemLabel", a => a.GetItemLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getItemScreentip", a => a.GetItemScreentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getItemSupertip", a => a.GetItemSupertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getItemImage", a => a.GetItemImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getItemID", a => a.GetItemID, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "sizeString", a => a.SizeString, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "invalidateContentOnDrop", a => a.InvalidateContentOnDrop)
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "image", a => a.Image, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "maxLength", a => a.MaxLength, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (1024L), IsPositive = (true) });
+})
+.AddAttribute(0, "getText", a => a.GetText, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "onChange", a => a.OnChange, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showLabel", a => a.ShowLabel)
+.AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showImage", a => a.ShowImage)
+.AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -7425,8 +7425,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// </remark>
     [ChildElementInfo(typeof(Item), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(ButtonRegular), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "dropDown")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class DropDownRegular : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7853,145 +7851,147 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "dropDown");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<DropDownRegular>()
-                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showItemImage", a => a.ShowItemImage)
-                           .AddAttribute(0, "getItemCount", a => a.GetItemCount, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getItemLabel", a => a.GetItemLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getItemScreentip", a => a.GetItemScreentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getItemSupertip", a => a.GetItemSupertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getItemImage", a => a.GetItemImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getItemID", a => a.GetItemID, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "sizeString", a => a.SizeString, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSelectedItemID", a => a.GetSelectedItemID, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSelectedItemIndex", a => a.GetSelectedItemIndex, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showItemLabel", a => a.ShowItemLabel)
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
-                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showImage", a => a.ShowImage)
-                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "image", a => a.Image, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showItemImage", a => a.ShowItemImage)
+.AddAttribute(0, "getItemCount", a => a.GetItemCount, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getItemLabel", a => a.GetItemLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getItemScreentip", a => a.GetItemScreentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getItemSupertip", a => a.GetItemSupertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getItemImage", a => a.GetItemImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getItemID", a => a.GetItemID, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "sizeString", a => a.SizeString, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSelectedItemID", a => a.GetSelectedItemID, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSelectedItemIndex", a => a.GetSelectedItemIndex, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showItemLabel", a => a.ShowItemLabel)
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showLabel", a => a.ShowLabel)
+.AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showImage", a => a.ShowImage)
+.AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -8023,8 +8023,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// </remark>
     [ChildElementInfo(typeof(Item), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(ButtonRegular), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "gallery")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Gallery : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8571,184 +8569,186 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "gallery");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<Gallery>()
-                           .AddAttribute(0, "size", a => a.Size)
-                           .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
-                           })
-                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "invalidateContentOnDrop", a => a.InvalidateContentOnDrop)
-                           .AddAttribute(0, "columns", a => a.Columns, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (1024L), IsPositive = (true) });
-                           })
-                           .AddAttribute(0, "rows", a => a.Rows, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (1024L), IsPositive = (true) });
-                           })
-                           .AddAttribute(0, "itemWidth", a => a.ItemWidth, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (4096L), IsPositive = (true) });
-                           })
-                           .AddAttribute(0, "itemHeight", a => a.ItemHeight, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (4096L), IsPositive = (true) });
-                           })
-                           .AddAttribute(0, "getItemWidth", a => a.GetItemWidth, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getItemHeight", a => a.GetItemHeight, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showItemLabel", a => a.ShowItemLabel)
-                           .AddAttribute(0, "showInRibbon", a => a.ShowInRibbon)
-                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showItemImage", a => a.ShowItemImage)
-                           .AddAttribute(0, "getItemCount", a => a.GetItemCount, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getItemLabel", a => a.GetItemLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getItemScreentip", a => a.GetItemScreentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getItemSupertip", a => a.GetItemSupertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getItemImage", a => a.GetItemImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getItemID", a => a.GetItemID, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "sizeString", a => a.SizeString, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSelectedItemID", a => a.GetSelectedItemID, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSelectedItemIndex", a => a.GetSelectedItemIndex, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
-                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showImage", a => a.ShowImage)
-                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "size", a => a.Size)
+.AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "description", a => a.Description, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+})
+.AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "invalidateContentOnDrop", a => a.InvalidateContentOnDrop)
+.AddAttribute(0, "columns", a => a.Columns, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (1024L), IsPositive = (true) });
+})
+.AddAttribute(0, "rows", a => a.Rows, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (1024L), IsPositive = (true) });
+})
+.AddAttribute(0, "itemWidth", a => a.ItemWidth, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (4096L), IsPositive = (true) });
+})
+.AddAttribute(0, "itemHeight", a => a.ItemHeight, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (4096L), IsPositive = (true) });
+})
+.AddAttribute(0, "getItemWidth", a => a.GetItemWidth, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getItemHeight", a => a.GetItemHeight, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showItemLabel", a => a.ShowItemLabel)
+.AddAttribute(0, "showInRibbon", a => a.ShowInRibbon)
+.AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "image", a => a.Image, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showItemImage", a => a.ShowItemImage)
+.AddAttribute(0, "getItemCount", a => a.GetItemCount, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getItemLabel", a => a.GetItemLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getItemScreentip", a => a.GetItemScreentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getItemSupertip", a => a.GetItemSupertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getItemImage", a => a.GetItemImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getItemID", a => a.GetItemID, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "sizeString", a => a.SizeString, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSelectedItemID", a => a.GetSelectedItemID, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSelectedItemIndex", a => a.GetSelectedItemIndex, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showLabel", a => a.ShowLabel)
+.AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showImage", a => a.ShowImage)
+.AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -8800,8 +8800,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     [ChildElementInfo(typeof(SplitButtonRegular), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(MenuRegular), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DynamicMenuRegular), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "menu")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Menu : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9158,117 +9156,119 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "menu");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<Menu>()
-                           .AddAttribute(0, "size", a => a.Size)
-                           .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "itemSize", a => a.ItemSize)
-                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
-                           })
-                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
-                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showImage", a => a.ShowImage)
-                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "size", a => a.Size)
+.AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "itemSize", a => a.ItemSize)
+.AddAttribute(0, "description", a => a.Description, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+})
+.AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "image", a => a.Image, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showLabel", a => a.ShowLabel)
+.AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showImage", a => a.ShowImage)
+.AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -9316,8 +9316,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:dynamicMenu.</para>
     /// </summary>
-    [SchemaAttr(57, "dynamicMenu")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class DynamicMenu : OpenXmlLeafElement
     {
         /// <summary>
@@ -9660,122 +9658,124 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "dynamicMenu");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<DynamicMenu>()
-                           .AddAttribute(0, "size", a => a.Size)
-                           .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
-                           })
-                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getContent", a => a.GetContent, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "invalidateContentOnDrop", a => a.InvalidateContentOnDrop)
-                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
-                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showImage", a => a.ShowImage)
-                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "size", a => a.Size)
+.AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "description", a => a.Description, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+})
+.AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getContent", a => a.GetContent, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "invalidateContentOnDrop", a => a.InvalidateContentOnDrop)
+.AddAttribute(0, "image", a => a.Image, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showLabel", a => a.ShowLabel)
+.AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showImage", a => a.ShowImage)
+.AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         /// <inheritdoc/>
@@ -9798,8 +9798,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     [ChildElementInfo(typeof(VisibleButton), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(VisibleToggleButton), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(MenuRegular), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "splitButton")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SplitButton : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10016,67 +10014,69 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "splitButton");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<SplitButton>()
-                           .AddAttribute(0, "size", a => a.Size)
-                           .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
-                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "size", a => a.Size)
+.AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showLabel", a => a.ShowLabel)
+.AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -10139,8 +10139,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     [ChildElementInfo(typeof(SplitButton), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(Box), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(ButtonGroup), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "box")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Box : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10277,41 +10275,43 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "box");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<Box>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "boxStyle", a => a.BoxStyle);
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "boxStyle", a => a.BoxStyle);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 1000, version: FileFormatVersions.Office2010)
@@ -10367,8 +10367,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     [ChildElementInfo(typeof(DynamicMenuRegular), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(SplitButtonRegular), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(Separator), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "buttonGroup")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ButtonGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10495,40 +10493,42 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "buttonGroup");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<ButtonGroup>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -10557,8 +10557,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:button.</para>
     /// </summary>
-    [SchemaAttr(57, "button")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class BackstageMenuButton : OpenXmlLeafElement
     {
         /// <summary>
@@ -10751,70 +10749,72 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "button");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<BackstageMenuButton>()
-                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
-                           })
-                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "isDefinitive", a => a.IsDefinitive)
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "description", a => a.Description, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+})
+.AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "isDefinitive", a => a.IsDefinitive)
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "image", a => a.Image, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         /// <inheritdoc/>
@@ -10826,8 +10826,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:checkBox.</para>
     /// </summary>
-    [SchemaAttr(57, "checkBox")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class BackstageMenuCheckBox : OpenXmlLeafElement
     {
         /// <summary>
@@ -10990,61 +10988,63 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "checkBox");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<BackstageMenuCheckBox>()
-                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
-                           })
-                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getPressed", a => a.GetPressed, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "description", a => a.Description, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+})
+.AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getPressed", a => a.GetPressed, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         /// <inheritdoc/>
@@ -11063,8 +11063,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(BackstageMenuGroup), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "menu")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class BackstageSubMenu : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11261,65 +11259,67 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "menu");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<BackstageSubMenu>()
-                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
-                           })
-                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "description", a => a.Description, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+})
+.AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "image", a => a.Image, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -11344,8 +11344,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:toggleButton.</para>
     /// </summary>
-    [SchemaAttr(57, "toggleButton")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class BackstageMenuToggleButton : OpenXmlLeafElement
     {
         /// <summary>
@@ -11538,73 +11536,75 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "toggleButton");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<BackstageMenuToggleButton>()
-                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
-                           })
-                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getPressed", a => a.GetPressed, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "image", a => a.Image, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "description", a => a.Description, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+})
+.AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getPressed", a => a.GetPressed, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         /// <inheritdoc/>
@@ -11616,8 +11616,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:button.</para>
     /// </summary>
-    [SchemaAttr(57, "button")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class BackstageGroupButton : OpenXmlLeafElement
     {
         /// <summary>
@@ -11850,80 +11848,82 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "button");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<BackstageGroupButton>()
-                           .AddAttribute(0, "expand", a => a.Expand)
-                           .AddAttribute(0, "style", a => a.Style)
-                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "isDefinitive", a => a.IsDefinitive)
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "expand", a => a.Expand)
+.AddAttribute(0, "style", a => a.Style)
+.AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "isDefinitive", a => a.IsDefinitive)
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "image", a => a.Image, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         /// <inheritdoc/>
@@ -11935,8 +11935,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:checkBox.</para>
     /// </summary>
-    [SchemaAttr(57, "checkBox")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class BackstageCheckBox : OpenXmlLeafElement
     {
         /// <summary>
@@ -12149,78 +12147,80 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "checkBox");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<BackstageCheckBox>()
-                           .AddAttribute(0, "expand", a => a.Expand)
-                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
-                           })
-                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getPressed", a => a.GetPressed, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "expand", a => a.Expand)
+.AddAttribute(0, "description", a => a.Description, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+})
+.AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getPressed", a => a.GetPressed, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         /// <inheritdoc/>
@@ -12232,8 +12232,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:editBox.</para>
     /// </summary>
-    [SchemaAttr(57, "editBox")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class BackstageEditBox : OpenXmlLeafElement
     {
         /// <summary>
@@ -12416,63 +12414,65 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "editBox");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<BackstageEditBox>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "alignLabel", a => a.AlignLabel)
-                           .AddAttribute(0, "expand", a => a.Expand)
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getText", a => a.GetText, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "onChange", a => a.OnChange, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "maxLength", a => a.MaxLength, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (1024L), IsPositive = (true) });
-                           })
-                           .AddAttribute(0, "sizeString", a => a.SizeString, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "alignLabel", a => a.AlignLabel)
+.AddAttribute(0, "expand", a => a.Expand)
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getText", a => a.GetText, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "onChange", a => a.OnChange, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "maxLength", a => a.MaxLength, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (1024L), IsPositive = (true) });
+})
+.AddAttribute(0, "sizeString", a => a.SizeString, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         /// <inheritdoc/>
@@ -12491,8 +12491,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ItemBackstageItem), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "dropDown")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class BackstageDropDown : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12759,87 +12757,89 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "dropDown");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<BackstageDropDown>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "alignLabel", a => a.AlignLabel)
-                           .AddAttribute(0, "expand", a => a.Expand)
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSelectedItemIndex", a => a.GetSelectedItemIndex, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "sizeString", a => a.SizeString, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getItemCount", a => a.GetItemCount, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getItemLabel", a => a.GetItemLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getItemID", a => a.GetItemID, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "alignLabel", a => a.AlignLabel)
+.AddAttribute(0, "expand", a => a.Expand)
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSelectedItemIndex", a => a.GetSelectedItemIndex, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "sizeString", a => a.SizeString, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getItemCount", a => a.GetItemCount, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getItemLabel", a => a.GetItemLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getItemID", a => a.GetItemID, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -12865,8 +12865,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(RadioButtonBackstageItem), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "radioGroup")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class RadioGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13083,67 +13081,69 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "radioGroup");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<RadioGroup>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "alignLabel", a => a.AlignLabel)
-                           .AddAttribute(0, "expand", a => a.Expand)
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSelectedItemIndex", a => a.GetSelectedItemIndex, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getItemCount", a => a.GetItemCount, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getItemLabel", a => a.GetItemLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getItemID", a => a.GetItemID, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "alignLabel", a => a.AlignLabel)
+.AddAttribute(0, "expand", a => a.Expand)
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSelectedItemIndex", a => a.GetSelectedItemIndex, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getItemCount", a => a.GetItemCount, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getItemLabel", a => a.GetItemLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getItemID", a => a.GetItemID, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -13169,8 +13169,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ItemBackstageItem), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "comboBox")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class BackstageComboBox : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13397,71 +13395,73 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "comboBox");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<BackstageComboBox>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "alignLabel", a => a.AlignLabel)
-                           .AddAttribute(0, "expand", a => a.Expand)
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getText", a => a.GetText, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "onChange", a => a.OnChange, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "sizeString", a => a.SizeString, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getItemCount", a => a.GetItemCount, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getItemLabel", a => a.GetItemLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getItemID", a => a.GetItemID, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "alignLabel", a => a.AlignLabel)
+.AddAttribute(0, "expand", a => a.Expand)
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getText", a => a.GetText, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "onChange", a => a.OnChange, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "sizeString", a => a.SizeString, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getItemCount", a => a.GetItemCount, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getItemLabel", a => a.GetItemLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getItemID", a => a.GetItemID, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -13480,8 +13480,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:hyperlink.</para>
     /// </summary>
-    [SchemaAttr(57, "hyperlink")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Hyperlink : OpenXmlLeafElement
     {
         /// <summary>
@@ -13724,87 +13722,89 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "hyperlink");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<Hyperlink>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "alignLabel", a => a.AlignLabel)
-                           .AddAttribute(0, "expand", a => a.Expand)
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "target", a => a.Target, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getTarget", a => a.GetTarget, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "alignLabel", a => a.AlignLabel)
+.AddAttribute(0, "expand", a => a.Expand)
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "image", a => a.Image, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "target", a => a.Target, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getTarget", a => a.GetTarget, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         /// <inheritdoc/>
@@ -13816,8 +13816,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:labelControl.</para>
     /// </summary>
-    [SchemaAttr(57, "labelControl")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class BackstageLabelControl : OpenXmlLeafElement
     {
         /// <summary>
@@ -13950,40 +13948,42 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "labelControl");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<BackstageLabelControl>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "alignLabel", a => a.AlignLabel)
-                           .AddAttribute(0, "expand", a => a.Expand)
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "noWrap", a => a.NoWrap);
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "alignLabel", a => a.AlignLabel)
+.AddAttribute(0, "expand", a => a.Expand)
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "noWrap", a => a.NoWrap);
         }
 
         /// <inheritdoc/>
@@ -14022,8 +14022,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     [ChildElementInfo(typeof(GroupBox), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(LayoutContainer), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(ImageControl), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "groupBox")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class GroupBox : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14120,28 +14118,30 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "groupBox");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<GroupBox>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "expand", a => a.Expand)
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "expand", a => a.Expand)
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -14203,8 +14203,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     [ChildElementInfo(typeof(GroupBox), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(LayoutContainer), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(ImageControl), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "layoutContainer")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class LayoutContainer : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14301,22 +14299,24 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "layoutContainer");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<LayoutContainer>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "align", a => a.Align)
-                           .AddAttribute(0, "expand", a => a.Expand)
-                           .AddAttribute(0, "layoutChildren", a => a.LayoutChildren);
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "align", a => a.Align)
+.AddAttribute(0, "expand", a => a.Expand)
+.AddAttribute(0, "layoutChildren", a => a.LayoutChildren);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -14351,8 +14351,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:imageControl.</para>
     /// </summary>
-    [SchemaAttr(57, "imageControl")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ImageControl : OpenXmlLeafElement
     {
         /// <summary>
@@ -14485,49 +14483,51 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "imageControl");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<ImageControl>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "altText", a => a.AltText, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
-                           })
-                           .AddAttribute(0, "getAltText", a => a.GetAltText, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "image", a => a.Image, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "altText", a => a.AltText, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+})
+.AddAttribute(0, "getAltText", a => a.GetAltText, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         /// <inheritdoc/>
@@ -14550,8 +14550,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     [ChildElementInfo(typeof(PrimaryItem), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(TopItemsGroupControls), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(BottomItemsGroupControls), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "group")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class BackstageGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14768,70 +14766,72 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "group");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<BackstageGroup>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "style", a => a.Style)
-                           .AddAttribute(0, "getStyle", a => a.GetStyle, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "helperText", a => a.HelperText, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
-                           })
-                           .AddAttribute(0, "getHelperText", a => a.GetHelperText, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
-                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "style", a => a.Style)
+.AddAttribute(0, "getStyle", a => a.GetStyle, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "helperText", a => a.HelperText, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+})
+.AddAttribute(0, "getHelperText", a => a.GetHelperText, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showLabel", a => a.ShowLabel)
+.AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -14862,8 +14862,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(TaskGroupCategory), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "taskGroup")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class TaskGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15070,66 +15068,68 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "taskGroup");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<TaskGroup>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "helperText", a => a.HelperText, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
-                           })
-                           .AddAttribute(0, "getHelperText", a => a.GetHelperText, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
-                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "allowedTaskSizes", a => a.AllowedTaskSizes);
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "helperText", a => a.HelperText, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+})
+.AddAttribute(0, "getHelperText", a => a.GetHelperText, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showLabel", a => a.ShowLabel)
+.AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "allowedTaskSizes", a => a.AllowedTaskSizes);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -15171,8 +15171,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     [ChildElementInfo(typeof(SplitButtonRegular), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(MenuRegular), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DynamicMenuRegular), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "menu")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class MenuRoot : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15239,16 +15237,18 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "menu");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<MenuRoot>()
-                           .AddAttribute(0, "title", a => a.Title, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getTitle", a => a.GetTitle, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "itemSize", a => a.ItemSize);
+.AddAttribute(0, "title", a => a.Title, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getTitle", a => a.GetTitle, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "itemSize", a => a.ItemSize);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -15303,8 +15303,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     [ChildElementInfo(typeof(Ribbon), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(Backstage), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(ContextMenus), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "customUI")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class CustomUI : OpenXmlPartRootElement
     {
         /// <summary>
@@ -15361,15 +15359,17 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "customUI");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<CustomUI>()
-                           .AddAttribute(0, "onLoad", a => a.OnLoad, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "loadImage", a => a.LoadImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "onLoad", a => a.OnLoad, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "loadImage", a => a.LoadImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         /// <summary>
@@ -15474,8 +15474,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:item.</para>
     /// </summary>
-    [SchemaAttr(57, "item")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Item : OpenXmlLeafElement
     {
         /// <summary>
@@ -15548,31 +15546,33 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "item");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<Item>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "image", a => a.Image, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         /// <inheritdoc/>
@@ -15584,8 +15584,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:button.</para>
     /// </summary>
-    [SchemaAttr(57, "button")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class VisibleButton : OpenXmlLeafElement
     {
         /// <summary>
@@ -15878,110 +15876,112 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "button");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<VisibleButton>()
-                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
-                           })
-                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
-                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showImage", a => a.ShowImage)
-                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "description", a => a.Description, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+})
+.AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "image", a => a.Image, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showLabel", a => a.ShowLabel)
+.AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showImage", a => a.ShowImage)
+.AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         /// <inheritdoc/>
@@ -15993,8 +15993,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:toggleButton.</para>
     /// </summary>
-    [SchemaAttr(57, "toggleButton")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class VisibleToggleButton : OpenXmlLeafElement
     {
         /// <summary>
@@ -16297,114 +16295,116 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "toggleButton");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<VisibleToggleButton>()
-                           .AddAttribute(0, "getPressed", a => a.GetPressed, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
-                           })
-                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
-                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showImage", a => a.ShowImage)
-                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "getPressed", a => a.GetPressed, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "description", a => a.Description, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+})
+.AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "image", a => a.Image, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showLabel", a => a.ShowLabel)
+.AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showImage", a => a.ShowImage)
+.AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         /// <inheritdoc/>
@@ -16416,8 +16416,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:separator.</para>
     /// </summary>
-    [SchemaAttr(57, "separator")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Separator : OpenXmlLeafElement
     {
         /// <summary>
@@ -16520,40 +16518,42 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "separator");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<Separator>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         /// <inheritdoc/>
@@ -16572,8 +16572,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ButtonRegular), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "dialogBoxLauncher")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class DialogBoxLauncher : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16605,6 +16603,13 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DialogBoxLauncher(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "dialogBoxLauncher");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <summary>
@@ -16673,8 +16678,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     [ChildElementInfo(typeof(ButtonGroup), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(Separator), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DialogBoxLauncher), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "group")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Group : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16941,90 +16944,92 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "group");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<Group>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "autoScale", a => a.AutoScale)
-                           .AddAttribute(0, "centerVertically", a => a.CenterVertically);
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "image", a => a.Image, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "autoScale", a => a.AutoScale)
+.AddAttribute(0, "centerVertically", a => a.CenterVertically);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -17070,8 +17075,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:control.</para>
     /// </summary>
-    [SchemaAttr(57, "control")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ControlCloneQat : OpenXmlLeafElement
     {
         /// <summary>
@@ -17384,112 +17387,114 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "control");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<ControlCloneQat>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
-                           })
-                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "size", a => a.Size)
-                           .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
-                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showImage", a => a.ShowImage)
-                           .AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "description", a => a.Description, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+})
+.AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "size", a => a.Size)
+.AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "image", a => a.Image, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showLabel", a => a.ShowLabel)
+.AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showImage", a => a.ShowImage)
+.AddAttribute(0, "getShowImage", a => a.GetShowImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -17515,8 +17520,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description>Separator &lt;mso14:separator></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(57, "sharedControls")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SharedControlsQatItems : QatItemsType
     {
         /// <summary>
@@ -17550,6 +17553,13 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "sharedControls");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Choice, 0, 1000)
@@ -17579,8 +17589,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description>Separator &lt;mso14:separator></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(57, "documentControls")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class DocumentControlsQatItems : QatItemsType
     {
         /// <summary>
@@ -17612,6 +17620,13 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DocumentControlsQatItems(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "documentControls");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -17678,6 +17693,11 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         protected QatItemsType(string outerXml) : base(outerXml)
         {
         }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+        }
     }
 
     /// <summary>
@@ -17692,8 +17712,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Group), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "tab")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Tab : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17870,60 +17888,62 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "tab");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<Tab>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -17952,8 +17972,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Tab), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "tabSet")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class TabSet : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18020,17 +18038,19 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "tabSet");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<TabSet>()
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -18049,8 +18069,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:command.</para>
     /// </summary>
-    [SchemaAttr(57, "command")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Command : OpenXmlLeafElement
     {
         /// <summary>
@@ -18103,20 +18121,22 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "command");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<Command>()
-                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         /// <inheritdoc/>
@@ -18137,8 +18157,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// </remark>
     [ChildElementInfo(typeof(SharedControlsQatItems), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentControlsQatItems), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "qat")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class QuickAccessToolbar : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18170,6 +18188,13 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public QuickAccessToolbar(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "qat");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <summary>
@@ -18222,8 +18247,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Tab), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "tabs")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Tabs : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18257,6 +18280,13 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "tabs");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Tab), 1, 100, version: FileFormatVersions.Office2010)
@@ -18280,8 +18310,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(TabSet), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "contextualTabs")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ContextualTabs : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18313,6 +18341,13 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ContextualTabs(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "contextualTabs");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -18354,8 +18389,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     [ChildElementInfo(typeof(MenuRegular), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DynamicMenuRegular), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(MenuSeparatorNoTitle), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "contextMenu")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ContextMenu : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18402,11 +18435,13 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "contextMenu");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<ContextMenu>()
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -18442,8 +18477,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:item.</para>
     /// </summary>
-    [SchemaAttr(57, "item")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ItemBackstageItem : BackstageItemType
     {
         /// <summary>
@@ -18451,6 +18484,13 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// </summary>
         public ItemBackstageItem() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "item");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <inheritdoc/>
@@ -18462,8 +18502,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:radioButton.</para>
     /// </summary>
-    [SchemaAttr(57, "radioButton")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class RadioButtonBackstageItem : BackstageItemType
     {
         /// <summary>
@@ -18471,6 +18509,13 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// </summary>
         public RadioButtonBackstageItem() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "radioButton");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <inheritdoc/>
@@ -18545,8 +18590,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:button.</para>
     /// </summary>
-    [SchemaAttr(57, "button")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class BackstageRegularButton : OpenXmlLeafElement
     {
         /// <summary>
@@ -18759,78 +18802,80 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "button");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<BackstageRegularButton>()
-                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "isDefinitive", a => a.IsDefinitive)
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "isDefinitive", a => a.IsDefinitive)
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "image", a => a.Image, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         /// <inheritdoc/>
@@ -18849,8 +18894,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(BackstageMenuGroup), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "menu")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19067,73 +19110,75 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "menu");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<BackstagePrimaryMenu>()
-                           .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getScreentip", a => a.GetScreentip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getSupertip", a => a.GetSupertip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "image", a => a.Image, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -19171,8 +19216,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     [ChildElementInfo(typeof(BackstageMenuCheckBox), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(BackstageSubMenu), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(BackstageMenuToggleButton), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "menuGroup")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class BackstageMenuGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19269,28 +19312,30 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "menuGroup");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<BackstageMenuGroup>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "itemSize", a => a.ItemSize);
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "itemSize", a => a.ItemSize);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -19330,8 +19375,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// </remark>
     [ChildElementInfo(typeof(BackstageRegularButton), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(BackstagePrimaryMenu), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "primaryItem")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class PrimaryItem : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19363,6 +19406,13 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public PrimaryItem(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "primaryItem");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <summary>
@@ -19424,8 +19474,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description>ImageControl &lt;mso14:imageControl></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(57, "topItems")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class TopItemsGroupControls : GroupControlsType
     {
         /// <summary>
@@ -19457,6 +19505,13 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public TopItemsGroupControls(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "topItems");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 1000)
@@ -19507,8 +19562,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description>ImageControl &lt;mso14:imageControl></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(57, "bottomItems")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class BottomItemsGroupControls : GroupControlsType
     {
         /// <summary>
@@ -19540,6 +19593,13 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public BottomItemsGroupControls(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "bottomItems");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 1000)
@@ -19633,6 +19693,11 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         protected GroupControlsType(string outerXml) : base(outerXml)
         {
         }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+        }
     }
 
     /// <summary>
@@ -19647,8 +19712,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(TaskGroupTask), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "category")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class TaskGroupCategory : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19805,52 +19868,54 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "category");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<TaskGroupCategory>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -19869,8 +19934,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:task.</para>
     /// </summary>
-    [SchemaAttr(57, "task")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class TaskGroupTask : OpenXmlLeafElement
     {
         /// <summary>
@@ -20113,90 +20176,92 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "task");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<TaskGroupTask>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "isDefinitive", a => a.IsDefinitive)
-                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
-                           })
-                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "isDefinitive", a => a.IsDefinitive)
+.AddAttribute(0, "image", a => a.Image, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "description", a => a.Description, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+})
+.AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         /// <inheritdoc/>
@@ -20215,8 +20280,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(TaskFormGroupTask), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "category")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class TaskFormGroupCategory : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20373,52 +20436,54 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "category");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<TaskFormGroupCategory>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -20444,8 +20509,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(BackstageGroup), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "task")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class TaskFormGroupTask : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20692,85 +20755,87 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "task");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<TaskFormGroupTask>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "description", a => a.Description, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
-                           })
-                           .AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "image", a => a.Image, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "description", a => a.Description, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+})
+.AddAttribute(0, "getDescription", a => a.GetDescription, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -20796,8 +20861,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(TaskFormGroupCategory), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "taskFormGroup")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class TaskFormGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20964,50 +21027,52 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "taskFormGroup");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<TaskFormGroup>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "helperText", a => a.HelperText, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
-                           })
-                           .AddAttribute(0, "getHelperText", a => a.GetHelperText, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "showLabel", a => a.ShowLabel)
-                           .AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "allowedTaskSizes", a => a.AllowedTaskSizes);
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "helperText", a => a.HelperText, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (4096L) });
+})
+.AddAttribute(0, "getHelperText", a => a.GetHelperText, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "showLabel", a => a.ShowLabel)
+.AddAttribute(0, "getShowLabel", a => a.GetShowLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "allowedTaskSizes", a => a.AllowedTaskSizes);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -21037,8 +21102,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     [ChildElementInfo(typeof(TaskFormGroup), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(BackstageGroup), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(TaskGroup), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "firstColumn")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class BackstageGroups : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21070,6 +21133,13 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public BackstageGroups(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "firstColumn");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -21111,8 +21181,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// </remark>
     [ChildElementInfo(typeof(BackstageGroup), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(TaskGroup), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "secondColumn")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SimpleGroups : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21144,6 +21212,13 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public SimpleGroups(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "secondColumn");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 1000)
@@ -21178,8 +21253,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// </remark>
     [ChildElementInfo(typeof(BackstageGroups), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(SimpleGroups), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "tab")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class BackstageTab : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21446,93 +21519,95 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "tab");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<BackstageTab>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "title", a => a.Title, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getTitle", a => a.GetTitle, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "columnWidthPercent", a => a.ColumnWidthPercent, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (99L), IsPositive = (true) });
-                           })
-                           .AddAttribute(0, "firstColumnMinWidth", a => a.FirstColumnMinWidth, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (10000L), IsPositive = (true) });
-                           })
-                           .AddAttribute(0, "firstColumnMaxWidth", a => a.FirstColumnMaxWidth, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (10000L), IsPositive = (true) });
-                           })
-                           .AddAttribute(0, "secondColumnMinWidth", a => a.SecondColumnMinWidth, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (10000L), IsPositive = (true) });
-                           })
-                           .AddAttribute(0, "secondColumnMaxWidth", a => a.SecondColumnMaxWidth, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (10000L), IsPositive = (true) });
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "title", a => a.Title, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getTitle", a => a.GetTitle, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "columnWidthPercent", a => a.ColumnWidthPercent, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (99L), IsPositive = (true) });
+})
+.AddAttribute(0, "firstColumnMinWidth", a => a.FirstColumnMinWidth, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (10000L), IsPositive = (true) });
+})
+.AddAttribute(0, "firstColumnMaxWidth", a => a.FirstColumnMaxWidth, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (10000L), IsPositive = (true) });
+})
+.AddAttribute(0, "secondColumnMinWidth", a => a.SecondColumnMinWidth, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (10000L), IsPositive = (true) });
+})
+.AddAttribute(0, "secondColumnMaxWidth", a => a.SecondColumnMaxWidth, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (10000L), IsPositive = (true) });
+});
         }
 
         /// <summary>
@@ -21578,8 +21653,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:button.</para>
     /// </summary>
-    [SchemaAttr(57, "button")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class BackstageFastCommandButton : OpenXmlLeafElement
     {
         /// <summary>
@@ -21802,82 +21875,84 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "button");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<BackstageFastCommandButton>()
-                           .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "tag", a => a.Tag, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "isDefinitive", a => a.IsDefinitive)
-                           .AddAttribute(0, "enabled", a => a.Enabled)
-                           .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "label", a => a.Label, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "visible", a => a.Visible)
-                           .AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-                           })
-                           .AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "image", a => a.Image, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertAfterQ", a => a.InsertAfterQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "insertBeforeQ", a => a.InsertBeforeQulifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "tag", a => a.Tag, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "isDefinitive", a => a.IsDefinitive)
+.AddAttribute(0, "enabled", a => a.Enabled)
+.AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "label", a => a.Label, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getLabel", a => a.GetLabel, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "visible", a => a.Visible)
+.AddAttribute(0, "getVisible", a => a.GetVisible, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "keytip", a => a.Keytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+})
+.AddAttribute(0, "getKeytip", a => a.GetKeytip, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "image", a => a.Image, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "getImage", a => a.GetImage, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         /// <inheritdoc/>
@@ -21896,8 +21971,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Command), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "commands")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Commands : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21931,6 +22004,13 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "commands");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Command), 1, 5000, version: FileFormatVersions.Office2010)
@@ -21958,8 +22038,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     [ChildElementInfo(typeof(QuickAccessToolbar), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(Tabs), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(ContextualTabs), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "ribbon")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Ribbon : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22006,8 +22084,10 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "ribbon");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<Ribbon>()
-                           .AddAttribute(0, "startFromScratch", a => a.StartFromScratch);
+.AddAttribute(0, "startFromScratch", a => a.StartFromScratch);
         }
 
         /// <summary>
@@ -22076,8 +22156,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// </remark>
     [ChildElementInfo(typeof(BackstageTab), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(BackstageFastCommandButton), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "backstage")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Backstage : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22134,15 +22212,17 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "backstage");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<Backstage>()
-                           .AddAttribute(0, "onShow", a => a.OnShow, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           })
-                           .AddAttribute(0, "onHide", a => a.OnHide, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
-                           });
+.AddAttribute(0, "onShow", a => a.OnShow, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+})
+.AddAttribute(0, "onHide", a => a.OnHide, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -22172,8 +22252,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ContextMenu), FileFormatVersions.Office2010)]
-    [SchemaAttr(57, "contextMenus")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ContextMenus : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22205,6 +22283,13 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ContextMenus(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(57, "contextMenus");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)

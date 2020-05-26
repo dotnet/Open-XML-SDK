@@ -43,8 +43,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.WordprocessingGroup), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(GraphicFrameType), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2010)]
-    [SchemaAttr(59, "wpc")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class WordprocessingCanvas : OpenXmlCompositeElement
     {
         /// <summary>
@@ -76,6 +74,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public WordprocessingCanvas(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(59, "wpc");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <summary>
@@ -151,8 +156,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupFill))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
-    [SchemaAttr(59, "bg")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class BackgroundFormatting : OpenXmlCompositeElement
     {
         /// <summary>
@@ -184,6 +187,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public BackgroundFormatting(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(59, "bg");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -232,8 +242,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Outline))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
-    [SchemaAttr(59, "whole")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class WholeFormatting : OpenXmlCompositeElement
     {
         /// <summary>
@@ -265,6 +273,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public WholeFormatting(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(59, "whole");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <summary>
@@ -319,8 +334,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Graphic))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList), FileFormatVersions.Office2010)]
-    [SchemaAttr(59, "graphicFrame")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class GraphicFrameType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -352,6 +365,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public GraphicFrameType(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(59, "graphicFrame");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <summary>
@@ -446,8 +466,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
-    [SchemaAttr(59, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -479,6 +497,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public OfficeArtExtensionList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(59, "extLst");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)

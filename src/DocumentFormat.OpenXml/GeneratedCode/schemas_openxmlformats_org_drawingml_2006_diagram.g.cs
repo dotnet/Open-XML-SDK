@@ -34,8 +34,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     [ChildElementInfo(typeof(ColorTransformCategories))]
     [ChildElementInfo(typeof(ColorTransformStyleLabel))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "colorsDef")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColorsDefinition : OpenXmlPartRootElement
     {
         /// <summary>
@@ -92,9 +90,11 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "colorsDef");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ColorsDefinition>()
-                           .AddAttribute(0, "uniqueId", a => a.UniqueId)
-                           .AddAttribute(0, "minVer", a => a.MinVersion);
+.AddAttribute(0, "uniqueId", a => a.UniqueId)
+.AddAttribute(0, "minVer", a => a.MinVersion);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -167,8 +167,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     [ChildElementInfo(typeof(ColorTransformDescription))]
     [ChildElementInfo(typeof(ColorTransformCategories))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "colorsDefHdr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColorsDefinitionHeader : OpenXmlCompositeElement
     {
         /// <summary>
@@ -235,13 +233,15 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "colorsDefHdr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ColorsDefinitionHeader>()
-                           .AddAttribute(0, "uniqueId", a => a.UniqueId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "minVer", a => a.MinVersion)
-                           .AddAttribute(0, "resId", a => a.ResourceId);
+.AddAttribute(0, "uniqueId", a => a.UniqueId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "minVer", a => a.MinVersion)
+.AddAttribute(0, "resId", a => a.ResourceId);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -270,8 +270,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ColorsDefinitionHeader))]
-    [SchemaAttr(14, "colorsDefHdrLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColorsDefinitionHeaderList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -305,6 +303,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "colorsDefHdrLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ColorsDefinitionHeader), 0, 0)
@@ -336,8 +341,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     [ChildElementInfo(typeof(Background))]
     [ChildElementInfo(typeof(Whole))]
     [ChildElementInfo(typeof(DataModelExtensionList))]
-    [SchemaAttr(14, "dataModel")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DataModelRoot : OpenXmlPartRootElement
     {
         /// <summary>
@@ -369,6 +372,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DataModelRoot(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "dataModel");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -508,8 +518,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     [ChildElementInfo(typeof(ColorData))]
     [ChildElementInfo(typeof(LayoutNode))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "layoutDef")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LayoutDefinition : OpenXmlPartRootElement
     {
         /// <summary>
@@ -576,10 +584,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "layoutDef");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<LayoutDefinition>()
-                           .AddAttribute(0, "uniqueId", a => a.UniqueId)
-                           .AddAttribute(0, "minVer", a => a.MinVersion)
-                           .AddAttribute(0, "defStyle", a => a.DefaultStyle);
+.AddAttribute(0, "uniqueId", a => a.UniqueId)
+.AddAttribute(0, "minVer", a => a.MinVersion)
+.AddAttribute(0, "defStyle", a => a.DefaultStyle);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -649,8 +659,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     [ChildElementInfo(typeof(Description))]
     [ChildElementInfo(typeof(CategoryList))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "layoutDefHdr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LayoutDefinitionHeader : OpenXmlCompositeElement
     {
         /// <summary>
@@ -727,14 +735,16 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "layoutDefHdr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<LayoutDefinitionHeader>()
-                           .AddAttribute(0, "uniqueId", a => a.UniqueId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "minVer", a => a.MinVersion)
-                           .AddAttribute(0, "defStyle", a => a.DefaultStyle)
-                           .AddAttribute(0, "resId", a => a.ResourceId);
+.AddAttribute(0, "uniqueId", a => a.UniqueId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "minVer", a => a.MinVersion)
+.AddAttribute(0, "defStyle", a => a.DefaultStyle)
+.AddAttribute(0, "resId", a => a.ResourceId);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -763,8 +773,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(LayoutDefinitionHeader))]
-    [SchemaAttr(14, "layoutDefHdrLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LayoutDefinitionHeaderList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -798,6 +806,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "layoutDefHdrLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.LayoutDefinitionHeader), 0, 0)
@@ -814,8 +829,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:relIds.</para>
     /// </summary>
-    [SchemaAttr(14, "relIds")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RelationshipIds : OpenXmlLeafElement
     {
         /// <summary>
@@ -880,23 +893,25 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "relIds");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RelationshipIds>()
-                           .AddAttribute(19, "dm", a => a.DataPart, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(19, "lo", a => a.LayoutPart, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(19, "qs", a => a.StylePart, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(19, "cs", a => a.ColorPart, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(19, "dm", a => a.DataPart, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(19, "lo", a => a.LayoutPart, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(19, "qs", a => a.StylePart, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(19, "cs", a => a.ColorPart, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -935,8 +950,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     [ChildElementInfo(typeof(Scene3D))]
     [ChildElementInfo(typeof(StyleLabel))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "styleDef")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StyleDefinition : OpenXmlPartRootElement
     {
         /// <summary>
@@ -993,9 +1006,11 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "styleDef");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<StyleDefinition>()
-                           .AddAttribute(0, "uniqueId", a => a.UniqueId)
-                           .AddAttribute(0, "minVer", a => a.MinVersion);
+.AddAttribute(0, "uniqueId", a => a.UniqueId)
+.AddAttribute(0, "minVer", a => a.MinVersion);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1063,8 +1078,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     [ChildElementInfo(typeof(StyleLabelDescription))]
     [ChildElementInfo(typeof(StyleDisplayCategories))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "styleDefHdr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StyleDefinitionHeader : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1131,13 +1144,15 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "styleDefHdr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<StyleDefinitionHeader>()
-                           .AddAttribute(0, "uniqueId", a => a.UniqueId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "minVer", a => a.MinVersion)
-                           .AddAttribute(0, "resId", a => a.ResourceId);
+.AddAttribute(0, "uniqueId", a => a.UniqueId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "minVer", a => a.MinVersion)
+.AddAttribute(0, "resId", a => a.ResourceId);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1166,8 +1181,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(StyleDefinitionHeader))]
-    [SchemaAttr(14, "styleDefHdrLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StyleDefinitionHeaderList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1201,6 +1214,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "styleDefHdrLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinitionHeader), 0, 0)
@@ -1217,8 +1237,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:cat.</para>
     /// </summary>
-    [SchemaAttr(14, "cat")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColorTransformCategory : OpenXmlLeafElement
     {
         /// <summary>
@@ -1251,16 +1269,18 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "cat");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ColorTransformCategory>()
-                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
-                           })
-                           .AddAttribute(0, "pri", a => a.Priority, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+})
+.AddAttribute(0, "pri", a => a.Priority, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -1283,8 +1303,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(14, "fillClrLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FillColorList : ColorsType
     {
         /// <summary>
@@ -1316,6 +1334,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public FillColorList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "fillClrLst");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1356,8 +1381,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(14, "linClrLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LineColorList : ColorsType
     {
         /// <summary>
@@ -1389,6 +1412,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public LineColorList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "linClrLst");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1429,8 +1459,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(14, "effectClrLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class EffectColorList : ColorsType
     {
         /// <summary>
@@ -1462,6 +1490,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public EffectColorList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "effectClrLst");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1502,8 +1537,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(14, "txLinClrLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TextLineColorList : ColorsType
     {
         /// <summary>
@@ -1535,6 +1568,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public TextLineColorList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "txLinClrLst");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1575,8 +1615,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(14, "txFillClrLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TextFillColorList : ColorsType
     {
         /// <summary>
@@ -1608,6 +1646,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public TextFillColorList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "txFillClrLst");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1648,8 +1693,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(14, "txEffectClrLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TextEffectColorList : ColorsType
     {
         /// <summary>
@@ -1681,6 +1724,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public TextEffectColorList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "txEffectClrLst");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1807,8 +1857,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
-    [SchemaAttr(14, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1842,6 +1890,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 1, 1)
@@ -1864,8 +1919,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:title.</para>
     /// </summary>
-    [SchemaAttr(14, "title")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColorDefinitionTitle : OpenXmlLeafElement
     {
         /// <summary>
@@ -1898,12 +1951,14 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "title");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ColorDefinitionTitle>()
-                           .AddAttribute(0, "lang", a => a.Language)
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "lang", a => a.Language)
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -1915,8 +1970,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:desc.</para>
     /// </summary>
-    [SchemaAttr(14, "desc")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColorTransformDescription : OpenXmlLeafElement
     {
         /// <summary>
@@ -1949,12 +2002,14 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "desc");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ColorTransformDescription>()
-                           .AddAttribute(0, "lang", a => a.Language)
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "lang", a => a.Language)
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -1973,8 +2028,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ColorTransformCategory))]
-    [SchemaAttr(14, "catLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColorTransformCategories : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2006,6 +2059,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ColorTransformCategories(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "catLst");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 0, 0)
@@ -2043,8 +2103,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     [ChildElementInfo(typeof(TextFillColorList))]
     [ChildElementInfo(typeof(TextEffectColorList))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "styleLbl")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColorTransformStyleLabel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2091,11 +2149,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "styleLbl");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ColorTransformStyleLabel>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -2224,8 +2284,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     [ChildElementInfo(typeof(ShapeProperties))]
     [ChildElementInfo(typeof(TextBody))]
     [ChildElementInfo(typeof(PtExtensionList))]
-    [SchemaAttr(14, "pt")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Point : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2292,28 +2350,30 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "pt");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Point>()
-                           .AddAttribute(0, "modelId", a => a.ModelId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
-                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"), UnionId = (0) });
-                               });
-                           })
-                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "cxnId", a => a.ConnectionId, aBuilder =>
-                           {
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
-                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"), UnionId = (0) });
-                               });
-                           });
+.AddAttribute(0, "modelId", a => a.ModelId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"), UnionId = (0) });
+});
+})
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "cxnId", a => a.ConnectionId, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"), UnionId = (0) });
+});
+});
         }
 
         /// <summary>
@@ -2394,8 +2454,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "cxn")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Connection : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2522,63 +2580,65 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "cxn");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Connection>()
-                           .AddAttribute(0, "modelId", a => a.ModelId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
-                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"), UnionId = (0) });
-                               });
-                           })
-                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "srcId", a => a.SourceId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
-                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"), UnionId = (0) });
-                               });
-                           })
-                           .AddAttribute(0, "destId", a => a.DestinationId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
-                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"), UnionId = (0) });
-                               });
-                           })
-                           .AddAttribute(0, "srcOrd", a => a.SourcePosition, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "destOrd", a => a.DestinationPosition, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "parTransId", a => a.ParentTransitionId, aBuilder =>
-                           {
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
-                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"), UnionId = (0) });
-                               });
-                           })
-                           .AddAttribute(0, "sibTransId", a => a.SiblingTransitionId, aBuilder =>
-                           {
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
-                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"), UnionId = (0) });
-                               });
-                           })
-                           .AddAttribute(0, "presId", a => a.PresentationId);
+.AddAttribute(0, "modelId", a => a.ModelId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"), UnionId = (0) });
+});
+})
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "srcId", a => a.SourceId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"), UnionId = (0) });
+});
+})
+.AddAttribute(0, "destId", a => a.DestinationId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"), UnionId = (0) });
+});
+})
+.AddAttribute(0, "srcOrd", a => a.SourcePosition, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "destOrd", a => a.DestinationPosition, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "parTransId", a => a.ParentTransitionId, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"), UnionId = (0) });
+});
+})
+.AddAttribute(0, "sibTransId", a => a.SiblingTransitionId, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"), UnionId = (0) });
+});
+})
+.AddAttribute(0, "presId", a => a.PresentationId);
         }
 
         /// <summary>
@@ -2624,8 +2684,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "constr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Constraint : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2772,40 +2830,42 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "constr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Constraint>()
-                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "for", a => a.For, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "forName", a => a.ForName)
-                           .AddAttribute(0, "ptType", a => a.PointType, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "refType", a => a.ReferenceType, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "refFor", a => a.ReferenceFor, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "refForName", a => a.ReferenceForName)
-                           .AddAttribute(0, "refPtType", a => a.ReferencePointType, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "op", a => a.Operator, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "val", a => a.Val)
-                           .AddAttribute(0, "fact", a => a.Fact);
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "for", a => a.For, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "forName", a => a.ForName)
+.AddAttribute(0, "ptType", a => a.PointType, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "refType", a => a.ReferenceType, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "refFor", a => a.ReferenceFor, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "refForName", a => a.ReferenceForName)
+.AddAttribute(0, "refPtType", a => a.ReferencePointType, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "op", a => a.Operator, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "val", a => a.Val)
+.AddAttribute(0, "fact", a => a.Fact);
         }
 
         /// <summary>
@@ -2844,8 +2904,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "rule")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Rule : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2952,24 +3010,26 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "rule");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Rule>()
-                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "for", a => a.For, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "forName", a => a.ForName)
-                           .AddAttribute(0, "ptType", a => a.PointType, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "val", a => a.Val)
-                           .AddAttribute(0, "fact", a => a.Fact)
-                           .AddAttribute(0, "max", a => a.Max);
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "for", a => a.For, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "forName", a => a.ForName)
+.AddAttribute(0, "ptType", a => a.PointType, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "val", a => a.Val)
+.AddAttribute(0, "fact", a => a.Fact)
+.AddAttribute(0, "max", a => a.Max);
         }
 
         /// <summary>
@@ -3001,8 +3061,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:adj.</para>
     /// </summary>
-    [SchemaAttr(14, "adj")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Adjust : OpenXmlLeafElement
     {
         /// <summary>
@@ -3035,16 +3093,18 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "adj");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Adjust>()
-                           .AddAttribute(0, "idx", a => a.Index, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L) });
-                           })
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "idx", a => a.Index, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L) });
+})
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -3063,8 +3123,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Adjust))]
-    [SchemaAttr(14, "adjLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AdjustList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3098,6 +3156,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "adjLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Adjust), 0, 0)
@@ -3114,8 +3179,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:param.</para>
     /// </summary>
-    [SchemaAttr(14, "param")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Parameter : OpenXmlLeafElement
     {
         /// <summary>
@@ -3148,54 +3211,56 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "param");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Parameter>()
-                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HorizontalAlignmentValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.VerticalAlignmentValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ChildDirectionValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ChildAlignmentValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.SecondaryChildAlignmentValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.LinearDirectionValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.SecondaryLinearDirectionValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.StartingElementValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.BendPointValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorRoutingValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ArrowheadStyleValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorDimensionValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.RotationPathValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.CenterShapeMappingValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.NodeHorizontalAlignmentValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.NodeVerticalAlignmentValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FallbackDimensionValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextDirectionValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.PyramidAccentPositionValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.PyramidAccentTextMarginValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextBlockDirectionValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAnchorHorizontalValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAnchorVerticalValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAlignmentValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AutoTextRotationValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.GrowDirectionValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FlowDirectionValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ContinueDirectionValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.BreakpointValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OffsetValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyAlignmentValues>)), UnionId = (0) });
-                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
-                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DoubleValue)), UnionId = (0) });
-                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(BooleanValue)), UnionId = (0) });
-                                   union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorPointValues>)), UnionId = (0) });
-                               });
-                           });
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HorizontalAlignmentValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.VerticalAlignmentValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ChildDirectionValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ChildAlignmentValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.SecondaryChildAlignmentValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.LinearDirectionValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.SecondaryLinearDirectionValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.StartingElementValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.BendPointValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorRoutingValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ArrowheadStyleValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorDimensionValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.RotationPathValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.CenterShapeMappingValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.NodeHorizontalAlignmentValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.NodeVerticalAlignmentValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FallbackDimensionValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextDirectionValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.PyramidAccentPositionValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.PyramidAccentTextMarginValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextBlockDirectionValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAnchorHorizontalValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAnchorVerticalValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAlignmentValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AutoTextRotationValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.GrowDirectionValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FlowDirectionValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ContinueDirectionValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.BreakpointValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OffsetValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyAlignmentValues>)), UnionId = (0) });
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DoubleValue)), UnionId = (0) });
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(BooleanValue)), UnionId = (0) });
+union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorPointValues>)), UnionId = (0) });
+});
+});
         }
 
         /// <inheritdoc/>
@@ -3216,8 +3281,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// </remark>
     [ChildElementInfo(typeof(Parameter))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "alg")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Algorithm : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3274,13 +3337,15 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "alg");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Algorithm>()
-                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "rev", a => a.Revision);
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "rev", a => a.Revision);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3309,8 +3374,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// </remark>
     [ChildElementInfo(typeof(AdjustList))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "shape")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Shape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3420,21 +3483,23 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "shape");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Shape>()
-                           .AddAttribute(0, "rot", a => a.Rotation)
-                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.ShapeTypeValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShapeValues>)), UnionId = (0) });
-                               });
-                           })
-                           .AddAttribute(19, "blip", a => a.Blip)
-                           .AddAttribute(0, "zOrderOff", a => a.ZOrderOffset)
-                           .AddAttribute(0, "hideGeom", a => a.HideGeometry)
-                           .AddAttribute(0, "lkTxEntry", a => a.LockedText)
-                           .AddAttribute(0, "blipPhldr", a => a.BlipPlaceholder);
+.AddAttribute(0, "rot", a => a.Rotation)
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.ShapeTypeValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShapeValues>)), UnionId = (0) });
+});
+})
+.AddAttribute(19, "blip", a => a.Blip)
+.AddAttribute(0, "zOrderOff", a => a.ZOrderOffset)
+.AddAttribute(0, "hideGeom", a => a.HideGeometry)
+.AddAttribute(0, "lkTxEntry", a => a.LockedText)
+.AddAttribute(0, "blipPhldr", a => a.BlipPlaceholder);
         }
 
         /// <summary>
@@ -3494,8 +3559,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "presOf")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PresentationOf : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3592,13 +3655,15 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "presOf");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PresentationOf>()
-                           .AddAttribute(0, "axis", a => a.Axis)
-                           .AddAttribute(0, "ptType", a => a.PointType)
-                           .AddAttribute(0, "hideLastTrans", a => a.HideLastTrans)
-                           .AddAttribute(0, "st", a => a.Start)
-                           .AddAttribute(0, "cnt", a => a.Count)
-                           .AddAttribute(0, "step", a => a.Step);
+.AddAttribute(0, "axis", a => a.Axis)
+.AddAttribute(0, "ptType", a => a.PointType)
+.AddAttribute(0, "hideLastTrans", a => a.HideLastTrans)
+.AddAttribute(0, "st", a => a.Start)
+.AddAttribute(0, "cnt", a => a.Count)
+.AddAttribute(0, "step", a => a.Step);
         }
 
         /// <summary>
@@ -3637,8 +3702,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Constraint))]
-    [SchemaAttr(14, "constrLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Constraints : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3672,6 +3735,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "constrLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Constraint), 0, 0)
@@ -3695,8 +3765,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Rule))]
-    [SchemaAttr(14, "ruleLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RuleList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3730,6 +3798,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "ruleLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Rule), 0, 0)
@@ -3760,8 +3835,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>ResizeHandles &lt;dgm:resizeHandles></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(14, "varLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VariableList : LayoutVariablePropertySetType
     {
         /// <summary>
@@ -3793,6 +3866,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public VariableList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "varLst");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3833,8 +3913,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>ResizeHandles &lt;dgm:resizeHandles></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(14, "presLayoutVars")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PresentationLayoutVariables : LayoutVariablePropertySetType
     {
         /// <summary>
@@ -3866,6 +3944,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public PresentationLayoutVariables(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "presLayoutVars");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3946,6 +4031,11 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         protected LayoutVariablePropertySetType(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
         }
 
         /// <summary>
@@ -4094,8 +4184,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     [ChildElementInfo(typeof(LayoutNode))]
     [ChildElementInfo(typeof(Choose))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "forEach")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ForEach : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4212,15 +4300,17 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "forEach");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ForEach>()
-                           .AddAttribute(0, "name", a => a.Name)
-                           .AddAttribute(0, "ref", a => a.Reference)
-                           .AddAttribute(0, "axis", a => a.Axis)
-                           .AddAttribute(0, "ptType", a => a.PointType)
-                           .AddAttribute(0, "hideLastTrans", a => a.HideLastTrans)
-                           .AddAttribute(0, "st", a => a.Start)
-                           .AddAttribute(0, "cnt", a => a.Count)
-                           .AddAttribute(0, "step", a => a.Step);
+.AddAttribute(0, "name", a => a.Name)
+.AddAttribute(0, "ref", a => a.Reference)
+.AddAttribute(0, "axis", a => a.Axis)
+.AddAttribute(0, "ptType", a => a.PointType)
+.AddAttribute(0, "hideLastTrans", a => a.HideLastTrans)
+.AddAttribute(0, "st", a => a.Start)
+.AddAttribute(0, "cnt", a => a.Count)
+.AddAttribute(0, "step", a => a.Step);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -4278,8 +4368,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     [ChildElementInfo(typeof(LayoutNode))]
     [ChildElementInfo(typeof(Choose))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "layoutNode")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LayoutNode : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4356,14 +4444,16 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "layoutNode");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<LayoutNode>()
-                           .AddAttribute(0, "name", a => a.Name)
-                           .AddAttribute(0, "styleLbl", a => a.StyleLabel)
-                           .AddAttribute(0, "chOrder", a => a.ChildOrder, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "moveWith", a => a.MoveWith);
+.AddAttribute(0, "name", a => a.Name)
+.AddAttribute(0, "styleLbl", a => a.StyleLabel)
+.AddAttribute(0, "chOrder", a => a.ChildOrder, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "moveWith", a => a.MoveWith);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -4406,8 +4496,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// </remark>
     [ChildElementInfo(typeof(DiagramChooseIf))]
     [ChildElementInfo(typeof(DiagramChooseElse))]
-    [SchemaAttr(14, "choose")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Choose : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4454,8 +4542,10 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "choose");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Choose>()
-                           .AddAttribute(0, "name", a => a.Name);
+.AddAttribute(0, "name", a => a.Name);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -4504,8 +4594,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     [ChildElementInfo(typeof(LayoutNode))]
     [ChildElementInfo(typeof(Choose))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "if")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DiagramChooseIf : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4652,45 +4740,47 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "if");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DiagramChooseIf>()
-                           .AddAttribute(0, "name", a => a.Name)
-                           .AddAttribute(0, "axis", a => a.Axis)
-                           .AddAttribute(0, "ptType", a => a.PointType)
-                           .AddAttribute(0, "hideLastTrans", a => a.HideLastTrans)
-                           .AddAttribute(0, "st", a => a.Start)
-                           .AddAttribute(0, "cnt", a => a.Count)
-                           .AddAttribute(0, "step", a => a.Step)
-                           .AddAttribute(0, "func", a => a.Function, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "arg", a => a.Argument, aBuilder =>
-                           {
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.VariableValues>)), UnionId = (0) });
-                               });
-                           })
-                           .AddAttribute(0, "op", a => a.Operator, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
-                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(BooleanValue)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.DirectionValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyBranchStyleValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimateOneByOneValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevelStringValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandlesStringValues>)), UnionId = (0) });
-                               });
-                           });
+.AddAttribute(0, "name", a => a.Name)
+.AddAttribute(0, "axis", a => a.Axis)
+.AddAttribute(0, "ptType", a => a.PointType)
+.AddAttribute(0, "hideLastTrans", a => a.HideLastTrans)
+.AddAttribute(0, "st", a => a.Start)
+.AddAttribute(0, "cnt", a => a.Count)
+.AddAttribute(0, "step", a => a.Step)
+.AddAttribute(0, "func", a => a.Function, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "arg", a => a.Argument, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.VariableValues>)), UnionId = (0) });
+});
+})
+.AddAttribute(0, "op", a => a.Operator, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(BooleanValue)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.DirectionValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyBranchStyleValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimateOneByOneValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevelStringValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandlesStringValues>)), UnionId = (0) });
+});
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -4746,8 +4836,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     [ChildElementInfo(typeof(LayoutNode))]
     [ChildElementInfo(typeof(Choose))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "else")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DiagramChooseElse : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4794,8 +4882,10 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "else");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DiagramChooseElse>()
-                           .AddAttribute(0, "name", a => a.Name);
+.AddAttribute(0, "name", a => a.Name);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -4843,8 +4933,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     [ChildElementInfo(typeof(Background))]
     [ChildElementInfo(typeof(Whole))]
     [ChildElementInfo(typeof(DataModelExtensionList))]
-    [SchemaAttr(14, "dataModel")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DataModel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4876,6 +4964,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DataModel(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "dataModel");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -4963,8 +5058,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:cat.</para>
     /// </summary>
-    [SchemaAttr(14, "cat")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Category : OpenXmlLeafElement
     {
         /// <summary>
@@ -4997,16 +5090,18 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "cat");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Category>()
-                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
-                           })
-                           .AddAttribute(0, "pri", a => a.Priority, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+})
+.AddAttribute(0, "pri", a => a.Priority, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -5018,8 +5113,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:title.</para>
     /// </summary>
-    [SchemaAttr(14, "title")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Title : OpenXmlLeafElement
     {
         /// <summary>
@@ -5052,12 +5145,14 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "title");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Title>()
-                           .AddAttribute(0, "lang", a => a.Language)
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "lang", a => a.Language)
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -5069,8 +5164,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:desc.</para>
     /// </summary>
-    [SchemaAttr(14, "desc")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Description : OpenXmlLeafElement
     {
         /// <summary>
@@ -5103,12 +5196,14 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "desc");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Description>()
-                           .AddAttribute(0, "lang", a => a.Language)
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "lang", a => a.Language)
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -5127,8 +5222,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Category))]
-    [SchemaAttr(14, "catLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CategoryList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5162,6 +5255,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "catLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Category), 0, 0)
@@ -5184,8 +5284,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DataModel &lt;dgm:dataModel></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(14, "sampData")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SampleData : SampleDataType
     {
         /// <summary>
@@ -5219,6 +5317,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "sampData");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.DataModel), 0, 1)
@@ -5241,8 +5346,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DataModel &lt;dgm:dataModel></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(14, "styleData")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StyleData : SampleDataType
     {
         /// <summary>
@@ -5276,6 +5379,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "styleData");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.DataModel), 0, 1)
@@ -5298,8 +5408,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DataModel &lt;dgm:dataModel></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(14, "clrData")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColorData : SampleDataType
     {
         /// <summary>
@@ -5331,6 +5439,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ColorData(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "clrData");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5438,8 +5553,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FillReference))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectReference))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FontReference))]
-    [SchemaAttr(14, "style")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Style : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5471,6 +5584,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Style(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "style");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -5544,8 +5664,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:orgChart.</para>
     /// </summary>
-    [SchemaAttr(14, "orgChart")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OrganizationChart : OpenXmlLeafElement
     {
         /// <summary>
@@ -5568,8 +5686,10 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "orgChart");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<OrganizationChart>()
-                           .AddAttribute(0, "val", a => a.Val);
+.AddAttribute(0, "val", a => a.Val);
         }
 
         /// <inheritdoc/>
@@ -5581,8 +5701,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:chMax.</para>
     /// </summary>
-    [SchemaAttr(14, "chMax")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MaxNumberOfChildren : OpenXmlLeafElement
     {
         /// <summary>
@@ -5605,11 +5723,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "chMax");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<MaxNumberOfChildren>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-1L) });
-                           });
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-1L) });
+});
         }
 
         /// <inheritdoc/>
@@ -5621,8 +5741,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:chPref.</para>
     /// </summary>
-    [SchemaAttr(14, "chPref")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PreferredNumberOfChildren : OpenXmlLeafElement
     {
         /// <summary>
@@ -5645,11 +5763,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "chPref");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PreferredNumberOfChildren>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-1L) });
-                           });
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-1L) });
+});
         }
 
         /// <inheritdoc/>
@@ -5661,8 +5781,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:bulletEnabled.</para>
     /// </summary>
-    [SchemaAttr(14, "bulletEnabled")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BulletEnabled : OpenXmlLeafElement
     {
         /// <summary>
@@ -5685,8 +5803,10 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "bulletEnabled");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<BulletEnabled>()
-                           .AddAttribute(0, "val", a => a.Val);
+.AddAttribute(0, "val", a => a.Val);
         }
 
         /// <inheritdoc/>
@@ -5698,8 +5818,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:dir.</para>
     /// </summary>
-    [SchemaAttr(14, "dir")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Direction : OpenXmlLeafElement
     {
         /// <summary>
@@ -5722,11 +5840,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "dir");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Direction>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <inheritdoc/>
@@ -5738,8 +5858,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:hierBranch.</para>
     /// </summary>
-    [SchemaAttr(14, "hierBranch")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HierarchyBranch : OpenXmlLeafElement
     {
         /// <summary>
@@ -5762,11 +5880,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "hierBranch");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<HierarchyBranch>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <inheritdoc/>
@@ -5778,8 +5898,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:animOne.</para>
     /// </summary>
-    [SchemaAttr(14, "animOne")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AnimateOneByOne : OpenXmlLeafElement
     {
         /// <summary>
@@ -5802,11 +5920,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "animOne");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<AnimateOneByOne>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <inheritdoc/>
@@ -5818,8 +5938,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:animLvl.</para>
     /// </summary>
-    [SchemaAttr(14, "animLvl")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AnimationLevel : OpenXmlLeafElement
     {
         /// <summary>
@@ -5842,11 +5960,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "animLvl");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<AnimationLevel>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <inheritdoc/>
@@ -5858,8 +5978,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:resizeHandles.</para>
     /// </summary>
-    [SchemaAttr(14, "resizeHandles")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ResizeHandles : OpenXmlLeafElement
     {
         /// <summary>
@@ -5882,11 +6000,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "resizeHandles");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ResizeHandles>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <inheritdoc/>
@@ -5898,8 +6018,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:cat.</para>
     /// </summary>
-    [SchemaAttr(14, "cat")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StyleDisplayCategory : OpenXmlLeafElement
     {
         /// <summary>
@@ -5932,16 +6050,18 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "cat");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<StyleDisplayCategory>()
-                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
-                           })
-                           .AddAttribute(0, "pri", a => a.Priority, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+})
+.AddAttribute(0, "pri", a => a.Priority, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -5966,8 +6086,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.LightRig))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Backdrop))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-    [SchemaAttr(14, "scene3d")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Scene3D : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5999,6 +6117,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Scene3D(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "scene3d");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -6087,8 +6212,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtrusionColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ContourColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-    [SchemaAttr(14, "sp3d")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Shape3D : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6165,23 +6288,25 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "sp3d");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Shape3D>()
-                           .AddAttribute(0, "z", a => a.Z, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-                           })
-                           .AddAttribute(0, "extrusionH", a => a.ExtrusionHeight, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
-                           })
-                           .AddAttribute(0, "contourW", a => a.ContourWidth, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
-                           })
-                           .AddAttribute(0, "prstMaterial", a => a.PresetMaterial, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "z", a => a.Z, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+})
+.AddAttribute(0, "extrusionH", a => a.ExtrusionHeight, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+})
+.AddAttribute(0, "contourW", a => a.ContourWidth, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+})
+.AddAttribute(0, "prstMaterial", a => a.PresetMaterial, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <summary>
@@ -6278,8 +6403,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FlatText))]
-    [SchemaAttr(14, "txPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TextProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6311,6 +6434,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public TextProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "txPr");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -6362,8 +6492,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:title.</para>
     /// </summary>
-    [SchemaAttr(14, "title")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StyleDefinitionTitle : OpenXmlLeafElement
     {
         /// <summary>
@@ -6396,12 +6524,14 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "title");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<StyleDefinitionTitle>()
-                           .AddAttribute(0, "lang", a => a.Language)
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "lang", a => a.Language)
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -6413,8 +6543,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:desc.</para>
     /// </summary>
-    [SchemaAttr(14, "desc")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StyleLabelDescription : OpenXmlLeafElement
     {
         /// <summary>
@@ -6447,12 +6575,14 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "desc");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<StyleLabelDescription>()
-                           .AddAttribute(0, "lang", a => a.Language)
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "lang", a => a.Language)
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -6471,8 +6601,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(StyleDisplayCategory))]
-    [SchemaAttr(14, "catLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StyleDisplayCategories : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6506,6 +6634,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "catLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.StyleDisplayCategory), 0, 0)
@@ -6537,8 +6672,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     [ChildElementInfo(typeof(TextProperties))]
     [ChildElementInfo(typeof(Style))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "styleLbl")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StyleLabel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6585,11 +6718,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "styleLbl");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<StyleLabel>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -6684,8 +6819,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Point))]
-    [SchemaAttr(14, "ptLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PointList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6719,6 +6852,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "ptLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Point), 0, 0)
@@ -6742,8 +6882,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Connection))]
-    [SchemaAttr(14, "cxnLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ConnectionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6775,6 +6913,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ConnectionList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "cxnLst");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -6814,8 +6959,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupFill))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
-    [SchemaAttr(14, "bg")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Background : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6847,6 +6990,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Background(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "bg");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -6895,8 +7045,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Outline))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
-    [SchemaAttr(14, "whole")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Whole : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6928,6 +7076,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Whole(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "whole");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -6974,8 +7129,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.DataModelExtension))]
-    [SchemaAttr(14, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DataModelExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7009,6 +7162,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DataModelExtension), 0, 0)
@@ -7034,8 +7194,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// </remark>
     [ChildElementInfo(typeof(PresentationLayoutVariables))]
     [ChildElementInfo(typeof(Style))]
-    [SchemaAttr(14, "prSet")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PropertySet : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7352,42 +7510,44 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "prSet");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PropertySet>()
-                           .AddAttribute(0, "presAssocID", a => a.PresentationElementId, aBuilder =>
-                           {
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
-                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"), UnionId = (0) });
-                               });
-                           })
-                           .AddAttribute(0, "presName", a => a.PresentationName)
-                           .AddAttribute(0, "presStyleLbl", a => a.PresentationStyleLabel)
-                           .AddAttribute(0, "presStyleIdx", a => a.PresentationStyleIndex)
-                           .AddAttribute(0, "presStyleCnt", a => a.PresentationStyleCount)
-                           .AddAttribute(0, "loTypeId", a => a.LayoutTypeId)
-                           .AddAttribute(0, "loCatId", a => a.LayoutCategoryId)
-                           .AddAttribute(0, "qsTypeId", a => a.QuickStyleTypeId)
-                           .AddAttribute(0, "qsCatId", a => a.QuickStyleCategoryId)
-                           .AddAttribute(0, "csTypeId", a => a.ColorType)
-                           .AddAttribute(0, "csCatId", a => a.ColorCategoryId)
-                           .AddAttribute(0, "coherent3DOff", a => a.Coherent3D)
-                           .AddAttribute(0, "phldrT", a => a.PlaceholderText)
-                           .AddAttribute(0, "phldr", a => a.Placeholder)
-                           .AddAttribute(0, "custAng", a => a.Rotation)
-                           .AddAttribute(0, "custFlipVert", a => a.VerticalFlip)
-                           .AddAttribute(0, "custFlipHor", a => a.HorizontalFlip)
-                           .AddAttribute(0, "custSzX", a => a.FixedWidthOverride)
-                           .AddAttribute(0, "custSzY", a => a.FixedHeightOverride)
-                           .AddAttribute(0, "custScaleX", a => a.WidthScale)
-                           .AddAttribute(0, "custScaleY", a => a.HightScale)
-                           .AddAttribute(0, "custT", a => a.TextChanged)
-                           .AddAttribute(0, "custLinFactX", a => a.FactorWidth)
-                           .AddAttribute(0, "custLinFactY", a => a.FactorHeight)
-                           .AddAttribute(0, "custLinFactNeighborX", a => a.NeighborOffsetWidth)
-                           .AddAttribute(0, "custLinFactNeighborY", a => a.NeighborOffsetHeight)
-                           .AddAttribute(0, "custRadScaleRad", a => a.RadiusScale)
-                           .AddAttribute(0, "custRadScaleInc", a => a.IncludeAngleScale);
+.AddAttribute(0, "presAssocID", a => a.PresentationElementId, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"), UnionId = (0) });
+});
+})
+.AddAttribute(0, "presName", a => a.PresentationName)
+.AddAttribute(0, "presStyleLbl", a => a.PresentationStyleLabel)
+.AddAttribute(0, "presStyleIdx", a => a.PresentationStyleIndex)
+.AddAttribute(0, "presStyleCnt", a => a.PresentationStyleCount)
+.AddAttribute(0, "loTypeId", a => a.LayoutTypeId)
+.AddAttribute(0, "loCatId", a => a.LayoutCategoryId)
+.AddAttribute(0, "qsTypeId", a => a.QuickStyleTypeId)
+.AddAttribute(0, "qsCatId", a => a.QuickStyleCategoryId)
+.AddAttribute(0, "csTypeId", a => a.ColorType)
+.AddAttribute(0, "csCatId", a => a.ColorCategoryId)
+.AddAttribute(0, "coherent3DOff", a => a.Coherent3D)
+.AddAttribute(0, "phldrT", a => a.PlaceholderText)
+.AddAttribute(0, "phldr", a => a.Placeholder)
+.AddAttribute(0, "custAng", a => a.Rotation)
+.AddAttribute(0, "custFlipVert", a => a.VerticalFlip)
+.AddAttribute(0, "custFlipHor", a => a.HorizontalFlip)
+.AddAttribute(0, "custSzX", a => a.FixedWidthOverride)
+.AddAttribute(0, "custSzY", a => a.FixedHeightOverride)
+.AddAttribute(0, "custScaleX", a => a.WidthScale)
+.AddAttribute(0, "custScaleY", a => a.HightScale)
+.AddAttribute(0, "custT", a => a.TextChanged)
+.AddAttribute(0, "custLinFactX", a => a.FactorWidth)
+.AddAttribute(0, "custLinFactY", a => a.FactorHeight)
+.AddAttribute(0, "custLinFactNeighborX", a => a.NeighborOffsetWidth)
+.AddAttribute(0, "custLinFactNeighborY", a => a.NeighborOffsetHeight)
+.AddAttribute(0, "custRadScaleRad", a => a.RadiusScale)
+.AddAttribute(0, "custRadScaleInc", a => a.IncludeAngleScale);
         }
 
         /// <summary>
@@ -7468,8 +7628,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
-    [SchemaAttr(14, "spPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7516,11 +7674,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "spPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ShapeProperties>()
-                           .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <summary>
@@ -7595,8 +7755,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ListStyle))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Paragraph))]
-    [SchemaAttr(14, "t")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TextBody : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7628,6 +7786,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public TextBody(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "t");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -7681,8 +7846,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PtExtension))]
-    [SchemaAttr(14, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7714,6 +7877,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public PtExtensionList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)

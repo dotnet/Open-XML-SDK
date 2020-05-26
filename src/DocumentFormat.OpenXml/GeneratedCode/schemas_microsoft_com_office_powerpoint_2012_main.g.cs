@@ -20,8 +20,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p15:prstTrans.</para>
     /// </summary>
-    [SchemaAttr(68, "prstTrans")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class PresetTransition : OpenXmlLeafElement
     {
         /// <summary>
@@ -64,10 +62,12 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(68, "prstTrans");
+            builder.Availability = (FileFormatVersions.Office2013);
             builder.AddElement<PresetTransition>()
-                           .AddAttribute(0, "prst", a => a.Preset)
-                           .AddAttribute(0, "invX", a => a.InvX)
-                           .AddAttribute(0, "invY", a => a.InvY);
+.AddAttribute(0, "prst", a => a.Preset)
+.AddAttribute(0, "invX", a => a.InvX)
+.AddAttribute(0, "invY", a => a.InvY);
         }
 
         /// <inheritdoc/>
@@ -79,8 +79,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p15:presenceInfo.</para>
     /// </summary>
-    [SchemaAttr(68, "presenceInfo")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class PresenceInfo : OpenXmlLeafElement
     {
         /// <summary>
@@ -113,15 +111,17 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(68, "presenceInfo");
+            builder.Availability = (FileFormatVersions.Office2013);
             builder.AddElement<PresenceInfo>()
-                           .AddAttribute(0, "userId", a => a.UserId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "providerId", a => a.ProviderId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "userId", a => a.UserId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "providerId", a => a.ProviderId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -147,8 +147,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ParentCommentIdentifier), FileFormatVersions.Office2013)]
-    [SchemaAttr(68, "threadingInfo")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class ThreadingInfo : OpenXmlCompositeElement
     {
         /// <summary>
@@ -195,8 +193,10 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(68, "threadingInfo");
+            builder.Availability = (FileFormatVersions.Office2013);
             builder.AddElement<ThreadingInfo>()
-                           .AddAttribute(0, "timeZoneBias", a => a.TimeZoneBias);
+.AddAttribute(0, "timeZoneBias", a => a.TimeZoneBias);
         }
 
         /// <summary>
@@ -235,8 +235,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     ///   <item><description>ExtensionList &lt;p15:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(68, "sldGuideLst")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class SlideGuideList : ExtendedGuideList
     {
         /// <summary>
@@ -270,6 +268,13 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(68, "sldGuideLst");
+            builder.Availability = (FileFormatVersions.Office2013);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ExtendedGuide), 0, 0, version: FileFormatVersions.Office2013),
@@ -294,8 +299,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     ///   <item><description>ExtensionList &lt;p15:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(68, "notesGuideLst")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class NotesGuideList : ExtendedGuideList
     {
         /// <summary>
@@ -327,6 +330,13 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NotesGuideList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(68, "notesGuideLst");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -387,6 +397,11 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         protected ExtendedGuideList(string outerXml) : base(outerXml)
         {
         }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+        }
     }
 
     /// <summary>
@@ -394,8 +409,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p15:chartTrackingRefBased.</para>
     /// </summary>
-    [SchemaAttr(68, "chartTrackingRefBased")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class ChartTrackingReferenceBased : OpenXmlLeafElement
     {
         /// <summary>
@@ -418,11 +431,13 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(68, "chartTrackingRefBased");
+            builder.Availability = (FileFormatVersions.Office2013);
             builder.AddElement<ChartTrackingReferenceBased>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -434,8 +449,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p15:parentCm.</para>
     /// </summary>
-    [SchemaAttr(68, "parentCm")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class ParentCommentIdentifier : OpenXmlLeafElement
     {
         /// <summary>
@@ -468,9 +481,11 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(68, "parentCm");
+            builder.Availability = (FileFormatVersions.Office2013);
             builder.AddElement<ParentCommentIdentifier>()
-                           .AddAttribute(0, "authorId", a => a.AuthorId)
-                           .AddAttribute(0, "idx", a => a.Index);
+.AddAttribute(0, "authorId", a => a.AuthorId)
+.AddAttribute(0, "idx", a => a.Index);
         }
 
         /// <inheritdoc/>
@@ -499,8 +514,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor))]
-    [SchemaAttr(68, "clr")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class ColorType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -532,6 +545,13 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ColorType(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(68, "clr");
+            builder.Availability = (FileFormatVersions.Office2013);
         }
 
         /// <summary>
@@ -646,8 +666,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.Extension))]
-    [SchemaAttr(68, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -681,6 +699,13 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(68, "extLst");
+            builder.Availability = (FileFormatVersions.Office2013);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 1)
@@ -712,8 +737,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// </remark>
     [ChildElementInfo(typeof(ColorType), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2013)]
-    [SchemaAttr(68, "guide")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class ExtendedGuide : OpenXmlCompositeElement
     {
         /// <summary>
@@ -800,18 +823,20 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(68, "guide");
+            builder.Availability = (FileFormatVersions.Office2013);
             builder.AddElement<ExtendedGuide>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "name", a => a.Name)
-                           .AddAttribute(0, "orient", a => a.Orientation, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "pos", a => a.Position)
-                           .AddAttribute(0, "userDrawn", a => a.IsUserDrawn);
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "name", a => a.Name)
+.AddAttribute(0, "orient", a => a.Orientation, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "pos", a => a.Position)
+.AddAttribute(0, "userDrawn", a => a.IsUserDrawn);
         }
 
         /// <summary>

@@ -24,8 +24,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Source))]
-    [SchemaAttr(9, "Sources")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Sources : OpenXmlPartRootElement
     {
         /// <summary>
@@ -92,19 +90,21 @@ namespace DocumentFormat.OpenXml.Bibliography
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(9, "Sources");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Sources>()
-                           .AddAttribute(0, "SelectedStyle", a => a.SelectedStyle, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
-                           })
-                           .AddAttribute(0, "StyleName", a => a.StyleName, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
-                           })
-                           .AddAttribute(0, "URI", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
-                           });
+.AddAttribute(0, "SelectedStyle", a => a.SelectedStyle, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+})
+.AddAttribute(0, "StyleName", a => a.StyleName, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+})
+.AddAttribute(0, "URI", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -134,8 +134,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     [ChildElementInfo(typeof(Last))]
     [ChildElementInfo(typeof(First))]
     [ChildElementInfo(typeof(Middle))]
-    [SchemaAttr(9, "Person")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Person : OpenXmlCompositeElement
     {
         /// <summary>
@@ -169,6 +167,13 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(9, "Person");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Last), 0, 0),
@@ -187,9 +192,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Last.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "Last")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Last : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -212,6 +214,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "Last");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Last>(deep);
     }
@@ -221,9 +231,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:First.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "First")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class First : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -246,6 +253,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "First");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<First>(deep);
     }
@@ -255,9 +270,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Middle.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "Middle")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Middle : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -280,6 +292,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "Middle");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Middle>(deep);
     }
@@ -289,9 +309,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Corporate.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "Corporate")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Corporate : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -314,6 +331,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "Corporate");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Corporate>(deep);
     }
@@ -323,9 +348,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:AbbreviatedCaseNumber.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "AbbreviatedCaseNumber")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AbbreviatedCaseNumber : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -348,6 +370,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "AbbreviatedCaseNumber");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AbbreviatedCaseNumber>(deep);
     }
@@ -357,9 +387,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:AlbumTitle.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "AlbumTitle")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AlbumTitle : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -382,6 +409,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "AlbumTitle");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AlbumTitle>(deep);
     }
@@ -391,9 +426,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:BookTitle.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "BookTitle")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BookTitle : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -416,6 +448,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "BookTitle");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BookTitle>(deep);
     }
@@ -425,9 +465,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Broadcaster.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "Broadcaster")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Broadcaster : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -450,6 +487,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "Broadcaster");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Broadcaster>(deep);
     }
@@ -459,9 +504,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:BroadcastTitle.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "BroadcastTitle")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BroadcastTitle : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -484,6 +526,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "BroadcastTitle");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BroadcastTitle>(deep);
     }
@@ -493,9 +543,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:CaseNumber.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "CaseNumber")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CaseNumber : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -518,6 +565,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "CaseNumber");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CaseNumber>(deep);
     }
@@ -527,9 +582,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:ChapterNumber.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "ChapterNumber")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ChapterNumber : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -552,6 +604,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "ChapterNumber");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChapterNumber>(deep);
     }
@@ -561,9 +621,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:City.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "City")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class City : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -586,6 +643,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "City");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<City>(deep);
     }
@@ -595,9 +660,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Comments.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "Comments")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Comments : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -620,6 +682,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "Comments");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Comments>(deep);
     }
@@ -629,9 +699,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:ConferenceName.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "ConferenceName")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ConferenceName : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -654,6 +721,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "ConferenceName");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConferenceName>(deep);
     }
@@ -663,9 +738,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:CountryRegion.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "CountryRegion")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CountryRegion : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -688,6 +760,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "CountryRegion");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CountryRegion>(deep);
     }
@@ -697,9 +777,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Court.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "Court")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Court : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -722,6 +799,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "Court");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Court>(deep);
     }
@@ -731,9 +816,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Day.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "Day")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Day : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -756,6 +838,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "Day");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Day>(deep);
     }
@@ -765,9 +855,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:DayAccessed.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "DayAccessed")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DayAccessed : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -790,6 +877,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "DayAccessed");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DayAccessed>(deep);
     }
@@ -799,9 +894,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Department.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "Department")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Department : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -824,6 +916,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "Department");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Department>(deep);
     }
@@ -833,9 +933,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Distributor.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "Distributor")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Distributor : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -858,6 +955,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "Distributor");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Distributor>(deep);
     }
@@ -867,9 +972,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Edition.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "Edition")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Edition : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -892,6 +994,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "Edition");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Edition>(deep);
     }
@@ -901,9 +1011,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Guid.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "Guid")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class GuidString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -926,6 +1033,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "Guid");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GuidString>(deep);
     }
@@ -935,9 +1050,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Institution.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "Institution")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Institution : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -960,6 +1072,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "Institution");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Institution>(deep);
     }
@@ -969,9 +1089,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:InternetSiteTitle.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "InternetSiteTitle")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class InternetSiteTitle : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -994,6 +1111,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "InternetSiteTitle");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<InternetSiteTitle>(deep);
     }
@@ -1003,9 +1128,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Issue.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "Issue")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Issue : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1028,6 +1150,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "Issue");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Issue>(deep);
     }
@@ -1037,9 +1167,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:JournalName.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "JournalName")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class JournalName : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1062,6 +1189,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "JournalName");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<JournalName>(deep);
     }
@@ -1071,9 +1206,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:LCID.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "LCID")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LcId : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1096,6 +1228,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "LCID");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LcId>(deep);
     }
@@ -1105,9 +1245,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Medium.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "Medium")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Medium : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1130,6 +1267,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "Medium");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Medium>(deep);
     }
@@ -1139,9 +1284,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Month.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "Month")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Month : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1164,6 +1306,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "Month");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Month>(deep);
     }
@@ -1173,9 +1323,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:MonthAccessed.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "MonthAccessed")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MonthAccessed : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1198,6 +1345,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "MonthAccessed");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MonthAccessed>(deep);
     }
@@ -1207,9 +1362,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:NumberVolumes.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "NumberVolumes")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NumberVolumes : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1232,6 +1384,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "NumberVolumes");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumberVolumes>(deep);
     }
@@ -1241,9 +1401,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Pages.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "Pages")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Pages : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1266,6 +1423,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "Pages");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Pages>(deep);
     }
@@ -1275,9 +1440,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:PatentNumber.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "PatentNumber")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PatentNumber : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1300,6 +1462,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "PatentNumber");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PatentNumber>(deep);
     }
@@ -1309,9 +1479,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:PeriodicalTitle.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "PeriodicalTitle")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PeriodicalTitle : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1334,6 +1501,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "PeriodicalTitle");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PeriodicalTitle>(deep);
     }
@@ -1343,9 +1518,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:ProductionCompany.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "ProductionCompany")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ProductionCompany : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1368,6 +1540,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "ProductionCompany");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ProductionCompany>(deep);
     }
@@ -1377,9 +1557,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:PublicationTitle.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "PublicationTitle")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PublicationTitle : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1402,6 +1579,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "PublicationTitle");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PublicationTitle>(deep);
     }
@@ -1411,9 +1596,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Publisher.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "Publisher")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Publisher : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1436,6 +1618,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "Publisher");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Publisher>(deep);
     }
@@ -1445,9 +1635,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:RecordingNumber.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "RecordingNumber")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RecordingNumber : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1470,6 +1657,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "RecordingNumber");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RecordingNumber>(deep);
     }
@@ -1479,9 +1674,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:RefOrder.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "RefOrder")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ReferenceOrder : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1504,6 +1696,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "RefOrder");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ReferenceOrder>(deep);
     }
@@ -1513,9 +1713,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Reporter.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "Reporter")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Reporter : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1538,6 +1735,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "Reporter");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Reporter>(deep);
     }
@@ -1547,9 +1752,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:ShortTitle.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "ShortTitle")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShortTitle : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1572,6 +1774,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "ShortTitle");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShortTitle>(deep);
     }
@@ -1581,9 +1791,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:StandardNumber.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "StandardNumber")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StandardNumber : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1606,6 +1813,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "StandardNumber");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StandardNumber>(deep);
     }
@@ -1615,9 +1830,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:StateProvince.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "StateProvince")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StateProvince : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1640,6 +1852,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "StateProvince");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StateProvince>(deep);
     }
@@ -1649,9 +1869,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Station.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "Station")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Station : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1674,6 +1891,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "Station");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Station>(deep);
     }
@@ -1683,9 +1908,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Tag.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "Tag")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Tag : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1708,6 +1930,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "Tag");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Tag>(deep);
     }
@@ -1717,9 +1947,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Theater.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "Theater")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Theater : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1742,6 +1969,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "Theater");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Theater>(deep);
     }
@@ -1751,9 +1986,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:ThesisType.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "ThesisType")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ThesisType : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1776,6 +2008,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "ThesisType");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ThesisType>(deep);
     }
@@ -1785,9 +2025,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Title.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "Title")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Title : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1810,6 +2047,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "Title");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Title>(deep);
     }
@@ -1819,9 +2064,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Type.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "Type")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PatentType : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1844,6 +2086,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "Type");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PatentType>(deep);
     }
@@ -1853,9 +2103,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:URL.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "URL")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class UrlString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1878,6 +2125,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "URL");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UrlString>(deep);
     }
@@ -1887,9 +2142,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Version.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "Version")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Version : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1912,6 +2164,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "Version");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Version>(deep);
     }
@@ -1921,9 +2181,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Volume.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "Volume")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Volume : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1946,6 +2203,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "Volume");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Volume>(deep);
     }
@@ -1955,9 +2220,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Year.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "Year")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Year : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1980,6 +2242,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "Year");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Year>(deep);
     }
@@ -1989,9 +2259,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:YearAccessed.</para>
     /// </summary>
-    [StringValidator(MinLength = 0L, MaxLength = 255L)]
-    [SchemaAttr(9, "YearAccessed")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class YearAccessed : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2014,6 +2281,14 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.SetSchema(9, "YearAccessed");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<YearAccessed>(deep);
     }
@@ -2030,8 +2305,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Person))]
-    [SchemaAttr(9, "NameList")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NameList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2065,6 +2338,13 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(9, "NameList");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Person), 1, 0)
@@ -2087,8 +2367,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description>NameList &lt;b:NameList></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(9, "Artist")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Artist : NameType
     {
         /// <summary>
@@ -2122,6 +2400,13 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(9, "Artist");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2144,8 +2429,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description>NameList &lt;b:NameList></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(9, "BookAuthor")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BookAuthor : NameType
     {
         /// <summary>
@@ -2179,6 +2462,13 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(9, "BookAuthor");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2201,8 +2491,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description>NameList &lt;b:NameList></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(9, "Compiler")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Compiler : NameType
     {
         /// <summary>
@@ -2236,6 +2524,13 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(9, "Compiler");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2258,8 +2553,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description>NameList &lt;b:NameList></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(9, "Composer")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Composer : NameType
     {
         /// <summary>
@@ -2293,6 +2586,13 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(9, "Composer");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2315,8 +2615,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description>NameList &lt;b:NameList></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(9, "Conductor")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Conductor : NameType
     {
         /// <summary>
@@ -2350,6 +2648,13 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(9, "Conductor");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2372,8 +2677,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description>NameList &lt;b:NameList></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(9, "Counsel")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Counsel : NameType
     {
         /// <summary>
@@ -2407,6 +2710,13 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(9, "Counsel");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2429,8 +2739,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description>NameList &lt;b:NameList></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(9, "Director")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Director : NameType
     {
         /// <summary>
@@ -2464,6 +2772,13 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(9, "Director");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2486,8 +2801,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description>NameList &lt;b:NameList></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(9, "Editor")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Editor : NameType
     {
         /// <summary>
@@ -2521,6 +2834,13 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(9, "Editor");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2543,8 +2863,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description>NameList &lt;b:NameList></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(9, "Interviewee")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Interviewee : NameType
     {
         /// <summary>
@@ -2578,6 +2896,13 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(9, "Interviewee");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2600,8 +2925,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description>NameList &lt;b:NameList></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(9, "Interviewer")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Interviewer : NameType
     {
         /// <summary>
@@ -2635,6 +2958,13 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(9, "Interviewer");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2657,8 +2987,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description>NameList &lt;b:NameList></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(9, "Inventor")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Inventor : NameType
     {
         /// <summary>
@@ -2692,6 +3020,13 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(9, "Inventor");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2714,8 +3049,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description>NameList &lt;b:NameList></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(9, "ProducerName")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ProducerName : NameType
     {
         /// <summary>
@@ -2749,6 +3082,13 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(9, "ProducerName");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2771,8 +3111,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description>NameList &lt;b:NameList></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(9, "Translator")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Translator : NameType
     {
         /// <summary>
@@ -2806,6 +3144,13 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(9, "Translator");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2828,8 +3173,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description>NameList &lt;b:NameList></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(9, "Writer")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Writer : NameType
     {
         /// <summary>
@@ -2861,6 +3204,13 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Writer(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(9, "Writer");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2919,6 +3269,11 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+        }
+
         /// <summary>
         /// <para>Name List.</para>
         /// <para>Represents the following element tag in the schema: b:NameList.</para>
@@ -2945,8 +3300,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description>Corporate &lt;b:Corporate></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(9, "Author")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Author : NameOrCorporateType
     {
         /// <summary>
@@ -2980,6 +3333,13 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(9, "Author");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Choice, 0, 1)
@@ -3007,8 +3367,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description>Corporate &lt;b:Corporate></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(9, "Performer")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Performer : NameOrCorporateType
     {
         /// <summary>
@@ -3040,6 +3398,13 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Performer(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(9, "Performer");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3102,6 +3467,11 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         protected NameOrCorporateType(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
         }
 
         /// <summary>
@@ -3173,8 +3543,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     [ChildElementInfo(typeof(ProducerName))]
     [ChildElementInfo(typeof(Translator))]
     [ChildElementInfo(typeof(Writer))]
-    [SchemaAttr(9, "Author")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AuthorList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3206,6 +3574,13 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public AuthorList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(9, "Author");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -3450,9 +3825,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:SourceType.</para>
     /// </summary>
-    [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Bibliography.DataSourceValues>))]
-    [SchemaAttr(9, "SourceType")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SourceType : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -3473,6 +3845,14 @@ namespace DocumentFormat.OpenXml.Bibliography
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
             return new EnumValue<DocumentFormat.OpenXml.Bibliography.DataSourceValues> { InnerText = text };
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Bibliography.DataSourceValues>)) });
+            builder.SetSchema(9, "SourceType");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -3593,8 +3973,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     [ChildElementInfo(typeof(Volume))]
     [ChildElementInfo(typeof(Year))]
     [ChildElementInfo(typeof(YearAccessed))]
-    [SchemaAttr(9, "Source")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Source : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3626,6 +4004,13 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Source(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(9, "Source");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>

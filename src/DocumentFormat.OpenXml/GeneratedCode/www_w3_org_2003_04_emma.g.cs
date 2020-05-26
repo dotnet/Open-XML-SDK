@@ -19,8 +19,6 @@ namespace DocumentFormat.OpenXml.EMMA
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:derived-from.</para>
     /// </summary>
-    [SchemaAttr(44, "derived-from")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DerivedFrom : OpenXmlLeafElement
     {
         /// <summary>
@@ -53,13 +51,15 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(44, "derived-from");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DerivedFrom>()
-                           .AddAttribute(0, "resource", a => a.Resource, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
-                           })
-                           .AddAttribute(0, "composite", a => a.Composite);
+.AddAttribute(0, "resource", a => a.Resource, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+})
+.AddAttribute(0, "composite", a => a.Composite);
         }
 
         /// <inheritdoc/>
@@ -71,8 +71,6 @@ namespace DocumentFormat.OpenXml.EMMA
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:info.</para>
     /// </summary>
-    [SchemaAttr(44, "info")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Info : OpenXmlCompositeElement
     {
         /// <summary>
@@ -119,11 +117,13 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(44, "info");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Info>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true) });
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -151,8 +151,6 @@ namespace DocumentFormat.OpenXml.EMMA
     /// </remark>
     [ChildElementInfo(typeof(Arc))]
     [ChildElementInfo(typeof(Node))]
-    [SchemaAttr(44, "lattice")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Lattice : OpenXmlCompositeElement
     {
         /// <summary>
@@ -235,18 +233,20 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(44, "lattice");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Lattice>()
-                           .AddAttribute(0, "initial", a => a.Initial, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { IsNonNegative = (true) });
-                           })
-                           .AddAttribute(0, "final", a => a.Final, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(44, "time-ref-uri", a => a.TimeReference)
-                           .AddAttribute(44, "time-ref-anchor-point", a => a.TimeReferenceAnchorPoint);
+.AddAttribute(0, "initial", a => a.Initial, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { IsNonNegative = (true) });
+})
+.AddAttribute(0, "final", a => a.Final, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(44, "time-ref-uri", a => a.TimeReference)
+.AddAttribute(44, "time-ref-anchor-point", a => a.TimeReferenceAnchorPoint);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
@@ -266,8 +266,6 @@ namespace DocumentFormat.OpenXml.EMMA
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:literal.</para>
     /// </summary>
-    [SchemaAttr(44, "literal")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Literal : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -288,6 +286,13 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
             return new StringValue { InnerText = text };
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(44, "literal");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -314,8 +319,6 @@ namespace DocumentFormat.OpenXml.EMMA
     [ChildElementInfo(typeof(Lattice))]
     [ChildElementInfo(typeof(Literal))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Ink.ContextNode))]
-    [SchemaAttr(44, "interpretation")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Interpretation : OpenXmlCompositeElement
     {
         /// <summary>
@@ -687,43 +690,45 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(44, "interpretation");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Interpretation>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true) });
-                           })
-                           .AddAttribute(44, "tokens", a => a.Tokens)
-                           .AddAttribute(44, "process", a => a.Process)
-                           .AddAttribute(44, "lang", a => a.Language)
-                           .AddAttribute(44, "signal", a => a.Signal)
-                           .AddAttribute(44, "signal-size", a => a.SignalSize)
-                           .AddAttribute(44, "media-type", a => a.MediaType)
-                           .AddAttribute(44, "confidence", a => a.Confidence, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (1L) });
-                           })
-                           .AddAttribute(44, "source", a => a.Source)
-                           .AddAttribute(44, "start", a => a.Start)
-                           .AddAttribute(44, "end", a => a.End)
-                           .AddAttribute(44, "time-ref-uri", a => a.TimeReference)
-                           .AddAttribute(44, "time-ref-anchor-point", a => a.TimeReferenceAnchorPoint)
-                           .AddAttribute(44, "offset-to-start", a => a.OffsetToStart)
-                           .AddAttribute(44, "duration", a => a.Duration)
-                           .AddAttribute(44, "medium", a => a.Medium)
-                           .AddAttribute(44, "mode", a => a.Mode)
-                           .AddAttribute(44, "function", a => a.Function)
-                           .AddAttribute(44, "verbal", a => a.Verbal)
-                           .AddAttribute(44, "cost", a => a.Cost, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10000000L) });
-                           })
-                           .AddAttribute(44, "grammar-ref", a => a.GrammarRef)
-                           .AddAttribute(44, "endpoint-info-ref", a => a.EndpointInfoRef)
-                           .AddAttribute(44, "model-ref", a => a.ModelRef)
-                           .AddAttribute(44, "dialog-turn", a => a.DialogTurn)
-                           .AddAttribute(44, "no-input", a => a.NoInput)
-                           .AddAttribute(44, "uninterpreted", a => a.Uninterpreted);
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true) });
+})
+.AddAttribute(44, "tokens", a => a.Tokens)
+.AddAttribute(44, "process", a => a.Process)
+.AddAttribute(44, "lang", a => a.Language)
+.AddAttribute(44, "signal", a => a.Signal)
+.AddAttribute(44, "signal-size", a => a.SignalSize)
+.AddAttribute(44, "media-type", a => a.MediaType)
+.AddAttribute(44, "confidence", a => a.Confidence, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (1L) });
+})
+.AddAttribute(44, "source", a => a.Source)
+.AddAttribute(44, "start", a => a.Start)
+.AddAttribute(44, "end", a => a.End)
+.AddAttribute(44, "time-ref-uri", a => a.TimeReference)
+.AddAttribute(44, "time-ref-anchor-point", a => a.TimeReferenceAnchorPoint)
+.AddAttribute(44, "offset-to-start", a => a.OffsetToStart)
+.AddAttribute(44, "duration", a => a.Duration)
+.AddAttribute(44, "medium", a => a.Medium)
+.AddAttribute(44, "mode", a => a.Mode)
+.AddAttribute(44, "function", a => a.Function)
+.AddAttribute(44, "verbal", a => a.Verbal)
+.AddAttribute(44, "cost", a => a.Cost, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10000000L) });
+})
+.AddAttribute(44, "grammar-ref", a => a.GrammarRef)
+.AddAttribute(44, "endpoint-info-ref", a => a.EndpointInfoRef)
+.AddAttribute(44, "model-ref", a => a.ModelRef)
+.AddAttribute(44, "dialog-turn", a => a.DialogTurn)
+.AddAttribute(44, "no-input", a => a.NoInput)
+.AddAttribute(44, "uninterpreted", a => a.Uninterpreted);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -773,8 +778,6 @@ namespace DocumentFormat.OpenXml.EMMA
     [ChildElementInfo(typeof(OneOf))]
     [ChildElementInfo(typeof(Group))]
     [ChildElementInfo(typeof(Sequence))]
-    [SchemaAttr(44, "one-of")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OneOf : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1130,42 +1133,44 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(44, "one-of");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<OneOf>()
-                           .AddAttribute(0, "disjunction-type", a => a.DisjunctionType)
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true) });
-                           })
-                           .AddAttribute(44, "tokens", a => a.Tokens)
-                           .AddAttribute(44, "process", a => a.Process)
-                           .AddAttribute(44, "lang", a => a.Language)
-                           .AddAttribute(44, "signal", a => a.Signal)
-                           .AddAttribute(44, "signal-size", a => a.SignalSize)
-                           .AddAttribute(44, "media-type", a => a.MediaType)
-                           .AddAttribute(44, "confidence", a => a.Confidence, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (1L) });
-                           })
-                           .AddAttribute(44, "source", a => a.Source)
-                           .AddAttribute(44, "start", a => a.Start)
-                           .AddAttribute(44, "end", a => a.End)
-                           .AddAttribute(44, "time-ref-uri", a => a.TimeReference)
-                           .AddAttribute(44, "time-ref-anchor-point", a => a.TimeReferenceAnchorPoint)
-                           .AddAttribute(44, "offset-to-start", a => a.OffsetToStart)
-                           .AddAttribute(44, "duration", a => a.Duration)
-                           .AddAttribute(44, "medium", a => a.Medium)
-                           .AddAttribute(44, "mode", a => a.Mode)
-                           .AddAttribute(44, "function", a => a.Function)
-                           .AddAttribute(44, "verbal", a => a.Verbal)
-                           .AddAttribute(44, "cost", a => a.Cost, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10000000L) });
-                           })
-                           .AddAttribute(44, "grammar-ref", a => a.GrammarRef)
-                           .AddAttribute(44, "endpoint-info-ref", a => a.EndpointInfoRef)
-                           .AddAttribute(44, "model-ref", a => a.ModelRef)
-                           .AddAttribute(44, "dialog-turn", a => a.DialogTurn);
+.AddAttribute(0, "disjunction-type", a => a.DisjunctionType)
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true) });
+})
+.AddAttribute(44, "tokens", a => a.Tokens)
+.AddAttribute(44, "process", a => a.Process)
+.AddAttribute(44, "lang", a => a.Language)
+.AddAttribute(44, "signal", a => a.Signal)
+.AddAttribute(44, "signal-size", a => a.SignalSize)
+.AddAttribute(44, "media-type", a => a.MediaType)
+.AddAttribute(44, "confidence", a => a.Confidence, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (1L) });
+})
+.AddAttribute(44, "source", a => a.Source)
+.AddAttribute(44, "start", a => a.Start)
+.AddAttribute(44, "end", a => a.End)
+.AddAttribute(44, "time-ref-uri", a => a.TimeReference)
+.AddAttribute(44, "time-ref-anchor-point", a => a.TimeReferenceAnchorPoint)
+.AddAttribute(44, "offset-to-start", a => a.OffsetToStart)
+.AddAttribute(44, "duration", a => a.Duration)
+.AddAttribute(44, "medium", a => a.Medium)
+.AddAttribute(44, "mode", a => a.Mode)
+.AddAttribute(44, "function", a => a.Function)
+.AddAttribute(44, "verbal", a => a.Verbal)
+.AddAttribute(44, "cost", a => a.Cost, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10000000L) });
+})
+.AddAttribute(44, "grammar-ref", a => a.GrammarRef)
+.AddAttribute(44, "endpoint-info-ref", a => a.EndpointInfoRef)
+.AddAttribute(44, "model-ref", a => a.ModelRef)
+.AddAttribute(44, "dialog-turn", a => a.DialogTurn);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -1217,8 +1222,6 @@ namespace DocumentFormat.OpenXml.EMMA
     [ChildElementInfo(typeof(OneOf))]
     [ChildElementInfo(typeof(Group))]
     [ChildElementInfo(typeof(Sequence))]
-    [SchemaAttr(44, "group")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Group : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1564,41 +1567,43 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(44, "group");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Group>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true) });
-                           })
-                           .AddAttribute(44, "tokens", a => a.Tokens)
-                           .AddAttribute(44, "process", a => a.Process)
-                           .AddAttribute(44, "lang", a => a.Language)
-                           .AddAttribute(44, "signal", a => a.Signal)
-                           .AddAttribute(44, "signal-size", a => a.SignalSize)
-                           .AddAttribute(44, "media-type", a => a.MediaType)
-                           .AddAttribute(44, "confidence", a => a.Confidence, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (1L) });
-                           })
-                           .AddAttribute(44, "source", a => a.Source)
-                           .AddAttribute(44, "start", a => a.Start)
-                           .AddAttribute(44, "end", a => a.End)
-                           .AddAttribute(44, "time-ref-uri", a => a.TimeReference)
-                           .AddAttribute(44, "time-ref-anchor-point", a => a.TimeReferenceAnchorPoint)
-                           .AddAttribute(44, "offset-to-start", a => a.OffsetToStart)
-                           .AddAttribute(44, "duration", a => a.Duration)
-                           .AddAttribute(44, "medium", a => a.Medium)
-                           .AddAttribute(44, "mode", a => a.Mode)
-                           .AddAttribute(44, "function", a => a.Function)
-                           .AddAttribute(44, "verbal", a => a.Verbal)
-                           .AddAttribute(44, "cost", a => a.Cost, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10000000L) });
-                           })
-                           .AddAttribute(44, "grammar-ref", a => a.GrammarRef)
-                           .AddAttribute(44, "endpoint-info-ref", a => a.EndpointInfoRef)
-                           .AddAttribute(44, "model-ref", a => a.ModelRef)
-                           .AddAttribute(44, "dialog-turn", a => a.DialogTurn);
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true) });
+})
+.AddAttribute(44, "tokens", a => a.Tokens)
+.AddAttribute(44, "process", a => a.Process)
+.AddAttribute(44, "lang", a => a.Language)
+.AddAttribute(44, "signal", a => a.Signal)
+.AddAttribute(44, "signal-size", a => a.SignalSize)
+.AddAttribute(44, "media-type", a => a.MediaType)
+.AddAttribute(44, "confidence", a => a.Confidence, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (1L) });
+})
+.AddAttribute(44, "source", a => a.Source)
+.AddAttribute(44, "start", a => a.Start)
+.AddAttribute(44, "end", a => a.End)
+.AddAttribute(44, "time-ref-uri", a => a.TimeReference)
+.AddAttribute(44, "time-ref-anchor-point", a => a.TimeReferenceAnchorPoint)
+.AddAttribute(44, "offset-to-start", a => a.OffsetToStart)
+.AddAttribute(44, "duration", a => a.Duration)
+.AddAttribute(44, "medium", a => a.Medium)
+.AddAttribute(44, "mode", a => a.Mode)
+.AddAttribute(44, "function", a => a.Function)
+.AddAttribute(44, "verbal", a => a.Verbal)
+.AddAttribute(44, "cost", a => a.Cost, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10000000L) });
+})
+.AddAttribute(44, "grammar-ref", a => a.GrammarRef)
+.AddAttribute(44, "endpoint-info-ref", a => a.EndpointInfoRef)
+.AddAttribute(44, "model-ref", a => a.ModelRef)
+.AddAttribute(44, "dialog-turn", a => a.DialogTurn);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
@@ -1643,8 +1648,6 @@ namespace DocumentFormat.OpenXml.EMMA
     [ChildElementInfo(typeof(OneOf))]
     [ChildElementInfo(typeof(Group))]
     [ChildElementInfo(typeof(Sequence))]
-    [SchemaAttr(44, "sequence")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Sequence : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1990,41 +1993,43 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(44, "sequence");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Sequence>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true) });
-                           })
-                           .AddAttribute(44, "tokens", a => a.Tokens)
-                           .AddAttribute(44, "process", a => a.Process)
-                           .AddAttribute(44, "lang", a => a.Language)
-                           .AddAttribute(44, "signal", a => a.Signal)
-                           .AddAttribute(44, "signal-size", a => a.SignalSize)
-                           .AddAttribute(44, "media-type", a => a.MediaType)
-                           .AddAttribute(44, "confidence", a => a.Confidence, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (1L) });
-                           })
-                           .AddAttribute(44, "source", a => a.Source)
-                           .AddAttribute(44, "start", a => a.Start)
-                           .AddAttribute(44, "end", a => a.End)
-                           .AddAttribute(44, "time-ref-uri", a => a.TimeReference)
-                           .AddAttribute(44, "time-ref-anchor-point", a => a.TimeReferenceAnchorPoint)
-                           .AddAttribute(44, "offset-to-start", a => a.OffsetToStart)
-                           .AddAttribute(44, "duration", a => a.Duration)
-                           .AddAttribute(44, "medium", a => a.Medium)
-                           .AddAttribute(44, "mode", a => a.Mode)
-                           .AddAttribute(44, "function", a => a.Function)
-                           .AddAttribute(44, "verbal", a => a.Verbal)
-                           .AddAttribute(44, "cost", a => a.Cost, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10000000L) });
-                           })
-                           .AddAttribute(44, "grammar-ref", a => a.GrammarRef)
-                           .AddAttribute(44, "endpoint-info-ref", a => a.EndpointInfoRef)
-                           .AddAttribute(44, "model-ref", a => a.ModelRef)
-                           .AddAttribute(44, "dialog-turn", a => a.DialogTurn);
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true) });
+})
+.AddAttribute(44, "tokens", a => a.Tokens)
+.AddAttribute(44, "process", a => a.Process)
+.AddAttribute(44, "lang", a => a.Language)
+.AddAttribute(44, "signal", a => a.Signal)
+.AddAttribute(44, "signal-size", a => a.SignalSize)
+.AddAttribute(44, "media-type", a => a.MediaType)
+.AddAttribute(44, "confidence", a => a.Confidence, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (1L) });
+})
+.AddAttribute(44, "source", a => a.Source)
+.AddAttribute(44, "start", a => a.Start)
+.AddAttribute(44, "end", a => a.End)
+.AddAttribute(44, "time-ref-uri", a => a.TimeReference)
+.AddAttribute(44, "time-ref-anchor-point", a => a.TimeReferenceAnchorPoint)
+.AddAttribute(44, "offset-to-start", a => a.OffsetToStart)
+.AddAttribute(44, "duration", a => a.Duration)
+.AddAttribute(44, "medium", a => a.Medium)
+.AddAttribute(44, "mode", a => a.Mode)
+.AddAttribute(44, "function", a => a.Function)
+.AddAttribute(44, "verbal", a => a.Verbal)
+.AddAttribute(44, "cost", a => a.Cost, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10000000L) });
+})
+.AddAttribute(44, "grammar-ref", a => a.GrammarRef)
+.AddAttribute(44, "endpoint-info-ref", a => a.EndpointInfoRef)
+.AddAttribute(44, "model-ref", a => a.ModelRef)
+.AddAttribute(44, "dialog-turn", a => a.DialogTurn);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
@@ -2051,8 +2056,6 @@ namespace DocumentFormat.OpenXml.EMMA
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:group-info.</para>
     /// </summary>
-    [SchemaAttr(44, "group-info")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class GroupInfo : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2099,11 +2102,13 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(44, "group-info");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<GroupInfo>()
-                           .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
-                           });
+.AddAttribute(0, "ref", a => a.Reference, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2135,8 +2140,6 @@ namespace DocumentFormat.OpenXml.EMMA
     [ChildElementInfo(typeof(OneOf))]
     [ChildElementInfo(typeof(Sequence))]
     [ChildElementInfo(typeof(Group))]
-    [SchemaAttr(44, "derivation")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Derivation : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2170,6 +2173,13 @@ namespace DocumentFormat.OpenXml.EMMA
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(44, "derivation");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1, 1),
@@ -2189,8 +2199,6 @@ namespace DocumentFormat.OpenXml.EMMA
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:grammar.</para>
     /// </summary>
-    [SchemaAttr(44, "grammar")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Grammar : OpenXmlLeafElement
     {
         /// <summary>
@@ -2223,17 +2231,19 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(44, "grammar");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Grammar>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true) });
-                           })
-                           .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true) });
+})
+.AddAttribute(0, "ref", a => a.Reference, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+});
         }
 
         /// <inheritdoc/>
@@ -2245,8 +2255,6 @@ namespace DocumentFormat.OpenXml.EMMA
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:model.</para>
     /// </summary>
-    [SchemaAttr(44, "model")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Model : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2303,16 +2311,18 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(44, "model");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Model>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true) });
-                           })
-                           .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true) });
+})
+.AddAttribute(0, "ref", a => a.Reference, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2338,8 +2348,6 @@ namespace DocumentFormat.OpenXml.EMMA
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(EndPoint))]
-    [SchemaAttr(44, "endpoint-info")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class EndPointInfo : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2386,12 +2394,14 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(44, "endpoint-info");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<EndPointInfo>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true) });
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
@@ -2410,8 +2420,6 @@ namespace DocumentFormat.OpenXml.EMMA
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:endpoint.</para>
     /// </summary>
-    [SchemaAttr(44, "endpoint")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class EndPoint : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2588,22 +2596,24 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(44, "endpoint");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<EndPoint>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true) });
-                           })
-                           .AddAttribute(44, "endpoint-role", a => a.EndpointRole)
-                           .AddAttribute(44, "endpoint-address", a => a.EndPointAddress)
-                           .AddAttribute(44, "message-id", a => a.MessageId)
-                           .AddAttribute(44, "port-num", a => a.PortNumber)
-                           .AddAttribute(44, "port-type", a => a.PortType)
-                           .AddAttribute(44, "endpoint-pair-ref", a => a.EndpointPairRef)
-                           .AddAttribute(44, "service-name", a => a.ServiceName)
-                           .AddAttribute(44, "media-type", a => a.MediaType)
-                           .AddAttribute(44, "medium", a => a.Medium)
-                           .AddAttribute(44, "mode", a => a.Mode);
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true) });
+})
+.AddAttribute(44, "endpoint-role", a => a.EndpointRole)
+.AddAttribute(44, "endpoint-address", a => a.EndPointAddress)
+.AddAttribute(44, "message-id", a => a.MessageId)
+.AddAttribute(44, "port-num", a => a.PortNumber)
+.AddAttribute(44, "port-type", a => a.PortType)
+.AddAttribute(44, "endpoint-pair-ref", a => a.EndpointPairRef)
+.AddAttribute(44, "service-name", a => a.ServiceName)
+.AddAttribute(44, "media-type", a => a.MediaType)
+.AddAttribute(44, "medium", a => a.Medium)
+.AddAttribute(44, "mode", a => a.Mode);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2629,8 +2639,6 @@ namespace DocumentFormat.OpenXml.EMMA
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Info))]
-    [SchemaAttr(44, "node")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Node : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2703,20 +2711,22 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(44, "node");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Node>()
-                           .AddAttribute(0, "node-number", a => a.NodeNumber, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { IsNonNegative = (true) });
-                           })
-                           .AddAttribute(44, "confidence", a => a.Confidence, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (1L) });
-                           })
-                           .AddAttribute(44, "cost", a => a.Cost, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10000000L) });
-                           });
+.AddAttribute(0, "node-number", a => a.NodeNumber, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { IsNonNegative = (true) });
+})
+.AddAttribute(44, "confidence", a => a.Confidence, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (1L) });
+})
+.AddAttribute(44, "cost", a => a.Cost, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10000000L) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
@@ -2742,8 +2752,6 @@ namespace DocumentFormat.OpenXml.EMMA
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Info))]
-    [SchemaAttr(44, "arc")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Arc : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2930,33 +2938,35 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(44, "arc");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Arc>()
-                           .AddAttribute(0, "from", a => a.From, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { IsNonNegative = (true) });
-                           })
-                           .AddAttribute(0, "to", a => a.To, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { IsNonNegative = (true) });
-                           })
-                           .AddAttribute(44, "start", a => a.Start)
-                           .AddAttribute(44, "end", a => a.End)
-                           .AddAttribute(44, "offset-to-start", a => a.OffsetToStart)
-                           .AddAttribute(44, "duration", a => a.Duration)
-                           .AddAttribute(44, "confidence", a => a.Confidence, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (1L) });
-                           })
-                           .AddAttribute(44, "cost", a => a.Cost, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10000000L) });
-                           })
-                           .AddAttribute(44, "lang", a => a.Language)
-                           .AddAttribute(44, "medium", a => a.Medium)
-                           .AddAttribute(44, "mode", a => a.Mode)
-                           .AddAttribute(44, "source", a => a.Source);
+.AddAttribute(0, "from", a => a.From, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { IsNonNegative = (true) });
+})
+.AddAttribute(0, "to", a => a.To, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { IsNonNegative = (true) });
+})
+.AddAttribute(44, "start", a => a.Start)
+.AddAttribute(44, "end", a => a.End)
+.AddAttribute(44, "offset-to-start", a => a.OffsetToStart)
+.AddAttribute(44, "duration", a => a.Duration)
+.AddAttribute(44, "confidence", a => a.Confidence, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (1L) });
+})
+.AddAttribute(44, "cost", a => a.Cost, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10000000L) });
+})
+.AddAttribute(44, "lang", a => a.Language)
+.AddAttribute(44, "medium", a => a.Medium)
+.AddAttribute(44, "mode", a => a.Mode)
+.AddAttribute(44, "source", a => a.Source);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
@@ -2998,8 +3008,6 @@ namespace DocumentFormat.OpenXml.EMMA
     [ChildElementInfo(typeof(OneOf))]
     [ChildElementInfo(typeof(Group))]
     [ChildElementInfo(typeof(Sequence))]
-    [SchemaAttr(44, "emma")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Emma : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3046,11 +3054,13 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(44, "emma");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Emma>()
-                           .AddAttribute(0, "version", a => a.Version, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "version", a => a.Version, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)

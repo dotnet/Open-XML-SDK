@@ -18,8 +18,6 @@ namespace DocumentFormat.OpenXml.Office2016.Word.Symex
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w16se:symEx.</para>
     /// </summary>
-    [SchemaAttr(86, "symEx")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class SymEx : OpenXmlLeafElement
     {
         /// <summary>
@@ -58,16 +56,18 @@ namespace DocumentFormat.OpenXml.Office2016.Word.Symex
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(86, "symEx");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<SymEx>()
-                           .AddAttribute(86, "font", a => a.Font, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2016));
-                           })
-                           .AddAttribute(86, "char", a => a.Char, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2016));
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
-                           });
+.AddAttribute(86, "font", a => a.Font, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2016));
+})
+.AddAttribute(86, "char", a => a.Char, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2016));
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+});
         }
 
         /// <inheritdoc/>

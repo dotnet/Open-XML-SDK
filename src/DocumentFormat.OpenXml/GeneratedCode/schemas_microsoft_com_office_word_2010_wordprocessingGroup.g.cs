@@ -35,8 +35,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     ///   <item><description>OfficeArtExtensionList &lt;wpg:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(60, "wgp")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class WordprocessingGroup : WordprocessingGroupType
     {
         /// <summary>
@@ -68,6 +66,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public WordprocessingGroup(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(60, "wgp");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -111,8 +116,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     ///   <item><description>OfficeArtExtensionList &lt;wpg:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(60, "grpSp")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class GroupShape : WordprocessingGroupType
     {
         /// <summary>
@@ -144,6 +147,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public GroupShape(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(60, "grpSp");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -229,6 +239,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+        }
+
         /// <summary>
         /// <para>NonVisualDrawingProperties.</para>
         /// <para>Represents the following element tag in the schema: wpg:cNvPr.</para>
@@ -285,8 +300,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList))]
-    [SchemaAttr(60, "cNvPr")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -373,18 +386,20 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(60, "cNvPr");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<NonVisualDrawingProperties>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "descr", a => a.Description)
-                           .AddAttribute(0, "hidden", a => a.Hidden)
-                           .AddAttribute(0, "title", a => a.Title);
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "descr", a => a.Description)
+.AddAttribute(0, "hidden", a => a.Hidden)
+.AddAttribute(0, "title", a => a.Title);
         }
 
         /// <summary>
@@ -453,8 +468,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-    [SchemaAttr(60, "cNvFrPr")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -486,6 +499,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NonVisualGraphicFrameProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(60, "cNvFrPr");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <summary>
@@ -540,8 +560,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Offset))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extents))]
-    [SchemaAttr(60, "xfrm")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Transform2D : OpenXmlCompositeElement
     {
         /// <summary>
@@ -608,10 +626,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(60, "xfrm");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<Transform2D>()
-                           .AddAttribute(0, "rot", a => a.Rotation)
-                           .AddAttribute(0, "flipH", a => a.HorizontalFlip)
-                           .AddAttribute(0, "flipV", a => a.VerticalFlip);
+.AddAttribute(0, "rot", a => a.Rotation)
+.AddAttribute(0, "flipH", a => a.HorizontalFlip)
+.AddAttribute(0, "flipV", a => a.VerticalFlip);
         }
 
         /// <summary>
@@ -664,8 +684,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
-    [SchemaAttr(60, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -699,6 +717,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(60, "extLst");
+            builder.Availability = (FileFormatVersions.Office2010);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 1, 1)
@@ -730,8 +755,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupShapeLocks))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList))]
-    [SchemaAttr(60, "cNvGrpSpPr")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class NonVisualGroupDrawingShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -763,6 +786,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NonVisualGroupDrawingShapeProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(60, "cNvGrpSpPr");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <summary>
@@ -835,8 +865,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-    [SchemaAttr(60, "grpSpPr")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class GroupShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -883,11 +911,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(60, "grpSpPr");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<GroupShapeProperties>()
-                           .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <summary>
@@ -956,8 +986,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     [ChildElementInfo(typeof(Transform2D), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Graphic))]
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2010)]
-    [SchemaAttr(60, "graphicFrame")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class GraphicFrame : OpenXmlCompositeElement
     {
         /// <summary>
@@ -989,6 +1017,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public GraphicFrame(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(60, "graphicFrame");
+            builder.Availability = (FileFormatVersions.Office2010);
         }
 
         /// <summary>

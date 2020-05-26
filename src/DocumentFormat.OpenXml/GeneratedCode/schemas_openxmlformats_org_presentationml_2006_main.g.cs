@@ -22,8 +22,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:sldAll.</para>
     /// </summary>
-    [SchemaAttr(24, "sldAll")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SlideAll : EmptyType
     {
         /// <summary>
@@ -31,6 +29,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public SlideAll() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "sldAll");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -42,8 +47,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:present.</para>
     /// </summary>
-    [SchemaAttr(24, "present")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PresenterSlideMode : EmptyType
     {
         /// <summary>
@@ -51,6 +54,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public PresenterSlideMode() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "present");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -62,8 +72,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:endSnd.</para>
     /// </summary>
-    [SchemaAttr(24, "endSnd")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class EndSoundAction : EmptyType
     {
         /// <summary>
@@ -71,6 +79,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public EndSoundAction() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "endSnd");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -82,8 +97,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:bldAsOne.</para>
     /// </summary>
-    [SchemaAttr(24, "bldAsOne")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BuildAsOne : EmptyType
     {
         /// <summary>
@@ -91,6 +104,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public BuildAsOne() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "bldAsOne");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -102,8 +122,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:sldTgt.</para>
     /// </summary>
-    [SchemaAttr(24, "sldTgt")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SlideTarget : EmptyType
     {
         /// <summary>
@@ -111,6 +129,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public SlideTarget() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "sldTgt");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -122,8 +147,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:bg.</para>
     /// </summary>
-    [SchemaAttr(24, "bg")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BackgroundAnimation : EmptyType
     {
         /// <summary>
@@ -131,6 +154,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public BackgroundAnimation() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "bg");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -142,8 +172,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:circle.</para>
     /// </summary>
-    [SchemaAttr(24, "circle")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CircleTransition : EmptyType
     {
         /// <summary>
@@ -151,6 +179,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public CircleTransition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "circle");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -162,8 +197,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:dissolve.</para>
     /// </summary>
-    [SchemaAttr(24, "dissolve")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DissolveTransition : EmptyType
     {
         /// <summary>
@@ -171,6 +204,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public DissolveTransition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "dissolve");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -182,8 +222,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:diamond.</para>
     /// </summary>
-    [SchemaAttr(24, "diamond")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DiamondTransition : EmptyType
     {
         /// <summary>
@@ -191,6 +229,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public DiamondTransition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "diamond");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -202,8 +247,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:newsflash.</para>
     /// </summary>
-    [SchemaAttr(24, "newsflash")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NewsflashTransition : EmptyType
     {
         /// <summary>
@@ -211,6 +254,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public NewsflashTransition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "newsflash");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -222,8 +272,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:plus.</para>
     /// </summary>
-    [SchemaAttr(24, "plus")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PlusTransition : EmptyType
     {
         /// <summary>
@@ -231,6 +279,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public PlusTransition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "plus");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -242,8 +297,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:random.</para>
     /// </summary>
-    [SchemaAttr(24, "random")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RandomTransition : EmptyType
     {
         /// <summary>
@@ -251,6 +304,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public RandomTransition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "random");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -262,8 +322,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:wedge.</para>
     /// </summary>
-    [SchemaAttr(24, "wedge")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class WedgeTransition : EmptyType
     {
         /// <summary>
@@ -271,6 +329,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public WedgeTransition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "wedge");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -290,6 +355,11 @@ namespace DocumentFormat.OpenXml.Presentation
         protected EmptyType() : base()
         {
         }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+        }
     }
 
     /// <summary>
@@ -297,8 +367,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:sldRg.</para>
     /// </summary>
-    [SchemaAttr(24, "sldRg")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SlideRange : IndexRangeType
     {
         /// <summary>
@@ -306,6 +374,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public SlideRange() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "sldRg");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -323,8 +398,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:charRg.</para>
     /// </summary>
-    [SchemaAttr(24, "charRg")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CharRange : IndexRangeType
     {
         /// <summary>
@@ -332,6 +405,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public CharRange() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "charRg");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -343,8 +423,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:pRg.</para>
     /// </summary>
-    [SchemaAttr(24, "pRg")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ParagraphIndexRange : IndexRangeType
     {
         /// <summary>
@@ -352,6 +430,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public ParagraphIndexRange() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "pRg");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -412,8 +497,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:custShow.</para>
     /// </summary>
-    [SchemaAttr(24, "custShow")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CustomShowReference : OpenXmlLeafElement
     {
         /// <summary>
@@ -436,11 +519,13 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "custShow");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CustomShowReference>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -458,8 +543,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:ext.</para>
     /// </summary>
-    [SchemaAttr(24, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Extension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -506,12 +589,14 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Extension>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -530,8 +615,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:browse.</para>
     /// </summary>
-    [SchemaAttr(24, "browse")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BrowseSlideMode : OpenXmlLeafElement
     {
         /// <summary>
@@ -554,8 +637,10 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "browse");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<BrowseSlideMode>()
-                           .AddAttribute(0, "showScrollbar", a => a.ShowScrollbar);
+.AddAttribute(0, "showScrollbar", a => a.ShowScrollbar);
         }
 
         /// <inheritdoc/>
@@ -567,8 +652,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:kiosk.</para>
     /// </summary>
-    [SchemaAttr(24, "kiosk")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class KioskSlideMode : OpenXmlLeafElement
     {
         /// <summary>
@@ -591,8 +674,10 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "kiosk");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<KioskSlideMode>()
-                           .AddAttribute(0, "restart", a => a.Restart);
+.AddAttribute(0, "restart", a => a.Restart);
         }
 
         /// <inheritdoc/>
@@ -611,8 +696,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-    [SchemaAttr(24, "clrMap")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColorMap : OpenXmlCompositeElement
     {
         /// <summary>
@@ -769,67 +852,69 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "clrMap");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ColorMap>()
-                           .AddAttribute(0, "bg1", a => a.Background1, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "tx1", a => a.Text1, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "bg2", a => a.Background2, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "tx2", a => a.Text2, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "accent1", a => a.Accent1, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "accent2", a => a.Accent2, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "accent3", a => a.Accent3, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "accent4", a => a.Accent4, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "accent5", a => a.Accent5, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "accent6", a => a.Accent6, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "hlink", a => a.Hyperlink, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "folHlink", a => a.FollowedHyperlink, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "bg1", a => a.Background1, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "tx1", a => a.Text1, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "bg2", a => a.Background2, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "tx2", a => a.Text2, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "accent1", a => a.Accent1, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "accent2", a => a.Accent2, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "accent3", a => a.Accent3, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "accent4", a => a.Accent4, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "accent5", a => a.Accent5, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "accent6", a => a.Accent6, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "hlink", a => a.Hyperlink, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "folHlink", a => a.FollowedHyperlink, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <summary>
@@ -870,8 +955,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.MasterColorMapping))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.OverrideColorMapping))]
-    [SchemaAttr(24, "clrMapOvr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColorMapOverride : OpenXmlCompositeElement
     {
         /// <summary>
@@ -903,6 +986,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ColorMapOverride(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "clrMapOvr");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -972,8 +1062,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(24, "bgPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BackgroundProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1020,8 +1108,10 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "bgPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<BackgroundProperties>()
-                           .AddAttribute(0, "shadeToTitle", a => a.ShadeToTitle);
+.AddAttribute(0, "shadeToTitle", a => a.ShadeToTitle);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1076,8 +1166,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor))]
-    [SchemaAttr(24, "bgRef")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BackgroundStyleReference : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1124,11 +1212,13 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "bgRef");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<BackgroundStyleReference>()
-                           .AddAttribute(0, "idx", a => a.Index, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "idx", a => a.Index, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -1243,8 +1333,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CommentAuthor))]
-    [SchemaAttr(24, "cmAuthorLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CommentAuthorList : OpenXmlPartRootElement
     {
         /// <summary>
@@ -1276,6 +1364,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public CommentAuthorList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "cmAuthorLst");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1332,8 +1427,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Comment))]
-    [SchemaAttr(24, "cmLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CommentList : OpenXmlPartRootElement
     {
         /// <summary>
@@ -1365,6 +1458,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public CommentList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "cmLst");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1425,8 +1525,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(OleObjectEmbed))]
     [ChildElementInfo(typeof(OleObjectLink))]
     [ChildElementInfo(typeof(Picture))]
-    [SchemaAttr(24, "oleObj")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OleObject : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1536,23 +1634,25 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "oleObj");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<OleObject>()
-                           .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "name", a => a.Name)
-                           .AddAttribute(0, "showAsIcon", a => a.ShowAsIcon)
-                           .AddAttribute(19, "id", a => a.Id)
-                           .AddAttribute(0, "imgW", a => a.ImageWidth, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
-                           })
-                           .AddAttribute(0, "imgH", a => a.ImageHeight, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
-                           })
-                           .AddAttribute(0, "progId", a => a.ProgId);
+.AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "name", a => a.Name)
+.AddAttribute(0, "showAsIcon", a => a.ShowAsIcon)
+.AddAttribute(19, "id", a => a.Id)
+.AddAttribute(0, "imgW", a => a.ImageWidth, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+})
+.AddAttribute(0, "imgH", a => a.ImageHeight, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+})
+.AddAttribute(0, "progId", a => a.ProgId);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -1615,8 +1715,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(DefaultTextStyle))]
     [ChildElementInfo(typeof(ModificationVerifier))]
     [ChildElementInfo(typeof(PresentationExtensionList))]
-    [SchemaAttr(24, "presentation")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Presentation : OpenXmlPartRootElement
     {
         /// <summary>
@@ -1773,22 +1871,24 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "presentation");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Presentation>()
-                           .AddAttribute(0, "serverZoom", a => a.ServerZoom)
-                           .AddAttribute(0, "firstSlideNum", a => a.FirstSlideNum)
-                           .AddAttribute(0, "showSpecialPlsOnTitleSld", a => a.ShowSpecialPlaceholderOnTitleSlide)
-                           .AddAttribute(0, "rtl", a => a.RightToLeft)
-                           .AddAttribute(0, "removePersonalInfoOnSave", a => a.RemovePersonalInfoOnSave)
-                           .AddAttribute(0, "compatMode", a => a.CompatibilityMode)
-                           .AddAttribute(0, "strictFirstAndLastChars", a => a.StrictFirstAndLastChars)
-                           .AddAttribute(0, "embedTrueTypeFonts", a => a.EmbedTrueTypeFonts)
-                           .AddAttribute(0, "saveSubsetFonts", a => a.SaveSubsetFonts)
-                           .AddAttribute(0, "autoCompressPictures", a => a.AutoCompressPictures)
-                           .AddAttribute(0, "bookmarkIdSeed", a => a.BookmarkIdSeed, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (2147483648L), MinInclusive = (1L) });
-                           })
-                           .AddAttribute(0, "conformance", a => a.Conformance);
+.AddAttribute(0, "serverZoom", a => a.ServerZoom)
+.AddAttribute(0, "firstSlideNum", a => a.FirstSlideNum)
+.AddAttribute(0, "showSpecialPlsOnTitleSld", a => a.ShowSpecialPlaceholderOnTitleSlide)
+.AddAttribute(0, "rtl", a => a.RightToLeft)
+.AddAttribute(0, "removePersonalInfoOnSave", a => a.RemovePersonalInfoOnSave)
+.AddAttribute(0, "compatMode", a => a.CompatibilityMode)
+.AddAttribute(0, "strictFirstAndLastChars", a => a.StrictFirstAndLastChars)
+.AddAttribute(0, "embedTrueTypeFonts", a => a.EmbedTrueTypeFonts)
+.AddAttribute(0, "saveSubsetFonts", a => a.SaveSubsetFonts)
+.AddAttribute(0, "autoCompressPictures", a => a.AutoCompressPictures)
+.AddAttribute(0, "bookmarkIdSeed", a => a.BookmarkIdSeed, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (2147483648L), MinInclusive = (1L) });
+})
+.AddAttribute(0, "conformance", a => a.Conformance);
         }
 
         /// <summary>
@@ -2056,8 +2156,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(ShowProperties))]
     [ChildElementInfo(typeof(ColorMostRecentlyUsed))]
     [ChildElementInfo(typeof(PresentationPropertiesExtensionList))]
-    [SchemaAttr(24, "presentationPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PresentationProperties : OpenXmlPartRootElement
     {
         /// <summary>
@@ -2089,6 +2187,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public PresentationProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "presentationPr");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -2236,8 +2341,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(Transition))]
     [ChildElementInfo(typeof(Timing))]
     [ChildElementInfo(typeof(SlideExtensionList))]
-    [SchemaAttr(24, "sld")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Slide : OpenXmlPartRootElement
     {
         /// <summary>
@@ -2304,10 +2407,12 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "sld");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Slide>()
-                           .AddAttribute(0, "showMasterSp", a => a.ShowMasterShapes)
-                           .AddAttribute(0, "showMasterPhAnim", a => a.ShowMasterPlaceholderAnimations)
-                           .AddAttribute(0, "show", a => a.Show);
+.AddAttribute(0, "showMasterSp", a => a.ShowMasterShapes)
+.AddAttribute(0, "showMasterPhAnim", a => a.ShowMasterPlaceholderAnimations)
+.AddAttribute(0, "show", a => a.Show);
         }
 
         /// <summary>
@@ -2449,8 +2554,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(Timing))]
     [ChildElementInfo(typeof(HeaderFooter))]
     [ChildElementInfo(typeof(SlideLayoutExtensionList))]
-    [SchemaAttr(24, "sldLayout")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SlideLayout : OpenXmlPartRootElement
     {
         /// <summary>
@@ -2547,16 +2650,18 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "sldLayout");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SlideLayout>()
-                           .AddAttribute(0, "showMasterSp", a => a.ShowMasterShapes)
-                           .AddAttribute(0, "showMasterPhAnim", a => a.ShowMasterPlaceholderAnimations)
-                           .AddAttribute(0, "matchingName", a => a.MatchingName)
-                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "preserve", a => a.Preserve)
-                           .AddAttribute(0, "userDrawn", a => a.UserDrawn);
+.AddAttribute(0, "showMasterSp", a => a.ShowMasterShapes)
+.AddAttribute(0, "showMasterPhAnim", a => a.ShowMasterPlaceholderAnimations)
+.AddAttribute(0, "matchingName", a => a.MatchingName)
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "preserve", a => a.Preserve)
+.AddAttribute(0, "userDrawn", a => a.UserDrawn);
         }
 
         /// <summary>
@@ -2716,8 +2821,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(HeaderFooter))]
     [ChildElementInfo(typeof(TextStyles))]
     [ChildElementInfo(typeof(SlideMasterExtensionList))]
-    [SchemaAttr(24, "sldMaster")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SlideMaster : OpenXmlPartRootElement
     {
         /// <summary>
@@ -2764,8 +2867,10 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "sldMaster");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SlideMaster>()
-                           .AddAttribute(0, "preserve", a => a.Preserve);
+.AddAttribute(0, "preserve", a => a.Preserve);
         }
 
         /// <summary>
@@ -2945,8 +3050,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(ColorMap))]
     [ChildElementInfo(typeof(HeaderFooter))]
     [ChildElementInfo(typeof(HandoutMasterExtensionList))]
-    [SchemaAttr(24, "handoutMaster")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HandoutMaster : OpenXmlPartRootElement
     {
         /// <summary>
@@ -2978,6 +3081,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public HandoutMaster(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "handoutMaster");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -3103,8 +3213,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(HeaderFooter))]
     [ChildElementInfo(typeof(NotesStyle))]
     [ChildElementInfo(typeof(NotesMasterExtensionList))]
-    [SchemaAttr(24, "notesMaster")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NotesMaster : OpenXmlPartRootElement
     {
         /// <summary>
@@ -3136,6 +3244,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NotesMaster(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "notesMaster");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -3271,8 +3386,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(CommonSlideData))]
     [ChildElementInfo(typeof(ColorMapOverride))]
     [ChildElementInfo(typeof(ExtensionListWithModification))]
-    [SchemaAttr(24, "notes")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NotesSlide : OpenXmlPartRootElement
     {
         /// <summary>
@@ -3329,9 +3442,11 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "notes");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<NotesSlide>()
-                           .AddAttribute(0, "showMasterSp", a => a.ShowMasterShapes)
-                           .AddAttribute(0, "showMasterPhAnim", a => a.ShowMasterPlaceholderAnimations);
+.AddAttribute(0, "showMasterSp", a => a.ShowMasterShapes)
+.AddAttribute(0, "showMasterPhAnim", a => a.ShowMasterPlaceholderAnimations);
         }
 
         /// <summary>
@@ -3435,8 +3550,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(24, "sldSyncPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SlideSyncProperties : OpenXmlPartRootElement
     {
         /// <summary>
@@ -3503,19 +3616,21 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "sldSyncPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SlideSyncProperties>()
-                           .AddAttribute(0, "serverSldId", a => a.ServerSlideId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "serverSldModifiedTime", a => a.ServerSlideModifiedTime, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "clientInsertedTime", a => a.ClientInsertedTime, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "serverSldId", a => a.ServerSlideId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "serverSldModifiedTime", a => a.ServerSlideModifiedTime, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "clientInsertedTime", a => a.ClientInsertedTime, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -3585,8 +3700,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Tag))]
-    [SchemaAttr(24, "tagLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TagList : OpenXmlPartRootElement
     {
         /// <summary>
@@ -3618,6 +3731,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public TagList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "tagLst");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3688,8 +3808,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(NotesViewProperties))]
     [ChildElementInfo(typeof(GridSpacing))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(24, "viewPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ViewProperties : OpenXmlPartRootElement
     {
         /// <summary>
@@ -3746,12 +3864,14 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "viewPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ViewProperties>()
-                           .AddAttribute(0, "lastView", a => a.LastView, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "showComments", a => a.ShowComments);
+.AddAttribute(0, "lastView", a => a.LastView, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "showComments", a => a.ShowComments);
         }
 
         /// <summary>
@@ -3923,8 +4043,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualContentPartProperties), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.Transform2D), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionListModify), FileFormatVersions.Office2010)]
-    [SchemaAttr(24, "contentPart")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ContentPart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3987,15 +4105,17 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "contentPart");
+            builder.Availability = (FileFormatVersions.Office2010);
             builder.AddElement<ContentPart>()
-                           .AddAttribute(49, "bwMode", a => a.BwMode, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-                           })
-                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(49, "bwMode", a => a.BwMode, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+})
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -4061,8 +4181,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:snd.</para>
     /// </summary>
-    [SchemaAttr(24, "snd")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Sound : EmbeddedWavAudioFileType
     {
         /// <summary>
@@ -4070,6 +4188,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public Sound() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "snd");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -4081,8 +4206,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:sndTgt.</para>
     /// </summary>
-    [SchemaAttr(24, "sndTgt")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SoundTarget : EmbeddedWavAudioFileType
     {
         /// <summary>
@@ -4090,6 +4213,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public SoundTarget() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "sndTgt");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -4168,8 +4298,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Sound))]
-    [SchemaAttr(24, "stSnd")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StartSoundAction : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4216,8 +4344,10 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "stSnd");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<StartSoundAction>()
-                           .AddAttribute(0, "loop", a => a.Loop);
+.AddAttribute(0, "loop", a => a.Loop);
         }
 
         /// <summary>
@@ -4249,8 +4379,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:tmAbs.</para>
     /// </summary>
-    [SchemaAttr(24, "tmAbs")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TimeAbsolute : OpenXmlLeafElement
     {
         /// <summary>
@@ -4273,21 +4401,23 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "tmAbs");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<TimeAbsolute>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2007), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>)), Version = (FileFormatVersions.Office2007), UnionId = (0) });
-                               });
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new StringValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (1) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (1) });
-                               });
-                           });
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2007), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>)), Version = (FileFormatVersions.Office2007), UnionId = (0) });
+});
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new StringValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (1) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (1) });
+});
+});
         }
 
         /// <inheritdoc/>
@@ -4299,8 +4429,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:tmPct.</para>
     /// </summary>
-    [SchemaAttr(24, "tmPct")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TimePercentage : OpenXmlLeafElement
     {
         /// <summary>
@@ -4323,12 +4451,14 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "tmPct");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<TimePercentage>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
-                           });
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -4361,8 +4491,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(ShapeTarget))]
     [ChildElementInfo(typeof(InkTarget))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.BookmarkTarget), FileFormatVersions.Office2010)]
-    [SchemaAttr(24, "tgtEl")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TargetElement : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4394,6 +4522,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public TargetElement(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "tgtEl");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -4481,8 +4616,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:tn.</para>
     /// </summary>
-    [SchemaAttr(24, "tn")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TimeNode : OpenXmlLeafElement
     {
         /// <summary>
@@ -4505,11 +4638,13 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "tn");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<TimeNode>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -4521,8 +4656,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:rtn.</para>
     /// </summary>
-    [SchemaAttr(24, "rtn")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RuntimeNodeTrigger : OpenXmlLeafElement
     {
         /// <summary>
@@ -4545,12 +4678,14 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "rtn");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RuntimeNodeTrigger>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <inheritdoc/>
@@ -4570,8 +4705,6 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description>RuntimeNodeTrigger &lt;p:rtn></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(24, "cond")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Condition : TimeListConditionalType
     {
         /// <summary>
@@ -4605,6 +4738,13 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "cond");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TargetElement), 1, 1),
@@ -4631,8 +4771,6 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description>RuntimeNodeTrigger &lt;p:rtn></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(24, "endSync")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class EndSync : TimeListConditionalType
     {
         /// <summary>
@@ -4664,6 +4802,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public EndSync(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "endSync");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 1)
@@ -4823,8 +4968,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CommonTimeNode))]
-    [SchemaAttr(24, "par")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ParallelTimeNode : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4856,6 +4999,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ParallelTimeNode(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "par");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -4898,8 +5048,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(CommonTimeNode))]
     [ChildElementInfo(typeof(PreviousConditionList))]
     [ChildElementInfo(typeof(NextConditionList))]
-    [SchemaAttr(24, "seq")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SequenceTimeNode : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4966,16 +5114,18 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "seq");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SequenceTimeNode>()
-                           .AddAttribute(0, "concurrent", a => a.Concurrent)
-                           .AddAttribute(0, "prevAc", a => a.PreviousAction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "nextAc", a => a.NextAction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "concurrent", a => a.Concurrent)
+.AddAttribute(0, "prevAc", a => a.PreviousAction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "nextAc", a => a.NextAction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <summary>
@@ -5042,8 +5192,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CommonTimeNode))]
-    [SchemaAttr(24, "excl")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ExclusiveTimeNode : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5075,6 +5223,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ExclusiveTimeNode(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "excl");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -5115,8 +5270,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </remark>
     [ChildElementInfo(typeof(CommonBehavior))]
     [ChildElementInfo(typeof(TimeAnimateValueList))]
-    [SchemaAttr(24, "anim")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Animate : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5216,23 +5369,25 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "anim");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Animate>()
-                           .AddAttribute(0, "by", a => a.By)
-                           .AddAttribute(0, "from", a => a.From)
-                           .AddAttribute(0, "to", a => a.To)
-                           .AddAttribute(0, "calcmode", a => a.CalculationMode, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "valueType", a => a.ValueType, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(49, "bounceEnd", a => a.BounceEnd, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
-                           });
+.AddAttribute(0, "by", a => a.By)
+.AddAttribute(0, "from", a => a.From)
+.AddAttribute(0, "to", a => a.To)
+.AddAttribute(0, "calcmode", a => a.CalculationMode, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "valueType", a => a.ValueType, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(49, "bounceEnd", a => a.BounceEnd, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+});
         }
 
         /// <summary>
@@ -5291,8 +5446,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(ByColor))]
     [ChildElementInfo(typeof(FromColor))]
     [ChildElementInfo(typeof(ToColor))]
-    [SchemaAttr(24, "animClr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AnimateColor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5349,15 +5502,17 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "animClr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<AnimateColor>()
-                           .AddAttribute(0, "clrSpc", a => a.ColorSpace, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "dir", a => a.Direction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "clrSpc", a => a.ColorSpace, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "dir", a => a.Direction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <summary>
@@ -5440,8 +5595,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </remark>
     [ChildElementInfo(typeof(CommonBehavior))]
     [ChildElementInfo(typeof(Progress))]
-    [SchemaAttr(24, "animEffect")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AnimateEffect : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5508,13 +5661,15 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "animEffect");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<AnimateEffect>()
-                           .AddAttribute(0, "transition", a => a.Transition, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "filter", a => a.Filter)
-                           .AddAttribute(0, "prLst", a => a.PropertyList);
+.AddAttribute(0, "transition", a => a.Transition, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "filter", a => a.Filter)
+.AddAttribute(0, "prLst", a => a.PropertyList);
         }
 
         /// <summary>
@@ -5575,8 +5730,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(FromPosition))]
     [ChildElementInfo(typeof(ToPosition))]
     [ChildElementInfo(typeof(RotationCenter))]
-    [SchemaAttr(24, "animMotion")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AnimateMotion : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5676,23 +5829,25 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "animMotion");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<AnimateMotion>()
-                           .AddAttribute(0, "origin", a => a.Origin, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "path", a => a.Path)
-                           .AddAttribute(0, "pathEditMode", a => a.PathEditMode, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "rAng", a => a.RelativeAngle)
-                           .AddAttribute(0, "ptsTypes", a => a.PointTypes)
-                           .AddAttribute(49, "bounceEnd", a => a.BounceEnd, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
-                           });
+.AddAttribute(0, "origin", a => a.Origin, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "path", a => a.Path)
+.AddAttribute(0, "pathEditMode", a => a.PathEditMode, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "rAng", a => a.RelativeAngle)
+.AddAttribute(0, "ptsTypes", a => a.PointTypes)
+.AddAttribute(49, "bounceEnd", a => a.BounceEnd, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+});
         }
 
         /// <summary>
@@ -5793,8 +5948,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CommonBehavior))]
-    [SchemaAttr(24, "animRot")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AnimateRotation : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5874,15 +6027,17 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "animRot");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<AnimateRotation>()
-                           .AddAttribute(0, "by", a => a.By)
-                           .AddAttribute(0, "from", a => a.From)
-                           .AddAttribute(0, "to", a => a.To)
-                           .AddAttribute(49, "bounceEnd", a => a.BounceEnd, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
-                           });
+.AddAttribute(0, "by", a => a.By)
+.AddAttribute(0, "from", a => a.From)
+.AddAttribute(0, "to", a => a.To)
+.AddAttribute(49, "bounceEnd", a => a.BounceEnd, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+});
         }
 
         /// <summary>
@@ -5935,8 +6090,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(ByPosition))]
     [ChildElementInfo(typeof(FromPosition))]
     [ChildElementInfo(typeof(ToPosition))]
-    [SchemaAttr(24, "animScale")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AnimateScale : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5996,13 +6149,15 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "animScale");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<AnimateScale>()
-                           .AddAttribute(0, "zoomContents", a => a.ZoomContents)
-                           .AddAttribute(49, "bounceEnd", a => a.BounceEnd, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
-                           });
+.AddAttribute(0, "zoomContents", a => a.ZoomContents)
+.AddAttribute(49, "bounceEnd", a => a.BounceEnd, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+});
         }
 
         /// <summary>
@@ -6083,8 +6238,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CommonBehavior))]
-    [SchemaAttr(24, "cmd")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Command : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6141,12 +6294,14 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "cmd");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Command>()
-                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "cmd", a => a.CommandName);
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "cmd", a => a.CommandName);
         }
 
         /// <summary>
@@ -6187,8 +6342,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </remark>
     [ChildElementInfo(typeof(CommonBehavior))]
     [ChildElementInfo(typeof(ToVariantValue))]
-    [SchemaAttr(24, "set")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SetBehavior : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6220,6 +6373,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public SetBehavior(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "set");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -6272,8 +6432,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CommonMediaNode))]
-    [SchemaAttr(24, "audio")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Audio : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6320,8 +6478,10 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "audio");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Audio>()
-                           .AddAttribute(0, "isNarration", a => a.IsNarration);
+.AddAttribute(0, "isNarration", a => a.IsNarration);
         }
 
         /// <summary>
@@ -6360,8 +6520,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CommonMediaNode))]
-    [SchemaAttr(24, "video")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Video : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6408,8 +6566,10 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "video");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Video>()
-                           .AddAttribute(0, "fullScrn", a => a.FullScreen);
+.AddAttribute(0, "fullScrn", a => a.FullScreen);
         }
 
         /// <summary>
@@ -6458,8 +6618,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(Iterate))]
     [ChildElementInfo(typeof(ChildTimeNodeList))]
     [ChildElementInfo(typeof(SubTimeNodeList))]
-    [SchemaAttr(24, "cTn")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CommonTimeNode : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6739,59 +6897,61 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "cTn");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CommonTimeNode>()
-                           .AddAttribute(0, "id", a => a.Id)
-                           .AddAttribute(0, "presetID", a => a.PresetId)
-                           .AddAttribute(0, "presetClass", a => a.PresetClass, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "presetSubtype", a => a.PresetSubtype)
-                           .AddAttribute(0, "dur", a => a.Duration)
-                           .AddAttribute(0, "repeatCount", a => a.RepeatCount)
-                           .AddAttribute(0, "repeatDur", a => a.RepeatDuration)
-                           .AddAttribute(0, "spd", a => a.Speed)
-                           .AddAttribute(0, "accel", a => a.Acceleration, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
-                           })
-                           .AddAttribute(0, "decel", a => a.Deceleration, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
-                           })
-                           .AddAttribute(0, "autoRev", a => a.AutoReverse)
-                           .AddAttribute(0, "restart", a => a.Restart, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "fill", a => a.Fill, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "syncBehavior", a => a.SyncBehavior, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "tmFilter", a => a.TimeFilter)
-                           .AddAttribute(0, "evtFilter", a => a.EventFilter)
-                           .AddAttribute(0, "display", a => a.Display)
-                           .AddAttribute(0, "masterRel", a => a.MasterRelation, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "bldLvl", a => a.BuildLevel)
-                           .AddAttribute(0, "grpId", a => a.GroupId)
-                           .AddAttribute(0, "afterEffect", a => a.AfterEffect)
-                           .AddAttribute(0, "nodeType", a => a.NodeType, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "nodePh", a => a.NodePlaceholder)
-                           .AddAttribute(49, "presetBounceEnd", a => a.PresetBounceEnd, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
-                           });
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "presetID", a => a.PresetId)
+.AddAttribute(0, "presetClass", a => a.PresetClass, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "presetSubtype", a => a.PresetSubtype)
+.AddAttribute(0, "dur", a => a.Duration)
+.AddAttribute(0, "repeatCount", a => a.RepeatCount)
+.AddAttribute(0, "repeatDur", a => a.RepeatDuration)
+.AddAttribute(0, "spd", a => a.Speed)
+.AddAttribute(0, "accel", a => a.Acceleration, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "decel", a => a.Deceleration, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "autoRev", a => a.AutoReverse)
+.AddAttribute(0, "restart", a => a.Restart, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "fill", a => a.Fill, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "syncBehavior", a => a.SyncBehavior, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "tmFilter", a => a.TimeFilter)
+.AddAttribute(0, "evtFilter", a => a.EventFilter)
+.AddAttribute(0, "display", a => a.Display)
+.AddAttribute(0, "masterRel", a => a.MasterRelation, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "bldLvl", a => a.BuildLevel)
+.AddAttribute(0, "grpId", a => a.GroupId)
+.AddAttribute(0, "afterEffect", a => a.AfterEffect)
+.AddAttribute(0, "nodeType", a => a.NodeType, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "nodePh", a => a.NodePlaceholder)
+.AddAttribute(49, "presetBounceEnd", a => a.PresetBounceEnd, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+});
         }
 
         /// <summary>
@@ -6905,8 +7065,6 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description>Condition &lt;p:cond></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(24, "prevCondLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PreviousConditionList : TimeListTimeConditionalListType
     {
         /// <summary>
@@ -6940,6 +7098,13 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "prevCondLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Condition), 1, 0)
@@ -6962,8 +7127,6 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description>Condition &lt;p:cond></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(24, "nextCondLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NextConditionList : TimeListTimeConditionalListType
     {
         /// <summary>
@@ -6997,6 +7160,13 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "nextCondLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Condition), 1, 0)
@@ -7019,8 +7189,6 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description>Condition &lt;p:cond></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(24, "stCondLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StartConditionList : TimeListTimeConditionalListType
     {
         /// <summary>
@@ -7054,6 +7222,13 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "stCondLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Condition), 1, 0)
@@ -7076,8 +7251,6 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description>Condition &lt;p:cond></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(24, "endCondLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class EndConditionList : TimeListTimeConditionalListType
     {
         /// <summary>
@@ -7109,6 +7282,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public EndConditionList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "endCondLst");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -7166,6 +7346,11 @@ namespace DocumentFormat.OpenXml.Presentation
         protected TimeListTimeConditionalListType(string outerXml) : base(outerXml)
         {
         }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+        }
     }
 
     /// <summary>
@@ -7173,8 +7358,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:attrName.</para>
     /// </summary>
-    [SchemaAttr(24, "attrName")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AttributeName : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -7197,6 +7380,13 @@ namespace DocumentFormat.OpenXml.Presentation
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "attrName");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AttributeName>(deep);
     }
@@ -7206,8 +7396,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:text.</para>
     /// </summary>
-    [SchemaAttr(24, "text")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Text : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -7230,6 +7418,13 @@ namespace DocumentFormat.OpenXml.Presentation
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "text");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Text>(deep);
     }
@@ -7246,8 +7441,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(AttributeName))]
-    [SchemaAttr(24, "attrNameLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AttributeNameList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7281,6 +7474,13 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "attrNameLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AttributeName), 1, 0)
@@ -7297,8 +7497,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:boolVal.</para>
     /// </summary>
-    [SchemaAttr(24, "boolVal")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BooleanVariantValue : OpenXmlLeafElement
     {
         /// <summary>
@@ -7321,11 +7519,13 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "boolVal");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<BooleanVariantValue>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -7337,8 +7537,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:intVal.</para>
     /// </summary>
-    [SchemaAttr(24, "intVal")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class IntegerVariantValue : OpenXmlLeafElement
     {
         /// <summary>
@@ -7361,11 +7559,13 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "intVal");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<IntegerVariantValue>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -7377,8 +7577,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:fltVal.</para>
     /// </summary>
-    [SchemaAttr(24, "fltVal")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FloatVariantValue : OpenXmlLeafElement
     {
         /// <summary>
@@ -7401,11 +7599,13 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "fltVal");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<FloatVariantValue>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -7417,8 +7617,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:strVal.</para>
     /// </summary>
-    [SchemaAttr(24, "strVal")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StringVariantValue : OpenXmlLeafElement
     {
         /// <summary>
@@ -7441,11 +7639,13 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "strVal");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<StringVariantValue>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -7468,8 +7668,6 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(24, "clrVal")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColorValue : ColorType
     {
         /// <summary>
@@ -7501,6 +7699,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ColorValue(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "clrVal");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -7541,8 +7746,6 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(24, "penClr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PenColor : ColorType
     {
         /// <summary>
@@ -7574,6 +7777,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public PenColor(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "penClr");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -7651,6 +7861,11 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         protected ColorType(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
         }
 
         /// <summary>
@@ -7744,8 +7959,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(VariantValue))]
-    [SchemaAttr(24, "tav")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TimeAnimateValue : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7802,16 +8015,18 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "tav");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<TimeAnimateValue>()
-                           .AddAttribute(0, "tm", a => a.Time, aBuilder =>
-                           {
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>)), UnionId = (0) });
-                               });
-                           })
-                           .AddAttribute(0, "fmla", a => a.Fomula);
+.AddAttribute(0, "tm", a => a.Time, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>)), UnionId = (0) });
+});
+})
+.AddAttribute(0, "fmla", a => a.Fomula);
         }
 
         /// <summary>
@@ -7843,8 +8058,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:rgb.</para>
     /// </summary>
-    [SchemaAttr(24, "rgb")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RgbColor : OpenXmlLeafElement
     {
         /// <summary>
@@ -7887,22 +8100,24 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "rgb");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RgbColor>()
-                           .AddAttribute(0, "r", a => a.Red, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
-                           })
-                           .AddAttribute(0, "g", a => a.Green, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
-                           })
-                           .AddAttribute(0, "b", a => a.Blue, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
-                           });
+.AddAttribute(0, "r", a => a.Red, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "g", a => a.Green, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "b", a => a.Blue, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
+});
         }
 
         /// <inheritdoc/>
@@ -7914,8 +8129,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:hsl.</para>
     /// </summary>
-    [SchemaAttr(24, "hsl")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HslColor : OpenXmlLeafElement
     {
         /// <summary>
@@ -7958,21 +8171,23 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "hsl");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<HslColor>()
-                           .AddAttribute(0, "h", a => a.Hue, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "s", a => a.Saturation, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
-                           })
-                           .AddAttribute(0, "l", a => a.Lightness, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
-                           });
+.AddAttribute(0, "h", a => a.Hue, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "s", a => a.Saturation, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "l", a => a.Lightness, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
+});
         }
 
         /// <inheritdoc/>
@@ -7995,8 +8210,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(CommonTimeNode))]
     [ChildElementInfo(typeof(TargetElement))]
     [ChildElementInfo(typeof(AttributeNameList))]
-    [SchemaAttr(24, "cBhvr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CommonBehavior : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8113,27 +8326,29 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "cBhvr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CommonBehavior>()
-                           .AddAttribute(0, "additive", a => a.Additive, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "accumulate", a => a.Accumulate, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "xfrmType", a => a.TransformType, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "from", a => a.From)
-                           .AddAttribute(0, "to", a => a.To)
-                           .AddAttribute(0, "by", a => a.By)
-                           .AddAttribute(0, "rctx", a => a.RuntimeContext)
-                           .AddAttribute(0, "override", a => a.Override, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "additive", a => a.Additive, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "accumulate", a => a.Accumulate, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "xfrmType", a => a.TransformType, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "from", a => a.From)
+.AddAttribute(0, "to", a => a.To)
+.AddAttribute(0, "by", a => a.By)
+.AddAttribute(0, "rctx", a => a.RuntimeContext)
+.AddAttribute(0, "override", a => a.Override, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <summary>
@@ -8200,8 +8415,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(FloatVariantValue))]
-    [SchemaAttr(24, "progress")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Progress : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8233,6 +8446,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Progress(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "progress");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -8274,8 +8494,6 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description>ColorValue &lt;p:clrVal></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(24, "to")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ToVariantValue : TimeListAnimationVariantType
     {
         /// <summary>
@@ -8309,6 +8527,13 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "to");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BooleanVariantValue), 1, 1),
@@ -8339,8 +8564,6 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description>ColorValue &lt;p:clrVal></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(24, "val")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VariantValue : TimeListAnimationVariantType
     {
         /// <summary>
@@ -8372,6 +8595,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public VariantValue(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "val");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -8440,6 +8670,11 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         protected TimeListAnimationVariantType(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
         }
 
         /// <summary>
@@ -8522,8 +8757,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </remark>
     [ChildElementInfo(typeof(CommonTimeNode))]
     [ChildElementInfo(typeof(TargetElement))]
-    [SchemaAttr(24, "cMediaNode")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CommonMediaNode : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8600,14 +8833,16 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "cMediaNode");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CommonMediaNode>()
-                           .AddAttribute(0, "vol", a => a.Volume, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
-                           })
-                           .AddAttribute(0, "mute", a => a.Mute)
-                           .AddAttribute(0, "numSld", a => a.SlideCount)
-                           .AddAttribute(0, "showWhenStopped", a => a.ShowWhenStopped);
+.AddAttribute(0, "vol", a => a.Volume, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "mute", a => a.Mute)
+.AddAttribute(0, "numSld", a => a.SlideCount)
+.AddAttribute(0, "showWhenStopped", a => a.ShowWhenStopped);
         }
 
         /// <summary>
@@ -8660,8 +8895,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ParallelTimeNode))]
-    [SchemaAttr(24, "tnLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TimeNodeList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8693,6 +8926,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public TimeNodeList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "tnLst");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -8731,8 +8971,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(TimeNodeList))]
-    [SchemaAttr(24, "tmpl")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Template : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8779,8 +9017,10 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "tmpl");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Template>()
-                           .AddAttribute(0, "lvl", a => a.Level);
+.AddAttribute(0, "lvl", a => a.Level);
         }
 
         /// <summary>
@@ -8826,8 +9066,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Template))]
-    [SchemaAttr(24, "tmplLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TemplateList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8861,6 +9099,13 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "tmplLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Template), 0, 9)
@@ -8886,8 +9131,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BuildDiagram))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BuildChart))]
-    [SchemaAttr(24, "bldSub")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BuildSubElement : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8919,6 +9162,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public BuildSubElement(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "bldSub");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -8971,8 +9221,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(TemplateList))]
-    [SchemaAttr(24, "bldP")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BuildParagraph : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9099,40 +9347,42 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "bldP");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<BuildParagraph>()
-                           .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2010) });
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2013) });
-                           })
-                           .AddAttribute(0, "grpId", a => a.GroupId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "uiExpand", a => a.UiExpand)
-                           .AddAttribute(0, "build", a => a.Build, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "bldLvl", a => a.BuildLevel)
-                           .AddAttribute(0, "animBg", a => a.AnimateBackground)
-                           .AddAttribute(0, "autoUpdateAnimBg", a => a.AutoAnimateBackground)
-                           .AddAttribute(0, "rev", a => a.Reverse)
-                           .AddAttribute(0, "advAuto", a => a.AutoAdvance, aBuilder =>
-                           {
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2007), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>)), Version = (FileFormatVersions.Office2007), UnionId = (0) });
-                               });
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new StringValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (1) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (1) });
-                               });
-                           });
+.AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2010) });
+aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2013) });
+})
+.AddAttribute(0, "grpId", a => a.GroupId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "uiExpand", a => a.UiExpand)
+.AddAttribute(0, "build", a => a.Build, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "bldLvl", a => a.BuildLevel)
+.AddAttribute(0, "animBg", a => a.AnimateBackground)
+.AddAttribute(0, "autoUpdateAnimBg", a => a.AutoAnimateBackground)
+.AddAttribute(0, "rev", a => a.Reverse)
+.AddAttribute(0, "advAuto", a => a.AutoAdvance, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2007), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>)), Version = (FileFormatVersions.Office2007), UnionId = (0) });
+});
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new StringValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (1) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (1) });
+});
+});
         }
 
         /// <summary>
@@ -9170,8 +9420,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:bldDgm.</para>
     /// </summary>
-    [SchemaAttr(24, "bldDgm")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BuildDiagram : OpenXmlLeafElement
     {
         /// <summary>
@@ -9224,23 +9472,25 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "bldDgm");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<BuildDiagram>()
-                           .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2010) });
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2013) });
-                           })
-                           .AddAttribute(0, "grpId", a => a.GroupId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "uiExpand", a => a.UiExpand)
-                           .AddAttribute(0, "bld", a => a.Build, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2010) });
+aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2013) });
+})
+.AddAttribute(0, "grpId", a => a.GroupId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "uiExpand", a => a.UiExpand)
+.AddAttribute(0, "bld", a => a.Build, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -9259,8 +9509,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:bldOleChart.</para>
     /// </summary>
-    [SchemaAttr(24, "bldOleChart")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BuildOleChart : OpenXmlLeafElement
     {
         /// <summary>
@@ -9323,24 +9571,26 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "bldOleChart");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<BuildOleChart>()
-                           .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2010) });
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2013) });
-                           })
-                           .AddAttribute(0, "grpId", a => a.GroupId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "uiExpand", a => a.UiExpand)
-                           .AddAttribute(0, "bld", a => a.Build, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "animBg", a => a.AnimateBackground);
+.AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2010) });
+aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2013) });
+})
+.AddAttribute(0, "grpId", a => a.GroupId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "uiExpand", a => a.UiExpand)
+.AddAttribute(0, "bld", a => a.Build, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "animBg", a => a.AnimateBackground);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -9368,8 +9618,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </remark>
     [ChildElementInfo(typeof(BuildAsOne))]
     [ChildElementInfo(typeof(BuildSubElement))]
-    [SchemaAttr(24, "bldGraphic")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BuildGraphics : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9436,19 +9684,21 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "bldGraphic");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<BuildGraphics>()
-                           .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2010) });
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2013) });
-                           })
-                           .AddAttribute(0, "grpId", a => a.GroupId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "uiExpand", a => a.UiExpand);
+.AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2010) });
+aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2013) });
+})
+.AddAttribute(0, "grpId", a => a.GroupId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "uiExpand", a => a.UiExpand);
         }
 
         /// <summary>
@@ -9514,8 +9764,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(BuildDiagram))]
     [ChildElementInfo(typeof(BuildOleChart))]
     [ChildElementInfo(typeof(BuildGraphics))]
-    [SchemaAttr(24, "bldLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BuildList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9549,6 +9797,13 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "bldLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BuildParagraph), 1, 1),
@@ -9575,8 +9830,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Extension))]
-    [SchemaAttr(24, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ExtensionListWithModification : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9623,8 +9876,10 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ExtensionListWithModification>()
-                           .AddAttribute(0, "mod", a => a.Modify);
+.AddAttribute(0, "mod", a => a.Modify);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -9658,8 +9913,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </remark>
     [ChildElementInfo(typeof(RgbColor))]
     [ChildElementInfo(typeof(HslColor))]
-    [SchemaAttr(24, "by")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ByColor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9691,6 +9944,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ByColor(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "by");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -9747,8 +10007,6 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(24, "from")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FromColor : Color3Type
     {
         /// <summary>
@@ -9780,6 +10038,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public FromColor(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "from");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -9814,8 +10079,6 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(24, "to")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ToColor : Color3Type
     {
         /// <summary>
@@ -9847,6 +10110,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ToColor(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "to");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -9918,6 +10188,11 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         protected Color3Type(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
         }
 
         /// <summary>
@@ -10004,8 +10279,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:sld.</para>
     /// </summary>
-    [SchemaAttr(24, "sld")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SlideListEntry : OpenXmlLeafElement
     {
         /// <summary>
@@ -10031,11 +10304,13 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "sld");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SlideListEntry>()
-                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -10053,8 +10328,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:custData.</para>
     /// </summary>
-    [SchemaAttr(24, "custData")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CustomerData : OpenXmlLeafElement
     {
         /// <summary>
@@ -10080,11 +10353,13 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "custData");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CustomerData>()
-                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -10096,8 +10371,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:tags.</para>
     /// </summary>
-    [SchemaAttr(24, "tags")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CustomerDataTags : OpenXmlLeafElement
     {
         /// <summary>
@@ -10123,11 +10396,13 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "tags");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CustomerDataTags>()
-                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -10146,8 +10421,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CommentAuthorExtensionList))]
-    [SchemaAttr(24, "cmAuthor")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CommentAuthor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10234,27 +10507,29 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "cmAuthor");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CommentAuthor>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "initials", a => a.Initials, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "lastIdx", a => a.LastIndex, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "clrIdx", a => a.ColorIndex, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "initials", a => a.Initials, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "lastIdx", a => a.LastIndex, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "clrIdx", a => a.ColorIndex, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -10305,8 +10580,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(Position))]
     [ChildElementInfo(typeof(Text))]
     [ChildElementInfo(typeof(CommentExtensionList))]
-    [SchemaAttr(24, "cm")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Comment : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10373,16 +10646,18 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "cm");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Comment>()
-                           .AddAttribute(0, "authorId", a => a.AuthorId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "dt", a => a.DateTime)
-                           .AddAttribute(0, "idx", a => a.Index, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "authorId", a => a.AuthorId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "dt", a => a.DateTime)
+.AddAttribute(0, "idx", a => a.Index, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -10449,8 +10724,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Extension))]
-    [SchemaAttr(24, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10484,6 +10757,13 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 1)
@@ -10515,8 +10795,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </remark>
     [ChildElementInfo(typeof(ExtensionList))]
     [ChildElementInfo(typeof(Picture))]
-    [SchemaAttr(24, "control")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Control : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10616,22 +10894,24 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "control");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Control>()
-                           .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "name", a => a.Name)
-                           .AddAttribute(0, "showAsIcon", a => a.ShowAsIcon)
-                           .AddAttribute(19, "id", a => a.Id)
-                           .AddAttribute(0, "imgW", a => a.ImageWidth, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
-                           })
-                           .AddAttribute(0, "imgH", a => a.ImageHeight, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
-                           });
+.AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "name", a => a.Name)
+.AddAttribute(0, "showAsIcon", a => a.ShowAsIcon)
+.AddAttribute(19, "id", a => a.Id)
+.AddAttribute(0, "imgW", a => a.ImageWidth, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+})
+.AddAttribute(0, "imgH", a => a.ImageHeight, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+});
         }
 
         /// <summary>
@@ -10684,8 +10964,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(24, "sldId")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SlideId : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10745,16 +11023,18 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "sldId");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SlideId>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (2147483648L), MinInclusive = (256L) });
-                           })
-                           .AddAttribute(19, "id", a => a.RelationshipId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (2147483648L), MinInclusive = (256L) });
+})
+.AddAttribute(19, "id", a => a.RelationshipId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -10800,8 +11080,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(24, "sldMasterId")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SlideMasterId : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10861,15 +11139,17 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "sldMasterId");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SlideMasterId>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2147483648L) });
-                           })
-                           .AddAttribute(19, "id", a => a.RelationshipId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2147483648L) });
+})
+.AddAttribute(19, "id", a => a.RelationshipId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -10915,8 +11195,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(24, "notesMasterId")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NotesMasterId : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10966,11 +11244,13 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "notesMasterId");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<NotesMasterId>()
-                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -11015,8 +11295,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(24, "handoutMasterId")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HandoutMasterId : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11066,11 +11344,13 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "handoutMasterId");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<HandoutMasterId>()
-                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -11108,8 +11388,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:font.</para>
     /// </summary>
-    [SchemaAttr(24, "font")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Font : OpenXmlLeafElement
     {
         /// <summary>
@@ -11162,14 +11440,16 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "font");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Font>()
-                           .AddAttribute(0, "typeface", a => a.Typeface)
-                           .AddAttribute(0, "panose", a => a.Panose, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (10L) });
-                           })
-                           .AddAttribute(0, "pitchFamily", a => a.PitchFamily)
-                           .AddAttribute(0, "charset", a => a.CharacterSet);
+.AddAttribute(0, "typeface", a => a.Typeface)
+.AddAttribute(0, "panose", a => a.Panose, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (10L) });
+})
+.AddAttribute(0, "pitchFamily", a => a.PitchFamily)
+.AddAttribute(0, "charset", a => a.CharacterSet);
         }
 
         /// <inheritdoc/>
@@ -11181,8 +11461,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:regular.</para>
     /// </summary>
-    [SchemaAttr(24, "regular")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RegularFont : EmbeddedFontDataIdType
     {
         /// <summary>
@@ -11190,6 +11468,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public RegularFont() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "regular");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -11201,8 +11486,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:bold.</para>
     /// </summary>
-    [SchemaAttr(24, "bold")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BoldFont : EmbeddedFontDataIdType
     {
         /// <summary>
@@ -11210,6 +11493,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public BoldFont() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "bold");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -11221,8 +11511,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:italic.</para>
     /// </summary>
-    [SchemaAttr(24, "italic")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ItalicFont : EmbeddedFontDataIdType
     {
         /// <summary>
@@ -11230,6 +11518,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public ItalicFont() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "italic");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -11241,8 +11536,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:boldItalic.</para>
     /// </summary>
-    [SchemaAttr(24, "boldItalic")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BoldItalicFont : EmbeddedFontDataIdType
     {
         /// <summary>
@@ -11250,6 +11543,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public BoldItalicFont() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "boldItalic");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -11314,8 +11614,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(BoldFont))]
     [ChildElementInfo(typeof(ItalicFont))]
     [ChildElementInfo(typeof(BoldItalicFont))]
-    [SchemaAttr(24, "embeddedFont")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class EmbeddedFont : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11347,6 +11645,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public EmbeddedFont(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "embeddedFont");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -11441,8 +11746,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(SlideListEntry))]
-    [SchemaAttr(24, "sldLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SlideList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11476,6 +11779,13 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "sldLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideListEntry), 0, 0)
@@ -11501,8 +11811,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </remark>
     [ChildElementInfo(typeof(SlideList))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(24, "custShow")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CustomShow : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11559,15 +11867,17 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "custShow");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CustomShow>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -11624,8 +11934,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList))]
-    [SchemaAttr(24, "cNvPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11712,18 +12020,20 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "cNvPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<NonVisualDrawingProperties>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "descr", a => a.Description)
-                           .AddAttribute(0, "hidden", a => a.Hidden)
-                           .AddAttribute(0, "title", a => a.Title);
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "descr", a => a.Description)
+.AddAttribute(0, "hidden", a => a.Hidden)
+.AddAttribute(0, "title", a => a.Title);
         }
 
         /// <summary>
@@ -11792,8 +12102,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapeLocks))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-    [SchemaAttr(24, "cNvSpPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11840,8 +12148,10 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "cNvSpPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<NonVisualShapeDrawingProperties>()
-                           .AddAttribute(0, "txBox", a => a.TextBox);
+.AddAttribute(0, "txBox", a => a.TextBox);
         }
 
         /// <summary>
@@ -11908,8 +12218,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.QuickTimeFromFile))]
     [ChildElementInfo(typeof(CustomerDataList))]
     [ChildElementInfo(typeof(ApplicationNonVisualDrawingPropertiesExtensionList))]
-    [SchemaAttr(24, "nvPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11966,9 +12274,11 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "nvPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ApplicationNonVisualDrawingProperties>()
-                           .AddAttribute(0, "isPhoto", a => a.IsPhoto)
-                           .AddAttribute(0, "userDrawn", a => a.UserDrawn);
+.AddAttribute(0, "isPhoto", a => a.IsPhoto)
+.AddAttribute(0, "userDrawn", a => a.UserDrawn);
         }
 
         /// <summary>
@@ -12024,8 +12334,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(NonVisualDrawingProperties))]
     [ChildElementInfo(typeof(NonVisualShapeDrawingProperties))]
     [ChildElementInfo(typeof(ApplicationNonVisualDrawingProperties))]
-    [SchemaAttr(24, "nvSpPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12057,6 +12365,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NonVisualShapeProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "nvSpPr");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -12151,8 +12466,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
-    [SchemaAttr(24, "spPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12199,11 +12512,13 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "spPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ShapeProperties>()
-                           .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <summary>
@@ -12280,8 +12595,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FillReference))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectReference))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FontReference))]
-    [SchemaAttr(24, "style")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShapeStyle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12313,6 +12626,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ShapeStyle(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "style");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -12397,8 +12717,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ListStyle))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Paragraph))]
-    [SchemaAttr(24, "txBody")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TextBody : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12430,6 +12748,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public TextBody(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "txBody");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -12489,8 +12814,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.StartConnection))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EndConnection))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-    [SchemaAttr(24, "cNvCxnSpPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12522,6 +12845,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NonVisualConnectorShapeDrawingProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "cNvCxnSpPr");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -12606,8 +12936,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(NonVisualDrawingProperties))]
     [ChildElementInfo(typeof(NonVisualConnectorShapeDrawingProperties))]
     [ChildElementInfo(typeof(ApplicationNonVisualDrawingProperties))]
-    [SchemaAttr(24, "nvCxnSpPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12639,6 +12967,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NonVisualConnectionShapeProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "nvCxnSpPr");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -12707,8 +13042,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PictureLocks))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList))]
-    [SchemaAttr(24, "cNvPicPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12755,8 +13088,10 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "cNvPicPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<NonVisualPictureDrawingProperties>()
-                           .AddAttribute(0, "preferRelativeResize", a => a.PreferRelativeResize);
+.AddAttribute(0, "preferRelativeResize", a => a.PreferRelativeResize);
         }
 
         /// <summary>
@@ -12813,8 +13148,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(NonVisualDrawingProperties))]
     [ChildElementInfo(typeof(NonVisualPictureDrawingProperties))]
     [ChildElementInfo(typeof(ApplicationNonVisualDrawingProperties))]
-    [SchemaAttr(24, "nvPicPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualPictureProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12846,6 +13179,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NonVisualPictureProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "nvPicPr");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -12918,8 +13258,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SourceRectangle))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Tile))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Stretch))]
-    [SchemaAttr(24, "blipFill")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BlipFill : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12976,9 +13314,11 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "blipFill");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<BlipFill>()
-                           .AddAttribute(0, "dpi", a => a.Dpi)
-                           .AddAttribute(0, "rotWithShape", a => a.RotateWithShape);
+.AddAttribute(0, "dpi", a => a.Dpi)
+.AddAttribute(0, "rotWithShape", a => a.RotateWithShape);
         }
 
         /// <summary>
@@ -13041,8 +13381,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-    [SchemaAttr(24, "cNvGraphicFramePr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13074,6 +13412,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NonVisualGraphicFrameDrawingProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "cNvGraphicFramePr");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -13130,8 +13475,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(NonVisualDrawingProperties))]
     [ChildElementInfo(typeof(NonVisualGraphicFrameDrawingProperties))]
     [ChildElementInfo(typeof(ApplicationNonVisualDrawingProperties))]
-    [SchemaAttr(24, "nvGraphicFramePr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13163,6 +13506,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NonVisualGraphicFrameProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "nvGraphicFramePr");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -13231,8 +13581,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Offset))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extents))]
-    [SchemaAttr(24, "xfrm")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Transform : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13299,10 +13647,12 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "xfrm");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Transform>()
-                           .AddAttribute(0, "rot", a => a.Rotation)
-                           .AddAttribute(0, "flipH", a => a.HorizontalFlip)
-                           .AddAttribute(0, "flipV", a => a.VerticalFlip);
+.AddAttribute(0, "rot", a => a.Rotation)
+.AddAttribute(0, "flipH", a => a.HorizontalFlip)
+.AddAttribute(0, "flipV", a => a.VerticalFlip);
         }
 
         /// <summary>
@@ -13357,8 +13707,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupShapeLocks))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList))]
-    [SchemaAttr(24, "cNvGrpSpPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13390,6 +13738,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NonVisualGroupShapeDrawingProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "cNvGrpSpPr");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -13451,8 +13806,6 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(24, "titleStyle")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TitleStyle : TextListStyleType
     {
         /// <summary>
@@ -13484,6 +13837,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public TitleStyle(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "titleStyle");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -13528,8 +13888,6 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(24, "bodyStyle")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BodyStyle : TextListStyleType
     {
         /// <summary>
@@ -13561,6 +13919,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public BodyStyle(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "bodyStyle");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -13605,8 +13970,6 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(24, "otherStyle")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OtherStyle : TextListStyleType
     {
         /// <summary>
@@ -13638,6 +14001,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public OtherStyle(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "otherStyle");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -13682,8 +14052,6 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(24, "defaultTextStyle")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DefaultTextStyle : TextListStyleType
     {
         /// <summary>
@@ -13715,6 +14083,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DefaultTextStyle(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "defaultTextStyle");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -13759,8 +14134,6 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(24, "notesStyle")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NotesStyle : TextListStyleType
     {
         /// <summary>
@@ -13792,6 +14165,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NotesStyle(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "notesStyle");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -13878,6 +14258,11 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         protected TextListStyleType(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
         }
 
         /// <summary>
@@ -14036,8 +14421,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(24, "sldLayoutId")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SlideLayoutId : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14097,15 +14480,17 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "sldLayoutId");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SlideLayoutId>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2147483648L) });
-                           })
-                           .AddAttribute(19, "id", a => a.RelationshipId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2147483648L) });
+})
+.AddAttribute(19, "id", a => a.RelationshipId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -14159,8 +14544,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(CustomerDataList))]
     [ChildElementInfo(typeof(ControlList))]
     [ChildElementInfo(typeof(CommonSlideDataExtensionList))]
-    [SchemaAttr(24, "cSld")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CommonSlideData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14207,8 +14590,10 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "cSld");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CommonSlideData>()
-                           .AddAttribute(0, "name", a => a.Name);
+.AddAttribute(0, "name", a => a.Name);
         }
 
         /// <summary>
@@ -14296,8 +14681,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:tag.</para>
     /// </summary>
-    [SchemaAttr(24, "tag")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Tag : OpenXmlLeafElement
     {
         /// <summary>
@@ -14330,15 +14713,17 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "tag");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Tag>()
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -14356,8 +14741,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:restoredLeft.</para>
     /// </summary>
-    [SchemaAttr(24, "restoredLeft")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RestoredLeft : NormalViewPortionType
     {
         /// <summary>
@@ -14365,6 +14748,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public RestoredLeft() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "restoredLeft");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -14376,8 +14766,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:restoredTop.</para>
     /// </summary>
-    [SchemaAttr(24, "restoredTop")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RestoredTop : NormalViewPortionType
     {
         /// <summary>
@@ -14385,6 +14773,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public RestoredTop() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "restoredTop");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -14452,8 +14847,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ScaleX))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ScaleY))]
-    [SchemaAttr(24, "scale")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ScaleFactor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14485,6 +14878,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ScaleFactor(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "scale");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -14530,8 +14930,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:origin.</para>
     /// </summary>
-    [SchemaAttr(24, "origin")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Origin : Point2DType
     {
         /// <summary>
@@ -14539,6 +14937,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public Origin() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "origin");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -14550,8 +14955,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:pos.</para>
     /// </summary>
-    [SchemaAttr(24, "pos")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Position : Point2DType
     {
         /// <summary>
@@ -14559,6 +14962,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public Position() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "pos");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -14630,8 +15040,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </remark>
     [ChildElementInfo(typeof(ScaleFactor))]
     [ChildElementInfo(typeof(Origin))]
-    [SchemaAttr(24, "cViewPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CommonViewProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14678,8 +15086,10 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "cViewPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CommonViewProperties>()
-                           .AddAttribute(0, "varScale", a => a.VariableScale);
+.AddAttribute(0, "varScale", a => a.VariableScale);
         }
 
         /// <summary>
@@ -14725,8 +15135,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:sld.</para>
     /// </summary>
-    [SchemaAttr(24, "sld")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OutlineViewSlideListEntry : OpenXmlLeafElement
     {
         /// <summary>
@@ -14762,12 +15170,14 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "sld");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<OutlineViewSlideListEntry>()
-                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "collapse", a => a.Collapse);
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "collapse", a => a.Collapse);
         }
 
         /// <inheritdoc/>
@@ -14786,8 +15196,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(OutlineViewSlideListEntry))]
-    [SchemaAttr(24, "sldLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OutlineViewSlideList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14821,6 +15229,13 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "sldLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.OutlineViewSlideListEntry), 0, 0)
@@ -14837,8 +15252,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:guide.</para>
     /// </summary>
-    [SchemaAttr(24, "guide")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Guide : OpenXmlLeafElement
     {
         /// <summary>
@@ -14871,12 +15284,14 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "guide");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Guide>()
-                           .AddAttribute(0, "orient", a => a.Orientation, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "pos", a => a.Position);
+.AddAttribute(0, "orient", a => a.Orientation, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "pos", a => a.Position);
         }
 
         /// <inheritdoc/>
@@ -14895,8 +15310,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Guide))]
-    [SchemaAttr(24, "guideLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class GuideList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14930,6 +15343,13 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "guideLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 0, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Guide), 0, 0)
@@ -14955,8 +15375,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </remark>
     [ChildElementInfo(typeof(CommonViewProperties))]
     [ChildElementInfo(typeof(GuideList))]
-    [SchemaAttr(24, "cSldViewPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CommonSlideViewProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15023,10 +15441,12 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "cSldViewPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CommonSlideViewProperties>()
-                           .AddAttribute(0, "snapToGrid", a => a.SnapToGrid)
-                           .AddAttribute(0, "snapToObjects", a => a.SnapToObjects)
-                           .AddAttribute(0, "showGuides", a => a.ShowGuides);
+.AddAttribute(0, "snapToGrid", a => a.SnapToGrid)
+.AddAttribute(0, "snapToObjects", a => a.SnapToObjects)
+.AddAttribute(0, "showGuides", a => a.ShowGuides);
         }
 
         /// <summary>
@@ -15083,8 +15503,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(RestoredLeft))]
     [ChildElementInfo(typeof(RestoredTop))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(24, "normalViewPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NormalViewProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15171,18 +15589,20 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "normalViewPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<NormalViewProperties>()
-                           .AddAttribute(0, "showOutlineIcons", a => a.ShowOutlineIcons)
-                           .AddAttribute(0, "snapVertSplitter", a => a.SnapVerticalSplitter)
-                           .AddAttribute(0, "vertBarState", a => a.VerticalBarState, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "horzBarState", a => a.HorizontalBarState, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "preferSingleView", a => a.PreferSingleView);
+.AddAttribute(0, "showOutlineIcons", a => a.ShowOutlineIcons)
+.AddAttribute(0, "snapVertSplitter", a => a.SnapVerticalSplitter)
+.AddAttribute(0, "vertBarState", a => a.VerticalBarState, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "horzBarState", a => a.HorizontalBarState, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "preferSingleView", a => a.PreferSingleView);
         }
 
         /// <summary>
@@ -15251,8 +15671,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </remark>
     [ChildElementInfo(typeof(CommonSlideViewProperties))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(24, "slideViewPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SlideViewProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15284,6 +15702,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public SlideViewProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "slideViewPr");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -15340,8 +15765,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(CommonViewProperties))]
     [ChildElementInfo(typeof(OutlineViewSlideList))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(24, "outlineViewPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OutlineViewProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15373,6 +15796,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public OutlineViewProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "outlineViewPr");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -15441,8 +15871,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </remark>
     [ChildElementInfo(typeof(CommonViewProperties))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(24, "notesTextViewPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NotesTextViewProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15474,6 +15902,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NotesTextViewProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "notesTextViewPr");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -15528,8 +15963,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </remark>
     [ChildElementInfo(typeof(CommonViewProperties))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(24, "sorterViewPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SorterViewProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15576,8 +16009,10 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "sorterViewPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SorterViewProperties>()
-                           .AddAttribute(0, "showFormatting", a => a.ShowFormatting);
+.AddAttribute(0, "showFormatting", a => a.ShowFormatting);
         }
 
         /// <summary>
@@ -15632,8 +16067,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </remark>
     [ChildElementInfo(typeof(CommonSlideViewProperties))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(24, "notesViewPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NotesViewProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15665,6 +16098,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NotesViewProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "notesViewPr");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -15710,8 +16150,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:gridSpacing.</para>
     /// </summary>
-    [SchemaAttr(24, "gridSpacing")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class GridSpacing : PositiveSize2DType
     {
         /// <summary>
@@ -15719,6 +16157,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public GridSpacing() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "gridSpacing");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -15730,8 +16175,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:notesSz.</para>
     /// </summary>
-    [SchemaAttr(24, "notesSz")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NotesSize : PositiveSize2DType
     {
         /// <summary>
@@ -15739,6 +16182,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public NotesSize() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "notesSz");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -15810,8 +16260,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.LaserTraceList), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ShowEventRecordList), FileFormatVersions.Office2010)]
-    [SchemaAttr(24, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SlideExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15858,12 +16306,14 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SlideExtension>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -15891,8 +16341,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.CreationId), FileFormatVersions.Office2010)]
-    [SchemaAttr(24, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CommonSlideDataExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15939,12 +16387,14 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CommonSlideDataExtension>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -15975,8 +16425,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.BrowseMode), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.LaserColor), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ShowMediaControls), FileFormatVersions.Office2010)]
-    [SchemaAttr(24, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShowPropertiesExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16023,12 +16471,14 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ShowPropertiesExtension>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -16065,8 +16515,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(ShapeProperties))]
     [ChildElementInfo(typeof(ShapeStyle))]
     [ChildElementInfo(typeof(ExtensionListWithModification))]
-    [SchemaAttr(24, "pic")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Picture : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16098,6 +16546,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Picture(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "pic");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -16192,8 +16647,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(24, "embed")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OleObjectEmbed : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16240,11 +16693,13 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "embed");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<OleObjectEmbed>()
-                           .AddAttribute(0, "followColorScheme", a => a.FollowColorScheme, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "followColorScheme", a => a.FollowColorScheme, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <summary>
@@ -16283,8 +16738,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(24, "link")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OleObjectLink : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16331,8 +16784,10 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "link");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<OleObjectLink>()
-                           .AddAttribute(0, "updateAutomatic", a => a.AutoUpdate);
+.AddAttribute(0, "updateAutomatic", a => a.AutoUpdate);
         }
 
         /// <summary>
@@ -16455,8 +16910,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.PresetTransition), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(SoundAction))]
     [ChildElementInfo(typeof(ExtensionListWithModification))]
-    [SchemaAttr(24, "transition")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Transition : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16536,22 +16989,24 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "transition");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Transition>()
-                           .AddAttribute(0, "spd", a => a.Speed, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(49, "dur", a => a.Duration, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-                           })
-                           .AddAttribute(0, "advClick", a => a.AdvanceOnClick)
-                           .AddAttribute(0, "advTm", a => a.AdvanceAfterTime, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2007) });
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Version = (FileFormatVersions.Office2010) });
-                               aBuilder.AddValidator(new StringValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2013) });
-                           });
+.AddAttribute(0, "spd", a => a.Speed, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(49, "dur", a => a.Duration, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+})
+.AddAttribute(0, "advClick", a => a.AdvanceOnClick)
+.AddAttribute(0, "advTm", a => a.AdvanceAfterTime, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2007) });
+aBuilder.AddValidator(new StringValidatorAttribute() { Version = (FileFormatVersions.Office2010) });
+aBuilder.AddValidator(new StringValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2013) });
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -16632,8 +17087,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(TimeNodeList))]
     [ChildElementInfo(typeof(BuildList))]
     [ChildElementInfo(typeof(ExtensionListWithModification))]
-    [SchemaAttr(24, "timing")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Timing : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16665,6 +17118,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Timing(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "timing");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -16731,8 +17191,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(SlideExtension))]
-    [SchemaAttr(24, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SlideExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16766,6 +17224,13 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideExtension), 0, 0)
@@ -16791,8 +17256,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </remark>
     [ChildElementInfo(typeof(BackgroundProperties))]
     [ChildElementInfo(typeof(BackgroundStyleReference))]
-    [SchemaAttr(24, "bg")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Background : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16839,11 +17302,13 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "bg");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Background>()
-                           .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <summary>
@@ -16909,8 +17374,6 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description>ExtensionListWithModification &lt;p:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(24, "spTree")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShapeTree : GroupShapeType
     {
         /// <summary>
@@ -16942,6 +17405,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ShapeTree(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "spTree");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -16985,8 +17455,6 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description>ExtensionListWithModification &lt;p:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(24, "grpSp")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class GroupShape : GroupShapeType
     {
         /// <summary>
@@ -17018,6 +17486,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public GroupShape(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "grpSp");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -17103,6 +17578,11 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+        }
+
         /// <summary>
         /// <para>Non-Visual Properties for a Group Shape.</para>
         /// <para>Represents the following element tag in the schema: p:nvGrpSpPr.</para>
@@ -17144,8 +17624,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </remark>
     [ChildElementInfo(typeof(CustomerData))]
     [ChildElementInfo(typeof(CustomerDataTags))]
-    [SchemaAttr(24, "custDataLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CustomerDataList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17179,6 +17657,13 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "custDataLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 0, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomerData), 0, 0),
@@ -17203,8 +17688,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(Control))]
-    [SchemaAttr(24, "controls")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ControlList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17238,6 +17721,13 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "controls");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Control), 0, 0)
@@ -17261,8 +17751,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CommonSlideDataExtension))]
-    [SchemaAttr(24, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CommonSlideDataExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17296,6 +17784,13 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideDataExtension), 0, 0)
@@ -17323,8 +17818,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(NonVisualDrawingProperties))]
     [ChildElementInfo(typeof(NonVisualGroupShapeDrawingProperties))]
     [ChildElementInfo(typeof(ApplicationNonVisualDrawingProperties))]
-    [SchemaAttr(24, "nvGrpSpPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualGroupShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17356,6 +17849,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NonVisualGroupShapeProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "nvGrpSpPr");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -17442,8 +17942,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-    [SchemaAttr(24, "grpSpPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class GroupShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17490,11 +17988,13 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "grpSpPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<GroupShapeProperties>()
-                           .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <summary>
@@ -17563,8 +18063,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(ShapeStyle))]
     [ChildElementInfo(typeof(TextBody))]
     [ChildElementInfo(typeof(ExtensionListWithModification))]
-    [SchemaAttr(24, "sp")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Shape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17611,8 +18109,10 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "sp");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Shape>()
-                           .AddAttribute(0, "useBgFill", a => a.UseBackgroundFill);
+.AddAttribute(0, "useBgFill", a => a.UseBackgroundFill);
         }
 
         /// <summary>
@@ -17713,8 +18213,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(Transform))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Graphic))]
     [ChildElementInfo(typeof(ExtensionListWithModification))]
-    [SchemaAttr(24, "graphicFrame")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class GraphicFrame : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17746,6 +18244,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public GraphicFrame(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "graphicFrame");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -17832,8 +18337,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(ShapeProperties))]
     [ChildElementInfo(typeof(ShapeStyle))]
     [ChildElementInfo(typeof(ExtensionListWithModification))]
-    [SchemaAttr(24, "cxnSp")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ConnectionShape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17865,6 +18368,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ConnectionShape(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "cxnSp");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -17945,8 +18455,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ShowPropertiesExtension))]
-    [SchemaAttr(24, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShowPropertiesExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17980,6 +18488,13 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShowPropertiesExtension), 0, 0)
@@ -18011,8 +18526,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(OleChartElement))]
     [ChildElementInfo(typeof(TextElement))]
     [ChildElementInfo(typeof(GraphicElement))]
-    [SchemaAttr(24, "spTgt")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShapeTarget : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18059,14 +18572,16 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "spTgt");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ShapeTarget>()
-                           .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2010) });
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2013) });
-                           });
+.AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2010) });
+aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2013) });
+});
         }
 
         /// <summary>
@@ -18154,8 +18669,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:inkTgt.</para>
     /// </summary>
-    [SchemaAttr(24, "inkTgt")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class InkTarget : TimeListSubShapeIdType
     {
         /// <summary>
@@ -18163,6 +18676,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public InkTarget() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "inkTgt");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -18174,8 +18694,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:subSp.</para>
     /// </summary>
-    [SchemaAttr(24, "subSp")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SubShape : TimeListSubShapeIdType
     {
         /// <summary>
@@ -18183,6 +18701,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public SubShape() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "subSp");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -18237,8 +18762,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.PresenceInfo), FileFormatVersions.Office2013)]
-    [SchemaAttr(24, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CommentAuthorExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18285,12 +18808,14 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CommentAuthorExtension>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -18317,8 +18842,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ThreadingInfo), FileFormatVersions.Office2013)]
-    [SchemaAttr(24, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CommentExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18365,12 +18888,14 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CommentExtension>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -18397,8 +18922,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList), FileFormatVersions.Office2013)]
-    [SchemaAttr(24, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SlideLayoutExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18445,12 +18968,14 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SlideLayoutExtension>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -18477,8 +19002,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList), FileFormatVersions.Office2013)]
-    [SchemaAttr(24, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SlideMasterExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18525,12 +19048,14 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SlideMasterExtension>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -18557,8 +19082,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList), FileFormatVersions.Office2013)]
-    [SchemaAttr(24, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HandoutMasterExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18605,12 +19128,14 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<HandoutMasterExtension>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -18637,8 +19162,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList), FileFormatVersions.Office2013)]
-    [SchemaAttr(24, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NotesMasterExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18685,12 +19208,14 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<NotesMasterExtension>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -18717,8 +19242,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionListWithModification))]
-    [SchemaAttr(24, "ph")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PlaceholderShape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18805,21 +19328,23 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "ph");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PlaceholderShape>()
-                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "orient", a => a.Orientation, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "sz", a => a.Size, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "idx", a => a.Index)
-                           .AddAttribute(0, "hasCustomPrompt", a => a.HasCustomPrompt);
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "orient", a => a.Orientation, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "sz", a => a.Size, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "idx", a => a.Index)
+.AddAttribute(0, "hasCustomPrompt", a => a.HasCustomPrompt);
         }
 
         /// <summary>
@@ -18858,8 +19383,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ApplicationNonVisualDrawingPropertiesExtension))]
-    [SchemaAttr(24, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ApplicationNonVisualDrawingPropertiesExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18893,6 +19416,13 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtension), 0, 0)
@@ -18918,8 +19448,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.Media), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ModificationId), FileFormatVersions.Office2010)]
-    [SchemaAttr(24, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ApplicationNonVisualDrawingPropertiesExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18966,12 +19494,14 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ApplicationNonVisualDrawingPropertiesExtension>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -19001,8 +19531,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </remark>
     [ChildElementInfo(typeof(TimeAbsolute))]
     [ChildElementInfo(typeof(TimePercentage))]
-    [SchemaAttr(24, "iterate")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Iterate : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19059,12 +19587,14 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "iterate");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Iterate>()
-                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "backwards", a => a.Backwards);
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "backwards", a => a.Backwards);
         }
 
         /// <summary>
@@ -19128,8 +19658,6 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description>Video &lt;p:video></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(24, "childTnLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ChildTimeNodeList : TimeTypeListType
     {
         /// <summary>
@@ -19161,6 +19689,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ChildTimeNodeList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "childTnLst");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
@@ -19209,8 +19744,6 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description>Video &lt;p:video></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(24, "subTnLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SubTimeNodeList : TimeTypeListType
     {
         /// <summary>
@@ -19242,6 +19775,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public SubTimeNodeList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "subTnLst");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
@@ -19335,6 +19875,11 @@ namespace DocumentFormat.OpenXml.Presentation
         protected TimeTypeListType(string outerXml) : base(outerXml)
         {
         }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+        }
     }
 
     /// <summary>
@@ -19349,8 +19894,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(TimeAnimateValue))]
-    [SchemaAttr(24, "tavLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TimeAnimateValueList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19384,6 +19927,13 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "tavLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimeAnimateValue), 0, 0)
@@ -19400,8 +19950,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:by.</para>
     /// </summary>
-    [SchemaAttr(24, "by")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ByPosition : TimeListType
     {
         /// <summary>
@@ -19409,6 +19957,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public ByPosition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "by");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -19420,8 +19975,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:from.</para>
     /// </summary>
-    [SchemaAttr(24, "from")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FromPosition : TimeListType
     {
         /// <summary>
@@ -19429,6 +19982,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public FromPosition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "from");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -19440,8 +20000,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:to.</para>
     /// </summary>
-    [SchemaAttr(24, "to")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ToPosition : TimeListType
     {
         /// <summary>
@@ -19449,6 +20007,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public ToPosition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "to");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -19460,8 +20025,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:rCtr.</para>
     /// </summary>
-    [SchemaAttr(24, "rCtr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RotationCenter : TimeListType
     {
         /// <summary>
@@ -19469,6 +20032,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public RotationCenter() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "rCtr");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -19536,8 +20106,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CommentAuthorExtension))]
-    [SchemaAttr(24, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CommentAuthorExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19571,6 +20139,13 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommentAuthorExtension), 0, 0)
@@ -19594,8 +20169,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CommentExtension))]
-    [SchemaAttr(24, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CommentExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19629,6 +20202,13 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommentExtension), 0, 0)
@@ -19652,8 +20232,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(SlideMasterId))]
-    [SchemaAttr(24, "sldMasterIdLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SlideMasterIdList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19687,6 +20265,13 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "sldMasterIdLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideMasterId), 0, 0)
@@ -19710,8 +20295,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(NotesMasterId))]
-    [SchemaAttr(24, "notesMasterIdLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NotesMasterIdList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19743,6 +20326,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NotesMasterIdList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "notesMasterIdLst");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -19781,8 +20371,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(HandoutMasterId))]
-    [SchemaAttr(24, "handoutMasterIdLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HandoutMasterIdList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19814,6 +20402,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public HandoutMasterIdList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "handoutMasterIdLst");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -19852,8 +20447,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(SlideId))]
-    [SchemaAttr(24, "sldIdLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SlideIdList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19887,6 +20480,13 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "sldIdLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideId), 0, 0)
@@ -19903,8 +20503,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:sldSz.</para>
     /// </summary>
-    [SchemaAttr(24, "sldSz")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SlideSize : OpenXmlLeafElement
     {
         /// <summary>
@@ -19947,21 +20545,23 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "sldSz");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SlideSize>()
-                           .AddAttribute(0, "cx", a => a.Cx, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (914400L), MaxInclusive = (51206400L) });
-                           })
-                           .AddAttribute(0, "cy", a => a.Cy, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (914400L), MaxInclusive = (51206400L) });
-                           })
-                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "cx", a => a.Cx, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (914400L), MaxInclusive = (51206400L) });
+})
+.AddAttribute(0, "cy", a => a.Cy, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (914400L), MaxInclusive = (51206400L) });
+})
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <inheritdoc/>
@@ -19980,8 +20580,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(EmbeddedFont))]
-    [SchemaAttr(24, "embeddedFontLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class EmbeddedFontList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20015,6 +20613,13 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "embeddedFontLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.EmbeddedFont), 0, 0)
@@ -20038,8 +20643,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CustomShow))]
-    [SchemaAttr(24, "custShowLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CustomShowList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20073,6 +20676,13 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "custShowLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomShow), 0, 0)
@@ -20096,8 +20706,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(24, "photoAlbum")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PhotoAlbum : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20174,17 +20782,19 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "photoAlbum");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PhotoAlbum>()
-                           .AddAttribute(0, "bw", a => a.BlackWhite)
-                           .AddAttribute(0, "showCaptions", a => a.ShowCaptions)
-                           .AddAttribute(0, "layout", a => a.Layout, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "frame", a => a.Frame, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "bw", a => a.BlackWhite)
+.AddAttribute(0, "showCaptions", a => a.ShowCaptions)
+.AddAttribute(0, "layout", a => a.Layout, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "frame", a => a.Frame, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <summary>
@@ -20216,8 +20826,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:kinsoku.</para>
     /// </summary>
-    [SchemaAttr(24, "kinsoku")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Kinsoku : OpenXmlLeafElement
     {
         /// <summary>
@@ -20260,16 +20868,18 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "kinsoku");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Kinsoku>()
-                           .AddAttribute(0, "lang", a => a.Language)
-                           .AddAttribute(0, "invalStChars", a => a.InvalidStartChars, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "invalEndChars", a => a.InvalidEndChars, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "lang", a => a.Language)
+.AddAttribute(0, "invalStChars", a => a.InvalidStartChars, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "invalEndChars", a => a.InvalidEndChars, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>
@@ -20281,8 +20891,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:modifyVerifier.</para>
     /// </summary>
-    [SchemaAttr(24, "modifyVerifier")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ModificationVerifier : OpenXmlLeafElement
     {
         /// <summary>
@@ -20455,63 +21063,65 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "modifyVerifier");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ModificationVerifier>()
-                           .AddAttribute(0, "cryptProviderType", a => a.CryptographicProviderType, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-                               aBuilder.AddValidator(new RequiredValidatorAttribute() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
-                           })
-                           .AddAttribute(0, "cryptAlgorithmClass", a => a.CryptographicAlgorithmClass, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-                               aBuilder.AddValidator(new RequiredValidatorAttribute() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
-                           })
-                           .AddAttribute(0, "cryptAlgorithmType", a => a.CryptographicAlgorithmType, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-                               aBuilder.AddValidator(new RequiredValidatorAttribute() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
-                           })
-                           .AddAttribute(0, "cryptAlgorithmSid", a => a.CryptographicAlgorithmSid, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-                               aBuilder.AddValidator(new RequiredValidatorAttribute() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
-                           })
-                           .AddAttribute(0, "spinCount", a => a.SpinCount, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-                               aBuilder.AddValidator(new RequiredValidatorAttribute() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
-                           })
-                           .AddAttribute(0, "saltData", a => a.SaltData, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-                               aBuilder.AddValidator(new RequiredValidatorAttribute() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
-                           })
-                           .AddAttribute(0, "hashData", a => a.HashData, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-                               aBuilder.AddValidator(new RequiredValidatorAttribute() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
-                           })
-                           .AddAttribute(0, "cryptProvider", a => a.CryptographicProvider)
-                           .AddAttribute(0, "algIdExt", a => a.ExtendedCryptographicAlgorithm)
-                           .AddAttribute(0, "algIdExtSource", a => a.ExtendedCryptographicAlgorithmSource)
-                           .AddAttribute(0, "cryptProviderTypeExt", a => a.CryptographicProviderTypeExtensibility)
-                           .AddAttribute(0, "cryptProviderTypeExtSource", a => a.CryptographicProviderTypeExtensibilitySource)
-                           .AddAttribute(0, "algorithmName", a => a.AlgorithmName, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-                           })
-                           .AddAttribute(0, "hashValue", a => a.HashValue, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-                           })
-                           .AddAttribute(0, "saltValue", a => a.SaltValue, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-                           })
-                           .AddAttribute(0, "spinValue", a => a.SpinValue, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-                           });
+.AddAttribute(0, "cryptProviderType", a => a.CryptographicProviderType, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+aBuilder.AddValidator(new RequiredValidatorAttribute() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
+})
+.AddAttribute(0, "cryptAlgorithmClass", a => a.CryptographicAlgorithmClass, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+aBuilder.AddValidator(new RequiredValidatorAttribute() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
+})
+.AddAttribute(0, "cryptAlgorithmType", a => a.CryptographicAlgorithmType, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+aBuilder.AddValidator(new RequiredValidatorAttribute() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
+})
+.AddAttribute(0, "cryptAlgorithmSid", a => a.CryptographicAlgorithmSid, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+aBuilder.AddValidator(new RequiredValidatorAttribute() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
+})
+.AddAttribute(0, "spinCount", a => a.SpinCount, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+aBuilder.AddValidator(new RequiredValidatorAttribute() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
+})
+.AddAttribute(0, "saltData", a => a.SaltData, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+aBuilder.AddValidator(new RequiredValidatorAttribute() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
+})
+.AddAttribute(0, "hashData", a => a.HashData, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+aBuilder.AddValidator(new RequiredValidatorAttribute() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
+})
+.AddAttribute(0, "cryptProvider", a => a.CryptographicProvider)
+.AddAttribute(0, "algIdExt", a => a.ExtendedCryptographicAlgorithm)
+.AddAttribute(0, "algIdExtSource", a => a.ExtendedCryptographicAlgorithmSource)
+.AddAttribute(0, "cryptProviderTypeExt", a => a.CryptographicProviderTypeExtensibility)
+.AddAttribute(0, "cryptProviderTypeExtSource", a => a.CryptographicProviderTypeExtensibilitySource)
+.AddAttribute(0, "algorithmName", a => a.AlgorithmName, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+})
+.AddAttribute(0, "hashValue", a => a.HashValue, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+})
+.AddAttribute(0, "saltValue", a => a.SaltValue, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+})
+.AddAttribute(0, "spinValue", a => a.SpinValue, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+});
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -20539,8 +21149,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(PresentationExtension))]
-    [SchemaAttr(24, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PresentationExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20574,6 +21182,13 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PresentationExtension), 0, 0)
@@ -20603,8 +21218,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionList), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.NotesGuideList), FileFormatVersions.Office2013)]
-    [SchemaAttr(24, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PresentationExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20651,12 +21264,14 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PresentationExtension>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -20692,8 +21307,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(SlideRange))]
     [ChildElementInfo(typeof(CustomShowReference))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(24, "htmlPubPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HtmlPublishProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20763,16 +21376,18 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "htmlPubPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<HtmlPublishProperties>()
-                           .AddAttribute(0, "showSpeakerNotes", a => a.ShowSpeakerNotes)
-                           .AddAttribute(0, "pubBrowser", a => a.TargetBrowser, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "showSpeakerNotes", a => a.ShowSpeakerNotes)
+.AddAttribute(0, "pubBrowser", a => a.TargetBrowser, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -20807,8 +21422,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(24, "webPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class WebProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20935,22 +21548,24 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "webPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<WebProperties>()
-                           .AddAttribute(0, "showAnimation", a => a.ShowAnimation)
-                           .AddAttribute(0, "resizeGraphics", a => a.ResizeGraphics)
-                           .AddAttribute(0, "allowPng", a => a.AllowPng)
-                           .AddAttribute(0, "relyOnVml", a => a.RelyOnVml)
-                           .AddAttribute(0, "organizeInFolders", a => a.OrganizeInFolders)
-                           .AddAttribute(0, "useLongFilenames", a => a.UseLongFilenames)
-                           .AddAttribute(0, "imgSz", a => a.ImageSize, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "encoding", a => a.Encoding)
-                           .AddAttribute(0, "clr", a => a.Color, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "showAnimation", a => a.ShowAnimation)
+.AddAttribute(0, "resizeGraphics", a => a.ResizeGraphics)
+.AddAttribute(0, "allowPng", a => a.AllowPng)
+.AddAttribute(0, "relyOnVml", a => a.RelyOnVml)
+.AddAttribute(0, "organizeInFolders", a => a.OrganizeInFolders)
+.AddAttribute(0, "useLongFilenames", a => a.UseLongFilenames)
+.AddAttribute(0, "imgSz", a => a.ImageSize, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "encoding", a => a.Encoding)
+.AddAttribute(0, "clr", a => a.Color, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <summary>
@@ -20989,8 +21604,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(24, "prnPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PrintingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21077,18 +21690,20 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "prnPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PrintingProperties>()
-                           .AddAttribute(0, "prnWhat", a => a.PrintWhat, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "clrMode", a => a.ColorMode, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "hiddenSlides", a => a.HiddenSlides)
-                           .AddAttribute(0, "scaleToFitPaper", a => a.ScaleToFitPaper)
-                           .AddAttribute(0, "frameSlides", a => a.FrameSlides);
+.AddAttribute(0, "prnWhat", a => a.PrintWhat, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "clrMode", a => a.ColorMode, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "hiddenSlides", a => a.HiddenSlides)
+.AddAttribute(0, "scaleToFitPaper", a => a.ScaleToFitPaper)
+.AddAttribute(0, "frameSlides", a => a.FrameSlides);
         }
 
         /// <summary>
@@ -21141,8 +21756,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(CustomShowReference))]
     [ChildElementInfo(typeof(PenColor))]
     [ChildElementInfo(typeof(ShowPropertiesExtensionList))]
-    [SchemaAttr(24, "showPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShowProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21219,11 +21832,13 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "showPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ShowProperties>()
-                           .AddAttribute(0, "loop", a => a.Loop)
-                           .AddAttribute(0, "showNarration", a => a.ShowNarration)
-                           .AddAttribute(0, "showAnimation", a => a.ShowAnimation)
-                           .AddAttribute(0, "useTimings", a => a.UseTimings);
+.AddAttribute(0, "loop", a => a.Loop)
+.AddAttribute(0, "showNarration", a => a.ShowNarration)
+.AddAttribute(0, "showAnimation", a => a.ShowAnimation)
+.AddAttribute(0, "useTimings", a => a.UseTimings);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 0, 1)
@@ -21278,8 +21893,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor))]
-    [SchemaAttr(24, "clrMru")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColorMostRecentlyUsed : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21311,6 +21924,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ColorMostRecentlyUsed(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "clrMru");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1, requireFilter: true)
@@ -21359,8 +21979,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(PresentationPropertiesExtension))]
-    [SchemaAttr(24, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PresentationPropertiesExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21394,6 +22012,13 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PresentationPropertiesExtension), 0, 0)
@@ -21423,8 +22048,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.DefaultImageDpi), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.TextMath), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ChartTrackingReferenceBased), FileFormatVersions.Office2010)]
-    [SchemaAttr(24, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PresentationPropertiesExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21471,12 +22094,14 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PresentationPropertiesExtension>()
-                           .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -21506,8 +22131,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ExtensionListWithModification))]
-    [SchemaAttr(24, "hf")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HeaderFooter : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21584,11 +22207,13 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "hf");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<HeaderFooter>()
-                           .AddAttribute(0, "sldNum", a => a.SlideNumber)
-                           .AddAttribute(0, "hdr", a => a.Header)
-                           .AddAttribute(0, "ftr", a => a.Footer)
-                           .AddAttribute(0, "dt", a => a.DateTime);
+.AddAttribute(0, "sldNum", a => a.SlideNumber)
+.AddAttribute(0, "hdr", a => a.Header)
+.AddAttribute(0, "ftr", a => a.Footer)
+.AddAttribute(0, "dt", a => a.DateTime);
         }
 
         /// <summary>
@@ -21627,8 +22252,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(SlideLayoutExtension))]
-    [SchemaAttr(24, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SlideLayoutExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21662,6 +22285,13 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideLayoutExtension), 0, 0)
@@ -21685,8 +22315,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(SlideLayoutId))]
-    [SchemaAttr(24, "sldLayoutIdLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SlideLayoutIdList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21720,6 +22348,13 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "sldLayoutIdLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideLayoutId), 0, 0)
@@ -21749,8 +22384,6 @@ namespace DocumentFormat.OpenXml.Presentation
     [ChildElementInfo(typeof(BodyStyle))]
     [ChildElementInfo(typeof(OtherStyle))]
     [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(24, "txStyles")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TextStyles : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21782,6 +22415,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public TextStyles(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "txStyles");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -21862,8 +22502,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(SlideMasterExtension))]
-    [SchemaAttr(24, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SlideMasterExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21897,6 +22535,13 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideMasterExtension), 0, 0)
@@ -21920,8 +22565,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(HandoutMasterExtension))]
-    [SchemaAttr(24, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HandoutMasterExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21955,6 +22598,13 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HandoutMasterExtension), 0, 0)
@@ -21978,8 +22628,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(NotesMasterExtension))]
-    [SchemaAttr(24, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NotesMasterExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22013,6 +22661,13 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "extLst");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NotesMasterExtension), 0, 0)
@@ -22029,8 +22684,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:oleChartEl.</para>
     /// </summary>
-    [SchemaAttr(24, "oleChartEl")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OleChartElement : OpenXmlLeafElement
     {
         /// <summary>
@@ -22063,13 +22716,15 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "oleChartEl");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<OleChartElement>()
-                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "lvl", a => a.Level);
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "lvl", a => a.Level);
         }
 
         /// <inheritdoc/>
@@ -22090,8 +22745,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </remark>
     [ChildElementInfo(typeof(CharRange))]
     [ChildElementInfo(typeof(ParagraphIndexRange))]
-    [SchemaAttr(24, "txEl")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TextElement : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22123,6 +22776,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public TextElement(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "txEl");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -22177,8 +22837,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Diagram))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Chart))]
-    [SchemaAttr(24, "graphicEl")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class GraphicElement : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22210,6 +22868,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public GraphicElement(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "graphicEl");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -22255,8 +22920,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:blinds.</para>
     /// </summary>
-    [SchemaAttr(24, "blinds")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BlindsTransition : OrientationTransitionType
     {
         /// <summary>
@@ -22264,6 +22927,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public BlindsTransition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "blinds");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -22275,8 +22945,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:checker.</para>
     /// </summary>
-    [SchemaAttr(24, "checker")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CheckerTransition : OrientationTransitionType
     {
         /// <summary>
@@ -22284,6 +22952,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public CheckerTransition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "checker");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -22295,8 +22970,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:comb.</para>
     /// </summary>
-    [SchemaAttr(24, "comb")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CombTransition : OrientationTransitionType
     {
         /// <summary>
@@ -22304,6 +22977,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public CombTransition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "comb");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -22315,8 +22995,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:randomBar.</para>
     /// </summary>
-    [SchemaAttr(24, "randomBar")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RandomBarTransition : OrientationTransitionType
     {
         /// <summary>
@@ -22324,6 +23002,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public RandomBarTransition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "randomBar");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -22370,8 +23055,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:cover.</para>
     /// </summary>
-    [SchemaAttr(24, "cover")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CoverTransition : EightDirectionTransitionType
     {
         /// <summary>
@@ -22379,6 +23062,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public CoverTransition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "cover");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -22390,8 +23080,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:pull.</para>
     /// </summary>
-    [SchemaAttr(24, "pull")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PullTransition : EightDirectionTransitionType
     {
         /// <summary>
@@ -22399,6 +23087,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public PullTransition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "pull");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -22449,8 +23144,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:cut.</para>
     /// </summary>
-    [SchemaAttr(24, "cut")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CutTransition : OptionalBlackTransitionType
     {
         /// <summary>
@@ -22458,6 +23151,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public CutTransition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "cut");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -22469,8 +23169,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:fade.</para>
     /// </summary>
-    [SchemaAttr(24, "fade")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FadeTransition : OptionalBlackTransitionType
     {
         /// <summary>
@@ -22478,6 +23176,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public FadeTransition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "fade");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -22521,8 +23226,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:push.</para>
     /// </summary>
-    [SchemaAttr(24, "push")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PushTransition : SideDirectionTransitionType
     {
         /// <summary>
@@ -22530,6 +23233,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public PushTransition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "push");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -22541,8 +23251,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:wipe.</para>
     /// </summary>
-    [SchemaAttr(24, "wipe")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class WipeTransition : SideDirectionTransitionType
     {
         /// <summary>
@@ -22550,6 +23258,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </summary>
         public WipeTransition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "wipe");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -22596,8 +23311,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:split.</para>
     /// </summary>
-    [SchemaAttr(24, "split")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SplitTransition : OpenXmlLeafElement
     {
         /// <summary>
@@ -22630,15 +23343,17 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "split");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SplitTransition>()
-                           .AddAttribute(0, "orient", a => a.Orientation, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "dir", a => a.Direction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "orient", a => a.Orientation, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "dir", a => a.Direction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <inheritdoc/>
@@ -22650,8 +23365,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:strips.</para>
     /// </summary>
-    [SchemaAttr(24, "strips")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StripsTransition : OpenXmlLeafElement
     {
         /// <summary>
@@ -22674,11 +23387,13 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "strips");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<StripsTransition>()
-                           .AddAttribute(0, "dir", a => a.Direction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "dir", a => a.Direction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <inheritdoc/>
@@ -22690,8 +23405,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:wheel.</para>
     /// </summary>
-    [SchemaAttr(24, "wheel")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class WheelTransition : OpenXmlLeafElement
     {
         /// <summary>
@@ -22714,8 +23427,10 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "wheel");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<WheelTransition>()
-                           .AddAttribute(0, "spokes", a => a.Spokes);
+.AddAttribute(0, "spokes", a => a.Spokes);
         }
 
         /// <inheritdoc/>
@@ -22727,8 +23442,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:zoom.</para>
     /// </summary>
-    [SchemaAttr(24, "zoom")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ZoomTransition : OpenXmlLeafElement
     {
         /// <summary>
@@ -22751,11 +23464,13 @@ namespace DocumentFormat.OpenXml.Presentation
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "zoom");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ZoomTransition>()
-                           .AddAttribute(0, "dir", a => a.Direction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "dir", a => a.Direction, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <inheritdoc/>
@@ -22776,8 +23491,6 @@ namespace DocumentFormat.OpenXml.Presentation
     /// </remark>
     [ChildElementInfo(typeof(StartSoundAction))]
     [ChildElementInfo(typeof(EndSoundAction))]
-    [SchemaAttr(24, "sndAc")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SoundAction : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22809,6 +23522,13 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public SoundAction(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(24, "sndAc");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>

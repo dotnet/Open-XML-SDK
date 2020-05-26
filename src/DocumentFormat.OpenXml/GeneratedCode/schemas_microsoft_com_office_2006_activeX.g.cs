@@ -24,8 +24,6 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ActiveXObjectProperty))]
-    [SchemaAttr(35, "ocx")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ActiveXControlData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -114,17 +112,19 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(35, "ocx");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ActiveXControlData>()
-                           .AddAttribute(35, "classid", a => a.ActiveXControlClassId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(35, "license", a => a.License)
-                           .AddAttribute(19, "id", a => a.Id)
-                           .AddAttribute(35, "persistence", a => a.Persistence, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(35, "classid", a => a.ActiveXControlClassId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(35, "license", a => a.License)
+.AddAttribute(19, "id", a => a.Id)
+.AddAttribute(35, "persistence", a => a.Persistence, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -152,8 +152,6 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
     /// </remark>
     [ChildElementInfo(typeof(SharedComFont))]
     [ChildElementInfo(typeof(SharedComPicture))]
-    [SchemaAttr(35, "ocxPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ActiveXObjectProperty : OpenXmlCompositeElement
     {
         /// <summary>
@@ -216,12 +214,14 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(35, "ocxPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ActiveXObjectProperty>()
-                           .AddAttribute(35, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(35, "value", a => a.Value);
+.AddAttribute(35, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(35, "value", a => a.Value);
         }
 
         /// <summary>
@@ -277,8 +277,6 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ActiveXObjectProperty))]
-    [SchemaAttr(35, "font")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SharedComFont : OpenXmlCompositeElement
     {
         /// <summary>
@@ -341,9 +339,11 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(35, "font");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SharedComFont>()
-                           .AddAttribute(35, "persistence", a => a.Persistence)
-                           .AddAttribute(19, "id", a => a.Id);
+.AddAttribute(35, "persistence", a => a.Persistence)
+.AddAttribute(19, "id", a => a.Id);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -362,8 +362,6 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ax:picture.</para>
     /// </summary>
-    [SchemaAttr(35, "picture")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SharedComPicture : OpenXmlLeafElement
     {
         /// <summary>
@@ -389,8 +387,10 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(35, "picture");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SharedComPicture>()
-                           .AddAttribute(19, "id", a => a.Id);
+.AddAttribute(19, "id", a => a.Id);
         }
 
         /// <inheritdoc/>

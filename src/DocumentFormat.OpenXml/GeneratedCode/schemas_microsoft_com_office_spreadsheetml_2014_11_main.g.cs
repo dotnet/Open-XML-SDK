@@ -25,8 +25,6 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(ModelTimeGrouping), FileFormatVersions.Office2016)]
-    [SchemaAttr(84, "modelTimeGroupings")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class ModelTimeGroupings : OpenXmlCompositeElement
     {
         /// <summary>
@@ -60,6 +58,13 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(84, "modelTimeGroupings");
+            builder.Availability = (FileFormatVersions.Office2016);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGrouping), 1, 0, version: FileFormatVersions.Office2016)
@@ -83,8 +88,6 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
     /// </list>
     /// </remark>
     [ChildElementInfo(typeof(CalculatedTimeColumn), FileFormatVersions.Office2016)]
-    [SchemaAttr(84, "modelTimeGrouping")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class ModelTimeGrouping : OpenXmlCompositeElement
     {
         /// <summary>
@@ -151,19 +154,21 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(84, "modelTimeGrouping");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<ModelTimeGrouping>()
-                           .AddAttribute(0, "tableName", a => a.TableName, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "columnName", a => a.ColumnName, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "columnId", a => a.ColumnId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "tableName", a => a.TableName, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "columnName", a => a.ColumnName, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "columnId", a => a.ColumnId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -182,8 +187,6 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x16:calculatedTimeColumn.</para>
     /// </summary>
-    [SchemaAttr(84, "calculatedTimeColumn")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class CalculatedTimeColumn : OpenXmlLeafElement
     {
         /// <summary>
@@ -236,23 +239,25 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(84, "calculatedTimeColumn");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<CalculatedTimeColumn>()
-                           .AddAttribute(0, "columnName", a => a.ColumnName, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "columnId", a => a.ColumnId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "contentType", a => a.ContentType, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "isSelected", a => a.IsSelected, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "columnName", a => a.ColumnName, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "columnId", a => a.ColumnId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "contentType", a => a.ContentType, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "isSelected", a => a.IsSelected, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <inheritdoc/>

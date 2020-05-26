@@ -18,8 +18,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a16:creationId.</para>
     /// </summary>
-    [SchemaAttr(79, "creationId")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class CreationId : OpenXmlLeafElement
     {
         /// <summary>
@@ -42,11 +40,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(79, "creationId");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<CreationId>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           });
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+});
         }
 
         /// <inheritdoc/>
@@ -58,8 +58,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a16:predDERef.</para>
     /// </summary>
-    [SchemaAttr(79, "predDERef")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class PredecessorDrawingElementReference : OpenXmlLeafElement
     {
         /// <summary>
@@ -82,11 +80,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(79, "predDERef");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<PredecessorDrawingElementReference>()
-                           .AddAttribute(0, "pred", a => a.Pred, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           });
+.AddAttribute(0, "pred", a => a.Pred, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+});
         }
 
         /// <inheritdoc/>
@@ -98,8 +98,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a16:cxnDERefs.</para>
     /// </summary>
-    [SchemaAttr(79, "cxnDERefs")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class ConnectableReferences : OpenXmlLeafElement
     {
         /// <summary>
@@ -132,15 +130,17 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(79, "cxnDERefs");
+            builder.Availability = (FileFormatVersions.Office2016);
             builder.AddElement<ConnectableReferences>()
-                           .AddAttribute(0, "st", a => a.St, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "end", a => a.End, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           });
+.AddAttribute(0, "st", a => a.St, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "end", a => a.End, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+});
         }
 
         /// <inheritdoc/>
@@ -152,8 +152,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a16:rowId.</para>
     /// </summary>
-    [SchemaAttr(79, "rowId")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class RowIdIdentifier : OpenXmlIdentifierElement
     {
         /// <summary>
@@ -161,6 +159,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
         /// </summary>
         public RowIdIdentifier() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(79, "rowId");
+            builder.Availability = (FileFormatVersions.Office2016);
         }
 
         /// <inheritdoc/>
@@ -172,8 +177,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a16:colId.</para>
     /// </summary>
-    [SchemaAttr(79, "colId")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class ColIdIdentifier : OpenXmlIdentifierElement
     {
         /// <summary>
@@ -181,6 +184,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
         /// </summary>
         public ColIdIdentifier() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(79, "colId");
+            builder.Availability = (FileFormatVersions.Office2016);
         }
 
         /// <inheritdoc/>

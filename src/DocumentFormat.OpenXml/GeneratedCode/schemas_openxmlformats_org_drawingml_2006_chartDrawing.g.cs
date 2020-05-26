@@ -41,8 +41,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     [ChildElementInfo(typeof(ConnectionShape))]
     [ChildElementInfo(typeof(Picture))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart), FileFormatVersions.Office2010)]
-    [SchemaAttr(12, "relSizeAnchor")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RelativeAnchorSize : OpenXmlCompositeElement
     {
         /// <summary>
@@ -74,6 +72,13 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public RelativeAnchorSize(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(12, "relSizeAnchor");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -155,8 +160,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     [ChildElementInfo(typeof(ConnectionShape))]
     [ChildElementInfo(typeof(Picture))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart), FileFormatVersions.Office2010)]
-    [SchemaAttr(12, "absSizeAnchor")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AbsoluteAnchorSize : OpenXmlCompositeElement
     {
         /// <summary>
@@ -188,6 +191,13 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public AbsoluteAnchorSize(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(12, "absSizeAnchor");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -261,8 +271,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     [ChildElementInfo(typeof(ShapeProperties))]
     [ChildElementInfo(typeof(Style))]
     [ChildElementInfo(typeof(TextBody))]
-    [SchemaAttr(12, "sp")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Shape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -339,11 +347,13 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(12, "sp");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Shape>()
-                           .AddAttribute(0, "macro", a => a.Macro)
-                           .AddAttribute(0, "textlink", a => a.TextLink)
-                           .AddAttribute(0, "fLocksText", a => a.LockText)
-                           .AddAttribute(0, "fPublished", a => a.Published);
+.AddAttribute(0, "macro", a => a.Macro)
+.AddAttribute(0, "textlink", a => a.TextLink)
+.AddAttribute(0, "fLocksText", a => a.LockText)
+.AddAttribute(0, "fPublished", a => a.Published);
         }
 
         /// <summary>
@@ -444,8 +454,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     [ChildElementInfo(typeof(ConnectionShape))]
     [ChildElementInfo(typeof(Picture))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart), FileFormatVersions.Office2010)]
-    [SchemaAttr(12, "grpSp")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class GroupShape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -477,6 +485,13 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public GroupShape(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(12, "grpSp");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -542,8 +557,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     [ChildElementInfo(typeof(NonVisualGraphicFrameProperties))]
     [ChildElementInfo(typeof(Transform))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Graphic))]
-    [SchemaAttr(12, "graphicFrame")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class GraphicFrame : OpenXmlCompositeElement
     {
         /// <summary>
@@ -600,9 +613,11 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(12, "graphicFrame");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<GraphicFrame>()
-                           .AddAttribute(0, "macro", a => a.Macro)
-                           .AddAttribute(0, "fPublished", a => a.Published);
+.AddAttribute(0, "macro", a => a.Macro)
+.AddAttribute(0, "fPublished", a => a.Published);
         }
 
         /// <summary>
@@ -679,8 +694,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     [ChildElementInfo(typeof(NonVisualConnectorShapeDrawingProperties))]
     [ChildElementInfo(typeof(ShapeProperties))]
     [ChildElementInfo(typeof(Style))]
-    [SchemaAttr(12, "cxnSp")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ConnectionShape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -737,9 +750,11 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(12, "cxnSp");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ConnectionShape>()
-                           .AddAttribute(0, "macro", a => a.Macro)
-                           .AddAttribute(0, "fPublished", a => a.Published);
+.AddAttribute(0, "macro", a => a.Macro)
+.AddAttribute(0, "fPublished", a => a.Published);
         }
 
         /// <summary>
@@ -818,8 +833,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     [ChildElementInfo(typeof(BlipFill))]
     [ChildElementInfo(typeof(ShapeProperties))]
     [ChildElementInfo(typeof(Style))]
-    [SchemaAttr(12, "pic")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Picture : OpenXmlCompositeElement
     {
         /// <summary>
@@ -876,9 +889,11 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(12, "pic");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Picture>()
-                           .AddAttribute(0, "macro", a => a.Macro)
-                           .AddAttribute(0, "fPublished", a => a.Published);
+.AddAttribute(0, "macro", a => a.Macro)
+.AddAttribute(0, "fPublished", a => a.Published);
         }
 
         /// <summary>
@@ -969,8 +984,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList))]
-    [SchemaAttr(12, "cNvPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1057,18 +1070,20 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(12, "cNvPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<NonVisualDrawingProperties>()
-                           .AddAttribute(0, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           })
-                           .AddAttribute(0, "descr", a => a.Description)
-                           .AddAttribute(0, "hidden", a => a.Hidden)
-                           .AddAttribute(0, "title", a => a.Title);
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "descr", a => a.Description)
+.AddAttribute(0, "hidden", a => a.Hidden)
+.AddAttribute(0, "title", a => a.Title);
         }
 
         /// <summary>
@@ -1143,8 +1158,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapeLocks))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-    [SchemaAttr(12, "cNvSpPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1191,8 +1204,10 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(12, "cNvSpPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<NonVisualShapeDrawingProperties>()
-                           .AddAttribute(0, "txBox", a => a.TextBox);
+.AddAttribute(0, "txBox", a => a.TextBox);
         }
 
         /// <summary>
@@ -1247,8 +1262,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     /// </remark>
     [ChildElementInfo(typeof(NonVisualDrawingProperties))]
     [ChildElementInfo(typeof(NonVisualShapeDrawingProperties))]
-    [SchemaAttr(12, "nvSpPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1280,6 +1293,13 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NonVisualShapeProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(12, "nvSpPr");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -1360,8 +1380,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
-    [SchemaAttr(12, "spPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1408,11 +1426,13 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(12, "spPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ShapeProperties>()
-                           .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <summary>
@@ -1489,8 +1509,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FillReference))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectReference))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FontReference))]
-    [SchemaAttr(12, "style")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Style : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1522,6 +1540,13 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Style(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(12, "style");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -1606,8 +1631,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ListStyle))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Paragraph))]
-    [SchemaAttr(12, "txBody")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TextBody : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1639,6 +1662,13 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public TextBody(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(12, "txBody");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -1698,8 +1728,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.StartConnection))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EndConnection))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-    [SchemaAttr(12, "cNvCxnSpPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1731,6 +1759,13 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NonVisualConnectionShapeProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(12, "cNvCxnSpPr");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -1813,8 +1848,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     /// </remark>
     [ChildElementInfo(typeof(NonVisualDrawingProperties))]
     [ChildElementInfo(typeof(NonVisualConnectionShapeProperties))]
-    [SchemaAttr(12, "nvCxnSpPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1846,6 +1879,13 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NonVisualConnectorShapeDrawingProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(12, "nvCxnSpPr");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -1900,8 +1940,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PictureLocks))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList))]
-    [SchemaAttr(12, "cNvPicPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1948,8 +1986,10 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(12, "cNvPicPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<NonVisualPictureDrawingProperties>()
-                           .AddAttribute(0, "preferRelativeResize", a => a.PreferRelativeResize);
+.AddAttribute(0, "preferRelativeResize", a => a.PreferRelativeResize);
         }
 
         /// <summary>
@@ -2004,8 +2044,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     /// </remark>
     [ChildElementInfo(typeof(NonVisualDrawingProperties))]
     [ChildElementInfo(typeof(NonVisualPictureDrawingProperties))]
-    [SchemaAttr(12, "nvPicPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualPictureProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2037,6 +2075,13 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NonVisualPictureProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(12, "nvPicPr");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -2095,8 +2140,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SourceRectangle))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Tile))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Stretch))]
-    [SchemaAttr(12, "blipFill")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BlipFill : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2153,9 +2196,11 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(12, "blipFill");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<BlipFill>()
-                           .AddAttribute(0, "dpi", a => a.Dpi)
-                           .AddAttribute(0, "rotWithShape", a => a.RotateWithShape);
+.AddAttribute(0, "dpi", a => a.Dpi)
+.AddAttribute(0, "rotWithShape", a => a.RotateWithShape);
         }
 
         /// <summary>
@@ -2218,8 +2263,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-    [SchemaAttr(12, "cNvGraphicFramePr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2251,6 +2294,13 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NonVisualGraphicFrameDrawingProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(12, "cNvGraphicFramePr");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -2305,8 +2355,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     /// </remark>
     [ChildElementInfo(typeof(NonVisualDrawingProperties))]
     [ChildElementInfo(typeof(NonVisualGraphicFrameDrawingProperties))]
-    [SchemaAttr(12, "nvGraphicFramePr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2338,6 +2386,13 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NonVisualGraphicFrameProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(12, "nvGraphicFramePr");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -2392,8 +2447,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Offset))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extents))]
-    [SchemaAttr(12, "xfrm")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Transform : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2460,10 +2513,12 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(12, "xfrm");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Transform>()
-                           .AddAttribute(0, "rot", a => a.Rotation)
-                           .AddAttribute(0, "flipH", a => a.HorizontalFlip)
-                           .AddAttribute(0, "flipV", a => a.VerticalFlip);
+.AddAttribute(0, "rot", a => a.Rotation)
+.AddAttribute(0, "flipH", a => a.HorizontalFlip)
+.AddAttribute(0, "flipV", a => a.VerticalFlip);
         }
 
         /// <summary>
@@ -2518,8 +2573,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     /// </remark>
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupShapeLocks))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList))]
-    [SchemaAttr(12, "cNvGrpSpPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2551,6 +2604,13 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NonVisualGroupShapeDrawingProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(12, "cNvGrpSpPr");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -2596,9 +2656,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cdr:x.</para>
     /// </summary>
-    [NumberValidator(MinInclusive = 0L, MaxInclusive = 1L, SimpleType = typeof(DoubleValue))]
-    [SchemaAttr(12, "x")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class XPosition : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2621,6 +2678,14 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
             return new DoubleValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (1L), SimpleType = (typeof(DoubleValue)) });
+            builder.SetSchema(12, "x");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<XPosition>(deep);
     }
@@ -2630,9 +2695,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cdr:y.</para>
     /// </summary>
-    [NumberValidator(MinInclusive = 0L, MaxInclusive = 1L, SimpleType = typeof(DoubleValue))]
-    [SchemaAttr(12, "y")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class YPosition : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2655,6 +2717,14 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
             return new DoubleValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (1L), SimpleType = (typeof(DoubleValue)) });
+            builder.SetSchema(12, "y");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<YPosition>(deep);
     }
@@ -2671,8 +2741,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description>YPosition &lt;cdr:y></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(12, "from")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FromAnchor : MarkerType
     {
         /// <summary>
@@ -2706,6 +2774,13 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(12, "from");
+            builder.Availability = (FileFormatVersions.Office2007);
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.XPosition), 1, 1),
@@ -2730,8 +2805,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description>YPosition &lt;cdr:y></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(12, "to")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ToAnchor : MarkerType
     {
         /// <summary>
@@ -2763,6 +2836,13 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ToAnchor(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(12, "to");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2824,6 +2904,11 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+        }
+
         /// <summary>
         /// <para>Relative X Coordinate.</para>
         /// <para>Represents the following element tag in the schema: cdr:x.</para>
@@ -2856,8 +2941,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cdr:ext.</para>
     /// </summary>
-    [SchemaAttr(12, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Extent : OpenXmlLeafElement
     {
         /// <summary>
@@ -2890,17 +2973,19 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(12, "ext");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Extent>()
-                           .AddAttribute(0, "cx", a => a.Cx, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
-                           })
-                           .AddAttribute(0, "cy", a => a.Cy, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
-                           });
+.AddAttribute(0, "cx", a => a.Cx, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+})
+.AddAttribute(0, "cy", a => a.Cy, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+});
         }
 
         /// <inheritdoc/>
@@ -2921,8 +3006,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     /// </remark>
     [ChildElementInfo(typeof(NonVisualDrawingProperties))]
     [ChildElementInfo(typeof(NonVisualGroupShapeDrawingProperties))]
-    [SchemaAttr(12, "nvGrpSpPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualGroupShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2954,6 +3037,13 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NonVisualGroupShapeProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(12, "nvGrpSpPr");
+            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -3026,8 +3116,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-    [SchemaAttr(12, "grpSpPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class GroupShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3074,11 +3162,13 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.SetSchema(12, "grpSpPr");
+            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<GroupShapeProperties>()
-                           .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <summary>
