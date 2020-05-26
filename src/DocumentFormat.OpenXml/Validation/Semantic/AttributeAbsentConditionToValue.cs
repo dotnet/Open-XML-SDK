@@ -23,14 +23,14 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
             var element = context.Stack.Current.Element;
-            var attribute = element.EState.Attributes[_absentAttribute];
+            var attribute = element.ParsedState.Attributes[_absentAttribute];
 
             if (!attribute.HasValue)
             {
                 return null;
             }
 
-            var conditionAttribute = element.EState.Attributes[_conditionAttribute];
+            var conditionAttribute = element.ParsedState.Attributes[_conditionAttribute];
 
             if (!conditionAttribute.HasValue)
             {

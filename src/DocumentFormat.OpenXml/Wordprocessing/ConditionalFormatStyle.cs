@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                 localName = "val";
 
                 var isValueTrue = value == "true" || value == "1";
-                var attribute = Metadata.Attributes[namespaceUri, localName];
+                var attribute = RawState.Attributes[namespaceUri, localName];
 
                 if (attribute.HasValue)
                 {
