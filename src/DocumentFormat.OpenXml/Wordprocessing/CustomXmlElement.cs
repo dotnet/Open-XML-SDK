@@ -76,7 +76,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main.
         /// </remark>
-        [SchemaAttr(0, "customXmlPr")]
         public CustomXmlProperties CustomXmlProperties
         {
             get => _constraint.Get<CustomXmlProperties>(this);

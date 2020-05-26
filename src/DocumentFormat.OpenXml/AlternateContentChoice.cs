@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using System.Collections.Generic;
 
@@ -9,7 +10,6 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Defines an mc:Choice element in mc:AlternateContent.
     /// </summary>
-    [SchemaAttr(AlternateContent.Namespace, Name)]
     public class AlternateContentChoice : OpenXmlCompositeElement
     {
         private const string Name = "Choice";
@@ -113,6 +113,8 @@ namespace DocumentFormat.OpenXml
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+
+            builder.SetSchema(AlternateContent.Namespace, Name);
 
             builder.AddElement<AlternateContentChoice>()
                 .AddAttribute(0, "Requires", a => a.Requires);

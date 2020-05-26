@@ -167,9 +167,16 @@ namespace DocumentFormat.OpenXml.Framework
 
                 var schema = child.GetTypeInfo().GetCustomAttribute<SchemaAttrAttribute>();
 
-                if (schema == null)
+                if (schema is null)
                 {
-                    throw new InvalidOperationException($"{child} does not contain schema information");
+                    var instance = activator();
+
+                    schema = instance.Metadata.Schema;
+
+                    if (schema is null)
+                    {
+                        throw new InvalidOperationException($"{child} does not contain schema information");
+                    }
                 }
 
                 Type = child;

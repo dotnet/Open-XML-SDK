@@ -99,7 +99,7 @@ namespace DocumentFormat.OpenXml.Framework
 
                 foreach (var item in _union)
                 {
-                    result[i++] = new UnionValidator(item.Value, item.Key);
+                    result[i++] = new UnionValidator(item.Value.ToArray(), item.Key);
                 }
             }
 

@@ -187,7 +187,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             var element = (OpenXmlLeafTextElement)validationContext.Stack.Current.Element;
             var state = new LeafAccessor(element);
 
-            SchemaTypeValidator.ValidateValue(validationContext, element.ElementData.Info.Validators, state.Value, state, false);
+            SchemaTypeValidator.ValidateValue(validationContext, element.ParsedState.Metadata.Validators, state.Value, state, false);
         }
 
         /// <summary>
@@ -235,7 +235,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             public override byte NamespaceId => _element.NamespaceId;
 
-            public override ValidatorCollection Validators => _element.ElementData.Info.Validators;
+            public override ValidatorCollection Validators => _element.ParsedState.Metadata.Validators;
 
             public override Type Type => Value.GetType();
 

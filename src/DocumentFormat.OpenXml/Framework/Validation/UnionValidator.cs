@@ -8,9 +8,9 @@ namespace DocumentFormat.OpenXml.Framework
 {
     internal class UnionValidator : IOpenXmlSimpleTypeValidator
     {
-        private readonly List<IOpenXmlSimpleTypeValidator> _others;
+        private readonly ReadOnlyArray<IOpenXmlSimpleTypeValidator> _others;
 
-        public UnionValidator(List<IOpenXmlSimpleTypeValidator> others, byte id)
+        public UnionValidator(ReadOnlyArray<IOpenXmlSimpleTypeValidator> others, byte id)
         {
             _others = others;
             Id = id;

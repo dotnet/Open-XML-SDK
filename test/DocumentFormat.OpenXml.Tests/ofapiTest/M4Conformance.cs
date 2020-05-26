@@ -25,8 +25,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.True(eb.IsInVersion(FileFormatVersions.Office2010));
             Assert.False(eb.IsInVersion(FileFormatVersions.Office2007));
 
-            var attr1 = typeof(EndBorder).GetTypeInfo().GetCustomAttributes<OfficeAvailabilityAttribute>(false).First();
-            Assert.True(attr1.OfficeVersion == FileFormatVersions.Office2010);
+            Assert.True(eb.Metadata.Availability == FileFormatVersions.Office2010);
         }
 
         ///<summary>
@@ -39,8 +38,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.True(eb.IsInVersion(FileFormatVersions.Office2010));
             Assert.False(eb.IsInVersion(FileFormatVersions.Office2007));
 
-            var attr1 = typeof(EndBorder).GetTypeInfo().GetCustomAttributes<OfficeAvailabilityAttribute>(false).First();
-            Assert.True(attr1.OfficeVersion == FileFormatVersions.Office2010);
+            Assert.True(eb.Metadata.Availability == FileFormatVersions.Office2010);
         }
 
         ///<summary>

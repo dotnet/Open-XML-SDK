@@ -181,12 +181,14 @@ namespace DocumentFormat.OpenXml
             {
                 if (_state.IsEmpty)
                 {
-                    _state = new Framework.Metadata.ElementState(ElementMetadata.Create(GetType()));
+                    _state = new Framework.Metadata.ElementState(Metadata);
                 }
 
                 return _state;
             }
         }
+
+        internal ElementMetadata Metadata => ElementMetadata.Create(GetType());
 
         /// <summary>
         /// Gets an array of fixed attributes which will be parsed out if they are not yet parsed. If parsing is not requried, please
@@ -204,7 +206,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets the namespace ID of the current element.
         /// </summary>
-        internal byte NamespaceId => ElementData.Info.Schema?.NamespaceId ?? throw new InvalidOperationException();
+        internal byte NamespaceId => Metadata.Schema?.NamespaceId ?? throw new InvalidOperationException();
 
         internal virtual void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -319,12 +321,12 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets the namespace URI of the current element.
         /// </summary>
-        public virtual string NamespaceUri => ElementData.Info.Schema.NamespaceUri;
+        public virtual string NamespaceUri => Metadata.Schema.NamespaceUri;
 
         /// <summary>
         /// Gets the local name of the current element.
         /// </summary>
-        public virtual string LocalName => ElementData.Info.Schema.Tag;
+        public virtual string LocalName => Metadata.Schema.Tag;
 
         /// <summary>
         /// Gets the namespace prefix of current element.
@@ -1962,7 +1964,7 @@ namespace DocumentFormat.OpenXml
         /// For <see cref="OpenXmlUnknownElement"/>, always returns <c>false</c>
         /// For <see cref="OpenXmlMiscNode"/>, always returns <c>true</c>
         /// </summary>
-        internal FileFormatVersions InitialVersion => ElementData.Info.Availability;
+        internal FileFormatVersions InitialVersion => RawState.Metadata.Availability;
 
         #endregion
 

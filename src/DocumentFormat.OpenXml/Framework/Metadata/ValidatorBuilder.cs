@@ -1,16 +1,13 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming;
-using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Framework.Metadata
 {
     internal class ValidatorBuilder
     {
-        protected readonly List<IOpenXmlSimpleTypeValidator> _validators = new List<IOpenXmlSimpleTypeValidator>();
+        private readonly List<IOpenXmlSimpleTypeValidator> _validators = new List<IOpenXmlSimpleTypeValidator>();
 
         public void AddValidator(IOpenXmlSimpleTypeValidator validator)
         {
@@ -28,5 +25,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
         {
             _validators.Insert(index, validator);
         }
+
+        protected IOpenXmlSimpleTypeValidator[] ToArray() => _validators?.ToArray() ?? Cached.Array<IOpenXmlSimpleTypeValidator>();
     }
 }

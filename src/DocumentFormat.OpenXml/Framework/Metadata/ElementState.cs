@@ -10,8 +10,11 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
         public ElementState(ElementMetadata metadata)
         {
             Attributes = new AttributeCollection(metadata.Attributes);
+            Metadata = metadata;
         }
 
         public AttributeCollection Attributes { get; }
+
+        public ElementMetadata Metadata { get; }
     }
 }

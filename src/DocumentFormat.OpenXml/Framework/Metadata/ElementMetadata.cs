@@ -15,12 +15,21 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             new KeyValuePair<Type, ElementMetadata>(typeof(OpenXmlMiscNode), default),
         });
 
-        public ElementMetadata(ReadOnlyArray<AttributeMetadata> attributes)
+        public ElementMetadata(ReadOnlyArray<AttributeMetadata> attributes, ValidatorCollection validators, FileFormatVersions version, SchemaAttrAttribute schema)
         {
             Attributes = attributes;
+            Validators = validators;
+            Availability = version;
+            Schema = schema;
         }
 
         public ReadOnlyArray<AttributeMetadata> Attributes { get; }
+
+        public ValidatorCollection Validators { get; }
+
+        public FileFormatVersions Availability { get; }
+
+        public SchemaAttrAttribute Schema { get; }
 
         public static ElementMetadata Create(Type type)
         {

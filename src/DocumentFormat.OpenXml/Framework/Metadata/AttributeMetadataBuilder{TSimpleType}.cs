@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
             action(union);
 
-            AddValidator(new UnionValidator(union._validators, 0));
+            AddValidator(new UnionValidator(union.ToArray(), 0));
         }
 
         public byte Namespace { get; }
@@ -37,7 +37,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
         {
             AddValidator(_defaultValidator);
 
-            return new AttributeInfo(Namespace, Name, PropertyName, _validators?.ToArray() ?? Cached.Array<IOpenXmlSimpleTypeValidator>());
+            return new AttributeInfo(Namespace, Name, PropertyName, ToArray());
         }
 
         private static IOpenXmlSimpleTypeValidator GetDefaultValidator()
